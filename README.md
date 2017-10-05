@@ -27,7 +27,8 @@ and students ...
 * automatic convertion to epub, pdf, ...
 
 
-                                     --{{1}}--
+
+                                      --{{1}}--
 With Lia we try to implement an extended Markdown format that should enable
 everyone to create, share, adapt, translate or correct and extend online courses
 without the need of beeing a web-developer.
