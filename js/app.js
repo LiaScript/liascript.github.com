@@ -21028,7 +21028,7 @@ var _user$project$Main$view = function (model) {
 							_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'top', _1: '48%'},
+								_0: {ctor: '_Tuple2', _0: 'top', _1: '28%'},
 								_1: {
 									ctor: '::',
 									_0: {ctor: '_Tuple2', _0: 'left', _1: '38%'},
@@ -21041,34 +21041,18 @@ var _user$project$Main$view = function (model) {
 				{
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$button,
+						_elm_lang$html$Html$h1,
+						{ctor: '[]'},
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-btn'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Load),
-								_1: {ctor: '[]'}
-							}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Load URL'),
+							_0: _elm_lang$html$Html$text('LiaScript'),
 							_1: {ctor: '[]'}
 						}),
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_elm_lang$html$Html$input,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$Update),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$value(model.url),
-									_1: {ctor: '[]'}
-								}
-							},
+							_elm_lang$html$Html$br,
+							{ctor: '[]'},
 							{ctor: '[]'}),
 						_1: {
 							ctor: '::',
@@ -21079,30 +21063,71 @@ var _user$project$Main$view = function (model) {
 							_1: {
 								ctor: '::',
 								_0: A2(
-									_elm_lang$html$Html$br,
-									{ctor: '[]'},
-									{ctor: '[]'}),
+									_elm_lang$html$Html$button,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('lia-btn'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Load),
+											_1: {ctor: '[]'}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Load URL'),
+										_1: {ctor: '[]'}
+									}),
 								_1: {
 									ctor: '::',
 									_0: A2(
-										_elm_lang$html$Html$br,
-										{ctor: '[]'},
+										_elm_lang$html$Html$input,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$Update),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$value(model.url),
+												_1: {ctor: '[]'}
+											}
+										},
 										{ctor: '[]'}),
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_elm_lang$html$Html$a,
-											{
+											_elm_lang$html$Html$br,
+											{ctor: '[]'},
+											{ctor: '[]'}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$br,
+												{ctor: '[]'},
+												{ctor: '[]'}),
+											_1: {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$href('https://gitlab.com/OvGU-ESS/eLab_v2/lia_script'),
-												_1: {ctor: '[]'}
-											},
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html$text('https://gitlab.com/OvGU-ESS/eLab_v2/lia_script'),
-												_1: {ctor: '[]'}
-											}),
-										_1: {ctor: '[]'}
+												_0: A2(
+													_elm_lang$html$Html$br,
+													{ctor: '[]'},
+													{ctor: '[]'}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$a,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$href('https://gitlab.com/OvGU-ESS/eLab_v2/lia_script'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('https://gitlab.com/OvGU-ESS/eLab_v2/lia_script'),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
 									}
 								}
 							}
@@ -21143,7 +21168,7 @@ var _user$project$Main$init = function (flags) {
 		ctor: '_Tuple2',
 		_0: A4(
 			_user$project$Main$Model,
-			'https://www.gitlab.com/OvGU-ESS/eLab_v2/lia_script/raw/master/README.md',
+			'https://raw.githubusercontent.com/liaScript/liascript.github.com/master/README.md',
 			_user$project$Lia$init_slides(''),
 			_user$project$Main$Waiting,
 			''),
