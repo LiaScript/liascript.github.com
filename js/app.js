@@ -18818,7 +18818,8 @@ var _user$project$Lia_Effect_View$view = F5(
 					_elm_lang$html$Html$span,
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('lia-effect-circle'),
+						_0: _elm_lang$html$Html_Attributes$class(
+							_elm_lang$core$Native_Utils.eq(effect_name, _elm_lang$core$Maybe$Nothing) ? 'lia-effect-circle' : 'lia-effect-circle animated'),
 						_1: {ctor: '[]'}
 					},
 					{
