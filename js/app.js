@@ -16991,12 +16991,14 @@ var _user$project$Native_Utils = (function () {
         }
     }
 */
-//    var lib_js_counter = -1;
+    var lib_js_counter = -1;
 
     function load_js(url)
     {
-        console.log("url: ", url);
-//        lib_js_counter += 1;
+        lib_js_counter += 1;
+
+        console.log("url: ", lib_js_counter, url);
+
 
 //        setTimeout( function () {
           try {
