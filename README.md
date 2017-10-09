@@ -18,9 +18,9 @@ script:   https://cdn.rawgit.com/davidedc/Algebrite/master/dist/algebrite.bundle
 script:   https://felixhao28.github.io/JSCPP/dist/JSCPP.es5.min.js
 
 
-script:   https://interactivepython.org/runestone/static/thinkcspy/_static/skulpt.min.js
-
 script:   https://interactivepython.org/runestone/static/thinkcspy/_static/skulpt-stdlib.js
+
+script:   https://interactivepython.org/runestone/static/thinkcspy/_static/skulpt.min.js
 
 -->
 
