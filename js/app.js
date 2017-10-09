@@ -16467,14 +16467,7 @@ var _user$project$Lia_Parser$define_comment = function () {
 				return _elm_lang$core$Native_Utils.update(
 					s,
 					{
-						def_scripts: A2(
-							_elm_lang$core$List$append,
-							s.def_scripts,
-							{
-								ctor: '::',
-								_0: x,
-								_1: {ctor: '[]'}
-							})
+						def_scripts: {ctor: '::', _0: x, _1: s.def_scripts}
 					});
 			});
 	};
@@ -21092,7 +21085,10 @@ var _user$project$Lia$parse = function (model) {
 	if (_p6.ctor === 'Ok') {
 		var _p8 = _p6._0._0;
 		var _p7 = _p6._0._4;
-		var x = A2(_elm_lang$core$List$map, _user$project$Lia_Utils$load_js, _p6._0._5);
+		var x = A2(
+			_elm_lang$core$List$map,
+			_user$project$Lia_Utils$load_js,
+			_elm_lang$core$List$reverse(_p6._0._5));
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{
