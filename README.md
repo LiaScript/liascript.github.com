@@ -11,17 +11,17 @@ language: en_US
 narrator: US English Female
 
 
-script:   //cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
+script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
-script:   http://algebrite.org/dist/latest-stable/algebrite.bundle-for-browser.js
+script:   https://algebrite.org/dist/latest-stable/algebrite.bundle-for-browser.js
 
 script:   https://felixhao28.github.io/JSCPP/dist/JSCPP.es5.min.js
 
 
 
-script:   http://www.skulpt.org/static/skulpt-stdlib.js
+script:   https://www.skulpt.org/static/skulpt-stdlib.js
 
-script:   http://www.skulpt.org/static/skulpt.min.js
+script:   https://www.skulpt.org/static/skulpt.min.js
 
 -->
 
