@@ -16998,13 +16998,14 @@ var _user$project$Native_Utils = (function () {
         }
     }
 */
-    var lib_js_counter = -1;
+//    var lib_js_counter = -1;
 
     function load_js(url)
     {
-        lib_js_counter += 1;
+        console.log("url: ", url);
+//        lib_js_counter += 1;
 
-        setTimeout( function () {
+//        setTimeout( function () {
           try {
               var scriptTag = document.createElement('script');
               scriptTag.src = url;
@@ -17019,7 +17020,7 @@ var _user$project$Native_Utils = (function () {
                   _0: e.message
               };
           }
-      }, lib_js_counter * 100);
+//      }, lib_js_counter * 100);
     };
 
 
