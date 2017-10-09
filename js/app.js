@@ -16514,7 +16514,7 @@ var _user$project$Lia_Parser$define_comment = function () {
 	var ending = A2(
 		_elm_community$parser_combinators$Combine_ops['<$>'],
 		_elm_lang$core$String$trim,
-		_elm_community$parser_combinators$Combine$regex('[^\\n]*'));
+		_elm_community$parser_combinators$Combine$regex('[^\\n]+'));
 	var list = {
 		ctor: '::',
 		_0: A2(
@@ -16573,7 +16573,7 @@ var _user$project$Lia_Parser$define_comment = function () {
 					_elm_community$parser_combinators$Combine_ops['*>'],
 					_elm_community$parser_combinators$Combine$regex('[ \\t\\n]*'),
 					_elm_community$parser_combinators$Combine$choice(list)),
-				_elm_community$parser_combinators$Combine$regex('[\n]+'))));
+				_elm_community$parser_combinators$Combine$regex('[\\n]+'))));
 }();
 var _user$project$Lia_Parser$title_str = A2(
 	_elm_community$parser_combinators$Combine_ops['<$>'],
@@ -17000,22 +17000,21 @@ var _user$project$Native_Utils = (function () {
         console.log("url: ", lib_js_counter, url);
 
 
-//        setTimeout( function () {
+        setTimeout( function () {
           try {
               var scriptTag = document.createElement('script');
               scriptTag.src = url;
               document.head.appendChild(scriptTag);
-              return {
-                  ctor: "Ok",
-                  _0: ""
-              };
+
           } catch (e) {
-              return {
-                  ctor: "Err",
-                  _0: e.message
-              };
+              console.log(e.message);
           }
-//      }, lib_js_counter * 100);
+      }, lib_js_counter * 100);
+
+      return {
+          ctor: "Ok",
+          _0: ""
+      };
     };
 
 
