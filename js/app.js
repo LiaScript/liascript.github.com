@@ -15706,20 +15706,24 @@ var _user$project$Lia_Inline_Parser$html_void = _elm_community$parser_combinator
 	});
 var _user$project$Lia_Inline_Parser$html = A2(_elm_community$parser_combinators$Combine_ops['<|>'], _user$project$Lia_Inline_Parser$html_void, _user$project$Lia_Inline_Parser$html_block);
 var _user$project$Lia_Inline_Parser$comment = function (p) {
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['*>'],
-		_elm_community$parser_combinators$Combine$string('<!--'),
-		A2(
-			_elm_community$parser_combinators$Combine$manyTill,
-			p,
-			_elm_community$parser_combinators$Combine$string('-->')));
+	return _elm_community$parser_combinators$Combine$lazy(
+		function (_p13) {
+			var _p14 = _p13;
+			return A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$string('<!--'),
+				A2(
+					_elm_community$parser_combinators$Combine$manyTill,
+					p,
+					_elm_community$parser_combinators$Combine$string('-->')));
+		});
 };
 var _user$project$Lia_Inline_Parser$comments = _elm_community$parser_combinators$Combine$skip(
 	_elm_community$parser_combinators$Combine$many(
 		_user$project$Lia_Inline_Parser$comment(_elm_community$parser_combinators$Combine_Char$anyChar)));
 var _user$project$Lia_Inline_Parser$reference = _elm_community$parser_combinators$Combine$lazy(
-	function (_p13) {
-		var _p14 = _p13;
+	function (_p15) {
+		var _p16 = _p15;
 		var url_ = _elm_community$parser_combinators$Combine$parens(
 			A2(
 				_elm_community$parser_combinators$Combine_ops['<|>'],
@@ -15784,8 +15788,8 @@ var _user$project$Lia_Inline_Parser$reference = _elm_community$parser_combinator
 				}));
 	});
 var _user$project$Lia_Inline_Parser$inlines = _elm_community$parser_combinators$Combine$lazy(
-	function (_p15) {
-		var _p16 = _p15;
+	function (_p17) {
+		var _p18 = _p17;
 		var p = _elm_community$parser_combinators$Combine$choice(
 			{
 				ctor: '::',
@@ -15815,8 +15819,8 @@ var _user$project$Lia_Inline_Parser$inlines = _elm_community$parser_combinators$
 		return A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Inline_Parser$comments, p);
 	});
 var _user$project$Lia_Inline_Parser$strings = _elm_community$parser_combinators$Combine$lazy(
-	function (_p17) {
-		var _p18 = _p17;
+	function (_p19) {
+		var _p20 = _p19;
 		var base2 = A2(
 			_elm_community$parser_combinators$Combine_ops['<$>'],
 			_user$project$Lia_Inline_Types$Chars,
@@ -15943,8 +15947,8 @@ var _user$project$Lia_Inline_Parser$strings = _elm_community$parser_combinators$
 	});
 var _user$project$Lia_Inline_Parser$between_ = function (str) {
 	return _elm_community$parser_combinators$Combine$lazy(
-		function (_p19) {
-			var _p20 = _p19;
+		function (_p21) {
+			var _p22 = _p21;
 			return _elm_community$parser_combinators$Combine$choice(
 				{
 					ctor: '::',
@@ -16589,24 +16593,27 @@ var _user$project$Lia_Parser$title_tag = A2(
 			_user$project$Lia_Inline_Parser$newlines,
 			_elm_community$parser_combinators$Combine$regex('#+')),
 		_elm_community$parser_combinators$Combine$whitespace));
-var _user$project$Lia_Parser$identation = function () {
-	var reset = function (s) {
-		return _elm_lang$core$Native_Utils.update(
-			s,
-			{skip_identation: false});
-	};
-	var ident = function (s) {
-		return s.skip_identation ? _elm_community$parser_combinators$Combine$skip(
-			_elm_community$parser_combinators$Combine$succeed(
-				{ctor: '_Tuple0'})) : _elm_community$parser_combinators$Combine$skip(
-			_elm_community$parser_combinators$Combine$string(
-				A2(_elm_lang$core$String$repeat, s.identation, ' ')));
-	};
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		_elm_community$parser_combinators$Combine$withState(ident),
-		_elm_community$parser_combinators$Combine$modifyState(reset));
-}();
+var _user$project$Lia_Parser$identation = _elm_community$parser_combinators$Combine$lazy(
+	function (_p0) {
+		var _p1 = _p0;
+		var reset = function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{skip_identation: false});
+		};
+		var ident = function (s) {
+			return _elm_lang$core$Native_Utils.eq(s.identation, 0) ? _elm_community$parser_combinators$Combine$succeed(
+				{ctor: '_Tuple0'}) : (s.skip_identation ? _elm_community$parser_combinators$Combine$skip(
+				_elm_community$parser_combinators$Combine$succeed(
+					{ctor: '_Tuple0'})) : _elm_community$parser_combinators$Combine$skip(
+				_elm_community$parser_combinators$Combine$string(
+					A2(_elm_lang$core$String$repeat, s.identation, ' '))));
+		};
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			_elm_community$parser_combinators$Combine$withState(ident),
+			_elm_community$parser_combinators$Combine$modifyState(reset));
+	});
 var _user$project$Lia_Parser$horizontal_line = A2(
 	_elm_community$parser_combinators$Combine_ops['<$'],
 	_user$project$Lia_Types$HLine,
@@ -16741,8 +16748,8 @@ var _user$project$Lia_Parser$quote_block = function () {
 		_elm_community$parser_combinators$Combine$many1(p));
 }();
 var _user$project$Lia_Parser$blocks = _elm_community$parser_combinators$Combine$lazy(
-	function (_p0) {
-		var _p1 = _p0;
+	function (_p2) {
+		var _p3 = _p2;
 		var b = _elm_community$parser_combinators$Combine$choice(
 			{
 				ctor: '::',
@@ -16897,8 +16904,8 @@ var _user$project$Lia_Parser$unordered_list = function () {
 						mod_s(false))))));
 }();
 var _user$project$Lia_Parser$slide = _elm_community$parser_combinators$Combine$lazy(
-	function (_p2) {
-		var _p3 = _p2;
+	function (_p4) {
+		var _p5 = _p4;
 		var effect_counter = function () {
 			var reset_effect = function (c) {
 				return _elm_lang$core$Native_Utils.update(
@@ -16931,14 +16938,14 @@ var _user$project$Lia_Parser$parse = A2(
 	A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Inline_Parser$whitelines, _user$project$Lia_Parser$define_comment),
 	_elm_community$parser_combinators$Combine$many1(_user$project$Lia_Parser$slide));
 var _user$project$Lia_Parser$run = function (script) {
-	var _p4 = A3(_elm_community$parser_combinators$Combine$runParser, _user$project$Lia_Parser$parse, _user$project$Lia_PState$init, script);
-	if (_p4.ctor === 'Ok') {
-		var _p5 = _p4._0._0;
+	var _p6 = A3(_elm_community$parser_combinators$Combine$runParser, _user$project$Lia_Parser$parse, _user$project$Lia_PState$init, script);
+	if (_p6.ctor === 'Ok') {
+		var _p7 = _p6._0._0;
 		return _elm_lang$core$Result$Ok(
-			{ctor: '_Tuple6', _0: _p4._0._2, _1: _p5.code_vector, _2: _p5.quiz_vector, _3: _p5.survey_vector, _4: _p5.def_narrator, _5: _p5.def_scripts});
+			{ctor: '_Tuple6', _0: _p6._0._2, _1: _p7.code_vector, _2: _p7.quiz_vector, _3: _p7.survey_vector, _4: _p7.def_narrator, _5: _p7.def_scripts});
 	} else {
 		return _elm_lang$core$Result$Err(
-			A2(_user$project$Lia_Parser$formatError, _p4._0._2, _p4._0._1));
+			A2(_user$project$Lia_Parser$formatError, _p6._0._2, _p6._0._1));
 	}
 };
 
@@ -19134,7 +19141,11 @@ var _user$project$Lia_Inline_View$view_link = F2(
 						_1: {
 							ctor: '::',
 							_0: _user$project$Lia_Inline_View$inline_class('lia-link'),
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$target('_blank'),
+								_1: {ctor: '[]'}
+							}
 						}
 					},
 					{
@@ -19169,7 +19180,11 @@ var _user$project$Lia_Inline_View$view_link = F2(
 						_1: {
 							ctor: '::',
 							_0: _user$project$Lia_Inline_View$inline_class('lia-link'),
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$target('_blank'),
+								_1: {ctor: '[]'}
+							}
 						}
 					},
 					{
@@ -20572,14 +20587,13 @@ var _user$project$Lia_View$view_slide = F2(
 var _user$project$Lia_View$view_contents = function (model) {
 	var f = function (_p16) {
 		var _p17 = _p16;
-		var _p19 = _p17._0;
-		var _p18 = _p17._1._0;
+		var _p18 = _p17._0;
 		return A2(
 			_elm_lang$html$Html$a,
 			{
 				ctor: '::',
 				_0: _elm_lang$html$Html_Events$onClick(
-					_user$project$Lia_Update$Load(_p19)),
+					_user$project$Lia_Update$Load(_p18)),
 				_1: {
 					ctor: '::',
 					_0: _elm_lang$html$Html_Attributes$class(
@@ -20589,24 +20603,22 @@ var _user$project$Lia_View$view_contents = function (model) {
 							A2(
 								_elm_lang$core$Basics_ops['++'],
 								_elm_lang$core$Basics$toString(_p17._1._1),
-								_elm_lang$core$Native_Utils.eq(model.current_slide, _p19) ? ' lia-active' : ''))),
+								_elm_lang$core$Native_Utils.eq(model.current_slide, _p18) ? ' lia-active' : ''))),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(
-							A2(
-								_elm_lang$core$String$append,
-								'#',
-								A2(
-									_elm_lang$core$String$join,
-									'_',
-									A2(_elm_lang$core$String$split, ' ', _p18)))),
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}
 				}
 			},
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html$text(_p18),
+				_0: _elm_lang$html$Html$text(_p17._1._0),
 				_1: {ctor: '[]'}
 			});
 	};
@@ -20642,15 +20654,15 @@ var _user$project$Lia_View$view_contents = function (model) {
 			_elm_lang$core$List$map,
 			f,
 			function (list) {
-				var _p20 = model.index_model.results;
-				if (_p20.ctor === 'Nothing') {
+				var _p19 = model.index_model.results;
+				if (_p19.ctor === 'Nothing') {
 					return list;
 				} else {
 					return A2(
 						_elm_lang$core$List$filter,
-						function (_p21) {
-							var _p22 = _p21;
-							return A2(_elm_lang$core$List$member, _p22._0, _p20._0);
+						function (_p20) {
+							var _p21 = _p20;
+							return A2(_elm_lang$core$List$member, _p21._0, _p19._0);
 						},
 						list);
 				}
@@ -20658,12 +20670,12 @@ var _user$project$Lia_View$view_contents = function (model) {
 				_user$project$Lia_Helper$get_headers(model.slides))));
 };
 var _user$project$Lia_View$capitalize = function (s) {
-	var _p23 = _elm_lang$core$String$uncons(s);
-	if (_p23.ctor === 'Just') {
+	var _p22 = _elm_lang$core$String$uncons(s);
+	if (_p22.ctor === 'Just') {
 		return A2(
 			_elm_lang$core$String$cons,
-			_elm_lang$core$Char$toUpper(_p23._0._0),
-			_p23._0._1);
+			_elm_lang$core$Char$toUpper(_p22._0._0),
+			_p22._0._1);
 	} else {
 		return s;
 	}
@@ -20762,10 +20774,10 @@ var _user$project$Lia_View$view_themes = F2(
 		};
 	});
 var _user$project$Lia_View$view_slides = function (model) {
-	var _p24 = function () {
-		var _p25 = A2(_user$project$Lia_Helper$get_slide, model.current_slide, model.slides);
-		if (_p25.ctor === 'Just') {
-			return A2(_user$project$Lia_View$view_slide, model, _p25._0);
+	var _p23 = function () {
+		var _p24 = A2(_user$project$Lia_Helper$get_slide, model.current_slide, model.slides);
+		if (_p24.ctor === 'Just') {
+			return A2(_user$project$Lia_View$view_slide, model, _p24._0);
 		} else {
 			return {
 				ctor: '_Tuple2',
@@ -20774,8 +20786,8 @@ var _user$project$Lia_View$view_slides = function (model) {
 			};
 		}
 	}();
-	var hidden_effects = _p24._0;
-	var body = _p24._1;
+	var hidden_effects = _p23._0;
+	var body = _p23._1;
 	var loadButton = F2(
 		function (str, msg) {
 			return A2(
@@ -20847,8 +20859,8 @@ var _user$project$Lia_View$view_slides = function (model) {
 								{
 									ctor: '::',
 									_0: function () {
-										var _p26 = model.mode;
-										if (_p26.ctor === 'Slides') {
+										var _p25 = model.mode;
+										if (_p25.ctor === 'Slides') {
 											return _elm_lang$html$Html$text('hearing');
 										} else {
 											return _elm_lang$html$Html$text('visibility');
@@ -20897,8 +20909,8 @@ var _user$project$Lia_View$view_slides = function (model) {
 														_1: {
 															ctor: '::',
 															_0: function () {
-																var _p27 = model.mode;
-																if (_p27.ctor === 'Slides') {
+																var _p26 = model.mode;
+																if (_p26.ctor === 'Slides') {
 																	return _elm_lang$html$Html$text(
 																		_elm_lang$core$String$concat(
 																			{
@@ -21006,9 +21018,9 @@ var _user$project$Lia_View$view_slides = function (model) {
 };
 var _user$project$Lia_View$view_plain = function (model) {
 	var viewer = function (elements) {
-		return function (_p28) {
-			var _p29 = _p28;
-			return _p29._1;
+		return function (_p27) {
+			var _p28 = _p27;
+			return _p28._1;
 		}(
 			A2(
 				_user$project$Lia_View$view_slide,
@@ -21027,8 +21039,8 @@ var _user$project$Lia_View$view_plain = function (model) {
 		A2(_elm_lang$core$List$map, viewer, model.slides));
 };
 var _user$project$Lia_View$view = function (model) {
-	var _p30 = model.mode;
-	switch (_p30.ctor) {
+	var _p29 = model.mode;
+	switch (_p29.ctor) {
 		case 'Slides':
 			return _user$project$Lia_View$view_slides(model);
 		case 'Slides_only':
@@ -21081,67 +21093,101 @@ var _user$project$Lia$update = _user$project$Lia_Update$update;
 var _user$project$Lia$view = function (model) {
 	return _user$project$Lia_View$view(model);
 };
-var _user$project$Lia$parse = function (model) {
-	var _p6 = _user$project$Lia_Parser$run(model.script);
-	if (_p6.ctor === 'Ok') {
-		var _p8 = _p6._0._0;
-		var _p7 = _p6._0._4;
-		var x = A2(
-			_elm_lang$core$List$map,
-			_user$project$Lia_Utils$load_js,
-			_elm_lang$core$List$reverse(_p6._0._5));
-		return _elm_lang$core$Native_Utils.update(
-			model,
-			{
-				slides: _p8,
-				error: '',
-				quiz_model: _elm_lang$core$Native_Utils.eq(model.quiz_model, _elm_lang$core$Array$empty) ? _p6._0._2 : model.quiz_model,
-				index_model: _user$project$Lia_Index_Model$init(_p8),
-				effect_model: A2(
-					_user$project$Lia_Effect_Model$init,
-					_p7,
-					_elm_lang$core$List$head(_p8)),
-				code_model: _p6._0._1,
-				survey_model: _elm_lang$core$Native_Utils.eq(model.survey_model, _elm_lang$core$Array$empty) ? _p6._0._3 : model.survey_model,
-				narrator: _elm_lang$core$Native_Utils.eq(_p7, '') ? 'US English Male' : _p7
-			});
-	} else {
-		return _elm_lang$core$Native_Utils.update(
-			model,
-			{error: _p6._0});
-	}
-};
+var _user$project$Lia$parse = F2(
+	function (script, model) {
+		var _p6 = _user$project$Lia_Parser$run(script);
+		if (_p6.ctor === 'Ok') {
+			var _p8 = _p6._0._0;
+			var _p7 = _p6._0._4;
+			var x = A2(
+				_elm_lang$core$List$map,
+				_user$project$Lia_Utils$load_js,
+				_elm_lang$core$List$reverse(_p6._0._5));
+			return _elm_lang$core$Native_Utils.update(
+				model,
+				{
+					slides: _p8,
+					error: '',
+					quiz_model: _elm_lang$core$Array$isEmpty(model.quiz_model) ? _p6._0._2 : model.quiz_model,
+					index_model: _user$project$Lia_Index_Model$init(_p8),
+					effect_model: A2(
+						_user$project$Lia_Effect_Model$init,
+						_p7,
+						_elm_lang$core$List$head(_p8)),
+					code_model: _p6._0._1,
+					survey_model: _elm_lang$core$Array$isEmpty(model.survey_model) ? _p6._0._3 : model.survey_model,
+					narrator: _elm_lang$core$Native_Utils.eq(_p7, '') ? 'US English Male' : _p7,
+					script: script
+				});
+		} else {
+			return _elm_lang$core$Native_Utils.update(
+				model,
+				{error: _p6._0, script: script});
+		}
+	});
 var _user$project$Lia$set_script = F2(
 	function (model, script) {
 		return _elm_lang$core$Native_Utils.update(
 			model,
 			{script: script});
 	});
-var _user$project$Lia$init = F2(
-	function (mode, script) {
-		return _user$project$Lia$parse(
-			{
-				script: script,
-				error: '',
-				mode: mode,
-				slides: {ctor: '[]'},
-				current_slide: 0,
-				show_contents: true,
-				quiz_model: _elm_lang$core$Array$empty,
-				code_model: _elm_lang$core$Array$empty,
-				survey_model: _elm_lang$core$Array$empty,
-				index_model: _user$project$Lia_Index_Model$init(
-					{ctor: '[]'}),
-				effect_model: A2(_user$project$Lia_Effect_Model$init, 'US English Male', _elm_lang$core$Maybe$Nothing),
-				narrator: 'US English Male',
-				silent: false,
-				theme: 'default',
-				theme_light: true
-			});
-	});
+var _user$project$Lia$init = function (mode) {
+	return {
+		script: '',
+		error: '',
+		mode: mode,
+		slides: {ctor: '[]'},
+		current_slide: 0,
+		show_contents: true,
+		quiz_model: _elm_lang$core$Array$empty,
+		code_model: _elm_lang$core$Array$empty,
+		survey_model: _elm_lang$core$Array$empty,
+		index_model: _user$project$Lia_Index_Model$init(
+			{ctor: '[]'}),
+		effect_model: A2(_user$project$Lia_Effect_Model$init, 'US English Male', _elm_lang$core$Maybe$Nothing),
+		narrator: 'US English Male',
+		silent: false,
+		theme: 'default',
+		theme_light: true
+	};
+};
 var _user$project$Lia$init_plain = _user$project$Lia$init(_user$project$Lia_Types$Textbook);
 var _user$project$Lia$init_slides = _user$project$Lia$init(_user$project$Lia_Types$Slides);
 
+var _user$project$Main$style = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'width', _1: '350px'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'height', _1: '300px'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'top', _1: '0'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'bottom', _1: '0'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'left', _1: '0'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'right', _1: '0'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'margin', _1: 'auto'},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
 var _user$project$Main$tx_log = _elm_lang$core$Native_Platform.outgoingPort(
 	'tx_log',
 	function (v) {
@@ -21197,7 +21243,11 @@ var _user$project$Main$view = function (model) {
 		case 'Loading':
 			return A2(
 				_elm_lang$html$Html$div,
-				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _user$project$Main$style,
+					_1: {ctor: '[]'}
+				},
 				{
 					ctor: '::',
 					_0: A2(
@@ -21205,19 +21255,23 @@ var _user$project$Main$view = function (model) {
 						{ctor: '[]'},
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('Loading Course'),
+							_0: _elm_lang$html$Html$text('Loading ...'),
 							_1: {ctor: '[]'}
 						}),
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_elm_lang$html$Html$h6,
-							{ctor: '[]'},
+							_elm_lang$html$Html$img,
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text(model.url),
-								_1: {ctor: '[]'}
-							}),
+								_0: _elm_lang$html$Html_Attributes$src('load.gif'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$width(350),
+									_1: {ctor: '[]'}
+								}
+							},
+							{ctor: '[]'}),
 						_1: {ctor: '[]'}
 					}
 				});
@@ -21229,7 +21283,11 @@ var _user$project$Main$view = function (model) {
 		case 'LoadFail':
 			return A2(
 				_elm_lang$html$Html$div,
-				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _user$project$Main$style,
+					_1: {ctor: '[]'}
+				},
 				{
 					ctor: '::',
 					_0: A2(
@@ -21262,20 +21320,7 @@ var _user$project$Main$view = function (model) {
 				_elm_lang$html$Html$div,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$style(
-						{
-							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
-							_1: {
-								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'top', _1: '28%'},
-								_1: {
-									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'left', _1: '38%'},
-									_1: {ctor: '[]'}
-								}
-							}
-						}),
+					_0: _user$project$Main$style,
 					_1: {ctor: '[]'}
 				},
 				{
@@ -21391,27 +21436,17 @@ var _user$project$Main$init = function (flags) {
 		_0: A4(
 			_user$project$Main$Model,
 			'',
-			_user$project$Lia$init_slides(flags.script),
+			A2(_user$project$Lia$parse, flags.script, _user$project$Lia$init_slides),
 			_user$project$Main$LoadOk,
 			''),
 		_1: _elm_lang$core$Platform_Cmd$none
 	} : ((!_elm_lang$core$Native_Utils.eq(flags.url, '')) ? {
 		ctor: '_Tuple2',
-		_0: A4(
-			_user$project$Main$Model,
-			flags.url,
-			_user$project$Lia$init_slides(''),
-			_user$project$Main$Loading,
-			''),
+		_0: A4(_user$project$Main$Model, flags.url, _user$project$Lia$init_slides, _user$project$Main$Loading, ''),
 		_1: _user$project$Main$getCourse(flags.url)
 	} : {
 		ctor: '_Tuple2',
-		_0: A4(
-			_user$project$Main$Model,
-			'https://raw.githubusercontent.com/liaScript/liascript.github.com/master/README.md',
-			_user$project$Lia$init_slides(''),
-			_user$project$Main$Waiting,
-			''),
+		_0: A4(_user$project$Main$Model, 'https://raw.githubusercontent.com/liaScript/liascript.github.com/master/README.md', _user$project$Lia$init_slides, _user$project$Main$Waiting, ''),
 		_1: _elm_lang$core$Platform_Cmd$none
 	});
 };
@@ -21449,8 +21484,7 @@ var _user$project$Main$update = F2(
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
 							{
-								lia: _user$project$Lia$parse(
-									_user$project$Lia$init_slides(_p1._0._0)),
+								lia: A2(_user$project$Lia$parse, _p1._0._0, model.lia),
 								error: '',
 								state: _user$project$Main$LoadOk
 							}),
