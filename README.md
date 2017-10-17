@@ -610,7 +610,7 @@ int main() {
 
 #### Python
 
-Running a Python-program with Skulpt (http://www.skulpt.org):
+Running a Python-program with Skulpt, see http://www.skulpt.org:
 
 ```python
 def hello(i):
