@@ -50,6 +50,8 @@ start directly to create and share your course on github. The entire parsing and
 transformation of Lia-Markdown to any other format is done within the browser at
 client-side.
 
+> This project is officially not supported by Wikimedia :-P http://goo.gl/fGXNvu
+
 ## Markdown-Syntax
 
 This section is intended to give a brief overview on the basic Markdown
