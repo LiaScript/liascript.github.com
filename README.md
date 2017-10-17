@@ -526,7 +526,7 @@ var i=0;
 var j=0;
 var result = 0;
 
-for(i = 0; i<10000; i++) {
+for(i = 0; i<1000; i++) {
     for(j = 0; j<i; j++) {
         result += j;
     }
@@ -540,7 +540,7 @@ result;
 #### JavaScript Chartist
 
 A drawing example, for demonstrating that any javascript library can be used,
-also for drawing.
+also for drawing. (Chartist example: https://gionkunz.github.io/chartist-js)
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 
@@ -564,7 +564,8 @@ new Chartist.Bar('#chart2', {
 
 #### Computer-Algebra
 
-An example of a Computer-Algebra-System (Algebrit), see xxx for more examples:
+An example of a Computer-Algebra-System (Algebrite), see http://algebrite.org
+for more examples:
 
 ```javascript
 x + x
@@ -583,8 +584,8 @@ defint(f,t,0,2*pi)
 
 #### C++
 
-Teaching other language-basics is also possible, for this example we applied xxx
-to run simple C++ programs:
+Teaching other language-basics is also possible, for this example we applied
+JSCPP (https://github.com/felixhao28/JSCPP) to run simple C++ programs:
 
 ```cpp
 #include <iostream>
@@ -609,7 +610,7 @@ int main() {
 
 #### Python
 
-Running a Python-program with xxx:
+Running a Python-program with Skulpt (http://www.skulpt.org):
 
 ```python
 def hello(i):
