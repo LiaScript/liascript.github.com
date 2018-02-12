@@ -18,54 +18,60 @@ script:   https://cdn.rawgit.com/davidedc/Algebrite/master/dist/algebrite.bundle
 script:   https://felixhao28.github.io/JSCPP/dist/JSCPP.es5.min.js
 
 
-script:   https://curiosity-driven.github.io/prolog-interpreter/parser.js
-
-script:   https://curiosity-driven.github.io/prolog-interpreter/interpreter.js
-
-
 script:   https://interactivepython.org/runestone/static/thinkcspy/_static/skulpt.min.js
 
 script:   https://interactivepython.org/runestone/static/thinkcspy/_static/skulpt-stdlib.js
+
+
+script:   https://curiosity-driven.github.io/prolog-interpreter/parser.js
+
+script:   https://curiosity-driven.github.io/prolog-interpreter/interpreter.js
 
 -->
 
 # Lia-Script
 
+                                    --{{0}}--
+With Lia, we try to implement an extended Markdown format that should enable
+everyone to create, share, adapt, translate or correct and extend online courses
+without the need of being a web-developer.
+
 See the online rendered version at: https://liascript.github.io
 
-Lia-Script is an extended Markdown format for writing interactive online
+
+                                    --{{0}}--
+Click on the (ear) button at the navigation bar to switch between spoken and
+plain text mode format. And use the arrows-buttons at the top for navigating.
+
+
+*Lia-Script* <!-- class = "animated infinite bounce" style = "color: red;" --> is an extended Markdown format for writing interactive online
 courses. Imagine all schoolbooks, technical or scientific literature could
 become open-source projects and more interactive ... with collaborating teachers
 and students ...
 
 * easy to share adapt and translate
 * no additional software required, everything is implemented in JavaScirpt/Elm
-  and runs directly within the browser
+  and runs directly within the browser (online)
 * automatic conversion to epub, pdf, ...
 
 
                                      --{{1}}--
-With Lia, we try to implement an extended Markdown format that should enable
-everyone to create, share, adapt, translate or correct and extend online courses
-without the need of being a web-developer.
-
-                                     --{{2}}--
 Everything that is required is simple text-editor and a web-browser. Or you
 start directly to create and share your course on github. The entire parsing and
 transformation of Lia-Markdown to any other format is done within the browser at
 client-side.
 
 
-> This project is officially not supported by Wikimedia :-P http://goo.gl/fGXNvu
+## *Markdown*-Syntax
 
 
-## Markdown-Syntax
-
+                                     --{{0}}--
 This section is intended to give a brief overview on the basic Markdown
 formatting elements. The only difference to common Markdown at this point is,
 that every course has to start with a comment, which defines authors, a language
 and  a narrator voice, see https://responsivevoice.org for all supported voices.
 
+Initial LIA-comment-tag for basic definitions:
 
 ``` XML
 <!--
@@ -86,10 +92,6 @@ script:   another javascript resourse url
 
 -->
 ```
-
-                                    --{{0}}--
-Click on the (ear) button at the navigation bar to switch between spoken and
-plain text mode format. And please click on the at the top for navigating.
 
 ### Structuring
 
@@ -138,7 +140,7 @@ through or the application of superscript. If you, for example, superscript
 superscript you can get even smaller.
 
                                        {{1}}
-{{
+================================================================================
 
 \~\~underline\~\~ -> ~~underline~~
 
@@ -146,7 +148,7 @@ superscript you can get even smaller.
 
 \^superscript\^ -> ^superscript^ ^^superscript^^ ^^^superscript^^^
 
-}}
+================================================================================
 
 
 #### Combinations
@@ -173,7 +175,6 @@ a starting backslash.
 ### Symbols
 
                                      --{{0}}--
-
 One thing that we missed in standard Markdown, was an implementation for arrows.
 The parenthesis shows, how arrows are defined in our Markdown implementation with
 their result on the right (these symbols are generated automatically for you).
@@ -204,6 +205,7 @@ There are two ways of adding links to a Markdown document, either by inlining
 the url directly or you can name it, as shown in listing 2, by applying the
 typical brackets and parenthesis notation.
 
+
 1. example of an url-link -> http://goo.gl/fGXNvu
 
    text-formatting can be applied also (`*** http://goo.gl/fGXNvu ***`) ->
@@ -229,74 +231,109 @@ defined by two exclamation marks.
   to get an overview on how a YouTube link has to be formatted to add a starting
   and/or end point, autoplay, subtitles, and other options.
 
-##### Styling
+### Styling
 
                                     --{{0}}--
-Adding CSS elements to images is implemented via a trailing comment-tag,
-everything within this comment is treated as a style attribute, so that it can
+Adding CSS elements or classes or any other HTML setting to an image or to any
+other Markdown element is implemented via a trailing comment-tag, everything
+within this comment is treated as a HTML attribute, so that it can
 also be used to apply graphical filters of for positioning.
 
 
-`![image](...Creative-Tail-Animal-lion.svg)<!-- width: 100px; border: 10px solid; filter: grayscale(100%); -->`
+``` markdown
+![image](...Creative-Tail-Animal-lion.svg)<!--
+style = "width: 100px;
+         border: 10px solid;
+         filter: grayscale(100%);"
+
+class = "animated infinite bounce"
+-->
+```
 
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
-  width: 100px;
-  border: 10px solid;
+style = "width: 100px;
+         border: 10px solid;
+         filter: grayscale(100%);"
+
+class = "animated infinite bounce"
 -->
 ![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
+style="
   width: 120px;
-  border: 10px solid;
+  border: 10px solid;"
 -->
 ![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
-  width: 140px;
-  border: 10px solid;
+  style="width: 140px;
+  border: 10px solid;"
 -->
 ![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
-  width: 120px;
+  style="width: 120px;
   border: 10px solid;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  filter: grayscale(100%);"
 -->
 ![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
-  width: 100px;
+  style="width: 100px;
   border: 10px solid;
   -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-  filter: blur(5px);
+  filter: blur(5px);"
 -->
 
                                      --{{1}}--
-The same technique can also be applied to style and format movies...
+The same technique can also be applied to style and format movies and other inline
+elements, such as links, words, symbols, or code...
 
-{{1}}
-{{
+                                       {{1}}
+================================================================================
 
 !![movie](https://www.youtube.com/embed/XsNk5aOpqUc)<!--
-  width: 100px;
-  height: 60px;
+style = "width: 100px; height: 60px;"
 -->
 !![movie](https://www.youtube.com/embed/XsNk5aOpqUc)<!--
-  width: 120px;
-  height: 70px;
+style = "width: 120px; height: 70px;"
 -->
 !![movie](https://www.youtube.com/embed/XsNk5aOpqUc)<!--
-  width: 140px;
-  height: 80px;
+style = "width: 140px; height: 80px;"
 -->
 !![movie](https://www.youtube.com/embed/XsNk5aOpqUc)<!--
-  width: 120px;
-  height: 70px;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+style = "width: 120px;
+         height: 70px;
+         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+         filter: grayscale(100%);"
 -->
 !![movie](https://www.youtube.com/embed/XsNk5aOpqUc)<!--
-  width: 100px;
-  height: 60px;
-  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-  filter: blur(5px);
+style = "width: 100px;
+         height: 60px;
+         -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+         filter: blur(5px);"
 -->
 
-}}
+`:-) <!-- class = "animated infinite bounce" -->` --> :-) <!-- class = "animated infinite bounce" -->
+
+`[google](www.google.de) <!-- style = "color: red;" -->` --> [google](www.google.de) <!-- style = "color: red;" -->
+
+================================================================================
+
+#### Block-Styling
+
+                                  --{{0}}--
+Settings for entire blocks can be set with a **starting** comment that includes
+all required HTML-attributes and can even contain animation settings. These can
+be used to highlight specific elements of your slides.
+
+
+``` markdown
+<!-- class = "animated rollIn" style = "animation-delay: 3s; color: purple" -->
+The whole text-block should appear in purple color and with a wobbling effect.
+Which is a **bad** example, please use it with causion ...
+~~ ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
+```
+
+<!-- class = "animated rollIn" style = "animation-delay: 3s; color: purple" -->
+The whole text-block should appear in purple color and with a wobbling effect.
+Which is a **bad** example, please use it with causion ...
+~~ ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
 
 ### Lists & Tables
 
@@ -306,7 +343,7 @@ if you are already familiar with it.
 
 #### Unordered Lists
 
-                                 --{{1}}--
+                                 --{{0}}--
 To define unordered list, starting stars, pluses, and minuses can be used and
 mixed. If one point has more than one line, you can also use newlines, but with
 spaces at the beginning. Paragraphs can be included in the same way, by using
@@ -335,7 +372,7 @@ Result:
 
 #### Ordered Lists
 
-                                 --{{1}}--
+                                 --{{0}}--
 Ordered list start with a number and a dot. As you can see from the example, the
 number does not count at the moment, the generated list will always count by the
 order of appearance. And it is also possible to mix lists with other lists and
@@ -386,11 +423,16 @@ Result:
 | ** col 2 is **    | centered      |   $12 |
 | * zebra stripes * | are neat      |    $1 |
 
+
+
 ### Blockquotes
 
 Markdown-format:
 
 ``` markdown
+<!--
+style="font-size: 18px; font-style: italic; width: 500px; margin: 0.25em 0;"
+-->
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
@@ -401,12 +443,43 @@ Quote break.
 
 Result:
 
+<!--
+style="font-size: 18px; font-style: italic; width: 500px; margin: 0.25em 0;"
+-->
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
 Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+
+                                   --{{1}}--
+Next to simple paragraphs also any other block element can be included ...
+
+
+                                     {{1}}
+================================================================================
+
+``` markdown
+> <!-- style="font-size: 18px; font-style: italic; width: 500px; margin: 5.25em 0;" -->
+> | Tables            | Are           | Cool  |
+> | ----------------- |:-------------:| -----:|
+> | *** col 3 is ***  | right-aligned | $1600 |
+> | ** col 2 is **    | centered      |   $12 |
+> | * zebra stripes * | are neat      |    $1 |
+```
+
+Result:
+
+> <!-- style="font-size: 18px; font-style: italic; width: 500px; margin: 5.25em 0;" -->
+> | Tables            | Are           | Cool  |
+> | ----------------- |:-------------:| -----:|
+> | *** col 3 is ***  | right-aligned | $1600 |
+> | ** col 2 is **    | centered      |   $12 |
+> | * zebra stripes * | are neat      |    $1 |
+
+================================================================================
 
 ### HTML
 
@@ -433,6 +506,54 @@ Test **bold** and <b> HTML bold</b> works also inline
   <dt><b>Markdown in HTML</b></dt>
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
+
+#### HTML & JavaScirpt
+
+                                 --{{0}}--
+In contrast to common Markdown-Parsers it is also possible to include and
+execute javascript code. If you combine it with your HTML elements, you are free
+to integrate whatever you want.
+
+``` markdown
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<div class="ct-chart ct-golden-section" id="chart"></div>
+<script>
+    // Initialize a Line chart in the container with the ID chart
+    new Chartist.Line('#chart', {
+        labels: [1, 2, 3, 4],
+        series: [[100, 120, 180, 200]]
+    });
+</script>
+```
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+
+
+                                   {{0-1}}
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+<script>
+// Initialize a Line chart in the container with the ID chart1
+new Chartist.Line('#chart1', {
+  labels: [1, 2, 3, 4],
+  series: [[100, 120, 180, 200]]
+});
+</script>
+
+
+                                     {{1}}
+<div class="ct-chart ct-golden-section" id="chart2"></div>
+<script>
+// Initialize a Line chart in the container with the ID chart2
+new Chartist.Line('#chart2', {
+  labels: [1, 2, 3, 4],
+  series: [[-100, 120, 180, 20]]
+});
+</script>
+
+                                --{{1}}--
+Note, you have to include all required JavaScirpt-resourses in the initial
+comment after the script definition. And by combining this feature with
+LiaScript effects, you can build even more sophisticated courses.
 
 
 ## Math-Mode
@@ -510,11 +631,11 @@ required resources to the initial comment with keyword `script`.
 
 1. Add resource to main-comment: `script: url.js`
 
-2. Add a trailing comment to your code: `<!-- `{X}` -->`
+2. Add a trailing script-tag to your code: `<script> {X} </script>`
 
 
                                      --{{1}}--
-And add an additional comment tag to the end of your language definition with an
+And add an additional script tag to the end of your language definition with an
 big X in braces. This element is afterwards substituted with your code and
 executed. We provide some basic examples within the following section.
 
@@ -528,12 +649,12 @@ edit it and to change the output ...
 
 Double-click on the code to switch to edit mode and double-click to get out:
 
-```javascript
+```
 var i=0;
 var j=0;
 var result = 0;
 
-for(i = 0; i<10000; i++) {
+for(i = 0; i<1000; i++) {
     for(j = 0; j<i; j++) {
         result += j;
     }
@@ -541,7 +662,8 @@ for(i = 0; i<10000; i++) {
 // the last statement defines the return statement
 result;
 ```
-<!-- {X} -->
+<script> {X} </script>
+
 
 
 #### JavaScript Chartist
@@ -564,10 +686,11 @@ new Chartist.Bar('#chart2', {
   series: [[5, 2, 8, 3]]
 });
 ```
-<!-- {X} -->
+<script> {X} </script>
 
 <div class="ct-chart ct-golden-section" id="chart1"></div>
 <div class="ct-chart ct-golden-section" id="chart2"></div>
+
 
 #### Computer-Algebra
 
@@ -576,7 +699,9 @@ An example of a Computer-Algebra-System (Algebrit), see xxx for more examples:
 ```javascript
 x + x
 ```
-<!-- Algebrite.run(`{X}`) -->
+<script> Algebrite.run(`{X}`) </script>
+
+
 
 ```javascript
 f=sin(t)^4-2*cos(t/2)^3*sin(t)
@@ -585,7 +710,43 @@ f=circexp(f)
 
 defint(f,t,0,2*pi)
 ```
-<!-- Algebrite.run(`{X}`) -->
+<script> Algebrite.run(`{X}`) </script>
+
+
+
+#### Elm
+
+```elm
+-- Read more about this program in the official Elm guide:
+-- https://guide.elm-lang.org/architecture/user_input/buttons.html
+
+import Html exposing (beginnerProgram, div, button, text)
+import Html.Events exposing (onClick)
+
+
+main =
+  beginnerProgram { model = 0, view = view, update = update }
+
+
+view model =
+  div []
+    [ button [ onClick Decrement ] [ text "-" ]
+    , div [] [ text (toString model) ]
+    , button [ onClick Increment ] [ text "+" ]
+    ]
+
+
+type Msg = Increment | Decrement
+
+
+update msg model =
+  case msg of
+    Increment ->
+      model + 1
+
+    Decrement ->
+      model - 1
+```
 
 
 #### C++
@@ -608,11 +769,11 @@ int main() {
     return 0;
 }
 ```
-<!--
+<script>
   var output = "";
   JSCPP.run(`{X}`, "", {stdio: {write: s => { output += s.replace(/\n/g, "<br>");}}});
   output;
--->
+</script>
 
 #### Python
 
@@ -625,7 +786,7 @@ def hello(i):
 
 hello(12)
 ```
-<!--
+<script>
 var output = "";
 
 function builtinRead(x) {
@@ -647,7 +808,7 @@ myPromise.then(function(mod) {
    console.log(err.toString());
 });
 output;
--->
+</script>
 
 
 
@@ -706,19 +867,19 @@ solution(WaterDrinker, ZebraOwner) :-
     exists(house(_, WaterDrinker, water, _, _), Houses),
     exists(house(_, ZebraOwner, _, _, zebra), Houses).
 ```
-<!--
+<script>
 var rules = parser(lexer(`{X}`)).parseRules();
 window['prolog_db'] = new Database(rules);
 
 "database loaded";
--->
+</script>
 
 ** Query: ( it may take some time ;-) ) **
 
 ```prolog
 solution(WaterDrinker, ZebraOwner)
 ```
-<!--
+<script>
 var rslt = "";
 
 var goal = parser(lexer(`{X}`)).parseTerm();
@@ -732,10 +893,7 @@ if (rslt === "") {
 } else {
    rslt;
 }
-
--->
-
-
+</script>
 
 ## Quizzes
 
@@ -879,8 +1037,9 @@ There are currently three types of effects, that are supported by liaScript:
 2. Block effects
 3. and a narrator
 
-Every effect is defined by two braces around a number `{{1}}`, which marks the
-order of their appearance.
+Every effect is defined by two braces around one or two numbers `{{1-2}}`, which
+marks the order of their appearance. The second and optional number defines, at
+which step the element becomes invisible again.
 
 ### Inline Effects
 
@@ -896,13 +1055,13 @@ effects can be combined, due to the usage of equal numbers):
 ``` markdown
 * no effect here
 * but in this line {{1}}{{show *** first ***}}
-* as well as this one {{1}}{{show *** first ***}}, which contains two effects
+* as well as this one {{1-2}}{{show *** first ***}}, which contains two effects
   {{2}}{{![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)}}
 ```
 
 * no effect here
 * but in this line {{1}}{{show *** first ***}}
-* as well as this one {{1}}{{show *** first ***}}, which contains two effects
+* as well as this one {{1-2}}{{show *** first ***}}, which contains two effects
   {{2}}{{![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)}}
 
 
@@ -910,24 +1069,23 @@ effects can be combined, due to the usage of equal numbers):
 
                                    --{{0}}--
 To define animations and transitions, you can use the animate.css notation,
-simply place an animation definition after the effect number, as it is done
-within the examples.
+simply place an animation definition within the comment tag after the effects,
+as it is done within the examples.
 
 
 See https://daneden.github.io/animate.css for more animation effects.
 
 ``` markdown
-* {{0 infinite bounce}}{{ *bounce* }}
-* {{1 zoomIn}}{{zoomIn}}
-* {{2 zoomIn}}{{zoomOut}}
-* {{3 rubberBand}}{{![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)}}
+* {{0}}{{ *bounce* }} <!-- class = "animated infinite bounce" style = "animation-delay: 5s;" -->
+* {{1-2}}{{zoomIn}} <!-- class = "animated zoomIn" -->
+* {{2-3}}{{zoomOut}} <!-- class = "animated zoomOut" -->
+* {{3}}{{![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)}} <!-- class = "animated rubberBand" -->
 ```
 
-* {{0 infinite bounce}}{{ *bounce* }}
-* {{1 zoomIn}}{{zoomIn}}
-* {{2 zoomOut}}{{zoomOut}}
-* {{3 rubberBand}}{{![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)}}
-
+* {{0}}{{ *bounce* }} <!-- class = "animated infinite bounce" style = "animation-delay: 5s;" -->
+* {{1-2}}{{zoomIn}} <!-- class = "animated zoomIn" -->
+* {{2-3}}{{zoomOut}} <!-- class = "animated zoomOut" -->
+* {{3}}{{![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)}} <!-- class = "animated rubberBand" -->
 
 ### Block Effects
 
@@ -937,17 +1095,16 @@ one additional newline after the effect definition. The following Markdown block
 is then entirely associated with this effect.
 
                                    --{{1}}--
-You can put many blocks into double curly braces to enclose multiple Markdown
-blocks and as you can see from the examples below, an effect can also contain
-further effects.
+You can combine blocks by enclosing them into two lines of equality signs, as
+you can see from the examples below, an effect can also contain further effects.
 
 
 ``` markdown
-                      {{1}}
+                               {{1-3}}
 This is an example for a *single* block effect.
 
-                   {{2 zoomIn}}
-{{
+                               {{2-4}}
+================================================================================
 
 This is an example for a ... wait a second {{3 rubberBand}}{{**multi**}} ...
 block effect.
@@ -956,23 +1113,23 @@ block effect.
 * beta
 * gamma
 
-}}
+================================================================================
 ```
 
-                                  {{1}}
+                                  {{1-3}}
 This is an example for a *single* block effect.
 
-                               {{2 zoomIn}}
-{{
+                                  {{2-4}}
+================================================================================
 
-This is an example for a ... wait a second {{3 rubberBand}}{{**multi**}} ...
+This is an example for a ... wait a second {{3}}{{**multi**}} ...
 block effect.
 
 * alpha
 * beta
 * gamma
 
-}}
+================================================================================
 
                                 --{{4}}--
 You can put spaces before the definition of a block effect, to prevent github
@@ -980,6 +1137,12 @@ and others from adding the definition to a Markdown paragraph, and thus, to
 render the script properly.
 
 ### Narrator
+<!--
+language: en_UK
+
+narrator: UK English Male
+-->
+
 
 1. we are using the text-to-speech engine of https://responsivevoice.org
 2. the narrator voice must be defined within the initial comment of a script
@@ -991,6 +1154,14 @@ The entire ***Markdown*** paragraph right below the effect definition in double
 minus notation is sent to responsivevoice to speak the text out loud. If you
 click on the ear button at the navigation panel, then this paragraph gets
 rendered at the place where it is defined.
+
+                               --{{3 <!-- Deutsch Female-->}}--
+Markdown ist eine vereinfachte Auszeichnungssprache, die von John Gruber und
+Aaron Swartz entworfen und im Dezember 2004 mit Version 1.0.1 spezifiziert ...
+
+                               --{{4 <!-- Russian Female-->}}--
+Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
+Шварцем. Многие идеи языка были позаимствованы из существующих соглашений ...
 ```
 
                                 --{{1}}--
@@ -998,6 +1169,26 @@ The entire ***Markdown*** paragraph right below the effect definition in double
 minus notation is sent to responsivevoice to speak the text out loud. If you
 click on the ear button at the navigation panel, then this paragraph gets
 rendered at the place where it is defined.
+
+                                --{{2}}--
+The narrator voice is defined within the initial comment, but you can reset this
+for the entire section, by adding such a definition directly after the title
+tag, or you can add a comment directly after the comment identifier to let your
+script talk in different languages. Proceed and listen ;-)
+
+                                --{{3 <!-- Deutsch Female -->}}--
+Markdown ist eine vereinfachte Auszeichnungssprache, die von John Gruber und
+Aaron Swartz entworfen und im Dezember 2004 mit Version 1.0.1 spezifiziert
+wurde. Ein Ziel von Markdown ist, dass schon die Ausgangsform ohne weitere
+Konvertierung leicht lesbar ist.
+
+                               --{{4 <!-- Russian Female -->}}--
+Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
+Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
+разметке текста в электронных письмах. Реализации языка Markdown преобразуют
+текст в формате Markdown в валидный, правильно построенный XHTML и заменяют
+ левые угловые скобки («<») и амперсанды («&») на соответствующие коды сущностей.
+
 
 ## Charts
 
@@ -1028,7 +1219,7 @@ Markdown-format:
 
 Result:
 
-                                     diagram titel
+                            diagram titel
     1.5 |           *
         |
       y |        *      *
@@ -1147,7 +1338,6 @@ Markdown-format:
          0                           2
 
 
-
 ## Surveys
 
                              --{{0}}--
@@ -1249,6 +1439,34 @@ Result:
     [                     ] question 2 ?
     [                     ] question 3 ?
 
+## JavaScript
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+
+    {{0-1}}
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+<script>
+// Initialize a Line chart in the container with the ID chart1
+new Chartist.Line('#chart1', {
+  labels: [1, 2, 3, 4],
+  series: [[100, 120, 180, 200]]
+});
+// Initialize a Line chart in the container with the ID chart2
+</script>
+
+
+    {{1}}
+<div class="ct-chart ct-golden-section" id="chart2"></div>
+<script>
+// Initialize a Line chart in the container with the ID chart1
+new Chartist.Line('#chart2', {
+  labels: [1, 2, 3, 4],
+  series: [[100, 120, 10, 20]]
+});
+
+// Initialize a Line chart in the container with the ID chart2
+</script>
 
 ## Future Work
 
@@ -1260,41 +1478,40 @@ Result:
 
 ## Contributors and Credit
 
-{{1 fadeInUpBig}}{{<h1> André Dietrich  </h1>}}
+
+{{1}}{{<h1> André Dietrich  </h1>}} <!-- class = "animated fadeInUpBig" -->
 
 --{{1}}--
 Programming paradigm experimenter and creator of liaScript and SelectScript...
 
 
 
-{{2 fadeInUpBig}}{{<h1> Sebastian Zug   </h1>}}
+{{2}}{{<h1> Sebastian Zug   </h1>}} <!-- class = "animated fadeInUpBig" -->
 
 --{{2}}--
 The mind in the dark and the man behind the eLab-project ...
 
 
 
-{{3 fadeInUpBig}}{{<h1> Fin Christensen </h1>}}
+{{3}}{{<h1> Fin Christensen </h1>}} <!-- class = "animated fadeInUpBig" -->
 
 --{{3}}--
 CSS and Web development enthusiast, outstanding git user ...
 
 
-
-{{4 fadeInUpBig}}{{<h1> Martin Koppehel </h1>}}
+{{4}}{{<h1> Martin Koppehel </h1>}} <!-- class = "animated fadeInUpBig" -->
 
 --{{4}}--
 Hardware-architect and fully Fullstack developer ...
 
 
-
-{{5 fadeInUpBig}}{{<h1> Leon Wehmeier   </h1>}}
+{{5}}{{<h1> Leon Wehmeier   </h1>}}<!-- class = "animated fadeInUpBig" -->
 
 --{{5}}--
 Coordinator and embedded development guru ...
 
 
-{{6 fadeInUpBig}}{{<h1> Karl Fessel     </h1>}}
+{{6}}{{<h1> Karl Fessel     </h1>}} <!-- class = "animated fadeInUpBig" -->
 
 --{{6}}--
 Embedded systems developer, creator or arduinoview, and Markdown evangelist ...

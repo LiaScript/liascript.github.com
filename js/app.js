@@ -9099,15 +9099,16 @@ var _elm_community$parser_combinators$Combine$currentLocation = function (stream
 			while (true) {
 				var _p2 = lines;
 				if (_p2.ctor === '[]') {
-					return A3(_elm_community$parser_combinators$Combine$ParseLocation, '', 1, position);
+					return A3(_elm_community$parser_combinators$Combine$ParseLocation, '', currentLine, position);
 				} else {
-					if (_p2._1.ctor === '[]') {
-						return A3(_elm_community$parser_combinators$Combine$ParseLocation, _p2._0, currentLine + 1, position);
+					var _p3 = _p2._0;
+					var length = _elm_lang$core$String$length(_p3);
+					var lengthPlusNL = length + 1;
+					if (_elm_lang$core$Native_Utils.eq(position, length)) {
+						return A3(_elm_community$parser_combinators$Combine$ParseLocation, _p3, currentLine, position);
 					} else {
-						var _p3 = _p2._0;
-						var length = _elm_lang$core$String$length(_p3);
-						if (_elm_lang$core$Native_Utils.cmp(position, length) > -1) {
-							var _v3 = (position - length) - 1,
+						if (_elm_lang$core$Native_Utils.cmp(position, length) > 0) {
+							var _v3 = position - lengthPlusNL,
 								_v4 = currentLine + 1,
 								_v5 = _p2._1;
 							position = _v3;
@@ -9115,11 +9116,7 @@ var _elm_community$parser_combinators$Combine$currentLocation = function (stream
 							lines = _v5;
 							continue find;
 						} else {
-							if (_elm_lang$core$Native_Utils.eq(currentLine, 0)) {
-								return A3(_elm_community$parser_combinators$Combine$ParseLocation, _p3, 1, position);
-							} else {
-								return A3(_elm_community$parser_combinators$Combine$ParseLocation, _p3, currentLine, position - 1);
-							}
+							return A3(_elm_community$parser_combinators$Combine$ParseLocation, _p3, currentLine, position);
 						}
 					}
 				}
@@ -13965,9 +13962,230 @@ var _terezka$elm_plot$Plot$axisAtMax = _terezka$elm_plot$Plot$customAxis(
 		};
 	});
 
-var _user$project$Lia_Code_Types$CodeElement = F4(
+var _user$project$Lia_Markdown_Inline_Types$Container = F2(
+	function (a, b) {
+		return {ctor: 'Container', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$EInline = F4(
 	function (a, b, c, d) {
-		return {code: a, result: b, editing: c, running: d};
+		return {ctor: 'EInline', _0: a, _1: b, _2: c, _3: d};
+	});
+var _user$project$Lia_Markdown_Inline_Types$HTML = function (a) {
+	return {ctor: 'HTML', _0: a};
+};
+var _user$project$Lia_Markdown_Inline_Types$Ref = F2(
+	function (a, b) {
+		return {ctor: 'Ref', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Formula = F3(
+	function (a, b, c) {
+		return {ctor: 'Formula', _0: a, _1: b, _2: c};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Verbatim = F2(
+	function (a, b) {
+		return {ctor: 'Verbatim', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Superscript = F2(
+	function (a, b) {
+		return {ctor: 'Superscript', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Underline = F2(
+	function (a, b) {
+		return {ctor: 'Underline', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Strike = F2(
+	function (a, b) {
+		return {ctor: 'Strike', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Italic = F2(
+	function (a, b) {
+		return {ctor: 'Italic', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Bold = F2(
+	function (a, b) {
+		return {ctor: 'Bold', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Symbol = F2(
+	function (a, b) {
+		return {ctor: 'Symbol', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Chars = F2(
+	function (a, b) {
+		return {ctor: 'Chars', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Partial = function (a) {
+	return {ctor: 'Partial', _0: a};
+};
+var _user$project$Lia_Markdown_Inline_Types$Full = function (a) {
+	return {ctor: 'Full', _0: a};
+};
+var _user$project$Lia_Markdown_Inline_Types$Mail = function (a) {
+	return {ctor: 'Mail', _0: a};
+};
+var _user$project$Lia_Markdown_Inline_Types$Movie = F2(
+	function (a, b) {
+		return {ctor: 'Movie', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Image = F2(
+	function (a, b) {
+		return {ctor: 'Image', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Inline_Types$Link = F2(
+	function (a, b) {
+		return {ctor: 'Link', _0: a, _1: b};
+	});
+
+var _user$project$Lia_Effect_Model$current_comment = function (model) {
+	return A2(
+		_elm_lang$core$Maybe$map,
+		function (e) {
+			return {ctor: '_Tuple2', _0: e.comment, _1: e.narrator};
+		},
+		A2(_elm_lang$core$Dict$get, model.visible, model.comments));
+};
+var _user$project$Lia_Effect_Model$current_paragraphs = function (model) {
+	var _p0 = A2(_elm_lang$core$Dict$get, model.visible, model.comments);
+	if (_p0.ctor === 'Just') {
+		return _elm_lang$core$Array$toList(_p0._0.paragraphs);
+	} else {
+		return {ctor: '[]'};
+	}
+};
+var _user$project$Lia_Effect_Model$get_paragraph = F3(
+	function (id1, id2, model) {
+		var _p1 = A2(
+			_elm_lang$core$Maybe$map,
+			_elm_lang$core$Array$get(id2),
+			A2(
+				_elm_lang$core$Maybe$map,
+				function (_) {
+					return _.paragraphs;
+				},
+				A2(_elm_lang$core$Dict$get, id1, model.comments)));
+		if (_p1.ctor === 'Just') {
+			return _p1._0;
+		} else {
+			return _elm_lang$core$Maybe$Nothing;
+		}
+	});
+var _user$project$Lia_Effect_Model$set_annotation = F4(
+	function (id1, id2, m, attr) {
+		var _p2 = A2(_elm_lang$core$Dict$get, id1, m);
+		if (_p2.ctor === 'Just') {
+			var _p4 = _p2._0;
+			var _p3 = A2(_elm_lang$core$Array$get, id2, _p4.paragraphs);
+			if (_p3.ctor === 'Just') {
+				return A3(
+					_elm_lang$core$Dict$insert,
+					id1,
+					_elm_lang$core$Native_Utils.update(
+						_p4,
+						{
+							paragraphs: A3(
+								_elm_lang$core$Array$set,
+								id2,
+								{ctor: '_Tuple2', _0: attr, _1: _p3._0._1},
+								_p4.paragraphs)
+						}),
+					m);
+			} else {
+				return m;
+			}
+		} else {
+			return m;
+		}
+	});
+var _user$project$Lia_Effect_Model$get_all_javascript = function (model) {
+	return _elm_lang$core$List$concat(
+		A2(
+			_elm_lang$core$List$map,
+			function (_p5) {
+				var _p6 = _p5;
+				return _p6._1;
+			},
+			_elm_lang$core$List$sort(
+				_elm_lang$core$Dict$toList(model.javascript))));
+};
+var _user$project$Lia_Effect_Model$get_javascript = function (model) {
+	var _p7 = A2(_elm_lang$core$Dict$get, model.visible, model.javascript);
+	if (_p7.ctor === 'Just') {
+		return _p7._0;
+	} else {
+		return {ctor: '[]'};
+	}
+};
+var _user$project$Lia_Effect_Model$add_javascript = F3(
+	function (idx, script, model) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				javascript: A3(
+					_elm_lang$core$Dict$insert,
+					idx,
+					function () {
+						var _p8 = A2(_elm_lang$core$Dict$get, idx, model.javascript);
+						if (_p8.ctor === 'Just') {
+							return A2(
+								_elm_lang$core$List$append,
+								_p8._0,
+								{
+									ctor: '::',
+									_0: script,
+									_1: {ctor: '[]'}
+								});
+						} else {
+							return {
+								ctor: '::',
+								_0: script,
+								_1: {ctor: '[]'}
+							};
+						}
+					}(),
+					model.javascript)
+			});
+	});
+var _user$project$Lia_Effect_Model$Model = F4(
+	function (a, b, c, d) {
+		return {visible: a, effects: b, comments: c, javascript: d};
+	});
+var _user$project$Lia_Effect_Model$init = A4(_user$project$Lia_Effect_Model$Model, 0, 0, _elm_lang$core$Dict$empty, _elm_lang$core$Dict$empty);
+var _user$project$Lia_Effect_Model$Element = F3(
+	function (a, b, c) {
+		return {narrator: a, comment: b, paragraphs: c};
+	});
+
+var _user$project$Lia_Definition_Types$default = {
+	author: 'unknown',
+	date: '',
+	email: '',
+	language: 'en_US',
+	narrator: 'US English Male',
+	version: '',
+	comment: '',
+	scripts: {ctor: '[]'}
+};
+var _user$project$Lia_Definition_Types$Definition = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {author: a, date: b, email: c, language: d, narrator: e, version: f, comment: g, scripts: h};
+	});
+
+var _user$project$Lia_Helper$get = F2(
+	function (idx, vector) {
+		return A2(_elm_lang$core$Array$get, idx, vector);
+	});
+
+var _user$project$Lia_Index_Model$Model = F2(
+	function (a, b) {
+		return {search: a, index: b};
+	});
+var _user$project$Lia_Index_Model$init = A2(
+	_user$project$Lia_Index_Model$Model,
+	'',
+	{ctor: '[]'});
+
+var _user$project$Lia_Code_Types$Element = F6(
+	function (a, b, c, d, e, f) {
+		return {code: a, version: b, version_active: c, result: d, editing: e, running: f};
 	});
 var _user$project$Lia_Code_Types$Evaluate = F3(
 	function (a, b, c) {
@@ -13978,72 +14196,24 @@ var _user$project$Lia_Code_Types$Highlight = F2(
 		return {ctor: 'Highlight', _0: a, _1: b};
 	});
 
-var _user$project$Lia_Inline_Types$Container = function (a) {
-	return {ctor: 'Container', _0: a};
-};
-var _user$project$Lia_Inline_Types$EInline = F3(
-	function (a, b, c) {
-		return {ctor: 'EInline', _0: a, _1: b, _2: c};
-	});
-var _user$project$Lia_Inline_Types$HTML = function (a) {
-	return {ctor: 'HTML', _0: a};
-};
-var _user$project$Lia_Inline_Types$Ref = function (a) {
-	return {ctor: 'Ref', _0: a};
-};
-var _user$project$Lia_Inline_Types$Formula = F2(
+var _user$project$Lia_Chart_Types$Point = F2(
 	function (a, b) {
-		return {ctor: 'Formula', _0: a, _1: b};
+		return {x: a, y: b};
 	});
-var _user$project$Lia_Inline_Types$Code = function (a) {
-	return {ctor: 'Code', _0: a};
-};
-var _user$project$Lia_Inline_Types$Superscript = function (a) {
-	return {ctor: 'Superscript', _0: a};
-};
-var _user$project$Lia_Inline_Types$Underline = function (a) {
-	return {ctor: 'Underline', _0: a};
-};
-var _user$project$Lia_Inline_Types$Strike = function (a) {
-	return {ctor: 'Strike', _0: a};
-};
-var _user$project$Lia_Inline_Types$Italic = function (a) {
-	return {ctor: 'Italic', _0: a};
-};
-var _user$project$Lia_Inline_Types$Bold = function (a) {
-	return {ctor: 'Bold', _0: a};
-};
-var _user$project$Lia_Inline_Types$Symbol = function (a) {
-	return {ctor: 'Symbol', _0: a};
-};
-var _user$project$Lia_Inline_Types$Chars = function (a) {
-	return {ctor: 'Chars', _0: a};
-};
-var _user$project$Lia_Inline_Types$Partial = function (a) {
-	return {ctor: 'Partial', _0: a};
-};
-var _user$project$Lia_Inline_Types$Full = function (a) {
-	return {ctor: 'Full', _0: a};
-};
-var _user$project$Lia_Inline_Types$Mail = function (a) {
-	return {ctor: 'Mail', _0: a};
-};
-var _user$project$Lia_Inline_Types$Movie = F3(
-	function (a, b, c) {
-		return {ctor: 'Movie', _0: a, _1: b, _2: c};
-	});
-var _user$project$Lia_Inline_Types$Image = F3(
-	function (a, b, c) {
-		return {ctor: 'Image', _0: a, _1: b, _2: c};
-	});
-var _user$project$Lia_Inline_Types$Link = F2(
-	function (a, b) {
-		return {ctor: 'Link', _0: a, _1: b};
-	});
-
-var _user$project$Lia_Quiz_Types$QuizElement = F4(
+var _user$project$Lia_Chart_Types$Chart = F4(
 	function (a, b, c, d) {
-		return {solved: a, state: b, hints: c, trial: d};
+		return {title: a, y_label: b, x_label: c, diagrams: d};
+	});
+var _user$project$Lia_Chart_Types$Dots = function (a) {
+	return {ctor: 'Dots', _0: a};
+};
+var _user$project$Lia_Chart_Types$Line = function (a) {
+	return {ctor: 'Line', _0: a};
+};
+
+var _user$project$Lia_Quiz_Types$Element = F4(
+	function (a, b, c, d) {
+		return {solved: a, state: b, trial: c, hint: d};
 	});
 var _user$project$Lia_Quiz_Types$ReSolved = {ctor: 'ReSolved'};
 var _user$project$Lia_Quiz_Types$Solved = {ctor: 'Solved'};
@@ -14070,21 +14240,6 @@ var _user$project$Lia_Quiz_Types$Text = F3(
 		return {ctor: 'Text', _0: a, _1: b, _2: c};
 	});
 
-var _user$project$Lia_Chart_Types$Point = F2(
-	function (a, b) {
-		return {x: a, y: b};
-	});
-var _user$project$Lia_Chart_Types$Chart = F4(
-	function (a, b, c, d) {
-		return {title: a, y_label: b, x_label: c, diagrams: d};
-	});
-var _user$project$Lia_Chart_Types$Dots = function (a) {
-	return {ctor: 'Dots', _0: a};
-};
-var _user$project$Lia_Chart_Types$Line = function (a) {
-	return {ctor: 'Line', _0: a};
-};
-
 var _user$project$Lia_Survey_Types$MatrixState = F2(
 	function (a, b) {
 		return {ctor: 'MatrixState', _0: a, _1: b};
@@ -14109,700 +14264,366 @@ var _user$project$Lia_Survey_Types$Text = F2(
 		return {ctor: 'Text', _0: a, _1: b};
 	});
 
-var _user$project$Lia_Types$Slide = F4(
+var _user$project$Lia_Markdown_Types$Code = F2(
+	function (a, b) {
+		return {ctor: 'Code', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Types$Chart = F2(
+	function (a, b) {
+		return {ctor: 'Chart', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Types$Survey = F2(
+	function (a, b) {
+		return {ctor: 'Survey', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Types$Comment = function (a) {
+	return {ctor: 'Comment', _0: a};
+};
+var _user$project$Lia_Markdown_Types$Effect = F2(
+	function (a, b) {
+		return {ctor: 'Effect', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Types$Quiz = F3(
+	function (a, b, c) {
+		return {ctor: 'Quiz', _0: a, _1: b, _2: c};
+	});
+var _user$project$Lia_Markdown_Types$Table = F4(
 	function (a, b, c, d) {
-		return {indentation: a, title: b, body: c, effects: d};
+		return {ctor: 'Table', _0: a, _1: b, _2: c, _3: d};
 	});
-var _user$project$Lia_Types$Textbook = {ctor: 'Textbook'};
-var _user$project$Lia_Types$Slides_only = {ctor: 'Slides_only'};
-var _user$project$Lia_Types$Slides = {ctor: 'Slides'};
-var _user$project$Lia_Types$Chart = function (a) {
-	return {ctor: 'Chart', _0: a};
-};
-var _user$project$Lia_Types$SurveyBlock = function (a) {
-	return {ctor: 'SurveyBlock', _0: a};
-};
-var _user$project$Lia_Types$OrderedList = function (a) {
-	return {ctor: 'OrderedList', _0: a};
-};
-var _user$project$Lia_Types$BulletList = function (a) {
-	return {ctor: 'BulletList', _0: a};
-};
-var _user$project$Lia_Types$EComment = F2(
+var _user$project$Lia_Markdown_Types$OrderedList = F2(
 	function (a, b) {
-		return {ctor: 'EComment', _0: a, _1: b};
+		return {ctor: 'OrderedList', _0: a, _1: b};
 	});
-var _user$project$Lia_Types$EBlock = F3(
-	function (a, b, c) {
-		return {ctor: 'EBlock', _0: a, _1: b, _2: c};
-	});
-var _user$project$Lia_Types$Quiz = F2(
+var _user$project$Lia_Markdown_Types$BulletList = F2(
 	function (a, b) {
-		return {ctor: 'Quiz', _0: a, _1: b};
+		return {ctor: 'BulletList', _0: a, _1: b};
 	});
-var _user$project$Lia_Types$Table = F3(
-	function (a, b, c) {
-		return {ctor: 'Table', _0: a, _1: b, _2: c};
+var _user$project$Lia_Markdown_Types$Paragraph = F2(
+	function (a, b) {
+		return {ctor: 'Paragraph', _0: a, _1: b};
 	});
-var _user$project$Lia_Types$Paragraph = function (a) {
-	return {ctor: 'Paragraph', _0: a};
-};
-var _user$project$Lia_Types$Quote = function (a) {
-	return {ctor: 'Quote', _0: a};
-};
-var _user$project$Lia_Types$CodeBlock = function (a) {
-	return {ctor: 'CodeBlock', _0: a};
-};
-var _user$project$Lia_Types$HLine = {ctor: 'HLine'};
-
-var _user$project$Lia_Index_Model$parse_url = function (url) {
-	var _p0 = url;
-	switch (_p0.ctor) {
-		case 'Full':
-			return _p0._0;
-		case 'Partial':
-			return _p0._0;
-		default:
-			return _p0._0;
-	}
-};
-var _user$project$Lia_Index_Model$parse_inline = function (element) {
-	parse_inline:
-	while (true) {
-		var _p1 = element;
-		switch (_p1.ctor) {
-			case 'Chars':
-				return _p1._0;
-			case 'Code':
-				return _p1._0;
-			case 'Bold':
-				var _v2 = _p1._0;
-				element = _v2;
-				continue parse_inline;
-			case 'Italic':
-				var _v3 = _p1._0;
-				element = _v3;
-				continue parse_inline;
-			case 'Underline':
-				var _v4 = _p1._0;
-				element = _v4;
-				continue parse_inline;
-			case 'Superscript':
-				var _v5 = _p1._0;
-				element = _v5;
-				continue parse_inline;
-			case 'Ref':
-				var _p2 = _p1._0;
-				switch (_p2.ctor) {
-					case 'Link':
-						return A2(
-							_elm_lang$core$Basics_ops['++'],
-							_p2._0,
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								' ',
-								_user$project$Lia_Index_Model$parse_url(_p2._1)));
-					case 'Image':
-						return A2(
-							_elm_lang$core$Basics_ops['++'],
-							_p2._0,
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								' ',
-								_user$project$Lia_Index_Model$parse_url(_p2._1)));
-					default:
-						return A2(
-							_elm_lang$core$Basics_ops['++'],
-							_p2._0,
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								' ',
-								_user$project$Lia_Index_Model$parse_url(_p2._1)));
-				}
-			case 'Formula':
-				return _p1._1;
-			case 'HTML':
-				return _p1._0;
-			case 'EInline':
-				return _elm_lang$core$String$concat(
-					A2(_elm_lang$core$List$map, _user$project$Lia_Index_Model$parse_inline, _p1._2));
-			default:
-				return '';
-		}
-	}
-};
-var _user$project$Lia_Index_Model$parse_inlines = function (list) {
-	return _elm_lang$core$String$concat(
-		A2(_elm_lang$core$List$map, _user$project$Lia_Index_Model$parse_inline, list));
-};
-var _user$project$Lia_Index_Model$parse_quiz = function (quiz) {
-	var _p3 = quiz;
-	switch (_p3.ctor) {
-		case 'Text':
-			return '';
-		case 'SingleChoice':
-			return _elm_lang$core$String$concat(
-				A2(_elm_lang$core$List$map, _user$project$Lia_Index_Model$parse_inlines, _p3._1));
-		default:
-			return _elm_lang$core$String$concat(
-				A2(_elm_lang$core$List$map, _user$project$Lia_Index_Model$parse_inlines, _p3._1));
-	}
-};
-var _user$project$Lia_Index_Model$parse_block = function (element) {
-	var _p4 = element;
-	switch (_p4.ctor) {
-		case 'Paragraph':
-			return _user$project$Lia_Index_Model$parse_inlines(_p4._0);
-		case 'Quote':
-			return _user$project$Lia_Index_Model$parse_inlines(_p4._0);
-		case 'CodeBlock':
-			var _p5 = _p4._0;
-			if (_p5.ctor === 'Highlight') {
-				return _p5._1;
-			} else {
-				return '';
-			}
-		case 'Quiz':
-			return _user$project$Lia_Index_Model$parse_quiz(_p4._0);
-		case 'EBlock':
-			return _elm_lang$core$String$concat(
-				A2(
-					_elm_lang$core$List$map,
-					function (sub) {
-						return _user$project$Lia_Index_Model$parse_block(sub);
-					},
-					_p4._2));
-		default:
-			return '';
-	}
-};
-var _user$project$Lia_Index_Model$extract_string = function (slide) {
-	return _elm_lang$core$String$toLower(
-		A2(
-			_elm_lang$core$Basics_ops['++'],
-			slide.title,
-			_elm_lang$core$String$concat(
-				A2(_elm_lang$core$List$map, _user$project$Lia_Index_Model$parse_block, slide.body))));
-};
-var _user$project$Lia_Index_Model$Model = F3(
-	function (a, b, c) {
-		return {search: a, index: b, results: c};
+var _user$project$Lia_Markdown_Types$Quote = F2(
+	function (a, b) {
+		return {ctor: 'Quote', _0: a, _1: b};
 	});
-var _user$project$Lia_Index_Model$init = function (slides) {
-	return A3(
-		_user$project$Lia_Index_Model$Model,
-		'',
-		A2(_elm_lang$core$List$map, _user$project$Lia_Index_Model$extract_string, slides),
-		_elm_lang$core$Maybe$Nothing);
+var _user$project$Lia_Markdown_Types$HLine = function (a) {
+	return {ctor: 'HLine', _0: a};
 };
 
-var _user$project$Lia_Effect_Model$scan_for_comments = F2(
-	function (effect_count, blocks) {
-		var find = F3(
-			function (comments, idx, _p0) {
-				return A2(
-					_elm_lang$core$Maybe$andThen,
-					function (_p1) {
-						var _p2 = _p1;
-						return _elm_lang$core$Maybe$Just(_p2._1);
-					},
-					_elm_lang$core$List$head(
-						A2(
-							_elm_lang$core$List$filter,
-							function (_p3) {
-								var _p4 = _p3;
-								return _elm_lang$core$Native_Utils.eq(_p4._0, idx);
-							},
-							comments)));
-			});
-		var ecomment = function (block) {
-			var _p5 = block;
-			if (_p5.ctor === 'EComment') {
-				return _elm_lang$core$Maybe$Just(
-					{
-						ctor: '_Tuple2',
-						_0: _p5._0,
-						_1: _user$project$Lia_Index_Model$parse_inlines(_p5._1)
-					});
-			} else {
-				return _elm_lang$core$Maybe$Nothing;
-			}
+var _user$project$Lia_Types$Design = F2(
+	function (a, b) {
+		return {theme: a, light: b};
+	});
+var _user$project$Lia_Types$Section = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return {code: a, title: b, visited: c, indentation: d, body: e, error: f, code_vector: g, quiz_vector: h, survey_vector: i, effect_model: j};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
 		};
-		var _p6 = A2(_elm_lang$core$List$filterMap, ecomment, blocks);
-		if (_p6.ctor === '[]') {
-			return _elm_lang$core$Array$empty;
-		} else {
-			var find_comments = find(_p6);
-			return A2(
-				_elm_lang$core$Array$indexedMap,
-				find_comments,
-				A2(_elm_lang$core$Array$repeat, effect_count + 1, _elm_lang$core$Maybe$Nothing));
-		}
+	};
+};
+var _user$project$Lia_Types$Textbook = {ctor: 'Textbook'};
+var _user$project$Lia_Types$Presentation = {ctor: 'Presentation'};
+var _user$project$Lia_Types$Slides = {ctor: 'Slides'};
+
+const hljs = require("highlight.js");
+
+// katex is an umd module that only support CommonJS, AMD and globals but not brunch modules
+//  -> we have to use globals by setting katex as a static ressource in brunch...
+
+var _user$project$Native_Utils = (function () {
+    function highlight (language, code) {
+        try {
+            if (language != "")
+                return hljs.highlight(language, code).value;
+            else
+                return hljs.highlightAuto(code, hljs.listLanguages()).value;
+        } catch (e) {
+            return "<b><font color=\"red\">"+e.message+"</font></b><br>"+code;
+        }
+    };
+
+    function highlightAuto (code) {
+        try {
+            return hljs.highlightAuto(code).language;
+        } catch (e) {
+            return "bash";
+        }
+    };
+
+    function formula(dMode, str) {
+        try{
+            return katex.renderToString(str, {displayMode: dMode});
+        } catch(e) {
+            return "<b><font color=\"red\">"+e.message+"</font></b><br>";
+        }
+    }
+
+    function evaluate(code)
+    {
+        try { var rslt = String(eval(code));
+              return {
+                  ctor: "Ok",
+                  _0: rslt
+              };
+        } catch (e) {
+            return {
+                ctor: "Err",
+                _0: e.message
+            };
+        }
+    };
+
+    function execute(delay, code)
+    {
+        setTimeout(function(){
+          try {
+              var rslt = String(eval(code));
+          }
+          catch (e) { }
+        }, delay);
+
+    };
+
+    function toUnixNewline(code)
+    {
+        return code.replace("\r\n", "\n");
+    }
+
+/*
+    function wait(ms) {
+        var start = new Date().getTime();
+        var end = start;
+        while(end < start + ms) {
+            end = new Date().getTime();
+        }
+    }
+*/
+    var lib_js_counter = -1;
+
+    function load_js(url)
+    {
+        lib_js_counter += 1;
+
+        console.log("url: ", lib_js_counter, url);
+
+
+        setTimeout( function () {
+          try {
+              var scriptTag = document.createElement('script');
+              scriptTag.src = url;
+              document.head.appendChild(scriptTag);
+
+          } catch (e) {
+              console.log(e.message);
+          }
+      }, lib_js_counter * 100);
+
+      return {
+          ctor: "Ok",
+          _0: ""
+      };
+    };
+
+
+    function evaluate2 (id, code) {
+        return _elm_lang$core$Native_Scheduler.nativeBinding(function(callback){
+            setTimeout(function() {
+                var evalJS = new Promise (
+                    function (resolve, reject) {
+                        try {
+                            resolve({id: id, result: String(eval(code))});
+                        }
+                        catch (e) {
+                            reject({id: id, result: e.message});
+                        }
+                    }
+                );
+
+                evalJS
+                    .then(function(rslt) {
+                        callback(_elm_lang$core$Native_Scheduler.succeed(rslt));
+                    })
+                    .catch(function(rslt) {
+                        callback(_elm_lang$core$Native_Scheduler.fail(rslt));
+                    });
+            }, 10);
+        });
+    };
+
+    function get_local (key) {
+        try {
+            var value = localStorage.getItem(key);
+
+            if (typeof(value) === "string") {
+                return { ctor : "Just", _0:  value };
+            }
+        } catch (e) {
+
+        }
+
+        return { ctor: "Nothing" };
+    };
+
+    function set_local (key, value) {
+        try {
+            localStorage.setItem(key, value);
+            return value;
+        } catch (e) {
+            return value;
+        }
+    };
+
+    return {
+        highlight: F2(highlight),
+        highlightAuto: highlightAuto,
+        formula: F2(formula),
+        evaluate: evaluate,
+        evaluate2: F2(evaluate2),
+        execute: F2(execute),
+        load_js: load_js,
+        get_local: get_local,
+        set_local: F2(set_local),
+        toUnixNewline: toUnixNewline
+    };
+})();
+
+var _user$project$Lia_Utils$toUnixNewline = function (code) {
+	return _user$project$Native_Utils.toUnixNewline(code);
+};
+var _user$project$Lia_Utils$set_local = F2(
+	function (key, value) {
+		var unused = A2(
+			_user$project$Native_Utils.set_local,
+			key,
+			_elm_lang$core$Basics$toString(value));
+		return value;
 	});
-var _user$project$Lia_Effect_Model$get_comment = function (model) {
+var _user$project$Lia_Utils$get_local = function (key) {
+	return _user$project$Native_Utils.get_local(key);
+};
+var _user$project$Lia_Utils$stringToHtml = function (str) {
 	return A2(
-		_elm_lang$core$Maybe$andThen,
-		function (a) {
-			return a;
+		_elm_lang$html$Html$span,
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html_Attributes$property,
+				'innerHTML',
+				_elm_lang$core$Json_Encode$string(str)),
+			_1: {ctor: '[]'}
 		},
-		A2(_elm_lang$core$Array$get, model.visible, model.comments));
+		{ctor: '[]'});
 };
-var _user$project$Lia_Effect_Model$Model = F5(
-	function (a, b, c, d, e) {
-		return {visible: a, effects: b, status: c, comments: d, narrator: e};
+var _user$project$Lia_Utils$evaluateJS2 = F3(
+	function (resultToMessage, idx, code) {
+		return A2(
+			_elm_lang$core$Task$attempt,
+			resultToMessage,
+			A2(_user$project$Native_Utils.evaluate2, idx, code));
 	});
-var _user$project$Lia_Effect_Model$Error = function (a) {
-	return {ctor: 'Error', _0: a};
+var _user$project$Lia_Utils$load_js = function (url) {
+	return _user$project$Native_Utils.load_js(url);
 };
-var _user$project$Lia_Effect_Model$Silent = {ctor: 'Silent'};
-var _user$project$Lia_Effect_Model$init = F2(
-	function (narrator, maybe) {
-		var _p7 = maybe;
-		if (_p7.ctor === 'Just') {
-			var _p8 = _p7._0;
-			return A5(
-				_user$project$Lia_Effect_Model$Model,
-				0,
-				_p8.effects,
-				_user$project$Lia_Effect_Model$Silent,
-				A2(_user$project$Lia_Effect_Model$scan_for_comments, _p8.effects, _p8.body),
-				narrator);
-		} else {
-			return A5(_user$project$Lia_Effect_Model$Model, 0, 0, _user$project$Lia_Effect_Model$Silent, _elm_lang$core$Array$empty, narrator);
-		}
+var _user$project$Lia_Utils$execute = F2(
+	function (delay, code) {
+		return A2(_user$project$Native_Utils.execute, delay, code);
 	});
-var _user$project$Lia_Effect_Model$init_silent = A5(_user$project$Lia_Effect_Model$Model, 9999, 9999, _user$project$Lia_Effect_Model$Silent, _elm_lang$core$Array$empty, '');
-var _user$project$Lia_Effect_Model$Speaking = {ctor: 'Speaking'};
+var _user$project$Lia_Utils$evaluateJS = function (code) {
+	return _user$project$Native_Utils.evaluate(code);
+};
+var _user$project$Lia_Utils$formula = F2(
+	function (displayMode, string) {
+		return _user$project$Lia_Utils$stringToHtml(
+			A2(_user$project$Native_Utils.formula, displayMode, string));
+	});
+var _user$project$Lia_Utils$guess = function (code) {
+	return _user$project$Native_Utils.highlightAuto(code);
+};
+var _user$project$Lia_Utils$highlight = F2(
+	function (language, code) {
+		return _user$project$Lia_Utils$stringToHtml(
+			A2(_user$project$Native_Utils.highlight, language, code));
+	});
 
-
-var _user$project$Lia_Quiz_Model$json2state = function () {
-	var state_decoder = function (type_) {
-		var _p0 = type_;
-		switch (_p0) {
-			case 'Text':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Quiz_Types$TextState,
-					A2(_elm_lang$core$Json_Decode$field, 'value', _elm_lang$core$Json_Decode$string));
-			case 'SingleChoice':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Quiz_Types$SingleChoiceState,
-					A2(_elm_lang$core$Json_Decode$field, 'value', _elm_lang$core$Json_Decode$int));
-			case 'MultipleChoice':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Quiz_Types$MultipleChoiceState,
-					A2(
-						_elm_lang$core$Json_Decode$field,
-						'value',
-						_elm_lang$core$Json_Decode$array(_elm_lang$core$Json_Decode$bool)));
-			default:
-				return _elm_lang$core$Json_Decode$fail(
-					A2(_elm_lang$core$Basics_ops['++'], 'not supported type: ', type_));
-		}
-	};
+var _user$project$Lia_Model$init_sound = A2(
+	_elm_lang$core$Maybe$withDefault,
+	true,
+	A2(
+		_elm_lang$core$Maybe$andThen,
+		function (b) {
+			return _elm_lang$core$Maybe$Just(
+				!_elm_lang$core$Native_Utils.eq(b, 'false'));
+		},
+		_user$project$Lia_Utils$get_local('sound')));
+var _user$project$Lia_Model$init_section = function (uid) {
 	return A2(
-		_elm_lang$core$Json_Decode$andThen,
-		state_decoder,
-		A2(_elm_lang$core$Json_Decode$field, 'type', _elm_lang$core$Json_Decode$string));
-}();
-var _user$project$Lia_Quiz_Model$json2element = function () {
-	var solved_decoder = function (i) {
-		var _p1 = i;
-		switch (_p1) {
-			case 0:
-				return _elm_lang$core$Json_Decode$succeed(_user$project$Lia_Quiz_Types$Open);
-			case 1:
-				return _elm_lang$core$Json_Decode$succeed(_user$project$Lia_Quiz_Types$Solved);
-			default:
-				return _elm_lang$core$Json_Decode$succeed(_user$project$Lia_Quiz_Types$ReSolved);
-		}
-	};
-	return A5(
-		_elm_lang$core$Json_Decode$map4,
-		_user$project$Lia_Quiz_Types$QuizElement,
+		_elm_lang$core$Maybe$withDefault,
+		0,
 		A2(
-			_elm_lang$core$Json_Decode$andThen,
-			solved_decoder,
-			A2(_elm_lang$core$Json_Decode$field, 'solved', _elm_lang$core$Json_Decode$int)),
-		A2(_elm_lang$core$Json_Decode$field, 'state', _user$project$Lia_Quiz_Model$json2state),
-		A2(_elm_lang$core$Json_Decode$field, 'hints', _elm_lang$core$Json_Decode$int),
-		A2(_elm_lang$core$Json_Decode$field, 'trial', _elm_lang$core$Json_Decode$int));
-}();
-var _user$project$Lia_Quiz_Model$json2model = function (json) {
-	return A2(
-		_elm_lang$core$Json_Decode$decodeValue,
-		_elm_lang$core$Json_Decode$array(_user$project$Lia_Quiz_Model$json2element),
-		json);
-};
-var _user$project$Lia_Quiz_Model$state2json = function (state) {
-	return _elm_lang$core$Json_Encode$object(
-		function () {
-			var _p2 = state;
-			switch (_p2.ctor) {
-				case 'TextState':
-					return {
-						ctor: '::',
-						_0: {
-							ctor: '_Tuple2',
-							_0: 'type',
-							_1: _elm_lang$core$Json_Encode$string('Text')
-						},
-						_1: {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'value',
-								_1: _elm_lang$core$Json_Encode$string(_p2._0)
-							},
-							_1: {ctor: '[]'}
-						}
-					};
-				case 'SingleChoiceState':
-					return {
-						ctor: '::',
-						_0: {
-							ctor: '_Tuple2',
-							_0: 'type',
-							_1: _elm_lang$core$Json_Encode$string('SingleChoice')
-						},
-						_1: {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'value',
-								_1: _elm_lang$core$Json_Encode$int(_p2._0)
-							},
-							_1: {ctor: '[]'}
-						}
-					};
-				default:
-					return {
-						ctor: '::',
-						_0: {
-							ctor: '_Tuple2',
-							_0: 'type',
-							_1: _elm_lang$core$Json_Encode$string('MultipleChoice')
-						},
-						_1: {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'value',
-								_1: _elm_lang$core$Json_Encode$array(
-									A2(_elm_lang$core$Array$map, _elm_lang$core$Json_Encode$bool, _p2._0))
-							},
-							_1: {ctor: '[]'}
-						}
-					};
-			}
-		}());
-};
-var _user$project$Lia_Quiz_Model$element2json = function (element) {
-	return _elm_lang$core$Json_Encode$object(
-		{
-			ctor: '::',
-			_0: {
-				ctor: '_Tuple2',
-				_0: 'solved',
-				_1: _elm_lang$core$Json_Encode$int(
-					function () {
-						var _p3 = element.solved;
-						switch (_p3.ctor) {
-							case 'Open':
-								return 0;
-							case 'Solved':
-								return 1;
-							default:
-								return -1;
-						}
-					}())
-			},
-			_1: {
-				ctor: '::',
-				_0: {
-					ctor: '_Tuple2',
-					_0: 'state',
-					_1: _user$project$Lia_Quiz_Model$state2json(element.state)
-				},
-				_1: {
-					ctor: '::',
-					_0: {
-						ctor: '_Tuple2',
-						_0: 'trial',
-						_1: _elm_lang$core$Json_Encode$int(element.trial)
-					},
-					_1: {
-						ctor: '::',
-						_0: {
-							ctor: '_Tuple2',
-							_0: 'hints',
-							_1: _elm_lang$core$Json_Encode$int(element.hints)
-						},
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
-};
-var _user$project$Lia_Quiz_Model$model2json = function (model) {
-	return _elm_lang$core$Json_Encode$array(
-		A2(_elm_lang$core$Array$map, _user$project$Lia_Quiz_Model$element2json, model));
-};
-var _user$project$Lia_Quiz_Model$get_state = F2(
-	function (vector, idx) {
-		return A2(_elm_lang$core$Array$get, idx, vector);
-	});
-
-var _user$project$Lia_Survey_Model$json2state = function () {
-	var dict = _elm_lang$core$Json_Decode$dict(_elm_lang$core$Json_Decode$bool);
-	var value = _elm_lang$core$Json_Decode$field('value');
-	var state_decoder = function (type_) {
-		var _p0 = type_;
-		switch (_p0) {
-			case 'Text':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Survey_Types$TextState,
-					value(_elm_lang$core$Json_Decode$string));
-			case 'SingleChoice':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Survey_Types$VectorState(true),
-					value(dict));
-			case 'MultipleChoice':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Survey_Types$VectorState(false),
-					value(dict));
-			case 'SingleChoiceBlock':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Survey_Types$MatrixState(true),
-					value(
-						_elm_lang$core$Json_Decode$array(dict)));
-			case 'MultipleChoiceBlock':
-				return A2(
-					_elm_lang$core$Json_Decode$map,
-					_user$project$Lia_Survey_Types$MatrixState(false),
-					value(
-						_elm_lang$core$Json_Decode$array(dict)));
-			default:
-				return _elm_lang$core$Json_Decode$fail(
-					A2(_elm_lang$core$Basics_ops['++'], 'not supported type: ', type_));
-		}
-	};
-	return A2(
-		_elm_lang$core$Json_Decode$andThen,
-		state_decoder,
-		A2(_elm_lang$core$Json_Decode$field, 'type', _elm_lang$core$Json_Decode$string));
-}();
-var _user$project$Lia_Survey_Model$json2element = A3(
-	_elm_lang$core$Json_Decode$map2,
-	F2(
-		function (v0, v1) {
-			return {ctor: '_Tuple2', _0: v0, _1: v1};
-		}),
-	A2(_elm_lang$core$Json_Decode$field, 'submitted', _elm_lang$core$Json_Decode$bool),
-	A2(_elm_lang$core$Json_Decode$field, 'state', _user$project$Lia_Survey_Model$json2state));
-var _user$project$Lia_Survey_Model$json2model = function (json) {
-	return A2(
-		_elm_lang$core$Json_Decode$decodeValue,
-		_elm_lang$core$Json_Decode$array(_user$project$Lia_Survey_Model$json2element),
-		json);
-};
-var _user$project$Lia_Survey_Model$state2json = function (state) {
-	var dict2json = function (dict) {
-		return _elm_lang$core$Json_Encode$object(
+			_elm_lang$core$Maybe$andThen,
+			_elm_lang$core$Result$toMaybe,
 			A2(
-				_elm_lang$core$List$map,
-				function (_p1) {
-					var _p2 = _p1;
-					return {
-						ctor: '_Tuple2',
-						_0: _p2._0,
-						_1: _elm_lang$core$Json_Encode$bool(_p2._1)
-					};
-				},
-				_elm_lang$core$Dict$toList(dict)));
-	};
-	return _elm_lang$core$Json_Encode$object(
-		function () {
-			var _p3 = state;
-			switch (_p3.ctor) {
-				case 'TextState':
-					return {
-						ctor: '::',
-						_0: {
-							ctor: '_Tuple2',
-							_0: 'type',
-							_1: _elm_lang$core$Json_Encode$string('Text')
-						},
-						_1: {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'value',
-								_1: _elm_lang$core$Json_Encode$string(_p3._0)
-							},
-							_1: {ctor: '[]'}
-						}
-					};
-				case 'VectorState':
-					if (_p3._0 === true) {
-						return {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'type',
-								_1: _elm_lang$core$Json_Encode$string('SingleChoice')
-							},
-							_1: {
-								ctor: '::',
-								_0: {
-									ctor: '_Tuple2',
-									_0: 'value',
-									_1: dict2json(_p3._1)
-								},
-								_1: {ctor: '[]'}
-							}
-						};
-					} else {
-						return {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'type',
-								_1: _elm_lang$core$Json_Encode$string('MultipleChoice')
-							},
-							_1: {
-								ctor: '::',
-								_0: {
-									ctor: '_Tuple2',
-									_0: 'value',
-									_1: dict2json(_p3._1)
-								},
-								_1: {ctor: '[]'}
-							}
-						};
+				_elm_lang$core$Maybe$map,
+				_elm_lang$core$String$toInt,
+				A2(_elm_lang$core$Maybe$andThen, _user$project$Lia_Utils$get_local, uid))));
+};
+var _user$project$Lia_Model$init_design_light = A2(
+	_elm_lang$core$Maybe$withDefault,
+	'light',
+	_user$project$Lia_Utils$get_local('theme_light'));
+var _user$project$Lia_Model$init_design_theme = A2(
+	_elm_lang$core$Maybe$withDefault,
+	'default',
+	_user$project$Lia_Utils$get_local('theme'));
+var _user$project$Lia_Model$init = F2(
+	function (mode, uid) {
+		var local_mode = function () {
+			var _p0 = _user$project$Lia_Utils$get_local('mode');
+			_v0_2:
+			do {
+				if (_p0.ctor === 'Just') {
+					switch (_p0._0) {
+						case 'Slides':
+							return _user$project$Lia_Types$Slides;
+						case 'Presentation':
+							return _user$project$Lia_Types$Presentation;
+						default:
+							break _v0_2;
 					}
-				default:
-					if (_p3._0 === true) {
-						return {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'type',
-								_1: _elm_lang$core$Json_Encode$string('SingleChoiceBlock')
-							},
-							_1: {
-								ctor: '::',
-								_0: {
-									ctor: '_Tuple2',
-									_0: 'value',
-									_1: _elm_lang$core$Json_Encode$array(
-										A2(_elm_lang$core$Array$map, dict2json, _p3._1))
-								},
-								_1: {ctor: '[]'}
-							}
-						};
-					} else {
-						return {
-							ctor: '::',
-							_0: {
-								ctor: '_Tuple2',
-								_0: 'type',
-								_1: _elm_lang$core$Json_Encode$string('MultipleChoiceBlock')
-							},
-							_1: {
-								ctor: '::',
-								_0: {
-									ctor: '_Tuple2',
-									_0: 'value',
-									_1: _elm_lang$core$Json_Encode$array(
-										A2(_elm_lang$core$Array$map, dict2json, _p3._1))
-								},
-								_1: {ctor: '[]'}
-							}
-						};
-					}
-			}
-		}());
-};
-var _user$project$Lia_Survey_Model$element2json = function (_p4) {
-	var _p5 = _p4;
-	return _elm_lang$core$Json_Encode$object(
-		{
-			ctor: '::',
-			_0: {
-				ctor: '_Tuple2',
-				_0: 'submitted',
-				_1: _elm_lang$core$Json_Encode$bool(_p5._0)
-			},
-			_1: {
-				ctor: '::',
-				_0: {
-					ctor: '_Tuple2',
-					_0: 'state',
-					_1: _user$project$Lia_Survey_Model$state2json(_p5._1)
-				},
-				_1: {ctor: '[]'}
-			}
-		});
-};
-var _user$project$Lia_Survey_Model$model2json = function (vector) {
-	return _elm_lang$core$Json_Encode$array(
-		A2(_elm_lang$core$Array$map, _user$project$Lia_Survey_Model$element2json, vector));
-};
-var _user$project$Lia_Survey_Model$get_matrix_state = F4(
-	function (model, idx, row, $var) {
-		var _p6 = A2(_elm_lang$core$Array$get, idx, model);
-		if (((_p6.ctor === 'Just') && (_p6._0.ctor === '_Tuple2')) && (_p6._0._1.ctor === 'MatrixState')) {
-			return A2(
-				_elm_lang$core$Maybe$withDefault,
-				false,
-				A2(
-					_elm_lang$core$Maybe$andThen,
-					function (d) {
-						return A2(_elm_lang$core$Dict$get, $var, d);
-					},
-					A2(_elm_lang$core$Array$get, row, _p6._0._1._1)));
-		} else {
-			return false;
-		}
+				} else {
+					break _v0_2;
+				}
+			} while(false);
+			return mode;
+		}();
+		return {
+			uid: uid,
+			mode: local_mode,
+			error: _elm_lang$core$Maybe$Nothing,
+			sections: _elm_lang$core$Array$empty,
+			section_active: _user$project$Lia_Model$init_section(uid),
+			definition: _user$project$Lia_Definition_Types$default,
+			design: {theme: _user$project$Lia_Model$init_design_theme, light: _user$project$Lia_Model$init_design_light},
+			loc: true,
+			index_model: _user$project$Lia_Index_Model$init,
+			sound: _user$project$Lia_Model$init_sound
+		};
 	});
-var _user$project$Lia_Survey_Model$get_vector_state = F3(
-	function (model, idx, $var) {
-		var _p7 = A2(_elm_lang$core$Array$get, idx, model);
-		if (((_p7.ctor === 'Just') && (_p7._0.ctor === '_Tuple2')) && (_p7._0._1.ctor === 'VectorState')) {
-			return A2(
-				_elm_lang$core$Maybe$withDefault,
-				false,
-				A2(_elm_lang$core$Dict$get, $var, _p7._0._1._1));
-		} else {
-			return false;
-		}
-	});
-var _user$project$Lia_Survey_Model$get_text_state = F2(
-	function (model, idx) {
-		var _p8 = A2(_elm_lang$core$Array$get, idx, model);
-		if (((_p8.ctor === 'Just') && (_p8._0.ctor === '_Tuple2')) && (_p8._0._1.ctor === 'TextState')) {
-			return _p8._0._1._0;
-		} else {
-			return '';
-		}
-	});
-var _user$project$Lia_Survey_Model$get_submission_state = F2(
-	function (model, idx) {
-		var _p9 = A2(_elm_lang$core$Array$get, idx, model);
-		if (((_p9.ctor === 'Just') && (_p9._0.ctor === '_Tuple2')) && (_p9._0._0 === true)) {
-			return true;
-		} else {
-			return false;
-		}
-	});
-
 var _user$project$Lia_Model$Model = function (a) {
 	return function (b) {
 		return function (c) {
@@ -14813,17 +14634,7 @@ var _user$project$Lia_Model$Model = function (a) {
 							return function (h) {
 								return function (i) {
 									return function (j) {
-										return function (k) {
-											return function (l) {
-												return function (m) {
-													return function (n) {
-														return function (o) {
-															return {script: a, error: b, mode: c, slides: d, current_slide: e, show_contents: f, quiz_model: g, code_model: h, effect_model: i, index_model: j, survey_model: k, narrator: l, silent: m, theme: n, theme_light: o};
-														};
-													};
-												};
-											};
-										};
+										return {uid: a, mode: b, error: c, sections: d, section_active: e, definition: f, design: g, loc: h, index_model: i, sound: j};
 									};
 								};
 							};
@@ -14835,51 +14646,1388 @@ var _user$project$Lia_Model$Model = function (a) {
 	};
 };
 
-var _user$project$Lia_PState$init = {
-	identation: 0,
-	skip_identation: false,
-	num_effects: 0,
-	code_vector: _elm_lang$core$Array$empty,
-	quiz_vector: _elm_lang$core$Array$empty,
-	survey_vector: _elm_lang$core$Array$empty,
-	def_author: '',
-	def_date: '',
-	def_email: '',
-	def_language: '',
-	def_narrator: '',
-	def_version: '',
-	def_comment: '',
-	def_scripts: {ctor: '[]'}
+var _user$project$Lia_Markdown_Inline_Stringify$ref2string = function (ref) {
+	var _p0 = ref;
+	switch (_p0.ctor) {
+		case 'Movie':
+			return _p0._0;
+		case 'Image':
+			return _p0._0;
+		default:
+			return _p0._0;
+	}
 };
-var _user$project$Lia_PState$PState = function (a) {
-	return function (b) {
-		return function (c) {
-			return function (d) {
-				return function (e) {
-					return function (f) {
-						return function (g) {
-							return function (h) {
-								return function (i) {
-									return function (j) {
-										return function (k) {
-											return function (l) {
-												return function (m) {
-													return function (n) {
-														return {identation: a, skip_identation: b, num_effects: c, code_vector: d, quiz_vector: e, survey_vector: f, def_author: g, def_date: h, def_email: i, def_language: j, def_narrator: k, def_version: l, def_comment: m, def_scripts: n};
-													};
-												};
-											};
-										};
-									};
-								};
-							};
-						};
-					};
-				};
-			};
+var _user$project$Lia_Markdown_Inline_Stringify$stringify = function (inlines) {
+	return _elm_lang$core$String$concat(
+		A2(_elm_lang$core$List$map, _user$project$Lia_Markdown_Inline_Stringify$inline2string, inlines));
+};
+var _user$project$Lia_Markdown_Inline_Stringify$inline2string = function (inline) {
+	inline2string:
+	while (true) {
+		var _p1 = inline;
+		switch (_p1.ctor) {
+			case 'Chars':
+				return _p1._0;
+			case 'Symbol':
+				return '';
+			case 'Bold':
+				var _v2 = _p1._0;
+				inline = _v2;
+				continue inline2string;
+			case 'Italic':
+				var _v3 = _p1._0;
+				inline = _v3;
+				continue inline2string;
+			case 'Strike':
+				var _v4 = _p1._0;
+				inline = _v4;
+				continue inline2string;
+			case 'Underline':
+				var _v5 = _p1._0;
+				inline = _v5;
+				continue inline2string;
+			case 'Superscript':
+				var _v6 = _p1._0;
+				inline = _v6;
+				continue inline2string;
+			case 'Verbatim':
+				return _p1._0;
+			case 'Formula':
+				return _p1._1;
+			case 'Ref':
+				return _user$project$Lia_Markdown_Inline_Stringify$ref2string(_p1._0);
+			case 'HTML':
+				return '';
+			case 'EInline':
+				return _user$project$Lia_Markdown_Inline_Stringify$stringify(_p1._2);
+			default:
+				return _user$project$Lia_Markdown_Inline_Stringify$stringify(_p1._0);
+		}
+	}
+};
+
+var _user$project$Lia_PState$ident_skip = _elm_community$parser_combinators$Combine$modifyState(
+	function (state) {
+		return _elm_lang$core$Native_Utils.update(
+			state,
+			{identation_skip: true});
+	});
+var _user$project$Lia_PState$identation_pop = _elm_community$parser_combinators$Combine$modifyState(
+	function (state) {
+		return _elm_lang$core$Native_Utils.update(
+			state,
+			{
+				identation_skip: false,
+				identation: _elm_lang$core$List$reverse(
+					A2(
+						_elm_lang$core$List$drop,
+						1,
+						_elm_lang$core$List$reverse(state.identation)))
+			});
+	});
+var _user$project$Lia_PState$identation_append = function (str) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (state) {
+			return _elm_lang$core$Native_Utils.update(
+				state,
+				{
+					identation_skip: true,
+					identation: A2(
+						_elm_lang$core$List$append,
+						state.identation,
+						{
+							ctor: '::',
+							_0: str,
+							_1: {ctor: '[]'}
+						})
+				});
+		});
+};
+var _user$project$Lia_PState$identation = _elm_community$parser_combinators$Combine$lazy(
+	function (_p0) {
+		var _p1 = _p0;
+		var par = function (s) {
+			return _elm_lang$core$Native_Utils.eq(
+				s.identation,
+				{ctor: '[]'}) ? _elm_community$parser_combinators$Combine$succeed(
+				{ctor: '_Tuple0'}) : (s.identation_skip ? _elm_community$parser_combinators$Combine$skip(
+				_elm_community$parser_combinators$Combine$succeed(
+					{ctor: '_Tuple0'})) : _elm_community$parser_combinators$Combine$skip(
+				_elm_community$parser_combinators$Combine$regex(
+					_elm_lang$core$String$concat(s.identation))));
 		};
-	};
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			_elm_community$parser_combinators$Combine$withState(par),
+			_elm_community$parser_combinators$Combine$modifyState(
+				function (s) {
+					return _elm_lang$core$Native_Utils.update(
+						s,
+						{identation_skip: false});
+				}));
+	});
+var _user$project$Lia_PState$init = F2(
+	function (global, local) {
+		return {
+			identation: {ctor: '[]'},
+			identation_skip: false,
+			code_temp: {ctor: '_Tuple2', _0: '', _1: ''},
+			code_vector: _elm_lang$core$Array$empty,
+			quiz_vector: _elm_lang$core$Array$empty,
+			survey_vector: _elm_lang$core$Array$empty,
+			effect_model: _user$project$Lia_Effect_Model$init,
+			effect_number: {
+				ctor: '::',
+				_0: 0,
+				_1: {ctor: '[]'}
+			},
+			defines: {global: global, local: local}
+		};
+	});
+var _user$project$Lia_PState$PState = F9(
+	function (a, b, c, d, e, f, g, h, i) {
+		return {identation: a, identation_skip: b, code_temp: c, code_vector: d, quiz_vector: e, survey_vector: f, effect_model: g, effect_number: h, defines: i};
+	});
+
+var _user$project$Lia_Effect_Parser$get_counter = function (idx) {
+	return _elm_community$parser_combinators$Combine$withState(
+		function (s) {
+			return _elm_community$parser_combinators$Combine$succeed(
+				function () {
+					var _p0 = A2(_elm_lang$core$Dict$get, idx, s.effect_model.comments);
+					if (_p0.ctor === 'Just') {
+						return _elm_lang$core$Array$length(_p0._0.paragraphs) - 1;
+					} else {
+						return 0;
+					}
+				}());
+		});
 };
+var _user$project$Lia_Effect_Parser$add_comment = function (_p1) {
+	var _p2 = _p1;
+	var _p7 = _p2._2;
+	var _p6 = _p2._0;
+	var rslt = function (id2) {
+		return _elm_community$parser_combinators$Combine$succeed(
+			{ctor: '_Tuple2', _0: _p6, _1: id2});
+	};
+	var mod = function (s) {
+		var narrator = function () {
+			var _p3 = {ctor: '_Tuple2', _0: _p2._1, _1: s.defines.local};
+			_v2_2:
+			do {
+				if (_p3.ctor === '_Tuple2') {
+					if (_p3._0.ctor === 'Just') {
+						return _elm_lang$core$String$trim(_p3._0._0);
+					} else {
+						if (_p3._1.ctor === 'Just') {
+							return _p3._1._0.narrator;
+						} else {
+							break _v2_2;
+						}
+					}
+				} else {
+					break _v2_2;
+				}
+			} while(false);
+			return s.defines.global.narrator;
+		}();
+		return _elm_lang$core$Native_Utils.update(
+			s,
+			{
+				effect_model: function () {
+					var e = s.effect_model;
+					return _elm_lang$core$Native_Utils.update(
+						e,
+						{
+							comments: function () {
+								var _p4 = A2(_elm_lang$core$Dict$get, _p6, e.comments);
+								if (_p4.ctor === 'Just') {
+									var _p5 = _p4._0;
+									return A3(
+										_elm_lang$core$Dict$insert,
+										_p6,
+										_elm_lang$core$Native_Utils.update(
+											_p5,
+											{
+												comment: A2(
+													_elm_lang$core$Basics_ops['++'],
+													_p5.comment,
+													A2(
+														_elm_lang$core$Basics_ops['++'],
+														'\\n',
+														_user$project$Lia_Markdown_Inline_Stringify$stringify(_p7))),
+												paragraphs: A2(
+													_elm_lang$core$Array$push,
+													{ctor: '_Tuple2', _0: _elm_lang$core$Maybe$Nothing, _1: _p7},
+													_p5.paragraphs)
+											}),
+										e.comments);
+								} else {
+									return A3(
+										_elm_lang$core$Dict$insert,
+										_p6,
+										A3(
+											_user$project$Lia_Effect_Model$Element,
+											narrator,
+											_user$project$Lia_Markdown_Inline_Stringify$stringify(_p7),
+											_elm_lang$core$Array$fromList(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: _elm_lang$core$Maybe$Nothing, _1: _p7},
+													_1: {ctor: '[]'}
+												})),
+										e.comments);
+								}
+							}()
+						});
+				}()
+			});
+	};
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['>>='],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$modifyState(mod),
+			_user$project$Lia_Effect_Parser$get_counter(_p6)),
+		rslt);
+};
+var _user$project$Lia_Effect_Parser$reset_effect_number = _elm_community$parser_combinators$Combine$modifyState(
+	function (s) {
+		return _elm_lang$core$Native_Utils.update(
+			s,
+			{
+				effect_number: A2(_elm_lang$core$List$drop, 1, s.effect_number)
+			});
+	});
+var _user$project$Lia_Effect_Parser$effect_number = function () {
+	var state = function (n) {
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$modifyState(
+				function (s) {
+					return _elm_lang$core$Native_Utils.update(
+						s,
+						{
+							effect_model: function () {
+								if (_elm_lang$core$Native_Utils.cmp(n, s.effect_model.effects) > 0) {
+									var e = s.effect_model;
+									return _elm_lang$core$Native_Utils.update(
+										e,
+										{effects: n});
+								} else {
+									return s.effect_model;
+								}
+							}(),
+							effect_number: {ctor: '::', _0: n, _1: s.effect_number}
+						});
+				}),
+			_elm_community$parser_combinators$Combine$succeed(n));
+	};
+	return A2(_elm_community$parser_combinators$Combine_ops['>>='], _elm_community$parser_combinators$Combine_Num$int, state);
+}();
+var _user$project$Lia_Effect_Parser$comment = function (paragraph) {
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['>>='],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*>'],
+					A2(
+						_elm_community$parser_combinators$Combine_ops['<$>'],
+						F3(
+							function (i, n, p) {
+								return {ctor: '_Tuple3', _0: i, _1: n, _2: p};
+							}),
+						A2(
+							_elm_community$parser_combinators$Combine_ops['*>'],
+							_elm_community$parser_combinators$Combine$regex('[ \\t]*--{{'),
+							_user$project$Lia_Effect_Parser$effect_number)),
+					A2(
+						_elm_community$parser_combinators$Combine_ops['<*'],
+						_elm_community$parser_combinators$Combine$maybe(
+							A2(
+								_elm_community$parser_combinators$Combine_ops['<*'],
+								A2(
+									_elm_community$parser_combinators$Combine_ops['*>'],
+									_elm_community$parser_combinators$Combine$regex('[ \\t]*<!--'),
+									_elm_community$parser_combinators$Combine$regex('[A-Za-z0-9 ]+')),
+								_elm_community$parser_combinators$Combine$regex('-->[ \\t]*'))),
+						_elm_community$parser_combinators$Combine$regex('}}--[ \\t]*[\\n]+'))),
+				paragraph),
+			_user$project$Lia_Effect_Parser$reset_effect_number),
+		_user$project$Lia_Effect_Parser$add_comment);
+};
+var _user$project$Lia_Effect_Parser$inline = function (inlines) {
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<*'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<$>'],
+					_user$project$Lia_Markdown_Inline_Types$EInline,
+					A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_elm_community$parser_combinators$Combine$string('{{'),
+						_user$project$Lia_Effect_Parser$effect_number)),
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*'],
+					A2(
+						_elm_community$parser_combinators$Combine$optional,
+						99999,
+						A2(
+							_elm_community$parser_combinators$Combine_ops['*>'],
+							_elm_community$parser_combinators$Combine$regex('[\t ]*-[\t ]*'),
+							_elm_community$parser_combinators$Combine_Num$int)),
+					_elm_community$parser_combinators$Combine$string('}}'))),
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$string('{{'),
+				A2(
+					_elm_community$parser_combinators$Combine$manyTill,
+					inlines,
+					_elm_community$parser_combinators$Combine$string('}}')))),
+		_user$project$Lia_Effect_Parser$reset_effect_number);
+};
+var _user$project$Lia_Effect_Parser$multi = function (blocks) {
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['*>'],
+		_elm_community$parser_combinators$Combine$regex('[\\t ]*[=]{3,}[\\n]+'),
+		A2(
+			_elm_community$parser_combinators$Combine$manyTill,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*'],
+				blocks,
+				_elm_community$parser_combinators$Combine$regex('[ \\n\\t]*')),
+			_elm_community$parser_combinators$Combine$regex('[\\t ]*[=]{3,}')));
+};
+var _user$project$Lia_Effect_Parser$single = function (blocks) {
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		_elm_lang$core$List$singleton,
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$regex('[ \\n\\t]*'),
+			blocks));
+};
+var _user$project$Lia_Effect_Parser$markdown = function (blocks) {
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<*'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<$>'],
+					F3(
+						function (i, j, list) {
+							return {ctor: '_Tuple3', _0: i, _1: j, _2: list};
+						}),
+					A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_elm_community$parser_combinators$Combine$regex('[\\t ]*{{'),
+						_user$project$Lia_Effect_Parser$effect_number)),
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*'],
+					A2(
+						_elm_community$parser_combinators$Combine$optional,
+						99999,
+						A2(
+							_elm_community$parser_combinators$Combine_ops['*>'],
+							_elm_community$parser_combinators$Combine$regex('[\t ]*-[\t ]*'),
+							_elm_community$parser_combinators$Combine_Num$int)),
+					_elm_community$parser_combinators$Combine$regex('}}[\\t ]*\\n'))),
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<|>'],
+				_user$project$Lia_Effect_Parser$multi(blocks),
+				_user$project$Lia_Effect_Parser$single(blocks))),
+		_user$project$Lia_Effect_Parser$reset_effect_number);
+};
+
+var _user$project$Lia_Markdown_Inline_Parser$code = A2(
+	_elm_community$parser_combinators$Combine_ops['<$>'],
+	_user$project$Lia_Markdown_Inline_Types$Verbatim,
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<?>'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$string('`'),
+				_elm_community$parser_combinators$Combine$regex('[^`\\n]+')),
+			_elm_community$parser_combinators$Combine$string('`')),
+		'inline code'));
+var _user$project$Lia_Markdown_Inline_Parser$smileys = _elm_community$parser_combinators$Combine$lazy(
+	function (_p0) {
+		var _p1 = _p0;
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<?>'],
+			_elm_community$parser_combinators$Combine$choice(
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_community$parser_combinators$Combine_ops['$>'],
+						_elm_community$parser_combinators$Combine$string(':-)'),
+						_user$project$Lia_Markdown_Inline_Types$Symbol('&#x1f600;')),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_community$parser_combinators$Combine_ops['$>'],
+							_elm_community$parser_combinators$Combine$string(';-)'),
+							_user$project$Lia_Markdown_Inline_Types$Symbol('&#x1f609;')),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_community$parser_combinators$Combine_ops['$>'],
+								_elm_community$parser_combinators$Combine$string(':-D'),
+								_user$project$Lia_Markdown_Inline_Types$Symbol('&#x1f600;')),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_community$parser_combinators$Combine_ops['$>'],
+									_elm_community$parser_combinators$Combine$string(':-O'),
+									_user$project$Lia_Markdown_Inline_Types$Symbol('&#128558;')),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_community$parser_combinators$Combine_ops['$>'],
+										_elm_community$parser_combinators$Combine$string(':-('),
+										_user$project$Lia_Markdown_Inline_Types$Symbol('&#128542;')),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_community$parser_combinators$Combine_ops['$>'],
+											_elm_community$parser_combinators$Combine$string(':-|'),
+											_user$project$Lia_Markdown_Inline_Types$Symbol('&#128528;')),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_community$parser_combinators$Combine_ops['$>'],
+												_elm_community$parser_combinators$Combine$string(':-/'),
+												_user$project$Lia_Markdown_Inline_Types$Symbol('&#128533;')),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_community$parser_combinators$Combine_ops['$>'],
+													_elm_community$parser_combinators$Combine$string(':-P'),
+													_user$project$Lia_Markdown_Inline_Types$Symbol('&#128539;')),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_community$parser_combinators$Combine_ops['$>'],
+														_elm_community$parser_combinators$Combine$string(';-P'),
+														_user$project$Lia_Markdown_Inline_Types$Symbol('&#128540;')),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_community$parser_combinators$Combine_ops['$>'],
+															_elm_community$parser_combinators$Combine$string(':-*'),
+															_user$project$Lia_Markdown_Inline_Types$Symbol('&#128535;')),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_elm_community$parser_combinators$Combine_ops['$>'],
+																_elm_community$parser_combinators$Combine$string(':\')'),
+																_user$project$Lia_Markdown_Inline_Types$Symbol('&#128514;')),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_community$parser_combinators$Combine_ops['$>'],
+																	_elm_community$parser_combinators$Combine$string(':\'('),
+																	_user$project$Lia_Markdown_Inline_Types$Symbol('&#128554;')),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}),
+			'smiley');
+	});
+var _user$project$Lia_Markdown_Inline_Parser$arrows = _elm_community$parser_combinators$Combine$lazy(
+	function (_p2) {
+		var _p3 = _p2;
+		return _elm_community$parser_combinators$Combine$choice(
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_community$parser_combinators$Combine_ops['$>'],
+					_elm_community$parser_combinators$Combine$string('<-->'),
+					_user$project$Lia_Markdown_Inline_Types$Symbol('&#10231;')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_community$parser_combinators$Combine_ops['$>'],
+						_elm_community$parser_combinators$Combine$string('<--'),
+						_user$project$Lia_Markdown_Inline_Types$Symbol('&#10229;')),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_community$parser_combinators$Combine_ops['$>'],
+							_elm_community$parser_combinators$Combine$string('-->'),
+							_user$project$Lia_Markdown_Inline_Types$Symbol('&#10230;')),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_community$parser_combinators$Combine_ops['$>'],
+								_elm_community$parser_combinators$Combine$string('<<-'),
+								_user$project$Lia_Markdown_Inline_Types$Symbol('&#8606;')),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_community$parser_combinators$Combine_ops['$>'],
+									_elm_community$parser_combinators$Combine$string('->>'),
+									_user$project$Lia_Markdown_Inline_Types$Symbol('&#8608;')),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_community$parser_combinators$Combine_ops['$>'],
+										_elm_community$parser_combinators$Combine$string('<->'),
+										_user$project$Lia_Markdown_Inline_Types$Symbol('&#8596;')),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_community$parser_combinators$Combine_ops['$>'],
+											_elm_community$parser_combinators$Combine$string('>->'),
+											_user$project$Lia_Markdown_Inline_Types$Symbol('&#8611;')),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_community$parser_combinators$Combine_ops['$>'],
+												_elm_community$parser_combinators$Combine$string('<-<'),
+												_user$project$Lia_Markdown_Inline_Types$Symbol('&#8610;')),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_community$parser_combinators$Combine_ops['$>'],
+													_elm_community$parser_combinators$Combine$string('->'),
+													_user$project$Lia_Markdown_Inline_Types$Symbol('&#8594;')),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_community$parser_combinators$Combine_ops['$>'],
+														_elm_community$parser_combinators$Combine$string('<-'),
+														_user$project$Lia_Markdown_Inline_Types$Symbol('&#8592;')),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_community$parser_combinators$Combine_ops['$>'],
+															_elm_community$parser_combinators$Combine$string('<~'),
+															_user$project$Lia_Markdown_Inline_Types$Symbol('&#8604;')),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_elm_community$parser_combinators$Combine_ops['$>'],
+																_elm_community$parser_combinators$Combine$string('~>'),
+																_user$project$Lia_Markdown_Inline_Types$Symbol('&#8605;')),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_community$parser_combinators$Combine_ops['$>'],
+																	_elm_community$parser_combinators$Combine$string('<==>'),
+																	_user$project$Lia_Markdown_Inline_Types$Symbol('&#10234;')),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_community$parser_combinators$Combine_ops['$>'],
+																		_elm_community$parser_combinators$Combine$string('==>'),
+																		_user$project$Lia_Markdown_Inline_Types$Symbol('&#10233;')),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_community$parser_combinators$Combine_ops['$>'],
+																			_elm_community$parser_combinators$Combine$string('<=='),
+																			_user$project$Lia_Markdown_Inline_Types$Symbol('&#10232;')),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_community$parser_combinators$Combine_ops['$>'],
+																				_elm_community$parser_combinators$Combine$string('<=>'),
+																				_user$project$Lia_Markdown_Inline_Types$Symbol('&#8660;')),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_community$parser_combinators$Combine_ops['$>'],
+																					_elm_community$parser_combinators$Combine$string('=>'),
+																					_user$project$Lia_Markdown_Inline_Types$Symbol('&#8658;')),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_community$parser_combinators$Combine_ops['$>'],
+																						_elm_community$parser_combinators$Combine$string('<='),
+																						_user$project$Lia_Markdown_Inline_Types$Symbol('&#8656;')),
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			});
+	});
+var _user$project$Lia_Markdown_Inline_Parser$url_mail = A2(
+	_elm_community$parser_combinators$Combine_ops['*>'],
+	_elm_community$parser_combinators$Combine$maybe(
+		_elm_community$parser_combinators$Combine$string('mailto:')),
+	_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9_.\\-]+@[a-zA-Z0-9_.\\-]+'));
+var _user$project$Lia_Markdown_Inline_Parser$url_full = _elm_community$parser_combinators$Combine$regex('[a-zA-Z]+://(/)?[a-zA-Z0-9\\.\\-\\_]+\\.([a-z\\.]{2,6})[^ \\)\\t\\n]*');
+var _user$project$Lia_Markdown_Inline_Parser$url = _elm_community$parser_combinators$Combine$lazy(
+	function (_p4) {
+		var _p5 = _p4;
+		return _elm_community$parser_combinators$Combine$choice(
+			{
+				ctor: '::',
+				_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Inline_Types$Mail, _user$project$Lia_Markdown_Inline_Parser$url_mail),
+				_1: {
+					ctor: '::',
+					_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Inline_Types$Full, _user$project$Lia_Markdown_Inline_Parser$url_full),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _user$project$Lia_Markdown_Inline_Parser$reference = _elm_community$parser_combinators$Combine$lazy(
+	function (_p6) {
+		var _p7 = _p6;
+		var url_ = _elm_community$parser_combinators$Combine$parens(
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<|>'],
+				_user$project$Lia_Markdown_Inline_Parser$url,
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<$>'],
+					_user$project$Lia_Markdown_Inline_Types$Partial,
+					_elm_community$parser_combinators$Combine$regex('[^\\)\n]*'))));
+		var info = _elm_community$parser_combinators$Combine$brackets(
+			_elm_community$parser_combinators$Combine$regex('[^\\]\n]*'));
+		var link = A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Inline_Types$Link, info),
+			url_);
+		var image = A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<$>'],
+				_user$project$Lia_Markdown_Inline_Types$Image,
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_elm_community$parser_combinators$Combine$string('!'),
+					info)),
+			url_);
+		var movie = A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<$>'],
+				_user$project$Lia_Markdown_Inline_Types$Movie,
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_elm_community$parser_combinators$Combine$string('!!'),
+					info)),
+			url_);
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Ref,
+			_elm_community$parser_combinators$Combine$choice(
+				{
+					ctor: '::',
+					_0: movie,
+					_1: {
+						ctor: '::',
+						_0: image,
+						_1: {
+							ctor: '::',
+							_0: link,
+							_1: {ctor: '[]'}
+						}
+					}
+				}));
+	});
+var _user$project$Lia_Markdown_Inline_Parser$inline_url = A2(
+	_elm_community$parser_combinators$Combine_ops['<$>'],
+	function (u) {
+		return A2(
+			_user$project$Lia_Markdown_Inline_Types$Link,
+			u,
+			_user$project$Lia_Markdown_Inline_Types$Full(u));
+	},
+	A2(_elm_community$parser_combinators$Combine_ops['<|>'], _user$project$Lia_Markdown_Inline_Parser$url_full, _user$project$Lia_Markdown_Inline_Parser$url_mail));
+var _user$project$Lia_Markdown_Inline_Parser$stringTill = function (p) {
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		_elm_lang$core$String$fromList,
+		A2(_elm_community$parser_combinators$Combine$manyTill, _elm_community$parser_combinators$Combine_Char$anyChar, p));
+};
+var _user$project$Lia_Markdown_Inline_Parser$formula = function () {
+	var p2 = A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		_user$project$Lia_Markdown_Inline_Types$Formula(true),
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$string('$$'),
+			_user$project$Lia_Markdown_Inline_Parser$stringTill(
+				_elm_community$parser_combinators$Combine$string('$$'))));
+	var p1 = A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		_user$project$Lia_Markdown_Inline_Types$Formula(false),
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$string('$'),
+				_elm_community$parser_combinators$Combine$regex('[^\\n$]+')),
+			_elm_community$parser_combinators$Combine$string('$')));
+	return _elm_community$parser_combinators$Combine$choice(
+		{
+			ctor: '::',
+			_0: p2,
+			_1: {
+				ctor: '::',
+				_0: p1,
+				_1: {ctor: '[]'}
+			}
+		});
+}();
+var _user$project$Lia_Markdown_Inline_Parser$whitelines = _elm_community$parser_combinators$Combine$skip(
+	_elm_community$parser_combinators$Combine$regex('[ \\t\\n]*'));
+var _user$project$Lia_Markdown_Inline_Parser$newline = _elm_community$parser_combinators$Combine$skip(
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<|>'],
+		_elm_community$parser_combinators$Combine_Char$char(
+			_elm_lang$core$Native_Utils.chr('\n')),
+		_elm_community$parser_combinators$Combine_Char$eol));
+var _user$project$Lia_Markdown_Inline_Parser$newlines = _elm_community$parser_combinators$Combine$skip(
+	_elm_community$parser_combinators$Combine$many(_user$project$Lia_Markdown_Inline_Parser$newline));
+var _user$project$Lia_Markdown_Inline_Parser$combine = function (list) {
+	combine:
+	while (true) {
+		var _p8 = list;
+		if (_p8.ctor === '[]') {
+			return {ctor: '[]'};
+		} else {
+			if (_p8._1.ctor === '[]') {
+				return {
+					ctor: '::',
+					_0: _p8._0,
+					_1: {ctor: '[]'}
+				};
+			} else {
+				var _p12 = _p8._1._1;
+				var _p11 = _p8._1._0;
+				var _p10 = _p8._0;
+				var _p9 = {ctor: '_Tuple2', _0: _p10, _1: _p11};
+				if (((((_p9.ctor === '_Tuple2') && (_p9._0.ctor === 'Chars')) && (_p9._0._1.ctor === 'Nothing')) && (_p9._1.ctor === 'Chars')) && (_p9._1._1.ctor === 'Nothing')) {
+					var _v6 = {
+						ctor: '::',
+						_0: A2(
+							_user$project$Lia_Markdown_Inline_Types$Chars,
+							A2(_elm_lang$core$Basics_ops['++'], _p9._0._0, _p9._1._0),
+							_elm_lang$core$Maybe$Nothing),
+						_1: _p12
+					};
+					list = _v6;
+					continue combine;
+				} else {
+					return {
+						ctor: '::',
+						_0: _p10,
+						_1: _user$project$Lia_Markdown_Inline_Parser$combine(
+							{ctor: '::', _0: _p11, _1: _p12})
+					};
+				}
+			}
+		}
+	}
+};
+var _user$project$Lia_Markdown_Inline_Parser$html_block = function () {
+	var p = function (tag) {
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			function (c) {
+				return A2(
+					_elm_lang$core$Basics_ops['++'],
+					A2(
+						_elm_lang$core$String$append,
+						A2(_elm_lang$core$Basics_ops['++'], '<', tag),
+						c),
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						'</',
+						A2(_elm_lang$core$Basics_ops['++'], tag, '>')));
+			},
+			_user$project$Lia_Markdown_Inline_Parser$stringTill(
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*'],
+					A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_elm_community$parser_combinators$Combine$string('</'),
+						_elm_community$parser_combinators$Combine$string(tag)),
+					_elm_community$parser_combinators$Combine$string('>'))));
+	};
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		_user$project$Lia_Markdown_Inline_Types$HTML,
+		A2(
+			_elm_community$parser_combinators$Combine_ops['>>='],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$string('<'),
+				_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9]+')),
+			p));
+}();
+var _user$project$Lia_Markdown_Inline_Parser$html_void = _elm_community$parser_combinators$Combine$lazy(
+	function (_p13) {
+		var _p14 = _p13;
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$HTML,
+			_elm_community$parser_combinators$Combine$choice(
+				{
+					ctor: '::',
+					_0: _elm_community$parser_combinators$Combine$regex('<area[^>\\n]*>'),
+					_1: {
+						ctor: '::',
+						_0: _elm_community$parser_combinators$Combine$regex('<base[^>\\n]*>'),
+						_1: {
+							ctor: '::',
+							_0: _elm_community$parser_combinators$Combine$regex('<br[^>\\n]*>'),
+							_1: {
+								ctor: '::',
+								_0: _elm_community$parser_combinators$Combine$regex('<col[^>\\n]*>'),
+								_1: {
+									ctor: '::',
+									_0: _elm_community$parser_combinators$Combine$regex('<embed[^>\\n]*>'),
+									_1: {
+										ctor: '::',
+										_0: _elm_community$parser_combinators$Combine$regex('<hr[^>\\n]*>'),
+										_1: {
+											ctor: '::',
+											_0: _elm_community$parser_combinators$Combine$regex('<img[^>\\n]*>'),
+											_1: {
+												ctor: '::',
+												_0: _elm_community$parser_combinators$Combine$regex('<input[^>\\n]*>'),
+												_1: {
+													ctor: '::',
+													_0: _elm_community$parser_combinators$Combine$regex('<keygen[^>\\n]*>'),
+													_1: {
+														ctor: '::',
+														_0: _elm_community$parser_combinators$Combine$regex('<link[^>\\n]*>'),
+														_1: {
+															ctor: '::',
+															_0: _elm_community$parser_combinators$Combine$regex('<menuitem[^>\\n]*>'),
+															_1: {
+																ctor: '::',
+																_0: _elm_community$parser_combinators$Combine$regex('<meta[^>\\n]*>'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_community$parser_combinators$Combine$regex('<param[^>\\n]*>'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_community$parser_combinators$Combine$regex('<source[^>\\n]*>'),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_community$parser_combinators$Combine$regex('<track[^>\\n]*>'),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_community$parser_combinators$Combine$regex('<wbr[^>\\n]*>'),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}));
+	});
+var _user$project$Lia_Markdown_Inline_Parser$javascript = A2(
+	_elm_community$parser_combinators$Combine_ops['*>'],
+	_elm_community$parser_combinators$Combine$string('<script>'),
+	_user$project$Lia_Markdown_Inline_Parser$stringTill(
+		_elm_community$parser_combinators$Combine$string('</script>')));
+var _user$project$Lia_Markdown_Inline_Parser$html = function () {
+	var state = function (script) {
+		return _elm_community$parser_combinators$Combine$modifyState(
+			function (s) {
+				return _elm_lang$core$Native_Utils.update(
+					s,
+					{
+						effect_model: A3(
+							_user$project$Lia_Effect_Model$add_javascript,
+							A2(
+								_elm_lang$core$Maybe$withDefault,
+								0,
+								_elm_lang$core$List$head(s.effect_number)),
+							script,
+							s.effect_model)
+					});
+			});
+	};
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<|>'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Markdown_Inline_Parser$javascript, state),
+			_elm_community$parser_combinators$Combine$succeed(
+				A2(_user$project$Lia_Markdown_Inline_Types$Chars, '', _elm_lang$core$Maybe$Nothing))),
+		A2(_elm_community$parser_combinators$Combine_ops['<|>'], _user$project$Lia_Markdown_Inline_Parser$html_void, _user$project$Lia_Markdown_Inline_Parser$html_block));
+}();
+var _user$project$Lia_Markdown_Inline_Parser$attr_ = function (dict) {
+	return A3(
+		_elm_lang$core$Dict$insert,
+		'style',
+		function () {
+			var _p15 = A2(_elm_lang$core$Dict$get, 'style', dict);
+			if (_p15.ctor === 'Just') {
+				return A2(_elm_lang$core$Basics_ops['++'], 'display: inline-block;', _p15._0);
+			} else {
+				return 'display: inline-block;';
+			}
+		}(),
+		dict);
+};
+var _user$project$Lia_Markdown_Inline_Parser$attribute = A2(
+	_elm_community$parser_combinators$Combine_ops['<*>'],
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		F2(
+			function (k, v) {
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$String$toLower(k),
+					_1: _elm_lang$core$String$fromList(v)
+				};
+			}),
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_user$project$Lia_Markdown_Inline_Parser$whitelines,
+				_elm_community$parser_combinators$Combine$regex('\\w+')),
+			_elm_community$parser_combinators$Combine$regex('[ \\t\\n]*=[ \\t\\n]*\"'))),
+	A2(
+		_elm_community$parser_combinators$Combine$manyTill,
+		_elm_community$parser_combinators$Combine_Char$anyChar,
+		_elm_community$parser_combinators$Combine$regex('\"[ \\t\\n]*')));
+var _user$project$Lia_Markdown_Inline_Parser$comment = function (p) {
+	return _elm_community$parser_combinators$Combine$lazy(
+		function (_p16) {
+			var _p17 = _p16;
+			return A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_elm_community$parser_combinators$Combine$string('<!--'),
+					A2(
+						_elm_community$parser_combinators$Combine$manyTill,
+						p,
+						_elm_community$parser_combinators$Combine$string('-->'))),
+				'HTML comment');
+		});
+};
+var _user$project$Lia_Markdown_Inline_Parser$comment_string = A2(
+	_elm_community$parser_combinators$Combine$map,
+	function (_p18) {
+		return _elm_lang$core$String$trim(
+			_elm_lang$core$String$fromList(_p18));
+	},
+	_user$project$Lia_Markdown_Inline_Parser$comment(_elm_community$parser_combinators$Combine_Char$anyChar));
+var _user$project$Lia_Markdown_Inline_Parser$comments = _elm_community$parser_combinators$Combine$skip(
+	_elm_community$parser_combinators$Combine$many(
+		_user$project$Lia_Markdown_Inline_Parser$comment(_elm_community$parser_combinators$Combine_Char$anyChar)));
+var _user$project$Lia_Markdown_Inline_Parser$annotations = _elm_community$parser_combinators$Combine$maybe(
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		function (_p19) {
+			return _user$project$Lia_Markdown_Inline_Parser$attr_(
+				_elm_lang$core$Dict$fromList(_p19));
+		},
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$regex('[ \\t]*'),
+			_user$project$Lia_Markdown_Inline_Parser$comment(_user$project$Lia_Markdown_Inline_Parser$attribute))));
+var _user$project$Lia_Markdown_Inline_Parser$inlines = _elm_community$parser_combinators$Combine$lazy(
+	function (_p20) {
+		var _p21 = _p20;
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<|>'],
+				_user$project$Lia_Markdown_Inline_Parser$html,
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*>'],
+					_elm_community$parser_combinators$Combine$choice(
+						{
+							ctor: '::',
+							_0: _user$project$Lia_Markdown_Inline_Parser$code,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Lia_Markdown_Inline_Parser$reference,
+								_1: {
+									ctor: '::',
+									_0: _user$project$Lia_Markdown_Inline_Parser$formula,
+									_1: {
+										ctor: '::',
+										_0: _user$project$Lia_Effect_Parser$inline(_user$project$Lia_Markdown_Inline_Parser$inlines),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Lia_Markdown_Inline_Parser$strings,
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}),
+					_user$project$Lia_Markdown_Inline_Parser$annotations)),
+			_elm_community$parser_combinators$Combine$maybe(
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_user$project$Lia_Markdown_Inline_Parser$comments,
+					_elm_community$parser_combinators$Combine$succeed(
+						A2(_user$project$Lia_Markdown_Inline_Types$Chars, '', _elm_lang$core$Maybe$Nothing)))));
+	});
+var _user$project$Lia_Markdown_Inline_Parser$strings = _elm_community$parser_combinators$Combine$lazy(
+	function (_p22) {
+		var _p23 = _p22;
+		var base2 = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Chars,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				_elm_community$parser_combinators$Combine$regex('[^#\\n|*]+'),
+				'base string'));
+		var characters = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Chars,
+			_elm_community$parser_combinators$Combine$regex('[~:_;\\-<>=${} ]'));
+		var superscript = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Superscript,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				_user$project$Lia_Markdown_Inline_Parser$between_('^'),
+				'superscript string'));
+		var underline = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Underline,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				_user$project$Lia_Markdown_Inline_Parser$between_('~~'),
+				'underlined string'));
+		var strike = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Strike,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				_user$project$Lia_Markdown_Inline_Parser$between_('~'),
+				'striked out string'));
+		var bold = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Bold,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<|>'],
+					_user$project$Lia_Markdown_Inline_Parser$between_('**'),
+					_user$project$Lia_Markdown_Inline_Parser$between_('__')),
+				'bold string'));
+		var italic = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Italic,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<|>'],
+					_user$project$Lia_Markdown_Inline_Parser$between_('*'),
+					_user$project$Lia_Markdown_Inline_Parser$between_('_')),
+				'italic string'));
+		var escape = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Chars,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_elm_community$parser_combinators$Combine$string('\\'),
+					_elm_community$parser_combinators$Combine$regex('[\\^#*_~`\\\\${}\\[\\]|]')),
+				'escape string'));
+		var base = A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			_user$project$Lia_Markdown_Inline_Types$Chars,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<?>'],
+				_elm_community$parser_combinators$Combine$regex('[^#*_~:;`!\\^\\[|{}\\\\\\n\\-<>=$ ]+'),
+				'base string'));
+		return _elm_community$parser_combinators$Combine$choice(
+			{
+				ctor: '::',
+				_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Inline_Types$Ref, _user$project$Lia_Markdown_Inline_Parser$inline_url),
+				_1: {
+					ctor: '::',
+					_0: base,
+					_1: {
+						ctor: '::',
+						_0: _user$project$Lia_Markdown_Inline_Parser$arrows,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Lia_Markdown_Inline_Parser$smileys,
+							_1: {
+								ctor: '::',
+								_0: escape,
+								_1: {
+									ctor: '::',
+									_0: bold,
+									_1: {
+										ctor: '::',
+										_0: italic,
+										_1: {
+											ctor: '::',
+											_0: underline,
+											_1: {
+												ctor: '::',
+												_0: strike,
+												_1: {
+													ctor: '::',
+													_0: superscript,
+													_1: {
+														ctor: '::',
+														_0: characters,
+														_1: {
+															ctor: '::',
+															_0: base2,
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			});
+	});
+var _user$project$Lia_Markdown_Inline_Parser$between_ = function (str) {
+	return _elm_community$parser_combinators$Combine$lazy(
+		function (_p24) {
+			var _p25 = _p24;
+			return _elm_community$parser_combinators$Combine$choice(
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_community$parser_combinators$Combine_ops['<*'],
+						A2(
+							_elm_community$parser_combinators$Combine_ops['*>'],
+							_elm_community$parser_combinators$Combine$string(str),
+							_user$project$Lia_Markdown_Inline_Parser$inlines),
+						_elm_community$parser_combinators$Combine$string(str)),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_community$parser_combinators$Combine_ops['<$>'],
+							function (list) {
+								return A2(
+									_user$project$Lia_Markdown_Inline_Types$Container,
+									_user$project$Lia_Markdown_Inline_Parser$combine(list),
+									_elm_lang$core$Maybe$Nothing);
+							},
+							A2(
+								_elm_community$parser_combinators$Combine_ops['*>'],
+								_elm_community$parser_combinators$Combine$string(str),
+								A2(
+									_elm_community$parser_combinators$Combine$manyTill,
+									_user$project$Lia_Markdown_Inline_Parser$inlines,
+									_elm_community$parser_combinators$Combine$string(str)))),
+						_1: {ctor: '[]'}
+					}
+				});
+		});
+};
+var _user$project$Lia_Markdown_Inline_Parser$line = A2(
+	_elm_community$parser_combinators$Combine_ops['<$>'],
+	function (_p26) {
+		return _user$project$Lia_Markdown_Inline_Parser$combine(
+			A2(
+				_elm_lang$core$List$append,
+				{
+					ctor: '::',
+					_0: A2(_user$project$Lia_Markdown_Inline_Types$Chars, ' ', _elm_lang$core$Maybe$Nothing),
+					_1: {ctor: '[]'}
+				},
+				_p26));
+	},
+	_elm_community$parser_combinators$Combine$many1(_user$project$Lia_Markdown_Inline_Parser$inlines));
+
+var _user$project$Lia_Definition_Parser$version = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{version: x});
+		});
+};
+var _user$project$Lia_Definition_Parser$script = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{
+					scripts: {ctor: '::', _0: x, _1: s.scripts}
+				});
+		});
+};
+var _user$project$Lia_Definition_Parser$narrator = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{narrator: x});
+		});
+};
+var _user$project$Lia_Definition_Parser$language = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{language: x});
+		});
+};
+var _user$project$Lia_Definition_Parser$email = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{email: x});
+		});
+};
+var _user$project$Lia_Definition_Parser$date = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{date: x});
+		});
+};
+var _user$project$Lia_Definition_Parser$author = function (x) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{author: x});
+		});
+};
+var _user$project$Lia_Definition_Parser$ending = A2(
+	_elm_community$parser_combinators$Combine_ops['<$>'],
+	_elm_lang$core$String$trim,
+	_elm_community$parser_combinators$Combine$regex('[^\\n]+'));
+var _user$project$Lia_Definition_Parser$definition = _elm_community$parser_combinators$Combine$lazy(
+	function (_p0) {
+		var _p1 = _p0;
+		var list = _elm_community$parser_combinators$Combine$choice(
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_elm_community$parser_combinators$Combine$string('author:'),
+					A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$author)),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_elm_community$parser_combinators$Combine$string('date:'),
+						A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$date)),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_community$parser_combinators$Combine_ops['*>'],
+							_elm_community$parser_combinators$Combine$string('email:'),
+							A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$email)),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_community$parser_combinators$Combine_ops['*>'],
+								_elm_community$parser_combinators$Combine$string('language:'),
+								A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$language)),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_community$parser_combinators$Combine_ops['*>'],
+									_elm_community$parser_combinators$Combine$string('narrator:'),
+									A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$narrator)),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_community$parser_combinators$Combine_ops['*>'],
+										_elm_community$parser_combinators$Combine$string('script:'),
+										A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$script)),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_community$parser_combinators$Combine_ops['*>'],
+											_elm_community$parser_combinators$Combine$string('version:'),
+											A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Definition_Parser$ending, _user$project$Lia_Definition_Parser$version)),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			});
+		return _elm_community$parser_combinators$Combine$skip(
+			_user$project$Lia_Markdown_Inline_Parser$comment(
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*'],
+					A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Markdown_Inline_Parser$whitelines, list),
+					_user$project$Lia_Markdown_Inline_Parser$whitelines)));
+	});
+var _user$project$Lia_Definition_Parser$parse = _elm_community$parser_combinators$Combine$lazy(
+	function (_p2) {
+		var _p3 = _p2;
+		return _elm_community$parser_combinators$Combine$skip(
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_user$project$Lia_Definition_Parser$definition,
+				_elm_community$parser_combinators$Combine$many(
+					_elm_community$parser_combinators$Combine$choice(
+						{
+							ctor: '::',
+							_0: _user$project$Lia_Markdown_Inline_Parser$whitelines,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Lia_Markdown_Inline_Parser$comments,
+								_1: {ctor: '[]'}
+							}
+						}))));
+	});
 
 var _user$project$Lia_Chart_Parser$number = A2(
 	_elm_community$parser_combinators$Combine_ops['<|>'],
@@ -15145,931 +16293,128 @@ var _user$project$Lia_Chart_Parser$parse = function () {
 		_user$project$Lia_Chart_Parser$x_axis);
 }();
 
-var _user$project$Lia_Effect_Parser$effect_number = function () {
-	var state = function (n) {
+var _user$project$Lia_Code_Parser$evaluate = F3(
+	function (lang, code, comment) {
+		var add_state = function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{
+					code_vector: A2(
+						_elm_lang$core$Array$push,
+						{
+							code: code,
+							version: _elm_lang$core$Array$fromList(
+								{
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: code,
+										_1: _elm_lang$core$Result$Ok('')
+									},
+									_1: {ctor: '[]'}
+								}),
+							version_active: 0,
+							result: _elm_lang$core$Result$Ok(''),
+							editing: false,
+							running: false
+						},
+						s.code_vector)
+				});
+		};
 		return A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			_elm_community$parser_combinators$Combine$modifyState(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			_elm_community$parser_combinators$Combine$withState(
 				function (s) {
-					return (_elm_lang$core$Native_Utils.cmp(n, s.num_effects) > 0) ? _elm_lang$core$Native_Utils.update(
-						s,
-						{num_effects: n}) : s;
+					return _elm_community$parser_combinators$Combine$succeed(
+						A3(
+							_user$project$Lia_Code_Types$Evaluate,
+							lang,
+							_elm_lang$core$Array$length(s.code_vector),
+							A2(_elm_lang$core$String$split, '{X}', comment)));
 				}),
-			_elm_community$parser_combinators$Combine$succeed(n));
-	};
-	return A2(_elm_community$parser_combinators$Combine_ops['>>='], _elm_community$parser_combinators$Combine_Num$int, state);
-}();
-var _user$project$Lia_Effect_Parser$ecomment = function (paragraph) {
-	var number = A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			_elm_community$parser_combinators$Combine$regex('( *)--{{'),
-			_user$project$Lia_Effect_Parser$effect_number),
-		_elm_community$parser_combinators$Combine$regex('}}--( *)[\\n]+'));
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<*>'],
-		A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$EComment, number),
-		paragraph);
+			_elm_community$parser_combinators$Combine$modifyState(add_state));
+	});
+var _user$project$Lia_Code_Parser$modify_temp = function (lang_code) {
+	return _elm_community$parser_combinators$Combine$modifyState(
+		function (s) {
+			return _elm_lang$core$Native_Utils.update(
+				s,
+				{code_temp: lang_code});
+		});
 };
-var _user$project$Lia_Effect_Parser$einline = function (inlines) {
-	var multi_inline = A2(
-		_elm_community$parser_combinators$Combine_ops['*>'],
-		_elm_community$parser_combinators$Combine$string('{{'),
-		A2(
-			_elm_community$parser_combinators$Combine$manyTill,
-			inlines,
-			_elm_community$parser_combinators$Combine$string('}}')));
-	var name = _elm_community$parser_combinators$Combine$maybe(
-		_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9 ]+'));
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<*>'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<$>'],
-				_user$project$Lia_Inline_Types$EInline,
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$string('{{'),
-					_user$project$Lia_Effect_Parser$effect_number)),
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$regex('( *)'),
-					name),
-				_elm_community$parser_combinators$Combine$string('}}'))),
-		multi_inline);
-};
-var _user$project$Lia_Effect_Parser$eblock = function (blocks) {
-	var single_block = A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_elm_lang$core$List$singleton,
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			_elm_community$parser_combinators$Combine$regex('[ \\n\\t]*'),
-			blocks));
-	var multi_block = A2(
-		_elm_community$parser_combinators$Combine_ops['*>'],
-		_elm_community$parser_combinators$Combine$regex('( *){{[\\n]+'),
-		A2(
-			_elm_community$parser_combinators$Combine$manyTill,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*'],
-				blocks,
-				_elm_community$parser_combinators$Combine$regex('[ \\n\\t]*')),
-			_elm_community$parser_combinators$Combine$regex('( *)}}')));
-	var name = _elm_community$parser_combinators$Combine$maybe(
-		_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9 ]+'));
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<*>'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<$>'],
-				_user$project$Lia_Types$EBlock,
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$regex('( *){{'),
-					_user$project$Lia_Effect_Parser$effect_number)),
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$regex('( *)'),
-					name),
-				_elm_community$parser_combinators$Combine$regex('}}( *)[\\n]'))),
-		A2(_elm_community$parser_combinators$Combine_ops['<|>'], multi_block, single_block));
-};
-
-var _user$project$Lia_Inline_Parser$code = A2(
+var _user$project$Lia_Code_Parser$code_line = A2(
+	_elm_community$parser_combinators$Combine_ops['*>'],
+	_elm_community$parser_combinators$Combine$maybe(_user$project$Lia_PState$identation),
+	_elm_community$parser_combinators$Combine$regex('(.(?!```))*\\n?'));
+var _user$project$Lia_Code_Parser$header = A2(
 	_elm_community$parser_combinators$Combine_ops['<$>'],
-	_user$project$Lia_Inline_Types$Code,
+	_elm_lang$core$String$trim,
 	A2(
 		_elm_community$parser_combinators$Combine_ops['<?>'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_elm_community$parser_combinators$Combine$string('`'),
-				_elm_community$parser_combinators$Combine$regex('[^`\\n]+')),
-			_elm_community$parser_combinators$Combine$string('`')),
-		'inline code'));
-var _user$project$Lia_Inline_Parser$smileys = _elm_community$parser_combinators$Combine$lazy(
-	function (_p0) {
-		var _p1 = _p0;
-		return _elm_community$parser_combinators$Combine$choice(
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_community$parser_combinators$Combine_ops['$>'],
-					_elm_community$parser_combinators$Combine$string(':-)'),
-					_user$project$Lia_Inline_Types$Symbol('&#x1f600;')),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_community$parser_combinators$Combine_ops['$>'],
-						_elm_community$parser_combinators$Combine$string(';-)'),
-						_user$project$Lia_Inline_Types$Symbol('&#x1f609;')),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_community$parser_combinators$Combine_ops['$>'],
-							_elm_community$parser_combinators$Combine$string(':-D'),
-							_user$project$Lia_Inline_Types$Symbol('&#x1f600;')),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_community$parser_combinators$Combine_ops['$>'],
-								_elm_community$parser_combinators$Combine$string(':-O'),
-								_user$project$Lia_Inline_Types$Symbol('&#128558;')),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_community$parser_combinators$Combine_ops['$>'],
-									_elm_community$parser_combinators$Combine$string(':-('),
-									_user$project$Lia_Inline_Types$Symbol('&#128542;')),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_community$parser_combinators$Combine_ops['$>'],
-										_elm_community$parser_combinators$Combine$string(':-|'),
-										_user$project$Lia_Inline_Types$Symbol('&#128528;')),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_elm_community$parser_combinators$Combine_ops['$>'],
-											_elm_community$parser_combinators$Combine$string(':-/'),
-											_user$project$Lia_Inline_Types$Symbol('&#128533;')),
-										_1: {
-											ctor: '::',
-											_0: A2(
-												_elm_community$parser_combinators$Combine_ops['$>'],
-												_elm_community$parser_combinators$Combine$string(':-P'),
-												_user$project$Lia_Inline_Types$Symbol('&#128539;')),
-											_1: {
-												ctor: '::',
-												_0: A2(
-													_elm_community$parser_combinators$Combine_ops['$>'],
-													_elm_community$parser_combinators$Combine$string(';-P'),
-													_user$project$Lia_Inline_Types$Symbol('&#128540;')),
-												_1: {
-													ctor: '::',
-													_0: A2(
-														_elm_community$parser_combinators$Combine_ops['$>'],
-														_elm_community$parser_combinators$Combine$string(':-*'),
-														_user$project$Lia_Inline_Types$Symbol('&#128535;')),
-													_1: {
-														ctor: '::',
-														_0: A2(
-															_elm_community$parser_combinators$Combine_ops['$>'],
-															_elm_community$parser_combinators$Combine$string(':\')'),
-															_user$project$Lia_Inline_Types$Symbol('&#128514;')),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_elm_community$parser_combinators$Combine_ops['$>'],
-																_elm_community$parser_combinators$Combine$string(':\'('),
-																_user$project$Lia_Inline_Types$Symbol('&#128554;')),
-															_1: {ctor: '[]'}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			});
-	});
-var _user$project$Lia_Inline_Parser$arrows = _elm_community$parser_combinators$Combine$lazy(
-	function (_p2) {
-		var _p3 = _p2;
-		return _elm_community$parser_combinators$Combine$choice(
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_community$parser_combinators$Combine_ops['$>'],
-					_elm_community$parser_combinators$Combine$string('<-->'),
-					_user$project$Lia_Inline_Types$Symbol('&#10231;')),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_community$parser_combinators$Combine_ops['$>'],
-						_elm_community$parser_combinators$Combine$string('<--'),
-						_user$project$Lia_Inline_Types$Symbol('&#10229;')),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_community$parser_combinators$Combine_ops['$>'],
-							_elm_community$parser_combinators$Combine$string('-->'),
-							_user$project$Lia_Inline_Types$Symbol('&#10230;')),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_community$parser_combinators$Combine_ops['$>'],
-								_elm_community$parser_combinators$Combine$string('<<-'),
-								_user$project$Lia_Inline_Types$Symbol('&#8606;')),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_community$parser_combinators$Combine_ops['$>'],
-									_elm_community$parser_combinators$Combine$string('->>'),
-									_user$project$Lia_Inline_Types$Symbol('&#8608;')),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_community$parser_combinators$Combine_ops['$>'],
-										_elm_community$parser_combinators$Combine$string('<->'),
-										_user$project$Lia_Inline_Types$Symbol('&#8596;')),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_elm_community$parser_combinators$Combine_ops['$>'],
-											_elm_community$parser_combinators$Combine$string('>->'),
-											_user$project$Lia_Inline_Types$Symbol('&#8611;')),
-										_1: {
-											ctor: '::',
-											_0: A2(
-												_elm_community$parser_combinators$Combine_ops['$>'],
-												_elm_community$parser_combinators$Combine$string('<-<'),
-												_user$project$Lia_Inline_Types$Symbol('&#8610;')),
-											_1: {
-												ctor: '::',
-												_0: A2(
-													_elm_community$parser_combinators$Combine_ops['$>'],
-													_elm_community$parser_combinators$Combine$string('->'),
-													_user$project$Lia_Inline_Types$Symbol('&#8594;')),
-												_1: {
-													ctor: '::',
-													_0: A2(
-														_elm_community$parser_combinators$Combine_ops['$>'],
-														_elm_community$parser_combinators$Combine$string('<-'),
-														_user$project$Lia_Inline_Types$Symbol('&#8592;')),
-													_1: {
-														ctor: '::',
-														_0: A2(
-															_elm_community$parser_combinators$Combine_ops['$>'],
-															_elm_community$parser_combinators$Combine$string('<~'),
-															_user$project$Lia_Inline_Types$Symbol('&#8604;')),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_elm_community$parser_combinators$Combine_ops['$>'],
-																_elm_community$parser_combinators$Combine$string('~>'),
-																_user$project$Lia_Inline_Types$Symbol('&#8605;')),
-															_1: {
-																ctor: '::',
-																_0: A2(
-																	_elm_community$parser_combinators$Combine_ops['$>'],
-																	_elm_community$parser_combinators$Combine$string('<==>'),
-																	_user$project$Lia_Inline_Types$Symbol('&#10234;')),
-																_1: {
-																	ctor: '::',
-																	_0: A2(
-																		_elm_community$parser_combinators$Combine_ops['$>'],
-																		_elm_community$parser_combinators$Combine$string('==>'),
-																		_user$project$Lia_Inline_Types$Symbol('&#10233;')),
-																	_1: {
-																		ctor: '::',
-																		_0: A2(
-																			_elm_community$parser_combinators$Combine_ops['$>'],
-																			_elm_community$parser_combinators$Combine$string('<=='),
-																			_user$project$Lia_Inline_Types$Symbol('&#10232;')),
-																		_1: {
-																			ctor: '::',
-																			_0: A2(
-																				_elm_community$parser_combinators$Combine_ops['$>'],
-																				_elm_community$parser_combinators$Combine$string('<=>'),
-																				_user$project$Lia_Inline_Types$Symbol('&#8660;')),
-																			_1: {
-																				ctor: '::',
-																				_0: A2(
-																					_elm_community$parser_combinators$Combine_ops['$>'],
-																					_elm_community$parser_combinators$Combine$string('=>'),
-																					_user$project$Lia_Inline_Types$Symbol('&#8658;')),
-																				_1: {
-																					ctor: '::',
-																					_0: A2(
-																						_elm_community$parser_combinators$Combine_ops['$>'],
-																						_elm_community$parser_combinators$Combine$string('<='),
-																						_user$project$Lia_Inline_Types$Symbol('&#8656;')),
-																					_1: {ctor: '[]'}
-																				}
-																			}
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			});
-	});
-var _user$project$Lia_Inline_Parser$url_mail = A2(
-	_elm_community$parser_combinators$Combine_ops['*>'],
-	_elm_community$parser_combinators$Combine$maybe(
-		_elm_community$parser_combinators$Combine$string('mailto:')),
-	_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9_.\\-]+@[a-zA-Z0-9_.\\-]+'));
-var _user$project$Lia_Inline_Parser$url_full = _elm_community$parser_combinators$Combine$regex('[a-zA-Z]+://(/)?[a-zA-Z0-9\\.\\-\\_]+\\.([a-z\\.]{2,6})[^ \\)\\t\\n]*');
-var _user$project$Lia_Inline_Parser$url = _elm_community$parser_combinators$Combine$lazy(
-	function (_p4) {
-		var _p5 = _p4;
-		return _elm_community$parser_combinators$Combine$choice(
-			{
-				ctor: '::',
-				_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Inline_Types$Mail, _user$project$Lia_Inline_Parser$url_mail),
-				_1: {
-					ctor: '::',
-					_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Inline_Types$Full, _user$project$Lia_Inline_Parser$url_full),
-					_1: {ctor: '[]'}
-				}
-			});
-	});
-var _user$project$Lia_Inline_Parser$inline_url = A2(
-	_elm_community$parser_combinators$Combine_ops['<$>'],
-	function (u) {
-		return A2(
-			_user$project$Lia_Inline_Types$Link,
-			u,
-			_user$project$Lia_Inline_Types$Full(u));
-	},
-	A2(_elm_community$parser_combinators$Combine_ops['<|>'], _user$project$Lia_Inline_Parser$url_full, _user$project$Lia_Inline_Parser$url_mail));
-var _user$project$Lia_Inline_Parser$stringTill = function (p) {
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_elm_lang$core$String$fromList,
-		A2(_elm_community$parser_combinators$Combine$manyTill, _elm_community$parser_combinators$Combine_Char$anyChar, p));
-};
-var _user$project$Lia_Inline_Parser$formula = function () {
-	var p2 = A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_user$project$Lia_Inline_Types$Formula(true),
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			_elm_community$parser_combinators$Combine$string('$$'),
-			_user$project$Lia_Inline_Parser$stringTill(
-				_elm_community$parser_combinators$Combine$string('$$'))));
-	var p1 = A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_user$project$Lia_Inline_Types$Formula(false),
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_elm_community$parser_combinators$Combine$string('$'),
-				_elm_community$parser_combinators$Combine$regex('[^\\n$]+')),
-			_elm_community$parser_combinators$Combine$string('$')));
-	return _elm_community$parser_combinators$Combine$choice(
-		{
-			ctor: '::',
-			_0: p2,
-			_1: {
-				ctor: '::',
-				_0: p1,
-				_1: {ctor: '[]'}
-			}
-		});
-}();
-var _user$project$Lia_Inline_Parser$whitelines = _elm_community$parser_combinators$Combine$skip(
-	_elm_community$parser_combinators$Combine$regex('[ \\t\\n]*'));
-var _user$project$Lia_Inline_Parser$newline = _elm_community$parser_combinators$Combine$skip(
+		_elm_community$parser_combinators$Combine$regex('.*\\n'),
+		'language definition'));
+var _user$project$Lia_Code_Parser$border = _elm_community$parser_combinators$Combine$string('```');
+var _user$project$Lia_Code_Parser$listing = A2(
+	_elm_community$parser_combinators$Combine_ops['>>='],
 	A2(
-		_elm_community$parser_combinators$Combine_ops['<|>'],
-		_elm_community$parser_combinators$Combine_Char$char(
-			_elm_lang$core$Native_Utils.chr('\n')),
-		_elm_community$parser_combinators$Combine_Char$eol));
-var _user$project$Lia_Inline_Parser$newlines = _elm_community$parser_combinators$Combine$skip(
-	_elm_community$parser_combinators$Combine$many(_user$project$Lia_Inline_Parser$newline));
-var _user$project$Lia_Inline_Parser$combine = function (list) {
-	combine:
-	while (true) {
-		var _p6 = list;
-		if (_p6.ctor === '[]') {
-			return {ctor: '[]'};
-		} else {
-			if (_p6._1.ctor === '[]') {
-				return {
-					ctor: '::',
-					_0: _p6._0,
-					_1: {ctor: '[]'}
-				};
-			} else {
-				var _p10 = _p6._1._1;
-				var _p9 = _p6._1._0;
-				var _p8 = _p6._0;
-				var _p7 = {ctor: '_Tuple2', _0: _p8, _1: _p9};
-				if (((_p7.ctor === '_Tuple2') && (_p7._0.ctor === 'Chars')) && (_p7._1.ctor === 'Chars')) {
-					var _v5 = {
-						ctor: '::',
-						_0: _user$project$Lia_Inline_Types$Chars(
-							A2(_elm_lang$core$Basics_ops['++'], _p7._0._0, _p7._1._0)),
-						_1: _p10
-					};
-					list = _v5;
-					continue combine;
-				} else {
-					return {
-						ctor: '::',
-						_0: _p8,
-						_1: _user$project$Lia_Inline_Parser$combine(
-							{ctor: '::', _0: _p9, _1: _p10})
-					};
-				}
-			}
-		}
-	}
-};
-var _user$project$Lia_Inline_Parser$html_block = function () {
-	var p = function (tag) {
-		return A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			function (c) {
-				return A2(
-					_elm_lang$core$Basics_ops['++'],
-					A2(
-						_elm_lang$core$String$append,
-						A2(_elm_lang$core$Basics_ops['++'], '<', tag),
-						c),
-					A2(
-						_elm_lang$core$Basics_ops['++'],
-						'</',
-						A2(_elm_lang$core$Basics_ops['++'], tag, '>')));
-			},
-			_user$project$Lia_Inline_Parser$stringTill(
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<*'],
-					A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$string('</'),
-						_elm_community$parser_combinators$Combine$string(tag)),
-					_elm_community$parser_combinators$Combine$string('>'))));
-	};
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_user$project$Lia_Inline_Types$HTML,
+		_elm_community$parser_combinators$Combine_ops['<*>'],
 		A2(
-			_elm_community$parser_combinators$Combine_ops['>>='],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$whitespace,
-					_elm_community$parser_combinators$Combine$string('<')),
-				_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9]+')),
-			p));
-}();
-var _user$project$Lia_Inline_Parser$html_void = _elm_community$parser_combinators$Combine$lazy(
-	function (_p11) {
-		var _p12 = _p11;
-		return A2(
 			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$HTML,
-			_elm_community$parser_combinators$Combine$choice(
-				{
-					ctor: '::',
-					_0: _elm_community$parser_combinators$Combine$regex('<area[^>\\n]*>'),
-					_1: {
-						ctor: '::',
-						_0: _elm_community$parser_combinators$Combine$regex('<base[^>\\n]*>'),
-						_1: {
-							ctor: '::',
-							_0: _elm_community$parser_combinators$Combine$regex('<br[^>\\n]*>'),
-							_1: {
-								ctor: '::',
-								_0: _elm_community$parser_combinators$Combine$regex('<col[^>\\n]*>'),
-								_1: {
-									ctor: '::',
-									_0: _elm_community$parser_combinators$Combine$regex('<embed[^>\\n]*>'),
-									_1: {
-										ctor: '::',
-										_0: _elm_community$parser_combinators$Combine$regex('<hr[^>\\n]*>'),
-										_1: {
-											ctor: '::',
-											_0: _elm_community$parser_combinators$Combine$regex('<img[^>\\n]*>'),
-											_1: {
-												ctor: '::',
-												_0: _elm_community$parser_combinators$Combine$regex('<input[^>\\n]*>'),
-												_1: {
-													ctor: '::',
-													_0: _elm_community$parser_combinators$Combine$regex('<keygen[^>\\n]*>'),
-													_1: {
-														ctor: '::',
-														_0: _elm_community$parser_combinators$Combine$regex('<link[^>\\n]*>'),
-														_1: {
-															ctor: '::',
-															_0: _elm_community$parser_combinators$Combine$regex('<menuitem[^>\\n]*>'),
-															_1: {
-																ctor: '::',
-																_0: _elm_community$parser_combinators$Combine$regex('<meta[^>\\n]*>'),
-																_1: {
-																	ctor: '::',
-																	_0: _elm_community$parser_combinators$Combine$regex('<param[^>\\n]*>'),
-																	_1: {
-																		ctor: '::',
-																		_0: _elm_community$parser_combinators$Combine$regex('<source[^>\\n]*>'),
-																		_1: {
-																			ctor: '::',
-																			_0: _elm_community$parser_combinators$Combine$regex('<track[^>\\n]*>'),
-																			_1: {
-																				ctor: '::',
-																				_0: _elm_community$parser_combinators$Combine$regex('<wbr[^>\\n]*>'),
-																				_1: {ctor: '[]'}
-																			}
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}));
-	});
-var _user$project$Lia_Inline_Parser$html = A2(_elm_community$parser_combinators$Combine_ops['<|>'], _user$project$Lia_Inline_Parser$html_void, _user$project$Lia_Inline_Parser$html_block);
-var _user$project$Lia_Inline_Parser$comment = function (p) {
-	return _elm_community$parser_combinators$Combine$lazy(
-		function (_p13) {
-			var _p14 = _p13;
-			return A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_elm_community$parser_combinators$Combine$string('<!--'),
-				A2(
-					_elm_community$parser_combinators$Combine$manyTill,
-					p,
-					_elm_community$parser_combinators$Combine$string('-->')));
-		});
+			F2(
+				function (h, s) {
+					return {
+						ctor: '_Tuple2',
+						_0: h,
+						_1: _elm_lang$core$String$concat(s)
+					};
+				}),
+			A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Code_Parser$border, _user$project$Lia_Code_Parser$header)),
+		A2(
+			_elm_community$parser_combinators$Combine$manyTill,
+			_user$project$Lia_Code_Parser$code_line,
+			A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_PState$identation, _user$project$Lia_Code_Parser$border))),
+	_user$project$Lia_Code_Parser$modify_temp);
+var _user$project$Lia_Code_Parser$check_lang = function (_p0) {
+	var _p1 = _p0;
+	var _p3 = _p1._0;
+	var _p2 = _p1._1;
+	return _elm_lang$core$Native_Utils.eq(_p3, '') ? {
+		ctor: '_Tuple2',
+		_0: _user$project$Lia_Utils$guess(_p3),
+		_1: _p2
+	} : {ctor: '_Tuple2', _0: _p3, _1: _p2};
 };
-var _user$project$Lia_Inline_Parser$comments = _elm_community$parser_combinators$Combine$skip(
-	_elm_community$parser_combinators$Combine$many(
-		_user$project$Lia_Inline_Parser$comment(_elm_community$parser_combinators$Combine_Char$anyChar)));
-var _user$project$Lia_Inline_Parser$reference = _elm_community$parser_combinators$Combine$lazy(
-	function (_p15) {
-		var _p16 = _p15;
-		var url_ = _elm_community$parser_combinators$Combine$parens(
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<|>'],
-				_user$project$Lia_Inline_Parser$url,
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<$>'],
-					_user$project$Lia_Inline_Types$Partial,
-					_elm_community$parser_combinators$Combine$regex('[^\\)\n]*'))));
-		var style = _elm_community$parser_combinators$Combine$maybe(
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<$>'],
-				_elm_lang$core$String$fromList,
-				_user$project$Lia_Inline_Parser$comment(_elm_community$parser_combinators$Combine_Char$anyChar)));
-		var info = _elm_community$parser_combinators$Combine$brackets(
-			_elm_community$parser_combinators$Combine$regex('[^\\]\n]*'));
-		var link = A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Inline_Types$Link, info),
-			url_);
-		var image = A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<$>'],
-					_user$project$Lia_Inline_Types$Image,
-					A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$string('!'),
-						info)),
-				url_),
-			style);
-		var movie = A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<$>'],
-					_user$project$Lia_Inline_Types$Movie,
-					A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$string('!!'),
-						info)),
-				url_),
-			style);
-		return A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Ref,
-			_elm_community$parser_combinators$Combine$choice(
-				{
-					ctor: '::',
-					_0: movie,
-					_1: {
-						ctor: '::',
-						_0: image,
-						_1: {
-							ctor: '::',
-							_0: link,
-							_1: {ctor: '[]'}
-						}
-					}
-				}));
-	});
-var _user$project$Lia_Inline_Parser$inlines = _elm_community$parser_combinators$Combine$lazy(
-	function (_p17) {
-		var _p18 = _p17;
-		var p = _elm_community$parser_combinators$Combine$choice(
-			{
-				ctor: '::',
-				_0: _user$project$Lia_Inline_Parser$html,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Lia_Inline_Parser$code,
-					_1: {
-						ctor: '::',
-						_0: _user$project$Lia_Inline_Parser$reference,
-						_1: {
-							ctor: '::',
-							_0: _user$project$Lia_Inline_Parser$formula,
-							_1: {
-								ctor: '::',
-								_0: _user$project$Lia_Effect_Parser$einline(_user$project$Lia_Inline_Parser$inlines),
-								_1: {
-									ctor: '::',
-									_0: _user$project$Lia_Inline_Parser$strings,
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					}
-				}
-			});
-		return A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Inline_Parser$comments, p);
-	});
-var _user$project$Lia_Inline_Parser$strings = _elm_community$parser_combinators$Combine$lazy(
-	function (_p19) {
-		var _p20 = _p19;
-		var base2 = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Chars,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				_elm_community$parser_combinators$Combine$regex('[^#\\n|*]+'),
-				'base string'));
-		var characters = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Chars,
-			_elm_community$parser_combinators$Combine$regex('[~:_;\\-<>=${} ]'));
-		var superscript = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Superscript,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				_user$project$Lia_Inline_Parser$between_('^'),
-				'superscript string'));
-		var underline = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Underline,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				_user$project$Lia_Inline_Parser$between_('~~'),
-				'underlined string'));
-		var strike = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Strike,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				_user$project$Lia_Inline_Parser$between_('~'),
-				'striked out string'));
-		var bold = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Bold,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<|>'],
-					_user$project$Lia_Inline_Parser$between_('**'),
-					_user$project$Lia_Inline_Parser$between_('__')),
-				'bold string'));
-		var italic = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Italic,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<|>'],
-					_user$project$Lia_Inline_Parser$between_('*'),
-					_user$project$Lia_Inline_Parser$between_('_')),
-				'italic string'));
-		var escape = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Chars,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$string('\\'),
-					_elm_community$parser_combinators$Combine$regex('[\\^#*_~`\\\\${}\\[\\]|]')),
-				'escape string'));
-		var base = A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Inline_Types$Chars,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<?>'],
-				_elm_community$parser_combinators$Combine$regex('[^#*_~:;`!\\^\\[|{}\\\\\\n\\-<>=$ ]+'),
-				'base string'));
-		return _elm_community$parser_combinators$Combine$choice(
-			{
-				ctor: '::',
-				_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Inline_Types$Ref, _user$project$Lia_Inline_Parser$inline_url),
-				_1: {
-					ctor: '::',
-					_0: base,
-					_1: {
-						ctor: '::',
-						_0: _user$project$Lia_Inline_Parser$html,
-						_1: {
-							ctor: '::',
-							_0: _user$project$Lia_Inline_Parser$arrows,
-							_1: {
-								ctor: '::',
-								_0: _user$project$Lia_Inline_Parser$smileys,
-								_1: {
-									ctor: '::',
-									_0: escape,
-									_1: {
-										ctor: '::',
-										_0: bold,
-										_1: {
-											ctor: '::',
-											_0: italic,
-											_1: {
-												ctor: '::',
-												_0: underline,
-												_1: {
-													ctor: '::',
-													_0: strike,
-													_1: {
-														ctor: '::',
-														_0: superscript,
-														_1: {
-															ctor: '::',
-															_0: characters,
-															_1: {
-																ctor: '::',
-																_0: base2,
-																_1: {ctor: '[]'}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			});
-	});
-var _user$project$Lia_Inline_Parser$between_ = function (str) {
-	return _elm_community$parser_combinators$Combine$lazy(
-		function (_p21) {
-			var _p22 = _p21;
-			return _elm_community$parser_combinators$Combine$choice(
-				{
-					ctor: '::',
-					_0: A2(
-						_elm_community$parser_combinators$Combine_ops['<*'],
-						A2(
-							_elm_community$parser_combinators$Combine_ops['*>'],
-							_elm_community$parser_combinators$Combine$string(str),
-							_user$project$Lia_Inline_Parser$inlines),
-						_elm_community$parser_combinators$Combine$string(str)),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_community$parser_combinators$Combine_ops['<$>'],
-							_user$project$Lia_Inline_Types$Container,
-							A2(
-								_elm_community$parser_combinators$Combine_ops['*>'],
-								_elm_community$parser_combinators$Combine$string(str),
-								A2(
-									_elm_community$parser_combinators$Combine$manyTill,
-									_user$project$Lia_Inline_Parser$inlines,
-									_elm_community$parser_combinators$Combine$string(str)))),
-						_1: {ctor: '[]'}
-					}
-				});
-		});
-};
-var _user$project$Lia_Inline_Parser$line = A2(
-	_elm_community$parser_combinators$Combine_ops['<$>'],
-	function (list) {
-		return _user$project$Lia_Inline_Parser$combine(
-			A2(
-				_elm_lang$core$List$append,
-				list,
-				{
-					ctor: '::',
-					_0: _user$project$Lia_Inline_Types$Chars(' '),
-					_1: {ctor: '[]'}
-				}));
-	},
-	_elm_community$parser_combinators$Combine$many1(_user$project$Lia_Inline_Parser$inlines));
-
-var _user$project$Lia_Code_Parser$modify_PState = function (code_) {
-	var add_state = function (s) {
-		return _elm_lang$core$Native_Utils.update(
-			s,
-			{
-				code_vector: A2(
-					_elm_lang$core$Array$push,
-					{
-						code: code_,
-						result: _elm_lang$core$Result$Ok(''),
-						editing: false,
-						running: false
-					},
-					s.code_vector)
-			});
-	};
+var _user$project$Lia_Code_Parser$result = function (comment) {
 	return A2(
 		_elm_community$parser_combinators$Combine_ops['<*'],
 		_elm_community$parser_combinators$Combine$withState(
 			function (s) {
-				return _elm_community$parser_combinators$Combine$succeed(
-					_elm_lang$core$Array$length(s.code_vector));
+				var _p4 = s.code_temp;
+				var l = _p4._0;
+				var code = _p4._1;
+				var lang = _elm_lang$core$Native_Utils.eq(l, '') ? 'cpp' : l;
+				var _p5 = comment;
+				if (_p5.ctor === 'Just') {
+					return A3(_user$project$Lia_Code_Parser$evaluate, lang, code, _p5._0);
+				} else {
+					return _elm_community$parser_combinators$Combine$succeed(
+						A2(_user$project$Lia_Code_Types$Highlight, lang, code));
+				}
 			}),
-		_elm_community$parser_combinators$Combine$modifyState(add_state));
+		_user$project$Lia_Code_Parser$modify_temp(
+			{ctor: '_Tuple2', _0: '', _1: ''}));
 };
-var _user$project$Lia_Code_Parser$border = _elm_community$parser_combinators$Combine$string('```');
-var _user$project$Lia_Code_Parser$header = function (p) {
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Code_Parser$border, _elm_community$parser_combinators$Combine$whitespace),
-			p),
-		_elm_community$parser_combinators$Combine$regex('( *)\\n'));
-};
-var _user$project$Lia_Code_Parser$block = A2(
-	_elm_community$parser_combinators$Combine_ops['<*>'],
-	A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_user$project$Lia_Code_Types$Highlight,
-		_user$project$Lia_Code_Parser$header(
-			_elm_community$parser_combinators$Combine$regex('([a-z,A-Z,0-9])*'))),
-	_user$project$Lia_Inline_Parser$stringTill(_user$project$Lia_Code_Parser$border));
-var _user$project$Lia_Code_Parser$eval_js = A2(
-	_elm_community$parser_combinators$Combine_ops['<*>'],
-	A2(
-		_elm_community$parser_combinators$Combine_ops['<*>'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			_user$project$Lia_Code_Types$Evaluate,
-			_user$project$Lia_Code_Parser$header(
-				_elm_community$parser_combinators$Combine$regex('([a-z,A-Z,0-9])*'))),
-		A2(
-			_elm_community$parser_combinators$Combine_ops['>>='],
-			_user$project$Lia_Inline_Parser$stringTill(_user$project$Lia_Code_Parser$border),
-			_user$project$Lia_Code_Parser$modify_PState)),
+var _user$project$Lia_Code_Parser$parse = A2(
+	_elm_community$parser_combinators$Combine_ops['>>='],
 	A2(
 		_elm_community$parser_combinators$Combine_ops['*>'],
-		_elm_community$parser_combinators$Combine$regex('[ \\n]?'),
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			function (c) {
-				return A2(
-					_elm_lang$core$String$split,
-					'{X}',
-					_elm_lang$core$String$trim(
-						_elm_lang$core$String$fromList(c)));
-			},
-			_user$project$Lia_Inline_Parser$comment(_elm_community$parser_combinators$Combine_Char$anyChar))));
-var _user$project$Lia_Code_Parser$code = _elm_community$parser_combinators$Combine$choice(
-	{
-		ctor: '::',
-		_0: _user$project$Lia_Code_Parser$eval_js,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Lia_Code_Parser$block,
-			_1: {ctor: '[]'}
-		}
-	});
+		_user$project$Lia_Code_Parser$listing,
+		_elm_community$parser_combinators$Combine$maybe(
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$regex('[ \\n]?'),
+				_user$project$Lia_Markdown_Inline_Parser$javascript))),
+	_user$project$Lia_Code_Parser$result);
 
 var _user$project$Lia_Quiz_Parser$modify_PState = function (quiz_) {
 	var state = function () {
@@ -16094,7 +16439,7 @@ var _user$project$Lia_Quiz_Parser$modify_PState = function (quiz_) {
 				{
 					quiz_vector: A2(
 						_elm_lang$core$Array$push,
-						{solved: _user$project$Lia_Quiz_Types$Open, state: e, trial: 0, hints: 0},
+						{solved: _user$project$Lia_Quiz_Types$Open, state: e, trial: 0, hint: 0},
 						s.quiz_vector)
 				});
 		});
@@ -16119,8 +16464,8 @@ var _user$project$Lia_Quiz_Parser$quest = function (p) {
 		A2(
 			_elm_community$parser_combinators$Combine_ops['*>'],
 			_user$project$Lia_Quiz_Parser$pattern(p),
-			_user$project$Lia_Inline_Parser$line),
-		_user$project$Lia_Inline_Parser$newline);
+			_user$project$Lia_Markdown_Inline_Parser$line),
+		_user$project$Lia_Markdown_Inline_Parser$newline);
 };
 var _user$project$Lia_Quiz_Parser$multi_choice = function () {
 	var gen = function (m) {
@@ -16202,7 +16547,7 @@ var _user$project$Lia_Quiz_Parser$text = A2(
 					_elm_community$parser_combinators$Combine$string('['),
 					_elm_community$parser_combinators$Combine$regex('[^\n\\]]+')),
 				_elm_community$parser_combinators$Combine$regex('\\][ \\t]*')))),
-	_user$project$Lia_Inline_Parser$newline);
+	_user$project$Lia_Markdown_Inline_Parser$newline);
 var _user$project$Lia_Quiz_Parser$get_counter = _elm_community$parser_combinators$Combine$withState(
 	function (s) {
 		return _elm_community$parser_combinators$Combine$succeed(
@@ -16294,7 +16639,7 @@ var _user$project$Lia_Survey_Parser$question = function (p) {
 					return {ctor: '_Tuple2', _0: i, _1: l};
 				}),
 			p),
-		A2(_elm_community$parser_combinators$Combine_ops['<*'], _user$project$Lia_Inline_Parser$line, _user$project$Lia_Inline_Parser$newline));
+		A2(_elm_community$parser_combinators$Combine_ops['<*'], _user$project$Lia_Markdown_Inline_Parser$line, _user$project$Lia_Markdown_Inline_Parser$newline));
 };
 var _user$project$Lia_Survey_Parser$questions = _elm_community$parser_combinators$Combine$many1(
 	A2(
@@ -16302,8 +16647,8 @@ var _user$project$Lia_Survey_Parser$questions = _elm_community$parser_combinator
 		A2(
 			_elm_community$parser_combinators$Combine_ops['*>'],
 			_elm_community$parser_combinators$Combine$regex('[ \\t]*\\[[ \\t]+\\]'),
-			_user$project$Lia_Inline_Parser$line),
-		_user$project$Lia_Inline_Parser$newline));
+			_user$project$Lia_Markdown_Inline_Parser$line),
+		_user$project$Lia_Markdown_Inline_Parser$newline));
 var _user$project$Lia_Survey_Parser$id_str = A2(
 	_elm_community$parser_combinators$Combine_ops['*>'],
 	_elm_community$parser_combinators$Combine$string(':'),
@@ -16346,7 +16691,7 @@ var _user$project$Lia_Survey_Parser$header = function (p) {
 						_1: {ctor: '[]'}
 					}
 				})),
-		_user$project$Lia_Inline_Parser$newline);
+		_user$project$Lia_Markdown_Inline_Parser$newline);
 };
 var _user$project$Lia_Survey_Parser$text_lines = A2(
 	_elm_community$parser_combinators$Combine_ops['<$>'],
@@ -16414,6 +16759,434 @@ var _user$project$Lia_Survey_Parser$survey = function () {
 }();
 var _user$project$Lia_Survey_Parser$parse = A2(_elm_community$parser_combinators$Combine_ops['>>='], _user$project$Lia_Survey_Parser$survey, _user$project$Lia_Survey_Parser$modify_PState);
 
+var _user$project$Lia_Markdown_Parser$md_annotations = _elm_community$parser_combinators$Combine$maybe(
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<*'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$regex('[ \\t]*'),
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<$>'],
+				_elm_lang$core$Dict$fromList,
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<|>'],
+					_user$project$Lia_Markdown_Inline_Parser$comment(_user$project$Lia_Markdown_Inline_Parser$attribute),
+					A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_user$project$Lia_Markdown_Inline_Parser$comments,
+						_elm_community$parser_combinators$Combine$succeed(
+							{ctor: '[]'}))))),
+		_elm_community$parser_combinators$Combine$maybe(
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*'],
+				_elm_community$parser_combinators$Combine$regex('[ \\t]*\\n'),
+				_user$project$Lia_PState$identation))));
+var _user$project$Lia_Markdown_Parser$table_row = A2(
+	_elm_community$parser_combinators$Combine_ops['*>'],
+	_user$project$Lia_PState$identation,
+	A2(
+		_elm_community$parser_combinators$Combine$manyTill,
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$string('|'),
+			_user$project$Lia_Markdown_Inline_Parser$line),
+		_elm_community$parser_combinators$Combine$regex('\\|[ \\t]*\\n')));
+var _user$project$Lia_Markdown_Parser$simple_table = A2(
+	_elm_community$parser_combinators$Combine_ops['<*'],
+	A2(
+		_elm_community$parser_combinators$Combine_ops['*>'],
+		_user$project$Lia_PState$ident_skip,
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<$>'],
+				F2(
+					function (a, b) {
+						return A4(
+							_user$project$Lia_Markdown_Types$Table,
+							a,
+							{ctor: '[]'},
+							{ctor: '[]'},
+							b);
+					}),
+				_user$project$Lia_Markdown_Parser$md_annotations),
+			_elm_community$parser_combinators$Combine$many1(_user$project$Lia_Markdown_Parser$table_row))),
+	_user$project$Lia_Markdown_Inline_Parser$newline);
+var _user$project$Lia_Markdown_Parser$formated_table = function () {
+	var format = A2(
+		_elm_community$parser_combinators$Combine_ops['<*'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_user$project$Lia_PState$identation,
+				_elm_community$parser_combinators$Combine$string('|')),
+			A2(
+				_elm_community$parser_combinators$Combine$sepEndBy,
+				_elm_community$parser_combinators$Combine$string('|'),
+				_elm_community$parser_combinators$Combine$choice(
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_community$parser_combinators$Combine_ops['$>'],
+							_elm_community$parser_combinators$Combine$regex('[ \\t]*:--[\\-]+:[ \\t]*'),
+							'center'),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_community$parser_combinators$Combine_ops['$>'],
+								_elm_community$parser_combinators$Combine$regex('[ \\t]*:--[\\-]+[ \\t]*'),
+								'left'),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_community$parser_combinators$Combine_ops['$>'],
+									_elm_community$parser_combinators$Combine$regex('[ \\t]*--[\\-]+:[ \\t]*'),
+									'right'),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_community$parser_combinators$Combine_ops['$>'],
+										_elm_community$parser_combinators$Combine$regex('[ \\t]*--[\\-]+[ \\t]*'),
+										'left'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}))),
+		_elm_community$parser_combinators$Combine$regex('[ \\t]*\\n'));
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['<*'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_user$project$Lia_PState$ident_skip,
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*>'],
+					A2(
+						_elm_community$parser_combinators$Combine_ops['<*>'],
+						A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Table, _user$project$Lia_Markdown_Parser$md_annotations),
+						_user$project$Lia_Markdown_Parser$table_row),
+					format),
+				_elm_community$parser_combinators$Combine$many(_user$project$Lia_Markdown_Parser$table_row))),
+		_user$project$Lia_Markdown_Inline_Parser$newline);
+}();
+var _user$project$Lia_Markdown_Parser$paragraph = A2(
+	_elm_community$parser_combinators$Combine_ops['*>'],
+	_user$project$Lia_PState$ident_skip,
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<$>'],
+		function (l) {
+			return _user$project$Lia_Markdown_Inline_Parser$combine(
+				_elm_lang$core$List$concat(l));
+		},
+		_elm_community$parser_combinators$Combine$many1(
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*'],
+				A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_PState$identation, _user$project$Lia_Markdown_Inline_Parser$line),
+				_user$project$Lia_Markdown_Inline_Parser$newline))));
+var _user$project$Lia_Markdown_Parser$horizontal_line = A2(
+	_elm_community$parser_combinators$Combine_ops['<*'],
+	A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$HLine, _user$project$Lia_Markdown_Parser$md_annotations),
+	_elm_community$parser_combinators$Combine$regex('--[\\-]+'));
+var _user$project$Lia_Markdown_Parser$to_comment = F2(
+	function (attr, _p0) {
+		var _p1 = _p0;
+		return _user$project$Lia_Markdown_Types$Comment(
+			{ctor: '_Tuple2', _0: _p1._0, _1: _p1._1});
+	});
+var _user$project$Lia_Markdown_Parser$blocks = _elm_community$parser_combinators$Combine$lazy(
+	function (_p2) {
+		var _p3 = _p2;
+		var b = _elm_community$parser_combinators$Combine$choice(
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_community$parser_combinators$Combine_ops['<*>'],
+					A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Effect, _user$project$Lia_Markdown_Parser$md_annotations),
+					_user$project$Lia_Effect_Parser$markdown(_user$project$Lia_Markdown_Parser$blocks)),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_community$parser_combinators$Combine_ops['<*>'],
+						A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Parser$to_comment, _user$project$Lia_Markdown_Parser$md_annotations),
+						_user$project$Lia_Effect_Parser$comment(_user$project$Lia_Markdown_Parser$paragraph)),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_community$parser_combinators$Combine_ops['<*>'],
+							A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Chart, _user$project$Lia_Markdown_Parser$md_annotations),
+							_user$project$Lia_Chart_Parser$parse),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Lia_Markdown_Parser$formated_table,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Lia_Markdown_Parser$simple_table,
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_community$parser_combinators$Combine_ops['<*>'],
+										A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Code, _user$project$Lia_Markdown_Parser$md_annotations),
+										_user$project$Lia_Code_Parser$parse),
+									_1: {
+										ctor: '::',
+										_0: _user$project$Lia_Markdown_Parser$quote,
+										_1: {
+											ctor: '::',
+											_0: _user$project$Lia_Markdown_Parser$horizontal_line,
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_community$parser_combinators$Combine_ops['<*>'],
+													A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Survey, _user$project$Lia_Markdown_Parser$md_annotations),
+													_user$project$Lia_Survey_Parser$parse),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_community$parser_combinators$Combine_ops['<*>'],
+														A2(
+															_elm_community$parser_combinators$Combine_ops['<*>'],
+															A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Quiz, _user$project$Lia_Markdown_Parser$md_annotations),
+															_user$project$Lia_Quiz_Parser$parse),
+														_user$project$Lia_Markdown_Parser$solution),
+													_1: {
+														ctor: '::',
+														_0: _user$project$Lia_Markdown_Parser$ordered_list,
+														_1: {
+															ctor: '::',
+															_0: _user$project$Lia_Markdown_Parser$unordered_list,
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_community$parser_combinators$Combine_ops['<*>'],
+																	A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Paragraph, _user$project$Lia_Markdown_Parser$md_annotations),
+																	_user$project$Lia_Markdown_Parser$paragraph),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			});
+		return A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_PState$identation, b);
+	});
+var _user$project$Lia_Markdown_Parser$ordered_list = A2(
+	_elm_community$parser_combinators$Combine_ops['<*>'],
+	A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$OrderedList, _user$project$Lia_Markdown_Parser$md_annotations),
+	_elm_community$parser_combinators$Combine$many1(
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$regex('[0-9]+\\. '),
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_user$project$Lia_PState$identation_append('   '),
+					_elm_community$parser_combinators$Combine$many1(
+						A2(
+							_elm_community$parser_combinators$Combine_ops['<*'],
+							_user$project$Lia_Markdown_Parser$blocks,
+							_elm_community$parser_combinators$Combine$regex('[\\n]?')))),
+				_user$project$Lia_PState$identation_pop))));
+var _user$project$Lia_Markdown_Parser$quote = A2(
+	_elm_community$parser_combinators$Combine_ops['<*>'],
+	A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$Quote, _user$project$Lia_Markdown_Parser$md_annotations),
+	A2(
+		_elm_community$parser_combinators$Combine_ops['*>'],
+		_elm_community$parser_combinators$Combine$string('> '),
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_user$project$Lia_PState$identation_append('>( )?'),
+				_elm_community$parser_combinators$Combine$many1(
+					A2(
+						_elm_community$parser_combinators$Combine_ops['<*'],
+						A2(
+							_elm_community$parser_combinators$Combine_ops['<*'],
+							_user$project$Lia_Markdown_Parser$blocks,
+							_elm_community$parser_combinators$Combine$maybe(_user$project$Lia_PState$identation)),
+						_elm_community$parser_combinators$Combine$regex('[\\n]?')))),
+			_user$project$Lia_PState$identation_pop)));
+var _user$project$Lia_Markdown_Parser$solution = function () {
+	var rslt = F3(
+		function (e1, blocks_, e2) {
+			return {ctor: '_Tuple2', _0: blocks_, _1: e2 - e1};
+		});
+	return _elm_community$parser_combinators$Combine$maybe(
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*>'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<$>'],
+					rslt,
+					A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_elm_community$parser_combinators$Combine$regex('( *)\\[\\[\\[[\\n]+'),
+						_elm_community$parser_combinators$Combine$withState(
+							function (s) {
+								return _elm_community$parser_combinators$Combine$succeed(s.effect_model.effects);
+							}))),
+				A2(
+					_elm_community$parser_combinators$Combine$manyTill,
+					A2(
+						_elm_community$parser_combinators$Combine_ops['<*'],
+						_user$project$Lia_Markdown_Parser$blocks,
+						_elm_community$parser_combinators$Combine$regex('[ \\n\\t]*')),
+					_elm_community$parser_combinators$Combine$regex('\\]\\]\\]'))),
+			_elm_community$parser_combinators$Combine$withState(
+				function (s) {
+					return _elm_community$parser_combinators$Combine$succeed(s.effect_model.effects);
+				})));
+}();
+var _user$project$Lia_Markdown_Parser$unordered_list = A2(
+	_elm_community$parser_combinators$Combine_ops['<*>'],
+	A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Markdown_Types$BulletList, _user$project$Lia_Markdown_Parser$md_annotations),
+	_elm_community$parser_combinators$Combine$many1(
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			_elm_community$parser_combinators$Combine$regex('[*+-]( )'),
+			A2(
+				_elm_community$parser_combinators$Combine_ops['<*'],
+				A2(
+					_elm_community$parser_combinators$Combine_ops['*>'],
+					_user$project$Lia_PState$identation_append('  '),
+					_elm_community$parser_combinators$Combine$many1(
+						A2(
+							_elm_community$parser_combinators$Combine_ops['<*'],
+							_user$project$Lia_Markdown_Parser$blocks,
+							_elm_community$parser_combinators$Combine$regex('[\\n]?')))),
+				_user$project$Lia_PState$identation_pop))));
+var _user$project$Lia_Markdown_Parser$run = _elm_community$parser_combinators$Combine$lazy(
+	function (_p4) {
+		var _p5 = _p4;
+		return _elm_community$parser_combinators$Combine$many(
+			A2(_elm_community$parser_combinators$Combine_ops['<*'], _user$project$Lia_Markdown_Parser$blocks, _user$project$Lia_Markdown_Inline_Parser$newlines));
+	});
+
+var _user$project$Lia_Preprocessor$html_block = function () {
+	var p = function (tag) {
+		return A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			function (c) {
+				return A2(
+					_elm_lang$core$Basics_ops['++'],
+					A2(
+						_elm_lang$core$String$append,
+						A2(_elm_lang$core$Basics_ops['++'], '<', tag),
+						c),
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						'</',
+						A2(_elm_lang$core$Basics_ops['++'], tag, '>')));
+			},
+			_user$project$Lia_Markdown_Inline_Parser$stringTill(
+				A2(
+					_elm_community$parser_combinators$Combine_ops['<*'],
+					A2(
+						_elm_community$parser_combinators$Combine_ops['*>'],
+						_elm_community$parser_combinators$Combine$string('</'),
+						_elm_community$parser_combinators$Combine$string(tag)),
+					_elm_community$parser_combinators$Combine$string('>'))));
+	};
+	return A2(
+		_elm_community$parser_combinators$Combine_ops['>>='],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['*>'],
+			A2(
+				_elm_community$parser_combinators$Combine_ops['*>'],
+				_elm_community$parser_combinators$Combine$whitespace,
+				_elm_community$parser_combinators$Combine$string('<')),
+			_elm_community$parser_combinators$Combine$regex('[a-zA-Z0-9]+')),
+		p);
+}();
+var _user$project$Lia_Preprocessor$code_inline = A2(
+	_elm_community$parser_combinators$Combine_ops['<?>'],
+	_elm_community$parser_combinators$Combine$regex('`.*?`'),
+	'inline code');
+var _user$project$Lia_Preprocessor$code_block = A2(
+	_elm_community$parser_combinators$Combine_ops['<?>'],
+	_elm_community$parser_combinators$Combine$regex('```(.|[\r\n])*?```'),
+	'code block');
+var _user$project$Lia_Preprocessor$misc2 = _elm_community$parser_combinators$Combine$regex('((\\\\.)|[<`])');
+var _user$project$Lia_Preprocessor$misc = _elm_community$parser_combinators$Combine$regex('([^\\\\#`<]|[\r\n])+');
+var _user$project$Lia_Preprocessor$comment = A2(
+	_elm_community$parser_combinators$Combine_ops['<?>'],
+	_elm_community$parser_combinators$Combine$regex('<!--(.|[\r\n])*?-->'),
+	'comment');
+var _user$project$Lia_Preprocessor$body = _elm_community$parser_combinators$Combine$lazy(
+	function (_p0) {
+		var _p1 = _p0;
+		return A2(
+			_elm_community$parser_combinators$Combine$map,
+			_elm_lang$core$String$concat,
+			_elm_community$parser_combinators$Combine$many(
+				_elm_community$parser_combinators$Combine$choice(
+					{
+						ctor: '::',
+						_0: _user$project$Lia_Preprocessor$misc,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Lia_Preprocessor$comment,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Lia_Preprocessor$html_block,
+								_1: {
+									ctor: '::',
+									_0: _user$project$Lia_Preprocessor$code_block,
+									_1: {
+										ctor: '::',
+										_0: _user$project$Lia_Preprocessor$code_inline,
+										_1: {
+											ctor: '::',
+											_0: _user$project$Lia_Preprocessor$misc2,
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					})));
+	});
+var _user$project$Lia_Preprocessor$title_str = A2(
+	_elm_community$parser_combinators$Combine_ops['<*'],
+	A2(
+		_elm_community$parser_combinators$Combine_ops['*>'],
+		_elm_community$parser_combinators$Combine$regex('[ \\t]*'),
+		_user$project$Lia_Markdown_Inline_Parser$line),
+	_elm_community$parser_combinators$Combine$regex('[\r\n]+'));
+var _user$project$Lia_Preprocessor$title_tag = A2(
+	_elm_community$parser_combinators$Combine_ops['<$>'],
+	_elm_lang$core$String$length,
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<?>'],
+		_elm_community$parser_combinators$Combine$regex('#+'),
+		'title tags'));
+var _user$project$Lia_Preprocessor$section = A2(
+	_elm_community$parser_combinators$Combine_ops['<*>'],
+	A2(
+		_elm_community$parser_combinators$Combine_ops['<*>'],
+		A2(
+			_elm_community$parser_combinators$Combine_ops['<$>'],
+			F3(
+				function (i, s, b) {
+					return {ctor: '_Tuple3', _0: i, _1: s, _2: b};
+				}),
+			_user$project$Lia_Preprocessor$title_tag),
+		_user$project$Lia_Preprocessor$title_str),
+	_user$project$Lia_Preprocessor$body);
+var _user$project$Lia_Preprocessor$run = _elm_community$parser_combinators$Combine$many(_user$project$Lia_Preprocessor$section);
+
 var _user$project$Lia_Parser$formatError = F2(
 	function (ms, stream) {
 		var expectationSeparator = '\n  * ';
@@ -16456,766 +17229,59 @@ var _user$project$Lia_Parser$formatError = F2(
 										expectationSeparator,
 										A2(_elm_lang$core$String$join, expectationSeparator, ms)))))))));
 	});
-var _user$project$Lia_Parser$define_comment = function () {
-	var version = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{def_version: x});
-			});
-	};
-	var script = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{
-						def_scripts: {ctor: '::', _0: x, _1: s.def_scripts}
-					});
-			});
-	};
-	var narrator = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{def_narrator: x});
-			});
-	};
-	var language = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{def_language: x});
-			});
-	};
-	var email = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{def_email: x});
-			});
-	};
-	var date = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{def_date: x});
-			});
-	};
-	var author = function (x) {
-		return _elm_community$parser_combinators$Combine$modifyState(
-			function (s) {
-				return _elm_lang$core$Native_Utils.update(
-					s,
-					{def_author: x});
-			});
-	};
-	var ending = A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_elm_lang$core$String$trim,
-		_elm_community$parser_combinators$Combine$regex('[^\\n]+'));
-	var list = {
-		ctor: '::',
-		_0: A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			_elm_community$parser_combinators$Combine$string('author:'),
-			A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, author)),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_elm_community$parser_combinators$Combine$string('date:'),
-				A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, date)),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$string('email:'),
-					A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, email)),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$string('language:'),
-						A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, language)),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_community$parser_combinators$Combine_ops['*>'],
-							_elm_community$parser_combinators$Combine$string('narrator:'),
-							A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, narrator)),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_community$parser_combinators$Combine_ops['*>'],
-								_elm_community$parser_combinators$Combine$string('script:'),
-								A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, script)),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_community$parser_combinators$Combine_ops['*>'],
-									_elm_community$parser_combinators$Combine$string('version:'),
-									A2(_elm_community$parser_combinators$Combine_ops['>>='], ending, version)),
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				}
-			}
+var _user$project$Lia_Parser$parse_titles = F2(
+	function (defines, code) {
+		var _p0 = A3(
+			_elm_community$parser_combinators$Combine$runParser,
+			_user$project$Lia_Preprocessor$run,
+			A2(_user$project$Lia_PState$init, defines, _elm_lang$core$Maybe$Nothing),
+			code);
+		if (_p0.ctor === 'Ok') {
+			return _elm_lang$core$Result$Ok(_p0._0._2);
+		} else {
+			return _elm_lang$core$Result$Err(
+				A2(_user$project$Lia_Parser$formatError, _p0._0._2, _p0._0._1));
 		}
-	};
-	return _elm_community$parser_combinators$Combine$skip(
-		_user$project$Lia_Inline_Parser$comment(
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_elm_community$parser_combinators$Combine$regex('[ \\t\\n]*'),
-					_elm_community$parser_combinators$Combine$choice(list)),
-				_elm_community$parser_combinators$Combine$regex('[\\n]+'))));
-}();
-var _user$project$Lia_Parser$title_str = A2(
-	_elm_community$parser_combinators$Combine_ops['<$>'],
-	_elm_lang$core$String$trim,
-	_elm_community$parser_combinators$Combine$regex('.+[\\n]+'));
-var _user$project$Lia_Parser$title_tag = A2(
-	_elm_community$parser_combinators$Combine_ops['<$>'],
-	_elm_lang$core$String$length,
-	A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			_user$project$Lia_Inline_Parser$newlines,
-			_elm_community$parser_combinators$Combine$regex('#+')),
-		_elm_community$parser_combinators$Combine$whitespace));
-var _user$project$Lia_Parser$identation = _elm_community$parser_combinators$Combine$lazy(
-	function (_p0) {
-		var _p1 = _p0;
-		var reset = function (s) {
-			return _elm_lang$core$Native_Utils.update(
-				s,
-				{skip_identation: false});
-		};
-		var ident = function (s) {
-			return _elm_lang$core$Native_Utils.eq(s.identation, 0) ? _elm_community$parser_combinators$Combine$succeed(
-				{ctor: '_Tuple0'}) : (s.skip_identation ? _elm_community$parser_combinators$Combine$skip(
-				_elm_community$parser_combinators$Combine$succeed(
-					{ctor: '_Tuple0'})) : _elm_community$parser_combinators$Combine$skip(
-				_elm_community$parser_combinators$Combine$string(
-					A2(_elm_lang$core$String$repeat, s.identation, ' '))));
-		};
-		return A2(
-			_elm_community$parser_combinators$Combine_ops['<*'],
-			_elm_community$parser_combinators$Combine$withState(ident),
-			_elm_community$parser_combinators$Combine$modifyState(reset));
 	});
-var _user$project$Lia_Parser$horizontal_line = A2(
-	_elm_community$parser_combinators$Combine_ops['<$'],
-	_user$project$Lia_Types$HLine,
-	A2(
-		_elm_community$parser_combinators$Combine_ops['*>'],
-		_user$project$Lia_Parser$identation,
-		_elm_community$parser_combinators$Combine$regex('--[\\-]+')));
-var _user$project$Lia_Parser$paragraph = A2(
-	_elm_community$parser_combinators$Combine_ops['<$>'],
-	function (l) {
-		return _user$project$Lia_Inline_Parser$combine(
-			_elm_lang$core$List$concat(l));
-	},
-	_elm_community$parser_combinators$Combine$many1(
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*'],
-			A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Parser$identation, _user$project$Lia_Inline_Parser$line),
-			_user$project$Lia_Inline_Parser$newline)));
-var _user$project$Lia_Parser$table = function () {
-	var ending = A2(
-		_elm_community$parser_combinators$Combine_ops['*>'],
-		_elm_community$parser_combinators$Combine$regex('\\|[ \\t]*'),
-		_user$project$Lia_Inline_Parser$newline);
-	var row = A2(
-		_elm_community$parser_combinators$Combine_ops['*>'],
-		_user$project$Lia_Parser$identation,
-		A2(
-			_elm_community$parser_combinators$Combine$manyTill,
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_elm_community$parser_combinators$Combine$string('|'),
-				_elm_community$parser_combinators$Combine$many(_user$project$Lia_Inline_Parser$inlines)),
-			ending));
-	var simple_table = A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<$>'],
-			A2(
-				_user$project$Lia_Types$Table,
-				{ctor: '[]'},
-				{ctor: '[]'}),
-			_elm_community$parser_combinators$Combine$many1(row)),
-		_user$project$Lia_Inline_Parser$newline);
-	var format = A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_user$project$Lia_Parser$identation,
-				_elm_community$parser_combinators$Combine$string('|')),
-			A2(
-				_elm_community$parser_combinators$Combine$sepBy1,
-				_elm_community$parser_combinators$Combine$string('|'),
-				_elm_community$parser_combinators$Combine$choice(
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_community$parser_combinators$Combine_ops['$>'],
-							_elm_community$parser_combinators$Combine$regex('[ \\t]*:--[\\-]+:[ \\t]*'),
-							'center'),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_community$parser_combinators$Combine_ops['$>'],
-								_elm_community$parser_combinators$Combine$regex('[ \\t]*:--[\\-]+[ \\t]*'),
-								'left'),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_community$parser_combinators$Combine_ops['$>'],
-									_elm_community$parser_combinators$Combine$regex('[ \\t]*--[\\-]+:[ \\t]*'),
-									'right'),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_community$parser_combinators$Combine_ops['$>'],
-										_elm_community$parser_combinators$Combine$regex('[ \\t]*--[\\-]+[ \\t]*'),
-										'left'),
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					}))),
-		ending);
-	var format_table = A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*>'],
-				A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$Table, row),
-				format),
-			_elm_community$parser_combinators$Combine$many(row)),
-		_user$project$Lia_Inline_Parser$newline);
-	return _elm_community$parser_combinators$Combine$choice(
-		{
-			ctor: '::',
-			_0: format_table,
-			_1: {
-				ctor: '::',
-				_0: simple_table,
-				_1: {ctor: '[]'}
-			}
-		});
-}();
-var _user$project$Lia_Parser$quote_block = function () {
-	var p = A2(
-		_elm_community$parser_combinators$Combine_ops['<*'],
-		A2(
-			_elm_community$parser_combinators$Combine_ops['*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				_user$project$Lia_Parser$identation,
-				_elm_community$parser_combinators$Combine$string('>')),
-			A2(
-				_elm_community$parser_combinators$Combine$optional,
-				{
-					ctor: '::',
-					_0: _user$project$Lia_Inline_Types$Chars(''),
-					_1: {ctor: '[]'}
-				},
-				_user$project$Lia_Inline_Parser$line)),
-		_user$project$Lia_Inline_Parser$newline);
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		function (q) {
-			return _user$project$Lia_Types$Quote(
-				_user$project$Lia_Inline_Parser$combine(
-					_elm_lang$core$List$concat(q)));
-		},
-		_elm_community$parser_combinators$Combine$many1(p));
-}();
-var _user$project$Lia_Parser$blocks = _elm_community$parser_combinators$Combine$lazy(
-	function (_p2) {
-		var _p3 = _p2;
-		var b = _elm_community$parser_combinators$Combine$choice(
-			{
-				ctor: '::',
-				_0: _user$project$Lia_Effect_Parser$eblock(_user$project$Lia_Parser$blocks),
-				_1: {
-					ctor: '::',
-					_0: _user$project$Lia_Effect_Parser$ecomment(_user$project$Lia_Parser$paragraph),
-					_1: {
-						ctor: '::',
-						_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$Chart, _user$project$Lia_Chart_Parser$parse),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Lia_Parser$table,
-							_1: {
-								ctor: '::',
-								_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$CodeBlock, _user$project$Lia_Code_Parser$code),
-								_1: {
-									ctor: '::',
-									_0: _user$project$Lia_Parser$quote_block,
-									_1: {
-										ctor: '::',
-										_0: _user$project$Lia_Parser$horizontal_line,
-										_1: {
-											ctor: '::',
-											_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$SurveyBlock, _user$project$Lia_Survey_Parser$parse),
-											_1: {
-												ctor: '::',
-												_0: A2(
-													_elm_community$parser_combinators$Combine_ops['<*>'],
-													A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$Quiz, _user$project$Lia_Quiz_Parser$parse),
-													_user$project$Lia_Parser$solution),
-												_1: {
-													ctor: '::',
-													_0: _user$project$Lia_Parser$ordered_list,
-													_1: {
-														ctor: '::',
-														_0: _user$project$Lia_Parser$unordered_list,
-														_1: {
-															ctor: '::',
-															_0: A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$Paragraph, _user$project$Lia_Parser$paragraph),
-															_1: {ctor: '[]'}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			});
-		return A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Inline_Parser$comments, b);
-	});
-var _user$project$Lia_Parser$ordered_list = function () {
-	var mod_s = F2(
-		function (b, s) {
-			return b ? _elm_lang$core$Native_Utils.update(
-				s,
-				{skip_identation: true, identation: s.identation + 3}) : _elm_lang$core$Native_Utils.update(
-				s,
-				{skip_identation: false, identation: s.identation - 3});
-		});
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_user$project$Lia_Types$OrderedList,
-		_elm_community$parser_combinators$Combine$many1(
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_user$project$Lia_Parser$identation,
-					_elm_community$parser_combinators$Combine$regex('[0-9]+\\. ')),
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<*'],
-					A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$modifyState(
-							mod_s(true)),
-						_elm_community$parser_combinators$Combine$many1(
-							A2(
-								_elm_community$parser_combinators$Combine_ops['<*'],
-								_user$project$Lia_Parser$blocks,
-								_elm_community$parser_combinators$Combine$regex('[\\n]?')))),
-					_elm_community$parser_combinators$Combine$modifyState(
-						mod_s(false))))));
-}();
-var _user$project$Lia_Parser$solution = function () {
-	var rslt = F3(
-		function (e1, blocks_, e2) {
-			return {ctor: '_Tuple2', _0: blocks_, _1: e2 - e1};
-		});
-	return _elm_community$parser_combinators$Combine$maybe(
-		A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<$>'],
-					rslt,
-					A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$regex('( *)\\[\\[\\[[\\n]+'),
-						_elm_community$parser_combinators$Combine$withState(
-							function (s) {
-								return _elm_community$parser_combinators$Combine$succeed(s.num_effects);
-							}))),
-				A2(
-					_elm_community$parser_combinators$Combine$manyTill,
-					A2(
-						_elm_community$parser_combinators$Combine_ops['<*'],
-						_user$project$Lia_Parser$blocks,
-						_elm_community$parser_combinators$Combine$regex('[ \\n\\t]*')),
-					_elm_community$parser_combinators$Combine$regex('\\]\\]\\]'))),
-			_elm_community$parser_combinators$Combine$withState(
-				function (s) {
-					return _elm_community$parser_combinators$Combine$succeed(s.num_effects);
-				})));
-}();
-var _user$project$Lia_Parser$unordered_list = function () {
-	var mod_s = F2(
-		function (b, s) {
-			return b ? _elm_lang$core$Native_Utils.update(
-				s,
-				{skip_identation: true, identation: s.identation + 2}) : _elm_lang$core$Native_Utils.update(
-				s,
-				{skip_identation: false, identation: s.identation - 2});
-		});
-	return A2(
-		_elm_community$parser_combinators$Combine_ops['<$>'],
-		_user$project$Lia_Types$BulletList,
-		_elm_community$parser_combinators$Combine$many1(
-			A2(
-				_elm_community$parser_combinators$Combine_ops['*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['*>'],
-					_user$project$Lia_Parser$identation,
-					_elm_community$parser_combinators$Combine$regex('[*+-]( )')),
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<*'],
-					A2(
-						_elm_community$parser_combinators$Combine_ops['*>'],
-						_elm_community$parser_combinators$Combine$modifyState(
-							mod_s(true)),
-						_elm_community$parser_combinators$Combine$many1(
-							A2(
-								_elm_community$parser_combinators$Combine_ops['<*'],
-								_user$project$Lia_Parser$blocks,
-								_elm_community$parser_combinators$Combine$regex('[\\n]?')))),
-					_elm_community$parser_combinators$Combine$modifyState(
-						mod_s(false))))));
-}();
-var _user$project$Lia_Parser$slide = _elm_community$parser_combinators$Combine$lazy(
-	function (_p4) {
-		var _p5 = _p4;
-		var effect_counter = function () {
-			var reset_effect = function (c) {
-				return _elm_lang$core$Native_Utils.update(
-					c,
-					{num_effects: 0});
-			};
-			var pp = function (par) {
-				return _elm_community$parser_combinators$Combine$succeed(par.num_effects);
-			};
-			return A2(
-				_elm_community$parser_combinators$Combine_ops['<*'],
-				_elm_community$parser_combinators$Combine$withState(pp),
-				_elm_community$parser_combinators$Combine$modifyState(reset_effect));
-		}();
-		var body = _elm_community$parser_combinators$Combine$many(
-			A2(_elm_community$parser_combinators$Combine_ops['<*'], _user$project$Lia_Parser$blocks, _user$project$Lia_Inline_Parser$newlines));
-		return A2(
-			_elm_community$parser_combinators$Combine_ops['<*>'],
-			A2(
-				_elm_community$parser_combinators$Combine_ops['<*>'],
-				A2(
-					_elm_community$parser_combinators$Combine_ops['<*>'],
-					A2(_elm_community$parser_combinators$Combine_ops['<$>'], _user$project$Lia_Types$Slide, _user$project$Lia_Parser$title_tag),
-					_user$project$Lia_Parser$title_str),
-				body),
-			effect_counter);
-	});
-var _user$project$Lia_Parser$parse = A2(
-	_elm_community$parser_combinators$Combine_ops['*>'],
-	A2(_elm_community$parser_combinators$Combine_ops['*>'], _user$project$Lia_Inline_Parser$whitelines, _user$project$Lia_Parser$define_comment),
-	_elm_community$parser_combinators$Combine$many1(_user$project$Lia_Parser$slide));
-var _user$project$Lia_Parser$run = function (script) {
-	var _p6 = A3(_elm_community$parser_combinators$Combine$runParser, _user$project$Lia_Parser$parse, _user$project$Lia_PState$init, script);
-	if (_p6.ctor === 'Ok') {
-		var _p7 = _p6._0._0;
+var _user$project$Lia_Parser$parse_defintion = function (code) {
+	var _p1 = A3(_elm_community$parser_combinators$Combine$runParser, _user$project$Lia_Definition_Parser$parse, _user$project$Lia_Definition_Types$default, code);
+	if (_p1.ctor === 'Ok') {
 		return _elm_lang$core$Result$Ok(
-			{ctor: '_Tuple6', _0: _p6._0._2, _1: _p7.code_vector, _2: _p7.quiz_vector, _3: _p7.survey_vector, _4: _p7.def_narrator, _5: _p7.def_scripts});
+			{ctor: '_Tuple2', _0: _p1._0._1.input, _1: _p1._0._0});
 	} else {
 		return _elm_lang$core$Result$Err(
-			A2(_user$project$Lia_Parser$formatError, _p6._0._2, _p6._0._1));
+			A2(_user$project$Lia_Parser$formatError, _p1._0._2, _p1._0._1));
 	}
 };
-
-const hljs = require("highlight.js");
-
-// katex is an umd module that only support CommonJS, AMD and globals but not brunch modules
-//  -> we have to use globals by setting katex as a static ressource in brunch...
-
-var _user$project$Native_Utils = (function () {
-    function highlight (language, code) {
-        try {
-            if (language != "")
-                return hljs.highlight(language, code).value;
-            else
-                return hljs.highlightAuto(code, hljs.listLanguages()).value;
-        } catch (e) {
-            return "<b><font color=\"red\">"+e.message+"</font></b><br>"+code;
-        }
-    };
-
-    function formula(dMode, str) {
-        try{
-            return katex.renderToString(str, {displayMode: dMode});
-        } catch(e) {
-            return "<b><font color=\"red\">"+e.message+"</font></b><br>";
-        }
-    }
-
-    function evaluate(code)
-    {
-        try { var rslt = String(eval(code));
-              return {
-                  ctor: "Ok",
-                  _0: rslt
-              };
-        } catch (e) {
-            return {
-                ctor: "Err",
-                _0: e.message
-            };
-        }
-    };
-
-/*
-    function wait(ms) {
-        var start = new Date().getTime();
-        var end = start;
-        while(end < start + ms) {
-            end = new Date().getTime();
-        }
-    }
-*/
-    var lib_js_counter = -1;
-
-    function load_js(url)
-    {
-        lib_js_counter += 1;
-
-        console.log("url: ", lib_js_counter, url);
-
-
-        setTimeout( function () {
-          try {
-              var scriptTag = document.createElement('script');
-              scriptTag.src = url;
-              document.head.appendChild(scriptTag);
-
-          } catch (e) {
-              console.log(e.message);
-          }
-      }, lib_js_counter * 100);
-
-      return {
-          ctor: "Ok",
-          _0: ""
-      };
-    };
-
-
-    function evaluate2 (id, code) {
-        return _elm_lang$core$Native_Scheduler.nativeBinding(function(callback){
-            setTimeout(function() {
-                var evalJS = new Promise (
-                    function (resolve, reject) {
-                        try {
-                            resolve({id: id, result: String(eval(code))});
-                        }
-                        catch (e) {
-                            reject({id: id, result: e.message});
-                        }
-                    }
-                );
-
-                evalJS
-                    .then(function(rslt) {
-                        callback(_elm_lang$core$Native_Scheduler.succeed(rslt));
-                    })
-                    .catch(function(rslt) {
-                        callback(_elm_lang$core$Native_Scheduler.fail(rslt));
-                    });
-            }, 10);
-        });
-    };
-
-    return {
-        highlight: F2(highlight),
-        formula: F2(formula),
-        evaluate: evaluate,
-        evaluate2: F2(evaluate2),
-        load_js: load_js
-    };
-})();
-
-var _user$project$Lia_Utils$stringToHtml = function (str) {
-	return A2(
-		_elm_lang$html$Html$span,
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html_Attributes$property,
-				'innerHTML',
-				_elm_lang$core$Json_Encode$string(str)),
-			_1: {ctor: '[]'}
-		},
-		{ctor: '[]'});
-};
-var _user$project$Lia_Utils$evaluateJS2 = F3(
-	function (resultToMessage, idx, code) {
-		return A2(
-			_elm_lang$core$Task$attempt,
-			resultToMessage,
-			A2(_user$project$Native_Utils.evaluate2, idx, code));
-	});
-var _user$project$Lia_Utils$load_js = function (url) {
-	return _user$project$Native_Utils.load_js(url);
-};
-var _user$project$Lia_Utils$evaluateJS = function (code) {
-	return _user$project$Native_Utils.evaluate(code);
-};
-var _user$project$Lia_Utils$formula = F2(
-	function (displayMode, string) {
-		return _user$project$Lia_Utils$stringToHtml(
-			A2(_user$project$Native_Utils.formula, displayMode, string));
-	});
-var _user$project$Lia_Utils$highlight = F2(
-	function (language, code) {
-		return _user$project$Lia_Utils$stringToHtml(
-			A2(_user$project$Native_Utils.highlight, language, code));
-	});
-
-var _user$project$Lia_Code_Update$EvalRslt = function (a) {
-	return {ctor: 'EvalRslt', _0: a};
-};
-var _user$project$Lia_Code_Update$update = F2(
-	function (msg, model) {
-		var _p0 = msg;
-		switch (_p0.ctor) {
-			case 'Eval':
-				var _p3 = _p0._0;
-				var _p1 = A2(_elm_lang$core$Array$get, _p3, model);
-				if (_p1.ctor === 'Just') {
-					var _p2 = _p1._0;
-					var exec = A2(_elm_lang$core$String$join, _p2.code, _p0._1);
-					return {
-						ctor: '_Tuple2',
-						_0: A3(
-							_elm_lang$core$Array$set,
-							_p3,
-							_elm_lang$core$Native_Utils.update(
-								_p2,
-								{editing: false, running: true}),
-							model),
-						_1: A3(_user$project$Lia_Utils$evaluateJS2, _user$project$Lia_Code_Update$EvalRslt, _p3, exec)
-					};
-				} else {
-					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
-				}
-			case 'EvalRslt':
-				if (_p0._0.ctor === 'Ok') {
-					var _p5 = _p0._0._0;
-					var _p4 = A2(_elm_lang$core$Array$get, _p5.id, model);
-					if (_p4.ctor === 'Just') {
-						return {
-							ctor: '_Tuple2',
-							_0: A3(
-								_elm_lang$core$Array$set,
-								_p5.id,
-								_elm_lang$core$Native_Utils.update(
-									_p4._0,
-									{
-										result: _elm_lang$core$Result$Ok(_p5.result),
-										running: false
-									}),
-								model),
-							_1: _elm_lang$core$Platform_Cmd$none
-						};
-					} else {
-						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
-					}
-				} else {
-					var _p7 = _p0._0._0;
-					var _p6 = A2(_elm_lang$core$Array$get, _p7.id, model);
-					if (_p6.ctor === 'Just') {
-						return {
-							ctor: '_Tuple2',
-							_0: A3(
-								_elm_lang$core$Array$set,
-								_p7.id,
-								_elm_lang$core$Native_Utils.update(
-									_p6._0,
-									{
-										result: _elm_lang$core$Result$Err(_p7.result),
-										running: false
-									}),
-								model),
-							_1: _elm_lang$core$Platform_Cmd$none
-						};
-					} else {
-						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
-					}
-				}
-			case 'Update':
-				var _p9 = _p0._0;
-				var _p8 = A2(_elm_lang$core$Array$get, _p9, model);
-				if (_p8.ctor === 'Just') {
-					return {
-						ctor: '_Tuple2',
-						_0: A3(
-							_elm_lang$core$Array$set,
-							_p9,
-							_elm_lang$core$Native_Utils.update(
-								_p8._0,
-								{code: _p0._1}),
-							model),
-						_1: _elm_lang$core$Platform_Cmd$none
-					};
-				} else {
-					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
-				}
-			default:
-				var _p12 = _p0._0;
-				var _p10 = A2(_elm_lang$core$Array$get, _p12, model);
-				if (_p10.ctor === 'Just') {
-					var _p11 = _p10._0;
-					return {
-						ctor: '_Tuple2',
-						_0: A3(
-							_elm_lang$core$Array$set,
-							_p12,
-							_elm_lang$core$Native_Utils.update(
-								_p11,
-								{editing: !_p11.editing}),
-							model),
-						_1: _elm_lang$core$Platform_Cmd$none
-					};
-				} else {
-					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
-				}
+var _user$project$Lia_Parser$parse_section = F2(
+	function (global, str) {
+		var _p2 = function () {
+			var _p3 = _user$project$Lia_Parser$parse_defintion(str);
+			if (_p3.ctor === 'Ok') {
+				return {
+					ctor: '_Tuple2',
+					_0: _p3._0._0,
+					_1: _elm_lang$core$Maybe$Just(_p3._0._1)
+				};
+			} else {
+				return {ctor: '_Tuple2', _0: str, _1: _elm_lang$core$Maybe$Nothing};
+			}
+		}();
+		var code = _p2._0;
+		var local = _p2._1;
+		var _p4 = A3(
+			_elm_community$parser_combinators$Combine$runParser,
+			_user$project$Lia_Markdown_Parser$run,
+			A2(_user$project$Lia_PState$init, global, local),
+			code);
+		if (_p4.ctor === 'Ok') {
+			var _p5 = _p4._0._0;
+			return _elm_lang$core$Result$Ok(
+				{ctor: '_Tuple5', _0: _p4._0._2, _1: _p5.code_vector, _2: _p5.quiz_vector, _3: _p5.survey_vector, _4: _p5.effect_model});
+		} else {
+			return _elm_lang$core$Result$Err(
+				A2(_user$project$Lia_Parser$formatError, _p4._0._2, _p4._0._1));
 		}
-	});
-var _user$project$Lia_Code_Update$FlipMode = function (a) {
-	return {ctor: 'FlipMode', _0: a};
-};
-var _user$project$Lia_Code_Update$Update = F2(
-	function (a, b) {
-		return {ctor: 'Update', _0: a, _1: b};
-	});
-var _user$project$Lia_Code_Update$Eval = F2(
-	function (a, b) {
-		return {ctor: 'Eval', _0: a, _1: b};
 	});
 
 // responsive voice uses no module system at all
@@ -17336,395 +17402,632 @@ var _user$project$Tts_Responsive$voiceSupport = function (_p4) {
 		{ctor: '_Tuple0'});
 };
 
-var _user$project$Lia_Effect_Update$silence = function (b) {
-	return _user$project$Tts_Responsive$cancel(
-		{ctor: '_Tuple0'});
+var _user$project$Lia_Effect_Update$has_previous = function (model) {
+	return _elm_lang$core$Native_Utils.cmp(model.visible, 0) > 0;
 };
+var _user$project$Lia_Effect_Update$has_next = function (model) {
+	return _elm_lang$core$Native_Utils.cmp(model.visible, model.effects) < 0;
+};
+var _user$project$Lia_Effect_Update$execute = F3(
+	function (run_all, delay, model) {
+		var javascript = run_all ? _user$project$Lia_Effect_Model$get_all_javascript(model) : _user$project$Lia_Effect_Model$get_javascript(model);
+		var c = A2(
+			_elm_lang$core$List$map,
+			_user$project$Lia_Utils$execute(delay),
+			javascript);
+		return model;
+	});
 var _user$project$Lia_Effect_Update$TTS = function (a) {
 	return {ctor: 'TTS', _0: a};
 };
-var _user$project$Lia_Effect_Update$Speak = function (a) {
-	return {ctor: 'Speak', _0: a};
-};
-var _user$project$Lia_Effect_Update$update = F2(
-	function (msg, model) {
+var _user$project$Lia_Effect_Update$Speak = {ctor: 'Speak'};
+var _user$project$Lia_Effect_Update$update = F3(
+	function (msg, sound, model) {
 		update:
 		while (true) {
-			var stop_talking = function (model) {
-				var _p0 = model.status;
-				if (_p0.ctor === 'Speaking') {
-					var c = _user$project$Tts_Responsive$cancel(
-						{ctor: '_Tuple0'});
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{status: _user$project$Lia_Effect_Model$Silent}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: true
-					};
-				} else {
-					return {ctor: '_Tuple3', _0: model, _1: _elm_lang$core$Platform_Cmd$none, _2: true};
-				}
-			};
-			var _p1 = msg;
-			switch (_p1.ctor) {
+			var _p0 = msg;
+			switch (_p0.ctor) {
 				case 'Init':
-					var _v2 = _user$project$Lia_Effect_Update$Speak(_p1._0),
-						_v3 = model;
-					msg = _v2;
+					var _v1 = _user$project$Lia_Effect_Update$Speak,
+						_v2 = sound,
+						_v3 = A3(_user$project$Lia_Effect_Update$execute, _p0._0, 300, model);
+					msg = _v1;
+					sound = _v2;
 					model = _v3;
 					continue update;
 				case 'Next':
-					if (_elm_lang$core$Native_Utils.eq(model.visible, model.effects)) {
-						return stop_talking(model);
-					} else {
-						var _v4 = _user$project$Lia_Effect_Update$Speak(_p1._0),
-							_v5 = _elm_lang$core$Native_Utils.update(
-							model,
-							{visible: model.visible + 1});
+					if (_user$project$Lia_Effect_Update$has_next(model)) {
+						var _v4 = _user$project$Lia_Effect_Update$Speak,
+							_v5 = sound,
+							_v6 = A3(
+							_user$project$Lia_Effect_Update$execute,
+							false,
+							100,
+							_elm_lang$core$Native_Utils.update(
+								model,
+								{visible: model.visible + 1}));
 						msg = _v4;
-						model = _v5;
+						sound = _v5;
+						model = _v6;
 						continue update;
-					}
-				case 'Repeat':
-					var _v6 = _user$project$Lia_Effect_Update$Speak(_p1._0),
-						_v7 = model;
-					msg = _v6;
-					model = _v7;
-					continue update;
-				case 'Previous':
-					if (_elm_lang$core$Native_Utils.eq(model.visible, 0)) {
-						return stop_talking(model);
 					} else {
-						var _v8 = _user$project$Lia_Effect_Update$Speak(_p1._0),
-							_v9 = _elm_lang$core$Native_Utils.update(
-							model,
-							{visible: model.visible - 1});
-						msg = _v8;
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+					}
+				case 'Previous':
+					if (_user$project$Lia_Effect_Update$has_previous(model)) {
+						var _v7 = _user$project$Lia_Effect_Update$Speak,
+							_v8 = sound,
+							_v9 = A3(
+							_user$project$Lia_Effect_Update$execute,
+							false,
+							100,
+							_elm_lang$core$Native_Utils.update(
+								model,
+								{visible: model.visible - 1}));
+						msg = _v7;
+						sound = _v8;
 						model = _v9;
 						continue update;
+					} else {
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 					}
 				case 'Speak':
-					var _p2 = {
+					var c = _user$project$Tts_Responsive$cancel(
+						{ctor: '_Tuple0'});
+					var _p1 = {
 						ctor: '_Tuple2',
-						_0: _user$project$Lia_Effect_Model$get_comment(model),
-						_1: _p1._0
+						_0: sound,
+						_1: _user$project$Lia_Effect_Model$current_comment(model)
 					};
-					if (((_p2.ctor === '_Tuple2') && (_p2._0.ctor === 'Just')) && (_p2._1 === false)) {
+					if ((((_p1.ctor === '_Tuple2') && (_p1._0 === true)) && (_p1._1.ctor === 'Just')) && (_p1._1._0.ctor === '_Tuple2')) {
 						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{status: _user$project$Lia_Effect_Model$Speaking}),
-							_1: A3(_user$project$Tts_Responsive$speak, _user$project$Lia_Effect_Update$TTS, model.narrator, _p2._0._0),
-							_2: false
+							ctor: '_Tuple2',
+							_0: model,
+							_1: A3(_user$project$Tts_Responsive$speak, _user$project$Lia_Effect_Update$TTS, _p1._1._0._1, _p1._1._0._0)
 						};
 					} else {
-						return {ctor: '_Tuple3', _0: model, _1: _elm_lang$core$Platform_Cmd$none, _2: false};
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 					}
 				default:
-					if (_p1._0.ctor === 'Ok') {
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{status: _user$project$Lia_Effect_Model$Silent}),
-							_1: _elm_lang$core$Platform_Cmd$none,
-							_2: false
-						};
-					} else {
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{
-									status: _user$project$Lia_Effect_Model$Error(_p1._0._0)
-								}),
-							_1: _elm_lang$core$Platform_Cmd$none,
-							_2: false
-						};
-					}
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 			}
 		}
 	});
-var _user$project$Lia_Effect_Update$Repeat = function (a) {
-	return {ctor: 'Repeat', _0: a};
-};
-var _user$project$Lia_Effect_Update$repeat = function (silent) {
-	return _user$project$Lia_Effect_Update$update(
-		_user$project$Lia_Effect_Update$Repeat(silent));
-};
-var _user$project$Lia_Effect_Update$Previous = function (a) {
-	return {ctor: 'Previous', _0: a};
-};
-var _user$project$Lia_Effect_Update$previous = function (silent) {
-	return _user$project$Lia_Effect_Update$update(
-		_user$project$Lia_Effect_Update$Previous(silent));
-};
-var _user$project$Lia_Effect_Update$Next = function (a) {
-	return {ctor: 'Next', _0: a};
-};
-var _user$project$Lia_Effect_Update$next = function (silent) {
-	return _user$project$Lia_Effect_Update$update(
-		_user$project$Lia_Effect_Update$Next(silent));
-};
+var _user$project$Lia_Effect_Update$Previous = {ctor: 'Previous'};
+var _user$project$Lia_Effect_Update$previous = _user$project$Lia_Effect_Update$Previous;
+var _user$project$Lia_Effect_Update$Next = {ctor: 'Next'};
+var _user$project$Lia_Effect_Update$next = _user$project$Lia_Effect_Update$Next;
 var _user$project$Lia_Effect_Update$Init = function (a) {
 	return {ctor: 'Init', _0: a};
 };
-var _user$project$Lia_Effect_Update$init = function (silent) {
-	return _user$project$Lia_Effect_Update$update(
-		_user$project$Lia_Effect_Update$Init(silent));
+var _user$project$Lia_Effect_Update$init = function (run_all_javascript) {
+	return _user$project$Lia_Effect_Update$Init(run_all_javascript);
 };
 
-var _user$project$Lia_Helper$get_slide = F2(
-	function (i, slides) {
-		get_slide:
-		while (true) {
-			var _p0 = {ctor: '_Tuple2', _0: i, _1: slides};
-			if (_p0._1.ctor === '[]') {
-				return _elm_lang$core$Maybe$Nothing;
-			} else {
-				if (_p0._0 === 0) {
-					return _elm_lang$core$Maybe$Just(_p0._1._0);
-				} else {
-					var _v1 = _p0._0 - 1,
-						_v2 = _p0._1._1;
-					i = _v1;
-					slides = _v2;
-					continue get_slide;
-				}
-			}
-		}
+var _user$project$Lia_Index_Update$checker = F2(
+	function (pattern, _p0) {
+		var _p1 = _p0;
+		return A2(_elm_lang$core$String$contains, pattern, _p1._1) ? _elm_lang$core$Maybe$Just(_p1._0) : _elm_lang$core$Maybe$Nothing;
 	});
-var _user$project$Lia_Helper$get_headers = function (slides) {
-	return A2(
-		_elm_lang$core$List$indexedMap,
-		F2(
-			function (v0, v1) {
-				return {ctor: '_Tuple2', _0: v0, _1: v1};
-			}),
-		A2(
-			_elm_lang$core$List$map,
-			function (s) {
-				return {ctor: '_Tuple2', _0: s.title, _1: s.indentation};
-			},
-			slides));
-};
-
 var _user$project$Lia_Index_Update$scan = F2(
 	function (index, pattern) {
-		return A2(
-			_elm_lang$core$List$map,
-			function (_p0) {
-				var _p1 = _p0;
-				return _p1._0;
-			},
-			A2(
-				_elm_lang$core$List$filter,
-				function (_p2) {
-					var _p3 = _p2;
-					return A2(
-						_elm_lang$core$String$contains,
-						_elm_lang$core$String$toLower(pattern),
-						_p3._1);
-				},
-				A2(
-					_elm_lang$core$List$indexedMap,
-					F2(
-						function (v0, v1) {
-							return {ctor: '_Tuple2', _0: v0, _1: v1};
-						}),
-					index)));
+		var check = _user$project$Lia_Index_Update$checker(
+			_elm_lang$core$String$toLower(pattern));
+		return A2(_elm_lang$core$List$filterMap, check, index);
 	});
-var _user$project$Lia_Index_Update$update = F2(
-	function (msg, model) {
-		var _p4 = msg;
-		var _p5 = _p4._0;
-		var results = _elm_lang$core$Native_Utils.eq(_p5, '') ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(
-			A2(_user$project$Lia_Index_Update$scan, model.index, _p5));
+var _user$project$Lia_Index_Update$update = F3(
+	function (msg, model, sections) {
+		var _p2 = msg;
+		var _p3 = _p2._0;
 		return _elm_lang$core$Native_Utils.update(
 			model,
-			{search: _p5, results: results});
+			{
+				search: _p3,
+				index: _elm_lang$core$Native_Utils.eq(_p3, '') ? {ctor: '[]'} : A2(_user$project$Lia_Index_Update$scan, sections, _p3)
+			});
 	});
 var _user$project$Lia_Index_Update$ScanIndex = function (a) {
 	return {ctor: 'ScanIndex', _0: a};
 };
 
+var _user$project$Lia_Code_Update$load = F2(
+	function (version, elem) {
+		if ((_elm_lang$core$Native_Utils.cmp(version, 0) > -1) && (_elm_lang$core$Native_Utils.cmp(
+			version,
+			_elm_lang$core$Array$length(elem.version)) < 0)) {
+			var _p0 = A2(
+				_elm_lang$core$Maybe$withDefault,
+				{
+					ctor: '_Tuple2',
+					_0: elem.code,
+					_1: _elm_lang$core$Result$Ok('')
+				},
+				A2(_elm_lang$core$Array$get, version, elem.version));
+			var code = _p0._0;
+			var result = _p0._1;
+			return _elm_lang$core$Native_Utils.update(
+				elem,
+				{version_active: version, code: code, result: result});
+		} else {
+			return elem;
+		}
+	});
+var _user$project$Lia_Code_Update$resulting = F2(
+	function (result, elem) {
+		var e = _elm_lang$core$Native_Utils.update(
+			elem,
+			{result: result, running: false});
+		var _p1 = A2(
+			_elm_lang$core$Maybe$withDefault,
+			{
+				ctor: '_Tuple2',
+				_0: '',
+				_1: _elm_lang$core$Result$Ok('')
+			},
+			A2(_elm_lang$core$Array$get, elem.version_active, elem.version));
+		var code = _p1._0;
+		return _elm_lang$core$Native_Utils.eq(code, e.code) ? _elm_lang$core$Native_Utils.update(
+			e,
+			{
+				version: A3(
+					_elm_lang$core$Array$set,
+					e.version_active,
+					{ctor: '_Tuple2', _0: code, _1: result},
+					e.version)
+			}) : _elm_lang$core$Native_Utils.update(
+			e,
+			{
+				version: A2(
+					_elm_lang$core$Array$push,
+					{ctor: '_Tuple2', _0: e.code, _1: result},
+					e.version),
+				version_active: _elm_lang$core$Array$length(e.version)
+			});
+	});
+var _user$project$Lia_Code_Update$update_ = F4(
+	function (idx, model, f, cmd) {
+		return {
+			ctor: '_Tuple2',
+			_0: function () {
+				var _p2 = A2(_elm_lang$core$Array$get, idx, model);
+				if (_p2.ctor === 'Just') {
+					return A3(
+						_elm_lang$core$Array$set,
+						idx,
+						f(_p2._0),
+						model);
+				} else {
+					return model;
+				}
+			}(),
+			_1: cmd
+		};
+	});
+var _user$project$Lia_Code_Update$Load = F2(
+	function (a, b) {
+		return {ctor: 'Load', _0: a, _1: b};
+	});
+var _user$project$Lia_Code_Update$EvalRslt = function (a) {
+	return {ctor: 'EvalRslt', _0: a};
+};
+var _user$project$Lia_Code_Update$update = F2(
+	function (msg, model) {
+		var _p3 = msg;
+		switch (_p3.ctor) {
+			case 'Eval':
+				var _p5 = _p3._0;
+				var _p4 = A2(_elm_lang$core$Array$get, _p5, model);
+				if (_p4.ctor === 'Just') {
+					return A4(
+						_user$project$Lia_Code_Update$update_,
+						_p5,
+						model,
+						function (e) {
+							return _elm_lang$core$Native_Utils.update(
+								e,
+								{editing: false, running: true});
+						},
+						A3(
+							_user$project$Lia_Utils$evaluateJS2,
+							_user$project$Lia_Code_Update$EvalRslt,
+							_p5,
+							A2(_elm_lang$core$String$join, _p4._0.code, _p3._1)));
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'EvalRslt':
+				if (_p3._0.ctor === 'Ok') {
+					return A4(
+						_user$project$Lia_Code_Update$update_,
+						_p3._0._0.id,
+						model,
+						_user$project$Lia_Code_Update$resulting(
+							_elm_lang$core$Result$Ok(_p3._0._0.result)),
+						_elm_lang$core$Platform_Cmd$none);
+				} else {
+					return A4(
+						_user$project$Lia_Code_Update$update_,
+						_p3._0._0.id,
+						model,
+						_user$project$Lia_Code_Update$resulting(
+							_elm_lang$core$Result$Err(_p3._0._0.result)),
+						_elm_lang$core$Platform_Cmd$none);
+				}
+			case 'Update':
+				return A4(
+					_user$project$Lia_Code_Update$update_,
+					_p3._0,
+					model,
+					function (e) {
+						return _elm_lang$core$Native_Utils.update(
+							e,
+							{code: _p3._1});
+					},
+					_elm_lang$core$Platform_Cmd$none);
+			case 'FlipMode':
+				return A4(
+					_user$project$Lia_Code_Update$update_,
+					_p3._0,
+					model,
+					function (e) {
+						return _elm_lang$core$Native_Utils.update(
+							e,
+							{editing: !e.editing});
+					},
+					_elm_lang$core$Platform_Cmd$none);
+			default:
+				return A4(
+					_user$project$Lia_Code_Update$update_,
+					_p3._0,
+					model,
+					_user$project$Lia_Code_Update$load(_p3._1),
+					_elm_lang$core$Platform_Cmd$none);
+		}
+	});
+var _user$project$Lia_Code_Update$FlipMode = function (a) {
+	return {ctor: 'FlipMode', _0: a};
+};
+var _user$project$Lia_Code_Update$Update = F2(
+	function (a, b) {
+		return {ctor: 'Update', _0: a, _1: b};
+	});
+var _user$project$Lia_Code_Update$Eval = F2(
+	function (a, b) {
+		return {ctor: 'Eval', _0: a, _1: b};
+	});
+
+var _user$project$Lia_Quiz_Model$json2state = function () {
+	var state_decoder = function (type_) {
+		var _p0 = type_;
+		switch (_p0) {
+			case 'Text':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Quiz_Types$TextState,
+					A2(_elm_lang$core$Json_Decode$field, 'value', _elm_lang$core$Json_Decode$string));
+			case 'SingleChoice':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Quiz_Types$SingleChoiceState,
+					A2(_elm_lang$core$Json_Decode$field, 'value', _elm_lang$core$Json_Decode$int));
+			case 'MultipleChoice':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Quiz_Types$MultipleChoiceState,
+					A2(
+						_elm_lang$core$Json_Decode$field,
+						'value',
+						_elm_lang$core$Json_Decode$array(_elm_lang$core$Json_Decode$bool)));
+			default:
+				return _elm_lang$core$Json_Decode$fail(
+					A2(_elm_lang$core$Basics_ops['++'], 'not supported type: ', type_));
+		}
+	};
+	return A2(
+		_elm_lang$core$Json_Decode$andThen,
+		state_decoder,
+		A2(_elm_lang$core$Json_Decode$field, 'type', _elm_lang$core$Json_Decode$string));
+}();
+var _user$project$Lia_Quiz_Model$json2element = function () {
+	var solved_decoder = function (i) {
+		var _p1 = i;
+		switch (_p1) {
+			case 0:
+				return _elm_lang$core$Json_Decode$succeed(_user$project$Lia_Quiz_Types$Open);
+			case 1:
+				return _elm_lang$core$Json_Decode$succeed(_user$project$Lia_Quiz_Types$Solved);
+			default:
+				return _elm_lang$core$Json_Decode$succeed(_user$project$Lia_Quiz_Types$ReSolved);
+		}
+	};
+	return A5(
+		_elm_lang$core$Json_Decode$map4,
+		_user$project$Lia_Quiz_Types$Element,
+		A2(
+			_elm_lang$core$Json_Decode$andThen,
+			solved_decoder,
+			A2(_elm_lang$core$Json_Decode$field, 'solved', _elm_lang$core$Json_Decode$int)),
+		A2(_elm_lang$core$Json_Decode$field, 'state', _user$project$Lia_Quiz_Model$json2state),
+		A2(_elm_lang$core$Json_Decode$field, 'hints', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'trial', _elm_lang$core$Json_Decode$int));
+}();
+var _user$project$Lia_Quiz_Model$json2vector = function (json) {
+	return A2(
+		_elm_lang$core$Json_Decode$decodeValue,
+		_elm_lang$core$Json_Decode$array(_user$project$Lia_Quiz_Model$json2element),
+		json);
+};
+var _user$project$Lia_Quiz_Model$state2json = function (state) {
+	return _elm_lang$core$Json_Encode$object(
+		function () {
+			var _p2 = state;
+			switch (_p2.ctor) {
+				case 'TextState':
+					return {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'type',
+							_1: _elm_lang$core$Json_Encode$string('Text')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'value',
+								_1: _elm_lang$core$Json_Encode$string(_p2._0)
+							},
+							_1: {ctor: '[]'}
+						}
+					};
+				case 'SingleChoiceState':
+					return {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'type',
+							_1: _elm_lang$core$Json_Encode$string('SingleChoice')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'value',
+								_1: _elm_lang$core$Json_Encode$int(_p2._0)
+							},
+							_1: {ctor: '[]'}
+						}
+					};
+				default:
+					return {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'type',
+							_1: _elm_lang$core$Json_Encode$string('MultipleChoice')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'value',
+								_1: _elm_lang$core$Json_Encode$array(
+									A2(_elm_lang$core$Array$map, _elm_lang$core$Json_Encode$bool, _p2._0))
+							},
+							_1: {ctor: '[]'}
+						}
+					};
+			}
+		}());
+};
+var _user$project$Lia_Quiz_Model$element2json = function (element) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'solved',
+				_1: _elm_lang$core$Json_Encode$int(
+					function () {
+						var _p3 = element.solved;
+						switch (_p3.ctor) {
+							case 'Open':
+								return 0;
+							case 'Solved':
+								return 1;
+							default:
+								return -1;
+						}
+					}())
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'state',
+					_1: _user$project$Lia_Quiz_Model$state2json(element.state)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'trial',
+						_1: _elm_lang$core$Json_Encode$int(element.trial)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'hint',
+							_1: _elm_lang$core$Json_Encode$int(element.hint)
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$Lia_Quiz_Model$vector2json = function (vector) {
+	return _elm_lang$core$Json_Encode$array(
+		A2(_elm_lang$core$Array$map, _user$project$Lia_Quiz_Model$element2json, vector));
+};
+var _user$project$Lia_Quiz_Model$get_state = F2(
+	function (vector, idx) {
+		return A2(_elm_lang$core$Array$get, idx, vector);
+	});
+
+var _user$project$Lia_Quiz_Update$flip = F2(
+	function (question_id, e) {
+		var _p0 = e.state;
+		switch (_p0.ctor) {
+			case 'SingleChoiceState':
+				return _elm_lang$core$Native_Utils.update(
+					e,
+					{
+						state: _user$project$Lia_Quiz_Types$SingleChoiceState(question_id)
+					});
+			case 'MultipleChoiceState':
+				var _p2 = _p0._0;
+				var _p1 = A2(_elm_lang$core$Array$get, question_id, _p2);
+				if (_p1.ctor === 'Just') {
+					return function (q) {
+						return _elm_lang$core$Native_Utils.update(
+							e,
+							{
+								state: _user$project$Lia_Quiz_Types$MultipleChoiceState(q)
+							});
+					}(
+						function (q) {
+							return A3(_elm_lang$core$Array$set, question_id, q, _p2);
+						}(
+							function (c) {
+								return !c;
+							}(_p1._0)));
+				} else {
+					return e;
+				}
+			default:
+				return e;
+		}
+	});
+var _user$project$Lia_Quiz_Update$input = F2(
+	function (text, e) {
+		var _p3 = e.state;
+		if (_p3.ctor === 'TextState') {
+			return _elm_lang$core$Native_Utils.update(
+				e,
+				{
+					state: _user$project$Lia_Quiz_Types$TextState(text)
+				});
+		} else {
+			return e;
+		}
+	});
 var _user$project$Lia_Quiz_Update$get = F2(
-	function (idx, model) {
-		var _p0 = A2(_elm_lang$core$Array$get, idx, model);
-		if (_p0.ctor === 'Just') {
-			var _p1 = _p0._0;
-			return (_elm_lang$core$Native_Utils.eq(_p1.solved, _user$project$Lia_Quiz_Types$Solved) || _elm_lang$core$Native_Utils.eq(_p1.solved, _user$project$Lia_Quiz_Types$ReSolved)) ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(_p1);
+	function (idx, vector) {
+		var _p4 = A2(_elm_lang$core$Array$get, idx, vector);
+		if (_p4.ctor === 'Just') {
+			var _p5 = _p4._0;
+			return (_elm_lang$core$Native_Utils.eq(_p5.solved, _user$project$Lia_Quiz_Types$Solved) || _elm_lang$core$Native_Utils.eq(_p5.solved, _user$project$Lia_Quiz_Types$ReSolved)) ? _elm_lang$core$Maybe$Nothing : _elm_lang$core$Maybe$Just(_p5);
 		} else {
 			return _elm_lang$core$Maybe$Nothing;
 		}
 	});
-var _user$project$Lia_Quiz_Update$update_input = F3(
-	function (idx, text, vector) {
-		var _p2 = A2(_user$project$Lia_Quiz_Update$get, idx, vector);
-		if (_p2.ctor === 'Just') {
-			var _p4 = _p2._0;
-			var _p3 = _p4.state;
-			if (_p3.ctor === 'TextState') {
-				return A3(
-					_elm_lang$core$Array$set,
-					idx,
-					_elm_lang$core$Native_Utils.update(
-						_p4,
-						{
-							state: _user$project$Lia_Quiz_Types$TextState(text)
-						}),
-					vector);
-			} else {
-				return vector;
-			}
-		} else {
-			return vector;
-		}
-	});
-var _user$project$Lia_Quiz_Update$update_hint = F2(
-	function (idx, vector) {
-		var _p5 = A2(_user$project$Lia_Quiz_Update$get, idx, vector);
-		if (_p5.ctor === 'Just') {
-			var _p6 = _p5._0;
+var _user$project$Lia_Quiz_Update$update_ = F3(
+	function (idx, vector, f) {
+		var _p6 = A2(_user$project$Lia_Quiz_Update$get, idx, vector);
+		if (_p6.ctor === 'Just') {
 			return A3(
 				_elm_lang$core$Array$set,
 				idx,
-				_elm_lang$core$Native_Utils.update(
-					_p6,
-					{hints: _p6.hints + 1}),
-				vector);
-		} else {
-			return vector;
-		}
-	});
-var _user$project$Lia_Quiz_Update$update_solution = F3(
-	function (idx, vector, quiz_solution) {
-		var _p7 = A2(_user$project$Lia_Quiz_Update$get, idx, vector);
-		if (_p7.ctor === 'Just') {
-			return A3(
-				_elm_lang$core$Array$set,
-				idx,
-				_elm_lang$core$Native_Utils.update(
-					_p7._0,
-					{state: quiz_solution, solved: _user$project$Lia_Quiz_Types$ReSolved}),
-				vector);
-		} else {
-			return vector;
-		}
-	});
-var _user$project$Lia_Quiz_Update$flip_check = F3(
-	function (idx, question_id, vector) {
-		var _p8 = A2(_user$project$Lia_Quiz_Update$get, idx, vector);
-		if (_p8.ctor === 'Just') {
-			var _p12 = _p8._0;
-			var _p9 = _p12.state;
-			switch (_p9.ctor) {
-				case 'SingleChoiceState':
-					return A3(
-						_elm_lang$core$Array$set,
-						idx,
-						_elm_lang$core$Native_Utils.update(
-							_p12,
-							{
-								state: _user$project$Lia_Quiz_Types$SingleChoiceState(question_id)
-							}),
-						vector);
-				case 'MultipleChoiceState':
-					var _p11 = _p9._0;
-					var _p10 = A2(_elm_lang$core$Array$get, question_id, _p11);
-					if (_p10.ctor === 'Just') {
-						return function (q) {
-							return A3(
-								_elm_lang$core$Array$set,
-								idx,
-								_elm_lang$core$Native_Utils.update(
-									_p12,
-									{
-										state: _user$project$Lia_Quiz_Types$MultipleChoiceState(q)
-									}),
-								vector);
-						}(
-							function (q) {
-								return A3(_elm_lang$core$Array$set, question_id, q, _p11);
-							}(
-								function (c) {
-									return !c;
-								}(_p10._0)));
-					} else {
-						return vector;
-					}
-				default:
-					return vector;
-			}
-		} else {
-			return vector;
-		}
-	});
-var _user$project$Lia_Quiz_Update$check_answer = F3(
-	function (idx, solution, vector) {
-		var _p13 = A2(_user$project$Lia_Quiz_Update$get, idx, vector);
-		if (_p13.ctor === 'Just') {
-			var _p14 = _p13._0;
-			return A3(
-				_elm_lang$core$Array$set,
-				idx,
-				_elm_lang$core$Native_Utils.update(
-					_p14,
-					{
-						trial: _p14.trial + 1,
-						solved: _elm_lang$core$Native_Utils.eq(_p14.state, solution) ? _user$project$Lia_Quiz_Types$Solved : _user$project$Lia_Quiz_Types$Open
-					}),
+				f(_p6._0),
 				vector);
 		} else {
 			return vector;
 		}
 	});
 var _user$project$Lia_Quiz_Update$update = F2(
-	function (msg, model) {
-		var _p15 = msg;
-		switch (_p15.ctor) {
+	function (msg, vector) {
+		var _p7 = msg;
+		switch (_p7.ctor) {
 			case 'CheckBox':
 				return {
 					ctor: '_Tuple2',
-					_0: A3(_user$project$Lia_Quiz_Update$flip_check, _p15._0, _p15._1, model),
+					_0: A3(
+						_user$project$Lia_Quiz_Update$update_,
+						_p7._0,
+						vector,
+						_user$project$Lia_Quiz_Update$flip(_p7._1)),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			case 'RadioButton':
 				return {
 					ctor: '_Tuple2',
-					_0: A3(_user$project$Lia_Quiz_Update$flip_check, _p15._0, _p15._1, model),
+					_0: A3(
+						_user$project$Lia_Quiz_Update$update_,
+						_p7._0,
+						vector,
+						_user$project$Lia_Quiz_Update$flip(_p7._1)),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			case 'Input':
 				return {
 					ctor: '_Tuple2',
-					_0: A3(_user$project$Lia_Quiz_Update$update_input, _p15._0, _p15._1, model),
+					_0: A3(
+						_user$project$Lia_Quiz_Update$update_,
+						_p7._0,
+						vector,
+						_user$project$Lia_Quiz_Update$input(_p7._1)),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			case 'Check':
-				var new_model = A3(_user$project$Lia_Quiz_Update$check_answer, _p15._0, _p15._1, model);
+				var new_vector = A3(
+					_user$project$Lia_Quiz_Update$update_,
+					_p7._0,
+					vector,
+					function (e) {
+						return _elm_lang$core$Native_Utils.update(
+							e,
+							{
+								trial: e.trial + 1,
+								solved: _elm_lang$core$Native_Utils.eq(e.state, _p7._1) ? _user$project$Lia_Quiz_Types$Solved : _user$project$Lia_Quiz_Types$Open
+							});
+					});
 				return {
 					ctor: '_Tuple2',
-					_0: new_model,
+					_0: new_vector,
 					_1: _elm_lang$core$Maybe$Just(
-						_user$project$Lia_Quiz_Model$model2json(new_model))
+						_user$project$Lia_Quiz_Model$vector2json(new_vector))
 				};
 			case 'ShowHint':
 				return {
 					ctor: '_Tuple2',
-					_0: A2(_user$project$Lia_Quiz_Update$update_hint, _p15._0, model),
+					_0: A3(
+						_user$project$Lia_Quiz_Update$update_,
+						_p7._0,
+						vector,
+						function (e) {
+							return _elm_lang$core$Native_Utils.update(
+								e,
+								{hint: e.hint + 1});
+						}),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			default:
-				var new_model = A3(_user$project$Lia_Quiz_Update$update_solution, _p15._0, model, _p15._1);
+				var new_vector = A3(
+					_user$project$Lia_Quiz_Update$update_,
+					_p7._0,
+					vector,
+					function (e) {
+						return _elm_lang$core$Native_Utils.update(
+							e,
+							{state: _p7._1, solved: _user$project$Lia_Quiz_Types$ReSolved});
+					});
 				return {
 					ctor: '_Tuple2',
-					_0: new_model,
+					_0: new_vector,
 					_1: _elm_lang$core$Maybe$Just(
-						_user$project$Lia_Quiz_Model$model2json(new_model))
+						_user$project$Lia_Quiz_Model$vector2json(new_vector))
 				};
 		}
 	});
@@ -17752,9 +18055,257 @@ var _user$project$Lia_Quiz_Update$CheckBox = F2(
 		return {ctor: 'CheckBox', _0: a, _1: b};
 	});
 
+var _user$project$Lia_Survey_Model$json2state = function () {
+	var dict = _elm_lang$core$Json_Decode$dict(_elm_lang$core$Json_Decode$bool);
+	var value = _elm_lang$core$Json_Decode$field('value');
+	var state_decoder = function (type_) {
+		var _p0 = type_;
+		switch (_p0) {
+			case 'Text':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Survey_Types$TextState,
+					value(_elm_lang$core$Json_Decode$string));
+			case 'SingleChoice':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Survey_Types$VectorState(true),
+					value(dict));
+			case 'MultipleChoice':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Survey_Types$VectorState(false),
+					value(dict));
+			case 'SingleChoiceBlock':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Survey_Types$MatrixState(true),
+					value(
+						_elm_lang$core$Json_Decode$array(dict)));
+			case 'MultipleChoiceBlock':
+				return A2(
+					_elm_lang$core$Json_Decode$map,
+					_user$project$Lia_Survey_Types$MatrixState(false),
+					value(
+						_elm_lang$core$Json_Decode$array(dict)));
+			default:
+				return _elm_lang$core$Json_Decode$fail(
+					A2(_elm_lang$core$Basics_ops['++'], 'not supported type: ', type_));
+		}
+	};
+	return A2(
+		_elm_lang$core$Json_Decode$andThen,
+		state_decoder,
+		A2(_elm_lang$core$Json_Decode$field, 'type', _elm_lang$core$Json_Decode$string));
+}();
+var _user$project$Lia_Survey_Model$json2element = A3(
+	_elm_lang$core$Json_Decode$map2,
+	F2(
+		function (v0, v1) {
+			return {ctor: '_Tuple2', _0: v0, _1: v1};
+		}),
+	A2(_elm_lang$core$Json_Decode$field, 'submitted', _elm_lang$core$Json_Decode$bool),
+	A2(_elm_lang$core$Json_Decode$field, 'state', _user$project$Lia_Survey_Model$json2state));
+var _user$project$Lia_Survey_Model$json2vector = function (json) {
+	return A2(
+		_elm_lang$core$Json_Decode$decodeValue,
+		_elm_lang$core$Json_Decode$array(_user$project$Lia_Survey_Model$json2element),
+		json);
+};
+var _user$project$Lia_Survey_Model$state2json = function (state) {
+	var dict2json = function (dict) {
+		return _elm_lang$core$Json_Encode$object(
+			A2(
+				_elm_lang$core$List$map,
+				function (_p1) {
+					var _p2 = _p1;
+					return {
+						ctor: '_Tuple2',
+						_0: _p2._0,
+						_1: _elm_lang$core$Json_Encode$bool(_p2._1)
+					};
+				},
+				_elm_lang$core$Dict$toList(dict)));
+	};
+	return _elm_lang$core$Json_Encode$object(
+		function () {
+			var _p3 = state;
+			switch (_p3.ctor) {
+				case 'TextState':
+					return {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'type',
+							_1: _elm_lang$core$Json_Encode$string('Text')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'value',
+								_1: _elm_lang$core$Json_Encode$string(_p3._0)
+							},
+							_1: {ctor: '[]'}
+						}
+					};
+				case 'VectorState':
+					if (_p3._0 === true) {
+						return {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'type',
+								_1: _elm_lang$core$Json_Encode$string('SingleChoice')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'value',
+									_1: dict2json(_p3._1)
+								},
+								_1: {ctor: '[]'}
+							}
+						};
+					} else {
+						return {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'type',
+								_1: _elm_lang$core$Json_Encode$string('MultipleChoice')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'value',
+									_1: dict2json(_p3._1)
+								},
+								_1: {ctor: '[]'}
+							}
+						};
+					}
+				default:
+					if (_p3._0 === true) {
+						return {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'type',
+								_1: _elm_lang$core$Json_Encode$string('SingleChoiceBlock')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'value',
+									_1: _elm_lang$core$Json_Encode$array(
+										A2(_elm_lang$core$Array$map, dict2json, _p3._1))
+								},
+								_1: {ctor: '[]'}
+							}
+						};
+					} else {
+						return {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'type',
+								_1: _elm_lang$core$Json_Encode$string('MultipleChoiceBlock')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'value',
+									_1: _elm_lang$core$Json_Encode$array(
+										A2(_elm_lang$core$Array$map, dict2json, _p3._1))
+								},
+								_1: {ctor: '[]'}
+							}
+						};
+					}
+			}
+		}());
+};
+var _user$project$Lia_Survey_Model$element2json = function (_p4) {
+	var _p5 = _p4;
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'submitted',
+				_1: _elm_lang$core$Json_Encode$bool(_p5._0)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'state',
+					_1: _user$project$Lia_Survey_Model$state2json(_p5._1)
+				},
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Lia_Survey_Model$vector2json = function (vector) {
+	return _elm_lang$core$Json_Encode$array(
+		A2(_elm_lang$core$Array$map, _user$project$Lia_Survey_Model$element2json, vector));
+};
+var _user$project$Lia_Survey_Model$get_matrix_state = F4(
+	function (vector, idx, row, $var) {
+		var _p6 = A2(_elm_lang$core$Array$get, idx, vector);
+		if (((_p6.ctor === 'Just') && (_p6._0.ctor === '_Tuple2')) && (_p6._0._1.ctor === 'MatrixState')) {
+			return A2(
+				_elm_lang$core$Maybe$withDefault,
+				false,
+				A2(
+					_elm_lang$core$Maybe$andThen,
+					function (d) {
+						return A2(_elm_lang$core$Dict$get, $var, d);
+					},
+					A2(_elm_lang$core$Array$get, row, _p6._0._1._1)));
+		} else {
+			return false;
+		}
+	});
+var _user$project$Lia_Survey_Model$get_vector_state = F3(
+	function (vector, idx, $var) {
+		var _p7 = A2(_elm_lang$core$Array$get, idx, vector);
+		if (((_p7.ctor === 'Just') && (_p7._0.ctor === '_Tuple2')) && (_p7._0._1.ctor === 'VectorState')) {
+			return A2(
+				_elm_lang$core$Maybe$withDefault,
+				false,
+				A2(_elm_lang$core$Dict$get, $var, _p7._0._1._1));
+		} else {
+			return false;
+		}
+	});
+var _user$project$Lia_Survey_Model$get_text_state = F2(
+	function (vector, idx) {
+		var _p8 = A2(_elm_lang$core$Array$get, idx, vector);
+		if (((_p8.ctor === 'Just') && (_p8._0.ctor === '_Tuple2')) && (_p8._0._1.ctor === 'TextState')) {
+			return _p8._0._1._0;
+		} else {
+			return '';
+		}
+	});
+var _user$project$Lia_Survey_Model$get_submission_state = F2(
+	function (vector, idx) {
+		var _p9 = A2(_elm_lang$core$Array$get, idx, vector);
+		if (((_p9.ctor === 'Just') && (_p9._0.ctor === '_Tuple2')) && (_p9._0._0 === true)) {
+			return true;
+		} else {
+			return false;
+		}
+	});
+
 var _user$project$Lia_Survey_Update$submitable = F2(
-	function (model, idx) {
-		var _p0 = A2(_elm_lang$core$Array$get, idx, model);
+	function (vector, idx) {
+		var _p0 = A2(_elm_lang$core$Array$get, idx, vector);
 		if (((_p0.ctor === 'Just') && (_p0._0.ctor === '_Tuple2')) && (_p0._0._0 === false)) {
 			switch (_p0._0._1.ctor) {
 				case 'TextState':
@@ -17798,37 +18349,37 @@ var _user$project$Lia_Survey_Update$submitable = F2(
 		}
 	});
 var _user$project$Lia_Survey_Update$submit = F2(
-	function (model, idx) {
-		var _p1 = A2(_elm_lang$core$Array$get, idx, model);
+	function (vector, idx) {
+		var _p1 = A2(_elm_lang$core$Array$get, idx, vector);
 		if (((_p1.ctor === 'Just') && (_p1._0.ctor === '_Tuple2')) && (_p1._0._0 === false)) {
 			return A3(
 				_elm_lang$core$Array$set,
 				idx,
 				{ctor: '_Tuple2', _0: true, _1: _p1._0._1},
-				model);
+				vector);
 		} else {
-			return model;
+			return vector;
 		}
 	});
 var _user$project$Lia_Survey_Update$set_state = F3(
-	function (model, idx, state) {
+	function (vector, idx, state) {
 		return A3(
 			_elm_lang$core$Array$set,
 			idx,
 			{ctor: '_Tuple2', _0: false, _1: state},
-			model);
+			vector);
 	});
 var _user$project$Lia_Survey_Update$update_matrix = F4(
-	function (model, idx, row, $var) {
-		var _p2 = A2(_elm_lang$core$Array$get, idx, model);
+	function (vector, col_id, row_id, $var) {
+		var _p2 = A2(_elm_lang$core$Array$get, col_id, vector);
 		if ((((_p2.ctor === 'Just') && (_p2._0.ctor === '_Tuple2')) && (_p2._0._0 === false)) && (_p2._0._1.ctor === 'MatrixState')) {
 			if (_p2._0._1._0 === false) {
 				var _p6 = _p2._0._1._1;
-				var vector = A2(_elm_lang$core$Array$get, row, _p6);
+				var row = A2(_elm_lang$core$Array$get, row_id, _p6);
 				return A3(
 					_user$project$Lia_Survey_Update$set_state,
-					model,
-					idx,
+					vector,
+					col_id,
 					A2(
 						_user$project$Lia_Survey_Types$MatrixState,
 						false,
@@ -17838,7 +18389,7 @@ var _user$project$Lia_Survey_Update$update_matrix = F4(
 							A2(
 								_elm_lang$core$Maybe$map,
 								function (d) {
-									return A3(_elm_lang$core$Array$set, row, d, _p6);
+									return A3(_elm_lang$core$Array$set, row_id, d, _p6);
 								},
 								A2(
 									_elm_lang$core$Maybe$map,
@@ -17862,14 +18413,14 @@ var _user$project$Lia_Survey_Update$update_matrix = F4(
 													}),
 												d);
 										},
-										vector))))));
+										row))))));
 			} else {
 				var _p7 = _p2._0._1._1;
-				var vector = A2(_elm_lang$core$Array$get, row, _p7);
+				var row = A2(_elm_lang$core$Array$get, row_id, _p7);
 				return A3(
 					_user$project$Lia_Survey_Update$set_state,
-					model,
-					idx,
+					vector,
+					col_id,
 					A2(
 						_user$project$Lia_Survey_Types$MatrixState,
 						true,
@@ -17879,7 +18430,7 @@ var _user$project$Lia_Survey_Update$update_matrix = F4(
 							A2(
 								_elm_lang$core$Maybe$map,
 								function (d) {
-									return A3(_elm_lang$core$Array$set, row, d, _p7);
+									return A3(_elm_lang$core$Array$set, row_id, d, _p7);
 								},
 								A2(
 									_elm_lang$core$Maybe$map,
@@ -17892,20 +18443,20 @@ var _user$project$Lia_Survey_Update$update_matrix = F4(
 											},
 											d);
 									},
-									vector)))));
+									row)))));
 			}
 		} else {
-			return model;
+			return vector;
 		}
 	});
 var _user$project$Lia_Survey_Update$update_vector = F3(
-	function (model, idx, $var) {
-		var _p8 = A2(_elm_lang$core$Array$get, idx, model);
+	function (vector, idx, $var) {
+		var _p8 = A2(_elm_lang$core$Array$get, idx, vector);
 		if ((((_p8.ctor === 'Just') && (_p8._0.ctor === '_Tuple2')) && (_p8._0._0 === false)) && (_p8._0._1.ctor === 'VectorState')) {
 			if (_p8._0._1._0 === false) {
 				return A3(
 					_user$project$Lia_Survey_Update$set_state,
-					model,
+					vector,
 					idx,
 					A2(
 						_user$project$Lia_Survey_Types$VectorState,
@@ -17926,7 +18477,7 @@ var _user$project$Lia_Survey_Update$update_vector = F3(
 			} else {
 				return A3(
 					_user$project$Lia_Survey_Update$set_state,
-					model,
+					vector,
 					idx,
 					A2(
 						_user$project$Lia_Survey_Types$VectorState,
@@ -17940,56 +18491,56 @@ var _user$project$Lia_Survey_Update$update_vector = F3(
 							_p8._0._1._1)));
 			}
 		} else {
-			return model;
+			return vector;
 		}
 	});
 var _user$project$Lia_Survey_Update$update_text = F3(
-	function (model, idx, str) {
-		var _p12 = A2(_elm_lang$core$Array$get, idx, model);
+	function (vector, idx, str) {
+		var _p12 = A2(_elm_lang$core$Array$get, idx, vector);
 		if ((((_p12.ctor === 'Just') && (_p12._0.ctor === '_Tuple2')) && (_p12._0._0 === false)) && (_p12._0._1.ctor === 'TextState')) {
 			return A3(
 				_user$project$Lia_Survey_Update$set_state,
-				model,
+				vector,
 				idx,
 				_user$project$Lia_Survey_Types$TextState(str));
 		} else {
-			return model;
+			return vector;
 		}
 	});
 var _user$project$Lia_Survey_Update$update = F2(
-	function (msg, model) {
+	function (msg, vector) {
 		var _p13 = msg;
 		switch (_p13.ctor) {
 			case 'TextUpdate':
 				return {
 					ctor: '_Tuple2',
-					_0: A3(_user$project$Lia_Survey_Update$update_text, model, _p13._0, _p13._1),
+					_0: A3(_user$project$Lia_Survey_Update$update_text, vector, _p13._0, _p13._1),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			case 'VectorUpdate':
 				return {
 					ctor: '_Tuple2',
-					_0: A3(_user$project$Lia_Survey_Update$update_vector, model, _p13._0, _p13._1),
+					_0: A3(_user$project$Lia_Survey_Update$update_vector, vector, _p13._0, _p13._1),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			case 'MatrixUpdate':
 				return {
 					ctor: '_Tuple2',
-					_0: A4(_user$project$Lia_Survey_Update$update_matrix, model, _p13._0, _p13._1, _p13._2),
+					_0: A4(_user$project$Lia_Survey_Update$update_matrix, vector, _p13._0, _p13._1, _p13._2),
 					_1: _elm_lang$core$Maybe$Nothing
 				};
 			default:
 				var _p14 = _p13._0;
-				if (A2(_user$project$Lia_Survey_Update$submitable, model, _p14)) {
-					var new_model = A2(_user$project$Lia_Survey_Update$submit, model, _p14);
+				if (A2(_user$project$Lia_Survey_Update$submitable, vector, _p14)) {
+					var new_vector = A2(_user$project$Lia_Survey_Update$submit, vector, _p14);
 					return {
 						ctor: '_Tuple2',
-						_0: new_model,
+						_0: new_vector,
 						_1: _elm_lang$core$Maybe$Just(
-							_user$project$Lia_Survey_Model$model2json(new_model))
+							_user$project$Lia_Survey_Model$vector2json(new_vector))
 					};
 				} else {
-					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Maybe$Nothing};
+					return {ctor: '_Tuple2', _0: vector, _1: _elm_lang$core$Maybe$Nothing};
 				}
 		}
 	});
@@ -18009,6 +18560,104 @@ var _user$project$Lia_Survey_Update$TextUpdate = F2(
 		return {ctor: 'TextUpdate', _0: a, _1: b};
 	});
 
+var _user$project$Lia_Markdown_Update$log = F2(
+	function (topic, msg) {
+		var _p0 = msg;
+		if (_p0.ctor === 'Just') {
+			return _elm_lang$core$Maybe$Just(
+				{ctor: '_Tuple2', _0: topic, _1: _p0._0});
+		} else {
+			return _elm_lang$core$Maybe$Nothing;
+		}
+	});
+var _user$project$Lia_Markdown_Update$UpdateSurvey = function (a) {
+	return {ctor: 'UpdateSurvey', _0: a};
+};
+var _user$project$Lia_Markdown_Update$UpdateQuiz = function (a) {
+	return {ctor: 'UpdateQuiz', _0: a};
+};
+var _user$project$Lia_Markdown_Update$UpdateCode = function (a) {
+	return {ctor: 'UpdateCode', _0: a};
+};
+var _user$project$Lia_Markdown_Update$UpdateEffect = F2(
+	function (a, b) {
+		return {ctor: 'UpdateEffect', _0: a, _1: b};
+	});
+var _user$project$Lia_Markdown_Update$update = F2(
+	function (msg, section) {
+		var _p1 = msg;
+		switch (_p1.ctor) {
+			case 'UpdateEffect':
+				var _p3 = _p1._0;
+				var _p2 = A3(_user$project$Lia_Effect_Update$update, _p1._1, _p3, section.effect_model);
+				var effect_model = _p2._0;
+				var cmd = _p2._1;
+				return {
+					ctor: '_Tuple3',
+					_0: _elm_lang$core$Native_Utils.update(
+						section,
+						{effect_model: effect_model}),
+					_1: A2(
+						_elm_lang$core$Platform_Cmd$map,
+						_user$project$Lia_Markdown_Update$UpdateEffect(_p3),
+						cmd),
+					_2: _elm_lang$core$Maybe$Nothing
+				};
+			case 'UpdateCode':
+				var _p4 = A2(_user$project$Lia_Code_Update$update, _p1._0, section.code_vector);
+				var code_vector = _p4._0;
+				var cmd = _p4._1;
+				return {
+					ctor: '_Tuple3',
+					_0: _elm_lang$core$Native_Utils.update(
+						section,
+						{code_vector: code_vector}),
+					_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Markdown_Update$UpdateCode, cmd),
+					_2: _elm_lang$core$Maybe$Nothing
+				};
+			case 'UpdateQuiz':
+				var _p5 = A2(_user$project$Lia_Quiz_Update$update, _p1._0, section.quiz_vector);
+				var quiz_vector = _p5._0;
+				var log = _p5._1;
+				return {
+					ctor: '_Tuple3',
+					_0: _elm_lang$core$Native_Utils.update(
+						section,
+						{quiz_vector: quiz_vector}),
+					_1: _elm_lang$core$Platform_Cmd$none,
+					_2: _elm_lang$core$Maybe$Nothing
+				};
+			default:
+				var _p6 = A2(_user$project$Lia_Survey_Update$update, _p1._0, section.survey_vector);
+				var survey_vector = _p6._0;
+				var log = _p6._1;
+				return {
+					ctor: '_Tuple3',
+					_0: _elm_lang$core$Native_Utils.update(
+						section,
+						{survey_vector: survey_vector}),
+					_1: _elm_lang$core$Platform_Cmd$none,
+					_2: _elm_lang$core$Maybe$Nothing
+				};
+		}
+	});
+var _user$project$Lia_Markdown_Update$nextEffect = function (sound) {
+	return _user$project$Lia_Markdown_Update$update(
+		A2(_user$project$Lia_Markdown_Update$UpdateEffect, sound, _user$project$Lia_Effect_Update$next));
+};
+var _user$project$Lia_Markdown_Update$previousEffect = function (sound) {
+	return _user$project$Lia_Markdown_Update$update(
+		A2(_user$project$Lia_Markdown_Update$UpdateEffect, sound, _user$project$Lia_Effect_Update$previous));
+};
+var _user$project$Lia_Markdown_Update$initEffect = F2(
+	function (run_all_javascript, sound) {
+		return _user$project$Lia_Markdown_Update$update(
+			A2(
+				_user$project$Lia_Markdown_Update$UpdateEffect,
+				sound,
+				_user$project$Lia_Effect_Update$init(run_all_javascript)));
+	});
+
 var _user$project$Lia_Update$log = F2(
 	function (topic, msg) {
 		var _p0 = msg;
@@ -18019,34 +18668,71 @@ var _user$project$Lia_Update$log = F2(
 			return _elm_lang$core$Maybe$Nothing;
 		}
 	});
+var _user$project$Lia_Update$if_update = F2(
+	function (orig, $new) {
+		return _elm_lang$core$Array$isEmpty(orig) ? $new : orig;
+	});
+var _user$project$Lia_Update$set_active_section = F2(
+	function (model, section) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				sections: A3(_elm_lang$core$Array$set, model.section_active, section, model.sections)
+			});
+	});
+var _user$project$Lia_Update$get_active_section = function (model) {
+	return A2(_elm_lang$core$Array$get, model.section_active, model.sections);
+};
+var _user$project$Lia_Update$generate = function (model) {
+	var _p1 = _user$project$Lia_Update$get_active_section(model);
+	if (_p1.ctor === 'Just') {
+		var _p3 = _p1._0;
+		return A2(
+			_user$project$Lia_Update$set_active_section,
+			model,
+			function () {
+				var _p2 = A2(_user$project$Lia_Parser$parse_section, model.definition, _p3.code);
+				if (_p2.ctor === 'Ok') {
+					return _elm_lang$core$Native_Utils.update(
+						_p3,
+						{
+							body: _p2._0._0,
+							error: _elm_lang$core$Maybe$Nothing,
+							visited: true,
+							code_vector: A2(_user$project$Lia_Update$if_update, _p3.code_vector, _p2._0._1),
+							quiz_vector: A2(_user$project$Lia_Update$if_update, _p3.quiz_vector, _p2._0._2),
+							survey_vector: A2(_user$project$Lia_Update$if_update, _p3.survey_vector, _p2._0._3),
+							effect_model: _p2._0._4
+						});
+				} else {
+					return _elm_lang$core$Native_Utils.update(
+						_p3,
+						{
+							body: {ctor: '[]'},
+							error: _elm_lang$core$Maybe$Just(_p2._0)
+						});
+				}
+			}());
+	} else {
+		return model;
+	}
+};
+var _user$project$Lia_Update$ToggleSound = {ctor: 'ToggleSound'};
 var _user$project$Lia_Update$SwitchMode = {ctor: 'SwitchMode'};
-var _user$project$Lia_Update$ToggleSpeech = {ctor: 'ToggleSpeech'};
-var _user$project$Lia_Update$ThemeLight = {ctor: 'ThemeLight'};
-var _user$project$Lia_Update$Theme = function (a) {
-	return {ctor: 'Theme', _0: a};
-};
-var _user$project$Lia_Update$UpdateEffect = function (a) {
-	return {ctor: 'UpdateEffect', _0: a};
-};
-var _user$project$Lia_Update$UpdateSurvey = function (a) {
-	return {ctor: 'UpdateSurvey', _0: a};
-};
-var _user$project$Lia_Update$UpdateCode = function (a) {
-	return {ctor: 'UpdateCode', _0: a};
-};
-var _user$project$Lia_Update$UpdateQuiz = function (a) {
-	return {ctor: 'UpdateQuiz', _0: a};
+var _user$project$Lia_Update$UpdateMarkdown = function (a) {
+	return {ctor: 'UpdateMarkdown', _0: a};
 };
 var _user$project$Lia_Update$UpdateIndex = function (a) {
 	return {ctor: 'UpdateIndex', _0: a};
 };
-var _user$project$Lia_Update$ToggleContentsTable = {ctor: 'ToggleContentsTable'};
-var _user$project$Lia_Update$NextSlide = function (a) {
-	return {ctor: 'NextSlide', _0: a};
+var _user$project$Lia_Update$ToggleLOC = {ctor: 'ToggleLOC'};
+var _user$project$Lia_Update$DesignLight = {ctor: 'DesignLight'};
+var _user$project$Lia_Update$DesignTheme = function (a) {
+	return {ctor: 'DesignTheme', _0: a};
 };
-var _user$project$Lia_Update$PrevSlide = function (a) {
-	return {ctor: 'PrevSlide', _0: a};
-};
+var _user$project$Lia_Update$NextSection = {ctor: 'NextSection'};
+var _user$project$Lia_Update$PrevSection = {ctor: 'PrevSection'};
+var _user$project$Lia_Update$InitSection = {ctor: 'InitSection'};
 var _user$project$Lia_Update$Load = function (a) {
 	return {ctor: 'Load', _0: a};
 };
@@ -18054,224 +18740,749 @@ var _user$project$Lia_Update$update = F2(
 	function (msg, model) {
 		update:
 		while (true) {
-			var _p1 = msg;
-			switch (_p1.ctor) {
-				case 'Load':
-					var _p3 = _p1._0;
-					if ((_elm_lang$core$Native_Utils.cmp(-1, _p3) < 0) && (_elm_lang$core$Native_Utils.cmp(
-						_p3,
-						_elm_lang$core$List$length(model.slides)) < 0)) {
-						var _p2 = A2(
-							_user$project$Lia_Effect_Update$init,
-							model.silent,
-							A2(
-								_user$project$Lia_Effect_Model$init,
-								model.narrator,
-								A2(_user$project$Lia_Helper$get_slide, _p3, model.slides)));
-						var effect_model = _p2._0;
-						var cmd = _p2._1;
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{current_slide: _p3, effect_model: effect_model}),
-							_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateEffect, cmd),
-							_2: _elm_lang$core$Maybe$Nothing
-						};
-					} else {
-						return {ctor: '_Tuple3', _0: model, _1: _elm_lang$core$Platform_Cmd$none, _2: _elm_lang$core$Maybe$Nothing};
+			var _p4 = {
+				ctor: '_Tuple2',
+				_0: msg,
+				_1: _user$project$Lia_Update$get_active_section(model)
+			};
+			_v3_11:
+			do {
+				if (_p4.ctor === '_Tuple2') {
+					switch (_p4._0.ctor) {
+						case 'ToggleLOC':
+							return {
+								ctor: '_Tuple3',
+								_0: _elm_lang$core$Native_Utils.update(
+									model,
+									{loc: !model.loc}),
+								_1: _elm_lang$core$Platform_Cmd$none,
+								_2: _elm_lang$core$Maybe$Nothing
+							};
+						case 'UpdateIndex':
+							var index = A3(
+								_user$project$Lia_Index_Update$update,
+								_p4._0._0,
+								model.index_model,
+								_elm_lang$core$Array$toIndexedList(
+									A2(
+										_elm_lang$core$Array$map,
+										function (_) {
+											return _.code;
+										},
+										model.sections)));
+							return {
+								ctor: '_Tuple3',
+								_0: _elm_lang$core$Native_Utils.update(
+									model,
+									{index_model: index}),
+								_1: _elm_lang$core$Platform_Cmd$none,
+								_2: _elm_lang$core$Maybe$Nothing
+							};
+						case 'UpdateMarkdown':
+							if (_p4._1.ctor === 'Just') {
+								var _p5 = A2(_user$project$Lia_Markdown_Update$update, _p4._0._0, _p4._1._0);
+								var section = _p5._0;
+								var cmd = _p5._1;
+								var log = _p5._2;
+								return {
+									ctor: '_Tuple3',
+									_0: A2(_user$project$Lia_Update$set_active_section, model, section),
+									_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateMarkdown, cmd),
+									_2: log
+								};
+							} else {
+								break _v3_11;
+							}
+						case 'DesignTheme':
+							return {
+								ctor: '_Tuple3',
+								_0: _elm_lang$core$Native_Utils.update(
+									model,
+									{
+										design: {
+											light: model.design.light,
+											theme: A2(_user$project$Lia_Utils$set_local, 'theme', _p4._0._0)
+										}
+									}),
+								_1: _elm_lang$core$Platform_Cmd$none,
+								_2: _elm_lang$core$Maybe$Nothing
+							};
+						case 'DesignLight':
+							return {
+								ctor: '_Tuple3',
+								_0: _elm_lang$core$Native_Utils.update(
+									model,
+									{
+										design: {
+											light: A2(
+												_user$project$Lia_Utils$set_local,
+												'theme_light',
+												_elm_lang$core$Native_Utils.eq(model.design.light, 'light') ? 'dark' : 'light'),
+											theme: model.design.theme
+										}
+									}),
+								_1: _elm_lang$core$Platform_Cmd$none,
+								_2: _elm_lang$core$Maybe$Nothing
+							};
+						case 'Load':
+							if (_p4._1.ctor === 'Just') {
+								var _p7 = _p4._0._0;
+								if ((_elm_lang$core$Native_Utils.cmp(-1, _p7) < 0) && (_elm_lang$core$Native_Utils.cmp(
+									_p7,
+									_elm_lang$core$Array$length(model.sections)) < 0)) {
+									var unused = function () {
+										var _p6 = model.uid;
+										if (_p6.ctor === 'Just') {
+											return A2(_user$project$Lia_Utils$set_local, _p6._0, _p7);
+										} else {
+											return 0;
+										}
+									}();
+									var _v5 = _user$project$Lia_Update$InitSection,
+										_v6 = _user$project$Lia_Update$generate(
+										_elm_lang$core$Native_Utils.update(
+											model,
+											{section_active: _p7}));
+									msg = _v5;
+									model = _v6;
+									continue update;
+								} else {
+									return {ctor: '_Tuple3', _0: model, _1: _elm_lang$core$Platform_Cmd$none, _2: _elm_lang$core$Maybe$Nothing};
+								}
+							} else {
+								break _v3_11;
+							}
+						case 'InitSection':
+							if (_p4._1.ctor === 'Just') {
+								var _p10 = _p4._1._0;
+								var _p8 = function () {
+									var _p9 = model.mode;
+									if (_p9.ctor === 'Textbook') {
+										return A3(_user$project$Lia_Markdown_Update$initEffect, true, false, _p10);
+									} else {
+										return A3(_user$project$Lia_Markdown_Update$initEffect, false, model.sound, _p10);
+									}
+								}();
+								var sec_ = _p8._0;
+								var cmd_ = _p8._1;
+								var log_ = _p8._2;
+								return {
+									ctor: '_Tuple3',
+									_0: A2(_user$project$Lia_Update$set_active_section, model, sec_),
+									_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateMarkdown, cmd_),
+									_2: log_
+								};
+							} else {
+								break _v3_11;
+							}
+						case 'NextSection':
+							if (_p4._1.ctor === 'Just') {
+								var _p12 = _p4._1._0;
+								if (_elm_lang$core$Native_Utils.eq(model.mode, _user$project$Lia_Types$Textbook) || (!_user$project$Lia_Effect_Update$has_next(_p12.effect_model))) {
+									var _v8 = _user$project$Lia_Update$Load(model.section_active + 1),
+										_v9 = model;
+									msg = _v8;
+									model = _v9;
+									continue update;
+								} else {
+									var _p11 = A2(_user$project$Lia_Markdown_Update$nextEffect, model.sound, _p12);
+									var sec_ = _p11._0;
+									var cmd_ = _p11._1;
+									var log_ = _p11._2;
+									return {
+										ctor: '_Tuple3',
+										_0: A2(_user$project$Lia_Update$set_active_section, model, sec_),
+										_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateMarkdown, cmd_),
+										_2: log_
+									};
+								}
+							} else {
+								break _v3_11;
+							}
+						case 'PrevSection':
+							if (_p4._1.ctor === 'Just') {
+								var _p14 = _p4._1._0;
+								if (_elm_lang$core$Native_Utils.eq(model.mode, _user$project$Lia_Types$Textbook) || (!_user$project$Lia_Effect_Update$has_previous(_p14.effect_model))) {
+									var _v10 = _user$project$Lia_Update$Load(model.section_active - 1),
+										_v11 = model;
+									msg = _v10;
+									model = _v11;
+									continue update;
+								} else {
+									var _p13 = A2(_user$project$Lia_Markdown_Update$previousEffect, model.sound, _p14);
+									var sec_ = _p13._0;
+									var cmd_ = _p13._1;
+									var log_ = _p13._2;
+									return {
+										ctor: '_Tuple3',
+										_0: A2(_user$project$Lia_Update$set_active_section, model, sec_),
+										_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateMarkdown, cmd_),
+										_2: log_
+									};
+								}
+							} else {
+								break _v3_11;
+							}
+						case 'SwitchMode':
+							if (_p4._1.ctor === 'Just') {
+								var _p18 = _p4._1._0;
+								var mode = A2(
+									_user$project$Lia_Utils$set_local,
+									'mode',
+									function () {
+										var _p15 = model.mode;
+										switch (_p15.ctor) {
+											case 'Presentation':
+												return _user$project$Lia_Types$Slides;
+											case 'Slides':
+												return _user$project$Lia_Types$Textbook;
+											default:
+												return _user$project$Lia_Types$Presentation;
+										}
+									}());
+								var _p16 = function () {
+									var _p17 = mode;
+									if (_p17.ctor === 'Textbook') {
+										return A3(_user$project$Lia_Markdown_Update$initEffect, true, false, _p18);
+									} else {
+										return A3(_user$project$Lia_Markdown_Update$initEffect, false, false, _p18);
+									}
+								}();
+								var sec_ = _p16._0;
+								var cmd_ = _p16._1;
+								var log_ = _p16._2;
+								return {
+									ctor: '_Tuple3',
+									_0: A2(
+										_user$project$Lia_Update$set_active_section,
+										_elm_lang$core$Native_Utils.update(
+											model,
+											{mode: mode}),
+										sec_),
+									_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateMarkdown, cmd_),
+									_2: log_
+								};
+							} else {
+								break _v3_11;
+							}
+						default:
+							if (_p4._1.ctor === 'Just') {
+								var _p19 = A3(_user$project$Lia_Markdown_Update$initEffect, false, !model.sound, _p4._1._0);
+								var sec_ = _p19._0;
+								var cmd_ = _p19._1;
+								var log_ = _p19._2;
+								return {
+									ctor: '_Tuple3',
+									_0: _elm_lang$core$Native_Utils.update(
+										model,
+										{
+											sound: A2(_user$project$Lia_Utils$set_local, 'sound', !model.sound)
+										}),
+									_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateMarkdown, cmd_),
+									_2: log_
+								};
+							} else {
+								break _v3_11;
+							}
 					}
-				case 'Theme':
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{theme: _p1._0}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: _elm_lang$core$Maybe$Nothing
-					};
-				case 'ThemeLight':
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{theme_light: !model.theme_light}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: _elm_lang$core$Maybe$Nothing
-					};
-				case 'ToggleSpeech':
-					if (model.silent) {
-						var _p4 = A2(_user$project$Lia_Effect_Update$repeat, false, model.effect_model);
-						var effect_model = _p4._0;
-						var cmd = _p4._1;
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{silent: false, effect_model: effect_model}),
-							_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateEffect, cmd),
-							_2: _elm_lang$core$Maybe$Nothing
-						};
-					} else {
-						var x = (!model.silent) ? _user$project$Lia_Effect_Update$silence(
-							{ctor: '_Tuple0'}) : false;
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{silent: true}),
-							_1: _elm_lang$core$Platform_Cmd$none,
-							_2: _elm_lang$core$Maybe$Nothing
-						};
+				} else {
+					break _v3_11;
+				}
+			} while(false);
+			return {ctor: '_Tuple3', _0: model, _1: _elm_lang$core$Platform_Cmd$none, _2: _elm_lang$core$Maybe$Nothing};
+		}
+	});
+
+var _user$project$Lia_Effect_View$state = function (model) {
+	return _elm_lang$core$Native_Utils.eq(model.effects, 0) ? '' : A2(
+		_elm_lang$core$Basics_ops['++'],
+		'(',
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Basics$toString(model.visible + 1),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'/',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(model.effects + 1),
+					')'))));
+};
+var _user$project$Lia_Effect_View$responsive = F2(
+	function (sound, msg) {
+		return A2(
+			_elm_lang$html$Html$span,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onClick(msg),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: sound ? _elm_lang$html$Html$text('volume_up') : _elm_lang$html$Html$text('volume_off'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$a,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$href('https://responsivevoice.org'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('ResponsiveVoice-NonCommercial'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(' licensed under '),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$a,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$href('https://creativecommons.org/licenses/by-nc-nd/4.0/'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$img,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$title('ResponsiveVoice Text To Speech'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$src('https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$alt('95x15'),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$width(95),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$height(15),
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										},
+										{ctor: '[]'}),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
 					}
-				case 'SwitchMode':
-					var _p5 = model.mode;
-					if (_p5.ctor === 'Slides') {
-						var x = _user$project$Lia_Effect_Update$silence(
-							{ctor: '_Tuple0'});
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{mode: _user$project$Lia_Types$Slides_only, silent: true}),
-							_1: _elm_lang$core$Platform_Cmd$none,
-							_2: _elm_lang$core$Maybe$Nothing
-						};
-					} else {
-						var _v3 = _user$project$Lia_Update$ToggleSpeech,
-							_v4 = _elm_lang$core$Native_Utils.update(
-							model,
-							{mode: _user$project$Lia_Types$Slides, silent: true});
-						msg = _v3;
-						model = _v4;
-						continue update;
+				}
+			});
+	});
+var _user$project$Lia_Effect_View$comment = F8(
+	function ($class, show_inline, silent, msg, model, viewer, idx, elements) {
+		return show_inline ? A2(
+			_elm_lang$html$Html$div,
+			{ctor: '[]'},
+			A2(_elm_lang$core$List$map, viewer, elements)) : (_elm_lang$core$Native_Utils.eq(idx, model.visible) ? A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class($class),
+				_1: {ctor: '[]'}
+			},
+			A2(
+				_elm_lang$core$List$append,
+				A2(_elm_lang$core$List$map, viewer, elements),
+				{
+					ctor: '::',
+					_0: A2(_user$project$Lia_Effect_View$responsive, silent, msg),
+					_1: {ctor: '[]'}
+				})) : A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('lia-effect-comment lia-hidden'),
+				_1: {ctor: '[]'}
+			},
+			{ctor: '[]'}));
+	});
+var _user$project$Lia_Effect_View$view_block = F3(
+	function (viewer, idx, blocks) {
+		return {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('lia-effect-circle'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(
+						_elm_lang$core$Basics$toString(idx)),
+					_1: {ctor: '[]'}
+				}),
+			_1: A2(_elm_lang$core$List$map, viewer, blocks)
+		};
+	});
+var _user$project$Lia_Effect_View$view = F3(
+	function (viewer, idx, elements) {
+		return {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('lia-effect-circle'),
+					_1: {ctor: '[]'}
+				},
+				_elm_lang$core$List$singleton(
+					_elm_lang$html$Html$text(
+						_elm_lang$core$Basics$toString(idx)))),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html$text(' '),
+				_1: viewer(elements)
+			}
+		};
+	});
+
+var _user$project$Lia_Index_View$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('lia-toolbar'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$input,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$type_('input'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$value(model.search),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('lia-search lia-input'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$placeholder('Search'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onInput(_user$project$Lia_Index_Update$ScanIndex),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
 					}
-				case 'PrevSlide':
-					var effect_model = model.effect_model;
-					var _p6 = {
-						ctor: '_Tuple2',
-						_0: model.mode,
-						_1: A2(
-							_user$project$Lia_Effect_Update$previous,
-							model.silent,
-							_elm_lang$core$Native_Utils.update(
-								effect_model,
-								{effects: effect_model.effects - _p1._0}))
-					};
-					if ((((_p6.ctor === '_Tuple2') && (_p6._0.ctor === 'Slides')) && (_p6._1.ctor === '_Tuple3')) && (_p6._1._2 === false)) {
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{effect_model: _p6._1._0}),
-							_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateEffect, _p6._1._1),
-							_2: _elm_lang$core$Maybe$Nothing
-						};
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		});
+};
+
+var _user$project$Lia_Markdown_Inline_View$get_url = function (url) {
+	var _p0 = url;
+	switch (_p0.ctor) {
+		case 'Full':
+			return _p0._0;
+		case 'Mail':
+			return _p0._0;
+		default:
+			return _p0._0;
+	}
+};
+var _user$project$Lia_Markdown_Inline_View$annotation = F2(
+	function (attr, cls) {
+		var _p1 = attr;
+		if (_p1.ctor === 'Just') {
+			var _p5 = _p1._0;
+			return A2(
+				_elm_lang$core$List$map,
+				function (_p2) {
+					var _p3 = _p2;
+					return A2(_elm_lang$html$Html_Attributes$attribute, _p3._0, _p3._1);
+				},
+				_elm_lang$core$Dict$toList(
+					A3(
+						_elm_lang$core$Dict$insert,
+						'class',
+						function () {
+							var _p4 = A2(_elm_lang$core$Dict$get, 'class', _p5);
+							if (_p4.ctor === 'Just') {
+								return A2(
+									_elm_lang$core$Basics_ops['++'],
+									'lia-inline ',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										cls,
+										A2(_elm_lang$core$Basics_ops['++'], ' ', _p4._0)));
+							} else {
+								return A2(_elm_lang$core$Basics_ops['++'], 'lia-inline ', cls);
+							}
+						}(),
+						_p5)));
+		} else {
+			return {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class(
+					A2(_elm_lang$core$Basics_ops['++'], 'lia-inline ', cls)),
+				_1: {ctor: '[]'}
+			};
+		}
+	});
+var _user$project$Lia_Markdown_Inline_View$view_link = F3(
+	function (alt_, url_, attr) {
+		return function (a) {
+			return a(
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(alt_),
+					_1: {ctor: '[]'}
+				});
+		}(
+			_elm_lang$html$Html$a(
+				A2(
+					_elm_lang$core$List$append,
+					A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-link'),
+					function () {
+						var _p6 = url_;
+						switch (_p6.ctor) {
+							case 'Full':
+								return {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$href(_p6._0),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$target('_blank'),
+										_1: {ctor: '[]'}
+									}
+								};
+							case 'Mail':
+								return {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$href(
+										A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _p6._0)),
+									_1: {ctor: '[]'}
+								};
+							default:
+								return {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$href(_p6._0),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$target('_blank'),
+										_1: {ctor: '[]'}
+									}
+								};
+						}
+					}())));
+	});
+var _user$project$Lia_Markdown_Inline_View$reference = F2(
+	function (ref, attr) {
+		var _p7 = ref;
+		switch (_p7.ctor) {
+			case 'Link':
+				return A3(_user$project$Lia_Markdown_Inline_View$view_link, _p7._0, _p7._1, attr);
+			case 'Image':
+				return A2(
+					_elm_lang$html$Html$img,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$src(
+							_user$project$Lia_Markdown_Inline_View$get_url(_p7._1)),
+						_1: A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-image')
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p7._0),
+						_1: {ctor: '[]'}
+					});
+			default:
+				return A2(
+					_elm_lang$html$Html$iframe,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$src(
+							_user$project$Lia_Markdown_Inline_View$get_url(_p7._1)),
+						_1: A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-movie')
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p7._0),
+						_1: {ctor: '[]'}
+					});
+		}
+	});
+var _user$project$Lia_Markdown_Inline_View$view = F2(
+	function (visible, element) {
+		view:
+		while (true) {
+			var _p8 = element;
+			switch (_p8.ctor) {
+				case 'Bold':
+					return A2(
+						_elm_lang$html$Html$b,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-bold'),
+						{
+							ctor: '::',
+							_0: A2(_user$project$Lia_Markdown_Inline_View$view, visible, _p8._0),
+							_1: {ctor: '[]'}
+						});
+				case 'Italic':
+					return A2(
+						_elm_lang$html$Html$em,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-italic'),
+						{
+							ctor: '::',
+							_0: A2(_user$project$Lia_Markdown_Inline_View$view, visible, _p8._0),
+							_1: {ctor: '[]'}
+						});
+				case 'Strike':
+					return A2(
+						_elm_lang$html$Html$s,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-strike'),
+						{
+							ctor: '::',
+							_0: A2(_user$project$Lia_Markdown_Inline_View$view, visible, _p8._0),
+							_1: {ctor: '[]'}
+						});
+				case 'Underline':
+					return A2(
+						_elm_lang$html$Html$u,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-underline'),
+						{
+							ctor: '::',
+							_0: A2(_user$project$Lia_Markdown_Inline_View$view, visible, _p8._0),
+							_1: {ctor: '[]'}
+						});
+				case 'Superscript':
+					return A2(
+						_elm_lang$html$Html$sup,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-superscript'),
+						{
+							ctor: '::',
+							_0: A2(_user$project$Lia_Markdown_Inline_View$view, visible, _p8._0),
+							_1: {ctor: '[]'}
+						});
+				case 'Verbatim':
+					return A2(
+						_elm_lang$html$Html$code,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-code'),
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(_p8._0),
+							_1: {ctor: '[]'}
+						});
+				case 'Ref':
+					return A2(_user$project$Lia_Markdown_Inline_View$reference, _p8._0, _p8._1);
+				case 'Container':
+					return A2(
+						_elm_lang$html$Html$span,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._1, 'lia-container'),
+						A2(
+							_elm_lang$core$List$map,
+							function (e) {
+								return A2(_user$project$Lia_Markdown_Inline_View$view, visible, e);
+							},
+							_p8._0));
+				case 'HTML':
+					return _user$project$Lia_Utils$stringToHtml(_p8._0);
+				case 'EInline':
+					var _p9 = _p8._0;
+					return ((_elm_lang$core$Native_Utils.cmp(_p9, visible) < 1) && (_elm_lang$core$Native_Utils.cmp(_p8._1, visible) > 0)) ? A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$id(
+								_elm_lang$core$Basics$toString(_p9)),
+							_1: A2(_user$project$Lia_Markdown_Inline_View$annotation, _p8._3, 'lia-effect-inline')
+						},
+						A3(
+							_user$project$Lia_Effect_View$view,
+							_user$project$Lia_Markdown_Inline_View$viewer(visible),
+							_p9,
+							_p8._2)) : _elm_lang$html$Html$text('');
+				case 'Symbol':
+					if (_p8._1.ctor === 'Nothing') {
+						return _user$project$Lia_Utils$stringToHtml(_p8._0);
 					} else {
-						var _v6 = _user$project$Lia_Update$Load(model.current_slide - 1),
-							_v7 = model;
-						msg = _v6;
-						model = _v7;
-						continue update;
+						var _v7 = visible,
+							_v8 = A2(
+							_user$project$Lia_Markdown_Inline_Types$Container,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Lia_Markdown_Inline_Types$Symbol, _p8._0, _elm_lang$core$Maybe$Nothing),
+								_1: {ctor: '[]'}
+							},
+							_p8._1);
+						visible = _v7;
+						element = _v8;
+						continue view;
 					}
-				case 'NextSlide':
-					var effect_model = model.effect_model;
-					var _p7 = {
-						ctor: '_Tuple2',
-						_0: model.mode,
-						_1: A2(
-							_user$project$Lia_Effect_Update$next,
-							model.silent,
-							_elm_lang$core$Native_Utils.update(
-								effect_model,
-								{effects: effect_model.effects - _p1._0}))
-					};
-					if ((((_p7.ctor === '_Tuple2') && (_p7._0.ctor === 'Slides')) && (_p7._1.ctor === '_Tuple3')) && (_p7._1._2 === false)) {
-						return {
-							ctor: '_Tuple3',
-							_0: _elm_lang$core$Native_Utils.update(
-								model,
-								{effect_model: _p7._1._0}),
-							_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateEffect, _p7._1._1),
-							_2: _elm_lang$core$Maybe$Nothing
-						};
+				case 'Chars':
+					if (_p8._1.ctor === 'Nothing') {
+						return _elm_lang$html$Html$text(_p8._0);
 					} else {
-						var _v9 = _user$project$Lia_Update$Load(model.current_slide + 1),
-							_v10 = model;
-						msg = _v9;
-						model = _v10;
-						continue update;
+						var _v9 = visible,
+							_v10 = A2(
+							_user$project$Lia_Markdown_Inline_Types$Container,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Lia_Markdown_Inline_Types$Chars, _p8._0, _elm_lang$core$Maybe$Nothing),
+								_1: {ctor: '[]'}
+							},
+							_p8._1);
+						visible = _v9;
+						element = _v10;
+						continue view;
 					}
-				case 'UpdateIndex':
-					var index_model = A2(_user$project$Lia_Index_Update$update, _p1._0, model.index_model);
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{index_model: index_model}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: _elm_lang$core$Maybe$Nothing
-					};
-				case 'UpdateSurvey':
-					var _p8 = A2(_user$project$Lia_Survey_Update$update, _p1._0, model.survey_model);
-					var model_ = _p8._0;
-					var info = _p8._1;
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{survey_model: model_}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: A2(_user$project$Lia_Update$log, 'survey', info)
-					};
-				case 'UpdateCode':
-					var _p9 = A2(_user$project$Lia_Code_Update$update, _p1._0, model.code_model);
-					var code_model = _p9._0;
-					var cmd = _p9._1;
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{code_model: code_model}),
-						_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateCode, cmd),
-						_2: _elm_lang$core$Maybe$Nothing
-					};
-				case 'UpdateEffect':
-					var _p10 = A2(_user$project$Lia_Effect_Update$update, _p1._0, model.effect_model);
-					var effect_model = _p10._0;
-					var cmd = _p10._1;
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{effect_model: effect_model}),
-						_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Lia_Update$UpdateEffect, cmd),
-						_2: _elm_lang$core$Maybe$Nothing
-					};
-				case 'ToggleContentsTable':
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{show_contents: !model.show_contents}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: _elm_lang$core$Maybe$Nothing
-					};
 				default:
-					var _p11 = A2(_user$project$Lia_Quiz_Update$update, _p1._0, model.quiz_model);
-					var quiz_model = _p11._0;
-					var info = _p11._1;
-					return {
-						ctor: '_Tuple3',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{quiz_model: quiz_model}),
-						_1: _elm_lang$core$Platform_Cmd$none,
-						_2: A2(_user$project$Lia_Update$log, 'quiz', info)
-					};
+					if (_p8._2.ctor === 'Nothing') {
+						return A2(_user$project$Lia_Utils$formula, _p8._0, _p8._1);
+					} else {
+						var _v11 = visible,
+							_v12 = A2(
+							_user$project$Lia_Markdown_Inline_Types$Container,
+							{
+								ctor: '::',
+								_0: A3(_user$project$Lia_Markdown_Inline_Types$Formula, _p8._0, _p8._1, _elm_lang$core$Maybe$Nothing),
+								_1: {ctor: '[]'}
+							},
+							_p8._2);
+						visible = _v11;
+						element = _v12;
+						continue view;
+					}
 			}
 		}
 	});
+var _user$project$Lia_Markdown_Inline_View$viewer = F2(
+	function (visible, elements) {
+		return A2(
+			_elm_lang$core$List$map,
+			_user$project$Lia_Markdown_Inline_View$view(visible),
+			elements);
+	});
+var _user$project$Lia_Markdown_Inline_View$view_inf = _user$project$Lia_Markdown_Inline_View$view(99999);
 
 var _user$project$Lia_Chart_View$colors = _elm_lang$core$Dict$fromList(
 	{
@@ -18648,64 +19859,57 @@ var _user$project$Lia_Chart_View$title = F2(
 			summary.x.dataMax,
 			summary.y.max);
 	});
-var _user$project$Lia_Chart_View$view = function (chart) {
-	var custom = _terezka$elm_plot$Plot$defaultSeriesPlotCustomizations;
-	return A2(
-		_elm_lang$html$Html$div,
-		{ctor: '[]'},
-		{
-			ctor: '::',
-			_0: A3(
-				_terezka$elm_plot$Plot$viewSeriesCustom,
-				_elm_lang$core$Native_Utils.update(
-					custom,
-					{
-						junk: function (summary) {
-							return {
-								ctor: '::',
-								_0: A2(_user$project$Lia_Chart_View$title, chart.title, summary),
-								_1: {
+var _user$project$Lia_Chart_View$view = F2(
+	function (attr, chart) {
+		var custom = _terezka$elm_plot$Plot$defaultSeriesPlotCustomizations;
+		return A2(
+			_elm_lang$html$Html$div,
+			A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-chart'),
+			{
+				ctor: '::',
+				_0: A3(
+					_terezka$elm_plot$Plot$viewSeriesCustom,
+					_elm_lang$core$Native_Utils.update(
+						custom,
+						{
+							junk: function (summary) {
+								return {
 									ctor: '::',
-									_0: A2(_user$project$Lia_Chart_View$x_label, chart.x_label, summary),
+									_0: A2(_user$project$Lia_Chart_View$title, chart.title, summary),
 									_1: {
 										ctor: '::',
-										_0: A2(_user$project$Lia_Chart_View$y_label, chart.y_label, summary),
-										_1: {ctor: '[]'}
+										_0: A2(_user$project$Lia_Chart_View$x_label, chart.x_label, summary),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Lia_Chart_View$y_label, chart.y_label, summary),
+											_1: {ctor: '[]'}
+										}
 									}
-								}
-							};
-						},
-						margin: {top: 50, right: 50, bottom: 50, left: 60}
-					}),
-				A2(
-					_elm_lang$core$List$map,
-					_user$project$Lia_Chart_View$plot,
-					_elm_lang$core$Dict$toList(
-						function (_) {
-							return _.diagrams;
-						}(chart))),
-				chart.diagrams),
-			_1: {ctor: '[]'}
-		});
-};
+								};
+							},
+							margin: {top: 50, right: 50, bottom: 50, left: 60}
+						}),
+					A2(
+						_elm_lang$core$List$map,
+						_user$project$Lia_Chart_View$plot,
+						_elm_lang$core$Dict$toList(
+							function (_) {
+								return _.diagrams;
+							}(chart))),
+					chart.diagrams),
+				_1: {ctor: '[]'}
+			});
+	});
 
-var _user$project$Lia_Code_View$highlight = F3(
-	function (lang, code, idx) {
+var _user$project$Lia_Code_View$highlight = F4(
+	function (attr, lang, code, idx) {
 		return A2(
 			_elm_lang$html$Html$pre,
-			(_elm_lang$core$Native_Utils.cmp(idx, -1) > 0) ? {
+			(_elm_lang$core$Native_Utils.cmp(idx, 0) < 0) ? A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-code') : {
 				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('lia-code'),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onDoubleClick(
-						_user$project$Lia_Code_Update$FlipMode(idx)),
-					_1: {ctor: '[]'}
-				}
-			} : {
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('lia-code'),
-				_1: {ctor: '[]'}
+				_0: _elm_lang$html$Html_Events$onDoubleClick(
+					_user$project$Lia_Code_Update$FlipMode(idx)),
+				_1: A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-code')
 			},
 			{
 				ctor: '::',
@@ -18724,11 +19928,11 @@ var _user$project$Lia_Code_View$highlight = F3(
 				_1: {ctor: '[]'}
 			});
 	});
-var _user$project$Lia_Code_View$view = F2(
-	function (model, code) {
+var _user$project$Lia_Code_View$view = F3(
+	function (attr, model, code) {
 		var _p0 = code;
 		if (_p0.ctor === 'Highlight') {
-			return A3(_user$project$Lia_Code_View$highlight, _p0._0, _p0._1, -1);
+			return A4(_user$project$Lia_Code_View$highlight, attr, _p0._0, _p0._1, -1);
 		} else {
 			var _p4 = _p0._1;
 			var _p1 = A2(_elm_lang$core$Array$get, _p4, model);
@@ -18779,40 +19983,110 @@ var _user$project$Lia_Code_View$view = F2(
 									}
 								}
 							},
-							{ctor: '[]'}) : A3(_user$project$Lia_Code_View$highlight, _p0._0, _p3.code, _p4),
+							{ctor: '[]'}) : A4(_user$project$Lia_Code_View$highlight, attr, _p0._0, _p3.code, _p4),
 						_1: {
 							ctor: '::',
-							_0: _p3.running ? A2(
-								_elm_lang$html$Html$button,
+							_0: A2(
+								_elm_lang$html$Html$div,
+								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon'),
-									_1: {ctor: '[]'}
-								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('settings'),
-									_1: {ctor: '[]'}
-								}) : A2(
-								_elm_lang$html$Html$button,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('lia-btn'),
+									_0: _p3.running ? A2(
+										_elm_lang$html$Html$button,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('settings'),
+											_1: {ctor: '[]'}
+										}) : A2(
+										_elm_lang$html$Html$button,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Events$onClick(
+													A2(_user$project$Lia_Code_Update$Eval, _p4, _p0._2)),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('play_circle_filled'),
+											_1: {ctor: '[]'}
+										}),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('lia-icon'),
+										_0: A2(
+											_elm_lang$html$Html$span,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('lia-spacer'),
+												_1: {ctor: '[]'}
+											},
+											{ctor: '[]'}),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onClick(
-												A2(_user$project$Lia_Code_Update$Eval, _p4, _p0._2)),
-											_1: {ctor: '[]'}
+											_0: A2(
+												_elm_lang$html$Html$button,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Events$onClick(
+														A2(_user$project$Lia_Code_Update$Load, _p4, _p3.version_active - 1)),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon lia-left'),
+														_1: {ctor: '[]'}
+													}
+												},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text('navigate_before'),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$span,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('lia-label lia-left'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html$text(
+															_elm_lang$core$Basics$toString(_p3.version_active)),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$button,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Events$onClick(
+																A2(_user$project$Lia_Code_Update$Load, _p4, _p3.version_active + 1)),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon lia-left'),
+																_1: {ctor: '[]'}
+															}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('navigate_next'),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
 										}
 									}
-								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('play_circle_filled'),
-									_1: {ctor: '[]'}
 								}),
 							_1: {
 								ctor: '::',
@@ -18858,510 +20132,8 @@ var _user$project$Lia_Code_View$view = F2(
 		}
 	});
 
-var _user$project$Lia_Effect_View$responsive = F2(
-	function (silent, msg) {
-		return A2(
-			_elm_lang$html$Html$span,
-			{ctor: '[]'},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$button,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-icon'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Events$onClick(msg),
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: silent ? _elm_lang$html$Html$text('volume_off') : _elm_lang$html$Html$text('volume_up'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$a,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$href('https://responsivevoice.org'),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('ResponsiveVoice-NonCommercial'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(' licensed under '),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$a,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$href('https://creativecommons.org/licenses/by-nc-nd/4.0/'),
-									_1: {ctor: '[]'}
-								},
-								{
-									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$img,
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$title('ResponsiveVoice Text To Speech'),
-											_1: {
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$src('https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png'),
-												_1: {
-													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$alt('95x15'),
-													_1: {
-														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$width(95),
-														_1: {
-															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$height(15),
-															_1: {ctor: '[]'}
-														}
-													}
-												}
-											}
-										},
-										{ctor: '[]'}),
-									_1: {ctor: '[]'}
-								}),
-							_1: {ctor: '[]'}
-						}
-					}
-				}
-			});
-	});
-var _user$project$Lia_Effect_View$comment = F8(
-	function ($class, show_inline, silent, msg, model, viewer, idx, elements) {
-		return show_inline ? A2(
-			_elm_lang$html$Html$div,
-			{ctor: '[]'},
-			A2(_elm_lang$core$List$map, viewer, elements)) : (_elm_lang$core$Native_Utils.eq(idx, model.visible) ? A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class($class),
-				_1: {ctor: '[]'}
-			},
-			A2(
-				_elm_lang$core$List$append,
-				A2(_elm_lang$core$List$map, viewer, elements),
-				{
-					ctor: '::',
-					_0: A2(_user$project$Lia_Effect_View$responsive, silent, msg),
-					_1: {ctor: '[]'}
-				})) : A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('lia-effect-comment lia-hidden'),
-				_1: {ctor: '[]'}
-			},
-			{ctor: '[]'}));
-	});
-var _user$project$Lia_Effect_View$view_block = F5(
-	function (model, viewer, idx, effect_name, blocks) {
-		return A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$id(
-					_elm_lang$core$Basics$toString(idx)),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$hidden(
-						_elm_lang$core$Native_Utils.cmp(idx, model.visible) > 0),
-					_1: {
-						ctor: '::',
-						_0: function () {
-							var _p0 = effect_name;
-							if (_p0.ctor === 'Nothing') {
-								return _elm_lang$html$Html_Attributes$class('lia-effect-inline');
-							} else {
-								return _elm_lang$html$Html_Attributes$class(
-									A2(_elm_lang$core$Basics_ops['++'], 'lia-effect-inline animated ', _p0._0));
-							}
-						}(),
-						_1: {ctor: '[]'}
-					}
-				}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$span,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('lia-effect-circle'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(
-							_elm_lang$core$Basics$toString(idx)),
-						_1: {ctor: '[]'}
-					}),
-				_1: A2(_elm_lang$core$List$map, viewer, blocks)
-			});
-	});
-var _user$project$Lia_Effect_View$view = F5(
-	function (viewer, idx, visible, effect_name, elements) {
-		return A2(
-			_elm_lang$html$Html$span,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$id(
-					_elm_lang$core$Basics$toString(idx)),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$hidden(
-						_elm_lang$core$Native_Utils.cmp(idx, visible) > 0),
-					_1: {
-						ctor: '::',
-						_0: (_elm_lang$core$Native_Utils.cmp(idx, visible) > 0) ? _elm_lang$html$Html_Attributes$style(
-							{ctor: '[]'}) : _elm_lang$html$Html_Attributes$style(
-							{
-								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'display', _1: 'inline-block'},
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
-							_0: function () {
-								var _p1 = effect_name;
-								if (_p1.ctor === 'Nothing') {
-									return _elm_lang$html$Html_Attributes$class('lia-effect-inline');
-								} else {
-									return _elm_lang$html$Html_Attributes$class(
-										A2(_elm_lang$core$Basics_ops['++'], 'lia-effect-inline animated ', _p1._0));
-								}
-							}(),
-							_1: {ctor: '[]'}
-						}
-					}
-				}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$span,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class(
-							_elm_lang$core$Native_Utils.eq(effect_name, _elm_lang$core$Maybe$Nothing) ? 'lia-effect-circle' : 'lia-effect-circle animated'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(
-							_elm_lang$core$Basics$toString(idx)),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(' '),
-					_1: A2(_elm_lang$core$List$map, viewer, elements)
-				}
-			});
-	});
-
-var _user$project$Lia_Index_View$view = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('lia-toolbar'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$input,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$type_('input'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$value(model.search),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-search lia-input'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$placeholder('Search'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onInput(_user$project$Lia_Index_Update$ScanIndex),
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					}
-				},
-				{ctor: '[]'}),
-			_1: {ctor: '[]'}
-		});
-};
-
-var _user$project$Lia_Inline_View$get_url = function (url) {
-	var _p0 = url;
-	switch (_p0.ctor) {
-		case 'Full':
-			return _p0._0;
-		case 'Mail':
-			return _p0._0;
-		default:
-			return _p0._0;
-	}
-};
-var _user$project$Lia_Inline_View$inline_class = function (c) {
-	return _elm_lang$html$Html_Attributes$class(
-		A2(_elm_lang$core$Basics_ops['++'], 'lia-inline', c));
-};
-var _user$project$Lia_Inline_View$view_link = F2(
-	function (alt_, url_) {
-		var _p1 = url_;
-		switch (_p1.ctor) {
-			case 'Full':
-				return A2(
-					_elm_lang$html$Html$a,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(_p1._0),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Lia_Inline_View$inline_class('lia-link'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$target('_blank'),
-								_1: {ctor: '[]'}
-							}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(alt_),
-						_1: {ctor: '[]'}
-					});
-			case 'Mail':
-				return A2(
-					_elm_lang$html$Html$a,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(
-							A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _p1._0)),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Lia_Inline_View$inline_class('lia-link'),
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(alt_),
-						_1: {ctor: '[]'}
-					});
-			default:
-				return A2(
-					_elm_lang$html$Html$a,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(_p1._0),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Lia_Inline_View$inline_class('lia-link'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$target('_blank'),
-								_1: {ctor: '[]'}
-							}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(alt_),
-						_1: {ctor: '[]'}
-					});
-		}
-	});
-var _user$project$Lia_Inline_View$reference = function (ref) {
-	var media = F2(
-		function (url_, style_) {
-			var _p2 = style_;
-			if (_p2.ctor === 'Nothing') {
-				return {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$src(
-						_user$project$Lia_Inline_View$get_url(url_)),
-					_1: {ctor: '[]'}
-				};
-			} else {
-				return {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$src(
-						_user$project$Lia_Inline_View$get_url(url_)),
-					_1: {
-						ctor: '::',
-						_0: A2(_elm_lang$html$Html_Attributes$attribute, 'style', _p2._0),
-						_1: {ctor: '[]'}
-					}
-				};
-			}
-		});
-	var _p3 = ref;
-	switch (_p3.ctor) {
-		case 'Link':
-			return A2(_user$project$Lia_Inline_View$view_link, _p3._0, _p3._1);
-		case 'Image':
-			return A2(
-				_elm_lang$html$Html$img,
-				A2(media, _p3._1, _p3._2),
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(_p3._0),
-					_1: {ctor: '[]'}
-				});
-		default:
-			return A2(
-				_elm_lang$html$Html$iframe,
-				A2(media, _p3._1, _p3._2),
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(_p3._0),
-					_1: {ctor: '[]'}
-				});
-	}
-};
-var _user$project$Lia_Inline_View$view = F2(
-	function (visible, element) {
-		var _p4 = element;
-		switch (_p4.ctor) {
-			case 'Code':
-				return A2(
-					_elm_lang$html$Html$code,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-code'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(_p4._0),
-						_1: {ctor: '[]'}
-					});
-			case 'Chars':
-				return _elm_lang$html$Html$text(_p4._0);
-			case 'Bold':
-				return A2(
-					_elm_lang$html$Html$b,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-bold'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(_user$project$Lia_Inline_View$view, visible, _p4._0),
-						_1: {ctor: '[]'}
-					});
-			case 'Italic':
-				return A2(
-					_elm_lang$html$Html$em,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-italic'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(_user$project$Lia_Inline_View$view, visible, _p4._0),
-						_1: {ctor: '[]'}
-					});
-			case 'Strike':
-				return A2(
-					_elm_lang$html$Html$s,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-strike'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(_user$project$Lia_Inline_View$view, visible, _p4._0),
-						_1: {ctor: '[]'}
-					});
-			case 'Underline':
-				return A2(
-					_elm_lang$html$Html$u,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-underline'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(_user$project$Lia_Inline_View$view, visible, _p4._0),
-						_1: {ctor: '[]'}
-					});
-			case 'Superscript':
-				return A2(
-					_elm_lang$html$Html$sup,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-superscript'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(_user$project$Lia_Inline_View$view, visible, _p4._0),
-						_1: {ctor: '[]'}
-					});
-			case 'Container':
-				return A2(
-					_elm_lang$html$Html$span,
-					{
-						ctor: '::',
-						_0: _user$project$Lia_Inline_View$inline_class('lia-container'),
-						_1: {ctor: '[]'}
-					},
-					A2(
-						_elm_lang$core$List$map,
-						function (e) {
-							return A2(_user$project$Lia_Inline_View$view, visible, e);
-						},
-						_p4._0));
-			case 'Ref':
-				return _user$project$Lia_Inline_View$reference(_p4._0);
-			case 'Formula':
-				return A2(_user$project$Lia_Utils$formula, _p4._0, _p4._1);
-			case 'Symbol':
-				return _user$project$Lia_Utils$stringToHtml(_p4._0);
-			case 'HTML':
-				return _user$project$Lia_Utils$stringToHtml(_p4._0);
-			default:
-				return A5(
-					_user$project$Lia_Effect_View$view,
-					_user$project$Lia_Inline_View$view(visible),
-					_p4._0,
-					visible,
-					_p4._1,
-					_p4._2);
-		}
-	});
-var _user$project$Lia_Inline_View$view_inf = _user$project$Lia_Inline_View$view(99999);
-
 var _user$project$Lia_Quiz_View$view_solution = F2(
-	function (model, quiz) {
+	function (vector, quiz) {
 		var idx = function () {
 			var _p0 = quiz;
 			switch (_p0.ctor) {
@@ -19386,7 +20158,7 @@ var _user$project$Lia_Quiz_View$view_solution = F2(
 					function (_) {
 						return _.solved;
 					},
-					A2(_user$project$Lia_Quiz_Model$get_state, model, idx))));
+					A2(_user$project$Lia_Quiz_Model$get_state, vector, idx))));
 	});
 var _user$project$Lia_Quiz_View$view_hints = F3(
 	function (idx, counter, hints) {
@@ -19418,7 +20190,7 @@ var _user$project$Lia_Quiz_View$view_hints = F3(
 											_0: _elm_lang$html$Html$text('lightbulb_outline'),
 											_1: {ctor: '[]'}
 										}),
-									_1: A2(_elm_lang$core$List$map, _user$project$Lia_Inline_View$view_inf, _p1._0._0)
+									_1: A2(_elm_lang$core$List$map, _user$project$Lia_Markdown_Inline_View$view_inf, _p1._0._0)
 								}),
 							_1: A2(v_hints, _p1._0._1, c - 1)
 						};
@@ -19537,7 +20309,7 @@ var _user$project$Lia_Quiz_View$view_multiple_choice = F4(
 										_0: _elm_lang$html$Html_Attributes$class('lia-label'),
 										_1: {ctor: '[]'}
 									},
-									A2(_elm_lang$core$List$map, _user$project$Lia_Inline_View$view_inf, _p3._1)),
+									A2(_elm_lang$core$List$map, _user$project$Lia_Markdown_Inline_View$view_inf, _p3._1)),
 								_1: {ctor: '[]'}
 							}
 						}
@@ -19621,7 +20393,7 @@ var _user$project$Lia_Quiz_View$view_single_choice = F4(
 												_0: _elm_lang$html$Html_Attributes$class('lia-label'),
 												_1: {ctor: '[]'}
 											},
-											A2(_elm_lang$core$List$map, _user$project$Lia_Inline_View$view_inf, _p7._1)),
+											A2(_elm_lang$core$List$map, _user$project$Lia_Markdown_Inline_View$view_inf, _p7._1)),
 										_1: {ctor: '[]'}
 									}
 								}
@@ -19755,18 +20527,14 @@ var _user$project$Lia_Quiz_View$view_button = F3(
 					});
 		}
 	});
-var _user$project$Lia_Quiz_View$view_quiz = F6(
-	function (show_solution, state, fn_view, idx, hints, solution) {
+var _user$project$Lia_Quiz_View$view_quiz = F7(
+	function (attr, show_solution, state, fn_view, idx, hints, solution) {
 		var _p11 = state;
 		if (_p11.ctor === 'Just') {
 			var _p12 = _p11._0;
 			return A2(
 				_elm_lang$html$Html$p,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('lia-quiz'),
-					_1: {ctor: '[]'}
-				},
+				A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-quiz'),
 				{
 					ctor: '::',
 					_0: A3(
@@ -19808,7 +20576,7 @@ var _user$project$Lia_Quiz_View$view_quiz = F6(
 									_0: _elm_lang$html$Html$text('info'),
 									_1: {ctor: '[]'}
 								}) : _elm_lang$html$Html$text(''),
-							_1: A3(_user$project$Lia_Quiz_View$view_hints, idx, _p12.hints, hints)
+							_1: A3(_user$project$Lia_Quiz_View$view_hints, idx, _p12.hint, hints)
 						}
 					}
 				});
@@ -19816,15 +20584,16 @@ var _user$project$Lia_Quiz_View$view_quiz = F6(
 			return _elm_lang$html$Html$text('');
 		}
 	});
-var _user$project$Lia_Quiz_View$view = F3(
-	function (model, quiz, show_solution) {
-		var state = _user$project$Lia_Quiz_Model$get_state(model);
+var _user$project$Lia_Quiz_View$view = F4(
+	function (show_solution, attr, quiz, vector) {
+		var state = _user$project$Lia_Quiz_Model$get_state(vector);
 		var _p13 = quiz;
 		switch (_p13.ctor) {
 			case 'Text':
 				var _p14 = _p13._1;
-				return A6(
+				return A7(
 					_user$project$Lia_Quiz_View$view_quiz,
+					attr,
 					show_solution,
 					state(_p14),
 					_user$project$Lia_Quiz_View$view_text,
@@ -19833,8 +20602,9 @@ var _user$project$Lia_Quiz_View$view = F3(
 					_user$project$Lia_Quiz_Types$TextState(_p13._0));
 			case 'SingleChoice':
 				var _p15 = _p13._2;
-				return A6(
+				return A7(
 					_user$project$Lia_Quiz_View$view_quiz,
+					attr,
 					show_solution,
 					state(_p15),
 					_user$project$Lia_Quiz_View$view_single_choice(_p13._1),
@@ -19843,8 +20613,9 @@ var _user$project$Lia_Quiz_View$view = F3(
 					_user$project$Lia_Quiz_Types$SingleChoiceState(_p13._0));
 			default:
 				var _p16 = _p13._2;
-				return A6(
+				return A7(
 					_user$project$Lia_Quiz_View$view_quiz,
+					attr,
 					show_solution,
 					state(_p16),
 					_user$project$Lia_Quiz_View$view_multiple_choice(_p13._1),
@@ -19858,7 +20629,7 @@ var _user$project$Lia_Survey_View$inline = function (elements) {
 	return A2(
 		_elm_lang$html$Html$span,
 		{ctor: '[]'},
-		A2(_elm_lang$core$List$map, _user$project$Lia_Inline_View$view_inf, elements));
+		A2(_elm_lang$core$List$map, _user$project$Lia_Markdown_Inline_View$view_inf, elements));
 };
 var _user$project$Lia_Survey_View$input = F4(
 	function (button, msg, checked, submitted) {
@@ -20146,15 +20917,11 @@ var _user$project$Lia_Survey_View$view_survey = F3(
 			}
 		};
 	});
-var _user$project$Lia_Survey_View$view = F2(
-	function (model, survey) {
+var _user$project$Lia_Survey_View$view = F3(
+	function (attr, survey, model) {
 		return A2(
 			_elm_lang$html$Html$p,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('lia-card'),
-				_1: {ctor: '[]'}
-			},
+			A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-card'),
 			function () {
 				var _p7 = survey;
 				switch (_p7.ctor) {
@@ -20204,64 +20971,45 @@ var _user$project$Lia_Survey_View$view = F2(
 			}());
 	});
 
-var _user$project$Lia_View$view_table = F4(
-	function (model, header, format, body) {
-		var view_row = F3(
-			function (model_, f, row) {
-				return A2(
-					_elm_lang$core$List$map,
-					function (_p0) {
-						var _p1 = _p0;
-						return A2(
-							f,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$align(
-									function () {
-										var _p2 = A2(_elm_lang$core$Array$get, _p1._0, format);
-										if (_p2.ctor === 'Just') {
-											return _p2._0;
-										} else {
-											return 'left';
-										}
-									}()),
-								_1: {ctor: '[]'}
-							},
-							A2(
-								_elm_lang$core$List$map,
-								function (element) {
-									return A2(_user$project$Lia_Inline_View$view, model_.effect_model.visible, element);
+var _user$project$Lia_Markdown_View$view_table = F5(
+	function (config, attr, header, format, body) {
+		var view_row = F2(
+			function (fct, row) {
+				return A3(
+					_elm_lang$core$List$map2,
+					F2(
+						function (r, f) {
+							return A2(
+								fct,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$align(f),
+									_1: {ctor: '[]'}
 								},
-								_p1._1));
-					},
-					A2(
-						_elm_lang$core$List$indexedMap,
-						F2(
-							function (v0, v1) {
-								return {ctor: '_Tuple2', _0: v0, _1: v1};
-							}),
-						row));
+								config.view(r));
+						}),
+					row,
+					format);
 			});
 		return A2(
 			_elm_lang$html$Html$table,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-table'),
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: A2(
+			A2(_user$project$Lia_Markdown_Inline_View$annotation, attr, 'lia-table'),
+			A2(
+				F2(
+					function (x, y) {
+						return {ctor: '::', _0: x, _1: y};
+					}),
+				A2(
 					_elm_lang$html$Html$thead,
 					{
 						ctor: '::',
 						_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-table-head'),
 						_1: {ctor: '[]'}
 					},
-					A3(view_row, model, _elm_lang$html$Html$th, header)),
-				_1: A2(
+					A2(view_row, _elm_lang$html$Html$th, header)),
+				A2(
 					_elm_lang$core$List$map,
-					function (r) {
+					function (row) {
 						return A2(
 							_elm_lang$html$Html$tr,
 							{
@@ -20269,106 +21017,78 @@ var _user$project$Lia_View$view_table = F4(
 								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-table-row'),
 								_1: {ctor: '[]'}
 							},
-							A3(view_row, model, _elm_lang$html$Html$td, r));
+							A2(view_row, _elm_lang$html$Html$td, row));
 					},
-					body)
-			});
+					body)));
 	});
-var _user$project$Lia_View$to_tuple = F2(
-	function (i, html) {
-		return {ctor: '_Tuple2', _0: i, _1: html};
-	});
-var _user$project$Lia_View$zero_tuple = _user$project$Lia_View$to_tuple(0);
-var _user$project$Lia_View$view_body = F2(
-	function (model, body) {
-		var viewer = _user$project$Lia_View$view_block(model);
-		return function (_p3) {
-			var _p4 = _p3;
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$List$sum(_p4._0),
-				_1: _p4._1
-			};
-		}(
-			_elm_lang$core$List$unzip(
-				A2(_elm_lang$core$List$map, viewer, body)));
-	});
-var _user$project$Lia_View$view_block = F2(
-	function (model, block) {
-		var viewer = function (element) {
-			return function (_p5) {
-				var _p6 = _p5;
-				return _p6._1;
-			}(
-				A2(_user$project$Lia_View$view_block, model, element));
-		};
-		var _p7 = block;
-		switch (_p7.ctor) {
-			case 'Paragraph':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
-						_elm_lang$html$Html$p,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-paragraph'),
-							_1: {ctor: '[]'}
-						},
-						A2(
-							_elm_lang$core$List$map,
-							function (e) {
-								return A2(_user$project$Lia_Inline_View$view, model.effect_model.visible, e);
-							},
-							_p7._0)));
-			case 'HLine':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
+var _user$project$Lia_Markdown_View$view_block = F2(
+	function (config, block) {
+		view_block:
+		while (true) {
+			var _p0 = block;
+			switch (_p0.ctor) {
+				case 'HLine':
+					return A2(
 						_elm_lang$html$Html$hr,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p0._0, 'lia-horiz-line'),
+						{ctor: '[]'});
+				case 'Paragraph':
+					return A2(
+						_elm_lang$html$Html$p,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p0._0, 'lia-paragraph'),
+						config.view(_p0._1));
+				case 'Effect':
+					var _p1 = _p0._1._0;
+					return (_elm_lang$core$Native_Utils.eq(config.mode, _user$project$Lia_Types$Textbook) || ((_elm_lang$core$Native_Utils.cmp(_p1, config.section.effect_model.visible) < 1) && (_elm_lang$core$Native_Utils.cmp(_p0._1._1, config.section.effect_model.visible) > 0))) ? A2(
+						_elm_lang$html$Html$div,
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-horiz-line'),
-							_1: {ctor: '[]'}
+							_0: _elm_lang$html$Html_Attributes$id(
+								_elm_lang$core$Basics$toString(_p1)),
+							_1: A2(_user$project$Lia_Markdown_Inline_View$annotation, _p0._0, 'lia-effect-inline')
 						},
-						{ctor: '[]'}));
-			case 'Table':
-				return _user$project$Lia_View$zero_tuple(
-					A4(
-						_user$project$Lia_View$view_table,
-						model,
-						_p7._0,
-						_elm_lang$core$Array$fromList(_p7._1),
-						_p7._2));
-			case 'Quote':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
+						A3(
+							_user$project$Lia_Effect_View$view_block,
+							_user$project$Lia_Markdown_View$view_block(config),
+							_p1,
+							_p0._1._2)) : _elm_lang$html$Html$text('');
+				case 'BulletList':
+					return A2(
+						_elm_lang$html$Html$ul,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p0._0, 'lia-list lia-unordered'),
+						A2(_user$project$Lia_Markdown_View$view_list, config, _p0._1));
+				case 'OrderedList':
+					return A2(
+						_elm_lang$html$Html$ol,
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p0._0, 'lia-list lia-ordered'),
+						A2(_user$project$Lia_Markdown_View$view_list, config, _p0._1));
+				case 'Table':
+					return A5(_user$project$Lia_Markdown_View$view_table, config, _p0._0, _p0._1, _p0._2, _p0._3);
+				case 'Quote':
+					return A2(
 						_elm_lang$html$Html$blockquote,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-quote'),
-							_1: {ctor: '[]'}
-						},
+						A2(_user$project$Lia_Markdown_Inline_View$annotation, _p0._0, 'lia-quote'),
 						A2(
 							_elm_lang$core$List$map,
 							function (e) {
-								return A2(_user$project$Lia_Inline_View$view, model.effect_model.visible, e);
+								return A2(_user$project$Lia_Markdown_View$view_block, config, e);
 							},
-							_p7._0)));
-			case 'CodeBlock':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
+							_p0._1));
+				case 'Code':
+					return A2(
 						_elm_lang$html$Html$map,
-						_user$project$Lia_Update$UpdateCode,
-						A2(_user$project$Lia_Code_View$view, model.code_model, _p7._0)));
-			case 'Quiz':
-				if (_p7._1.ctor === 'Nothing') {
-					return _user$project$Lia_View$zero_tuple(
-						A2(
+						_user$project$Lia_Markdown_Update$UpdateCode,
+						A3(_user$project$Lia_Code_View$view, _p0._0, config.section.code_vector, _p0._1));
+				case 'Quiz':
+					if (_p0._2.ctor === 'Nothing') {
+						return A2(
 							_elm_lang$html$Html$map,
-							_user$project$Lia_Update$UpdateQuiz,
-							A3(_user$project$Lia_Quiz_View$view, model.quiz_model, _p7._0, false)));
-				} else {
-					var _p10 = _p7._0;
-					return A2(_user$project$Lia_Quiz_View$view_solution, model.quiz_model, _p10) ? _user$project$Lia_View$zero_tuple(
-						A2(
+							_user$project$Lia_Markdown_Update$UpdateQuiz,
+							A4(_user$project$Lia_Quiz_View$view, false, _p0._0, _p0._1, config.section.quiz_vector));
+					} else {
+						var _p3 = _p0._1;
+						var _p2 = _p0._0;
+						return A2(_user$project$Lia_Quiz_View$view_solution, config.section.quiz_vector, _p3) ? A2(
 							_elm_lang$html$Html$div,
 							{ctor: '[]'},
 							A2(
@@ -20377,254 +21097,543 @@ var _user$project$Lia_View$view_block = F2(
 									ctor: '::',
 									_0: A2(
 										_elm_lang$html$Html$map,
-										_user$project$Lia_Update$UpdateQuiz,
-										A3(_user$project$Lia_Quiz_View$view, model.quiz_model, _p10, false)),
+										_user$project$Lia_Markdown_Update$UpdateQuiz,
+										A4(_user$project$Lia_Quiz_View$view, false, _p2, _p3, config.section.quiz_vector)),
 									_1: {ctor: '[]'}
 								},
-								function (_p8) {
-									var _p9 = _p8;
-									return _p9._1;
-								}(
-									A2(_user$project$Lia_View$view_body, model, _p7._1._0._0))))) : A2(
-						_user$project$Lia_View$to_tuple,
-						_p7._1._0._1,
-						A2(
+								A2(
+									_elm_lang$core$List$map,
+									_user$project$Lia_Markdown_View$view_block(config),
+									_p0._2._0._0))) : A2(
 							_elm_lang$html$Html$map,
-							_user$project$Lia_Update$UpdateQuiz,
-							A3(_user$project$Lia_Quiz_View$view, model.quiz_model, _p10, true)));
-				}
-			case 'SurveyBlock':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
+							_user$project$Lia_Markdown_Update$UpdateQuiz,
+							A4(_user$project$Lia_Quiz_View$view, true, _p2, _p3, config.section.quiz_vector));
+					}
+				case 'Survey':
+					return A2(
 						_elm_lang$html$Html$map,
-						_user$project$Lia_Update$UpdateSurvey,
-						A2(_user$project$Lia_Survey_View$view, model.survey_model, _p7._0)));
-			case 'EBlock':
-				return _user$project$Lia_View$zero_tuple(
-					A5(_user$project$Lia_Effect_View$view_block, model.effect_model, viewer, _p7._0, _p7._1, _p7._2));
-			case 'BulletList':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
-						_elm_lang$html$Html$ul,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-list lia-unordered'),
-							_1: {ctor: '[]'}
-						},
-						A2(
-							_elm_lang$core$List$map,
-							function (l) {
-								return A2(
-									_elm_lang$html$Html$li,
-									{ctor: '[]'},
-									A2(
-										_elm_lang$core$List$map,
-										function (ll) {
-											return viewer(ll);
-										},
-										l));
-							},
-							_p7._0)));
-			case 'OrderedList':
-				return _user$project$Lia_View$zero_tuple(
-					A2(
-						_elm_lang$html$Html$ol,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-list lia-ordered'),
-							_1: {ctor: '[]'}
-						},
-						A2(
-							_elm_lang$core$List$map,
-							function (l) {
-								return A2(
-									_elm_lang$html$Html$li,
-									{ctor: '[]'},
-									A2(
-										_elm_lang$core$List$map,
-										function (ll) {
-											return viewer(ll);
-										},
-										l));
-							},
-							_p7._0)));
-			case 'EComment':
-				var _p13 = _p7._0;
-				var _p12 = _p7._1;
-				var $class = model.show_contents ? 'lia-effect-comment-toc' : 'lia-effect-comment';
-				return _user$project$Lia_View$zero_tuple(
-					function () {
-						var _p11 = model.mode;
-						if (_p11.ctor === 'Slides') {
-							return A8(
-								_user$project$Lia_Effect_View$comment,
-								$class,
-								false,
-								model.silent,
-								_user$project$Lia_Update$ToggleSpeech,
-								model.effect_model,
-								viewer,
-								_p13,
-								{
-									ctor: '::',
-									_0: _user$project$Lia_Types$Paragraph(_p12),
-									_1: {ctor: '[]'}
-								});
-						} else {
-							return A8(
-								_user$project$Lia_Effect_View$comment,
-								$class,
-								true,
-								model.silent,
-								_user$project$Lia_Update$ToggleSpeech,
-								model.effect_model,
-								viewer,
-								_p13,
-								{
-									ctor: '::',
-									_0: _user$project$Lia_Types$Paragraph(_p12),
-									_1: {ctor: '[]'}
-								});
-						}
-					}());
-			default:
-				return _user$project$Lia_View$zero_tuple(
-					_user$project$Lia_Chart_View$view(_p7._0));
+						_user$project$Lia_Markdown_Update$UpdateSurvey,
+						A3(_user$project$Lia_Survey_View$view, _p0._0, _p0._1, config.section.survey_vector));
+				case 'Comment':
+					var _p5 = _p0._0._0;
+					var _p4 = {
+						ctor: '_Tuple3',
+						_0: config.mode,
+						_1: _elm_lang$core$Native_Utils.eq(_p5, config.section.effect_model.visible),
+						_2: A3(_user$project$Lia_Effect_Model$get_paragraph, _p5, _p0._0._1, config.section.effect_model)
+					};
+					if ((((_p4.ctor === '_Tuple3') && (_p4._0.ctor === 'Textbook')) && (_p4._2.ctor === 'Just')) && (_p4._2._0.ctor === '_Tuple2')) {
+						var _v2 = config,
+							_v3 = A2(_user$project$Lia_Markdown_Types$Paragraph, _p4._2._0._0, _p4._2._0._1);
+						config = _v2;
+						block = _v3;
+						continue view_block;
+					} else {
+						return _elm_lang$html$Html$text('');
+					}
+				default:
+					return A2(_user$project$Lia_Chart_View$view, _p0._0, _p0._1);
+			}
 		}
 	});
-var _user$project$Lia_View$view_header = F2(
-	function (indentation, title) {
-		return function () {
-			var _p14 = indentation;
-			switch (_p14) {
-				case 0:
-					return _elm_lang$html$Html$h1(
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h1'),
-							_1: {ctor: '[]'}
-						});
-				case 1:
-					return _elm_lang$html$Html$h2(
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h2'),
-							_1: {ctor: '[]'}
-						});
-				case 2:
-					return _elm_lang$html$Html$h3(
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h3'),
-							_1: {ctor: '[]'}
-						});
-				case 3:
-					return _elm_lang$html$Html$h4(
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h4'),
-							_1: {ctor: '[]'}
-						});
-				case 4:
-					return _elm_lang$html$Html$h5(
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h5'),
-							_1: {ctor: '[]'}
-						});
-				default:
-					return _elm_lang$html$Html$h6(
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h6'),
-							_1: {ctor: '[]'}
-						});
-			}
-		}()(
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text(title),
-				_1: {ctor: '[]'}
-			});
-	});
-var _user$project$Lia_View$view_slide = F2(
-	function (model, slide) {
-		var _p15 = A2(_user$project$Lia_View$view_body, model, slide.body);
-		var is = _p15._0;
-		var slide_body = _p15._1;
+var _user$project$Lia_Markdown_View$view_list = F2(
+	function (config, list) {
+		var html = _elm_lang$html$Html$li(
+			{ctor: '[]'});
+		var viewer = function (sub_list) {
+			return A2(
+				_elm_lang$core$List$map,
+				_user$project$Lia_Markdown_View$view_block(config),
+				sub_list);
+		};
 		return A2(
-			_user$project$Lia_View$to_tuple,
-			is,
-			A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('lia-section'),
-					_1: {ctor: '[]'}
-				},
-				function (b) {
-					return A2(
-						_elm_lang$core$List$append,
-						b,
-						{
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$footer,
-								{ctor: '[]'},
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						});
-				}(
-					A2(
-						_elm_lang$core$List$append,
-						{
-							ctor: '::',
-							_0: A2(_user$project$Lia_View$view_header, slide.indentation, slide.title),
-							_1: {ctor: '[]'}
-						},
-						slide_body))));
+			_elm_lang$core$List$map,
+			html,
+			A2(_elm_lang$core$List$map, viewer, list));
 	});
-var _user$project$Lia_View$view_contents = function (model) {
-	var f = function (_p16) {
-		var _p17 = _p16;
-		var _p18 = _p17._0;
-		return A2(
-			_elm_lang$html$Html$a,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Events$onClick(
-					_user$project$Lia_Update$Load(_p18)),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class(
-						A2(
-							_elm_lang$core$Basics_ops['++'],
-							'lia-toc-l',
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								_elm_lang$core$Basics$toString(_p17._1._1),
-								_elm_lang$core$Native_Utils.eq(model.current_slide, _p18) ? ' lia-active' : ''))),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$style(
+var _user$project$Lia_Markdown_View$view_header = function (config) {
+	return A2(
+		_elm_lang$html$Html$header,
+		{ctor: '[]'},
+		_elm_lang$core$List$singleton(
+			function () {
+				var _p6 = config.section.indentation;
+				switch (_p6) {
+					case 0:
+						return _elm_lang$html$Html$h1(
 							{
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
+								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h1'),
 								_1: {ctor: '[]'}
-							}),
+							});
+					case 1:
+						return _elm_lang$html$Html$h2(
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h2'),
+								_1: {ctor: '[]'}
+							});
+					case 2:
+						return _elm_lang$html$Html$h3(
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h3'),
+								_1: {ctor: '[]'}
+							});
+					case 3:
+						return _elm_lang$html$Html$h4(
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h4'),
+								_1: {ctor: '[]'}
+							});
+					case 4:
+						return _elm_lang$html$Html$h5(
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h5'),
+								_1: {ctor: '[]'}
+							});
+					default:
+						return _elm_lang$html$Html$h6(
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('lia-inline lia-h6'),
+								_1: {ctor: '[]'}
+							});
+				}
+			}()(
+				config.view(config.section.title))));
+};
+var _user$project$Lia_Markdown_View$Config = F3(
+	function (a, b, c) {
+		return {mode: a, view: b, section: c};
+	});
+var _user$project$Lia_Markdown_View$view = F2(
+	function (mode, section) {
+		var config = A3(
+			_user$project$Lia_Markdown_View$Config,
+			mode,
+			_user$project$Lia_Markdown_Inline_View$viewer(
+				_elm_lang$core$Native_Utils.eq(mode, _user$project$Lia_Types$Textbook) ? 9999 : section.effect_model.visible),
+			section);
+		var _p7 = section.error;
+		if (_p7.ctor === 'Just') {
+			return A2(
+				_elm_lang$html$Html$section,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('lia-content'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$Lia_Markdown_View$view_header(config),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p7._0),
 						_1: {ctor: '[]'}
 					}
+				});
+		} else {
+			return A2(
+				_elm_lang$html$Html$section,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('lia-content'),
+					_1: {ctor: '[]'}
+				},
+				A2(
+					F2(
+						function (x, y) {
+							return {ctor: '::', _0: x, _1: y};
+						}),
+					_user$project$Lia_Markdown_View$view_header(config),
+					A2(
+						_elm_lang$core$List$map,
+						_user$project$Lia_Markdown_View$view_block(config),
+						section.body)));
+		}
+	});
+
+var _user$project$Lia_View$view_design_light = function (light) {
+	return A2(
+		_elm_lang$html$Html$button,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-right'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Events$onClick(_user$project$Lia_Update$DesignLight),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$core$Native_Utils.eq(light, 'light') ? _elm_lang$html$Html$text('star') : _elm_lang$html$Html$text('star_border'),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Lia_View$capitalize = function (s) {
+	var _p0 = _elm_lang$core$String$uncons(s);
+	if (_p0.ctor === 'Just') {
+		return A2(
+			_elm_lang$core$String$cons,
+			_elm_lang$core$Char$toUpper(_p0._0._0),
+			_p0._0._1);
+	} else {
+		return s;
+	}
+};
+var _user$project$Lia_View$view_design_theme = function (theme) {
+	return A2(
+		_elm_lang$html$Html$select,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Events$onInput(_user$project$Lia_Update$DesignTheme),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('lia-right lia-select'),
+				_1: {ctor: '[]'}
+			}
+		},
+		A2(
+			_elm_lang$core$List$map,
+			function (t) {
+				return A2(
+					_elm_lang$html$Html$option,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$value(t),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$selected(
+								_elm_lang$core$Native_Utils.eq(t, theme)),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(
+							_user$project$Lia_View$capitalize(t)),
+						_1: {ctor: '[]'}
+					});
+			},
+			{
+				ctor: '::',
+				_0: 'default',
+				_1: {
+					ctor: '::',
+					_0: 'amber',
+					_1: {
+						ctor: '::',
+						_0: 'blue',
+						_1: {
+							ctor: '::',
+							_0: 'green',
+							_1: {
+								ctor: '::',
+								_0: 'grey',
+								_1: {
+									ctor: '::',
+									_0: 'purple',
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}));
+};
+var _user$project$Lia_View$navButton = F2(
+	function (str, msg) {
+		return A2(
+			_elm_lang$html$Html$button,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Events$onClick(msg),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-slide-control lia-left'),
+					_1: {ctor: '[]'}
 				}
 			},
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html$text(_p17._1._0),
+				_0: _elm_lang$html$Html$text(str),
 				_1: {ctor: '[]'}
 			});
-	};
-	return function (h) {
+	});
+var _user$project$Lia_View$view_nav = F4(
+	function (section_active, mode, design, state) {
+		return A2(
+			_elm_lang$html$Html$nav,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('lia-toolbar'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(_user$project$Lia_Update$ToggleLOC),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-toc-control lia-left'),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('toc'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$button,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-left'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(_user$project$Lia_Update$SwitchMode),
+								_1: {ctor: '[]'}
+							}
+						},
+						{
+							ctor: '::',
+							_0: function () {
+								var _p1 = mode;
+								switch (_p1.ctor) {
+									case 'Slides':
+										return _elm_lang$html$Html$text('visibility');
+									case 'Presentation':
+										return _elm_lang$html$Html$text('hearing');
+									default:
+										return _elm_lang$html$Html$text('book');
+								}
+							}(),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('lia-spacer'),
+								_1: {ctor: '[]'}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Lia_View$navButton, 'navigate_before', _user$project$Lia_Update$PrevSection),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('lia-labeled lia-left'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$span,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('lia-label'),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text(
+													_elm_lang$core$Basics$toString(section_active + 1)),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html$text(
+														function () {
+															var _p2 = mode;
+															if (_p2.ctor === 'Textbook') {
+																return '';
+															} else {
+																return A2(_elm_lang$core$Basics_ops['++'], ' ', state);
+															}
+														}()),
+													_1: {ctor: '[]'}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Lia_View$navButton, 'navigate_next', _user$project$Lia_Update$NextSection),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$span,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('lia-spacer'),
+												_1: {ctor: '[]'}
+											},
+											{ctor: '[]'}),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Lia_View$view_design_light(design.light),
+											_1: {
+												ctor: '::',
+												_0: _user$project$Lia_View$view_design_theme(design.theme),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			});
+	});
+var _user$project$Lia_View$view_footer = F3(
+	function (sound, mode, effects) {
+		var _p3 = mode;
+		switch (_p3.ctor) {
+			case 'Slides':
+				return A2(
+					_elm_lang$html$Html$footer,
+					{ctor: '[]'},
+					function (l) {
+						return A2(
+							_elm_lang$core$List$append,
+							l,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Lia_Effect_View$responsive, sound, _user$project$Lia_Update$ToggleSound),
+								_1: {ctor: '[]'}
+							});
+					}(
+						A2(
+							_elm_lang$core$List$map,
+							function (_p4) {
+								var _p5 = _p4;
+								return A2(
+									_elm_lang$html$Html$p,
+									{ctor: '[]'},
+									A2(_user$project$Lia_Markdown_Inline_View$viewer, 9999, _p5._1));
+							},
+							_user$project$Lia_Effect_Model$current_paragraphs(effects))));
+			case 'Presentation':
+				return A2(
+					_elm_lang$html$Html$footer,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: A2(_user$project$Lia_Effect_View$responsive, sound, _user$project$Lia_Update$ToggleSound),
+						_1: {ctor: '[]'}
+					});
+			default:
+				return _elm_lang$html$Html$text('');
+		}
+	});
+var _user$project$Lia_View$view_article = function (model) {
+	return A2(
+		_elm_lang$html$Html$article,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('lia-slide'),
+			_1: {ctor: '[]'}
+		},
+		function () {
+			var _p6 = _user$project$Lia_Update$get_active_section(model);
+			if (_p6.ctor === 'Just') {
+				var _p7 = _p6._0;
+				return {
+					ctor: '::',
+					_0: A4(
+						_user$project$Lia_View$view_nav,
+						model.section_active,
+						model.mode,
+						model.design,
+						_user$project$Lia_Effect_View$state(
+							function (_) {
+								return _.effect_model;
+							}(_p7))),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$map,
+							_user$project$Lia_Update$UpdateMarkdown,
+							A2(_user$project$Lia_Markdown_View$view, model.mode, _p7)),
+						_1: {
+							ctor: '::',
+							_0: A3(_user$project$Lia_View$view_footer, model.sound, model.mode, _p7.effect_model),
+							_1: {ctor: '[]'}
+						}
+					}
+				};
+			} else {
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(''),
+					_1: {ctor: '[]'}
+				};
+			}
+		}());
+};
+var _user$project$Lia_View$view_loc = F2(
+	function (active, titles) {
+		var loc = function (_p8) {
+			var _p9 = _p8;
+			var _p10 = _p9._0;
+			return A2(
+				_elm_lang$html$Html$a,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(
+						_user$project$Lia_Update$Load(_p10)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class(
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								'lia-toc-l',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									_elm_lang$core$Basics$toString(_p9._1._1),
+									_p9._1._3 ? ' lia-error' : (_elm_lang$core$Native_Utils.eq(active, _p10) ? ' lia-active' : (_p9._1._2 ? '' : ' lia-not-visited'))))),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				A2(_user$project$Lia_Markdown_Inline_View$viewer, 9999, _p9._1._0));
+		};
 		return A2(
 			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('lia-content'),
+				_1: {ctor: '[]'}
+			},
+			A2(_elm_lang$core$List$map, loc, titles));
+	});
+var _user$project$Lia_View$view_aside = F3(
+	function (index, active, sections) {
+		return A2(
+			_elm_lang$html$Html$aside,
 			{
 				ctor: '::',
 				_0: _elm_lang$html$Html_Attributes$class('lia-toc'),
@@ -20635,451 +21644,80 @@ var _user$project$Lia_View$view_contents = function (model) {
 				_0: A2(
 					_elm_lang$html$Html$map,
 					_user$project$Lia_Update$UpdateIndex,
-					_user$project$Lia_Index_View$view(model.index_model)),
+					_user$project$Lia_Index_View$view(index)),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-content'),
-							_1: {ctor: '[]'}
-						},
-						h),
+						_user$project$Lia_View$view_loc,
+						active,
+						function (titles) {
+							return _elm_lang$core$Native_Utils.eq(
+								{ctor: '[]'},
+								index.index) ? titles : A2(
+								_elm_lang$core$List$filter,
+								function (_p11) {
+									var _p12 = _p11;
+									return A2(_elm_lang$core$List$member, _p12._0, index.index);
+								},
+								titles);
+						}(
+							_elm_lang$core$Array$toIndexedList(
+								A2(
+									_elm_lang$core$Array$map,
+									function (sec) {
+										return {
+											ctor: '_Tuple4',
+											_0: sec.title,
+											_1: sec.indentation,
+											_2: sec.visited,
+											_3: function () {
+												var _p13 = sec.error;
+												if (_p13.ctor === 'Nothing') {
+													return false;
+												} else {
+													return true;
+												}
+											}()
+										};
+									},
+									sections)))),
 					_1: {ctor: '[]'}
 				}
 			});
-	}(
-		A2(
-			_elm_lang$core$List$map,
-			f,
-			function (list) {
-				var _p19 = model.index_model.results;
-				if (_p19.ctor === 'Nothing') {
-					return list;
-				} else {
-					return A2(
-						_elm_lang$core$List$filter,
-						function (_p20) {
-							var _p21 = _p20;
-							return A2(_elm_lang$core$List$member, _p21._0, _p19._0);
-						},
-						list);
-				}
-			}(
-				_user$project$Lia_Helper$get_headers(model.slides))));
-};
-var _user$project$Lia_View$capitalize = function (s) {
-	var _p22 = _elm_lang$core$String$uncons(s);
-	if (_p22.ctor === 'Just') {
-		return A2(
-			_elm_lang$core$String$cons,
-			_elm_lang$core$Char$toUpper(_p22._0._0),
-			_p22._0._1);
-	} else {
-		return s;
-	}
-};
-var _user$project$Lia_View$view_themes = F2(
-	function (current_theme, light) {
-		var themes = {
-			ctor: '::',
-			_0: 'default',
-			_1: {
-				ctor: '::',
-				_0: 'amber',
-				_1: {
-					ctor: '::',
-					_0: 'blue',
-					_1: {
-						ctor: '::',
-						_0: 'green',
-						_1: {
-							ctor: '::',
-							_0: 'grey',
-							_1: {
-								ctor: '::',
-								_0: 'purple',
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				}
-			}
-		};
-		return {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$button,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-right'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onClick(_user$project$Lia_Update$ThemeLight),
-						_1: {ctor: '[]'}
-					}
-				},
-				{
-					ctor: '::',
-					_0: light ? _elm_lang$html$Html$text('star') : _elm_lang$html$Html$text('star_border'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$select,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onInput(_user$project$Lia_Update$Theme),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('lia-right lia-select'),
-							_1: {ctor: '[]'}
-						}
-					},
-					A2(
-						_elm_lang$core$List$map,
-						function (t) {
-							return A2(
-								_elm_lang$html$Html$option,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$value(t),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$selected(
-											_elm_lang$core$Native_Utils.eq(
-												A2(
-													_elm_lang$core$Basics_ops['++'],
-													_user$project$Lia_View$capitalize(t),
-													' Theme'),
-												current_theme)),
-										_1: {ctor: '[]'}
-									}
-								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text(
-										A2(
-											_elm_lang$core$Basics_ops['++'],
-											_user$project$Lia_View$capitalize(t),
-											' Theme')),
-									_1: {ctor: '[]'}
-								});
-						},
-						themes)),
-				_1: {ctor: '[]'}
-			}
-		};
 	});
-var _user$project$Lia_View$view_slides = function (model) {
-	var _p23 = function () {
-		var _p24 = A2(_user$project$Lia_Helper$get_slide, model.current_slide, model.slides);
-		if (_p24.ctor === 'Just') {
-			return A2(_user$project$Lia_View$view_slide, model, _p24._0);
-		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: 0,
-				_1: _elm_lang$html$Html$text('')
-			};
-		}
-	}();
-	var hidden_effects = _p23._0;
-	var body = _p23._1;
-	var loadButton = F2(
-		function (str, msg) {
-			return A2(
-				_elm_lang$html$Html$button,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(msg),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-slide-control lia-left'),
-						_1: {ctor: '[]'}
-					}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(str),
-					_1: {ctor: '[]'}
-				});
-		});
-	var content = A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('lia-slide'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('lia-toolbar'),
-					_1: {ctor: '[]'}
-				},
-				A2(
-					_elm_lang$core$List$append,
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$button,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onClick(_user$project$Lia_Update$ToggleContentsTable),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-toc-control lia-left'),
-									_1: {ctor: '[]'}
-								}
-							},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('toc'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$button,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('lia-btn lia-left'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onClick(_user$project$Lia_Update$SwitchMode),
-										_1: {ctor: '[]'}
-									}
-								},
-								{
-									ctor: '::',
-									_0: function () {
-										var _p25 = model.mode;
-										if (_p25.ctor === 'Slides') {
-											return _elm_lang$html$Html$text('hearing');
-										} else {
-											return _elm_lang$html$Html$text('visibility');
-										}
-									}(),
-									_1: {ctor: '[]'}
-								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$span,
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('lia-spacer'),
-										_1: {ctor: '[]'}
-									},
-									{ctor: '[]'}),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										loadButton,
-										'navigate_before',
-										_user$project$Lia_Update$PrevSlide(hidden_effects)),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_elm_lang$html$Html$span,
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('lia-labeled lia-left'),
-												_1: {ctor: '[]'}
-											},
-											{
-												ctor: '::',
-												_0: A2(
-													_elm_lang$html$Html$span,
-													{
-														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$class('lia-label'),
-														_1: {ctor: '[]'}
-													},
-													{
-														ctor: '::',
-														_0: _elm_lang$html$Html$text(
-															_elm_lang$core$Basics$toString(model.current_slide + 1)),
-														_1: {
-															ctor: '::',
-															_0: function () {
-																var _p26 = model.mode;
-																if (_p26.ctor === 'Slides') {
-																	return _elm_lang$html$Html$text(
-																		_elm_lang$core$String$concat(
-																			{
-																				ctor: '::',
-																				_0: ' (',
-																				_1: {
-																					ctor: '::',
-																					_0: _elm_lang$core$Basics$toString(model.effect_model.visible + 1),
-																					_1: {
-																						ctor: '::',
-																						_0: '/',
-																						_1: {
-																							ctor: '::',
-																							_0: _elm_lang$core$Basics$toString((model.effect_model.effects + 1) - hidden_effects),
-																							_1: {
-																								ctor: '::',
-																								_0: ')',
-																								_1: {ctor: '[]'}
-																							}
-																						}
-																					}
-																				}
-																			}));
-																} else {
-																	return _elm_lang$html$Html$text('');
-																}
-															}(),
-															_1: {ctor: '[]'}
-														}
-													}),
-												_1: {ctor: '[]'}
-											}),
-										_1: {
-											ctor: '::',
-											_0: A2(
-												loadButton,
-												'navigate_next',
-												_user$project$Lia_Update$NextSlide(hidden_effects)),
-											_1: {
-												ctor: '::',
-												_0: A2(
-													_elm_lang$html$Html$span,
-													{
-														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$class('lia-spacer'),
-														_1: {ctor: '[]'}
-													},
-													{ctor: '[]'}),
-												_1: {ctor: '[]'}
-											}
-										}
-									}
-								}
-							}
-						}
-					},
-					A2(_user$project$Lia_View$view_themes, model.theme, model.theme_light))),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('lia-content'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: body,
-						_1: {ctor: '[]'}
-					}),
-				_1: {ctor: '[]'}
-			}
-		});
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class(
-				A2(
-					_elm_lang$core$Basics_ops['++'],
-					'lia-canvas lia-theme-',
-					A2(
-						_elm_lang$core$Basics_ops['++'],
-						model.theme,
-						A2(
-							_elm_lang$core$Basics_ops['++'],
-							' lia-variant-',
-							model.theme_light ? 'light' : 'dark')))),
-			_1: {ctor: '[]'}
-		},
-		model.show_contents ? {
-			ctor: '::',
-			_0: _user$project$Lia_View$view_contents(model),
-			_1: {
-				ctor: '::',
-				_0: content,
-				_1: {ctor: '[]'}
-			}
-		} : {
-			ctor: '::',
-			_0: content,
-			_1: {ctor: '[]'}
-		});
-};
-var _user$project$Lia_View$view_plain = function (model) {
-	var viewer = function (elements) {
-		return function (_p27) {
-			var _p28 = _p27;
-			return _p28._1;
-		}(
+var _user$project$Lia_View$design = function (s) {
+	return _elm_lang$html$Html_Attributes$class(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			'lia-canvas lia-theme-',
 			A2(
-				_user$project$Lia_View$view_slide,
-				_elm_lang$core$Native_Utils.update(
-					model,
-					{effect_model: _user$project$Lia_Effect_Model$init_silent}),
-				elements));
-	};
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('lia-plain'),
-			_1: {ctor: '[]'}
-		},
-		A2(_elm_lang$core$List$map, viewer, model.slides));
+				_elm_lang$core$Basics_ops['++'],
+				s.theme,
+				A2(_elm_lang$core$Basics_ops['++'], ' lia-variant-', s.light))));
 };
 var _user$project$Lia_View$view = function (model) {
-	var _p29 = model.mode;
-	switch (_p29.ctor) {
-		case 'Slides':
-			return _user$project$Lia_View$view_slides(model);
-		case 'Slides_only':
-			return _user$project$Lia_View$view_slides(
-				_elm_lang$core$Native_Utils.update(
-					model,
-					{silent: true, effect_model: _user$project$Lia_Effect_Model$init_silent}));
-		default:
-			return _user$project$Lia_View$view_plain(model);
-	}
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Lia_View$design(model.design),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: model.loc ? A3(_user$project$Lia_View$view_aside, model.index_model, model.section_active, model.sections) : _elm_lang$html$Html$text(''),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Lia_View$view_article(model),
+				_1: {ctor: '[]'}
+			}
+		});
 };
 
 var _user$project$Lia$restore = F2(
 	function (model, _p0) {
 		var _p1 = _p0;
-		var _p5 = _p1._1;
-		var _p2 = _p1._0;
-		switch (_p2) {
-			case 'quiz':
-				var _p3 = _user$project$Lia_Quiz_Model$json2model(_p5);
-				if (_p3.ctor === 'Ok') {
-					return _elm_lang$core$Native_Utils.update(
-						model,
-						{quiz_model: _p3._0});
-				} else {
-					return model;
-				}
-			case 'survey':
-				var _p4 = _user$project$Lia_Survey_Model$json2model(_p5);
-				if (_p4.ctor === 'Ok') {
-					return _elm_lang$core$Native_Utils.update(
-						model,
-						{survey_model: _p4._0});
-				} else {
-					return model;
-				}
-			default:
-				return model;
-		}
+		return model;
 	});
 var _user$project$Lia$switch_mode = F2(
 	function (mode, model) {
@@ -21089,70 +21727,77 @@ var _user$project$Lia$switch_mode = F2(
 	});
 var _user$project$Lia$plain_mode = _user$project$Lia$switch_mode(_user$project$Lia_Types$Textbook);
 var _user$project$Lia$slide_mode = _user$project$Lia$switch_mode(_user$project$Lia_Types$Slides);
+var _user$project$Lia$init = function (model) {
+	return A2(
+		_user$project$Lia_Update$update,
+		_user$project$Lia_Update$Load(model.section_active),
+		model);
+};
 var _user$project$Lia$update = _user$project$Lia_Update$update;
 var _user$project$Lia$view = function (model) {
 	return _user$project$Lia_View$view(model);
 };
-var _user$project$Lia$parse = F2(
-	function (script, model) {
-		var _p6 = _user$project$Lia_Parser$run(script);
-		if (_p6.ctor === 'Ok') {
-			var _p8 = _p6._0._0;
-			var _p7 = _p6._0._4;
+var _user$project$Lia$init_presentation = function (uid) {
+	return A2(_user$project$Lia_Model$init, _user$project$Lia_Types$Presentation, uid);
+};
+var _user$project$Lia$init_slides = function (uid) {
+	return A2(_user$project$Lia_Model$init, _user$project$Lia_Types$Slides, uid);
+};
+var _user$project$Lia$init_textbook = function (uid) {
+	return A2(_user$project$Lia_Model$init, _user$project$Lia_Types$Textbook, uid);
+};
+var _user$project$Lia$init_section = function (_p2) {
+	var _p3 = _p2;
+	return {
+		code: _p3._2,
+		title: _p3._1,
+		visited: true,
+		indentation: _p3._0,
+		body: {ctor: '[]'},
+		error: _elm_lang$core$Maybe$Nothing,
+		code_vector: _elm_lang$core$Array$empty,
+		quiz_vector: _elm_lang$core$Array$empty,
+		survey_vector: _elm_lang$core$Array$empty,
+		effect_model: _user$project$Lia_Effect_Model$init
+	};
+};
+var _user$project$Lia$set_script = F2(
+	function (model, script) {
+		var _p4 = _user$project$Lia_Parser$parse_defintion(
+			_user$project$Lia_Utils$toUnixNewline(script));
+		if (_p4.ctor === 'Ok') {
+			var _p6 = _p4._0._1;
 			var x = A2(
 				_elm_lang$core$List$map,
 				_user$project$Lia_Utils$load_js,
-				_elm_lang$core$List$reverse(_p6._0._5));
-			return _elm_lang$core$Native_Utils.update(
-				model,
-				{
-					slides: _p8,
-					error: '',
-					quiz_model: _elm_lang$core$Array$isEmpty(model.quiz_model) ? _p6._0._2 : model.quiz_model,
-					index_model: _user$project$Lia_Index_Model$init(_p8),
-					effect_model: A2(
-						_user$project$Lia_Effect_Model$init,
-						_p7,
-						_elm_lang$core$List$head(_p8)),
-					code_model: _p6._0._1,
-					survey_model: _elm_lang$core$Array$isEmpty(model.survey_model) ? _p6._0._3 : model.survey_model,
-					narrator: _elm_lang$core$Native_Utils.eq(_p7, '') ? 'US English Male' : _p7,
-					script: script
-				});
+				_elm_lang$core$List$reverse(
+					function (_) {
+						return _.scripts;
+					}(_p6)));
+			var _p5 = A2(_user$project$Lia_Parser$parse_titles, _p6, _p4._0._0);
+			if (_p5.ctor === 'Ok') {
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						definition: _p6,
+						sections: _elm_lang$core$Array$fromList(
+							A2(_elm_lang$core$List$map, _user$project$Lia$init_section, _p5._0))
+					});
+			} else {
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						error: _elm_lang$core$Maybe$Just(_p5._0)
+					});
+			}
 		} else {
 			return _elm_lang$core$Native_Utils.update(
 				model,
-				{error: _p6._0, script: script});
+				{
+					error: _elm_lang$core$Maybe$Just(_p4._0)
+				});
 		}
 	});
-var _user$project$Lia$set_script = F2(
-	function (model, script) {
-		return _elm_lang$core$Native_Utils.update(
-			model,
-			{script: script});
-	});
-var _user$project$Lia$init = function (mode) {
-	return {
-		script: '',
-		error: '',
-		mode: mode,
-		slides: {ctor: '[]'},
-		current_slide: 0,
-		show_contents: true,
-		quiz_model: _elm_lang$core$Array$empty,
-		code_model: _elm_lang$core$Array$empty,
-		survey_model: _elm_lang$core$Array$empty,
-		index_model: _user$project$Lia_Index_Model$init(
-			{ctor: '[]'}),
-		effect_model: A2(_user$project$Lia_Effect_Model$init, 'US English Male', _elm_lang$core$Maybe$Nothing),
-		narrator: 'US English Male',
-		silent: false,
-		theme: 'default',
-		theme_light: true
-	};
-};
-var _user$project$Lia$init_plain = _user$project$Lia$init(_user$project$Lia_Types$Textbook);
-var _user$project$Lia$init_slides = _user$project$Lia$init(_user$project$Lia_Types$Slides);
 
 var _user$project$Main$style = _elm_lang$html$Html_Attributes$style(
 	{
@@ -21264,7 +21909,7 @@ var _user$project$Main$view = function (model) {
 							_elm_lang$html$Html$img,
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src('load.gif'),
+								_0: _elm_lang$html$Html_Attributes$src('/images/load.gif'),
 								_1: {
 									ctor: '::',
 									_0: _elm_lang$html$Html_Attributes$width(350),
@@ -21431,42 +22076,65 @@ var _user$project$Main$getCourse = function (url) {
 		_elm_lang$http$Http$getString(url));
 };
 var _user$project$Main$init = function (flags) {
-	return (!_elm_lang$core$Native_Utils.eq(flags.script, '')) ? {
-		ctor: '_Tuple2',
-		_0: A4(
-			_user$project$Main$Model,
-			'',
-			A2(_user$project$Lia$parse, flags.script, _user$project$Lia$init_slides),
-			_user$project$Main$LoadOk,
-			''),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : ((!_elm_lang$core$Native_Utils.eq(flags.url, '')) ? {
-		ctor: '_Tuple2',
-		_0: A4(_user$project$Main$Model, flags.url, _user$project$Lia$init_slides, _user$project$Main$Loading, ''),
-		_1: _user$project$Main$getCourse(flags.url)
-	} : {
-		ctor: '_Tuple2',
-		_0: A4(_user$project$Main$Model, 'https://raw.githubusercontent.com/liaScript/liascript.github.com/master/README.md', _user$project$Lia$init_slides, _user$project$Main$Waiting, ''),
-		_1: _elm_lang$core$Platform_Cmd$none
-	});
+	if (!_elm_lang$core$Native_Utils.eq(flags.script, '')) {
+		var _p1 = _user$project$Lia$init(
+			A2(
+				_user$project$Lia$set_script,
+				_user$project$Lia$init_slides(
+					_elm_lang$core$Maybe$Just('1111')),
+				flags.script));
+		var lia = _p1._0;
+		var cmd = _p1._1;
+		return {
+			ctor: '_Tuple2',
+			_0: A4(_user$project$Main$Model, '', lia, _user$project$Main$LoadOk, ''),
+			_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Main$LIA, cmd)
+		};
+	} else {
+		if (!_elm_lang$core$Native_Utils.eq(flags.url, '')) {
+			return {
+				ctor: '_Tuple2',
+				_0: A4(
+					_user$project$Main$Model,
+					flags.url,
+					_user$project$Lia$init_slides(
+						_elm_lang$core$Maybe$Just(flags.url)),
+					_user$project$Main$Loading,
+					''),
+				_1: _user$project$Main$getCourse(flags.url)
+			};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: A4(
+					_user$project$Main$Model,
+					'https://raw.githubusercontent.com/liaScript/liascript.github.com/master/README.md',
+					_user$project$Lia$init_slides(
+						_elm_lang$core$Maybe$Just('https://raw.githubusercontent.com/liaScript/liascript.github.com/master/README.md')),
+					_user$project$Main$Waiting,
+					''),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		}
+	}
 };
 var _user$project$Main$update = F2(
 	function (msg, model) {
-		var _p1 = msg;
-		switch (_p1.ctor) {
+		var _p2 = msg;
+		switch (_p2.ctor) {
 			case 'LIA':
-				var _p2 = A2(_user$project$Lia$update, _p1._0, model.lia);
-				var lia = _p2._0;
-				var cmd = _p2._1;
-				var info = _p2._2;
-				var _p3 = info;
-				if (_p3.ctor === 'Just') {
+				var _p3 = A2(_user$project$Lia$update, _p2._0, model.lia);
+				var lia = _p3._0;
+				var cmd = _p3._1;
+				var info = _p3._2;
+				var _p4 = info;
+				if (_p4.ctor === 'Just') {
 					return {
 						ctor: '_Tuple2',
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
 							{lia: lia}),
-						_1: _user$project$Main$tx_log(_p3._0)
+						_1: _user$project$Main$tx_log(_p4._0)
 					};
 				} else {
 					return {
@@ -21478,17 +22146,17 @@ var _user$project$Main$update = F2(
 					};
 				}
 			case 'GET':
-				if (_p1._0.ctor === 'Ok') {
+				if (_p2._0.ctor === 'Ok') {
+					var _p5 = _user$project$Lia$init(
+						A2(_user$project$Lia$set_script, model.lia, _p2._0._0));
+					var lia = _p5._0;
+					var cmd = _p5._1;
 					return {
 						ctor: '_Tuple2',
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
-							{
-								lia: A2(_user$project$Lia$parse, _p1._0._0, model.lia),
-								error: '',
-								state: _user$project$Main$LoadOk
-							}),
-						_1: _elm_lang$core$Platform_Cmd$none
+							{lia: lia, error: '', state: _user$project$Main$LoadOk}),
+						_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Main$LIA, cmd)
 					};
 				} else {
 					return {
@@ -21496,7 +22164,7 @@ var _user$project$Main$update = F2(
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
 							{
-								error: _elm_lang$core$Basics$toString(_p1._0._0),
+								error: _elm_lang$core$Basics$toString(_p2._0._0),
 								state: _user$project$Main$LoadFail
 							}),
 						_1: _elm_lang$core$Platform_Cmd$none
@@ -21508,7 +22176,7 @@ var _user$project$Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							lia: A2(_user$project$Lia$restore, model.lia, _p1._0)
+							lia: A2(_user$project$Lia$restore, model.lia, _p2._0)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -21517,7 +22185,7 @@ var _user$project$Main$update = F2(
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{url: _p1._0}),
+						{url: _p2._0}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			default:
