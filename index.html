@@ -1,30 +1,319 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="André Dietrich">
 
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-    <script type="text/javascript" src="js/vendor.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <title>LiaScript</title>
 
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/app.css">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/favicon.ico">
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
 
-    <title>Lia Script</title>
   </head>
+
   <body>
-    <script>
-      const app = Elm.Main.embed(document.body, {url: "", script: "" });
-    </script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">LiaScript</a>
+        <!--a class="btn btn-primary" href="#">Sign In</a-->
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center" id="Loader">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Share your knowledge and build online courses with simple Markdown!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input type="url" class="form-control form-control-lg" placeholder="Enter your course url ..." id="course_url1">
+                </div>
+                <div class="col-12 col-md-3">
+                  <button class="btn btn-block btn-lg btn-primary" onclick="location.href = 'course/?'+$('#course_url1').val(); return false;">Load course!</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-magic-wand m-auto text-primary"></i>
+              </div>
+              <h3>No Tooling</h3>
+              <p class="lead mb-0">You only need a browser or at least a text-editor, that's it ...</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-social-github m-auto text-primary"></i>
+              </div>
+              <h3>Open-Source</h3>
+              <p class="lead mb-0">Create, adapt, translate, and share courses on github ...</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-rocket m-auto text-primary"></i>
+              </div>
+              <h3>JavaScript Ready</h3>
+              <p class="lead mb-0">Extend your course with any available JavaScript library!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcases -->
+    <section class="showcase" id="Concept">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>No Tooling (no programming)</h2>
+            <p class="lead mb-0">
+              Your course is parsed and redered in realtime within the browser
+              at client-side. You only have to provide the URL to your course
+              file. A course is a simple Markdown format with support for
+              multimedia content, narrators, effect, quizzes, online programming,
+              ASCII-art diagrams, etc.
+              <br><br>
+              See the documentation at ...
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Open-Source</h2>
+            <p class="lead mb-0">
+              You are the owner of your content, but by hosting your course on
+              github you give others the chance to contribute to, to translate,
+              to adapt to your course.
+              <br>
+              There is no single source of truth, so why should there be only
+              one course. With the help of git branches and forks it may be
+              possible to develop course for different students and target
+              audiences.
+              <br><br>
+              See a list of courses here ...
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/canvas.png');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>JavaScript Ready</h2>
+            <p class="lead mb-0">
+              In contrast to other Markdown parsers you are free to use any
+              JavaScript library you want. This way you can integrate any kind
+              of visualization, simulation, computer-algebra-system, or whatever
+              you might think is usefull for your course.
+              <br>
+              To simplify the usage of JavaScript and HTML elements, LiaScript
+              provides a macro-system to cover repetitive tasks.
+              <br><br>
+              See a list of templates at ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials bg-light">
+      <div class="container" id="About">
+        <h2 class="mb-5 text-center">About</h2>
+        <div class="row">
+          <div class="col-lg-12 showcase-text">
+            <p class="lead mb-0">
+          ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx ggg xxx
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials text-center" id="Credit">
+      <div class="container">
+        <h2 class="mb-5">Credit</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="https://github.com/andre-dietrich" target="_blank">
+                <img class="img-fluid rounded-circle mb-3" src="https://avatars3.githubusercontent.com/u/3089101?s=400&v=4" alt="">
+              </a>
+              <h5>André Dietrich</h5>
+              <p class="font-weight-light mb-0">
+                Programming paradigm experimenter and creator of liaScript and SelectScript...
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="https://github.com/sebastianzug" target="_blank">
+                <img class="img-fluid rounded-circle mb-3" src="https://avatars0.githubusercontent.com/u/10922356?s=400&v=4" alt="">
+              </a>
+              <h5>Sebastian Zug</h5>
+              <p class="font-weight-light mb-0">
+                The mind in the dark and the man behind the eLab-project ...
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="https://github.com/fesselk" target="_blank">
+                <img class="img-fluid rounded-circle mb-3" src="https://avatars2.githubusercontent.com/u/814189?s=400&v=4" alt="">
+              </a>
+              <h5>Karl Fessel</h5>
+              <p class="font-weight-light mb-0">
+                Embedded systems developer, creator of arduinoview, and Markdown evangelist ...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="https://github.com/martin31821" target="_blank">
+                <img class="img-fluid rounded-circle mb-3" src="https://avatars0.githubusercontent.com/u/5557633?s=400&v=4" alt="">
+              </a>
+              <h5>Martin Koppehel</h5>
+              <p class="font-weight-light mb-0">
+                Hardware-architect and fully fullstack-developer ...
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="https://github.com/fin-ger" target="_blank">
+                <img class="img-fluid rounded-circle mb-3" src="https://avatars1.githubusercontent.com/u/5300274?s=400&v=4" alt="">
+              </a>
+              <h5>Fin Christensen</h5>
+              <p class="font-weight-light mb-0">
+                CSS and Web development enthusiast, outstanding git user ...
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <a href="https://github.com/lwehmeier" target="_blank">
+                <img class="img-fluid rounded-circle mb-3" src="https://avatars0.githubusercontent.com/u/5702908?s=400&v=4" alt="">
+              </a>
+              <h5>Leon Wehmeier</h5>
+              <p class="font-weight-light mb-0">
+                Coordinator and embedded development guru ...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h2 class="mb-4">Share your knowledge and build online courses with simple Markdown!</h2>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input type="url" class="form-control form-control-lg" placeholder="Enter your course url..." id="course_url2">
+                </div>
+                <div class="col-12 col-md-3">
+                  <button class="btn btn-block btn-lg btn-primary" onclick="location.href = 'course/?'+$('#course_url2').val(); return false;">Load!</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#Loader">Loader</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#Concept">Concept</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#About">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#Credit">Credit</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; André Dietrich 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+
 </html>
