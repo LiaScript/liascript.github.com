@@ -18,6 +18,12 @@
 
     <title>LiaScript</title>
 
+    <meta property="og:url"           content="https://LiaScript.github.io" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="LiaScript" />
+    <meta property="og:description"   content="Create free and interactive online courses, based on an extended Markdown notation and share them on github ..." />
+    <meta property="og:image"         content="https://liascript.github.io/img/bg-masthead.jpg" />
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,6 +38,14 @@
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.12';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
@@ -152,7 +166,7 @@
               provides a macro-system to cover repetitive tasks.
               <br><br>
               See a list of templates
-              <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/index/master/README.md#1">here</a>
+              <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/templates/master/README.md#1">here</a>
             </p>
           </div>
         </div>
@@ -314,9 +328,11 @@
           <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
             <ul class="list-inline mb-0">
               <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fa fa-facebook fa-2x fa-fw"></i>
-                </a>
+                <div class="" data-href="https://liascript.github.io/index.html" data-layout="">
+                  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fliascript.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                    <i class="fa fa-facebook fa-2x fa-fw"></i>
+                  </a>
+                </div>
               </li>
               <li class="list-inline-item mr-3">
                 <a href="#">
