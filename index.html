@@ -38,14 +38,14 @@
   </head>
 
   <body>
-    <div id="fb-root"></div>
+    <!--div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.12';
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));</script-->
 
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
@@ -83,8 +83,8 @@
     <section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-2">
               <div class="features-icons-icon d-flex">
                 <i class="icon-magic-wand m-auto text-primary"></i>
               </div>
@@ -92,8 +92,8 @@
               <p class="lead mb-0">You only need a browser or at least a text-editor, that's it ...</p>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-2">
               <div class="features-icons-icon d-flex">
                 <i class="icon-social-github m-auto text-primary"></i>
               </div>
@@ -101,13 +101,22 @@
               <p class="lead mb-0">Create, adapt, translate, and share courses on github ...</p>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-rocket m-auto text-primary"></i>
               </div>
               <h3>JavaScript Ready</h3>
               <p class="lead mb-0">Extend your course with any available JavaScript library!</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-speedometer m-auto text-primary"></i>
+              </div>
+              <h3>Atom.io</h3>
+              <p class="lead mb-0">Write faster, easier, and better courses with Atom.</p>
             </div>
           </div>
         </div>
@@ -118,7 +127,7 @@
     <section class="showcase" id="Concept">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg'); background-position: center;"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>No Tooling (no programming)</h2>
             <p class="lead mb-0">
@@ -134,7 +143,7 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg'); background-position: center;"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Open-Source</h2>
             <p class="lead mb-0">
@@ -153,7 +162,7 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/canvas.png');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/canvas.png'); background-position: center;"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>JavaScript Ready</h2>
             <p class="lead mb-0">
@@ -170,6 +179,27 @@
             </p>
           </div>
         </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/atom.jpg');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Atom.io</h2>
+            <p class="lead mb-0">
+              Finally I was able to release the first two LiaScript plugins for
+              <a href="https://atom.io">Atom</a>. I hope it will make course
+              development much simpler and faster in the the future...
+              <br>
+              <br>
+              <b><a href="https://atom.io/packages/liascript-preview">liascript-preview</a></b>:
+              Is a tiny previewer that, if it was toggled, updates the view on
+              your course each time you save your document.
+              <br>
+              <br>
+              <b><a href="https://atom.io/packages/liascript-snippets">liascript-snippets</a></b>:
+              If you start typing "lia" in your document you switch on a fuzzy
+              search, that contains a lot of LiaScript help, examples, and snippets.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -178,7 +208,7 @@
       <div class="container" id="About">
         <h2 class="mb-5 text-center">About</h2>
         <div class="row">
-          <div class="col-lg-12 showcase-text">
+          <div class="col-lg-15 showcase-text">
             <p class="lead mb-0">
               I am a huge fan of online-courses (MOOCs), tutorials,
               YouTube-courses, podcasts, etc., BUT ... MOOCs are not in the
