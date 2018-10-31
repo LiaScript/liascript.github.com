@@ -1,31 +1,641 @@
-var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.ASSUME_ES5=!1;$jscomp.ASSUME_NO_NATIVE_MAP=!1;$jscomp.ASSUME_NO_NATIVE_SET=!1;$jscomp.defineProperty=$jscomp.ASSUME_ES5||"function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){a!=Array.prototype&&a!=Object.prototype&&(a[b]=c.value)};$jscomp.getGlobal=function(a){return"undefined"!=typeof window&&window===a?a:"undefined"!=typeof global&&null!=global?global:a};$jscomp.global=$jscomp.getGlobal(this);$jscomp.SYMBOL_PREFIX="jscomp_symbol_";
-$jscomp.initSymbol=function(){$jscomp.initSymbol=function(){};$jscomp.global.Symbol||($jscomp.global.Symbol=$jscomp.Symbol)};$jscomp.Symbol=function(){var a=0;return function(b){return $jscomp.SYMBOL_PREFIX+(b||"")+a++}}();
-$jscomp.initSymbolIterator=function(){$jscomp.initSymbol();var a=$jscomp.global.Symbol.iterator;a||(a=$jscomp.global.Symbol.iterator=$jscomp.global.Symbol("iterator"));"function"!=typeof Array.prototype[a]&&$jscomp.defineProperty(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return $jscomp.arrayIterator(this)}});$jscomp.initSymbolIterator=function(){}};
-$jscomp.initSymbolAsyncIterator=function(){$jscomp.initSymbol();var a=$jscomp.global.Symbol.asyncIterator;a||(a=$jscomp.global.Symbol.asyncIterator=$jscomp.global.Symbol("asyncIterator"));$jscomp.initSymbolAsyncIterator=function(){}};$jscomp.arrayIterator=function(a){var b=0;return $jscomp.iteratorPrototype(function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}})};
-$jscomp.iteratorPrototype=function(a){$jscomp.initSymbolIterator();a={next:a};a[$jscomp.global.Symbol.iterator]=function(){return this};return a};$jscomp.makeIterator=function(a){$jscomp.initSymbolIterator();$jscomp.initSymbol();$jscomp.initSymbolIterator();var b=a[Symbol.iterator];return b?b.call(a):$jscomp.arrayIterator(a)};$jscomp.objectCreate=$jscomp.ASSUME_ES5||"function"==typeof Object.create?Object.create:function(a){var b=function(){};b.prototype=a;return new b};
-$jscomp.underscoreProtoCanBeSet=function(){var a={a:!0},b={};try{return b.__proto__=a,b.a}catch(c){}return!1};$jscomp.setPrototypeOf="function"==typeof Object.setPrototypeOf?Object.setPrototypeOf:$jscomp.underscoreProtoCanBeSet()?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null;
-$jscomp.inherits=function(a,b){a.prototype=$jscomp.objectCreate(b.prototype);a.prototype.constructor=a;if($jscomp.setPrototypeOf){var c=$jscomp.setPrototypeOf;c(a,b)}else for(c in b)if("prototype"!=c)if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.superClass_=b.prototype};$jscomp.arrayFromIterator=function(a){for(var b,c=[];!(b=a.next()).done;)c.push(b.value);return c};
-$jscomp.arrayFromIterable=function(a){return a instanceof Array?a:$jscomp.arrayFromIterator($jscomp.makeIterator(a))};$jscomp.owns=function(a,b){return Object.prototype.hasOwnProperty.call(a,b)};$jscomp.polyfill=function(a,b,c,d){if(b){c=$jscomp.global;a=a.split(".");for(d=0;d<a.length-1;d++){var e=a[d];e in c||(c[e]={});c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&null!=b&&$jscomp.defineProperty(c,a,{configurable:!0,writable:!0,value:b})}};
-$jscomp.polyfill("Object.entries",function(a){return a?a:function(a){var b=[],d;for(d in a)$jscomp.owns(a,d)&&b.push([d,a[d]]);return b}},"es8","es3");function liaLog(a){console.log(a)}var LiaError=function(a,b,c){for(var d=[],e=2;e<arguments.length;++e)d[e-2]=arguments[e];d=Error.apply(this,$jscomp.arrayFromIterable(d));this.message=d.message;"stack"in d&&(this.stack=d.stack);Error.captureStackTrace&&Error.captureStackTrace(this,LiaError);this.message=a;this.details=[];for(d=0;d<b;d++)this.details.push([])};
-$jscomp.inherits(LiaError,Error);LiaError.prototype.add_detail=function(a,b,c,d,e){this.details[a].push({row:d,column:e,text:b,type:c})};LiaError.prototype.correct_lines=function(a,b){if(null==a)for(a=0;a<this.details.length;a++)this.correct_lines(a,b);else this.details[a]=this.details[a].map(function(a){a.line+=b})};var LiaStorage=function(a){if(a=void 0===a?null:a)this.channel=a,this._init()};
-LiaStorage.prototype._init=function(){if(this.channel){var a=this._set_local;this.channel.push("party",{get_local_storage:[]}).receive("ok",function(b){a(b)}).receive("error",function(a){console.log("error: ",a)})}};LiaStorage.prototype.getItems=function(a){"string"==typeof key&&(key=[key]);a={};for(var b=0;b<key.length;b++){var c=localStorage.getItem(key[b]);a[key[b]]=c?JSON.parse(c):c}return a};
-LiaStorage.prototype.setItems=function(a){this.channel&&this.channel.push("party",{set_local_storage:a});this._set_local(a)};LiaStorage.prototype._set_local=function(a){if("object"==typeof a){a=$jscomp.makeIterator(Object.entries(a));for(var b=a.next();!b.done;b=a.next()){var c=$jscomp.makeIterator(b.value);b=c.next().value;c=c.next().value;localStorage.setItem(b,JSON.stringify(c))}}};var LiaEvents=function(){this.event={};this.input={}};LiaEvents.prototype.register=function(a,b){this.event[a]=b};
-LiaEvents.prototype.register_input=function(a,b,c,d){void 0==this.input[a]&&(this.input[a]={});void 0==this.input[a][b]&&(this.input[a][b]={});this.input[a][b][c]=d};LiaEvents.prototype.dispatch_input=function(a,b,c,d){try{this.input[a][b][c](d)}catch(e){console.log("unable to dispatch message",d)}};LiaEvents.prototype.dispatch=function(a,b){if(this.event.hasOwnProperty(a))this.event[a](b)};LiaEvents.prototype.remove=function(a){delete this.event[a]};
-function websocket(a){if(a=void 0===a?null:a)return function(b,c){return a.push("party",{event_id:b,message:c})}}function lia_eval(a,b){try{b.lia("eval",String(eval(a)))}catch(c){c instanceof LiaError?b.lia("eval",c.message,c.details,!1):b.lia("eval",c.message,[],!1)}}function lia_eval_event(a,b,c,d){return function(e,f,g,h){g=void 0===g?[]:g;a([d,b,e,[void 0===h?!0:h,c,f,g]])}}function lia_execute(a,b,c){try{setTimeout(function(){eval(a)},b)}catch(d){console.log("exec - error: ",d)}}
-function scrollIntoView(a,b){setTimeout(function(b){try{document.getElementById(a).scrollIntoView({behavior:"smooth"})}catch(d){}},b)}
-var LiaDB=function(a,b,c,d,e){c=void 0===c?null:c;d=void 0===d?null:d;e=void 0===e?null:e;this.channel=d;this.send=c;if(!d)if(this.indexedDB=window.indexedDB||window.mozIndexedDB||window.webkitIndexedDB||window.msIndexedDB||window.shimIndexedDB){this.uidDB=a;this.versionDB=b;var f=this.indexedDB.open(this.uidDB,this.versionDB);f.onupgradeneeded=function(a){console.log("creating tables");a={keyPath:"id",autoIncrement:!1};var b=f.result;b.createObjectStore("quiz",a);b.createObjectStore("code",a);b.createObjectStore("survey",
-a);e&&c([e.table,e.id,"restore",null])};f.onsuccess=function(a){if(e){var b=f.result.transaction(e.table,"readonly").objectStore(e.table).get(e.id);b.onsuccess=function(){b.result?c([e.table,e.id,"restore",b.result.data]):c([e.table,e.id,"restore",null])};b.onerror=function(){c([e.table,e.id,"restore",null])}}}}else console.log("your browser does not support indexedDB")};
-LiaDB.prototype.store=function(a,b,c){if(this.channel)this.channel.push("party",{store:a,slide:b,data:c}).receive("ok",function(a){console.log("ok",a)}).receive("error",function(a){console.log("error",a)});else if(liaLog("liaDB: event(store), table("+a+"), id("+b+"), data("+c+")"),this.indexedDB){var d=this.indexedDB.open(this.uidDB,this.versionDB);d.onsuccess=function(e){e=d.result.transaction(a,"readwrite");var f=e.objectStore(a),g={id:b,data:c,created:(new Date).getTime()};f.put(g);e.oncomplete=
-function(){console.log("stored data ...")}}}};
-LiaDB.prototype.load=function(a,b){var c=this.send;if(this.channel)this.channel.push("party",{load:a,slide:b}).receive("ok",function(a){c([a.table,a.slide,"restore",a.data])}).receive("error",function(a){console.log("error",a)});else if(this.indexedDB){console.log("loading",a,b);var d=this.indexedDB.open(this.uidDB,this.versionDB);d.onsuccess=function(e){try{var f=d.result.transaction(a,"readonly").objectStore(a).get(b);f.onsuccess=function(){f.result&&c([a,b,"restore",f.result.data])};f.onerror=
-function(){console.log("data not found ...");"code"==a&&c([a,b,"restore",null])}}catch(g){console.log("Error: ",g)}}}};LiaDB.prototype.del=function(){if(!this.channel&&this.indexedDB){var a=this.indexedDB.deleteDatabase(this.uidDB);a.onerror=function(a){console.log("error deleting database:",this.uidDB)};a.onsuccess=function(a){console.log("database deleted: ",this.uidDB);console.log(a.result)}}};
-LiaDB.prototype.update=function(a,b){if(this.channel)this.channel.push("party",{update:a,slide:b});else if(this.indexedDB){var c=this.indexedDB.open(this.uidDB,this.versionDB);c.onsuccess=function(d){try{var e=c.result.transaction("code","readwrite").objectStore("code"),f=e.get(b);f.onsuccess=function(){var b=f.result;if(b){var c=b.data[a[1]];switch(a[0]){case "flip_view":c.file[a[2]].visible=a[3];break;case "fullscreen":c.file[a[2]].fullscreen=a[3];break;case "load":var d=a[2];c.version_active=d.version_active;
-c.log=d.log;c.file=d.file;break;case "version_update":d=a[2];c.version_active=d.version_active;c.log=d.log;c.version[d.version_active]=d.version;break;case "version_append":d=a[2];c.version_active=d.version_active;c.log=d.log;c.file=d.file;c.version.push(d.version);break;default:console.log("unknown update cmd: ",a)}b.data[a[1]]=c;e.put(b)}};f.onerror=function(){console.log("data not found ...")}}catch(g){console.log("Error: ",g)}}}};var PREFERENCES="preferences";
-function initPreferences(a,b,c){null==b&&(b={loc:!0,mode:"Slides",theme:"default",theme_light:"light",ace:"dreamweaver",font_size:100,sound:!0});(void 0===c?0:c)&&localStorage.setItem(PREFERENCES,JSON.stringify(b));a([PREFERENCES,-1,"",b])}
-var events=void 0,liaStorage=void 0,LiaScript=function(a,b,c,d,e){c=void 0===c?"":c;d=void 0===d?0:d;e=void 0===e?null:e;events=new LiaEvents;this.app=Elm.Main.embed(a,{url:c,script:b,slide:d});this.initSpeech2JS(this.app.ports.speech2js.subscribe,this.app.ports.speech2elm.send);this.initChannel(e,this.app.ports.event2elm.send);this.initEventSystem(this.app.ports.event2js.subscribe,this.app.ports.event2elm.send);liaStorage=new LiaStorage(e)};
-LiaScript.prototype.initChannel=function(a,b){a&&(this.channel=a,a.on("service",function(a){events.dispatch(a.event_id,a.message)}),a.join().receive("ok",function(a){initPreferences(b,a)}).receive("error",function(a){console.log("Error channel join: ",a)}))};LiaScript.prototype.channel_push=function(a,b,c){return this.channel?(this.channel.push("party",a).receive("ok",function(a){return b(a)}).receive("error",function(a){return c(a)}),!0):!1};
-LiaScript.prototype.reset=function(){this.app.ports.event2elm.send(["reset",-1,"",null])};
-LiaScript.prototype.initEventSystem=function(a,b){console.log("initEventSystem");var c=this;a(function(a){switch(a[0]){case "slide":c.channel_push({slide:a[1]+1});break;case "load":c.db.load(a[2],a[1]);break;case "code":a[2].forEach(function(d){switch(d[0]){case "store":c.db.store("code",a[1],d[1]);break;case "eval":lia_eval(d[2],{lia:lia_eval_event(b,a[1],d[1],"code"),service:websocket(c.channel),handle:function(b,c){events.register_input(a[1],d[1],b,c)}});break;case "input":events.dispatch_input(a[1],
-d[1],"input",d[2]);break;case "stop":events.dispatch_input(a[1],d[1],"stop",d[2]);break;default:c.db.update(d,a[1])}});break;case "quiz":c.db.store("quiz",a[1],a[2]);break;case "survey":c.db.store("survey",a[1],a[2]);break;case "effect":a[2].forEach(function(d){switch(d[0]){case "execute":lia_execute(d[2],d[1],{lia:lia_eval_event(b,a[1],d[1],"effect"),service:websocket(c.channel)});break;case "focus":scrollIntoView(d[2],d[1]);break;default:console.log("effect missed",a,d)}});break;case PREFERENCES:c.channel?
-c.channel.push("party",{preferences:a[2]}):localStorage.setItem(PREFERENCES,JSON.stringify(a[2]));break;case "ressource":var d=a[2][0],f=a[2][1];console.log(d,":",f);try{var g=document.createElement(d);"link"==d?(g.href=f,g.rel="stylesheet"):g.src=f;document.head.appendChild(g)}catch(h){console.log(h.message)}break;case "init":c.db=new LiaDB(a[2][1],1,b,c.channel,{table:"code",id:a[1]});document.title=a[2][0];c.channel||(d=localStorage.getItem(PREFERENCES),initPreferences(b,d?JSON.parse(d):d,!0));
-break;case "reset":c.db.del();c.channel||initPreferences(b,null,!0);break;default:console.log("Command not found: ",a)}})};LiaScript.prototype.initSpeech2JS=function(a,b){a(function(a){try{switch(a[0]){case "speak":responsiveVoice.speak(a[2],a[1],{onend:function(a){b(["end",""])},onerror:function(a){b(["error",a.toString()])}});break;case "cancel":b(["end",""]);responsiveVoice.cancel();break;default:console.log(a)}}catch(d){b(["error",d.toString()])}})};
+//import Elm from './app';
+
+function liaLog (string) {
+    //if(window.debug__)
+        console.log(string);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// Basic class for handline Code-Errors
+class LiaError extends Error {
+    constructor (message, files,...params) {
+        super(...params);
+        if (Error.captureStackTrace)
+            Error.captureStackTrace(this, LiaError);
+        this.message = message;
+        this.details = [];
+        for(var i=0; i<files; i++)
+            this.details.push([]);
+    }
+
+    add_detail (file_id, msg, type, line, column) {
+        this.details[file_id].push(
+            { row : line,
+              column : column,
+              text : msg,
+              type : type } );
+    }
+
+    // sometimes you need to adjust the compile messages to fit into the
+    // editor ... use this function to adapt the row parameters ...
+    // file_id with 0 will apply the correction value to all files
+    correct_lines (file_id, by) {
+      if(file_id == null)
+        for(let i=0; i<this.details.length; i++) {
+          this.correct_lines(i, by);
+        }
+      else
+        this.details[file_id] = this.details[file_id].map((e) => {e.line = e.line + by});
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+class LiaStorage {
+    constructor (channel = null) {
+        if (!channel)
+            return;
+
+        this.channel = channel;
+        this._init();
+    }
+
+    _init () {
+        if(!this.channel)
+            return;
+
+        let store = this._set_local;
+
+        this.channel.push("party", {get_local_storage: []})
+          .receive("ok",    (e) => { store(e); })
+          .receive("error", (e) => { console.log("error: ", e); });
+    }
+
+    getItems (keys = []) {
+        if(typeof key == "string")
+            key = [key];
+
+        let rslt = {};
+        for (let i=0; i<key.length; i++) {
+            let value = localStorage.getItem(key[i]);
+
+            rslt[key[i]] = value ? JSON.parse(value) : value;
+        }
+
+        return rslt;
+    }
+
+    setItems (dict) {
+        if(this.channel)
+            this.channel.push("party", {set_local_storage: dict});
+
+        this._set_local(dict);
+    }
+
+    _set_local (dict) {
+        if (typeof dict == "object") {
+            for (const [key, value] of Object.entries(dict)) {
+                localStorage.setItem(key, JSON.stringify(value));
+            }
+        }
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+class LiaEvents {
+
+    constructor () {
+        this.event = {};
+        this.input = {};
+    }
+
+    register (name, fn) {
+        this.event[name] = fn;
+    }
+
+    register_input (id1, id2, name, fn) {
+        if (this.input[id1] == undefined) {
+            this.input[id1] = {};
+        }
+        if (this.input[id1][id2] == undefined) {
+            this.input[id1][id2] = {};
+        }
+
+        this.input[id1][id2][name] = fn;
+
+        console.log("XXX", this.input);
+    }
+
+    dispatch_input (id1, id2, name, msg) {
+        try {
+            this.input[id1][id2][name](msg);
+        } catch(e) {
+            console.log("unable to dispatch message", msg);
+        }
+    }
+
+    dispatch (name, data) {
+        if (this.event.hasOwnProperty(name)) {
+            this.event[name](data);
+        }
+    }
+
+    remove (name) {
+        delete this.event[name];
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+function websocket(channel = null) {
+    if (channel) {
+        return function(event_id, message) {
+            return channel.push("party", {event_id: event_id, message: message});
+        };
+    }
+};
+
+function lia_eval(code, send) {
+    try {
+      send.lia("eval", String(eval(code)));
+    } catch (e) {
+        if (e instanceof LiaError )
+            send.lia("eval", e.message, e.details, false);
+        else
+            send.lia("eval", e.message, [], false);
+    }
+};
+
+function lia_eval_event(send, id1, id2, source) {
+    return function(event_, message, details=[], ok=true) {
+        send([source, id1, event_, [ok, id2, message, details]]);
+    };
+};
+
+function lia_execute(code, delay, send) {
+    try {
+        setTimeout(() => { eval(code) }, delay);
+    } catch (e) {
+        console.log("exec - error: ", e);
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+function scrollIntoView (id, delay) {
+    setTimeout( function (e) {
+        try {
+            document.getElementById(id).scrollIntoView({behavior: "smooth"});
+        } catch (e) {}
+    }, delay);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+class LiaDB {
+    constructor (uidDB, versionDB, send=null, channel=null, init=null) {
+        this.channel = channel;
+        this.send = send;
+
+        if (channel) return;
+
+        this.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+
+        if (!this.indexedDB) {
+            console.log("your browser does not support indexedDB");
+            return;
+        }
+
+        this.uidDB = uidDB;
+        this.versionDB = versionDB;
+
+
+        let request = this.indexedDB.open(this.uidDB, this.versionDB);
+        request.onupgradeneeded = function(event) {
+            console.log("creating tables");
+
+            // The database did not previously exist, so create object stores and indexes.
+            let settings = {keyPath: "id", autoIncrement: false};
+
+            let db = request.result;
+            db.createObjectStore("quiz",   settings);
+            db.createObjectStore("code",   settings);
+            db.createObjectStore("survey", settings);
+
+            if(init)
+                send([init.table, init.id, "restore", null]);
+        };
+        request.onsuccess = function(e) {
+            if(init) {
+                let db = request.result;
+                let tx = db.transaction(init.table, 'readonly');
+                let store = tx.objectStore(init.table);
+
+                let item = store.get(init.id);
+
+                item.onsuccess = function() {
+                    //console.log("table", init.table, item.result);
+                    if (item.result) {
+                        send([init.table, init.id, "restore", item.result.data]);
+                    }
+                    else {
+                        send([init.table, init.id, "restore", null]);
+                    }
+                };
+                item.onerror = function() {
+                    send([init.table, init.id, "restore", null]);
+                };
+            }
+        };
+    }
+
+    store(table, id, data) {
+        if(this.channel) {
+            this.channel.push("party", {store: table, slide: id, data: data})
+            .receive("ok",    e => { console.log("ok", e); })
+            .receive("error", e => { console.log("error", e); });
+
+            return;
+        }
+
+
+        liaLog(`liaDB: event(store), table(${table}), id(${id}), data(${data})`)
+        if (!this.indexedDB) return;
+
+        let request = this.indexedDB.open(this.uidDB, this.versionDB);
+        request.onsuccess = function(e) {
+            let db = request.result;
+            let tx = db.transaction(table, 'readwrite');
+            let store = tx.objectStore(table);
+
+            let item = {
+                id:      id,
+                data:    data,
+                created: new Date().getTime()
+            };
+
+            store.put(item);
+
+            tx.oncomplete = function() {
+                // All requests have succeeded and the transaction has committed.
+                console.log("stored data ...");
+            };
+        };
+    }
+
+    load(table, id) {
+        let send = this.send;
+
+        if (this.channel) {
+            this.channel.push("party", {load: table, slide: id})
+            .receive("ok",    e => {
+                send([e.table, e.slide, "restore", e.data]);
+            })
+            .receive("error", e => { console.log("error", e); });
+
+            return;
+        }
+
+        if (!this.indexedDB) return;
+
+        console.log("loading", table, id);
+
+        let request = this.indexedDB.open(this.uidDB, this.versionDB);
+        request.onsuccess = function(e) {
+            try {
+                let db = request.result;
+                let tx = db.transaction(table, 'readonly');
+                let store = tx.objectStore(table);
+
+                let item = store.get(id);
+
+                item.onsuccess = function() {
+                    //console.log("table", table, item.result);
+                    if (item.result) {
+                        send([table, id, "restore", item.result.data]);
+                    }
+                };
+                item.onerror = function() {
+                    console.log("data not found ...");
+                    if (table == "code")
+                        send([table, id, "restore", null]);
+                };
+            }
+            catch (e) { console.log("Error: ", e); }
+        };
+    }
+
+    del() {
+        if (this.channel) return;
+
+        if (!this.indexedDB) return;
+
+        let request = this.indexedDB.deleteDatabase(this.uidDB);
+        request.onerror = function(e) {
+            console.log("error deleting database:", this.uidDB);
+        };
+        request.onsuccess = function(e) {
+            console.log("database deleted: ", this.uidDB);
+            console.log(e.result); // should be undefined
+        };
+    }
+
+    update(event, slide) {
+        if (this.channel) {
+            this.channel.push("party", { update: event, slide: slide } );
+            return;
+        }
+        if (!this.indexedDB) return;
+
+        let request = this.indexedDB.open(this.uidDB, this.versionDB);
+        request.onsuccess = function(e) {
+            try {
+                let db = request.result;
+                let tx = db.transaction("code", 'readwrite');
+                let store = tx.objectStore("code");
+
+                let item = store.get(slide);
+
+                item.onsuccess = function() {
+                    let vector = item.result
+
+                    if (vector) {
+                        let project = vector.data[event[1]];
+                        switch (event[0]) {
+                            case "flip_view": {
+                                project.file[event[2]].visible = event[3];
+                                break;
+                            }
+                            case "fullscreen": {
+                                project.file[event[2]].fullscreen = event[3];
+                                break;
+                            }
+                            case "load": {
+                                let e_ = event[2];
+                                project.version_active = e_.version_active;
+                                project.log = e_.log;
+                                project.file = e_.file;
+                                break;
+                            }
+                            case "version_update": {
+                                let e_ = event[2];
+                                project.version_active = e_.version_active;
+                                project.log = e_.log;
+                                project.version[e_.version_active] = e_.version;
+                                break;
+                            }
+                            case "version_append": {
+                                let e_ = event[2];
+                                project.version_active = e_.version_active;
+                                project.log = e_.log;
+                                project.file = e_.file;
+                                project.version.push(e_.version);
+                                break;
+                            }
+                            default: {
+                                console.log("unknown update cmd: ", event);
+                            }
+                        }
+                        vector.data[event[1]] = project;
+                        store.put(vector);
+                    }
+                };
+                item.onerror = function() {
+                    console.log("data not found ...");
+                };
+            }
+            catch (e) { console.log("Error: ", e); }
+        };
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+const PREFERENCES = "preferences";
+
+function initPreferences(send, data, local=false) {
+
+    if (data == null) {
+        data = { loc:         true,
+                 mode:        "Slides",
+                 theme:       "default",
+                 theme_light: "light",
+                 ace:         "dreamweaver",
+                 font_size:   100,
+                 sound:       true
+                };
+    }
+
+    if (local) {
+        localStorage.setItem(PREFERENCES, JSON.stringify(data));
+    }
+
+    send([PREFERENCES, -1, "", data]);
+};
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+var events = undefined;
+var liaStorage = undefined;
+
+class LiaScript {
+    constructor(elem, script, url="", slide=0, channel=null) {
+        events     = new LiaEvents();
+
+        this.app = Elm.Main.embed(elem, {url: url, script: script, slide: slide });
+
+        this.initSpeech2JS(this.app.ports.speech2js.subscribe, this.app.ports.speech2elm.send);
+        this.initChannel(channel, this.app.ports.event2elm.send);
+        this.initEventSystem(this.app.ports.event2js.subscribe, this.app.ports.event2elm.send);
+
+
+        liaStorage = new LiaStorage(channel);
+    }
+
+    initChannel(channel, send) {
+        if(!channel)
+            return;
+
+        this.channel = channel;
+        channel.on("service", e => { events.dispatch(e.event_id, e.message); });
+
+        channel.join()
+        .receive("ok", (e) => { initPreferences(send, e); })
+        .receive("error", e => { console.log("Error channel join: ", e); });
+    }
+
+    reset() {
+        this.app.ports.event2elm.send(["reset", -1, "", null]);
+    }
+
+    initEventSystem(jsSubscribe, elmSend) {
+        console.log("initEventSystem");
+
+        let self = this;
+
+        jsSubscribe(function(cmd) {
+            //console.log("elm2js", cmd);
+
+            switch (cmd[0]) {
+                case "slide": {
+                    if(self.channel)
+                        self.channel.push("party", { slide: cmd[1] + 1 })
+                    break;
+                }
+                case "load": {
+                    self.db.load(cmd[2], cmd[1]);
+                    break;
+                }
+                case "code" : {
+                    cmd[2].forEach(function(e) {
+                        switch(e[0]) {
+                            case "store": {
+                                self.db.store("code", cmd[1], e[1]);
+                                break;
+                            }
+                            case "eval": {
+                                lia_eval(
+                                  e[2],
+                                  { lia: lia_eval_event(elmSend, cmd[1], e[1], "code"),
+                                    service: websocket(self.channel),
+                                    handle: (name, fn) => { events.register_input(cmd[1], e[1], name, fn) }
+                                  }
+                                );
+                                break;
+                            }
+                            case "input": {
+                                events.dispatch_input(cmd[1], e[1], "input", e[2]);
+                                break;
+                            }
+                            case "stop": {
+                                events.dispatch_input(cmd[1], e[1], "stop", e[2]);
+                                break;
+                            }
+                            default: {
+                                //console.log("handling Event: ", e, cmd[1]);
+                                self.db.update(e, cmd[1]);
+                            }
+                        }});
+
+                    break;
+                }
+                case "quiz" : {
+                    self.db.store("quiz", cmd[1], cmd[2]);
+                    break;
+                }
+                case "survey" : {
+                    self.db.store("survey", cmd[1], cmd[2]);
+                    break;
+                }
+                case "effect" : {
+                    cmd[2].forEach(function(e) {
+                      switch(e[0]) {
+                          case "execute": {
+                              lia_execute( e[2], e[1],
+                                         { lia: lia_eval_event(elmSend, cmd[1], e[1], "effect"),
+                                           service: websocket(self.channel),
+                                         });
+                              break;
+                          }
+                          case "focus": {
+                              scrollIntoView(e[2], e[1]);
+                              break;
+                          }
+                          default: {
+                              console.log("effect missed", cmd, e);
+                          }
+                      }});
+
+                    break;
+                }
+                case PREFERENCES: {
+                    if (self.channel) {
+                        self.channel.push("party", {preferences: cmd[2]});
+                    } else {
+                        localStorage.setItem(PREFERENCES, JSON.stringify(cmd[2]));
+                    }
+                    break;
+                }
+                case "ressource" : {
+                    let elem = cmd[2][0];
+                    let url  = cmd[2][1];
+
+                    console.log(elem, ":", url);
+
+                    try {
+                        var tag = document.createElement(elem);
+                        if(elem == "link") {
+                            tag.href = url;
+                            tag.rel  = "stylesheet";
+                        }
+                        else {
+                            tag.src = url;
+                            tag.async = false;
+                        }
+                        document.head.appendChild(tag);
+
+                    } catch (e) {
+                        console.log(e.message);
+                    }
+                    break;
+                }
+                case "init": {
+                    self.db = new LiaDB(cmd[2][1],
+                                        1,
+                                        elmSend,
+                                        self.channel,
+                                        { table: "code", id: cmd[1] });
+
+                    document.title = cmd[2][0];
+
+                    if (!self.channel) {
+                        let prefs = localStorage.getItem(PREFERENCES);
+                        initPreferences(elmSend, prefs ? JSON.parse(prefs) : prefs, true);
+                    }
+
+                    break;
+                }
+                case "reset": {
+                    self.db.del();
+                    if(!self.channel) {
+                        initPreferences(elmSend, null, true);
+                    }
+                    break;
+                }
+                default:
+                    console.log("Command not found: ", cmd);
+              }
+        });
+    }
+
+
+    initSpeech2JS(jsSubscribe, elmSend) {
+       jsSubscribe(function(cmd) {
+          try {
+              switch (cmd[0]) {
+                  case "speak":
+                      responsiveVoice.speak( cmd[2], cmd[1],
+                                             {  onend: e => { elmSend(["end", ""]); },
+                                              onerror: e => { elmSend(["error", e.toString()]);}}
+                                            );
+                      break;
+                  case "cancel":
+                      elmSend(["end", ""]);
+                      responsiveVoice.cancel();
+                      break;
+                  default:
+                      console.log(cmd);
+                  }
+          } catch (e) {
+              elmSend(["error", e.toString()]);
+          }
+      });
+    }
+};
+
+/*
+module.exports = {
+    LiaError,
+    LiaScript
+};
+*/
