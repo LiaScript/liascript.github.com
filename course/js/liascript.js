@@ -496,8 +496,12 @@ class LiaScript {
 
         this.app = Elm.Main.embed(elem, {url: url, script: script, slide: slide });
 
+        //let prefs = localStorage.getItem(PREFERENCES);
+        //initPreferences(this.app.ports.event2elm.send, prefs ? JSON.parse(prefs) : prefs, true);
+
         this.initSpeech2JS(this.app.ports.speech2js.subscribe, this.app.ports.speech2elm.send);
         this.initChannel(channel, this.app.ports.event2elm.send);
+
         this.initEventSystem(this.app.ports.event2js.subscribe, this.app.ports.event2elm.send);
 
         liaStorage = new LiaStorage(channel);
@@ -530,7 +534,12 @@ class LiaScript {
             switch (cmd[0]) {
                 case "slide": {
                     if(self.channel)
-                        self.channel.push("party", { slide: cmd[1] + 1 })
+                        self.channel.push("party", { slide: cmd[1] + 1 });
+
+                    let sec = document.getElementsByTagName("section")[0];
+                    if(sec) {
+                        sec.scrollTo(0,0);
+                    }
                     break;
                 }
                 case "load": {
