@@ -1,0 +1,16 @@
+{
+  "short_name": "Lia",
+  "name": "LiaScript",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "164x164"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fff"
+}

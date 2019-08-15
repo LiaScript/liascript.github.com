@@ -3,20 +3,16 @@
   <head>
     <title>Lia</title>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115796379-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-115796379-1');
-    </script>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="//code.responsivevoice.org/responsivevoice.js?key=blVZszUw"></script>
-    <!--script type="text/javascript" src='responsivevoice.js'></script-->
+
+    <script src="//code.responsivevoice.org/responsivevoice.js?key=blVZszUw">
+      responsiveVoice.enableEstimationTimeout = true;
+    </script>
+
+    <link rel="manifest" href="manifest.json">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="css/material.css">
@@ -53,12 +49,10 @@
     }
     </style>
 
-  <link href="lia/index.css" rel="stylesheet">
-  <link href="formula/index.css" rel="stylesheet">
-  </head>
+  <link href="lia/index.css" rel="stylesheet"></head>
   <body id="lia">
-
-  <script type="text/javascript" src="lia/index.js"></script>
-  <script type="text/javascript" src="editor/index.js"></script>
-  <script type="text/javascript" src="formula/index.js"></script></body>
+    <script type="text/javascript" src="lia/index.js"></script>
+    <script type="text/javascript" src="editor/index.js"></script>
+    <script type="text/javascript" src="formula/index.js"></script>
+  </body>
 </html>
