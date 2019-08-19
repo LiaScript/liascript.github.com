@@ -8,9 +8,9 @@
       "sizes": "164x164"
     }
   ],
-  "start_url": "/courseX/index.html",
+  "start_url": "./index.html",
   "background_color": "#fff",
   "display": "standalone",
-  "scope": "/courseX",
+  "scope": ".",
   "theme_color": "#fff"
 }
