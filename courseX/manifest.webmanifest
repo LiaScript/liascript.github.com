@@ -3,7 +3,7 @@
   "name": "LiaScript Open-courSe",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "164x164"
     }
