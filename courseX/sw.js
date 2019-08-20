@@ -15,6 +15,10 @@ workbox.routing.registerRoute( /\/$/, new workbox.strategies.NetworkFirst() )
 workbox.routing.registerRoute( /\/*/, new workbox.strategies.NetworkFirst() )
 workbox.routing.registerRoute( /.+\/*/, new workbox.strategies.NetworkFirst() )
 
+workbox.routing.registerRoute(
+  /https:\/\/code\.responsivevoice\.org/,
+  new workbox.strategies.StaleWhileRevalidate()
+)
 
 workbox.precaching.precacheAndRoute([
   {
@@ -1691,11 +1695,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "e410b853c9aaa01c188cc9b4c89fcb64"
+    "revision": "db7f31e9e7451bf18554e6fe1c934069"
   },
   {
     "url": "lia/index.js",
-    "revision": "0bb900f35d34e5aa1d308de8eeb6c6fc"
+    "revision": "68ed22cbc6e908bdd844671ee44c5504"
   },
   {
     "url": "logo_192.png",
