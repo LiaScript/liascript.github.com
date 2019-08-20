@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="//code.responsivevoice.org/responsivevoice.js?key=blVZszUw">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=blVZszUw">
       responsiveVoice.enableEstimationTimeout = true;
     </script>
 
@@ -48,16 +48,19 @@
     }
     </style>
 
-  <link href="lia/index.css" rel="stylesheet"></head>
+  <link href="/lia/index.css" rel="stylesheet"></head>
   <body id="lia">
+
+  <script type="text/javascript" src="lia/index.js"></script>
+  <script type="text/javascript" src="editor/index.js"></script>
+  <script type="text/javascript" src="formula/index.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register("sw.js").then(console.log).catch(console.error);
+        navigator.serviceWorker.register("/sw.js").then(console.log).catch(console.error);
       })
     }
   </script>
-
-  <script type="text/javascript" src="lia/index.js"></script><script type="text/javascript" src="editor/index.js"></script><script type="text/javascript" src="formula/index.js"></script></body>
+</body>
 </html>

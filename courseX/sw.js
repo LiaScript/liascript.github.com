@@ -3,34 +3,18 @@ console.log("service-worker.js")
 // advanced config for injectManifest approach
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js')
 
-self.addEventListener('install', (event) => {
-  console.log("INSTALLING");
-  const urls = [
-    './',
-    './index.html',
-    './lia/index.js',
-    './lia/index.css',
-    './editor/mode-bro.js',
-    './editor/*.js'
-  ];
-  const cacheName = workbox.core.cacheNames.runtime;
-  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(urls)));
-});
+// Detailed logging is very useful during development
+workbox.setConfig({debug: true})
+
+// Updating SW lifecycle to update the app after user triggered refresh
+workbox.core.skipWaiting()
+workbox.core.clientsClaim()
 
 
 workbox.routing.registerRoute( /\/$/, new workbox.strategies.NetworkFirst() )
 workbox.routing.registerRoute( /\/*/, new workbox.strategies.NetworkFirst() )
 workbox.routing.registerRoute( /.+\/*/, new workbox.strategies.NetworkFirst() )
 
-workbox.routing.registerRoute(
-  /https:\/\/api\.mapbox\.com/,
-  new workbox.strategies.NetworkFirst()
-)
-
-workbox.routing.registerRoute(
-  /https:\/\/events\.mapbox\.com\/events/,
-  new workbox.strategies.NetworkFirst()
-)
 
 workbox.precaching.precacheAndRoute([
   {
@@ -1714,12 +1698,20 @@ workbox.precaching.precacheAndRoute([
     "revision": "0bb900f35d34e5aa1d308de8eeb6c6fc"
   },
   {
+    "url": "logo_192.png",
+    "revision": "992230716b9b0294d854f6275b51b44a"
+  },
+  {
+    "url": "logo_512.png",
+    "revision": "85f885dd9759a72b125b7c8112298a74"
+  },
+  {
     "url": "logo.png",
     "revision": "2fdc8d1a0b5d06efad5f111be66fd367"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "f462dfc019d954d617c2bee35231899a"
+    "revision": "a18882ca3b21d1a3ce4812c576aa2b36"
   },
   {
     "url": "responsivevoice.js",
