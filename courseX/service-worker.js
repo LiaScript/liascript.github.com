@@ -1633,7 +1633,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "38b5972d00036c6da5063d47cff08550"
+    "revision": "723c9295eeb750c9851c20cd4e618089"
   },
   {
     "url": "katex.b10d54c2.js",
@@ -1714,5 +1714,9 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "src.83571ee8.js",
     "revision": "bb0cdad80abd4be8567021e74c78477b"
+  },
+  {
+    "url": "webcomponents-bundle.72bd000a.js",
+    "revision": "8337703b7c66677568e06dd5a20669de"
   }
 ]);
