@@ -20,8 +20,8 @@ workbox.routing.registerRoute(
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "ace.7280c5e3.js",
-    "revision": "c1f94a23a4863bd3474db173cc187d63"
+    "url": "ace.fad06d9b.js",
+    "revision": "0b82ddfedba7d8e7d53ebacb238df282"
   },
   {
     "url": "ace/ace.js",
@@ -1633,11 +1633,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "dc4b949c70ce1a559bb7176f98d6bb8a"
+    "revision": "32f3a18f3f6490dcc26fe936ca659691"
   },
   {
-    "url": "katex.b10d54c2.js",
-    "revision": "a653daf5bf9b9fd785dea1135e11a3f8"
+    "url": "katex.540b7c1e.js",
+    "revision": "11a7e5e8558d202de4b43bc8adf628b1"
   },
   {
     "url": "logo_192.6ebe038d.png",
@@ -1712,8 +1712,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "8681f434273fd6a267b1a16a035c5f79"
   },
   {
-    "url": "src.3a642bbd.js",
-    "revision": "7d0b3fb1bf1ad5de8555f6b40976ffe8"
+    "url": "src.db5b62f4.js",
+    "revision": "9d60823504986deada4fadb3b7c9a53b"
   },
   {
     "url": "webcomponents-bundle.72bd000a.js",
