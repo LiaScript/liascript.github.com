@@ -31133,8 +31133,8 @@ var persistent = {
       _iteratorError = err;
     } finally {
       try {
-        if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-          _iterator["return"]();
+        if (!_iteratorNormalCompletion && _iterator.return != null) {
+          _iterator.return();
         }
       } finally {
         if (_didIteratorError) {
@@ -31170,8 +31170,8 @@ var persistent = {
           _iteratorError3 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
-              _iterator3["return"]();
+            if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+              _iterator3.return();
             }
           } finally {
             if (_didIteratorError3) {
@@ -31185,8 +31185,8 @@ var persistent = {
       _iteratorError2 = err;
     } finally {
       try {
-        if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
-          _iterator2["return"]();
+        if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+          _iterator2.return();
         }
       } finally {
         if (_didIteratorError2) {
