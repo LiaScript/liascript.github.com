@@ -1699,7 +1699,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "lia/index.js",
-    "revision": "c757814cc72efe47dde295f8f7ce2e79"
+    "revision": "028a347d74c1f3c2ef802c262ad5ca68"
   },
   {
     "url": "logo_192.png",
