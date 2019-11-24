@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Lia</title>
 
@@ -18,13 +18,29 @@
     <script src="//code.responsivevoice.org/responsivevoice.js?key=blVZszUw"></script>
     <!--script type="text/javascript" src='responsivevoice.js'></script-->
 
+    <link rel="shortcut icon" sizes="192x192" href="./logo_192.png">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lia">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LiaScript">
+    <meta name="msapplication-TileImage" content="./logo_192.png">
+    <meta name="msapplication-TileColor" content="#0071c5">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="manifest" href="./manifest.webmanifest">
+
+
+
     <!-- Fonts -->
-    <link rel="stylesheet" href="css/material.css">
-    <link rel="stylesheet" href="css/roboto.css">
+    <link rel="stylesheet" href="./css/material.css">
+    <link rel="stylesheet" href="./css/roboto.css">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="logo.png">
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./logo.png">
+    <link rel="icon" href="./logo.png" type="image/png">
 
     <style>
     .lds-dual-ring {
@@ -53,12 +69,17 @@
     }
     </style>
 
-  <link href="lia/index.css" rel="stylesheet">
-  <link href="formula/index.css" rel="stylesheet">
-  </head>
+  <link href="./lia/index.css" rel="stylesheet"></head>
   <body id="lia">
-
-  <script type="text/javascript" src="lia/index.js"></script>
-  <script type="text/javascript" src="editor/index.js"></script>
-  <script type="text/javascript" src="formula/index.js"></script></body>
+    <noscript>
+      This page requires JavaScript to be enabled!
+    </noscript>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register("./sw.js").then(console.log).catch(console.error);
+        })
+      }
+    </script>
+  <script type="text/javascript" src="./lia/index.js"></script><script type="text/javascript" src="./editor/index.js"></script><script type="text/javascript" src="./formula/index.js"></script></body>
 </html>
