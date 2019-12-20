@@ -23,6 +23,10 @@ workbox.routing.registerRoute(
 
 workbox.precaching.precacheAndRoute([
   {
+    "url": "ace.d6e2fa52.js",
+    "revision": "63fce85b8059df61af5d067a8c8bddf1"
+  },
+  {
     "url": "css/fonts/roboto-mono-v5-cyrillic-ext-regular.svg",
     "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
   },
@@ -161,10 +165,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "editor/ext-whitespace.js",
     "revision": "a69009c59ec6f8498daae63971bd7814"
-  },
-  {
-    "url": "editor/index.js",
-    "revision": "0c697d4aa980df2cbfdf2dfbb2f5fbb6"
   },
   {
     "url": "editor/keybinding-emacs.js",
@@ -1691,31 +1691,31 @@ workbox.precaching.precacheAndRoute([
     "revision": "7ccfa0a5a168883a2dde96ec0da8526f"
   },
   {
-    "url": "formula/index.js",
-    "revision": "3945000033fd6b83b3ef5499e33ee087"
-  },
-  {
     "url": "index.html",
-    "revision": "4e36b80fc220d0f8d72f58032b83e41c"
+    "revision": "1327ebeb388f6f31b40b77bf31203ec1"
   },
   {
-    "url": "lia/index.js",
-    "revision": "02dd2cc38a0f82c1609f95c9242a550a"
+    "url": "katex.0cc7c58c.js",
+    "revision": "ceba7e1de1f14b0d5ed41962a60516ac"
   },
   {
-    "url": "logo_192.png",
+    "url": "logo_192.c4a21617.png",
     "revision": "2c51d9d5ddcc1546b8c0073048a3cf33"
   },
   {
-    "url": "logo_512.png",
+    "url": "logo_512.7373a196.png",
     "revision": "d1185259238e2c77af42275d6e4f78aa"
   },
   {
-    "url": "manifest.webmanifest",
-    "revision": "a18882ca3b21d1a3ce4812c576aa2b36"
+    "url": "logo.1e973952.png",
+    "revision": "318ee348a5f5665649ed7489abe9fb0a"
   },
   {
-    "url": "responsivevoice.js",
-    "revision": "b57a03700033fde82f093d4980359885"
+    "url": "manifest.webmanifest",
+    "revision": "cf07c9854e23e78474779c39f2f81716"
+  },
+  {
+    "url": "src.214ef859.js",
+    "revision": "b7197bfa6fa25e0d64ecfaf7e05b9ca8"
   }
 ]);
