@@ -27,62 +27,6 @@ workbox.precaching.precacheAndRoute([
     "revision": "63fce85b8059df61af5d067a8c8bddf1"
   },
   {
-    "url": "css/fonts/roboto-mono-v5-cyrillic-ext-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-mono-v5-cyrillic-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-mono-v5-greek-ext-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-mono-v5-greek-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-mono-v5-latin-ext-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-mono-v5-latin-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-mono-v5-vietnamese-regular.svg",
-    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
-  },
-  {
-    "url": "css/fonts/roboto-v18-cyrillic-ext-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
-    "url": "css/fonts/roboto-v18-cyrillic-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
-    "url": "css/fonts/roboto-v18-greek-ext-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
-    "url": "css/fonts/roboto-v18-greek-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
-    "url": "css/fonts/roboto-v18-latin-ext-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
-    "url": "css/fonts/roboto-v18-latin-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
-    "url": "css/fonts/roboto-v18-vietnamese-regular.svg",
-    "revision": "8681f434273fd6a267b1a16a035c5f79"
-  },
-  {
     "url": "editor/ace.js",
     "revision": "e1ec2dda9ad25e3e4005b01372210e84"
   },
@@ -1692,7 +1636,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "71163cfc8d5b9d9207ad54bafea0343f"
+    "revision": "a566033882d8d48b1b35a5a0968a8538"
   },
   {
     "url": "katex.0cc7c58c.js",
@@ -1715,7 +1659,63 @@ workbox.precaching.precacheAndRoute([
     "revision": "cf07c9854e23e78474779c39f2f81716"
   },
   {
-    "url": "src.90c7529e.js",
-    "revision": "7dec7266069f6215338faa8c38efc3c3"
+    "url": "roboto-mono-v5-cyrillic-ext-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-mono-v5-cyrillic-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-mono-v5-greek-ext-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-mono-v5-greek-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-mono-v5-latin-ext-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-mono-v5-latin-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-mono-v5-vietnamese-regular.096de2e9.svg",
+    "revision": "96a9bbe5d32f7fe96e844bcbf7b4e05d"
+  },
+  {
+    "url": "roboto-v18-cyrillic-ext-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "roboto-v18-cyrillic-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "roboto-v18-greek-ext-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "roboto-v18-greek-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "roboto-v18-latin-ext-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "roboto-v18-latin-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "roboto-v18-vietnamese-regular.ab9033c4.svg",
+    "revision": "8681f434273fd6a267b1a16a035c5f79"
+  },
+  {
+    "url": "src.4d34e21f.js",
+    "revision": "dca1629318daaf757ac8733728c10c7b"
   }
 ]);
