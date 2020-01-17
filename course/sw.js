@@ -23,16 +23,20 @@ workbox.routing.registerRoute(
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "ace.d6e2fa52.js",
-    "revision": "63fce85b8059df61af5d067a8c8bddf1"
+    "url": "ace.3816e151.js",
+    "revision": "01991f6c6bf90d413ef60519c4316c38"
   },
   {
     "url": "editor/ace.js",
-    "revision": "e1ec2dda9ad25e3e4005b01372210e84"
+    "revision": "ba9c388a602817614a005f2fdf535262"
   },
   {
     "url": "editor/ext-beautify.js",
     "revision": "31c3e5d055ddc7d858d450cc170310d5"
+  },
+  {
+    "url": "editor/ext-code_lens.js",
+    "revision": "5d8de58e86dc722fc00f17349db4325f"
   },
   {
     "url": "editor/ext-elastic_tabstops_lite.js",
@@ -40,7 +44,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/ext-emmet.js",
-    "revision": "be1e45a1d7a347f67469ca020f89d989"
+    "revision": "bc288c2d34ba6203d227656479052ae4"
   },
   {
     "url": "editor/ext-error_marker.js",
@@ -52,7 +56,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/ext-language_tools.js",
-    "revision": "821c0ced5fa5983a47712bfcd8719e85"
+    "revision": "c8da72b0191abafc7f5241e37a64b7c5"
   },
   {
     "url": "editor/ext-linking.js",
@@ -60,15 +64,15 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/ext-modelist.js",
-    "revision": "ea9501ddd32bce075ef9a207a8c837d6"
+    "revision": "97fda0aa72d4d7b358bfaa15522408dc"
   },
   {
     "url": "editor/ext-options.js",
-    "revision": "a2537c865dbca3cb429a8313ff442697"
+    "revision": "4aa76e09343da24bcc6af00747ee13fa"
   },
   {
     "url": "editor/ext-prompt.js",
-    "revision": "6dd4fbe92fdbb3fe112e679a22619302"
+    "revision": "f22cd1eb2e36c970b660381836176e15"
   },
   {
     "url": "editor/ext-rtl.js",
@@ -80,11 +84,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/ext-settings_menu.js",
-    "revision": "cb0018120d876c335404547d2c5611ff"
+    "revision": "fc66817fb81aee73ff2583e5f87fceb4"
   },
   {
     "url": "editor/ext-spellcheck.js",
-    "revision": "31741ab4452f0085664d81c96343c1eb"
+    "revision": "d06418ea6ef96f11a0b4f4f8e8457eb1"
   },
   {
     "url": "editor/ext-split.js",
@@ -112,15 +116,19 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/keybinding-emacs.js",
-    "revision": "6c29ef83bd641a2a1a21cec5dbec50b2"
+    "revision": "cad85576cce84e1ed26bb9f8b7183589"
   },
   {
     "url": "editor/keybinding-sublime.js",
-    "revision": "a36c3ac4eae9d24071c3497ddcbe8f38"
+    "revision": "8d3d61ca57c26ffe219758416a90c332"
   },
   {
     "url": "editor/keybinding-vim.js",
-    "revision": "ee8d4be6d41e1061d713559726d52a51"
+    "revision": "da681e620435df48f5f98048f5144a5f"
+  },
+  {
+    "url": "editor/keybinding-vscode.js",
+    "revision": "e207175f3060ee511f61a9df4739e157"
   },
   {
     "url": "editor/mode-abap.js",
@@ -216,11 +224,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/mode-csound_document.js",
-    "revision": "5ab7d4d43c0da113fb8320457dcc8799"
+    "revision": "23beabdcc030ccb1faa7405343dee1f5"
   },
   {
     "url": "editor/mode-csound_orchestra.js",
-    "revision": "11b3ea7fb3f24fea6f3fa0e4e97ce761"
+    "revision": "28a1595262139c3ebdd88ecbcfa00228"
   },
   {
     "url": "editor/mode-csound_score.js",
@@ -407,6 +415,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "e9d3cf13cd3d35ea6735bb4cefcfeffd"
   },
   {
+    "url": "editor/mode-json5.js",
+    "revision": "5ceef9e4deae1719f9969ec6f13efb0f"
+  },
+  {
     "url": "editor/mode-jsoniq.js",
     "revision": "f2acd1aab459563bc17a2d4c6839455e"
   },
@@ -524,7 +536,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/mode-nsis.js",
-    "revision": "854e874acc59377f7c8f9b522f72a821"
+    "revision": "bdf52a1d5288152388b079d0605feefc"
+  },
+  {
+    "url": "editor/mode-nunjucks.js",
+    "revision": "5f72f8eafed25ce23ba8299c8b34bbe1"
   },
   {
     "url": "editor/mode-objectivec.js",
@@ -628,7 +644,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/mode-rust.js",
-    "revision": "575de34923c2ff17f16538c6bf9c74b5"
+    "revision": "247fa9c96db9a15137c2a0bd5c7363ae"
   },
   {
     "url": "editor/mode-sass.js",
@@ -760,7 +776,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/mode-vhdl.js",
-    "revision": "813d2c2b69d315ecfd57d19cb47ada89"
+    "revision": "b543bab0240209ff77cd8912cd325996"
   },
   {
     "url": "editor/mode-visualforce.js",
@@ -1071,6 +1087,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "acbb3a2af8533d78003ddfeec2eda332"
   },
   {
+    "url": "editor/snippets/json5.js",
+    "revision": "c3453a29582700814563fdb4bc877e2b"
+  },
+  {
     "url": "editor/snippets/jsoniq.js",
     "revision": "452b013b70e2d0c9d797fd1e788fb122"
   },
@@ -1189,6 +1209,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "editor/snippets/nsis.js",
     "revision": "f1fd4fe5cda72fbadb4f3fcc39741d93"
+  },
+  {
+    "url": "editor/snippets/nunjucks.js",
+    "revision": "8fe32280844daad8c2be90b3e747b780"
   },
   {
     "url": "editor/snippets/objectivec.js",
@@ -1628,7 +1652,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "editor/worker-xml.js",
-    "revision": "0f5a20b71a663b45078e658cee4fc1cc"
+    "revision": "115172f6275d6faf3d6a400251434c25"
   },
   {
     "url": "editor/worker-xquery.js",
@@ -1636,11 +1660,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "2a01159331c20a56cbb19db23813cfb0"
+    "revision": "b5ee1be607be9c7de3168e41eb3e2a15"
   },
   {
-    "url": "katex.0cc7c58c.js",
-    "revision": "ceba7e1de1f14b0d5ed41962a60516ac"
+    "url": "katex.93935eb1.js",
+    "revision": "dbc23af3f0bdf88cdfa72fe1e834ffaa"
   },
   {
     "url": "logo_192.c4a21617.png",
