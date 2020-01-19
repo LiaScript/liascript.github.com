@@ -1660,11 +1660,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "b5ee1be607be9c7de3168e41eb3e2a15"
+    "revision": "103a977604f1af2519ba39efd755aff9"
   },
   {
-    "url": "katex.93935eb1.js",
-    "revision": "dbc23af3f0bdf88cdfa72fe1e834ffaa"
+    "url": "katex.3673bd25.js",
+    "revision": "332eb7918a8923221c6fd246b7f2c30d"
   },
   {
     "url": "logo_192.c4a21617.png",
