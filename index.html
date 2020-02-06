@@ -39,6 +39,36 @@
     <link rel="apple-touch-icon" href="/course/logo.png">
     <link rel="icon" href="/course/logo.png" type="image/png">
 
+    <script>
+      function load (url) {
+
+        url = url.trim()
+
+        let pat = [
+          { regex: /https?:\/\/github\.com\/.*/i,
+            replace: /https?:\/\/github\.com\//i,
+            by: "https://raw.githubusercontent.com/"
+          },
+          { regex: /https?:\/\/www\.dropbox.com\/s\/.*/i,
+            replace: /https?:\/\/www\.dropbox.com\/s\//i,
+            by: "https://dl.dropbox.com/s/"
+          }
+        ]
+
+        for (let i = 0; i<pat.length; i++) {
+          try {
+            if (url.match(pat[i].regex)[0] == url) {
+              url = url.replace(pat[i].replace, pat[i].by)
+
+              break;
+            }
+          } catch (e) {}
+        }
+
+        return 'course/?' + url
+      }
+    </script>
+
   </head>
 
   <body>
@@ -82,7 +112,7 @@
                   <input type="url" class="form-control form-control-lg" placeholder="Enter your course url ..." id="course_url1">
                 </div>
                 <div class="col-12 col-md-3">
-                  <button class="btn btn-block btn-lg btn-primary" onclick="location.href = 'course/?'+$('#course_url1').val(); return false;">Load course!</button>
+                  <button class="btn btn-block btn-lg btn-primary" onclick="location.href = load($('#course_url1').val()); return false;">Load course!</button>
                 </div>
               </div>
             </form>
@@ -307,7 +337,7 @@
                   <input type="url" class="form-control form-control-lg" placeholder="Enter your course url..." id="course_url2">
                 </div>
                 <div class="col-12 col-md-3">
-                  <button class="btn btn-block btn-lg btn-primary" onclick="location.href = 'course/?'+$('#course_url2').val(); return false;">Load!</button>
+                  <button class="btn btn-block btn-lg btn-primary" onclick="location.href = load($('#course_url2').val()); return false;">Load!</button>
                 </div>
               </div>
             </form>
