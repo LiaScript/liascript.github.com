@@ -41,30 +41,7 @@
 
     <script>
       function load (url) {
-
         url = url.trim()
-
-        let pat = [
-          { regex: /https?:\/\/github\.com\/.*/i,
-            replace: /https?:\/\/github\.com\//i,
-            by: "https://raw.githubusercontent.com/"
-          },
-          { regex: /https?:\/\/www\.dropbox.com\/s\/.*/i,
-            replace: /https?:\/\/www\.dropbox.com\/s\//i,
-            by: "https://dl.dropbox.com/s/"
-          }
-        ]
-
-        for (let i = 0; i<pat.length; i++) {
-          try {
-            if (url.match(pat[i].regex)[0] == url) {
-              url = url.replace(pat[i].replace, pat[i].by)
-
-              break;
-            }
-          } catch (e) {}
-        }
-
         return 'course/?' + url
       }
     </script>
