@@ -9,12 +9,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js"></script>
-  
+
 <body>
 
-<lia-script>
+<lia-script><!--
 
-# Hallo Welt
+author:   André Dietrich
+email:    LiaScript@web.de
+version:  8.0.1
+language: en
+narrator: US English Male
+
+logo:     https://liascript.github.io/img/bg-showcase-1.jpg
+
+comment:  This document shall provide an entire compendium and course on the
+          development of Open-courSes with [LiaScript](https://LiaScript.github.io).
+          As the language and the systems grows, also this document will be updated.
+          Feel free to fork or copy it, translations are very welcome...
+
+script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
+          https://felixhao28.github.io/JSCPP/dist/JSCPP.es5.min.js
+
+link: https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
+
+link: https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css
+
+translation: Deutsch  translations/German.md
+translation: Français translations/French.md
+translation: Русский  translations/Russian.md
+
+-->
+
+# Lia-Script
+
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://github.com/LiaScript/docs) [![Gitter](https://badges.gitter.im/LiaScript/community.svg)](https://gitter.im/LiaScript/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+---
+
+                                    --{{0}}--
+With Lia, we try to implement an extended Markdown format that should enable
+everyone to create, share, adapt, translate or correct and extend online courses
+without the need of being a web-developer.
+
+See the online rendered version at:
+https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md
+
+                                    --{{0}}--
+Click on the (ear) button at the navigation bar to switch between spoken and
+plain text mode format. And use the arrows-buttons at the top for navigating.
+
+
+*Lia-Script* <!-- class = "animated infinite bounce" style = "color: red;" onclick = "alert('It started with a click!');" -->
+is an extended Markdown format for writing interactive online
+courses. Imagine all schoolbooks, technical or scientific literature could
+become open-source projects and more interactive ... with collaborating teachers
+and students ...
+
+* easy to share adapt and translate
+* no additional software required, everything is implemented in JavaScript/Elm
+  and runs directly within the browser (online)
+* automatic conversion to epub, pdf, ...
+
+
+                                     --{{1}}--
+Everything that is required is simple text-editor and a web-browser. Or you
+start directly to create and share your course on github. The entire parsing and
+transformation of Lia-Markdown to any other format is done within the browser at
+client-side.
+
+
+## Tools
+
+                                     --{{0}}--
+There are currently 2 Plugins for the [Atom Editor](https://atom.io/) available,
+which are intended to ease and simplify the development of online course with
+LiaScript.
+
+[liascript-preview](https://atom.io/packages/liascript-preview): Is a tiny
+previewer that, if it was toggled, updates the view on your course each time you
+save your document.
+
+
+![previewer](https://raw.githubusercontent.com/andre-dietrich/liascript-preview/master/preview.gif)<!-- style="width: 100%" -->
+
+[liascript-snippets](https://atom.io/packages/liascript-snippets): If you start
+typing "lia" in your document you switch on a fuzzy search, that contains a lot
+of LiaScript help, examples, and snippets.
+
+![snippets](https://raw.githubusercontent.com/andre-dietrich/liascript-snippets/master/preview.gif)<!-- style="width: 100%" -->
+
+
+## *Markdown*-Syntax
+
+
+                                     --{{0}}--
+This section is intended to give a brief overview on the basic Markdown
+formatting elements. The only difference to common Markdown at this point is,
+that every course has to start with a comment, which defines authors, a language
+and  a narrator voice, see https://responsivevoice.org for all supported voices.
+
+Initial LIA-comment-tag for basic definitions:
+
+``` XML
+<!--
+
+author:   Andre Dietrich
+
+email:    LiaScript@web.de
+
+version:  0.0.1
+
+language: en
+
+narrator: US English Female
+
+script:   javascript resourse url
+
+script:   another javascript resourse url
+
+link:     some css stuff
+          and some more css
+
+-->
+```
+
+
 
 </lia-script>
 
