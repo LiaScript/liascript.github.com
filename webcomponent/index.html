@@ -12,7 +12,7 @@
 
 <body>
 
-<lia-script><!--
+<lia-script responsiveVoiceKey="blVZszUw"><!--
 
 author:   André Dietrich
 email:    LiaScript@web.de
@@ -28,15 +28,10 @@ comment:  This document shall provide an entire compendium and course on the
           Feel free to fork or copy it, translations are very welcome...
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
-          https://felixhao28.github.io/JSCPP/dist/JSCPP.es5.min.js
 
 link: https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 link: https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css
-
-translation: Deutsch  translations/German.md
-translation: Français translations/French.md
-translation: Русский  translations/Russian.md
 
 -->
 
@@ -131,6 +126,1245 @@ link:     some css stuff
           and some more css
 
 -->
+```
+
+
+### Structuring
+
+                                    --{{0}}--
+A course is structured as any other Markdown document with starting hash-tags,
+whereby the number of hash-tags is used to define the hierarchy.
+
+```markdown
+# Main Title
+
+ ...
+
+## Section Title 1
+
+ ...
+
+### Subsection Title
+
+ ...
+## Section Title 2
+
+Local Subsection
+================
+
+Local Sub-SubSection
+--------------------
+```
+
+
+                                    --{{1}}--
+If you want to structure your sections further, then the following syntax can
+be applied. These subsections are not part of the table of contents, but it can
+be used to add further headings to your slide.
+
+                                      {{1}}
+```markdown
+...
+
+## Section Title
+
+Local Subsection
+================
+
+Local Sub-SubSection
+--------------------
+```
+
+
+
+### Text-Formatting
+
+                                    --{{0}}--
+We tried to use the github flavored Markdown style for simple formatting with
+some additional elements.
+
+\*italic\* -> *italic*
+
+\*\*bold\*\* -> **bold**
+
+\*\*\*bold and italic \*\*\* -> ***bold and italic ***
+
+\_also italic\_ -> _also italic_
+
+\_\_also bold\_\_ -> __also bold__
+
+\_\_\_also bold and italic\_\_\_ -> ___also bold and italic___
+
+\~strike\~ -> ~strike~
+
+                                     --{{1}}--
+These exceptions are for example underline and its combination with strike
+through or the application of superscript. If you, for example, superscript
+superscript you can get even smaller.
+
+                                       {{1}}
+********************************************************************************
+
+\~\~underline\~\~ -> ~~underline~~
+
+\~\~\~strike and underline\~\~\~ -> ~~~strike and underline~~~
+
+\^superscript\^ -> ^superscript^ ^^superscript^^ ^^^superscript^^^
+
+********************************************************************************
+
+
+#### Combinations
+
+                                     --{{0}}--
+As you can see from the examples, you can combine all elements freely.
+
+
+\*\*bold \_bold italic\_\*\* -> **bold _italic_**
+
+\*\*\~bold strike\~ \~\~bold underline\~\~\*\* -> **~bold strike~ ~~bold underline~~**
+
+\*\~italic strike\~ \~\~italic underline\~\~\* -> *~italic strike~ ~~italic underline~~*
+
+#### Escape Characters
+
+\*, \~, \_, \#, \{, \}, \[, \], \|, \`, \$, \@
+
+                                     --{{0}}--
+If you want to use multiple stars, hash-tags, or other syntax elements within
+your script without applying their functionality, then you can escape them with
+a starting backslash.
+
+### Symbols
+
+                                     --{{0}}--
+One thing that we missed in standard Markdown, was an implementation for arrows.
+The parenthesis shows, how arrows are defined in our Markdown implementation with
+their result on the right (these symbols are generated automatically for you).
+
+(`->`) ->, (`->>`) ->>, (`>->`) >->, (`<-`) <-, (`<-<`) <-<,
+(`<<-`) <<-, (`<->`) <->, (`=>`) =>, (`<=`) <=, (`<=>`) <=>
+
+(`-->`) -->, (`<--`) <--, (`<-->`) <-->, (`==>`) ==>, (`<==`) <==, (`<==>`) <==>
+
+(`~>`) ~>, (`<~`) <~
+
+                                     --{{1}}--
+But you can also use some basic smileys. We will try to extend this partial
+support in the future.
+
+                                       {{1}}
+`:-)` :-), `;-)` ;-), `:-D` :-D, `:-O` :-O, `:-(` :-(, `:-|` :-|,
+`:-/` :-/, `:-P` :-P, `:-*` :-*, `:')` :'), `:'(` :'(
+
+### References
+
+The next section shows how external resources can be integrated.
+
+#### Simple Links
+
+                                     --{{0}}--
+There are two ways of adding links to a Markdown document, either by inlining
+the url directly or you can name it, as shown in listing 2, by applying the
+typical brackets and parenthesis notation, the optional info is put in double
+quotes at the end of the url.
+
+
+1. example of an url-link -> http://goo.gl/fGXNvu
+
+   text-formatting can be applied also (`*** http://goo.gl/fGXNvu ***`) ->
+   *** http://goo.gl/fGXNvu ***
+
+2. naming the link (`[title](http://goo.gl/fGXNvu "optional info")`) -> [title](http://goo.gl/fGXNvu "click Me")
+
+3. For internal navigation you can refer to the slide number or to title with
+   with a starting `#`
+
+   * `[next slide](#11)` -> [next slide](#11)
+   * `[next slide](#images-and-movies)` -> [next slide](#images-and-movies)
+
+
+##### Preview-Lia
+
+                                    --{{0}}--
+LiaScript has an advanced preview link, that will load the remote course and
+parse the main information such as title, version, comment, logo, email, tags,
+form your main HTML-comment at the top of you document. To do this, you will
+have to used `[preview-lia]` as the title of your link, which is followed by the
+raw url of your course document.
+
+
+`[preview-lia](https://raw.githubusercontent.com/LiaScript/docs/master/README.md)`
+
+[preview-lia](https://raw.githubusercontent.com/LiaScript/docs/master/README.md)
+
+
+                                    --{{1}}--
+You can use this technique also to create previews for other courses on your
+personal website or for other GitHub projects. For more information follow the
+link:
+
+{{1}} https://aizac.herokuapp.com/markdown-just-got-a-new-preview-tag/
+
+
+##### QR-Codes
+
+Sometimes it might be required to have both, a link and a visual representation:
+__QR-Codes__. Similar to preview links you simply, simply name your link:
+`[qr-code](url)`.
+
+[qr-code](https://LiaScript.github.io)
+
+You can further add some information, if you add a title to the link. By the way, Markdown is also allowed within the link-title:
+
+`[qr-code](https://LiaScript.github.io "Checkout the LiaScript website or the __[blog](https://aizac.herokuapp.com)__")`
+
+[qr-code](https://LiaScript.github.io "Checkout the LiaScript website or the __[blog](https://aizac.herokuapp.com)__")
+
+
+
+#### Images and Movies
+
+                                    --{{0}}--
+Images are marked with a starting exclamation mark before the link, audio by a
+starting question mark and movies are made of images and sound, that is why you
+combine both marks `!?`. Defining ressources this way shows at least the links
+correctly in other Markdown parsers or on github. There is baked-in support for
+[YouTube](https://YouTube.com), [Soundcloud](https://Soundcloud.com),
+[Vimeo](https://Vimeo.com) and [TeacherTube](https://TeacherTube.com), which
+means that you only have to include the link and the resource will be embedded
+appropriately.
+
+                                    --{{1}}--
+The trailing information that you add to your image in `"` will add a caption.
+You can also use Markdown in here as well as formulas, but keep it short 😄...
+
+
+**Image-notation: `![alt-text](image-url "some info")`**
+
+- url: `![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg "_Fig_: a picture of a very friendly lion")`
+- ![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg "_Fig_: a picture of a very friendly lion")
+- relative path: `![image](img/lenna.jpg)`
+- ![image](img/lenna.jpg)
+
+---
+
+**Audio-notation: `?[alt-text](audio-url "some info")`**
+
+- `?[a horse](https://www.w3schools.com/html/horse.mp3 "hear a horse")`
+- ?[a horse](https://www.w3schools.com/html/horse.mp3 "hear a horse")
+- `?[soundcloud](https://soundcloud.com/glennmorrison/beethoven-moonlight-sonata "just add the link")`
+- ?[a horse](https://soundcloud.com/glennmorrison/beethoven-moonlight-sonata "just add the link")
+
+---
+
+**Movie-notation: `!?[alt-text](movie-url)`**
+
+- YouTube: `!?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)`
+- !?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)
+- See also http://www.google.com/support/youtube/bin/answer.py?hl=en&answer=56107
+    to get an overview on how a YouTube link has to be formatted to add a starting
+    and/or end point, autoplay, subtitles, and other options.
+- relative path: `!?[movie](vid/math.mp4)`
+- !?[movie](vid/math.mp4) <!-- width="60%" -->
+
+### Styling
+
+                                    --{{0}}--
+Adding CSS elements or classes or any other HTML setting to an image or to any
+other Markdown element is implemented via a trailing comment-tag, everything
+within this comment is treated as a HTML attribute, so that it can
+also be used to apply graphical filters of for positioning.
+
+
+``` markdown
+![image](...Creative-Tail-Animal-lion.svg)<!--
+style = "width: 100px;
+         border: 10px solid;
+         filter: grayscale(100%);"
+
+class = "animated infinite bounce"
+-->
+```
+
+
+![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
+style = "width: 100px;
+         border: 10px solid;
+         filter: grayscale(100%);"
+
+class = "animated infinite bounce"
+-->
+![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
+style="
+  width: 120px;
+  border: 10px solid;"
+-->
+![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
+  style="width: 140px;
+  border: 10px solid;"
+-->
+![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
+  style="width: 120px;
+  border: 10px solid;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);"
+-->
+![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)<!--
+  style="width: 100px;
+  border: 10px solid;
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);"
+-->
+
+                                     --{{1}}--
+The same technique can also be applied to style and format movies and other inline
+elements, such as links, words, symbols, or code...
+
+                                       {{1}}
+********************************************************************************
+
+!?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
+style = "width: 100px; height: 60px;"
+-->
+!?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
+style = "width: 120px; height: 70px;"
+-->
+!?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
+style = "width: 140px; height: 80px;"
+-->
+!?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
+style = "width: 120px;
+         height: 70px;
+         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+         filter: grayscale(100%);"
+-->
+!?[movie](https://www.youtube.com/watch?v=8pTEmbeENF4)<!--
+style = "width: 100px;
+         height: 60px;
+         -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+         filter: blur(5px);"
+-->
+
+`:-) <!-- class = "animated infinite bounce" -->` ==> :-) <!-- class = "animated infinite bounce" -->
+
+`[google](www.google.de) <!-- style = "color: red;" -->` ==> [google](www.google.de) <!-- style = "color: red;" -->
+
+********************************************************************************
+
+
+#### Block-Styling
+
+                                  --{{0}}--
+Settings for entire blocks can be set with a **starting** comment that includes
+all required HTML-attributes and can even contain animation settings. These can
+be used to highlight specific elements of your slides.
+
+
+``` markdown
+<!-- class = "animated rollIn" style = "animation-delay: 3s; color: purple" -->
+The whole text-block should appear in purple color and with a wobbling effect.
+Which is a **bad** example, please use it with causion ...
+~~ ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
+```
+
+<!-- class = "animated rollIn" style = "animation-delay: 3s; color: purple" -->
+The whole text-block should appear in purple color and with a wobbling effect.
+Which is a **bad** example, please use it with causion ...
+~~ ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
+
+### Lists & Tables
+
+Within the following part enumerations, itemizations and tables are presented,
+actually with no difference to basic Markdown, so you can skip this section,
+if you are already familiar with it.
+
+#### Unordered Lists
+
+                                 --{{0}}--
+To define unordered list, starting stars, pluses, and minuses can be used and
+mixed. If one point has more than one line, you can also use newlines, but with
+spaces at the beginning. Paragraphs can be included in the same way, by using
+two newlines.
+
+Markdown-format:
+
+``` markdown
+* alpha
++ *beta*
+- gamma
+  and delta
+
+  new Paragraph
+```
+
+Result:
+
+* alpha
++ *beta*
+- gamma
+  and delta
+
+  new Paragraph
+
+
+#### Ordered Lists
+
+                                 --{{0}}--
+Ordered list start with a number and a dot. As you can see from the example, the
+numbering is important, n contrast to the github flavored Markdown. This way you
+can separate lists, add something in between, make use of animations and
+effects. And it is also possible to mix lists with other lists and elements
+freely.
+
+Markdown-format:
+
+``` markdown
+0. alpha
+2. **beta**
+1. * gamma
+   * delta
+   * and epsilon
+3. probably zeta
+```
+
+Result:
+
+0. alpha
+2. **beta**
+1. * gamma
+   * delta
+   * and epsilon
+3. probably zeta
+
+#### Tables
+
+
+> __Note:__ Checkout section [Fun With Tables](#66) to see what is even possible
+> with tables. The follow section provides only a small overview...
+
+                                   --{{0}}--
+Tables, we hope, are self-explanatory. The second line is used to define a table
+header as well as the alignment of the column, which is indicated by the colon.
+The default is left alignment. Additionaly you can add a starting comment to a
+cell, that can be used to add additional styling or HTML parameters or the
+entire cell.
+
+Markdown-format:
+
+``` markdown
+| <!-- style="background: #44ffff"--> Tables |      Are      |  Cool |
+| ------------------------------------------ |:-------------:| -----:|
+| *** col 3 is ***                           | right-aligned | $1600 |
+| ** col 2 is **                             |   centered    |   $12 |
+| * zebra stripes *                          |   are neat    |    $1 |
+```
+
+Result:
+
+| <!-- style="background: #44ffff"-->  Tables |      Are      |  Cool |
+| ---------------------------------------- |:-------------:| -----:|
+| *** col 3 is ***                         | right-aligned | $1600 |
+| ** col 2 is **                           |   centered    |   $12 |
+| * zebra stripes *                        |   are neat    |    $1 |
+
+
+                                   --{{1}}--
+As you can see in the LiaScript interpreted version, tables can be sorted
+according to a column, either ascending or descending. But why stopping here?
+Every table also defines a dataset, right. So why not simply using it to
+directly plot graphs, scatter-plots, or bar-charts.
+
+
+                                   --{{2}}--
+If the first column of a table contains only numbers, and the other columns
+contain some numbers, then these values can be directly plotted. The first
+column  thus describes always the x values and the rest is up to you. Use the
+small icon above the table to switch between table view and plotted version.
+
+    {{2}}
+``` md
+| x's |  some y's  |    dist |
+| --- |:----------:| -------:|
+| 1   |    1 \$    | 16 $km$ |
+| 2.2 |    2 \$    | 12 $km$ |
+| 3.3 |    5 \$    |  1 $km$ |
+| 4   | -12.333 \$ |         |
+```
+
+    {{2}}
+| x's |  some y's  |    dist |
+| --- |:----------:| -------:|
+| 1   |    1 \$    | 16 $km$ |
+| 2.2 |    2 \$    | 12 $km$ |
+| 3.3 |    5 \$    |  1 $km$ |
+| 4   | -12.333 \$ |         |
+
+
+                                   --{{3}}--
+A function cannot turn an x value into different y values, thus, if you have at
+least one x value twice, the resulting plot will be a scatter plot. By the way,
+only the first word in a cell (separated by spaces) gets interpreted as a
+number. If you don't want this to happen for a certain cell, then simply attach
+something directly to the number, add a character in front of it or use the math
+notation.
+
+    {{3}}
+``` markdown
+| x's |  some y's  |                              dist |
+| --- |:----------:| ---------------------------------:|
+| 1   |    1 \$    |                           16 $km$ |
+| 2.2 |    2 \$    |                           12 $km$ |
+| 3.3 |    5 \$    |                            1 $km$ |
+| 4   | -12.333 \$ | -555$km$ <-- this will be ignored |
+| 4   |            |                                 1 |
+```
+
+    {{3}}
+| x's |  some y's  |                              dist |
+| --- |:----------:| ---------------------------------:|
+| 1   |    1 \$    |                           16 $km$ |
+| 2.2 |    2 \$    |                           12 $km$ |
+| 3.3 |    5 \$    |                            1 $km$ |
+| 4   | -12.333 \$ | -555$km$ <-- this will be ignored |
+| 4   |            |                                 1 |
+
+
+                                   --{{4}}--
+Last but not least _bar-charts_. If the first column contains at least one cell,
+that cannot be parsed as a number, while the other columns still have numbers,
+then this table gets interpreted as a bar-chart. The first column thus defines
+your set of groups. It is now also possible to sort your table according to
+different columns and see this ordering also within the bar-chart representation.
+
+
+    {{4}}
+```markdown
+| Animal          | weight in kg | Lifespan years | Mitogen |
+| --------------- | ------------:| --------------:| -------:|
+| Mouse           |        0.028 |             02 |      95 |
+| Flying squirrel |        0.085 |             15 |      50 |
+| Brown bat       |        0.020 |             30 |      10 |
+| Sheep           |           90 |             12 |      95 |
+| Human           |           68 |             70 |      10 |
+```
+
+    {{4}}
+| Animal          | weight in kg | Lifespan years | Mitogen |
+| --------------- | ------------:| --------------:| -------:|
+| Mouse           |        0.028 |             02 |      95 |
+| Flying squirrel |        0.085 |             15 |      50 |
+| Brown bat       |        0.020 |             30 |      10 |
+| Sheep           |           90 |             12 |      95 |
+| Human           |           68 |             70 |      10 |
+
+
+### Blockquotes
+
+Markdown-format:
+
+``` markdown
+<!--
+style="font-size: 18px; font-style: italic; width: 500px; margin: 0.25em 0;"
+-->
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps...
+```
+
+Result:
+
+<!--
+style="font-size: 18px; font-style: italic; width: 500px; margin: 0.25em 0;"
+-->
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+
+                                   --{{1}}--
+Next to simple paragraphs also any other block element can be included ...
+
+
+                                     {{1}}
+********************************************************************************
+
+``` markdown
+> <!-- style="font-size: 18px; font-style: italic; width: 500px; margin: 5.25em 0;" -->
+> | Tables            | Are           | Cool  |
+> | ----------------- |:-------------:| -----:|
+> | *** col 3 is ***  | right-aligned | $1600 |
+> | ** col 2 is **    | centered      |   $12 |
+> | * zebra stripes * | are neat      |    $1 |
+```
+
+Result:
+
+> <!-- style="font-size: 18px; font-style: italic; width: 500px; margin: 5.25em 0;" -->
+> | Tables            | Are           | Cool  |
+> | ----------------- |:-------------:| -----:|
+> | *** col 3 is ***  | right-aligned | $1600 |
+> | ** col 2 is **    | centered      |   $12 |
+> | * zebra stripes * | are neat      |    $1 |
+
+********************************************************************************
+
+### HTML
+
+You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+Mixing HTML with Markdown is also possible, but it should be used with caution,
+since it is mixing two different styles of parsing.
+
+```HTML
+Test **bold** and <b> HTML bold</b> works also inline
+
+<details>
+
+<summary>$ f(a,b,c) = (a^2+b^2+c^2)^3 $</summary>
+
+<p>
+Here is the source data that is discussed in the article ...
+</p>
+
+<dl>
+  <dt style="color: red">Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt><b>Markdown in HTML</b></dt>
+  <dd>Does _work_ **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+</details>
+```
+
+Test **bold** and <b> HTML bold</b> works also inline
+
+<details>
+
+<summary>$ f(a,b,c) = (a^2+b^2+c^2)^3 $</summary>
+
+<p>
+Here is the source data that is discussed in the article ...
+</p>
+
+<dl>
+  <dt style="color: red">Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt><b>Markdown in HTML</b></dt>
+  <dd>Does _work_ **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+!?[alt-text](https://www.youtube.com/watch?v=g4q55nTnO54)
+
+</details>
+
+
+
+#### HTML & JavaScript
+
+                                 --{{0}}--
+In contrast to common Markdown-Parsers it is also possible to include and
+execute javascript code. If you combine it with your HTML elements, you are free
+to integrate whatever you want.
+
+                                 --{{1}}--
+The last statement of your script defines also the result, that will be shown,
+if and only if it is not `undefined`, or simply use `console.log` to log the
+script activities. As the examples below show, you can combine your scripts with
+LiaScript animations. Thus, they will only be execute in the right
+fragment/context. But. you can do much much more with scripts.
+
+                                  {{1}}
+> Checkout Section [JavaScript](#JavaScript-or-JS-Components) for more information!
+
+``` html
+Do some internal calculation <script> 99 * 88  </script>, the next script
+contains an error <script> 99 * a </script>.
+
+                                  {{1}}
+<div class="ct-chart ct-golden-section" id="chart"></div>
+<script>
+    // Initialize a Line chart in the container with the ID chart
+    new Chartist.Line('#chart', {
+        labels: [1, 2, 3, 4],
+        series: [[100, 120, 180, 200]]
+    });
+
+    console.debug("loaded #chart") // or undefined
+</script>
+```
+
+Do some internal calculation <script> 99 * 88  </script>, the next script
+contains an error: <script> 99 * a </script>.
+
+                                {{2-3}}
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+<script>
+// Initialize a Line chart in the container with the ID chart1
+new Chartist.Line('#chart1', {
+  labels: [1, 2, 3, 4],
+  series: [[100, 120, 180, 200]]
+});
+
+console.debug("loaded #chart1")
+</script>
+
+
+                                {{3}}
+<div class="ct-chart ct-golden-section" id="chart2"></div>
+<script>
+// Initialize a Line chart in the container with the ID chart2
+new Chartist.Line('#chart2', {
+  labels: [1, 2, 3, 4],
+  series: [[-100, 120, 180, 20]]
+});
+
+console.debug("loaded #chart2")
+</script>
+
+                                --{{3}}--
+Note, you have to include all required JavaScript-resourses in the initial
+comment after the script definition. And by combining this feature with
+LiaScript effects, you can build even more sophisticated courses.
+
+
+### HTML Hiding Content
+
+There might be use cases where you either want to show some parts only within
+the HTML world and others only withing the LiaScript world. As it was shortly
+introduced in the section about styling, you can add comments to the start of
+every block to add additional attributes. These attributes can be used a trigger
+to hide or show content.
+
+``` markdown
+<!-- style="display:block" -->
+<div style="display:none">
+
+only visible in LiaScript
+
+</div>
+
+-----------------------------------------------
+
+<!-- style="display:none" -->
+<div style="display:block" width="200px">
+
+Not visible in LiaScript, but everywhere else
+
+</div>
+```
+
+The attributes within the comment overwrite the attributes within the block,
+thus, if there would be more stuff within style, this will be overwritten, but
+other attributes like `width` wont...
+
+## Footnotes
+
+    --{{0}}--
+There are two types of footnotes, either inline or divided ones (into two
+parts). The the footnotbody is only showed in textbook mode, or if you click
+on the marker.
+
+1. Inline Footnote[^1](explanation in one line) => `[^1](explanation in one line)`
+2. Divided into a marker[^2] => `[^2]`, that can appeare every where and an
+   explanation at the bottom of a section.
+
+   ```md
+   [^2]: This is an explanation, than
+         can consist of multiple blocks.
+   ```
+
+[^2]: This is an explanation, than
+      can consist of multiple blocks.
+
+
+## Math-Mode
+
+{{0}} via KaTex http://katex.org
+
+{{1}} Inline math-mode `$ \frac{a}{\sum{b+i}} $` -> $ \frac{a}{\sum{b+i}} $
+
+                                        {{2}}
+Multi-line math-mode can be applied by double dollars `$$ formula $$`
+$$
+  \frac{a}{\sum{b+i}}
+$$
+
+                                    --{{0}}--
+We apply KaTeX for math-formatting, see the documentation at www.katex.org.
+
+                                    --{{1}}--
+A formula can be either inline with single dollars.
+
+                                    --{{2}}--
+Or multi-line by using the double dollar notation.
+
+## Syntax Highlighting
+
+The following section shows a three types of code blocks, simple inline and
+block-code as well as interactive block-code, as an extension to common
+Markdown.
+
+### Inline-Code
+
+Inline code via \` enter some code in here 1\#\#\#\$& \` -> ` enter some code in here 1###$& `
+
+### Block-Code
+
+                                --{{0}}--
+Syntax highlighting is enabled with highlight.js. Blocks of code are either by
+lines with three back-ticks \`\`\` and an identifier for the language. See a
+complete list of examples and how to write language names at the
+[highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
+
+````` markdown
+```language <- (python, c, javascript, ...)  +OptionalTitle
+
+code ...
+
+```
+`````
+
+C example:
+
+``` c Sample.cpp
+#include "test.h"
+
+int main () {
+    printf("this is an example\n");
+    return 0;
+}
+```
+
+Python example:
+
+``` python
+import math
+
+def lia_sqrt(val):
+    return math.sqrt(val) + 22
+```
+
+### Interactive Code
+
+                                    --{{0}}--
+
+Why should code examples not be interactive and editable, especially if it is
+JavaScript or any other language that has been ported to it? Simply add the
+required resources to the initial comment with keyword `script`.
+
+1. Add resource to main-comment: `script: url.js`
+
+2. Add a trailing script-tag to your code: `<script>@input</script>`
+
+3. A project with multiple files can be realized with `@input(0)`, `@input(1)`, ...,`@input(n)`.
+
+
+                                     --{{1}}--
+And add an additional script tag to the end of your language definition with an
+`@input` macro. This element is afterwards substituted with your code and
+executed. We provide some basic examples within the following section.
+
+                                    --{{2}}--
+Use the `@input` macro as a parameterized function in projects. The number
+defines the the file, starting from 0.
+
+
+
+#### JavaScript
+
+                                    --{{0}}--
+Click on the run-button to execute the script or double-click on the code to
+edit it and to change the output ...
+
+Double-click on the code to switch to edit mode and double-click to get out:
+
+``` javascript
+var i=0;
+var j=0;
+var result = 0;
+
+for(i = 0; i<1000; i++) {
+    for(j = 0; j<i; j++) {
+        result += j;
+    }
+}
+// the last statement defines the return statement
+result;
+```
+<script>@input</script>
+
+#### Projects
+
+                --{{0}}--
+Multiple different code snippets can be combined to form a larger project. It
+requires to write them in a row. You can give them names, if you add a second
+parameter after the highlighting definition. Add a `+` or `-` to the front of
+your filename, in order to indicate, if it should be visible by default or not.
+
+                --{{1}}--
+As mentioned earlier the `@input` macro gets substituted by the input of the
+editor and you can pass a number to indicate which macro should be substituted
+by which code block (`@input(0)` is equivalent to `@input`).
+
+```` markdown
+``` js     -EvalScript.js
+let who = data.first_name + " " + data.last_name;
+
+if(data.online) {
+  who + " is online"; }
+else {
+  who + " is NOT online"; }
+```
+``` json    +Data.json
+{
+  "first_name" :  "Sammy",
+  "last_name"  :  "Shark",
+  "online"     :  true
+}
+```
+<script>
+  // insert the JSON dataset into the local variable data
+  let data = @input(1);
+
+  // eval the script that uses this dataset
+  eval(`@input(0)`);
+</script>
+
+````
+
+``` js     -EvalScript.js
+let who = data.first_name + " " + data.last_name;
+
+if(data.online) {
+  who + " is online"; }
+else {
+  who + " is NOT online"; }
+```
+``` json    +Data.json
+{
+  "first_name" :  "Sammy",
+  "last_name"  :  "Shark",
+  "online"     :  true
+}
+```
+<script>
+  // insert the JSON dataset into the local variable data
+  let data = @input(1);
+
+  // eval the script that uses this dataset
+  eval(`@input(0)`);
+</script>
+
+
+#### Communication
+
+> If you want to write Markdown, you can skip this section, if you want to learn
+> more about creating editable code for various different languages and purposes
+> you will have to read this.
+>
+> Check out https://github.com/LiaTemplates to see more sophisticated examples.
+
+The easiest way to execute some code, is simply to add a script-tag to the end
+of your code-block. But, sometimes an execution takes longer or requires to
+execute some asynchronous code. For this purpose, LiaScript offers a simple
+event system that will be explained in more detail. For simplicity the entire
+code block will contain all JavaScript code that can be edited and executed.
+This can be placed afterwards below the code block.
+
+
+To every executed peace of code a `send` module is associated, that is intended
+to handle all required communication with that specific code-block or project
+and the outer world. Thus, every `send` module is module does only exists in
+this particular scope.
+
+To start with, there is a `log` method, which can be used to send different
+types of outputs directly to the console. But, you can of course also use the
+`console.log` functions that do quite the same. Nevertheless, `send.log` gives
+you a little more power when you start to create your own LiaScript libraries
+and you have to handle multiple outputs.
+
+``` js
+/* send.log(type, sep, content)
+*
+* params:
+*  - type: one of the follow strings "debug", "info", "warn", "error", "html"
+*  - sep: a string like separator, mostly for newlines "\n"...
+*  - content : represents a list of list
+*/
+
+console.debug("these are short hands for send.log('debug' ... ")
+console.warn("warn")
+console.log("info")
+console.error("and red for errors")
+
+console.html("<b>Some more fancy stuff:</b> <img width='40px' src='https://www.math.uni-bielefeld.de/~jsauter/Octahedron.gif'/>")
+
+"fin"
+```
+<script>@input</script>
+
+
+As you may have noticed, the last statement of an executed code-block does also
+define the `return` statement. However, there are some results that are treated
+differently. These are strings that start with `"LIA: "`. The string
+`"LIA: stop"` for example, is used to tell the system to simply stop the
+execution, without any further output.
+
+``` js
+33*33
+
+"LIA: stop" // if you remove this string the result of the
+            // calculation will be visible in the shell
+```
+<script>@input</script>
+
+If the execution of your code may take longer, include some asynchronous calls
+or you need to call an external service, you can tell this by finishing with the
+statement `"LIA: wait"`, which will show arrows that loop forever or until they
+receive a `"LIA: stop"` signal.
+
+``` js
+setTimeout(function(){
+  console.warn("end of execution")
+
+  send.lia("some other ouput")
+
+  send.lia("LIA: stop") // this stops the execution
+}, 3000)
+
+
+"LIA: wait" // wait until you you send a stop
+```
+<script>@input</script>
+
+You might probably wonder, why there is a need for `send.lia`, if you could also
+pipe output to the console by using `send.log` or the shorthand `console.log`.
+As it will be described in the section about error handling, `send.lia` gives
+you more control, not only over the shell but also over the editor, see section
+[Error Handling](#Error-Handling).
+
+The code example below, depicts how the terminal can be exposed, following the
+previous logic, we only have to define `"LIA: terminal"` as the last statement
+in order to switch on the terminal mode, that will be active until the user
+clicks on the stop button, formerly known as the execute button, or a
+`"LIA: stop"` is send from the script, or the browser gets refreshed.
+
+In order to handle the `input` and the `stop` events from the terminal in the
+JavaScript world, we have to define handles, as it is done in the code below.
+Simply add a function, that evaluates or sends your terminal inputs to a foreign
+server or a websocket, or ... whatever you want ... And use the stop handle to
+close a connection or do some other stuff, if the user clicks onto the stop
+button.
+
+``` js
+send.handle("input", input => {
+  try{
+    console.log(eval(input))
+  } catch (e) {
+    console.error(e);
+  }
+})
+
+send.handle("stop", e => { alert("execution stopped") })
+
+function close(){
+  send.lia("LIA: stop")
+}
+
+"LIA: terminal" // execute the code and
+```
+<script>@input</script>
+
+A little side note, there is also a function called `console.clear`, that does
+what it says it clears the console, but it is not a realized by `send.log`,
+instead this is a shortcut for `send.lia("LIA: clear")`. These were all
+
+`"LIA: ..."` commands, the next section you will learn how to use the custom
+built in event system to get even more stuff done.
+
+##### Ping Pong
+
+All previous functions were executed only within the scope of a single
+code-block, but sometimes it is necessary to connect with other external events.
+For this purpose, the `send` object also contains two further generic functions,
+these are `register` and `dispatch`. Simply use a unique identifier to name an
+event, which is followed by a callback-function that does whatever you want.
+Both callbacks are defined in local scope, but by using `register` and
+`dispatch` you can send messages to any code-block. The example below also
+delivers the messages successfully, if both code-blocks would be defined on
+different slides.
+
+
+``` js
+send.register("ping", function(e){
+  console.warn("ping", e)
+})
+
+send.handle("input", input => {
+  send.dispatch("pong", input)
+})
+
+"LIA: terminal" // execute the code and
+```
+<script>@input</script>
+
+
+
+``` js
+send.register("pong", function(e){
+  console.warn("pong", e)
+})
+
+send.handle("input", input => {
+  send.dispatch("ping", input)
+})
+
+"LIA: terminal" // execute the code and
+```
+<script>@input</script>
+
+
+Adding such script-tags to the end of every code-block can be very tedious and
+cumbersome. Your Markdown will contain a lot of not necessary copy & paste code.
+To reduce this, LiaScript offers the possibility to define custom macros, and
+even more, you can directly import macros from other courses. Section
+[Macros](#Macros) is used to describe this issue in more.
+
+
+##### Error Handling
+
+As mentioned earlier, `send.lia` can do more then just passing messages to the
+terminal output. The editor that is currently used by LiaScript is
+[ace](https://ace.c9.io), which allows to mark lines with warnings and errors.
+Since there is no name associated to a file (like with the `@input(0)` macro).
+You have to use a list of lists,  which contain all necessary information that
+you want to pass to the editor. The list element is associated with the
+code-block, starting from top to bottom.
+
+``` js
+send.lia( "ups, something went wrong",
+  [[{ row : 1,
+      column : 1,
+      text : "insert your error info here",
+      type : "error"
+    },
+    {
+      row : 2,
+      column : 1,
+      text : "some general warnings about this line",
+      type : "warning"
+    }
+  ]],
+  false); // use true if the output should appear in "info" mode
+
+"LIA: stop";
+```
+<script>@input</script>
+
+
+If this seems to complicated, you can also throw and error by using `LiaError`.
+The second parameter is used to define the number of code-blocks you use and
+then the only thing you require, is to add as much detailed information, which
+is similar to the previous example.
+
+
+``` js
+// create a new error with an error message that is
+// connected to only one code-block, if you have more,
+// increase the number ...
+var error = new LiaError("ups something went wrong", 1);
+
+error.add_detail(0, // <- associated code-block
+  "insert your error info here",
+  "error", 1, 1);
+
+error.add_detail(0, // <- associated code-block
+  "some general warnings about this line",
+  "warning", 2, 1);
+
+
+throw(error);
+```
+<script>@input</script>
+
+
+#### Styling
+
+As for Tables, it is also possible to apply some basic styling attributes to the
+editor. At default code-snippets that ar not executable will not show line
+numbers in order to be used also for pseudo-code, while executeable blocks will
+show line numbers, while the later ones can be edited and not the others. However,
+you can apply the follow attributes to make some definitions explicit. We tried
+to apply the common ACE notation. Attributes have to be applied per code-block,
+as it is shown in the example:
+
+````` markdown
+<!-- data-showGutter="false" -->
+```cpp
+// some C++ code without line numbers
+...
+```
+<!-- data-readOnly="true" -->
+```hpp
+// some header-file with lineNumbers,
+// that cannot be edited
+```
+<script>
+...// your execution code
+</script>
+`````
+
+__Attributes:__
+
+* `data-firstLineNumber`: change the initial line number to any number you
+  prefer (default: `data-firstLineNumber="0"`).
+* `data-fontSize`: change the default font-size, which has to be defined with
+  `pt` (default `data-fontSize="12pt"`).
+* `data-readOnly`: whether it is an executable snippet or not, there are
+  different default values, you can either set only `data-readOnly` to make it
+  read-only or pass it a boolean value (`data-readOnly="false"`)
+* `data-showGutter`: same as with read-only
+* `data-tabSize`: this takes an integer to represent the default tab-size
+  replacement (default `data-tabSize="2"`)
+* `data-theme`: your default theme as in your settings is applied, but you can
+  change this to any of the ace-themes, eg: `Chaos`, `Eclipse`,
+  `Soliarized Light`, ...
+* `data-marker`: use this to highlight aspects of your code, you have to apply
+  the following pattern `data-marker="y1 x1 y2 x2 color type;"`. You start
+  with a row and column and end with a row and a column. Then you can apply one
+  of the predefined colors, for `error`, `log`, `warn`, `debug` or `info`, or
+  you can set your own color with the css rgba function,
+  __do not use spaces in this function__!
+
+  The type is optional, but you can choose between one of the following
+  ace-marker types: `text`, (default `fullLine`), `screenLine`
+
+  If you want more than one marker, then simply separate different marker
+  definitions with a colon ...
+
+<!-- data-marker="
+0 0 0 100 error screenline;
+2 0 4 200 log;
+6 12 6 33 rgba(55,255,100,0.5) text"
+data-showGutter="true"
+data-theme="chaos"
+data-readOnly="false" -->
+```
+this will be red
+
+this is blue ...
+until the next
+line
+
+and this is rgba(55,255,100,0.5)
 ```
 
 
