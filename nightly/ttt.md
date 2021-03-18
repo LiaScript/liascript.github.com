@@ -37,7 +37,7 @@ comment: todo
 
 |         | Fabio Fill                                         | André Dietrich                                         |
 | ------- | -------------------------------------------------- | ------------------------------------------------------ |
-| WebSite |                                                    | https://aizac.herokuapp.com                            |
+| WebSite | fillidefilla.com                                             | https://aizac.herokuapp.com                            |
 | GitHub  | https://github.com/fillidefilla                    | https://github.com/andre-dietrich                      |
 | Twitter | [\@FilliDeFilla](https://twitter.com/FilliDeFilla) | [\@andre-dietrich](https://twitter.com/andre-dietrich) |
 | eMail   |                                                    | LiaScript@web.de                                       |
@@ -335,7 +335,18 @@ Todo
 
 ## Digitale Plattformen
 
-TODO: Begriffe Digital und Plattform
+![](pic/economy.png)
+
+> “Im Gegensatz zu vielen anderen Autoren erkennt der bereits zitierte
+> Internetblogger Sascha Lobo die Sprachnot der Digitalisierung, wenn er
+> schreibt: „Man sagt Internet, aber Apps gehören in der Regel nicht dazu. Man
+> sagt Netz, aber Android kann damit kaum gemeint sein. Man sagt Web, aber
+> Ebooks haben damit wenig zu tun. Aber Begriffe prägen Diskussionen und damit
+> die zukünftige Entwicklung.“ So schlägt Lobo dann vor: „… deshalb soll der
+> Begriff ,Digitale Sphäre ‘ für alles stehen, was elektronisch und datenbasiert
+> funktioniert”
+>
+> Excerpt From: Michael Jaekel. “Die Macht der digitalen Plattformen.” Apple Books.
 
 ### Plattformunternehmen
 
@@ -387,30 +398,15 @@ Entwicklungsländer in Afrika und Lateinamerika liegen nicht weit zurück.
 Quelle:
 Peter Evants, Center for Global Enterprise
 
-#### Wirtschaft
-
-![](pic/economy.png)
-
-> “Im Gegensatz zu vielen anderen Autoren erkennt der bereits zitierte
-> Internetblogger Sascha Lobo die Sprachnot der Digitalisierung, wenn er
-> schreibt: „Man sagt Internet, aber Apps gehören in der Regel nicht dazu. Man
-> sagt Netz, aber Android kann damit kaum gemeint sein. Man sagt Web, aber
-> Ebooks haben damit wenig zu tun. Aber Begriffe prägen Diskussionen und damit
-> die zukünftige Entwicklung.“ So schlägt Lobo dann vor: „… deshalb soll der
-> Begriff ,Digitale Sphäre ‘ für alles stehen, was elektronisch und datenbasiert
-> funktioniert”
->
-> Excerpt From: Michael Jaekel. “Die Macht der digitalen Plattformen.” Apple Books.
-
 ### Case Studies
 
 #### Facebook
 
-![](pic/facebook1.png)
-![](pic/facebook2.png)
 ![](pic/facebook3.png)
 
-“3.5 Auf dem Weg zur digitalen Identität – Facebook Case Study Vielleicht kennen
+**Ist Facebook einzigartig?**
+==================
+“Auf dem Weg zur digitalen Identität – Facebook Case Study Vielleicht kennen
 einige Leser noch die untergegangene digitale Plattform „My Space “, die in der
 Prä-Facebook-Ära das dominierende soziale Medium darstellte. Die als
 Visitenkarte für junge Musikbands konzipierte digitale My Space-Plattform war
@@ -429,9 +425,9 @@ damalige Präsident von MySpace, Jason Hirschhorn, sagte 2010: „MySpace ist ke
 Ort, an dem sich Leute darüber austauschen, was sie so vorhaben“ [PIL]. In der
 Rückschau lässt sich immer leicht erkennen[…]”
 
-Excerpt From: Michael Jaekel. “Die Macht der digitalen Plattformen.” Apple Books.
+Excerpt From: Michael Jaekel. “Die Macht der digitalen Plattformen.”
 
-Macht von Facebook
+**Macht von Facebook**
 ==================
 
 “Die Relevanz von Facebook als digitale Plattform ergibt sich alleine daraus,
@@ -446,8 +442,16 @@ Bevölkerung”
 
 #### UBER
 
-![](pic/uber1.png)
+1. Darstellung
+===============
+
 ![](pic/uber2.png)
+
+2. Darstellung
+===============
+
+![](pic/uber1.png)
+
 
 ### Startup
 
@@ -478,13 +482,52 @@ mobile Produkte und Dienste ausgerichtet war.”
 
 #### Business Model Canvas
 
+![](pic/business-model-canvas-1024x683.png)
+
+Download Link: [business-model-canvas.pdf](https://github.com/fillidefilla/workshop-digital-platforms/blob/master/documents/business-model-canvas.pdf)
+
+Zentrale Bestandteile des Business Model Canvas
+===============
+Ein Business Model Canvas enthält bis zu elf Felder mit Schlüsselfaktoren. Sie müssen nach und nach mit Inhalt gefüllt und in eine sinnvolle Beziehung zueinander gebracht werden. Bei den Schlüsselfaktoren handelt es sich um:
+
+1. Schlüssel-Partner: Je nach Geschäftsmodell bietet es sich an, eine strategische Partnerschaft einzugehen, um die Effektivität des Unternehmens zu steigern und Risiken auf mehrere Schultern zu verteilen. Frage: Wer kommt als Partner in Frage?
+
+2. Schlüssel-Aktivitäten: Um ein Produkt herzustellen oder eine Leistung zu erbringen, sind bestimmte Tätigkeiten notwendig. Frage: Welches sind die wichtigsten Tätigkeiten, um dieses Geschäftsmodell in die Tat umzusetzen?
+
+3. Nutzen-Versprechen: Jedes Produkt und jede Leistung hat eine Aufgabe: ein Problem des Kunden zu lösen oder ein Bedürfnis zu befriedigen. Jedes Produkt und jede Leistung muss dieses Nutzenversprechen enthalten: neuer, besser, stylischer, günstiger oder einfach nutzerfreundlicher als vergleichbare Angebote zu sein. Frage: Welchen Nutzen haben die Kunden, wenn sie das Produkt oder die Dienstleistung kaufen?
+
+4. Kunden-Beziehung: Kunden können persönlich bedient werden. Sie können auch von Sprachautomaten oder Internet-Software von einer Frage zu einer möglichen Antwort geführt werden. Wie man die Kundenbeziehung gestaltet, ist ein wichtiger Bestandteil des jeweiligen Geschäftsmodells. Frage: Wie können die in Frage kommenden Kunden gewonnen und gebunden werden?
+
+5. Kunden-Arten: Jedes Start-up will ein Produkt oder eine Dienstleistung verkaufen. Als Kunden kommen je nachdem verschiedene Kunden-Arten in Frage: die Masse, einen Nische, diverse Kunden-Segmente. Frage: Welches ist die Kunden-Zielgruppe?
+
+6. Schlüssel-Ressourcen: Eine Produktion zu bewerkstelligen und eine Dienstleistung zu erbringen, ist nur mit bestimmten Ressourcen möglich: Betriebsstätte, Personal, Startkapital usw. Frage: Welche Ressourcen sind unverzichtbar?
+
+7. Vertriebs- und Kommunikations-Kanäle: Kunden kaufen nur, was sie kennen. Und das, was für sie erreichbar und verfügbar ist. Fragen: Wie erfahren Kunden von dem Angebot? Wie muss der Vertrieb aussehen?
+
+8. Kosten: Jede Produktion und jede Dienstleistung ist mit Kosten verbunden. Sie fallen vor allem für die Aktivitäten, die Ressourcen und für Partner an. Frage: Welches sind die wichtigsten Ausgaben, ohne die das Geschäftsmodell nicht funktionieren würde?
+
+9. Einnahmequellen: Es gibt oft mehrere Wege, mit demselben Angebot Geld zu verdienen. Einmalzahlungen bringen schnell Geld in die Kasse. Abonnenten versprechen dagegen kontinuierliche Einkünfte über längere Zeit. Frage: Woher kommt bei diesem Geschäftsmodell das Geld?
+
+Quellen:
+
+[Deutsche Informationen](https://www.existenzgruender.de/DE/Gruendung-vorbereiten/Businessplan/Business-Model-Canvas/inhalt.html)
+
+[English Information](https://en.wikipedia.org/wiki/Business_Model_Canvas)
+
 ##### Business Model Beispiel
 
-TODO
+1. Darstellung
+===============
+![](pic/facebook1.png)
 
-##### Dein eigenes Plattform Startup
+2. Darstellung
+===============
+![](pic/facebook2.png)
 
-Gruppenarbeit: Gründe ein Plattform Startup.
+
+##### Dein Plattform Startup
+
+Gründe dein eigenes Plattform Startup.
 
 ## Digitale Plattformen von morgen
 
@@ -650,7 +693,7 @@ verknüpfen. [Gopher](https://de.wikipedia.org/wiki/Gopher) war/ist einer
 bekanntesten Kontrahenten der in vielen Punkten mit dem Ansatz von Tim
 Berners-Lee vergleichbar ist.
 
-![Screenshot Fog-Browser](https://upload.wikimedia.org/wikipedia/commons/c/c8/Wikipedia_Gopher_forg_v0.5.1.png "Der Wikipedia-Artikel in der englischsprachigen Wikipedia mit dem Browser forg")<!-- style="width: 100%" -->
+![Screenshot Fog-Browser](https://upload.wikimedia.org/wikipedia/commons/c/c8/Wikipedia_Gopher_forg_v0.5.1.png "Der Wikipedia-Artikel in der englischsprachigen Wikipedia mit dem Browser forg")
 
 
 ### Beaker Browser und DAT
