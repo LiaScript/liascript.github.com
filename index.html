@@ -1,505 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Create free and interactive online courses, based on an extended Markdown notation and share them on github ..."
+    />
+    <meta name="author" content="André Dietrich" />
 
-<head>
+    <title>LiaScript</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description"
-    content="Create free and interactive online courses, based on an extended Markdown notation and share them on github ...">
-  <meta name="author" content="André Dietrich">
+    <meta property="og:url" content="https://LiaScript.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LiaScript" />
+    <meta
+      property="og:description"
+      content="Create free and interactive online courses, based on an extended Markdown notation and share them on github ..."
+    />
+    <meta
+      property="og:image"
+      content="https://liascript.github.io/img/bg-masthead.jpg"
+    />
 
-  <title>LiaScript</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <meta property="og:url" content="https://LiaScript.github.io" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="LiaScript" />
-  <meta property="og:description"
-    content="Create free and interactive online courses, based on an extended Markdown notation and share them on github ..." />
-  <meta property="og:image" content="https://liascript.github.io/img/bg-masthead.jpg" />
+    <!-- Custom fonts for this template -->
+    <link
+      href="vendor/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet" />
 
-  <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-    type="text/css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+    <link rel="icon" href="/img/logo.png" type="image/png" />
 
-  <!-- Custom styles for this template -->
-  <link href="css/landing-page.min.css" rel="stylesheet" />
+    <script>
+      function load(url) {
+        url = url.trim()
+        return 'course/?' + url
+      }
+    </script>
+  </head>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/img/logo.png" />
-  <link rel="icon" href="/img/logo.png" type="image/png" />
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <!--a class="navbar-brand" href="#">LiaScript</a-->
+        <!--a class="navbar-brand" href="#Loader">Loader</a-->
+        <a class="navbar-brand" href="#Concept">Concept</a>
+        <a class="navbar-brand" href="#Docs">Docs</a>
+        <a class="navbar-brand" href="#Examples">Examples</a>
+        <a class="navbar-brand" href="#VSCode">Editor</a>
+        <a class="navbar-brand" href="#News">News</a>
+        <a class="navbar-brand" href="#About">About</a>
+        <a class="navbar-brand" href="https://aizac.herokuapp.com">Blog</a>
+        <!--a class="btn btn-primary" href="#">Sign In</a-->
+      </div>
+    </nav>
 
-  <script>
-    function load(url) {
-      url = url.trim();
-      return "course/?" + url;
-    }
-  </script>
-</head>
-
-<body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <!--a class="navbar-brand" href="#">LiaScript</a-->
-      <!--a class="navbar-brand" href="#Loader">Loader</a-->
-      <a class="navbar-brand" href="#Concept">Concept</a>
-      <a class="navbar-brand" href="#Docs">Docs</a>
-      <a class="navbar-brand" href="#Examples">Examples</a>
-      <a class="navbar-brand" href="#VSCode">Editor</a>
-      <a class="navbar-brand" href="#News">News</a>
-      <a class="navbar-brand" href="#About">About</a>
-      <a class="navbar-brand" href="https://aizac.herokuapp.com">Blog</a>
-      <!--a class="btn btn-primary" href="#">Sign In</a-->
-    </div>
-  </nav>
-
-  <!-- Masthead -->
-  <header class="masthead text-white text-center" id="Loader">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">
-            Share your knowledge and build online courses with simple
-            Markdown!
-          </h1>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="url" class="form-control form-control-lg" placeholder="Enter your course url ..."
-                  id="course_url1" />
+    <!-- Masthead -->
+    <header class="masthead text-white text-center" id="Loader">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">
+              Share your knowledge and build online courses with simple
+              Markdown!
+            </h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input
+                    type="url"
+                    class="form-control form-control-lg"
+                    placeholder="Enter your course url ..."
+                    id="course_url1"
+                  />
+                </div>
+                <div class="col-12 col-md-3">
+                  <button
+                    class="btn btn-block btn-lg btn-primary"
+                    onclick="location.href = load($('#course_url1').val()); return false;"
+                  >
+                    Load course!
+                  </button>
+                </div>
               </div>
-              <div class="col-12 col-md-3">
-                <button class="btn btn-block btn-lg btn-primary"
-                  onclick="location.href = load($('#course_url1').val()); return false;">
-                  Load course!
-                </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center" id="Concept">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-2">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-magic-wand m-auto text-primary"></i>
               </div>
+              <h3>No Tooling</h3>
+              <p class="lead mb-0">
+                You only need a browser or at least a text-editor, that's it ...
+              </p>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center" id="Concept">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-2">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-magic-wand m-auto text-primary"></i>
-            </div>
-            <h3>No Tooling</h3>
-            <p class="lead mb-0">
-              You only need a browser or at least a text-editor, that's it ...
-            </p>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-2">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-social-github m-auto text-primary"></i>
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-2">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-social-github m-auto text-primary"></i>
+              </div>
+              <h3>Open-Source</h3>
+              <p class="lead mb-0">
+                Create, adapt, translate, and share courses on github ...
+              </p>
             </div>
-            <h3>Open-Source</h3>
-            <p class="lead mb-0">
-              Create, adapt, translate, and share courses on github ...
-            </p>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-rocket m-auto text-primary"></i>
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-rocket m-auto text-primary"></i>
+              </div>
+              <h3>JavaScript Ready</h3>
+              <p class="lead mb-0">
+                Extend your course with any available JavaScript library!
+              </p>
             </div>
-            <h3>JavaScript Ready</h3>
-            <p class="lead mb-0">
-              Extend your course with any available JavaScript library!
-            </p>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-speedometer m-auto text-primary"></i>
+          <div class="col-lg-3">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-speedometer m-auto text-primary"></i>
+              </div>
+              <h3>VS-Code</h3>
+              <p class="lead mb-0">
+                Write faster, easier, and better courses with the
+                Visual-Studio-Code editor.
+              </p>
             </div>
-            <h3>VS-Code</h3>
-            <p class="lead mb-0">
-              Write faster, easier, and better courses with the Visual-Studio-Code editor.
-            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Image Showcases -->
-  <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img"
-          style="background-image: url('img/bg-showcase-1.jpg'); background-position: center;"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text" id="Docs">
-          <h2>No Tooling (no programming)</h2>
-          <p class="lead mb-0">
-            Your course is parsed and rendered in real-time within the browser
-            at client-side. You only have to provide the URL to your course
-            file. A course is a simple Markdown format with support for
-            multimedia content, narrators, effect, quizzes, online
-            programming, ASCII-art diagrams, etc.
-            <br /><br />
-            See the documentation
+    <!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 order-lg-2 text-white showcase-img"
+            style="
+              background-image: url('img/bg-showcase-1.jpg');
+              background-position: center;
+            "
+          ></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text" id="Docs">
+            <h2>No Tooling (no programming)</h2>
+            <p class="lead mb-0">
+              Your course is parsed and rendered in real-time within the browser
+              at client-side. You only have to provide the URL to your course
+              file. A course is a simple Markdown format with support for
+              multimedia content, narrators, effect, quizzes, online
+              programming, ASCII-art diagrams, etc.
+              <br /><br />
+              See the documentation
+              <a
+                href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1"
+                >here</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 text-white showcase-img"
+            style="
+              background-image: url('img/bg-showcase-2.jpg');
+              background-position: center;
+            "
+          ></div>
+          <div class="col-lg-6 my-auto showcase-text" id="Examples">
+            <h2>Open-courSe</h2>
+            <p class="lead mb-0">
+              You are the owner of your content, but by hosting your course on
+              github you give others the chance to contribute to, to translate,
+              to adapt to your course.
+              <br />
+              There is no single source of truth, so why should there be only
+              one course. With the help of git branches and forks it may be
+              possible to develop course for different students and target
+              audiences.
+              <br /><br />
+              See a list of courses
+              <a href="https://github.com/topics/liascript-course">here</a>
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 order-lg-2 text-white showcase-img"
+            style="
+              background-image: url('img/canvas.png');
+              background-position: center;
+            "
+          ></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>JavaScript Ready</h2>
+            <p class="lead mb-0">
+              In contrast to other Markdown-parsers you are free to use any
+              JavaScript library you want. This way you can integrate any kind
+              of visualization, simulation, computer-algebra-system, or whatever
+              you might think is useful for your course.
+              <br />
+              To simplify the usage of JavaScript and HTML elements, LiaScript
+              provides a macro-system to cover repetitive tasks.
+              <br /><br />
+              See a list of templates
+              <a href="https://github.com/topics/liascript-template">here</a>
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 text-white showcase-img"
+            style="background-image: url('img/atom.jpg')"
+          ></div>
+          <div class="col-lg-6 my-auto showcase-text" id="VSCode">
+            <h2>Visual-Studio-Code</h2>
+            <p class="lead mb-0">
+              LiaScript can be developed from the
+              <a target="_blank" href="https://code.visualstudio.com"
+                >Visual-Studio-Code</a
+              >
+              editor, allowing to make course development much simpler and
+              faster in the the future...
+              <br />
+              <b
+                ><a
+                  target="_blank"
+                  href="https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview"
+                  >liascript-preview</a
+                ></b
+              >: Is a tiny previewer that, if it was toggled, updates the view
+              on your course each time you save your document.
+              <br />
+              <b
+                ><a
+                  target="_blank"
+                  href="https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets"
+                  >liascript-snippets</a
+                ></b
+              >: If you start typing "lia" in your document you switch on a
+              fuzzy search, that contains a lot of LiaScript help, examples, and
+              snippets.
+            </p>
+            <br />
+            <h2>Atom.io</h2>
+            <p class="lead mb-0">
+              If you prefer <a target="_blank" href="https://atom.io">Atom</a>,
+              then you can also install a preview an a snippets plugin for this
+              editor. The installation procedure is described in more detail
+              <a
+                target="_blank"
+                href="https://aizac.herokuapp.com/install-atom-with-liascript/"
+                >here</a
+              >.
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 order-lg-2 text-white showcase-img"
+            style="
+              background-image: url('img/LiveEditor.jpg');
+              background-position: center;
+            "
+          ></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>LiveEditor</h2>
+            <p class="lead mb-0">
+              This is a browser-based collaborative online editor for LiaScript.
+              All content is stored within your browser. Collaboration is
+              enabled by
+              <a target="_blank" href="https://webrtc.org">WebRTC</a> and
+              <a href="https://yjs.dev/">Yjs</a>. The snippets are already
+              included, simply type "lia" to explore some features of LiaScript.
+              By the way, if you have a GitHub account, you can directly export
+              your courses to gists.
+              <br />
+              <br />
+              Check out the editor
+              <a target="_blank" href="https://liascript.github.io/LiveEditor"
+                >here</a
+              >
+
+              <br />
+              <br />
+              ... or try out some
+              <a
+                target="_blank"
+                href="https://liascript.github.io/LiveEditor/examples.html"
+                >examples</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 text-white showcase-img"
+            style="background-image: url('img/computer.jpeg')"
+          ></div>
+          <div class="col-lg-6 my-auto showcase-text" id="VSCode">
+            <h2>More ...</h2>
+            <p class="lead mb-0">
+              <b
+                ><a
+                  target="_blank"
+                  href="https://www.npmjs.com/package/@liascript/devserver"
+                  >liascript-devserver</a
+                ></b
+              >: If you prefer another editor or if you have a couple of courses
+              that you want to test locally, then you should try out this
+              open-source project...
+              <br />
+              <br />
+              <b
+                ><a
+                  target="_blank"
+                  href="https://www.npmjs.com/package/@liascript/exporter"
+                  >liascript-exporter</a
+                ></b
+              >: This project allows to pack your entire course into a SCORM
+              compliant format and thus to upload your LiaScript courses to the
+              most common Learning Management Systems (LMS).
+              <br />
+              <br />
+              <b
+                ><a target="_blank" href="https://github.com/liascript/codilia"
+                  >CodiLIA</a
+                ></b
+              >: This is a fork of the
+              <a target="_blank" href="https://github.com/hackmdio/codimd"
+                >CodiMD</a
+              >
+              collaborative editor for Markdown, but instead of creating
+              documents CodiLIA can be used to create course the
+              LiaScript-way...
+              <br />
+              <br />
+              <b
+                ><a
+                  target="_blank"
+                  href="https://aizac.herokuapp.com/markdown-just-got-a-new-preview-tag/"
+                  >preview-lia</a
+                ></b
+              >: You can also highlight your LiaScript courses or other GitHub
+              projects on your personal website/blog with the help of this web
+              component. Simply place the a link to your course somewhere on
+              your site and these cards will always be in sync with your course
+              meta-data. No need for endless updating ...
+            </p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 order-lg-2"
+            id="News"
+            style="background-color: #292f33; min-height: 500px"
+          >
             <a
-              href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1">here</a>
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img"
-          style="background-image: url('img/bg-showcase-2.jpg'); background-position: center;"></div>
-        <div class="col-lg-6 my-auto showcase-text" id="Examples">
-          <h2>Open-courSe</h2>
-          <p class="lead mb-0">
-            You are the owner of your content, but by hosting your course on
-            github you give others the chance to contribute to, to translate,
-            to adapt to your course.
-            <br />
-            There is no single source of truth, so why should there be only
-            one course. With the help of git branches and forks it may be
-            possible to develop course for different students and target
-            audiences.
-            <br /><br />
-            See a list of courses
-            <a
-              href="https://github.com/topics/liascript-course">here</a>
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img"
-          style="background-image: url('img/canvas.png'); background-position: center;"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>JavaScript Ready</h2>
-          <p class="lead mb-0">
-            In contrast to other Markdown-parsers you are free to use any
-            JavaScript library you want. This way you can integrate any kind
-            of visualization, simulation, computer-algebra-system, or whatever
-            you might think is useful for your course.
-            <br />
-            To simplify the usage of JavaScript and HTML elements, LiaScript
-            provides a macro-system to cover repetitive tasks.
-            <br /><br />
-            See a list of templates
-            <a
-              href="https://github.com/topics/liascript-template">here</a>
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/atom.jpg');"></div>
-        <div class="col-lg-6 my-auto showcase-text" id="VSCode">
-          <h2>Visual-Studio-Code</h2>
-          <p class="lead mb-0">
-            LiaScript can be developed from the
-            <a target="_blank" href="https://code.visualstudio.com">Visual-Studio-Code</a> editor, allowing to make
-            course development much simpler and faster in the the future...
-            <br />
-            <b><a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview">liascript-preview</a></b>: Is a tiny previewer that,
-            if it was toggled, updates the view
-            on your course each time you save your document.
-            <br />
-            <b><a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets">liascript-snippets</a></b>: If you start typing
-            "lia" in your document you switch on a
-            fuzzy search, that contains a lot of LiaScript help, examples, and
-            snippets.
-          </p>
-          <br />
-          <h2>Atom.io</h2>
-          <p class="lead mb-0">
-            If you prefer <a target="_blank" href="https://atom.io">Atom</a>, then you can also install a preview an a snippets plugin for this editor.
-            The installation procedure is described in more detail <a target="_blank" href="https://aizac.herokuapp.com/install-atom-with-liascript/">here</a>.
-
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img"
-          style="background-image: url('img/LiveEditor.jpg'); background-position: center;"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>LiveEditor</h2>
-          <p class="lead mb-0">
-            This is a browser-based collaborative online editor for LiaScript.
-            All content is stored within your browser.
-            Collaboration is enabled by <a target="_blank" href="https://webrtc.org">WebRTC</a> and <a href="https://yjs.dev/">Yjs</a>.
-            The snippets are already included, simply type "lia" to explore some features of LiaScript.
-            By the way, if you have a GitHub account, you can directly export your courses to gists.
-            <br>
-            <br>
-            Check out the editor <a target="_blank" href="https://liascript.github.io/LiveEditor">here</a>
-
-            <br>
-            <br>
-            ... or try out some <a target="_blank" href="https://liascript.github.io/LiveEditor/examples.html">examples</a>
- 
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/computer.jpeg');"></div>
-        <div class="col-lg-6 my-auto showcase-text" id="VSCode">
-          <h2>More ...</h2>
-          <p class="lead mb-0">
-            <b><a target="_blank" href="https://www.npmjs.com/package/@liascript/devserver">liascript-devserver</a></b>:
-            If you prefer another editor or if you have a couple of courses that you want to test locally,
-            then you should try out this open-source project...
-            <br>
-            <br>
-            <b><a target="_blank" href="https://www.npmjs.com/package/@liascript/devserver">liascript-exporter</a></b>:
-            This project allows to pack your entire course into a SCORM compliant format and thus to upload
-            your LiaScript courses to the most common Learning Management Systems (LMS).
-            <br>
-            <br>
-            <b><a target="_blank" href="https://github.com/liascript/codilia">CodiLIA</a></b>:
-            This is a fork of the <a target="_blank" href="https://github.com/hackmdio/codimd">CodiMD</a> collaborative editor for
-            Markdown, but instead of creating documents CodiLIA can be used to create course the LiaScript-way...
-            <br>
-            <br>
-            <b><a target="_blank" href="https://aizac.herokuapp.com/markdown-just-got-a-new-preview-tag/">preview-lia</a></b>:
-            You can also highlight your LiaScript courses or other GitHub projects on your personal website/blog
-            with the help of this web component. Simply place the a link to your course somewhere on your site and
-            these cards will always be in sync with your course meta-data. No need for endless updating ... 
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2" id="News" style="background-color:#292F33; min-height:500px">
-          <a class="twitter-timeline" data-height="100%" data-dnt="true" data-theme="dark"
-            href="https://twitter.com/LiaScript?ref_src=twsrc%5Etfw">
-            <h2 style="position:relative; left: 33%; top:40%">
-              Tweets by LiaScript
-            </h2>
-          </a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>News</h2>
-          <p class="lead mb-0">
-            Updates on LiaScript are posted on Twitter or on
-            <a target="_blank" href="https://aizac.herokuapp.com">https://aizac.herokuapp.com</a>.
-            For now, here are some of my favorites:
-            <br />
-            <br />
-            <b><a
-                href="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/C-Programming/master/README.md#1">C-Programming</a></b>:
-            A clone of the Wikipedia open-book, but with editable and
-            executable code examples
-            <br />
-            <br />
-            <b><a
-                href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaBooks/Arbeitsbuch-Prolog/master/README.md#3">Arbeitsbuch
-                Prolog</a></b>: A transcript of a great Prolog coding book, made interactive,
-            with quizzes, TTS, and ...
-            <br />
-            <br />
-            <b><a
-                href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaBooks/SisterFoxAndTheGrayWolf/master/README.md#1">Sister
-                fox and the gray wolf</a></b>: Interactive dia-show of a russian folktale with TTS in russian.
-            (<a
-              href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaBooks/SisterFoxAndTheGrayWolf/master/GERMAN.md#1">German</a>)
-            <br />
-            <br />
-            <b><a
-                href="https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-dietrich/BerLearn-Talk-2019/master/README.md#1">BerLearn
-                Talk</a></b>: Finally a short presentation about creating courses with
-            LiaScript (<a target="_blank" href="https://www.youtube.com/watch?v=Mg35D4dLyXc">YouTube recording</a>)
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-lg-6 text-white showcase-img"
-        style="background-image: url('img/Loves_Messenger_Stillman_DAM.jpg'); background-position: center;"></div>
-      <div class="col-lg-6 my-auto showcase-img" id="Newsletter">
-        <iframe class="lead mb-0"
-          src="https://fysitech.typeform.com/to/BzcfVu?typeform-embed=embed-widget&amp;embed-opacity=0&amp;typeform-embed-id=0lqgh"
-          style="position: absolute; data-qa: iframe; border: 0px none; width: 100%; height: 100%; min-height: 100%"
-          frameborder="0"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials bg-light">
-    <div class="container" id="About">
-      <h2 class="mb-5 text-center">About</h2>
-      <div class="row">
-        <div class="col-lg-15 showcase-text">
-          <p class="lead mb-0">
-            I am a huge fan of online-courses (MOOCs), tutorials,
-            YouTube-courses, podcasts, etc., BUT ... MOOCs are not in the
-            public domain (although they should be), produced expensively by
-            publishers, which are interested in user numbers and therefore
-            only produce general courses for a large English speaking
-            audience. Video and audio recordings are also hard to produce,
-            they are “static” and one mistake or a missing fact cannot be
-            fixed that easy.
-          </p>
-          <p class="lead mb-0">
-            That is why I started to develop LiaScript, as a simple and
-            extendable Markdown-dialect that allows sharing knowledge by
-            creating interactive courses in an Open-Source manner, where
-            anyone can participate and contribute. Even if it is a course for
-            a minor audience, such as teaching cuneiform writing to 8-graders
-            in Swahili.
-            <br />
-            <q>Like in the movie Ratatouille ... “anybody can cook”.</q>
-          </p>
-          <br />
-          <p class="lead mb-0">
-            Source at GitHub:
-            <a href="https://github.com/LiaScript/LiaScript" target="_blank">
-              https://github.com/LiaScript/LiaScript
+              class="twitter-timeline"
+              data-height="100%"
+              data-dnt="true"
+              data-theme="dark"
+              href="https://twitter.com/LiaScript?ref_src=twsrc%5Etfw"
+            >
+              <h2 style="position: relative; left: 33%; top: 40%">
+                Tweets by LiaScript
+              </h2>
             </a>
-          </p>
-          <p class="lead mb-0">
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>News</h2>
+            <p class="lead mb-0">
+              Updates on LiaScript are posted on Twitter or on
+              <a target="_blank" href="https://aizac.herokuapp.com"
+                >https://aizac.herokuapp.com</a
+              >. For now, here are some of my favorites:
+              <br />
+              <br />
+              <b
+                ><a
+                  href="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/C-Programming/master/README.md#1"
+                  >C-Programming</a
+                ></b
+              >: A clone of the Wikipedia open-book, but with editable and
+              executable code examples
+              <br />
+              <br />
+              <b
+                ><a
+                  href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaBooks/Arbeitsbuch-Prolog/master/README.md#3"
+                  >Arbeitsbuch Prolog</a
+                ></b
+              >: A transcript of a great Prolog coding book, made interactive,
+              with quizzes, TTS, and ...
+              <br />
+              <br />
+              <b
+                ><a
+                  href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaBooks/SisterFoxAndTheGrayWolf/master/README.md#1"
+                  >Sister fox and the gray wolf</a
+                ></b
+              >: Interactive dia-show of a russian folktale with TTS in russian.
+              (<a
+                href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaBooks/SisterFoxAndTheGrayWolf/master/GERMAN.md#1"
+                >German</a
+              >)
+              <br />
+              <br />
+              <b
+                ><a
+                  href="https://liascript.github.io/course/?https://raw.githubusercontent.com/andre-dietrich/BerLearn-Talk-2019/master/README.md#1"
+                  >BerLearn Talk</a
+                ></b
+              >: Finally a short presentation about creating courses with
+              LiaScript (<a
+                target="_blank"
+                href="https://www.youtube.com/watch?v=Mg35D4dLyXc"
+                >YouTube recording</a
+              >)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div
+          class="col-lg-6 text-white showcase-img"
+          style="
+            background-image: url('img/Loves_Messenger_Stillman_DAM.jpg');
+            background-position: center;
+          "
+        ></div>
+        <div class="col-lg-6 my-auto showcase-img" id="Newsletter">
+          <iframe
+            class="lead mb-0"
+            src="https://fysitech.typeform.com/to/BzcfVu?typeform-embed=embed-widget&amp;embed-opacity=0&amp;typeform-embed-id=0lqgh"
+            style="
+              position: absolute;
+              data-qa: iframe;
+              border: 0px none;
+              width: 100%;
+              height: 100%;
+              min-height: 100%;
+            "
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials bg-light">
+      <div class="container" id="About">
+        <h2 class="mb-5 text-center">About</h2>
+        <div class="row">
+          <div class="col-lg-15 showcase-text">
+            <p class="lead mb-0">
+              I am a huge fan of online-courses (MOOCs), tutorials,
+              YouTube-courses, podcasts, etc., BUT ... MOOCs are not in the
+              public domain (although they should be), produced expensively by
+              publishers, which are interested in user numbers and therefore
+              only produce general courses for a large English speaking
+              audience. Video and audio recordings are also hard to produce,
+              they are “static” and one mistake or a missing fact cannot be
+              fixed that easy.
+            </p>
+            <p class="lead mb-0">
+              That is why I started to develop LiaScript, as a simple and
+              extendable Markdown-dialect that allows sharing knowledge by
+              creating interactive courses in an Open-Source manner, where
+              anyone can participate and contribute. Even if it is a course for
+              a minor audience, such as teaching cuneiform writing to 8-graders
+              in Swahili.
+              <br />
+              <q>Like in the movie Ratatouille ... “anybody can cook”.</q>
+            </p>
             <br />
-            ... and most of all, I hate the fact that education is still a
-            business with private schools and universities, expensive BOOKS
-            and MOOCS...
-          </p>
-          <br />
-          <iframe width="100%" height="340" src="https://www.youtube.com/embed/w_CRABsJNKA" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="lead mb-0">
+              Source at GitHub:
+              <a href="https://github.com/LiaScript/LiaScript" target="_blank">
+                https://github.com/LiaScript/LiaScript
+              </a>
+            </p>
+            <p class="lead mb-0">
+              <br />
+              ... and most of all, I hate the fact that education is still a
+              business with private schools and universities, expensive BOOKS
+              and MOOCS...
+            </p>
+            <br />
+            <iframe
+              width="100%"
+              height="340"
+              src="https://www.youtube.com/embed/w_CRABsJNKA"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Call to Action -->
-  <section class="call-to-action text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">
-            Share your knowledge and build online courses with simple
-            Markdown!
-          </h2>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="url" class="form-control form-control-lg" placeholder="Enter your course url..."
-                  id="course_url2" />
+    <!-- Call to Action -->
+    <section class="call-to-action text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h2 class="mb-4">
+              Share your knowledge and build online courses with simple
+              Markdown!
+            </h2>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input
+                    type="url"
+                    class="form-control form-control-lg"
+                    placeholder="Enter your course url..."
+                    id="course_url2"
+                  />
+                </div>
+                <div class="col-12 col-md-3">
+                  <button
+                    class="btn btn-block btn-lg btn-primary"
+                    onclick="location.href = load($('#course_url2').val()); return false;"
+                  >
+                    Load!
+                  </button>
+                </div>
               </div>
-              <div class="col-12 col-md-3">
-                <button class="btn btn-block btn-lg btn-primary"
-                  onclick="location.href = load($('#course_url2').val()); return false;">
-                  Load!
-                </button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-          <ul class="list-inline mb-2">
-            <li class="list-inline-item">
-              <a href="#Loader">Loader</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#Concept">Concept</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#Docs">Docs</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#Examples">Examples</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#Atom">Editor</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#News">News</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#About">About</a>
-            </li>
-          </ul>
-          <p class="text-muted small mb-4 mb-lg-0">
-            &copy; André Dietrich 2023.
-          </p>
-        </div>
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#Loader">Loader</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#Concept">Concept</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#Docs">Docs</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#Examples">Examples</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#Atom">Editor</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#News">News</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#About">About</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">
+              &copy; André Dietrich 2023.
+            </p>
+          </div>
 
-        <div class="col-lg-6 h-100 text-center text-lg-right my-auto" id="Contact">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-3">
-              <a href="mailto:LiaScript@web.de">
-                <i class="fa fa-at fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="https://github.com/LiaScript">
-                <i class="fa fa-github fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <!--li class="list-inline-item mr-3">
+          <div
+            class="col-lg-6 h-100 text-center text-lg-right my-auto"
+            id="Contact"
+          >
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="mailto:LiaScript@web.de">
+                  <i class="fa fa-at fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="https://github.com/LiaScript">
+                  <i class="fa fa-github fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <!--li class="list-inline-item mr-3">
                 <a href="https://github.com/andre-dietrich">
                   <i class="fa fa-git fa-2x fa-fw"></i>
                 </a>
               </li-->
-            <li class="list-inline-item mr-3">
-              <a target="_blank" href="https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg">
-                <i class="fa fa-youtube-play fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a target="_blank" href="https://www.linkedin.com/in/andr%C3%A9-dietrich-73949415/">
-                <i class="fa fa-linkedin-square fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a target="_blank" href="https://twitter.com/liascript">
-                <i class="fa fa-twitter fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a target="_blank" href="https://paypal.me/LiaScript">
-                <i class="fa fa-cc-paypal fa-2x fa-fw"></i>
-              </a>
-            </li>
-          </ul>
+              <li class="list-inline-item mr-3">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg"
+                >
+                  <i class="fa fa-youtube-play fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/andr%C3%A9-dietrich-73949415/"
+                >
+                  <i class="fa fa-linkedin-square fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a target="_blank" href="https://twitter.com/liascript">
+                  <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a target="_blank" href="https://paypal.me/LiaScript">
+                  <i class="fa fa-cc-paypal fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
