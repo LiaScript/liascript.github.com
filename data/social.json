@@ -1,0 +1,29 @@
+{
+  "main": [
+    {
+      "name": "email",
+      "icon": "fa fa-envelope",
+      "link": "mailto:LiaScript@web.de"
+    },
+    {
+      "name": "twitter",
+      "icon": "fab fa-twitter",
+      "link": "https://twitter.com/liascript"
+    },
+    {
+      "name": "github",
+      "icon": "fab fa-github",
+      "link": "https://www.github.com/liascript"
+    },
+    {
+      "name": "linkedin",
+      "icon": "fab fa-linkedin",
+      "link": "https://www.linkedin.com/in/andr%C3%A9-dietrich-73949415/"
+    },
+    {
+      "name": "youtube",
+      "icon": "fab fa-youtube",
+      "link": "https://www.youtube.com/@liascript4180"
+    }
+  ]
+}

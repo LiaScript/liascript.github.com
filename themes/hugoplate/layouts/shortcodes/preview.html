@@ -1,0 +1,21 @@
+{{ $page := .Site.GetPage (.Get 0) }}
+<div
+  class="flex flex-col md:flex-row items-center p-4 rounded-md shadow-md"
+  style="background-color: rgba(0.5,0.5,0.5,0.1);">
+  <a href="{{ $page.Params.image }}" class="flex-shrink-0 mr-4">
+    {{ if $page.Params.image }}
+      <div
+        class="object-cover rounded-md"
+        style="height: 128px; width: 188px; background-image: url('{{ $page.Params.image }}'); background-size: cover;"
+        alt="Image description"></div>
+    {{ end }}
+  </a>
+  <div class="flex flex-col">
+    <a href="{{ $page.RelPermalink }}" alt="{{ $page.Title }}">
+      <h5 style="margin: 0px;">{{ $page.Title }}</h5>
+    </a>
+    <p style="margin: 0.5rem 0px 0px 0px;" class="text-gray-600">
+      {{ $page.Summary }}
+    </p>
+  </div>
+</div>

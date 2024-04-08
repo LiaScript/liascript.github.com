@@ -1,0 +1,139 @@
+{{ define "main" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <section class="section pt-14">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-7 md:col-9 mb-8 text-center">
+            <h1 class="mb-4 text-h3 lg:text-h1">
+              {{ .title | markdownify }}
+            </h1>
+            <p class="mb-8">
+              {{ .content | markdownify }}
+            </p>
+            {{ with .button }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-primary"
+                  href="{{ .link | absURL }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+          <div class="col-12">
+            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Banner -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="mb:md-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5 mb-6">
+            {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-7 lg:col-6">
+            <h2 class="mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg">
+              {{ .content | markdownify }}
+            </p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Testimonials -->
+  {{ with site.GetPage "sections/testimonial" }}
+    {{ if .Params.enable }}
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">
+              <h2 class="mb-4">
+                {{ .Title | markdownify }}
+              </h2>
+              <p>
+                {{ .Params.description | markdownify }}
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                  {{ range .Params.testimonials }}
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg px-7 py-10">
+                        <h3 class="h5 font-primary font-semibold">
+                          {{ .name }}
+                        </h3>
+                        <p class="text-dark dark:text-white">
+                          {{ .designation | markdownify }}
+                        </p>
+
+                        <blockquote class="mt-4">
+                          {{ .content | markdownify }}
+                        </blockquote>
+                        <a
+                          class="btn btn-primary mt-6"
+                          href="{{ .link | absURL }}">
+                          visit
+                          <i class="fa fa-arrow-right pl-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  {{ end }}
+                </div>
+                <div
+                  class="testimonial-slider-pagination mt-9 flex items-center justify-center text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Testimonials -->
+
+  <script>
+    function load(url) {
+      url = url.trim();
+      return "course/?" + url;
+    }
+  </script>
+{{ end }}

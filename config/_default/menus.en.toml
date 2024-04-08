@@ -1,0 +1,94 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "Courses"
+url = "https://liascript.github.io/course/"
+weight = 2
+
+[[main]]
+name = "LiveEditor"
+url = "https://liascript.github.io/LiveEditor"
+weight = 3
+
+[[main]]
+name = "Blog"
+pageRef = "/blog"
+weight = 4
+
+[[main]]
+weight = 5
+name = "More"
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 6
+
+
+
+
+[[main]]
+parent = "More"
+name = "VSCode - Editor"
+pageRef = "/vscode"
+weight = 1
+
+[[main]]
+parent = "More"
+name = "VSCode-Web - Editor"
+pageRef = "/vscode-web"
+weight = 2
+
+[[main]]
+parent = "More"
+name = "Atom - Editor"
+pageRef = "/atom"
+weight = 3
+
+[[main]]
+parent = "More"
+name = "Live - Editor"
+pageRef = "/live-editor"
+weight = 4
+
+[[main]]
+parent = "More"
+name = "Development - Server"
+pageRef = "/development-server"
+weight = 5
+
+[[main]]
+parent = "More"
+name = "Exporter"
+pageRef = "/exporter"
+weight = 6
+
+[[main]]
+parent = "More"
+name = "Authors"
+pageRef = "/authors"
+
+
+
+
+# footer menu
+[[footer]]
+name = "About"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Newsletter"
+pageRef = "/newsletter"
+weight = 2
+
+[[footer]]
+name = "Contact"
+pageRef = "/contact"
+weight = 3

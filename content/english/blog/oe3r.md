@@ -1,0 +1,83 @@
+---
+title: OE³R the next Generation of OER?
+date: 2020-11-10
+draft: false
+author: André Dietrich
+image: "/images/post/theIdealCity.jpg"
+description: A short history of open educational resources and some ideas about the future ...
+categories: ["Article"]
+tags: ["LiaScript", "OER"]
+---
+
+OER or in long Open Educational Resources is a “relatively” new and vaguely defined term. Wikipedia describes it as follows:
+
+> Open educational resources (OER) are freely accessible, openly licensed text, media, and other digital assets that are useful for teaching, learning, and assessing as well as for research purposes...
+>
+> https://en.wikipedia.org/wiki/Open_educational_resources
+
+Thus, the __ER__ defines any kind of Educational¹ content while the __O__ points to an open licensing format. But the idea is actually not new at all, there have been attempts that predate the OER movement by nearly a century.
+
+In 1923 the French pedagogue and educational reformer [Celestine Freinet](https://en.wikipedia.org/wiki/C%C3%A9lestin_Freinet) purchased a printing press and started to print his educational work and those of his pupils. These free texts were later published in class newspapers, discussed within the classroom and shared with other schools, changed, reprinted, etc. By the time these texts started to replace their conventional school books and in 1926 Freinet had developed a press for schools, that can still be bought today (cf. https://de.wikipedia.org/wiki/Schuldruckerei).
+
+![Imprenta Freinet](https://upload.wikimedia.org/wikipedia/commons/c/c1/Imprenta_Freinet.jpg "Imprenta Freinet")
+
+
+If we look on what has been achieved, it practically not much. Although, accessing, sharing and copying of information has never been easier, due to Computers and the Internet. But, we are still restricting ourselves. One limitation is caused by the application of restrictive licenses, which is tackled by the idea of openness in ER. But could the openness also be interpreted in much broader sense?
+
+## Editable²
+
+The term open should also cover the format of the educational resource. Next to an open license that allows to change and redistribute the content, the second __E__ in __OEER__ could stand for editable or in other words modifiable. In the world of Freinet this would mean, that next to the class newspapers also the frames that contain the letters are exchanged. Obviously, this does not make sense, but sharing only a static PDF is of similar quality. It can hardly be modified after it has been created from a Word-, LaTeX-, PowerPoint-, Impress-, or any other kind of document.
+
+Of course, some might argue, that it is still possible to alter the content of a PDF-file and it should therefor also be interpreted as editable. But, it is not possible to rearrange the content, while keeping all internal references and the format in sync. In the same way you could say every executable program is also free for edit, since it can be [disassembled](https://en.wikipedia.org/wiki/Disassembler) or [decompiled](https://en.wikipedia.org/wiki/Decompiler) in order to produce a format that can be modified again by humans. To cut a long story short, this does not produce any valuable result, especially if the project is way too complex.
+
+So why do we not share the editable part in the first place. Everyone can use it, adapt, correct, translate it and also push his/her changes back into the original resource. This is not a hard problem at all, instead software-developers do this all the time. This can be applied to any format: text/audio/video/code.
+
+To close this part, we should prefer directly editable formats (such as Word over PDF) and free formats over commercial (Writer over Word), and to go a step human-readable formats that do not require any kind of specialized software for editing (Markdown over Writer), but can be read and edited by everyone with a simple text editor, if possible.
+
+> __Side Note:__ Storing and hosting editable educational content on [GitHub](https://github.com) has the benefit of permanence. The [Archive Program](https://archiveprogram.github.com) is an initiative that wants to preserve the human knowledge, including open-source projects, for the  next 1000 years. To achieve this, projects are stored at different places in the world, including data-centers in Antarctica.
+
+![archive-program](/images//post/oe3r/oe3r_1.png)
+_https://archiveprogram.github.com_
+
+
+## Executable³
+
+Isn't it strange, that most of the digital educational content resembles printed matter: PDFs, Word, websites, etc.? Of course, there is also the development from blackboard -> over overhead transparencies -> to PowerPoint and of course multimedia, BUT, and this is a BUT in capital letters, if we are talking about computers as the main medium for presenting educational content, this content should also be Executable³ and this is where the third __E__ in __OEEER__ comes in. Content is much more graspable, if you can interact with it:
+
+* change the parameters of a function and visualize the result,
+* dive into a simulation on astronomy,
+* make physical measurements and experiment with the sensory system on your smartphone,
+* use quizzes to check the understanding of a certain topic immediately
+* learn to program through directly editing code and executing it
+* or learn to analyze medical data (scans) through direct interaction ...
+
+
+Bret Victor provides on his website http://worrydream.com an incredible resource for inspiration, ideas, and examples:
+
+{{< youtube oUaOucZRlmE >}}
+_http://worrydream.com/#!/MediaForThinkingTheUnthinkable_
+
+He also coins the terms “model-driven debate” and “model-driven reading” and demonstrates how just some small interactive elements within a static text can be used to improve the understanding of a certain topic, which would be otherwise hard to digest.
+
+http://worrydream.com/ClimateChange/#media-debate
+
+> **Why is it, that nearly no one makes calculations an interactive part of her/his publication?**
+
+To simplify this process, JavaScript is now an essential/native part of LiaScript. Snippets can be added everywhere within the text, table, enumeration, etc. and perform some calculations, query the internet, trigger an action, or do something else. The calculation result becomes part of the presented document. Furthermore, scripts can be interconnected like in an Excel-sheet, so that a change in one cell/script triggers a recalculation of the associated cells/scripts. The user can interact with every script, inspect it, and even modify its code.
+
+![](/images/post/oe3r/oe3r_2.gif)
+
+_LiaScript integration of interactive script elements_
+
+For non-trivial and reoccurring tasks, LiaScript provides the concept of reusable and parameterizable macros, and template-courses. Thus, the functionality that is defined within one LiaScript document can be imported into other documents, so that the course creator does not have to be a programmer to add various kinds of interactions or simulations...
+
+> **Side Note:** When we talk about the lack of code or interactive analyzes, we also have to admit the lack of primary data. Primary or raw data is mostly not stored and accessible directly, but hidden behind processed data (e.g., median, average) as well as figures and diagrams. Projects like the [Open-Science-Framework](https://osf.io) are intended to be used as a reservoir for primary data, code for all analyzes, and documentation. This way, the data and measurements are not lost, but can also be later reused by others.
+
+
+![](/images/post/oe3r/oe3r_3.png)
+_https://osf.io_
+
+
+## Summary
+
+The next generation of **OER** will be modifiable and interactive or in order to stick to the triple-**E** notation: **Editable** and **Executable**. But, although many enthusiasts already think of integrating artificial intelligence (AI), to utilize modern technologies such as virtual- or augmented reality (VR/AR), or to apply gamification in education, content is still the hardest part. A well written text, an informative image, a short video demonstration, and a good didactic concept will still provide the foundation... 

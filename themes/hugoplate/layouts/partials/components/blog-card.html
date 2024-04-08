@@ -1,0 +1,55 @@
+<div class="bg-body dark:bg-darkmode-body">
+  {{ $image := .Params.image }}
+  {{ if $image }}
+    <div
+      class="mb-6 image-container rounded"
+      style="background-image: url('{{ $image }}'); height: 234px; width: 100%; border: 1px solid black; background-position: center; background-size: cover; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+      <!-- Content inside the div can go here, if needed -->
+    </div>
+  {{ end }}
+  <h4 class="mb-3">
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h4>
+  {{ $categories:= .Params.categories }}
+  {{ if $categories }}
+    <ul class="mb-4">
+      <li class="mr-4 inline-block">
+        {{- $authors := .Params.authors }}
+        {{- if $authors }}
+          {{- $last := index $authors (sub (len $authors) 1) }}
+          {{- range $index, $author := $authors }}
+            <a href="{{ `authors/` | relLangURL }}{{ $author | urlize }}/">
+              {{- if ne $author $last }}
+                <i class="fa-regular fa-circle-user mr-2"></i>{{ $author }},
+              {{- else }}
+                {{ $author }}
+              {{- end }}
+            </a>
+          {{- end }}
+        {{- else if .Params.author }}
+          <a href="{{ `authors/` | relLangURL }}{{ .Params.author | urlize }}/">
+            <i class="fa-regular fa-circle-user mr-2"></i>{{ .Params.author }}
+          </a>
+        {{- end }}
+      </li>
+      <li class="mr-4 inline-block">
+        <i class="fa-regular fa-folder mr-1"></i>
+        {{ range $i,$p:= $categories }}
+          <a
+            href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
+            class="ms-1"
+            >{{ . | humanize }}{{ if ne $i (sub (len $categories) 1) }}
+              {{ "," }}
+            {{ end }}
+          </a>
+        {{ end }}
+      </li>
+    </ul>
+  {{ end }}
+  <p class="mb-6">{{ .Summary }}</p>
+  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+    {{ i18n "read_more" }}
+  </a>
+</div>
