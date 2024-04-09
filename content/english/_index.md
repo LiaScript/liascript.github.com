@@ -6,7 +6,7 @@ banner:
     Share your knowledge and build online courses with simple LiaScript! LiaScript is an open Markdown dialect and interpreter for interactive and educational content, providing everything you need to jumpstart a journey to engaging OER projects.
     <br>
     <br>
-    <input type="url" class="form-control form-control-lg" placeholder="Enter your Markdown-URL ..." id="course_url">
+    <input type="url" style="border: 1px solid black; border-radius: 5px; padding: 8px; margin-right: 6px;" placeholder="Enter your Markdown-URL ..." id="course_url">
     <button class="btn btn-primary" onclick="location.href = load(document.getElementById('course_url').value); return false;">
       Load Course
       <i class="fa fa-arrow-right pl-2"></i>
