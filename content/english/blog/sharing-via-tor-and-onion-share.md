@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/img/censorship.png"
 categories: 
-    - Example
+    - Examples
 tags: 
     - LiaScript
     - Hosting

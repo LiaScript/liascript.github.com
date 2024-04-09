@@ -6,8 +6,8 @@ authors:
     - André Dietrich
     - Sebastian Zug
 image: "/images/post/uff23.jpg"
-categories: ["Conference", "Web 3.0", "Talk"]
-tags: ["LiaScript", "OER", "Web 3.0", "University Future Festival 2023", "YouTube"]
+categories: ["Conference", "Talk"]
+tags: ["LiaScript", "OER", "Web 3.0", "University Future Festival", "YouTube"]
 
 description: "A talk on the core concepts and principles and ideas on LiaScript at the University Future Festival 2023."
 ---
@@ -24,7 +24,7 @@ Since the talk was in German, we made a re-recording in English:
 
 {{< youtube -y7I3bIeB_I >}}
 
-## Sources:
+## Sources
 
 - [GitHub Repository](https://github.com/LiaPlayground/University-Future-Festival-2023)
 - [LiaScript Presentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/README.md)

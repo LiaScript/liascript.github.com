@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/pic/20.png"
 categories: 
-    - Example
+    - Examples
 tags: 
     - LiaScript
     - Inspiration

@@ -1,10 +1,10 @@
 ---
-title: Freie Lehr-Lern-Materialien ohne Wenn und Aber (German)
-date: 2020-04-18
+title: Freie Lehr-Lern-Materialien ohne Wenn und Aber I (German)
+date: 2020-04-16
 draft: false
 authors:
-    - André Dietrich
     - Sebastian Zug
+    - André Dietrich
 image: "/images/post/The_Payment_of_the_Tithes_Bonhams.jpg"
 categories:
     - Talk
@@ -12,6 +12,8 @@ categories:
 tags:
     - LiaScript
     - Freiberg
+    - Workshop
+    - YouTube
 
 description: Ein Workshop über die Entwicklung von online-Kursen mit LiaScript. Die wichtigsten Features werden vorgestellt und es wird ein Ausblick auf zukünftige Entwicklungen gegeben.
 ---
