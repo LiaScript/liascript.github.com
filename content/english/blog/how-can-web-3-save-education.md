@@ -7,7 +7,7 @@ authors:
     - Sebastian Zug
 image: "/images/post/uff23.jpg"
 categories: ["Conference", "Web 3.0", "Talk"]
-tags: ["LiaScript", "OER", "Web 3.0", "University Future Festival 2023"]
+tags: ["LiaScript", "OER", "Web 3.0", "University Future Festival 2023", "YouTube"]
 
 description: "A talk on the core concepts and principles and ideas on LiaScript at the University Future Festival 2023."
 ---

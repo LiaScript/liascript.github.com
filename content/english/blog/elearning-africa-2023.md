@@ -7,8 +7,15 @@ image: "/images/post/ela23.png"
 
 description: "Instant Creation & Publishing of Free and Open Online Courses with LiaScript"
 
-categories: ["Tutorial", "Conference", "Talk"]
-tags: ["LiaScript", "eLearning Africa", "Workshop"]
+categories: 
+    - Conference
+    - Talk
+    - Tutorial
+tags: 
+    - LiaScript
+    - eLearning Africa
+    - Workshop
+    - YouTube
 
 description: "Instant Creation & Publishing of Free and Open Online Courses with LiaScript"
 ---

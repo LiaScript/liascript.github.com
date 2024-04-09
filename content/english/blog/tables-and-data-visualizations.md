@@ -10,7 +10,7 @@ description: "This screencast from the Open Educa Berlin (OEB) Conference emphas
 image: "/images/post/tables.webp"
 
 categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "Tables", "Feature"]
+tags: ["LiaScript", "Tables", "Feature", "YouTube", "Statistics"]
 
 ---
 

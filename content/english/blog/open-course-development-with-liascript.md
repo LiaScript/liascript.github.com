@@ -8,7 +8,7 @@ author: André Dietrich
 image: "/images/post/elm-europe.png"
 
 categories: ["Conference", "Talk"]
-tags: ["LiaScript", "Elm", "Markdown"]
+tags: ["LiaScript", "Elm", "Markdown", "YouTube"]
 
 description: An Elm-talk about the development of an online course DSL that is based on Markdown, given at the elm-europe conference in 2019.
 

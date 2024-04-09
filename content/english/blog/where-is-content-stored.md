@@ -12,6 +12,7 @@ tags:
     - LiaScript
     - Hosting
     - Platforms
+    - YouTube
 draft: false
 
 description: "Where can you store your course content and how can you host it for free..."

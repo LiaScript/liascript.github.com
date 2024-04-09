@@ -4,8 +4,17 @@ date: 2023-05-03
 draft: false
 author: André Dietrich
 image: "/images/post/multimedia.webp"
-categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "Multimedia", "Images", "Video", "Audio", "oEmbed"]
+categories: 
+    - Examples
+    - Shorts
+tags: 
+    - LiaScript
+    - Multimedia
+    - Images
+    - Video
+    - Audio
+    - oEmbed
+    - YouTube
 
 description: How can you embed multimedia content in LiaScript? This post shows you how to embed images, videos, and sounds in your LiaScript courses. You can also embed content from other websites using oEmbed.
 ---

@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/ela23-invitation.png"
 categories: ["Tutorial", "Conference"]
-tags: ["LiaScript", "eLearning Africa", "Workshop"]
+tags: ["LiaScript", "eLearning Africa", "Workshop", "YouTube"]
 
 description: "We will have a full-day workshop at the eLearning Africa conference in Dakar on creating free and open interactive courses with LiaScript Markdown. No platform no, no login, just OER and publish immediately (works offline too)."
 ---

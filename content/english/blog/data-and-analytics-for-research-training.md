@@ -13,6 +13,8 @@ categories:
 tags: 
     - LiaScript
     - MOOC
+    - Coding
+    - Statistics
 ---
 
 The DART program offers free, open-source educational resources aimed at empowering working biomedical researchers with data science skills to enhance their work. It aligns with the National Institutes of Health's focus on boosting research reproducibility, transparency, and rigor through instructional modules that teach data science and related abilities. The program adopts a modular educational strategy, allowing learners to tailor their training by choosing from various modules to create a personalized learning pathway. Participants are encouraged to explore established educational pathways or to use a prototype module discovery application to build their own.

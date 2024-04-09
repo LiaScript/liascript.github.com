@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/artemisia.webp"
 categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "Feature", "Images"]
+tags: ["LiaScript", "Feature", "Images", "YouTube"]
 
 description: "... a paragraph with a starting image will produce a floating environment, a paragraph with only images will produce a gallery, the image will be optimally sized & placed, and \"titles\" will be used as captions."
 ---

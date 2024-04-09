@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/oembed.jpg"
 categories: ["Article"]
-tags: ["LiaScript", "Multimedia", "Images", "Video", "Audio", "oEmbed"]
+tags: ["LiaScript", "Multimedia", "Images", "Video", "Audio", "oEmbed", "YouTube"]
 
 description: Including any kind of multimedia content in LiaScript is easy. This post shows you how to embed images, videos, and sounds in your LiaScript courses. You can also embed content from other websites using oEmbed.
 ---

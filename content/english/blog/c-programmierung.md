@@ -11,6 +11,7 @@ categories:
 tags: 
     - LiaScript
     - Books
+    - Coding
 ---
 
 Dies ist eine interaktive Portierung des freien Wikibuches [C-Programmierung](https://de.wikibooks.org/wiki/C-Programmierung) nach LiaScript.

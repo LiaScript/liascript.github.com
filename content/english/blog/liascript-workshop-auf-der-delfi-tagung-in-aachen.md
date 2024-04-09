@@ -7,7 +7,7 @@ authors:
     - Sebastian Zug
 image: "/images/post/delfi23.png"
 categories: ["Tutorial", "Conference", "Talk"]
-tags: ["LiaScript"]
+tags: ["LiaScript", "Workshop", "YouTube"]
 
 description: Dies ist ein Mitschnitt des Workshops, der auf auf der DELFI-Tagung 2023 in Aachen gegeben wurde.
 ---

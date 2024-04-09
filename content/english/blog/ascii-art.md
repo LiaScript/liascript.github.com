@@ -4,8 +4,13 @@ date: 2023-05-01
 draft: false
 author: André Dietrich
 image: "/images/post/ascii.webp"
-categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "ASCII"]
+categories: 
+    - Examples
+    - Shorts
+tags: 
+    - LiaScript
+    - ASCII
+    - YouTube
 description: A quick introduction into ASCII-aRT and how it is integrated into LiaScript, such that you can integrate for example also formulas and animations to your image...
 ---
 

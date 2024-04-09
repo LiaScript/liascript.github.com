@@ -11,6 +11,7 @@ categories:
 tags: 
     - LiaScript
     - Books
+    - Coding
 ---
 
 This LiaScript book is based on the free

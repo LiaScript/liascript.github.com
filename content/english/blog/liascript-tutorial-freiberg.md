@@ -7,7 +7,7 @@ authors:
     - André Dietrich
 image: "/images/post/freiberg.jpg"
 categories: ["Talk", "Tutorial"]
-tags: ["LiaScript", "Workshop", "Freiberg"]
+tags: ["LiaScript", "Workshop", "Freiberg", "YouTube"]
 
 description: In diesem Tutorial werden die neusten Features und das "neue" Design von LiaScript vorgestellt. Die Vorschau auf die Klassenraumfunktionen sind in der aktuellen Version bereits enthalten und können von jedem frei und ohne Login und ohne Logging genutzt werden...
 ---

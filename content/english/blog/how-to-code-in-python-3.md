@@ -11,6 +11,7 @@ categories:
 tags: 
     - LiaScript
     - Books
+    - Coding
 ---
 
 This is a port of DigitalOcean’s How To Code in Python 3 tutorial series by Lisa Tagliaferri translated to LiaScript with interactive PyScript examples.

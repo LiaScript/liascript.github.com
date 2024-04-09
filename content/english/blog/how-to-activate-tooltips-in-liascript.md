@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/tooltips.jpg"
 categories: ["Examples"]
-tags: ["LiaScript", "Feature"]
+tags: ["LiaScript", "Feature", "YouTube"]
 
 description: LiaScript has a new tooltip feature, which was inspired by the Wikipedia tooltips, which provide more information about a certain topic if you hover a link with the mouse.
 ---

@@ -5,8 +5,13 @@ date: 2023-05-09
 draft: false
 author: André Dietrich
 image: "/images/post/quiz.webp"
-categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "Quizzes"]
+categories: 
+    - Examples
+    - Shorts
+tags: 
+    - LiaScript
+    - Quizzes
+    - YouTube
 ---
 
 

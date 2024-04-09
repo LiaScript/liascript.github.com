@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/atom.png"
 categories: ["Tutorial", "Article", "Editor"]
-tags: ["LiaScript", "Tools"]
+tags: ["LiaScript", "Tools", "YouTube"]
 
 description: This blog entry presents a little workaround and shows how you can still use our two plugins to develop your LiaScript courses offline with the Atom editor.
 ---

@@ -7,7 +7,7 @@ image: "/images/post/docu-en.jpg"
 categories:
   - Article
   - Documentation
-tags: ["LiaScript"]
+tags: ["LiaScript", "YouTube"]
 
 description: This is a screencast of the LiaScript documentation in presentation mode spoken by LiaScript itself ;-)
 ---

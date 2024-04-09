@@ -5,9 +5,12 @@ draft: false
 author: André Dietrich
 image: "/images/post/adam-and-eve.jpg"
 categories:
-    - Tutorial
     - Article
-tags: ["LiaScript", "Feature"]
+    - Tutorial
+tags: 
+  - LiaScript
+  - Feature
+  - YouTube
 
 description: "Dieses Tutorial führt in 13 „kurzen“ Schritt-für-Schritt Videos in die Kursentwicklung mit LiaScript ein, von der Installation des Editors hin zu den wichtigsten Gestaltungsmöglichkeiten..."
 ---

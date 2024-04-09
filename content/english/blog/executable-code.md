@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/coding.webp"
 categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "Coding"]
+tags: ["LiaScript", "Coding", "YouTube"]
 description: How to make your Markdown code-snippets editable and executable?
 ---
 

@@ -7,7 +7,7 @@ image: "/images/post/docu-ua.jpg"
 categories:
   - Article
   - Documentation
-tags: ["LiaScript"]
+tags: ["LiaScript", "YouTube"]
 
 description: Це автоматичний переклад документації LiaScript на українську мову.
 ---

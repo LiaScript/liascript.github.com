@@ -5,7 +5,7 @@ draft: false
 author: André Dietrich
 image: "/images/post/fonts.webp"
 categories: ["Examples", "Shorts"]
-tags: ["LiaScript", "Fonts", "Languages"]
+tags: ["LiaScript", "Fonts", "Languages", "YouTube"]
 description: "How to use different fonts in LiaScript-Markdown and why this might be useful for learning ancient and extinct languages?"
 ---
 

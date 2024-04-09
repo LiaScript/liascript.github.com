@@ -11,6 +11,7 @@ tags:
     - Inspiration
     - Kids
     - Books
+    - YouTube
 
 description: This post will help you to set up your Atom with the appropriate plugins to speed up your development process.
 ---

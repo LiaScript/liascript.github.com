@@ -11,6 +11,7 @@ categories:
 tags: 
     - LiaScript
     - Books
+    - Coding
 ---
 
 Dieses Buch soll in die Programmiersprache PROLOG und in die mit ihr verbundene
