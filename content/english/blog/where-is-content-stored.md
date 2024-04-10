@@ -10,7 +10,7 @@ categories:
     - Shorts
 tags:
     - LiaScript
-    - Hosting
+    - Sharing
     - Platforms
     - YouTube
 draft: false

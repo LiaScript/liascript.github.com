@@ -8,7 +8,7 @@ categories:
     - Examples
 tags: 
     - LiaScript
-    - Hosting
+    - Sharing
     - OnionShare
     - YouTube
 

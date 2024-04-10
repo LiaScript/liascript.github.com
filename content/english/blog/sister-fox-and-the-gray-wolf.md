@@ -1,5 +1,5 @@
 ---
-title: Sister Fox and the Gray Wulf
+title: Sister Fox and the Gray Wolf
 date: 2019-12-05
 draft: false
 author: André Dietrich
@@ -20,7 +20,7 @@ These are two early translations of Russian folk take "sister fox and the gray w
 It is a recording of a LiaScript document, see the original versions at:
 https://github.com/LiaBooks/SisterFoxAndTheGrayWolf
 
-> If you try out one of the examples below, make shure that you enable the audio output of your browser, since the text-to-speech is turned of by default.
+> If you try out one of the examples below, make sure that you enable the audio output of your browser, since the text-to-speech is turned of by default.
 
 ### Original (Russian) Version
 
