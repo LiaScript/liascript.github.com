@@ -59,7 +59,7 @@ def toCard(data):
     
     title = data.get("title")
     if title is not None:
-        title = "<h6>" + title + "</h6>"
+        title = "<h5 style='font-size: 16px;'>" + title + "</h5>"
     
     description = data.get("description")
     if description is not None:
