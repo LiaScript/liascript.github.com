@@ -1,7 +1,5 @@
 ---
 title: "Where is Content Stored?"
-meta_title: ""
-description: "this is meta description"
 date: 2023-06-21
 image: "/images/post/hosting.webp"
 author: "André Dietrich"

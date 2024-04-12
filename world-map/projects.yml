@@ -1,0 +1,17 @@
+- title: "Arbeitsgruppe Softwareentwicklung und Robotik"
+  link: "https://tubaf-ifi-liascript.github.io"
+  gps:
+    latitude: 50.92566782800542
+    longitude: 13.33071481622859
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Universitaetsbibliothek_Freiberg_Fassade.jpg/1024px-Universitaetsbibliothek_Freiberg_Fassade.jpg"
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Freiberg_Marktplatz.jpg/800px-Freiberg_Marktplatz.jpg
+  description: |
+    Alle Lehrmaterialien der Arbeitsgruppe wurden mit LiaScript erstellt und sind im interaktiven
+    Modus über die untenstehenden Links erreichbar.
+  tags:
+    - Software Engineering
+    - Embedded Systems
+    - Robotics
+  categories:
+    - Computer Science
+    - Germany

@@ -13,6 +13,17 @@
 
     <!-- style (always cache it) -->
     {{ partialCached "essentials/style.html" . }}
+
+    {{ if .Params.css }}
+      {{ range .Params.css }}
+        <link rel="stylesheet" href="{{ . | relURL }}" />
+      {{ end }}
+    {{ end }}
+    {{ if .Params.js }}
+      {{ range .Params.js }}
+        <script src="{{ . | relURL }}"></script>
+      {{ end }}
+    {{ end }}
   </head>
 
   <body>

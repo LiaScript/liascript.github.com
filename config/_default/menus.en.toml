@@ -31,6 +31,11 @@ pageRef = "/about"
 weight = 6
 
 
+[[main]]
+name = "World-Map"
+pageRef = "/world-map"
+weight = 6
+
 
 
 [[main]]
@@ -92,3 +97,9 @@ weight = 2
 name = "Contact"
 pageRef = "/contact"
 weight = 3
+
+
+[[footer]]
+name = "World-Map"
+pageRef = "/world-map"
+weight = 4
