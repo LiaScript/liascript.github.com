@@ -4,8 +4,13 @@ date: 2022-06-01
 draft: false
 author: André Dietrich
 image: "/images/post/Gallery_at_Brussels.jpg"
-categories: ["Examples", "Community"]
-tags: ["LiaScript", "Feature"]
+categories:
+    - Community
+    - Article
+tags:
+    - LiaScript
+    - Sharing
+    - Feature
 
 description: How to promote your LiaScript content and make it more visible to a wider audience. Learn how to add meta-information, badges, and social previews to your content.
 ---
