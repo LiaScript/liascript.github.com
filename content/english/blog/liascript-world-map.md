@@ -22,7 +22,7 @@ All information about the projects is stored within a static YAML-file:
 
 https://github.com/liascript/liascript.github.com/world-map/projects.yml
 
-If you want to add your project to this map, the easiest way is to send us an email with the following information:
+If you want to add your project to this map, the easiest way is to send us an email with the following information, or leave a comment:
 
 ``` yaml
 - title: "Your Project Title"

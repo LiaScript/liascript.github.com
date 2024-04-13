@@ -45,6 +45,8 @@ for(let [gps,card] of projects) {
 If you want to add your project to this map, please follow the instructions in the blog post:
 
 {{< button link="/blog/liascript-world-map" label="contribute" >}}
+                  
+... or leave us a comment ;-)
 
 More information about the projects and a search will be embedded in the near future.
 """)
