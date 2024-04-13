@@ -170,3 +170,20 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+
+
+############################
+## Comments
+############################
+[params.giscus]
+repo = "liascript/liascript"
+repoID = "MDEwOlJlcG9zaXRvcnkyMjAwNTMxMjY="
+category = "General"
+categoryID = "DIC_kwDODR2-hs4Cbeqh"
+mapping = "title"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+theme = "light_high_contrast"
+lang = "en"
+loading = "lazy"
