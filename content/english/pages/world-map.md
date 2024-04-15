@@ -2,7 +2,7 @@
 title: "WorldMap"
 meta_title: "LiaScript - WorldMap"
 image: "/images/post/world-map2.png"
-date: 2024-04-12
+date: 2024-04-15
 description: "An overview on existing projects implemented with LiaScript"
 draft: false
 css:
@@ -24,15 +24,41 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const projects = [[[50.92566782800542, 13.33071481622859], "<div><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Universitaetsbibliothek_Freiberg_Fassade.jpg/1024px-Universitaetsbibliothek_Freiberg_Fassade.jpg\" style=\"width: 100%; max-height: 180px; margin: 0px;\"/><h5 style='font-size: 16px;'>Arbeitsgruppe Softwareentwicklung und Robotik</h5><div style=\"max-height: 100px; overflow: auto\">Alle Lehrmaterialien der Arbeitsgruppe wurden mit LiaScript erstellt und sind im interaktiven\nModus \u00fcber die untenstehenden Links erreichbar.\n</div><a style=\"font-size: 10px\" target=\"_blank\" href=\"https://tubaf-ifi-liascript.github.io\">https://tubaf-ifi-liascript.github.io</a></div>"]]
 
-for(let [gps,card] of projects) {
-    L.marker(gps).addTo(map).bindPopup(card);
+for(let i=0; i<projects.length; i++) {
+    let [gps,card] = projects[i];
+    let marker = L.marker(gps).addTo(map);
+    marker.bindPopup(card);
+    projects[i].push(marker);
 }
+
+function exponentialDecay(x) {
+    const a = 25.7475;
+    const b = -0.7161;
+    return a * Math.exp(b * x);
+}
+
+function updateZoomLevel() {
+    const zoomLevel = map.getZoom();
+    const fix = exponentialDecay(zoomLevel);
+
+    for(let i=0; i<projects.length; i++) {
+        let [gps, card, marker] = projects[i];
+        let pos = {lat: gps[0] - fix, lng: gps[1]};
+        marker.setLatLng(pos);
+    }
+}
+
+map.on('zoomend', function() {
+    updateZoomLevel();
+});
+
+updateZoomLevel();
 </script>
 
 If you want to add your project to this map, please follow the instructions in the blog post:
 
 {{< button link="/blog/liascript-world-map" label="contribute" >}}
-
+                  
 ... or leave us a comment ;-)
 
 More information about the projects and a search will be embedded in the near future.

@@ -37,9 +37,35 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const projects = $projects
 
-for(let [gps,card] of projects) {
-    L.marker(gps).addTo(map).bindPopup(card);
+for(let i=0; i<projects.length; i++) {
+    let [gps,card] = projects[i];
+    let marker = L.marker(gps).addTo(map);
+    marker.bindPopup(card);
+    projects[i].push(marker);
 }
+
+function exponentialDecay(x) {
+    const a = 25.7475;
+    const b = -0.7161;
+    return a * Math.exp(b * x);
+}
+
+function updateZoomLevel() {
+    const zoomLevel = map.getZoom();
+    const fix = exponentialDecay(zoomLevel);
+
+    for(let i=0; i<projects.length; i++) {
+        let [gps, card, marker] = projects[i];
+        let pos = {lat: gps[0] - fix, lng: gps[1]};
+        marker.setLatLng(pos);
+    }
+}
+
+map.on('zoomend', function() {
+    updateZoomLevel();
+});
+
+updateZoomLevel();
 </script>
 
 If you want to add your project to this map, please follow the instructions in the blog post:
