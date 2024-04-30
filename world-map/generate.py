@@ -25,7 +25,7 @@ js:
 Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
 This is why we have created a world map that shows the locations of projects that have been implemented with LiaScript so far.
 """)
-                  
+
 script = Template("""
 <div id="map" style="height: 60vh"></div>
 
@@ -70,8 +70,8 @@ updateZoomLevel();
 
 If you want to add your project to this map, please follow the instructions in the blog post:
 
-{{< button link="/blog/liascript-world-map" label="contribute" >}}
-                  
+{{< button link="/blog/064_liascript-world-map" label="contribute" >}}
+
 ... or leave us a comment ;-)
 
 More information about the projects and a search will be embedded in the near future.
@@ -80,7 +80,6 @@ More information about the projects and a search will be embedded in the near fu
 site = header.substitute(title = TITLE, date = DATE, description = DESCRIPTION )
 
 def toCard(data):
-    
     image = data.get("image")
     if image is not None:
         image = '<img src="'+ image + '" style="width: 100%; max-height: 180px; margin: 0px;"/>'
@@ -92,7 +91,6 @@ def toCard(data):
     description = data.get("description")
     if description is not None:
         description = '<div style="max-height: ' + ('200' if image is None else '100') + 'px; overflow: auto">' + description + '</div>'
-
 
     link = data.get("link")
     if link is not None:

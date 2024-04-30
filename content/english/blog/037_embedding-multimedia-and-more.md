@@ -1,0 +1,36 @@
+---
+title: Embedding Multimedia and More
+slug: embedding-multimedia-and-more
+date: 2023-05-03
+draft: false
+author: André Dietrich
+image: "/images/post/multimedia.webp"
+categories: 
+    - Examples
+    - Shorts
+tags: 
+    - LiaScript
+    - Audio
+    - Images
+    - Multimedia
+    - oEmbed
+    - Video
+    - YouTube
+
+description: How can you embed multimedia content in LiaScript? This post shows you how to embed images, videos, and sounds in your LiaScript courses. You can also embed content from other websites using oEmbed.
+---
+
+There are 4 ways in LiaScript to embed multimedia content:
+
+1. the classical way `![alt](image-url)`
+2. sound `?[alt](sound-url)`
+3. video `!?[alt](video-url]`
+4. for everything else `??[alt](url)`
+
+{{< youtube bA3ZdSTalG4 >}}
+
+You can use this this example as a basis for your own course by following this [link](https://liascript.github.io/LiveEditor/?/show/code/H4sIAAAAAAAAA51W7U4bRxT976e4WRSpSF7bYCAB/CGSQEGCNgKaCqH+mJ256514dmczM+tlifJafYG+WO/M2gFXNLXKD+PVztyPc84911twmicohCxmcFUpJ3MUkgErBFxpg50O/OAvjr9+HXz7FsedX1PgujIWuyAdSAultlYmCsFpQJ+BQjYwlxRXp5A/ZeK6cFg4qKXL4Pz26rILSeWgsr4i/wy5nGUOEgplJJ83oTau81JJzhyKHlxKdsONLB2FTtFYsDpHKCRHUNI5KgIfKIeVuvDlWEcRmKEGmZkLXRe9TqczEnJBbxqF46iWwmVHO4PB6+MMffKjwXHJAkZxop3T+dGb/dfH1KJ0FPPIoGJOLvA4moxkahglt4aPo8y50h71+zNZZk2PSu4HJPq39vHEXjzcvX9c5KcRhHTjyOeLoE24eloW9D0TS6xWlcMIQpp32gg042gQAVfM2nEUUsUhTQRMKV2fVUoROojFZNRvq6Mv1O1kVE5GDDKD6UulzmRq+28HNt459J/rNU8WxNzPFx/P70Z9RuHKSaeztQUnlZAappuK5iIlLkHmbIZeMqSNltFWC/QKH6itnPnWISeyulBnDdhMV4r0BF8qtN/fQaEdGCwNWi8nq6tCTOHM6BxImFCSLkrknqbu86tCowWl9ZykMseQlBkSxPSeoNEk6D9+WmFT13WvHlqeaa1swChzueqHU728HEKU0V1Y3ou2SVX/CcROAOI2I8V42dTazC3xZjWk2rQ6ts4gy/00lEYvJBFuez8ODBACUw8Gv1QS86ceAixc6UqEBnL9yIzrL4/FsohFTKm0iefxwe5BvLMdeP1EWTW8+r/ECkxlQbQmzUukhnkOdYUD66y2jHtqW0NwNB/GT38iizYEDfRKOLAIdS4dpQc3kkyioeey8Rfht+tLbz7+652ubquEpPCJbEh34QOTqsm1j9gFdLxHcijmPfhl6V7BH7kWoZ8AlyHnIYJfTe/PdUEVw6moeChpXTGNrhxlCnDXzPFsuhir7Obz3e2b8vd53QJ8ukDTuMwnQWURptPO6BUB6VUrre/mCHTRiePJhhS89LJzW+t1dC3kyKjhC8jYghyToBTIus8MlRNh1AGUCpn1Dtw8GTrVa5/AfrqTMZIwmbhUjhQFgjmWhMsZo4AZcsorWxp4ZUwwf0zI4XDl35RUh7UEFs2CfLzrL9BQSL8nlAIhbalYy+qqAiJjOr0/KUh2Cjgq9Uz1c6I0S1kSWBiSxolJZfssHI794dgvAqWZYLS0YiH43iBJBoeDwf7e3uH+YTrYFcM0fTvkw92DnX2I3jVwf8kqI+FjZTJSQPFv6cKp1aFtohFuwvszlgSP2MwiLgrC1CI1S6A4LLuh97Afy+WYpT4qim4YqGfIhHXMyJJEMJUlsrKgh3YMV+g+vxNgpp27RDqIfSPPmd5faxfC2vlffxpS8Po8zFDPMDGsp82sH7aW5P2HnN3cXL+3m+Cxu7IYkuuyFx4WAlVbWd//kxRDF/8QLa795CCBeqsKe7HbytKvItsuz9a0/J2lQjdAYbdFgUvDK9KrlfRjhzn9DIaUDN6x1oGXx1b/P9ueXyqEw9/M9AeymQkAAA==)
+
+... Or experiment with it in the LiveEditor below:
+
+<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/code/H4sIAAAAAAAAA51W7U4bRxT976e4WRSpSF7bYCAB/CGSQEGCNgKaCqH+mJ256514dmczM+tlifJafYG+WO/M2gFXNLXKD+PVztyPc84911twmicohCxmcFUpJ3MUkgErBFxpg50O/OAvjr9+HXz7FsedX1PgujIWuyAdSAultlYmCsFpQJ+BQjYwlxRXp5A/ZeK6cFg4qKXL4Pz26rILSeWgsr4i/wy5nGUOEgplJJ83oTau81JJzhyKHlxKdsONLB2FTtFYsDpHKCRHUNI5KgIfKIeVuvDlWEcRmKEGmZkLXRe9TqczEnJBbxqF46iWwmVHO4PB6+MMffKjwXHJAkZxop3T+dGb/dfH1KJ0FPPIoGJOLvA4moxkahglt4aPo8y50h71+zNZZk2PSu4HJPq39vHEXjzcvX9c5KcRhHTjyOeLoE24eloW9D0TS6xWlcMIQpp32gg042gQAVfM2nEUUsUhTQRMKV2fVUoROojFZNRvq6Mv1O1kVE5GDDKD6UulzmRq+28HNt459J/rNU8WxNzPFx/P70Z9RuHKSaeztQUnlZAappuK5iIlLkHmbIZeMqSNltFWC/QKH6itnPnWISeyulBnDdhMV4r0BF8qtN/fQaEdGCwNWi8nq6tCTOHM6BxImFCSLkrknqbu86tCowWl9ZykMseQlBkSxPSeoNEk6D9+WmFT13WvHlqeaa1swChzueqHU728HEKU0V1Y3ou2SVX/CcROAOI2I8V42dTazC3xZjWk2rQ6ts4gy/00lEYvJBFuez8ODBACUw8Gv1QS86ceAixc6UqEBnL9yIzrL4/FsohFTKm0iefxwe5BvLMdeP1EWTW8+r/ECkxlQbQmzUukhnkOdYUD66y2jHtqW0NwNB/GT38iizYEDfRKOLAIdS4dpQc3kkyioeey8Rfht+tLbz7+652ubquEpPCJbEh34QOTqsm1j9gFdLxHcijmPfhl6V7BH7kWoZ8AlyHnIYJfTe/PdUEVw6moeChpXTGNrhxlCnDXzPFsuhir7Obz3e2b8vd53QJ8ukDTuMwnQWURptPO6BUB6VUrre/mCHTRiePJhhS89LJzW+t1dC3kyKjhC8jYghyToBTIus8MlRNh1AGUCpn1Dtw8GTrVa5/AfrqTMZIwmbhUjhQFgjmWhMsZo4AZcsorWxp4ZUwwf0zI4XDl35RUh7UEFs2CfLzrL9BQSL8nlAIhbalYy+qqAiJjOr0/KUh2Cjgq9Uz1c6I0S1kSWBiSxolJZfssHI794dgvAqWZYLS0YiH43iBJBoeDwf7e3uH+YTrYFcM0fTvkw92DnX2I3jVwf8kqI+FjZTJSQPFv6cKp1aFtohFuwvszlgSP2MwiLgrC1CI1S6A4LLuh97Afy+WYpT4qim4YqGfIhHXMyJJEMJUlsrKgh3YMV+g+vxNgpp27RDqIfSPPmd5faxfC2vlffxpS8Po8zFDPMDGsp82sH7aW5P2HnN3cXL+3m+Cxu7IYkuuyFx4WAlVbWd//kxRDF/8QLa795CCBeqsKe7HbytKvItsuz9a0/J2lQjdAYbdFgUvDK9KrlfRjhzn9DIaUDN6x1oGXx1b/P9ueXyqEw9/M9AeymQkAAA=="></iframe>

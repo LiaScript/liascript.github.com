@@ -17,11 +17,11 @@ https://github.com/liascript/docs
 
 To install the Atom editor together with the LiaScript-Preview plugin, follow the instructions in the following blog post:
 
-{{< preview "/blog/install-atom-with-liascript" >}}
+{{< preview "/blog/024_install-atom-with-liascript" >}}
 
 To set up the Atom editor for a better writing experience, follow the instructions in the following blog post:
 
-{{< preview "/blog/setting-up-atom/" >}}
+{{< preview "/blog/026_setting-up-atom/" >}}
 
 ## Features
 

@@ -11,7 +11,7 @@ draft: false
 
 To install VSCode with LiaScript follow the steps from the following Blog-post.
 
-{{< preview "/blog/install-visual-studio-code-with-liascript">}}
+{{< preview "/blog/023_install-visual-studio-code-with-liascript">}}
 
 
 ## Usage
