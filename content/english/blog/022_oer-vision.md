@@ -1,6 +1,6 @@
 ---
 title: Open Educational Ressources (OER) - Vision, Vorteile und praktische Umsetzung mit LiaScript und OPAL
-slug: open-vision
+slug: oer-vision
 date: 2022-05-18
 draft: false
 author: Sebastian Zug

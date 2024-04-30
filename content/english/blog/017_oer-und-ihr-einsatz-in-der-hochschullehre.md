@@ -1,6 +1,6 @@
 ---
 title: "Podcast: OER und ihr Einsatz in der Hochschullehre"
-slug: podcast-oer-und-ihr-einsatz-in-der-hochschullehre
+slug: oer-und-ihr-einsatz-in-der-hochschullehre
 date: 2021-03-02
 draft: false
 author: Sebastian Zug

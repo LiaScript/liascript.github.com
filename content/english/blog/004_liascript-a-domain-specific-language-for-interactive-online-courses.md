@@ -1,6 +1,6 @@
 ---
 title: "LiaScript: a domain-specific-language for interactive online courses"
-slug: lia-script-a-domain-specific-language-for-interactive-online-courses
+slug: liascript-a-domain-specific-language-for-interactive-online-courses
 date: 2019-09-19
 draft: false
 author: André Dietrich

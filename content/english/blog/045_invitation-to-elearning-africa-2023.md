@@ -1,6 +1,6 @@
 ---
 title: "Invitation to eLearning Africa 23"
-slug: invitation-to-elearning-africa-23
+slug: invitation-to-elearning-africa-2023
 date: 2023-05-19
 draft: false
 author: André Dietrich
