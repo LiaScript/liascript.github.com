@@ -43,12 +43,12 @@ This comparison is focused on the creation and dissemination of educational cont
 
 LiaScript __[[Di19](#Di19)]__ was born out of the idea to let anybody (even without programming skills) develop high-quality online-courses, with focus on content and the latest web-technologies. It was founded on open-source principles, simplicity, and (re)usability. The figure below shows some features of LiaScript:
 
-<figure>
-    <img src="/images/post/from-zero-to-hero-with-lms/grafik.png" alt="LiaScript Editor" />
-    <figcaption>
-    Screen-shot of the development process of online-courses with the Atom editor and the liascript-preview plugin (with LiaScript code on the left and the rendered and result on the right)
-    </figcaption>
-</figure>
+{{<
+    figure
+    src="/images/post/from-zero-to-hero-with-lms/grafik.png"
+    caption="Screen-shot of the development process of online-courses with the Atom editor and the liascript-preview plugin (with LiaScript code on the left and the rendered and result on the right)"
+    alt="LiaScript Editor"
+>}}
 
 A course is text-file written in Markdown __[[MD19](#MD19)]__, a lightweight markup language with plain text formatting syntax, designed for readability. Courses can be hosted as open-source projects on GitHub[^\*], together with required multimedia content, JavaScript libraries, and any other data. Code-blocks (line 46) can be made executable by attaching a JavaScript script-tag that defines how the source-code should be processed. To ease this step, we provide macros (line 54) that get replaced by HTML, JavaScript, CSS-annotations, Markdown, etc. Such macros can be parameterized and are evaluated by an internal text-substitution system at compile time. Additionally, it is also possible to import macros from other courses, which reduces boilerplate code.
 
@@ -158,12 +158,12 @@ Compare this with the creation of quizzes in LiaScript, as depicted below (or se
 [(X)] one solution
 ```
 
-<figure>
-    <img src="/images/post/from-zero-to-hero-with-lms/quizze.png" alt="LiaScript Quiz Examples" />
-    <figcaption>
-    Rendered quizzes, defined by the short-codes above.
-    </figcaption>
-</figure>
+{{<
+    figure
+    src="/images/post/from-zero-to-hero-with-lms/quizze.png"
+    caption="Rendered quizzes, defined by the short-codes above."
+    alt="LiaScript Quiz Examples"
+>}}
 
 Of course, our way of creating quizzes can only be used for self-evaluation and not as in a LMS for assessment with points, penalties, max. number of retrials, shuffling,  etc. In all systems it was therefor possible to define quiz-banks, which are used as a repositories and allow to display a subset of different quizzes to different users. LiaScript in contrast defines quizzes in a plain-text format, visible to all that know the “raw” course URL (see the next section).
 

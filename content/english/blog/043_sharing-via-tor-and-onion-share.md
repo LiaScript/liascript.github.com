@@ -20,7 +20,12 @@ Why should something like Tor or the Dark-Net be relevant in education at all? I
 
 Looking at the current situation in Afghanistan, it becomes evident that the right to education is simply not available in many places. China is supporting Afghanistan in expanding the 4G network, yet the majority of the population still has no internet access. However, surveillance and filtering are being increased in the same way.
 
-{{< figure src="https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/img/taliban.png" alt="Taliban and the Internet" caption="Sources: _https://taz.de/Repressionen-in-Afghanistan/!5926105/ \| https://www.deutschlandfunkkultur.de/afghanistan-bildung-100.html \| https://www.business-standard.com/article/international/taliban-blocks-23-mn-websites-in-afghanistan-over-immoral-content-122082600086_1.html \| https://www.reuters.com/world/asia-pacific/afghan-girls-struggle-with-poor-internet-they-turn-online-classes-2023-03-27/_" >}}
+{{<
+  figure
+  src="https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/img/taliban.png"
+  alt="Taliban and the Internet"
+  caption="Sources: _https://taz.de/Repressionen-in-Afghanistan/!5926105/ \| https://www.deutschlandfunkkultur.de/afghanistan-bildung-100.html \| https://www.business-standard.com/article/international/taliban-blocks-23-mn-websites-in-afghanistan-over-immoral-content-122082600086_1.html \| https://www.reuters.com/world/asia-pacific/afghan-girls-struggle-with-poor-internet-they-turn-online-classes-2023-03-27/_"
+>}}
 
 The [Tor Network](https://en.wikipedia.org/wiki/Tor_%28network%29) is a system that allows users to anonymize their online activities and identity by routing their traffic through multiple servers to hide the source of the data.
 The network consists of thousands of volunteer servers around the world, acting as "nodes" that encrypt traffic to protect the privacy of its users.
