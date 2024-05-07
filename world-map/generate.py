@@ -35,11 +35,33 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+const greenIcon = L.icon({
+    iconUrl: '/marker/green.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34]
+});
+
+const grayIcon = L.icon({
+    iconUrl: '/marker/gray.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34]
+});
+
+const currentDate = new Date();
 const projects = $projects
 
 for(let i=0; i<projects.length; i++) {
-    let [gps,card] = projects[i];
-    let marker = L.marker(gps).addTo(map);
+    let [gps,card,date] = projects[i];
+    let marker = null
+    if (date) {
+        let targetDate = new Date(date);
+        marker = L.marker(gps, {icon: (targetDate > currentDate) ? greenIcon : grayIcon});
+    } else {
+        marker = L.marker(gps)
+    }
+    marker.addTo(map);
     marker.bindPopup(card);
     projects[i].push(marker);
 }
@@ -55,7 +77,7 @@ function updateZoomLevel() {
     const fix = exponentialDecay(zoomLevel);
 
     for(let i=0; i<projects.length; i++) {
-        let [gps, card, marker] = projects[i];
+        let [gps, card, date, marker] = projects[i];
         let pos = {lat: gps[0] - fix, lng: gps[1]};
         marker.setLatLng(pos);
     }
@@ -68,7 +90,7 @@ map.on('zoomend', function() {
 updateZoomLevel();
 </script>
 
-If you want to add your project to this map, please follow the instructions in the blog post:
+If you want to add your project or event to this map, please follow the instructions in the blog post:
 
 {{< button link="/blog/064_liascript-world-map" label="contribute" >}}
 
@@ -107,7 +129,7 @@ with open('projects.yml', 'r') as file:
 
 
 for project in config:
-    projects.append([[project["gps"]["latitude"], project["gps"]["longitude"]], toCard(project)])
+    projects.append([[project["gps"]["latitude"], project["gps"]["longitude"]], toCard(project), project.get("date")])
 
 site = site + script.substitute(projects = json.dumps(projects))
 

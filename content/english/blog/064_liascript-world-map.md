@@ -15,7 +15,8 @@ draft: false
 description: "Where can you store your course content and how can you host it for free..."
 ---
 
-This idea was motivated by the [OER-World Map](https://www.youtube.com/watch?v=VLcd41vLDGs) in order to to visualize the distribution of educational content that was created with LiaScript. Our map is based on the [OpenStreetMap](https://www.openstreetmap.org/#map=7/51.330/10.453) and uses the [Leaflet](https://leafletjs.com/) library to display the markers.
+This idea was motivated by the [OER-World Map](https://www.youtube.com/watch?v=VLcd41vLDGs) in order to to visualize the distribution of educational content that was created with LiaScript or events and meetings. Our map is based on the [OpenStreetMap](https://www.openstreetmap.org/#map=7/51.330/10.453) and uses the [Leaflet](https://leafletjs.com/) library to display the markers.
+Blue is associated to projects, while future events are displayed in green and past events in transparent gray.
 
 {{< button link="/world-map" label="visit the world-map" >}}
 
@@ -37,6 +38,7 @@ If you want to add your project to this map, the easiest way is to send us an em
     This can be a description of your project where you can also embed HTML,
     with more links or contact information
     <a href="mailto:LiaScript@web.de>Send us an email</a>
+  data: "2024-04-12"
   categories:
     - Computer Science
     - Statistics
@@ -49,7 +51,7 @@ If you want to add your project to this map, the easiest way is to send us an em
 
 We will add your information to `projects.yml` and update the map.
 
-> The only information that is mandatory is the `title`, `link`, and `gps`. The `image` is optional, but it will make your project more visible. The `description` can be a short text or a long description, and you can also embed HTML, like links or images. The `categories` and `tags` are optional too, but they will help to filter the projects later on the map. And finally, the `icon` is optional, and we will later use this to modify the markers on the map, which can be a logo of your institution, project, or company.
+> The only information that is mandatory is the `title`, `link`, and `gps`. The `image` is optional, but it will make your project more visible. The `description` can be a short text or a long description, and you can also embed HTML, like links or images. The `categories` and `tags` are optional too, but they will help to filter the projects later on the map. And finally, the `icon` is optional, and we will later use this to modify the markers on the map, which can be a logo of your institution, project, or company. `date` is optional and will be used to classify markers to projects or events.
 
 Otherwise you can also fork the repository `https://github.com/liascript/liascript.github.com`, add your project by yourself and create a pull request. This way you will also be visible in the list of contributors on GitHub 😉
 

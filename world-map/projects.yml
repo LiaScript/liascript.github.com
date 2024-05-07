@@ -15,3 +15,145 @@
   categories:
     - Computer Science
     - Germany
+# Events
+- title: "eLearning Africa 2024: Creating Sustainable and Extendable Open Educational Resources (OER) as Interactive Online Classrooms"
+  link: "https://www.elearning-africa.com/conference2024/programme_workshops_detail.php?ws=FD2"
+  gps:
+    latitude: -1.9547233
+    longitude: 30.0932888
+  date: "2024-05-28"
+  image: "http://ela-newsportal.com/wp-content/uploads/elabannerpic.gif"
+  description: |
+    In this interactive session, we'll explore the forefront of web technologies and their transformative potential in crafting, disseminating, and collaboratively enhancing open educational resources (OER).
+    Surprisingly, the browser has emerged as the new operating system, capable of tackling tasks previously reliant on servers entirely within its interface.
+    Thus, everything that we show is «nearly» entirely browser-based.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+    - Education
+    - Africa
+
+- title: "eLearning Africa 2023: Instant Creation & Publishing of Free and Open Online Courses with LiaScript"
+  link: "https://liascript.github.io/blog/elearning-africa-2023/"
+  gps:
+    latitude: 14.739632642240597
+    longitude: -17.1985496035107271
+  date: "2023-05-24"
+  image: "https://cdn.lmu-klinikum.de/fc8202bd3710a2c1/41542924833b/v/757988c13854/eLearning-Africa-2023.png"
+  description: |
+    Full day workshop on LiaScript course creation...
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+    - Education
+    - Africa
+
+- title: "DELFI 2023: Konzepte und Erfahrungen bei der Realisierung dezentraler, offener Lehrmaterialien mit LiaScript"
+  link: "https://liascript.github.io/blog/liascript-workshop-auf-der-delfi-tagung-in-aachen/"
+  gps:
+    latitude: 50.778124727097975
+    longitude: 6.060816170303606
+  date: "2023-09-11"
+  image: "https://delfi-tagung.de/fileadmin/FG/WI-ELE/_processed_/a/d/csm_Flyer_Petrol_994e8b2c56.png"
+  description: |
+    LiaScript implementiert als Markdown-basierte Beschreibungssprache für Lehrinhalte die zentralen Konzepte von Open Educational Ressources.
+    Basierend auf einer textuellen Darstellung, ohne zentrale Infrastruktur, können Lehrmaterialien ähnlich Open-Source-Softwareprojekten in einer Community entwickelt, geteilt und geprüft werden.
+    Das Tutorial gibt einen Überblick über den Stand des Projektes und führt die Teilnehmer:innen in die Basiskonzepte und Nutzungsmuster ein.
+    Darüber hinaus werden anhand von Anwendungsfällen die Hemmnisse und Herausforderungen bei der Etablierung von Open Educational Ressources (OER) erörtert.
+  tags:
+    - Tutorial
+    - German
+  categories:
+    - Conference
+
+
+- title: "OEB 2023: Serverless Online Education"
+  link: "https://liascript.github.io/blog/serverless-online-education/"
+  gps:
+    latitude: 52.50715479711011
+    longitude: 13.345364573209334
+  date: "2023-11-24"
+  image: "https://oeb.global/oeb.png"
+  description: |
+    The presentation at the Open Educa Berlin (OEB) Conference on November 24th 2023 focused on “Serverless Online Education” and emphasized the potential of decentralized, browser-based technologies in educational settings.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+
+
+- title: "University Future Festival 2023: How can Web 3.0 save Education?"
+  link: "https://liascript.github.io/blog/how-can-web-3-save-education/"
+  gps:
+    latitude: 52.479111000200156
+    longitude: 13.430556106118729
+  date: "2023-04-26"
+  image: "https://festival.hfd.digital/de/wp-content/uploads/sites/3/2022/11/UFF_Sharepics-Allgemein_Twitter-1.png"
+  description: |
+    A three-day event all about the future of higher education: University:Future Festival (U:FF) – Heads up! took place from 26 to 28 April 2023 in the physical as well as in the digital space.
+    The festival addressed a broad range of topics around AI, architectures, technology, strategy development, competences, didactics and much more in the context of the opportunities and challenges of the digital transformation.
+    As the largest and most innovative event on the future of academic education in the DACH region, the festival, bilingual in German and English, offers a comprehensive programme with over 300 talks, workshops, discussions and micro training sessions selected from 620 submissions from an international university community.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+
+- title: "We Are Developers 22: Interactive Markdown for Education & Documentation"
+  link: "https://liascript.github.io/blog/we-are-developers-22/"
+  gps:
+    latitude: 52.499969754519185
+    longitude: 13.270795900217253
+  date: "2022-06-15"
+  image: "https://i.ytimg.com/vi/ibHvdCfQHEs/maxresdefault.jpg"
+  description: |
+    In this talk, we present LiaScript, a Markdown-based DSL that is intended to be used for developing online courses, that look like screen-cast with various interactive elements.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+
+- title: "Elm Europe 2019: Open-Course Development with LiaScript (... Or Markdown on Steroids)"
+  link: "https://liascript.github.io/blog/open-course-development-with-liascript/"
+  gps:
+    latitude: 48.789421678825256
+    longitude: 2.3635724329421
+  date: "2019-06-27"
+  image: "https://i.ytimg.com/vi/w_CRABsJNKA/maxresdefault.jpg"
+  description: |
+    An Elm-talk about the development of an online course DSL that is based on Markdown, given at the elm-europe conference in 2019.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+
+- title: "MCCSIS 2019: LiaScript - a Domain-Specific-Language for Interactive Online Courses"
+  link: "https://liascript.github.io/blog/liascript-a-domain-specific-language-for-interactive-online-courses/"
+  gps:
+    latitude: 41.17809556706227
+    longitude: -8.60854852261642
+  date: "2019-07-19"
+  image: "https://liascript.github.io/images/post/mccsis_hu76e9b183dc69f1706ca6266a92843fe0_720379_1110x0_resize_q80_h2_lanczos_3.webp"
+  description: |
+    This is the first paper published about LiaScript, which was presented at the International Association for Development of the Information Society (IADIS) International Conference on e-Learning 2019 in Porto.
+    It gives an overview of the language and its features, as well as the motivation behind its development.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
+
+- title: "University Future Festival 2024: RemoteLabs as OER - The next evolutionary step"
+  link: "https://festival.hfd.digital/de/programm-2024/"
+  gps:
+    latitude: 51.33871993833814
+    longitude: 12.37935762657965
+  date: "2024-06-05"
+  image: "https://cache.sessionize.com/image/a981-1140o400o3-TgerJadX4kZ1mzBmo7Rk7b.png"
+  description: |
+    We'll demonstrate how easy it is for teachers and institutions to share local hardware and experiments.
+    So far, we've successfully shared setups for Arduino, terminals, and even chemical experiments.
+  tags:
+    - Tutorial
+  categories:
+    - Conference
