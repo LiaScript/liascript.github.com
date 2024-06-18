@@ -16,7 +16,6 @@ tags:
 description: This blog post explores the role of GitHub in transforming educational methodologies, emphasizing its value in fostering collaboration and innovation through open-source community projects.
 ---
 
-
 In this post, I will aim to make a case for [Git](https://en.wikipedia.org/wiki/Git) and [GitHub](https://en.wikipedia.org/wiki/GitHub) by comparing how "traditional" publishing models (for OER) can be improved through dynamic, flexible, and transparent open-source community projects.
 So, what can OER learn from open source and how can it be applied?
 GitHub promotes collaborative development and the global exchange of educational materials, supported by powerful tools like Git.
