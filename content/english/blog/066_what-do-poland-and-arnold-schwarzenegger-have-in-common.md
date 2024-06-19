@@ -17,9 +17,17 @@ tags:
     - Textbooks
 ---
 
-Education is a cornerstone of societal development, yet access to educational resources remains uneven globally. Many students in low- and middle-income countries struggle to access up-to-date textbooks, which hampers their learning opportunities. In this context, innovative initiatives from Poland and Arnold Schwarzenegger are making significant strides in promoting open educational resources (OER) to bridge this gap.
+... for translating open textbooks into interactive LiaScript books. But, based on our discussions at the [eLearning Africa Conference](/blog/elearning-africa-2024) we realized that there is a need for open textbooks for various purposes. With the [LiaBooks](https://liabooks.github.io/) project we would like to translate such open textbooks from around the world into LiaScript. This way, we hope to make digital textbooks more accessible, reusable and adaptable for everyone. If you are interested in this project, please feel free to contact us and help us to translate such books into a more interactive format.
 
----
+{{< image
+src="images/post/what-do-poland-and-arnold-schwarzenegger-have-in-common/liabooks-screenshot.jpg"
+caption="Source: https://liabooks.github.io/"
+alt="LiaBooks-Project screenshot"
+>}}
+
+All current books are hosted here: https://github.com/LiaBooks/
+
+> Education is a cornerstone of societal development, yet access to educational resources remains uneven globally. Many students in low- and middle-income countries struggle to access up-to-date textbooks, which hampers their learning opportunities. In this context, innovative initiatives from Poland and Arnold Schwarzenegger are making significant strides in promoting open educational resources (OER) to bridge this gap.
 
 In May 2009, Governor Arnold Schwarzenegger unveiled a pioneering initiative offering free digital textbooks in California, addressing economic challenges and textbook controversies. Before this move, California's schools faced over $400 million in annual textbook expenses, a figure set to rise with increasing enrollment. The initiative sought to alleviate these costs by developing and adapting open-source textbooks through innovative licensing frameworks like Creative Commons.
 
@@ -82,14 +90,20 @@ caption="Source: http://ndla.no"
 alt="NDLA-Project screenshot"
 >}}
 
-### LiaBooks
+### More
 
-Of course there are more projects out there like [WikiBooks](https://en.wikibooks.org/wiki/Main_Page) or the [OpenStax](https://openstax.org/) project or the German platform [Twillo](https://www.twillo.de/oer/web/), to name only a few. But, based on our discussions at the [eLearning Africa Conference](/blog/elearning-africa-2024) we identified that there is a need for open textbooks for various purposes. With the [LiaBooks](https://liabooks.github.io/) project we would like to translate such open textbooks from around the world into LiaScript. This way, we hope to make digital textbooks more accessible, reusable and adaptable for everyone. If you are interested in this project, please feel free to contact us and help us to translate such books into a more interactive format.
+Of course there are more projects out there, a small collection can be found in the following blog-post:
 
-{{< image
-src="images/post/what-do-poland-and-arnold-schwarzenegger-have-in-common/liabooks-screenshot.jpg"
-caption="Source: https://liabooks.github.io/"
-alt="LiaBooks-Project screenshot"
->}}
-
-All current books are hosted here: https://github.com/LiaBooks/
+<div class="flex flex-col md:flex-row items-center p-4 rounded-md shadow-md" style="background-color: rgba(0.5,0.5,0.5,0.1);">
+  <a href="/images/post/open-textbook-repositories.jpg" class="flex-shrink-0 mr-4">
+      <div class="object-cover rounded-md" style="height: 128px; width: 188px; background-image: url('/images/post/open-textbook-repositories.jpg'); background-size: cover;" alt="Image description"></div>
+  </a>
+  <div class="flex flex-col">
+    <a href="/blog/open-textbook-repositories/" alt="Open Textbook Repositories">
+      <h5 style="margin: 0px;">Open Textbook Repositories</h5>
+    </a>
+    <p style="margin: 0.5rem 0px 0px 0px;" class="text-gray-600">
+      This alphabetically sorted overview is fare from being complete, but it should give you a good starting point to find open textbooks for your courses.
+    </p>
+  </div>
+</div>
