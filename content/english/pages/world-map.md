@@ -79,7 +79,7 @@ updateZoomLevel();
 
 If you want to add your project or event to this map, please follow the instructions in the blog post:
 
-{{< button link="/blog/064_liascript-world-map" label="contribute" >}}
+{{< button link="/blog/liascript-world-map" label="contribute" >}}
 
 ... or leave us a comment ;-)
 
