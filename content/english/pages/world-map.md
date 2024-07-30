@@ -1,6 +1,7 @@
 ---
-title: "WorldMap"
-meta_title: "LiaScript - WorldMap"
+title: "World-Map"
+meta_title: "LiaScript - World-Map"
+slug: world-map
 image: "/images/post/world-map2.png"
 date: 2024-05-07
 description: "An overview on existing projects implemented with LiaScript"

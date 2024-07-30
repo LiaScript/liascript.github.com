@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>World-Maps on LiaScript</title>
+    <link>http://localhost:1313/world-map/</link>
+    <description>Recent content in World-Maps on LiaScript</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 May 2024 00:00:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/world-map/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>World-Map</title>
+      <link>http://localhost:1313/world-map/world-map/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/world-map/world-map/</guid>
+      <description>Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.</description>
+    </item>
+  </channel>
+</rss>
