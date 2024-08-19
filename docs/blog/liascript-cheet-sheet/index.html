@@ -1,0 +1,569 @@
+<!doctype html><html itemscope lang=en-us itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5"><meta name=theme-name content="hugoplate"><link rel="shortcut icon" href=/images/favicon_hu817560954518484598.png type=image/x-icon><link rel=icon href=/images/favicon_hu817560954518484598.png type=image/x-icon><link rel=icon type=image/png sizes=48x48 href=/images/favicon_hu13437554037073213595.png><link rel=icon type=image/png sizes=96x96 href=/images/favicon_hu817560954518484598.png><link rel=apple-touch-icon sizes=144x144 href=/images/favicon_hu17484313674028987267.png><base href=https://LiaScript.github.io/blog/liascript-cheet-sheet/><title>LiaScript Cheet-Sheet (German)</title>
+<meta name=keywords content="LiaScript,Markdown,OER,Education,Open-courSe"><meta name=description content="Ein Spickzettel der wichtigsten LiaScript-Funktionalität. Weitere sind in Vorbereitung ..."><meta name=author content="André Dietrich"><meta property="og:image" content="https://LiaScript.github.io/images/post/The_Concert.jpg"><meta name=twitter:image content="https://LiaScript.github.io/images/post/The_Concert.jpg"><meta name=twitter:card content="summary_large_image"><meta property="og:image:width" content="1208"><meta property="og:image:height" content="720"><meta property="og:image:type" content="image/
+        .jpg
+      "><meta property="og:title" content="LiaScript Cheet-Sheet (German)"><meta property="og:description" content="Ein Spickzettel der wichtigsten LiaScript-Funktionalität. Weitere sind in Vorbereitung ..."><meta property="og:type" content="website"><meta property="og:url" content="https://LiaScript.github.io/blog/liascript-cheet-sheet/"><meta name=twitter:title content="LiaScript Cheet-Sheet (German)"><meta name=twitter:description content="Ein Spickzettel der wichtigsten LiaScript-Funktionalität. Weitere sind in Vorbereitung ..."><script>let indexURL="https://LiaScript.github.io/searchindex.json",includeSectionsInSearch=["blog"],no_results_for="No results for",empty_search_results_placeholder="Type something to search.."</script><meta http-equiv=x-dns-prefetch-control content="on"><link rel=preconnect href=https://use.fontawesome.com crossorigin><link rel=preconnect href=//cdnjs.cloudflare.com><link rel=dns-prefetch href=https://use.fontawesome.com><link rel=dns-prefetch href=//cdnjs.cloudflare.com><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//connect.facebook.net><link rel=dns-prefetch href=//platform.linkedin.com><link rel=dns-prefetch href=//platform.twitter.com><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Signika:wght@500;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script><link href="/css/style.min.aecc7250d3dd7204d2ac6878e648ae5267fd2258bf7bf548f3f98f75322b8402.css" integrity="sha256-rsxyUNPdcgTSrGh45kiuUmf9Ili/e/VI8/mPdTIrhAI=" rel=stylesheet><link defer async rel=stylesheet href="/css/style-lazy.min.22fcae2e749c3ccb3f9595d5bfcc9b1284449c295cb24e43632b79c4ba3102dc.css" integrity="sha256-IvyuLnScPMs/lZXVv8ybEoREnClcsk5DYyt5xLoxAtw=" media=print onload='this.media="all",this.onload=null'></head><body><script type=text/javascript src=https://liascript.github.io/course/preview-lia.js></script><header class="header sticky top-0" style=z-index:10000><nav class="navbar container"><div class=order-0><a class="navbar-brand block" href=/><img fetchpriority=high decoding=async class="img logo-light" width=160 height=32 src=/images/logo_hu7443897454658306654.webp alt=LiaScript onerror='this.onerror=null,this.src="/images/logo_hu15236687076654200087.png"'>
+<img fetchpriority=high decoding=async class="img logo-dark" width=160 height=32 src=/images/logo-darkmode_hu13157650616442203983.webp alt=LiaScript onerror='this.onerror=null,this.src="/images/logo-darkmode_hu18102906280955218898.png"'></a></div><input id=nav-toggle type=checkbox class=hidden>
+<label for=nav-toggle class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1"><svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20"><title>Menu Open</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0V0z"/></svg><svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20"><title>Menu Close</title><polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)"/></svg></label><ul id=nav-menu class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"><li class=nav-item><a class=nav-link href=/>Home</a></li><li class=nav-item><a class=nav-link target=_blank rel=noopener href=https://liascript.github.io/course/>Courses</a></li><li class=nav-item><a class=nav-link target=_blank rel=noopener href=https://liascript.github.io/LiveEditor>LiveEditor</a></li><li class=nav-item><a class=nav-link href=/blog/>Blog</a></li><li class="nav-item nav-dropdown group relative"><span class="nav-link
+inline-flex items-center">More<svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span><ul style=min-width:210px class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100"><li class=nav-dropdown-item><a class=nav-dropdown-link href=/vscode/>VSCode - Editor</a></li><li class=nav-dropdown-item><a class=nav-dropdown-link href=/vscode-web/>VSCode-Web - Editor</a></li><li class=nav-dropdown-item><a class=nav-dropdown-link href=/atom/>Atom - Editor</a></li><li class=nav-dropdown-item><a class=nav-dropdown-link href=/live-editor/>Live - Editor</a></li><li class=nav-dropdown-item><a class=nav-dropdown-link href=/development-server/>Development - Server</a></li><li class=nav-dropdown-item><a class=nav-dropdown-link href=/exporter/>Exporter</a></li><li class=nav-dropdown-item><a class=nav-dropdown-link href=/authors/>Authors</a></li></ul></li><li class=nav-item><a class=nav-link href=/about/>About</a></li><li class=nav-item><a class=nav-link href=/world-map/>World-Map</a></li><li class="mt-4 inline-block lg:hidden"><a class="btn btn-outline-primary btn-sm" href=/newsletter>newsletter</a></li></ul><div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0"><button aria-label=search class="border-border text-dark hover:text-primary
+dark:border-darkmode-border mr-5 inline-block border-r pr-5
+text-xl dark:text-white dark:hover:text-darkmode-primary" data-target=search-modal>
+<i class="fa-solid fa-search"></i></button><div class="theme-switcher mr-5"><input id=theme-switcher data-theme-switcher type=checkbox>
+<label for=theme-switcher><span class=sr-only>theme switcher</span>
+<span><svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-100 dark:opacity-0" viewBox="0 0 56 56" fill="#fff" height="16" width="16"><path d="M30 4.6c0-1-.9-2-2-2a2 2 0 00-2 2v5c0 1 .9 2 2 2s2-1 2-2zm9.6 9a2 2 0 000 2.8c.8.8 2 .8 2.9.0L46 13a2 2 0 000-2.9 2 2 0 00-3 0zm-26 2.8c.7.8 2 .8 2.8.0.8-.7.8-2 0-2.9L13 10c-.7-.7-2-.8-2.9.0-.7.8-.7 2.1.0 3zM28 16A12 12 0 0016 28a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0028 16zm23.3 14c1.1.0 2-.9 2-2s-.9-2-2-2h-4.9a2 2 0 00-2 2c0 1.1 1 2 2 2zM4.7 26a2 2 0 00-2 2c0 1.1.9 2 2 2h4.9c1 0 2-.9 2-2s-1-2-2-2zm37.8 13.6a2 2 0 00-3 0 2 2 0 000 2.9l3.6 3.5a2 2 0 002.9.0c.8-.8.8-2.1.0-3zM10 43.1a2 2 0 000 2.9c.8.7 2.1.8 3 0l3.4-3.5c.8-.8.8-2.1.0-2.9s-2-.8-2.9.0zm20 3.4c0-1.1-.9-2-2-2a2 2 0 00-2 2v4.9c0 1 .9 2 2 2s2-1 2-2z"/></svg><svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-0 dark:opacity-100" viewBox="0 0 24 24" fill="none" height="16" width="16"><path fill="#000" fill-rule="evenodd" clip-rule="evenodd" d="M8.2 2.2c1-.4 2 .6 1.6 1.5-1 3-.4 6.4 1.8 8.7a8.4 8.4.0 008.7 1.8c1-.3 2 .5 1.5 1.5v.1A10.3 10.3.0 0112.4 22 10.3 10.3.0 013.2 6.7c1-2 2.9-3.5 4.9-4.4z"/></svg></span></label></div><script>var themeSwitch,darkMode=!1;window.matchMedia("(prefers-color-scheme: dark)").matches&&(darkMode=!0),localStorage.getItem("theme")==="dark"?darkMode=!0:localStorage.getItem("theme")==="light"&&(darkMode=!1),darkMode&&document.documentElement.classList.toggle("dark"),themeSwitch=document.querySelectorAll("[data-theme-switcher]"),document.addEventListener("DOMContentLoaded",()=>{[].forEach.call(themeSwitch,function(e){e.checked=!!darkMode,e.addEventListener("click",()=>{document.documentElement.classList.toggle("dark"),localStorage.setItem("theme",document.documentElement.classList.contains("dark")?"dark":"light")})})})</script><a href=/newsletter class="btn btn-outline-primary btn-sm hidden lg:inline-block">newsletter</a></div></nav></header><div class=search-modal aria-hidden=true style=--color-primary:#121212><div data-target=close-search-modal class=search-modal-overlay></div><div class=search-wrapper data-image=true data-description=true data-tags=true data-categories=true><div class=search-wrapper-header><label for=search-modal-input style=margin-top:-1px><span class=sr-only>search icon</span>
+<svg viewBox="0 0 512 512" height="18" width="18" class="search-icon" data-type="search"><path fill="currentcolor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8.0 45.3s-32.8 12.5-45.3.0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9.0 208S93.1.0 208 0 416 93.1 416 208zM208 352a144 144 0 100-288 144 144 0 100 288z"/></svg>
+<svg viewBox="0 0 512 512" height="18" width="18" class="search-reset" data-type="reset"><path fill="currentcolor" d="M256 512A256 256 0 10256 0a256 256 0 100 512zM175 175c9.4-9.4 24.6-9.4 33.9.0l47 47 47-47c9.4-9.4 24.6-9.4 33.9.0s9.4 24.6.0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6.0 33.9s-24.6 9.4-33.9.0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9.0s-9.4-24.6.0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6.0-33.9z"/></svg>
+</label><input id=search-modal-input type=text data-search-input autocomplete=off aria-label=Search placeholder="Search Post ..."></div><div class=search-wrapper-body><div class=search-result data-search-result></div><span class=search-result-empty>Type something to search..</span></div><div class=search-wrapper-footer><span><kbd><svg width="14" height="14" fill="currentcolor" viewBox="0 0 16 16"><path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 011.506.0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 01-.753-1.659z"/></svg>
+</kbd><kbd><svg width="14" height="14" fill="currentcolor" style="margin-top:1px" viewBox="0 0 16 16"><path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 001.506.0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 00-.753 1.659z"/></svg>
+</kbd>to navigate
+</span><span><kbd><svg width="12" height="12" fill="currentcolor" style="display:inline-block" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14.5 1.5a.5.5.0 01.5.5v4.8a2.5 2.5.0 01-2.5 2.5H2.707l3.347 3.346a.5.5.0 01-.708.708l-4.2-4.2a.5.5.0 010-.708l4-4a.5.5.0 11.708.708L2.707 8.3H12.5A1.5 1.5.0 0014 6.8V2a.5.5.0 01.5-.5z"/></svg>
+</kbd>to select
+</span><span class=search-result-info></span>
+<span data-target=close-search-modal><kbd>ESC</kbd> to close</span></div></div></div><main><section class="section pt-7"><div class=container><div class="row justify-center"><article class=lg:col-10><div class=mb-10><picture><source srcset=/images/post/The_Concert_hu6034151795411290109.webp media="(max-width: 575px)"><source srcset=/images/post/The_Concert_hu2254698599719178937.webp media="(max-width: 767px)"><source srcset=/images/post/The_Concert_hu12566502971569555147.webp media="(max-width: 991px)"><source srcset=/images/post/The_Concert_hu6134512348200322721.webp><img loading=lazy decoding=async src=/images/post/The_Concert_hu5732821372781866498.jpg class="w-full rounded img" alt="LiaScript Cheet-Sheet (German)" width=1208 height=720></picture></div><h1 class="h2 mb-4">LiaScript Cheet-Sheet (German)</h1><ul class=mb-4><li class="mr-4 inline-block"><a href=/authors/andr%C3%A9-dietrich/><i class="fa-regular fa-circle-user mr-2"></i>André Dietrich</a></li><li class="mr-4 inline-block"><i class="fa-regular fa-folder mr-2"></i>
+<a href=/categories/tutorial/>Tutorial
+,
+</a><a href=/categories/article/>Article</a></li><li class="mr-4 inline-block"><i class="fa-regular fa-clock mr-2"></i>
+October 21, 2020</li></ul><div class="content mb-10"><p>Ein Spickzettel der wichtgsten LiaScript-Funktionalität. Weitere sind in Vorbereitung &mldr;</p><h2 id=überschriften>Überschriften</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span># Überschrift 1
+</span></span><span style=display:flex><span><span style=color:#75715e>## Überschrift 2
+</span></span></span><span style=display:flex><span><span style=color:#75715e>### Überschrift 3
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#### Überschrift 4
+</span></span></span><span style=display:flex><span><span style=color:#75715e>##### Überschrift 5
+</span></span></span><span style=display:flex><span><span style=color:#75715e>###### Überschrift 6
+</span></span></span></code></pre></div><h2 id=texthervorhebungen>Texthervorhebungen</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>_kursiv_ auch <span style=font-style:italic>*kursig*</span>
+</span></span><span style=display:flex><span><span style=font-weight:700>__fett__</span> auch <span style=font-weight:700>__fett__</span>
+</span></span><span style=display:flex><span><span style=font-weight:700>___kursiv___</span> und <span style=font-style:italic>**</span>*fett***
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>~durchgestrichen~
+</span></span><span style=display:flex><span><span style=color:#f92672>~~unterstrichen~~</span>
+</span></span><span style=display:flex><span>~~~durch- <span style=color:#960050;background-color:#1e0010>&amp;</span> unterstrichen~~~
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>^hochgestellt^
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>`unformatierter Code`</span>
+</span></span></code></pre></div><h2 id=textblock>Textblock</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Einfache Blöcke/Absätze werden durch Leerzeilen voneinander getrennt und können bel. lang sein.
+</span></span><span style=display:flex><span><span style=color:#66d9ef>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>&gt; </span><span style=font-style:italic>Blöcke mit einem vorangestellten `&gt;`
+</span></span></span><span style=display:flex><span><span style=font-style:italic></span><span style=color:#66d9ef>&gt; </span><span style=font-style:italic>werden hervorgeboben dargestellt.
+</span></span></span></code></pre></div><h2 id=listen>Listen</h2><p>Ungeordnet:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#66d9ef>*</span> Ungeordnete Listen werden mit einem vorangestellten: 
+</span></span><span style=display:flex><span>  <span style=color:#e6db74>`*`</span>, <span style=color:#e6db74>`+`</span> oder <span style=color:#e6db74>`-`</span> markiert
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  Und können mehrere Absätze enthalten.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Liste mit Unterpunkten:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> Es ist egal ob <span style=color:#e6db74>`-`</span>
+</span></span><span style=display:flex><span>  + oder <span style=color:#e6db74>`+`</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>*</span> oder <span style=color:#e6db74>`*`</span> vorangestellten surden
+</span></span></code></pre></div><p>Sortiert:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#66d9ef>1.</span> Sortierte Listen werden mit einer vorangestellten Zahl markiert:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>2.</span> Unterpunkten können auch sortierte oder unsortierte Listen sein:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   + Punkt 1
+</span></span><span style=display:flex><span>   + Punkt 2
+</span></span></code></pre></div><h2 id=trenner>Trenner</h2><p>Horizontale Linien werden durch min. 3 aufeinander folgende <code>---</code> definiert:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>---
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Beide Linien werden gleich dargestellt.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>--------------------------------------
+</span></span></code></pre></div><h2 id=verweise>Verweise</h2><h3 id=links>Links</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#66d9ef>*</span> unformatiert: https://LiaScript.github.io
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> formatiert:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  + Externe Webseiten:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> [<span style=color:#f92672>name</span>](<span style=color:#a6e22e>https://...</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> [<span style=color:#f92672>name</span>](<span style=color:#a6e22e>https://... &#34;titel&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  + Intern im Dokument:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> [<span style=color:#f92672>name</span>](<span style=color:#a6e22e>#Links</span>) &lt;<span style=color:#f92672>--</span> <span style=color:#a6e22e>Markdown-Überschrift</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> [<span style=color:#f92672>name</span>](<span style=color:#a6e22e>#Links &#34;titel&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> [<span style=color:#f92672>name</span>](<span style=color:#a6e22e>#12</span>)    <span style=color:#960050;background-color:#1e0010>&lt;</span><span style=color:#a6e22e>--</span> <span style=color:#a6e22e>Slide-Nummer</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> [<span style=color:#f92672>name</span>](<span style=color:#a6e22e>#12 &#34;titel&#34;</span>)
+</span></span></code></pre></div><h3 id=bilder>Bilder</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Verweis auf Externe Bilder:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>![<span style=color:#f92672>alt</span>](<span style=color:#a6e22e>https://...</span>)
+</span></span><span style=display:flex><span>![<span style=color:#f92672>alt</span>](<span style=color:#a6e22e>https://... &#34;titel&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Projektinterne Bilder:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>![<span style=color:#f92672>alt</span>](<span style=color:#a6e22e>/pic/image.jpg</span>)
+</span></span><span style=display:flex><span>![<span style=color:#f92672>alt</span>](<span style=color:#a6e22e>/pic/image.jpg &#34;titel&#34;</span>)
+</span></span></code></pre></div><h3 id=audio>Audio</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Verweis auf Externe Audio-Dateien:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>?[alt](https://soundcloud...)
+</span></span><span style=display:flex><span>?[alt](https://....mp3 &#34;titel&#34;)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Projektintern:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>?[alt](/sound.mp3)
+</span></span><span style=display:flex><span>?[alt](/sound.mp3 &#34;titel&#34;)
+</span></span></code></pre></div><h3 id=filme>Filme</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Verweis auf Externe Filme:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>!?[alt](https://youtube...)
+</span></span><span style=display:flex><span>!?[alt](https://....avi &#34;titel&#34;)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Projektintern:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>!?[alt](/movie.mp4)
+</span></span><span style=display:flex><span>!?[alt](/movie.mp4 &#34;titel&#34;)
+</span></span></code></pre></div><h3 id=alles-andere>Alles andere</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Wird als oEmbed oder IFrame eingebettet:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>??[alt](https://...)
+</span></span><span style=display:flex><span>??[alt](https://... &#34;titel&#34;)
+</span></span></code></pre></div><h3 id=liascript>LiaScript</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>[<span style=color:#f92672>preview-lia</span>](<span style=color:#a6e22e>https://...README.md</span>)
+</span></span></code></pre></div><h2 id=formeln>Formeln</h2><p>Hierfür wird <a href=https://katex.org/docs/supported.html target=_blank>KaTeX</a>
+verwendet.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Textinterne Formeln: $ f(a,b,c) = (a^2+b^2+c^2)^3 $
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Eigenständige Blöcke:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$$
+</span></span><span style=display:flex><span>   \sum_{i=1}^\infty\frac{1}{n^2}
+</span></span><span style=display:flex><span>        =\frac{\pi^2}{6}
+</span></span><span style=display:flex><span>$$
+</span></span></code></pre></div><h2 id=effekte>Effekte</h2><h3 id=animationen>Animationen</h3><h4 id=blöcke-in-out>Blöcke <code>{{in(-out)}}</code></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>             {{1}}
+</span></span><span style=display:flex><span>Dieser Block erscheint als erster.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>{{2-3}} Dieser Block als zweiter und verschwindet bei drei.
+</span></span></code></pre></div><h4 id=micro-animationen-in-outcontent>Micro-Animationen <code>{in(-out)}{content}</code></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>             {{1}}
+</span></span><span style=display:flex><span>beliebige Markdown-Blöck und &#34;Makro&#34;-Animationen können weiter {2-3}{_Micro-Anmationen_} enthalten. Die Reihenfolge wird nur durch die {2}{Zahlen} definiert
+</span></span></code></pre></div><h4 id=multi-block-animationen>Multi-Block-Animationen</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>             {{1}}
+</span></span><span style=display:flex><span><span style=font-style:italic>**</span>*******************************
+</span></span><span style=display:flex><span>Mehrere Blöcke können auch mit Sternchen abgegrenzt werden.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Und weitere {2}{Elemente} enthalten.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>...
+</span></span><span style=display:flex><span><span style=font-style:italic>**</span>*******************************
+</span></span></code></pre></div><h3 id=sprachausgabe---number-->Sprachausgabe <code>--{{number}}--</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>          --{{1}}--
+</span></span><span style=display:flex><span>Dieser ganze Absatz wird mit der default-Stimme bei <span style=font-weight:700>**Animationsschritt 1**</span> mit der vorgelesen.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    --{{2 US English Male}}--
+</span></span><span style=display:flex><span>This test will be spoken out loud in English.
+</span></span></code></pre></div><h4 id=verborgene-sprachausgabe>Verborgene Sprachausgabe</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!-- --{{1}}--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>Dieser ganze Absatz wird nur vorgelesen, taucht aber im Textbuch-Modus nicht auf!
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span></code></pre></div><h3 id=bedingte-sprachausgabe--oder->Bedingte Sprachausgabe <code>{{|>}}</code> oder <code>{{!>}}</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>                  {{|&gt;}}
+</span></span><span style=display:flex><span>Dieser ganze Absatz wird mit der default-Stimme vorgelesen, wenn der Nutzer auf Play klickt.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                  {{!&gt; Deutsch Male}}
+</span></span><span style=display:flex><span>Micro-Animationen {1}{können} den gelesenen Text verändern sowie bedingte {|&gt;}{*Micro-*}Ausgaben.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                  {{!&gt; 1-3}}
+</span></span><span style=display:flex><span>Bedingte Sprachausgaben sind ebenso Animationen und können beliebig kombiniert werden {|&gt; 2 UK English Male}{yeah}...
+</span></span></code></pre></div><h4 id=liste-aller-sprachen>Liste aller Sprachen</h4><p>Siehe auch: <a href=https://responsivevoice.org target=_blank>https://responsivevoice.org</a></p><table><thead><tr><th>Female</th><th>Male</th></tr></thead><tbody><tr><td>UK English Female</td><td>UK English Male</td></tr><tr><td>US English Female</td><td>US English Male</td></tr><tr><td></td><td>Afrikaans Male</td></tr><tr><td></td><td>Albanian Male</td></tr><tr><td>Arabic Female</td><td>Arabic Male</td></tr><tr><td></td><td>Armenian Male</td></tr><tr><td>Australian Female</td><td>Australian Male</td></tr><tr><td>Bangla Bangladesh Female</td><td>Bangla Bangladesh Male</td></tr><tr><td>Bangla India Female</td><td>Bangla India Male</td></tr><tr><td></td><td>Bosnian Male</td></tr><tr><td>Brazilian Portuguese Female</td><td>Brazilian Portuguese Male</td></tr><tr><td></td><td>Catalan Male</td></tr><tr><td>Chinese Female</td><td>Chinese Male</td></tr><tr><td>Chinese (Hong Kong) Female</td><td>Chinese (Hong Kong) Male</td></tr><tr><td>Chinese Taiwan Female</td><td>Chinese Taiwan Male</td></tr><tr><td></td><td>Croatian Male</td></tr><tr><td>Czech Female</td><td>Czech Male</td></tr><tr><td>Danish Female</td><td>Danish Male</td></tr><tr><td>Deutsch Female</td><td>Deutsch Male</td></tr><tr><td>Dutch Female</td><td>Dutch Male</td></tr><tr><td></td><td>Esperanto Male</td></tr><tr><td></td><td>Estonian Male</td></tr><tr><td>Filipino Female</td><td></td></tr><tr><td>Finnish Female</td><td>Finnish Male</td></tr><tr><td>French Canadian Female</td><td>French Canadian Male</td></tr><tr><td>French Female</td><td>French Male</td></tr><tr><td>Greek Female</td><td>Greek Male</td></tr><tr><td>Hindi Female</td><td>Hindi Male</td></tr><tr><td>Hungarian Female</td><td>Hungarian Male</td></tr><tr><td></td><td>Icelandic Male</td></tr><tr><td>Indonesian Female</td><td>Indonesian Male</td></tr><tr><td>Italian Female</td><td>Italian Male</td></tr><tr><td>Japanese Female</td><td>Japanese Male</td></tr><tr><td>Korean Female</td><td>Korean Male</td></tr><tr><td>Latin Female</td><td>Latin Male</td></tr><tr><td></td><td>Latvian Male</td></tr><tr><td></td><td>Macedonian Male</td></tr><tr><td>Moldavian Female</td><td>Moldavian Male</td></tr><tr><td></td><td>Montenegrin Male</td></tr><tr><td>Nepali</td><td>Nepali</td></tr><tr><td>Norwegian Female</td><td>Norwegian Male</td></tr><tr><td>Polish Female</td><td>Polish Male</td></tr><tr><td>Portuguese Female</td><td>Portuguese Male</td></tr><tr><td>Romanian Female</td><td>Romanian Male</td></tr><tr><td>Russian Female</td><td>Russian Male</td></tr><tr><td></td><td>Serbian Male</td></tr><tr><td></td><td>Serbo-Croatian Male</td></tr><tr><td>Sinhala</td><td>Sinhala</td></tr><tr><td>Slovak Female</td><td>Slovak Male</td></tr><tr><td>Spanish Female</td><td>Spanish Male</td></tr><tr><td>Spanish Latin American Female</td><td>Spanish Latin American Male</td></tr><tr><td></td><td>Swahili Male</td></tr><tr><td>Swedish Female</td><td>Swedish Male</td></tr><tr><td>Tamil Female</td><td>Tamil Male</td></tr><tr><td>Thai Female</td><td>Thai Male</td></tr><tr><td>Turkish Female</td><td>Turkish Male</td></tr><tr><td>Ukrainian Female</td><td></td></tr><tr><td>Vietnamese Female</td><td>Vietnamese Male</td></tr><tr><td></td><td>Welsh Male</td></tr></tbody></table><h2 id=quizze>Quizze</h2><h3 id=textquiz-text>Textquiz <code>[[text]]</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Wie heißt die hier vorangestellte Sprache?
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[[LiaScript]]
+</span></span></code></pre></div><h3 id=single-choice-x>Single-Choice <code>[(X)]</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Anzahl und Ordnung der Optionen ist beliebig.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[( )] Diese Wahl ist falsch.
+</span></span><span style=display:flex><span>[(X)] &lt;<span style=color:#f92672>--</span> <span style=font-weight:700>__Richtig__</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>[(</span> <span style=color:#960050;background-color:#1e0010>)]</span> <span style=color:#a6e22e>Auch</span> <span style=color:#a6e22e>falsh</span><span style=color:#960050;background-color:#1e0010>.</span>
+</span></span></code></pre></div><h3 id=multiple-choice-x>Multiple-Choice <code>[[X]]</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Alle markierten Zeilen müssen ausgewählt werden:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[[ ]] nicht ausgewählt
+</span></span><span style=display:flex><span>[[X]] &lt;<span style=color:#f92672>--</span> <span style=font-weight:700>__Richtig__</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>[[</span> <span style=color:#960050;background-color:#1e0010>]]</span> <span style=color:#a6e22e>auch</span> <span style=color:#a6e22e>falsh</span><span style=color:#960050;background-color:#1e0010>.</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>[[</span><span style=color:#a6e22e>X</span><span style=color:#960050;background-color:#1e0010>]]</span> <span style=font-weight:700>__auch Richtig__</span>
+</span></span></code></pre></div><h3 id=matrix>Matrix</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Kombination von Single- und Multiple-Choice Quizzen:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[[Head 1] [_Head 2_] [**Head 3**]]
+</span></span><span style=display:flex><span>[  [X]        [ ]         [X]    ]  Weitere
+</span></span><span style=display:flex><span>[  ( )        (X)         ( )    ]  Zeilen...
+</span></span></code></pre></div><h3 id=auswahl-richtig>Auswahl <code>[[...|(richtig)|..]]</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Elemente werden durch | getrennt und dir richtige Option wird durch Klammern markiert:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[[ falsche Option
+</span></span><span style=display:flex><span>|  auch <span style=font-style:italic>*falsch*</span>
+</span></span><span style=display:flex><span>|  ( <span style=font-weight:700>**richtig**</span> )
+</span></span><span style=display:flex><span>]]
+</span></span></code></pre></div><h3 id=weitere-optionen>Weitere Optionen</h3><h4 id=hilfen->Hilfen <code>[[?]]</code></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>Hilfen können mit <span style=color:#e6db74>`[[?]]`</span> an alle Quizze angehängt werden:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[[LiaScript]]
+</span></span><span style=display:flex><span>[[?]] Tipp 1
+</span></span><span style=display:flex><span>[[?]] Tipp 2
+</span></span><span style=display:flex><span>[[?]] ...
+</span></span></code></pre></div><h4 id=erweiterte-auflösungen->Erweiterte Auflösungen <code>***</code></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>[[LiaScript]]
+</span></span><span style=display:flex><span>[[?]] Tipp 1
+</span></span><span style=display:flex><span>[[?]] ...
+</span></span><span style=display:flex><span><span style=font-style:italic>**</span>************************************************
+</span></span><span style=display:flex><span>Einer oder mehrere Absätze die durch min. 3 <span style=color:#e6db74>`***`</span>
+</span></span><span style=display:flex><span>abgetrennt sind und nur dargestellt werden, wenn
+</span></span><span style=display:flex><span>das Quiz gelöst wurde.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$$
+</span></span><span style=display:flex><span>   \sum_{i=1}^\infty\frac{1}{n^2}
+</span></span><span style=display:flex><span>        =\frac{\pi^2}{6}
+</span></span><span style=display:flex><span>$$
+</span></span><span style=display:flex><span><span style=font-style:italic>**</span>************************************************
+</span></span></code></pre></div><h4 id=weitere-prüfung-script>Weitere Prüfung <code>&lt;script></code></h4><p>Ein <code>&lt;script></code> kann an jedes Quiz angehängt werden um die Eingabe zu formatieren und zu prüfen. Nur wenn <code>true</code> zurück gegeben wird, gilt das Quiz als gelöst.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>[[LiaScript]]
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// </span>@input<span style=color:#75715e> wird mit der Nutzereingabe ersetzt.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>input_string</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;@input&#34;</span>;
+</span></span><span style=display:flex><span>  <span style=color:#e6db74>&#34;liascript&#34;</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>input_string</span>.<span style=color:#a6e22e>trim</span>().<span style=color:#a6e22e>toLowerCase</span>();
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><h4 id=generische-quizze->Generische Quizze <code>[[!]]</code></h4><p>Die Eingaben müssen/können selber organisiert werden:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>[[!]]
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>  Math.<span style=color:#a6e22e>random</span>() <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0.1</span>
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><h2 id=styling------->Styling <code>&lt;!-- ... --></code></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!-- style=&#34;color:red; width: 300px&#34; --&gt;</span>
+</span></span><span style=display:flex><span>Die in einem vorangestellten HTML-Kommentar enthaltenen Parameter werden auf den gesamten Block angewendet. Ein <span style=font-weight:700>**angefügter Kommentar**</span><span style=color:#75715e>&lt;!-- style=&#39;color: green&#39; --&gt;</span> nur auf das vorangestellte Element. Dies eignet sich auch zum formatieren von Bildern:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>![<span style=color:#f92672>image</span>](<span style=color:#a6e22e>url</span>)<span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>style=&#34;width: 100%; max-width: 800px&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>title=&#34;ein beliebiges Bild&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>onclick=&#34;alert(&#39;It started with a click!&#39;);&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span></code></pre></div><h2 id=html>HTML</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>&lt;<span style=color:#f92672>h2</span> <span style=color:#a6e22e>style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;...&#34;</span>&gt;_HTML kombiniert mit LiaScript_&lt;/<span style=color:#f92672>h2</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>lia-keep</span>&gt;
+</span></span><span style=display:flex><span>  verhindert diese Kombination:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>h2</span> <span style=color:#a6e22e>style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;...&#34;</span>&gt;_..._
+</span></span><span style=display:flex><span>  ---
+</span></span><span style=display:flex><span>  &lt;/<span style=color:#f92672>h2</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>lia-keep</span>&gt;
+</span></span></code></pre></div><h2 id=ascii-art>ASCII-Art</h2><p>Die verwendeten Buchstaben/Zeichen definieren die Farbe und Form der Linien und Punkte sowie deren Größe. Können keine Linien dargestellt werden, wie bei <code>DOTS</code>, so werden nur Punkte dargestellt. Alle Beschriftungen sind optional.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>                                    Titel
+</span></span><span style=display:flex><span>1.9 | DOTS
+</span></span><span style=display:flex><span>    |                 <span style=font-style:italic>**</span>*                   (* Gauß)
+</span></span><span style=display:flex><span>  y |               <span style=font-style:italic>*     *</span>                 (r obere Grenze)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> | r r r r r r r*r r r r*r r r r r r r
+</span></span><span style=display:flex><span>  a |             <span style=font-style:italic>*         *</span>
+</span></span><span style=display:flex><span>  x |            <span style=font-style:italic>*           *</span>
+</span></span><span style=display:flex><span>  i | B B B B B <span style=font-style:italic>* B B B B B B *</span> B B B B B
+</span></span><span style=display:flex><span>  s |         <span style=font-style:italic>*                 *</span>
+</span></span><span style=display:flex><span>    | <span style=font-style:italic>*  *</span> <span style=font-style:italic>*                       *</span> <span style=font-style:italic>*  *</span>
+</span></span><span style=display:flex><span> -1 +------------------------------------
+</span></span><span style=display:flex><span>    0              x-axis               1
+</span></span></code></pre></div><h3 id=beliebige>Beliebige</h3><p>Beliebige ASCII-Art Diagramme können als Code-Block mit dem Hinweis <code>ascii</code> versehen werden, oder durch mindestens 10 aufeinander folgenden Back-ticks.</p><p>Siehe: <a href=https://github.com/andre-dietrich/elm-svgbob target=_blank>https://github.com/andre-dietrich/elm-svgbob</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` ascii
+</span></span><span style=display:flex><span>        +-------------+       .--------------.
+</span></span><span style=display:flex><span>+------#|    Box 1    |------*|    Box 2     +-------.
+</span></span><span style=display:flex><span> \      +-------------+       &#39;-o------------&#39;       |
+</span></span><span style=display:flex><span>  \                            /                     |
+</span></span><span style=display:flex><span>   ^                          /                <span style=font-weight:700>______</span>|______
+</span></span><span style=display:flex><span>    \                        v                |      V      |
+</span></span><span style=display:flex><span>     +--- ein ---&lt;<span style=color:#f92672>---</span> <span style=color:#a6e22e>Kreislauf</span> <span style=color:#a6e22e>---O----------</span><span style=color:#960050;background-color:#1e0010>|</span>    <span style=color:#a6e22e>Box</span> <span style=color:#a6e22e>3</span>    <span style=color:#960050;background-color:#1e0010>|</span>
+</span></span><span style=display:flex><span>                                              <span style=color:#960050;background-color:#1e0010>|</span><span style=color:#a6e22e>_____________</span><span style=color:#960050;background-color:#1e0010>|</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>```</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>`````````````````````````````````````````````````````````````````````````</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>╔════════════════════════════════════[×]═╗</span>       <span style=color:#960050;background-color:#1e0010>╭─────╮</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span> <span style=color:#a6e22e>Fenstertitel</span>                           <span style=color:#960050;background-color:#1e0010>║</span>       <span style=color:#960050;background-color:#1e0010>│</span>     <span style=color:#960050;background-color:#1e0010>│</span>     <span style=color:#960050;background-color:#1e0010>╳</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>╟──────────────────────────────────────┬─╢</span>       <span style=color:#960050;background-color:#1e0010>╵</span>     <span style=color:#960050;background-color:#1e0010>╷</span>    <span style=color:#960050;background-color:#1e0010>╱</span> <span style=color:#960050;background-color:#1e0010>╲</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span> <span style=color:#a6e22e>Fensterinhalt</span>                        <span style=color:#960050;background-color:#1e0010>│▲║</span>       <span style=color:#960050;background-color:#1e0010>╰─────╯</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>┌─┬┐</span>  <span style=color:#960050;background-color:#1e0010>╔═╦╗</span>  <span style=color:#960050;background-color:#1e0010>╓─╥╖</span>  <span style=color:#960050;background-color:#1e0010>╒═╤╕</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>│</span> <span style=color:#960050;background-color:#1e0010>││</span>  <span style=color:#960050;background-color:#1e0010>║</span> <span style=color:#960050;background-color:#1e0010>║║</span>  <span style=color:#960050;background-color:#1e0010>║</span> <span style=color:#960050;background-color:#1e0010>║║</span>  <span style=color:#960050;background-color:#1e0010>│</span> <span style=color:#960050;background-color:#1e0010>││</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>├─┼┤</span>  <span style=color:#960050;background-color:#1e0010>╠═╬╣</span>  <span style=color:#960050;background-color:#1e0010>╟─╫╢</span>  <span style=color:#960050;background-color:#1e0010>╞═╪╡</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│█║</span>       <span style=color:#960050;background-color:#1e0010>└─┴┘</span>  <span style=color:#960050;background-color:#1e0010>╚═╩╝</span>  <span style=color:#960050;background-color:#1e0010>╙─╨╜</span>  <span style=color:#960050;background-color:#1e0010>╘═╧╛</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>┌───────────────────┐</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>│</span>  <span style=color:#960050;background-color:#1e0010>╔═══╗</span> <span style=color:#a6e22e>Some</span> <span style=color:#a6e22e>Text</span>  <span style=color:#960050;background-color:#1e0010>│▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>│</span>  <span style=color:#960050;background-color:#1e0010>╚═╦═╝</span> <span style=color:#a6e22e>in</span> <span style=color:#a6e22e>the</span> <span style=color:#a6e22e>box</span> <span style=color:#960050;background-color:#1e0010>│▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>╞═╤══╩══╤═══════════╡▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>│</span> <span style=color:#960050;background-color:#1e0010>├──┬──┤</span>           <span style=color:#960050;background-color:#1e0010>│▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│░║</span>       <span style=color:#960050;background-color:#1e0010>│</span> <span style=color:#960050;background-color:#1e0010>└──┴──┘</span>           <span style=color:#960050;background-color:#1e0010>│▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>║</span>                                      <span style=color:#960050;background-color:#1e0010>│▼║</span>       <span style=color:#960050;background-color:#1e0010>└───────────────────┘▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>╚══════════════════════════════════════╧═╝</span>        <span style=color:#960050;background-color:#1e0010>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>`````````````````````````````````````````````````````````````````````````</span>
+</span></span></code></pre></div><h2 id=tabellen>Tabellen</h2><h3 id=basics>Basics</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Kopf | Linksbündig | Rechtsbündig | Zentriert |
+</span></span><span style=display:flex><span>| ---- |:----------- | ------------:|:---------:|
+</span></span><span style=display:flex><span>| I.   | <span style=font-style:italic>_Tabellen_</span>  |         0.10 |   Son-    |
+</span></span><span style=display:flex><span>| II.  | <span style=font-weight:700>**sind**</span>    |         0.12 |  stiges!  |
+</span></span><span style=display:flex><span>| ...  | ^cool^      |          ... |    ...    |
+</span></span></code></pre></div><h3 id=datensätze>Datensätze</h3><p>Tabellen werden in LiaScript auch als Datensätze interpretiert und geeignet visualisert. Hier wird versucht aus der Struktur der Tabelle/Daten auf die geeignete Darstellung zu schließen. Mithilfe eines vorangestellen HTML-Kommentars können weitere Einstellungen vorgenommen werden.</p><h4 id=linien-diagramme>Linien-Diagramme</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>|   x |  y1 |  y2 |  y3 |
+</span></span><span style=display:flex><span>| ---:| ---:| ---:| ---:|
+</span></span><span style=display:flex><span>|   1 |   1 |   1 |  15 |
+</span></span><span style=display:flex><span>|   2 |   2 |   4 |  15 |
+</span></span><span style=display:flex><span>|   3 |   3 |   9 |  15 |
+</span></span><span style=display:flex><span>|   4 |   4 |  16 |  15 |
+</span></span><span style=display:flex><span>|   5 |   5 |  25 |  15 |
+</span></span></code></pre></div><h4 id=punkt-diagramme>Punkt-Diagramme</h4><p>Wenn die X-Spalte doppelte Einträge enthält&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>|   x |  y1 |  y2 |  y3 |
+</span></span><span style=display:flex><span>| ---:| ---:| ---:| ---:|
+</span></span><span style=display:flex><span>|   1 |   1 |   1 |  15 |
+</span></span><span style=display:flex><span>|   1 |   2 |   4 |  15 |
+</span></span><span style=display:flex><span>|   2 |   3 |   9 |  15 |
+</span></span><span style=display:flex><span>|   2 |   4 |  16 |  15 |
+</span></span><span style=display:flex><span>|   3 |   5 |  25 |  15 |
+</span></span><span style=display:flex><span>|   3 |   3 |   1 |   4 |
+</span></span></code></pre></div><h4 id=balken-diagramme>Balken-Diagramme</h4><p>Falls die erste Spalte keine Zahlen enthält&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Animal/Gruppe   | weight in kg | Lifespan years | Mitogen |
+</span></span><span style=display:flex><span>| --------------- | ------------:| --------------:| -------:|
+</span></span><span style=display:flex><span>| Mouse           |     0.028 kg |              2 |      95 |
+</span></span><span style=display:flex><span>| Flying squirrel |     0.085 kg |             15 |      50 |
+</span></span><span style=display:flex><span>| Brown bat       |     0.020 kg |             30 |      10 |
+</span></span><span style=display:flex><span>| Sheep           |        90 kg |             12 |      95 |
+</span></span><span style=display:flex><span>| Human           |        68 kg |             70 |      10 |
+</span></span></code></pre></div><h4 id=radar>Radar</h4><p>Wenn der Unterschied zwischen den Spalten zu groß ist&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Animal          | weight in kg | Lifespan years | Mitogen |
+</span></span><span style=display:flex><span>| --------------- | ------------:| --------------:| -------:|
+</span></span><span style=display:flex><span>| Mouse           |        0.028 |             02 |      95 |
+</span></span><span style=display:flex><span>| Flying squirrel |        0.085 |             15 |      50 |
+</span></span><span style=display:flex><span>| Brown bat       |        0.020 |             30 |      10 |
+</span></span></code></pre></div><h4 id=torten-diagramme>Torten-Diagramme</h4><p>Bei nur einer Zeile&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Music-Style 1994 | Classic | Country | Reggae | Hip-Hop | Hard-Rock |
+</span></span><span style=display:flex><span>|:---------------- | -------:| -------:| ------:| -------:| ---------:|
+</span></span><span style=display:flex><span>| Student rating   |      50 |      50 |    100 |     200 |       350 |
+</span></span></code></pre></div><h4 id=parallel-diagramm>Parallel-Diagramm</h4><p>Bei zu vielen Kategorien und Spalten&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Country  |   GDP growth (%) | Births per woman |  ... |  ... | ... |
+</span></span><span style=display:flex><span>| -------- | ----------------:| ----------------:| ----:| ----:| ---:|
+</span></span><span style=display:flex><span>| Albania  |              7.5 |            1.858 |  ... | .... | ... |
+</span></span><span style=display:flex><span>| Andorra  | 3.57073718591123 |            1.260 |  NaN |  NaN | NaN |
+</span></span><span style=display:flex><span>| Austria  | 2.17880778069679 |            1.414 | .... |  ... | ... |
+</span></span><span style=display:flex><span>| Byelarus |                  |                  |      |      |     |
+</span></span></code></pre></div><h4 id=karten>Karten</h4><p>Die erste Spalte enthält die Objekte der GeoJson-Datei&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>data-type=&#34;map&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>data-src=&#34;https://code.highcharts.com/mapdata/custom/europe.geo.json&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>| Country | percent |
+</span></span><span style=display:flex><span>| ------- | -------:|
+</span></span><span style=display:flex><span>| Albania |    73.5 |
+</span></span><span style=display:flex><span>| Andorra |    98.9 |
+</span></span><span style=display:flex><span>| ....    |      .. |
+</span></span></code></pre></div><h4 id=heatmap>HeatMap</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!-- data-type=&#34;heatmap&#34; --&gt;</span>
+</span></span><span style=display:flex><span>| Seattle |  Jan |  Feb |  Mar |  Apr |  May |  ... |
+</span></span><span style=display:flex><span>| -------:| ----:| ----:| ----:| ----:| ----:| ----:|
+</span></span><span style=display:flex><span>|       0 | 40.7 | 41.5 | 43.6 | 46.6 | 51.4 |  ... |
+</span></span><span style=display:flex><span>|       2 |  ... |  ... |  ... |  ... |  ... |  ... |
+</span></span></code></pre></div><h4 id=graph>Graph</h4><p>Kopf und erste Spalte sind gleich&mldr;</p><p>Ungerichtet:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Graph |  A  |  B  |  C  |  D  |  E  |
+</span></span><span style=display:flex><span>|:----- |:---:|:---:|:---:|:---:|:---:|
+</span></span><span style=display:flex><span>| A     |  0  |  1  |  0  |  1  |  0  |
+</span></span><span style=display:flex><span>| B     |  1  |  0  |  0  |  1  |  0  |
+</span></span><span style=display:flex><span>| C     |  0  |  0  |  0  |  0  |  0  |
+</span></span><span style=display:flex><span>| D     |  1  |  1  |  0  |  0  |  1  |
+</span></span><span style=display:flex><span>| E     |  0  |  0  |  0  |  1  |  0  |
+</span></span></code></pre></div><p>Gerichtet:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>| Graph |  A  |  B  |  C  |  D  |  E  |
+</span></span><span style=display:flex><span>|:----- |:---:|:---:|:---:|:---:|:---:|
+</span></span><span style=display:flex><span>| A     |  0  | 12  |  0  |  1  |  0  |
+</span></span><span style=display:flex><span>| B     | -22 |  0  |  0  | 0.4 |  0  |
+</span></span><span style=display:flex><span>| C     |  0  |  0  |  0  |  0  |  0  |
+</span></span><span style=display:flex><span>| D     |  2  | 12  |  0  |  0  |  1  |
+</span></span><span style=display:flex><span>| E     |  0  |  0  |  0  |  2  |  0  |
+</span></span></code></pre></div><p>Sankey:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!-- data-type=&#34;sankey&#34; --&gt;</span>
+</span></span><span style=display:flex><span>| Sankey |  A  |  B  |  C  |  D  |  E  |
+</span></span><span style=display:flex><span>|:------ |:---:|:---:|:---:|:---:|:---:|
+</span></span><span style=display:flex><span>| A      |     |  2  |     |     |     |
+</span></span><span style=display:flex><span>| B      |  3  |     |     |     |     |
+</span></span><span style=display:flex><span>| C      |  1  |  1  |     |     |     |
+</span></span><span style=display:flex><span>| D      |     |  1  |  1  |     |     |
+</span></span><span style=display:flex><span>| E      |  2  |  1  |  1  |  1  |     |
+</span></span></code></pre></div><h4 id=kobination-mit-animationen>Kobination mit Animationen</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!-- data-transpose --&gt;</span>
+</span></span><span style=display:flex><span>| Music-Style {0-1}{1994} {1}{2014} |      Student rating |
+</span></span><span style=display:flex><span>|:--------------------------------- | -------------------:|
+</span></span><span style=display:flex><span>| Classic                           |   {0-1}{50} {1}{20} |
+</span></span><span style=display:flex><span>| Country                           |   {0-1}{50} {1}{30} |
+</span></span><span style=display:flex><span>| Reggae                            |                 100 |
+</span></span><span style=display:flex><span>| Hip-Hop                           | {0-1}{200} {1}{220} |
+</span></span><span style=display:flex><span>| Hard-Rock                         | {0-1}{350} {1}{400} |
+</span></span><span style=display:flex><span>| Samba                             | {0-1}{250} {1}{230} |
+</span></span></code></pre></div><h4 id=weitere-einstellungen>Weitere Einstellungen</h4><ul><li><p><strong><code>data-type</code></strong>: You can use <code>data-type="map|boxplot|barchart|..."</code> to overwrite the automatically identfied representation with your desired one. The names can be taken from the previous titles, it is not relevant if you use lower or upper-case. This way it is also possible to use types that cannot be automatically infered at the moment, such as Sankey or BoxPlot.</p><p>If you do not want to show tables as diagrams, you can also use <code>data-type="None"</code> and only the table will be visible.</p></li><li><p><strong><code>data-show</code></strong>: Simply add this attribute or set it to true (<code>data-show="true"</code>), if you want to visualize your data immediately, without the need to click in the switch-button. It is still possible for your users to switch to the table representation.</p></li><li><p><strong><code>data-transpose</code></strong>: Like in the mathematical sense, set this attribute or set it to true (<code>data-transpose="true"</code>), if you want to switch rows and columns. One benefit is, that you can for example use PieChart and let your table grow vertically instead of using a horizontal monster.</p></li><li><p><strong><code>data-title</code></strong>: Normaly, the first cell defines the title of your diagram, but if you want larger titles and not have to write gigantic table headers, apply this attribute <code>data-title="Use whatever title you want to ..."</code></p></li><li><p><strong><code>data-xlabel</code></strong>: As above, you can also define the strings for the labels, in this case for the x label</p></li><li><p><strong><code>data-ylabel</code></strong>: or the y label.</p></li><li><p><strong><code>data-src</code></strong>: Currently this attribute is used to refere to your geojson data, if you use the <code>data-type="Map"</code> representation, but this might change in the future to load and visualize data directly, such as csv.</p><p>If you are using geojson files from external websites such as:</p><p><a href=https://code.highcharts.com/mapdata/ target=_blank>https://code.highcharts.com/mapdata/</a></p><p>It can be usefull to use anycors, if the data cannot be visualized due to CORS restrictions:</p><p><code>data-src="https://cors-anywhere.herokuapp.com/https://code.highcharts.com/mapdata/custom/europe.geo.json"</code></p></li></ul><h2 id=code>Code</h2><p>Ein Code-Block wird durch min. 3 aufeinander folgende Back-ticks vom Rest abgetrennt. Das folgende Kürzel ist ist optional und spezifiziert die Sprache und damit auch das Syntax-Highlighting.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` js
+</span></span><span style=display:flex><span>console.log(&#34;Hallo Welt&#34;)
+</span></span><span style=display:flex><span>```
+</span></span></code></pre></div><h3 id=ausführbarer-code>Ausführbarer Code</h3><p>Code kann ausführbar gemacht werden, indem ein <code>script</code> tag angefügt wird. <code>@input</code> wird wir bei den Quizzen mit dem aktuellen Code vor der Ausführung ersetzt.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` js
+</span></span><span style=display:flex><span>console.log(&#34;Hallo Welt&#34;)
+</span></span><span style=display:flex><span>```
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;<span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>input</span>&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><h3 id=projekte>Projekte</h3><p>Mehrere Code-Segmente können direkt zusammengefasst und mit Namen versehen werden. Das vorangestellte <code>+</code> oder <code>-</code> im Titel definiert ob die Datei bei der ersten Darstellung auf- oder eingeklappt erscheint. Auf die verschiedenen Code-Segmente wird im script durch <code>@input(0)</code> und <code>@input(1)</code> verwiesen.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` js     -EvalScript.js
+</span></span><span style=display:flex><span>let who = data.first_name + &#34; &#34; + data.last_name;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>if(data.online) {
+</span></span><span style=display:flex><span>  who + &#34; is online&#34;; }
+</span></span><span style=display:flex><span>else {
+</span></span><span style=display:flex><span>  who + &#34; is NOT online&#34;; }
+</span></span><span style=display:flex><span><span style=color:#e6db74>```
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span>``` json    +Data.json
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  &#34;first_name&#34; :  &#34;Sammy&#34;,
+</span></span><span style=display:flex><span>  &#34;last_name&#34;  :  &#34;Shark&#34;,
+</span></span><span style=display:flex><span>  &#34;online&#34;     :  true
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#e6db74>```</span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// insert the JSON dataset into the local variable data
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>data</span> <span style=color:#f92672>=</span> @input(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// eval the script that uses this dataset
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  eval(<span style=color:#e6db74>`@input(0)`</span>);
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><h3 id=default-ausgabe-output>Default-Ausgabe <code>@output</code></h3><p>Die erste Ausgabe kann durch ein <code>@output</code>-Script-Block angehängt werden.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` js
+</span></span><span style=display:flex><span>for (let i=0; i&lt;<span style=color:#f92672>5</span><span style=color:#960050;background-color:#1e0010>;</span> <span style=color:#a6e22e>i</span><span style=color:#960050;background-color:#1e0010>++)</span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>console</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>log</span><span style=color:#960050;background-color:#1e0010>(&#34;</span><span style=color:#a6e22e>Hallo</span> <span style=color:#a6e22e>Welt</span><span style=color:#960050;background-color:#1e0010>&#34;,</span> <span style=color:#a6e22e>i</span><span style=color:#960050;background-color:#1e0010>)</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>```
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span>``` text  @output
+</span></span><span style=display:flex><span>Hallo Welt 0
+</span></span><span style=display:flex><span>Hallo Welt 1
+</span></span><span style=display:flex><span>Hallo Welt 2
+</span></span><span style=display:flex><span>Hallo Welt 3
+</span></span><span style=display:flex><span>Hallo Welt 4
+</span></span><span style=display:flex><span><span style=color:#e6db74>```</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>&lt;</span><span style=color:#a6e22e>script</span>&gt;@input&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><h3 id=weitere-optionen-1>Weitere Optionen</h3><p>Mit vorangestellten Kommentaren können auch die Code-Segment formatiert werden:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!-- data-showGutter=&#34;false&#34; --&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>```cpp
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span><span style=color:#75715e>// some C++ code without line numbers
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>...
+</span></span><span style=display:flex><span><span style=color:#e6db74>```</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>&lt;!-- data-readOnly=&#34;true&#34; --&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>```hpp
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span><span style=color:#75715e>// some header-file with lineNumbers,
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// that cannot be edited
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#e6db74>```</span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>...<span style=color:#75715e>// your execution code
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><p>Attributes:</p><ul><li><p><code>data-firstLineNumber</code>: change the initial line number to any number you prefer (default: <code>data-firstLineNumber="0"</code>).</p></li><li><p><code>data-fontSize</code>: change the default font-size, which has to be defined with <code>pt</code> (default <code>data-fontSize="12pt"</code>).</p></li><li><p><code>data-readOnly</code>: whether it is an executable snippet or not, there are different default values, you can either set only data-readOnly to make it read-only or pass it a boolean value (<code>data-readOnly="false"</code>)</p></li><li><p><code>data-showGutter</code>: same as with <code>data-readOnly</code></p></li><li><p><code>data-tabSize</code>: this takes an integer to represent the default tab-size replacement (default <code>data-tabSize="2"</code>)</p></li><li><p><code>data-theme</code>: your default theme as in your settings is applied, but you can change this to any of the ace-themes, eg: <code>Chaos</code>, <code>Eclipse</code>, <code>Soliarized Light</code>, &mldr;</p></li><li><p><code>data-marker</code>: use this to highlight aspects of your code, you have to apply the following pattern <code>data-marker="y1 x1 y2 x2 color type;"</code>. You start with a row and column and end with a row and a column. Then you can apply one of the predefined colors, for <code>error</code>, <code>log</code>, <code>warn</code>, <code>debug</code> or <code>info</code>, or you can set your own color with the css rgba function, do not use spaces in this function!</p><p>The type is optional, but you can choose between one of the following ace-marker types: <code>text</code>, (default <code>fullLine</code>), <code>screenLine</code></p><p>If you want more than one marker, then simply separate different marker definitions with a colon &mldr;</p></li></ul><h2 id=macros>Macros</h2><p>Macros können im Kopf eines jeden Dokuments definiert werden, es gibt single-line Makros und Block-Makros, die die Struktur erhalten. Single-line Makros beginnen mit <code>name:</code> oder <code>@name:</code> und alle dazugehörigen Element müssen eingeschoben sein.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>author: someone who wants to create something new
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@Single<span style=color:#75715e>.line: you can add as much content as you
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  want to your single-line macro!
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  The only thing that is important, is to use
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     indentation.
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     Not</span> <span style=font-weight:700>__matter__</span><span style=color:#75715e> how </span>[<span style=color:#f92672>much</span>](<span style=color:#a6e22e>#12</span>)<span style=color:#75715e> it is.
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Main Title
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@Single.line  &lt;<span style=color:#f92672>--</span> <span style=color:#a6e22e>this</span> <span style=color:#a6e22e>will</span> <span style=color:#a6e22e>be</span> <span style=color:#a6e22e>replaced</span> <span style=color:#a6e22e>at</span> <span style=color:#a6e22e>compile-time</span> <span style=color:#a6e22e>by</span> <span style=color:#960050;background-color:#1e0010>...</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>you</span> <span style=color:#a6e22e>can</span> <span style=color:#a6e22e>add</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>much</span> <span style=color:#a6e22e>content</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>you</span> <span style=color:#a6e22e>want</span> <span style=color:#a6e22e>to</span> <span style=color:#a6e22e>your</span> <span style=color:#a6e22e>single-line</span> <span style=color:#a6e22e>macro</span><span style=color:#960050;background-color:#1e0010>!</span> <span style=color:#a6e22e>The</span> <span style=color:#a6e22e>only</span> <span style=color:#a6e22e>thing</span> <span style=color:#a6e22e>that</span> <span style=color:#a6e22e>is</span> <span style=color:#a6e22e>important</span><span style=color:#960050;background-color:#1e0010>,</span> <span style=color:#a6e22e>is</span> <span style=color:#a6e22e>to</span> <span style=color:#a6e22e>use</span> <span style=color:#a6e22e>indentation</span><span style=color:#960050;background-color:#1e0010>.</span> <span style=color:#a6e22e>Not</span> <span style=font-weight:700>__matter__</span> <span style=color:#a6e22e>how</span> [<span style=color:#f92672>much</span>](<span style=color:#a6e22e>#12</span>) <span style=color:#a6e22e>it</span> <span style=color:#a6e22e>is</span><span style=color:#960050;background-color:#1e0010>.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@author <span style=color:#960050;background-color:#1e0010>&lt;</span><span style=color:#a6e22e>--</span> <span style=color:#a6e22e>by:</span> <span style=color:#a6e22e>someone</span> <span style=color:#a6e22e>who</span> <span style=color:#a6e22e>wants</span> <span style=color:#a6e22e>to</span> <span style=color:#a6e22e>create</span> <span style=color:#a6e22e>something</span> <span style=color:#a6e22e>new</span>
+</span></span></code></pre></div><h3 id=block-macros>Block-Macros</h3><p>Block-Macros beginnen mit <code>name</code> oder <code>@name</code> und werden mit <code>@end</code> abgeschlossen. Sie erhalten die Struktur:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@smile:<span style=color:#75715e> ;-)
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@block<span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>this type of macro preserves the structure.
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>&lt;h1&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@smile<span style=color:#75715e> and you can also use macros, that
+</span></span></span><span style=display:flex><span><span style=color:#75715e>define other macros
+</span></span></span><span style=display:flex><span><span style=color:#75715e>&lt;/h2&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>| Header 1   | Header 2   | Header 3   |
+</span></span></span><span style=display:flex><span><span style=color:#75715e>| :--------- | :--------- | :--------- |
+</span></span></span><span style=display:flex><span><span style=color:#75715e>| Item 1     | Item 2     | Item 3     |
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>&lt;script&gt;alert(&#34;hello world&#34;)&lt;/script&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@end<span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Main Title
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@block
+</span></span></code></pre></div><h3 id=kommentare>Kommentare</h3><p>Zwei <code>@@</code> bei single-line und drei <code>@@@</code> bei Blöcken dient als zum Kommentieren/Auskommentieren.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>@@comment: this is a single line macro
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  that has been commented out
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>@@ if you prefer it, comment blocks can
+</span></span></span><span style=display:flex><span><span style=color:#75715e>@@ be defined like this
+</span></span></span><span style=display:flex><span><span style=color:#75715e>@@ ...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>@@@block-comments
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>start with three </span>@s<span style=color:#75715e> and go until the
+</span></span></span><span style=display:flex><span><span style=color:#75715e>parser reaches ...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@end<span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span></code></pre></div><h3 id=überschreiben>Überschreiben</h3><p>Makros und Einstellungen können je Abschnitt überschrieben werden:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` markdown
+</span></span><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>narrator: US English Female
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Main Title
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>....
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>### Some other section
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>author: another author for this section
+</span></span></span><span style=display:flex><span><span style=color:#75715e>...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>narrator: Australian Male
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span></code></pre></div><h3 id=parameterübergabe>Parameterübergabe</h3><p>Makros können Parameter übergeben werden <code>@0</code> bis <code>@n</code> definiert wo Parameter ersetzt werden sollen:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@highlight:<span style=color:#75715e> &lt;b style=&#34;color: </span>@0<span style=color:#75715e>&#34;&gt;@1&lt;/b&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@highlight(red,I want this text to be read and bold)
+</span></span></code></pre></div><p>Parameter werden durch Komma <code>,</code> voneinander getrennt und mit Klammern eingeschlossen. Sollte ein Parameter Kommas und/oder Klammern enthalten, so können diese auch als Markdown-Code element übergeben werden</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>@highlight(red; fontSize: 22px,`some text with commas,,,, and (parenthesis)`)
+</span></span></code></pre></div><p>Multiline ist auch möglich&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>@highlight(red,```
+</span></span><span style=display:flex><span>It works also for multi-line
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>elements...
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@highlight(green,macros can also call other macros)
+</span></span><span style=display:flex><span>```)
+</span></span></code></pre></div><p>Makros sollten so organisiert werden, dass das der komplexeste Parameter als letztes übergeben wird, dann kann auch folgende Syntax verwendet werden:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>``` md @highlight(red)
+</span></span><span style=display:flex><span>It works also for multi-line
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>elements...
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@highlight(green,macros can also call other macros)
+</span></span><span style=display:flex><span>```
+</span></span></code></pre></div><p>dies eignet sich vor allem bei Parametern, die JSON, YAML oder sonstigen Code enthalten&mldr;</p><h3 id=wichtige-macros>Wichtige Macros</h3><h4 id=import>Import</h4><p>LiaScript erlaubt das impotieren und die Nutzung von JavaScript (<code>script:</code>), CSS (<code>link:</code>), Markdown (<code>import:</code>). Bei LiaScript-Dokumenten werden nur die Makros im Kopf importiert.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>script: https://javascript.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        ...js
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>link:   https://style.css
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        ...css
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>import: https://ReadME.md
+</span></span></span><span style=display:flex><span><span style=color:#75715e>        ...md
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Überschrift
+</span></span></code></pre></div><h4 id=informationen>Informationen</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e>version:  0.0.1
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>author:   Autor des Kurses
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>email:    Kontakt@....com
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>comment:  Was wird behandelt, bzw. eine Kurs(z)-Vorstellung,
+</span></span></span><span style=display:flex><span><span style=color:#75715e>          In mehreren Zeilen ...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>logo:     https://logo.jpg
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>language: de|en|es|...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>narrator: Afrikaans Male|Arabic Female|Brazilian Portuguese Female|...
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>mode:     Presentation|Slides|Textbook
+</span></span></span><span style=display:flex><span><span style=color:#75715e>dark:     true
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>date:     09/09/2020
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@onload<span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>alert(&#34;some JavaScript to be executed at the start...&#34;)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@end<span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>attribute: Erste Danksagung ....
+</span></span></span><span style=display:flex><span><span style=color:#75715e>attribute: Zweite Danksagung mit Lizenz[MIT](https://opensource.org/licenses/MIT)
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>translation: Deutsch  translations/German.md
+</span></span></span><span style=display:flex><span><span style=color:#75715e>translation: Français translations/French.md
+</span></span></span><span style=display:flex><span><span style=color:#75715e>translation: Русский  translations/Russian.md
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Überschrift
+</span></span></code></pre></div><h4 id=weitere>Weitere</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>@uid erzeugt eine einmalige ID.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@section wird durch die Abschnittsnummer ersetzt.
+</span></span></code></pre></div><h4 id=debug>Debug</h4><p>Ein vorangestelltes <code>@</code> sollte den Ersetzungs-Code zeigen:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span><span style=color:#75715e>&lt;!--
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@highlight:<span style=color:#75715e> &lt;b style=&#34;color: red&#34;&gt;@0&lt;/b&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>@red_and_green:<span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  </span>@highlight<span style=color:#75715e>(@0) &lt;i style=&#34;color: green&#34;&gt;@1&lt;/i&gt;
+</span></span></span><span style=display:flex><span><span style=color:#75715e>--&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@@red_and_green(red,`simply, simply, green`)
+</span></span></code></pre></div><h4 id=escape>Escape</h4><p>In some cases, for example if you want to pass content to a javascript string and you need to escape the content of the LiaScript content, wich could be a multiline string for example. Then you can simply add a <code>'</code> to your macro, for example:</p><ul><li><code>@'input</code> will result in an escaped version of the input string</li><li><code>@'input(1)</code> is the same as above</li><li><code>@'1</code> as a parameter will also get escaped</li><li>similarly to any other <code>@'macro(with, some, params)</code></li></ul></div><div class="row items-start justify-between"><div class="lg:col-5 mb-10 flex items-center lg:mb-0"><h5 class=mr-3>Tags :</h5><ul><li class=inline-block><a class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white" href=/tags/liascript/>Lia script</a></li><li class=inline-block><a class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white" href=/tags/feature/>Feature</a></li></ul></div><div class="lg:col-4 flex items-center"><div class=share-icons><h5 class=share-title>Share :</h5><a class="share-link share-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fLiaScript.github.io%2fblog%2fliascript-cheet-sheet%2f" target=_blank rel=noopener aria-label="share facebook"><span class=share-icon><svg viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+</span></a><a class="share-link share-twitter" href="https://twitter.com/intent/tweet/?text=Share&amp;url=https%3a%2f%2fLiaScript.github.io%2fblog%2fliascript-cheet-sheet%2f" target=_blank rel=noopener aria-label="share twitter"><span aria-hidden=true class=share-icon><svg viewBox="0 0 24 24"><path d="M8 2H1l8.26 11.015L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886zm9 18L5 4h2l12 16z"/></svg>
+</span></a><a class="share-link share-email" href="mailto:?subject=Share&amp;body=https%3a%2f%2fLiaScript.github.io%2fblog%2fliascript-cheet-sheet%2f" target=_self rel=noopener aria-label="share email"><span aria-hidden=true class=share-icon><svg viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9.0 6v12c0 1.1.9 2 2 2h20c1.1.0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17.0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1.0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08.0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
+</span></a><a class="share-link share-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fLiaScript.github.io%2fblog%2fliascript-cheet-sheet%2f&amp;resubmit=true&amp;title=Share" target=_blank rel=noopener aria-label="share reddit"><span aria-hidden=true class=share-icon><svg viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96.0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65.0 3-1.35 3-3s-1.35-3-3-3c-1.38.0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65.0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66.0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64.0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4.0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6.0.23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1.0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1.0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg></span></a></div></div></div><div class=mt-20><div class=comments><script>const getStoredTheme=()=>localStorage.getItem("theme")==="dark"?"dark_high_contrast":"light_high_contrast",setGiscusTheme=()=>{const e=e=>{const t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:e},"https://giscus.app")};e({setConfig:{theme:getStoredTheme()}})};document.addEventListener("DOMContentLoaded",()=>{const n={src:"https://giscus.app/client.js","data-repo":"liascript/liascript","data-repo-id":"MDEwOlJlcG9zaXRvcnkyMjAwNTMxMjY=","data-category":"General","data-category-id":"DIC_kwDODR2-hs4Cbeqh","data-mapping":"title","data-reactions-enabled":"1","data-emit-metadata":"0","data-input-position":"bottom","data-theme":getStoredTheme(),"data-lang":"en","data-loading":"lazy",crossorigin:"anonymous",async:""},e=document.createElement("script");Object.entries(n).forEach(([t,n])=>e.setAttribute(t,n)),console.log(e),document.querySelector(".comments").appendChild(e);const t=document.querySelector("#theme-switcher");t&&t.addEventListener("click",setGiscusTheme)})</script></div></div></article></div><div class="section pb-0"><h2 class="h3 mb-12">Related Posts</h2><div class=row><div class="lg:col-4 md:col-6 mb-14"><div class="bg-body dark:bg-darkmode-body"><div class="mb-6 image-container rounded" style="background-image:url(/images/post/fonts.webp);height:234px;width:100%;border:1px solid #000;background-position:50%;background-size:cover;display:flex;justify-content:center;align-items:center;overflow:hidden"></div><h4 class=mb-3><a href=/blog/fonts-dead-or-alive/>Fonts: Dead or Alive</a></h4><ul class=mb-4><li class="mr-4 inline-block"><a href=/authors/andr%C3%A9-dietrich/><i class="fa-regular fa-circle-user mr-2"></i>André Dietrich</a></li><li class="mr-4 inline-block"><i class="fa-regular fa-folder mr-1"></i>
+<a href=/categories/examples/ class=ms-1>Examples
+,
+</a><a href=/categories/shorts/ class=ms-1>Shorts</a></li></ul><p class=mb-6>Fascinated by the length of the URL as well as by foreign languages and writing systems we added the opportunity to use different fonts in LiaScript-Markdown.</p><a class="btn btn-outline-primary btn-sm" href=/blog/fonts-dead-or-alive/>Read More</a></div></div><div class="lg:col-4 md:col-6 mb-14"><div class="bg-body dark:bg-darkmode-body"><div class="mb-6 image-container rounded" style="background-image:url(/images/post/macro.webp);height:234px;width:100%;border:1px solid #000;background-position:50%;background-size:cover;display:flex;justify-content:center;align-items:center;overflow:hidden"></div><h4 class=mb-3><a href=/blog/macros/>Macros</a></h4><ul class=mb-4><li class="mr-4 inline-block"><a href=/authors/andr%C3%A9-dietrich/><i class="fa-regular fa-circle-user mr-2"></i>André Dietrich</a></li><li class="mr-4 inline-block"><i class="fa-regular fa-folder mr-1"></i>
+<a href=/categories/examples/ class=ms-1>Examples
+,
+</a><a href=/categories/shorts/ class=ms-1>Shorts</a></li></ul><p class=mb-6>How can you define custom macros or even define reusable LiaScript libraries?</p><a class="btn btn-outline-primary btn-sm" href=/blog/macros/>Read More</a></div></div><div class="lg:col-4 md:col-6 mb-14"><div class="bg-body dark:bg-darkmode-body"><div class="mb-6 image-container rounded" style="background-image:url(/images/post/Gallery_at_Brussels.jpg);height:234px;width:100%;border:1px solid #000;background-position:50%;background-size:cover;display:flex;justify-content:center;align-items:center;overflow:hidden"></div><h4 class=mb-3><a href=/blog/promoting-your-content/>Promoting your Content</a></h4><ul class=mb-4><li class="mr-4 inline-block"><a href=/authors/andr%C3%A9-dietrich/><i class="fa-regular fa-circle-user mr-2"></i>André Dietrich</a></li><li class="mr-4 inline-block"><i class="fa-regular fa-folder mr-1"></i>
+<a href=/categories/article/ class=ms-1>Article
+,
+</a><a href=/categories/community/ class=ms-1>Community</a></li></ul><p class=mb-6>If you want to &ldquo;promote&rdquo; the LiaScript content you have created, or share it with a wider audience, then you can use the following methods.</p><a class="btn btn-outline-primary btn-sm" href=/blog/promoting-your-content/>Read More</a></div></div></div></div></div></section></main><footer class="bg-theme-light dark:bg-darkmode-theme-light"><div class=container><div class="row items-center py-10"><div class="lg:col-3 mb-8 text-center lg:mb-0 lg:text-left"><a class="navbar-brand inline-block" href=/><img fetchpriority=high decoding=async class="img logo-light" width=160 height=32 src=/images/logo_hu7443897454658306654.webp alt=LiaScript onerror='this.onerror=null,this.src="/images/logo_hu15236687076654200087.png"'>
+<img fetchpriority=high decoding=async class="img logo-dark" width=160 height=32 src=/images/logo-darkmode_hu13157650616442203983.webp alt=LiaScript onerror='this.onerror=null,this.src="/images/logo-darkmode_hu18102906280955218898.png"'></a></div><div class="lg:col-6 mb-8 text-center lg:mb-0"><ul><li class="m-3 inline-block"><a href=/about/>About</a></li><li class="m-3 inline-block"><a href=/newsletter/>Newsletter</a></li><li class="m-3 inline-block"><a href=/contact/>Contact</a></li><li class="m-3 inline-block"><a href=/world-map/>World-Map</a></li></ul></div><div class="lg:col-3 mb-8 text-center lg:mb-0 lg:mt-0 lg:text-right"><ul class=social-icons><li><a target=_blank aria-label=email rel="nofollow noopener" href=mailto:LiaScript@web.de><i class="fa fa-envelope"></i></a></li><li><a target=_blank aria-label=twitter rel="nofollow noopener" href=https://twitter.com/liascript><i class="fab fa-twitter"></i></a></li><li><a target=_blank aria-label=github rel="nofollow noopener" href=https://www.github.com/liascript><i class="fab fa-github"></i></a></li><li><a target=_blank aria-label=linkedin rel="nofollow noopener" href=https://www.linkedin.com/in/andr%C3%A9-dietrich-73949415/><i class="fab fa-linkedin"></i></a></li><li><a target=_blank aria-label=youtube rel="nofollow noopener" href=https://www.youtube.com/@liascript4180><i class="fab fa-youtube"></i></a></li></ul></div></div></div><div class="border-border dark:border-darkmode-border border-t py-7"><div class="text-light dark:text-darkmode-light container text-center"><p>© <a href=/authors/andre-dietrich/>André Dietrich</a> & <a href=/authors/sebastian-zug/>Sebastian Zug</a> 2024.</p></div></div></footer><script crossorigin=anonymous integrity="sha256-KqmvR9djio523pYWZ0IdV49tSiUwUyKOV0vjnRUFRfg=" src=/js/script.min.2aa9af47d7638a8e76de961667421d578f6d4a253053228e574be39d150545f8.js></script><script defer async crossorigin=anonymous integrity="sha256-9e9iyznGCSfFZB4ElW+WFonrJpHJr5pYxsaD7VVh4wc=" src=/js/script-lazy.min.f5ef62cb39c60927c5641e04956f961689eb2691c9af9a58c6c683ed5561e307.js></script><script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/service-worker.js")</script></body></html>
