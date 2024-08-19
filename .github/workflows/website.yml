@@ -1,0 +1,200 @@
+name: Deploy LiaScript-Web-Site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - master
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  hugo:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.132.2
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Install PostCSS, Tailwind and Autoprefixer
+        run: npm install postcss postcss-cli tailwindcss autoprefixer
+      - name: Install Python
+        run: sudo apt-get install python3
+      - name: Build World-Map
+        run: "cd world-map && python3 generate.py"
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: "npm run build"
+
+      - name: List contents of public directory
+        run: ls -la $(pwd)/public
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: public
+          path: ./public
+  
+  liascript:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set ELM_HOME
+        run: echo "ELM_HOME=${GITHUB_WORKSPACE}/.elm" >> $GITHUB_ENV
+
+      # build LiaScript
+      - name: LiaScript - download
+        run: git clone --branch development https://github.com/LiaScript/LiaScript.git
+      - name: LiaScript - prebuild
+        run: |
+          cd LiaScript
+          npm install
+          npm run prebuild
+      - name: LiaScript - patches
+        run: |
+          cd LiaScript
+          git submodule update --init --recursive
+          cd patches
+          make
+          cd ..
+          rm -rf elm-stuff .parcel-cache
+      - name: LiaScript - build
+        run: |
+          cd LiaScript
+          make all2 KEY="${{ secrets.RESPONSIVEVOICE_KEY }}"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: course
+          path: ./LiaScript/dist
+
+  liascript-nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set ELM_HOME
+        run: echo "ELM_HOME=${GITHUB_WORKSPACE}/.elm" >> $GITHUB_ENV
+
+      # build LiaScript
+      - name: LiaScript - download
+        run: git clone --branch feat/minimizeNavigation https://github.com/LiaScript/LiaScript.git
+      - name: LiaScript - prebuild
+        run: |
+          cd LiaScript
+          npm install
+          npm run prebuild
+      - name: LiaScript - patches
+        run: |
+          cd LiaScript
+          git submodule update --init --recursive
+          cd patches
+          make
+          cd ..
+          rm -rf elm-stuff .parcel-cache
+      - name: LiaScript - build
+        run: |
+          cd LiaScript
+          make all2 KEY="${{ secrets.RESPONSIVEVOICE_KEY }}"
+          rm dist/sw.js
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: nightly
+          path: ./LiaScript/dist
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs:
+      - hugo
+      - liascript
+      - liascript-nightly
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Checkout gh-pages branch
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages || git checkout --orphan gh-pages
+
+      - name: Download Website
+        uses: actions/download-artifact@master
+        with:
+          name: public
+          path: public
+
+      - name: Extract Website Artifact
+        run: |
+          mkdir -p public
+          tar -xvf public/artifact.tar -C public
+          rm public/artifact.tar
+
+      - name: Download LiaScript
+        uses: actions/download-artifact@master
+        with:
+          name: course
+          path: public/course
+
+      - name: Extract LiaScript Artifact
+        run: |
+          mkdir -p public/course
+          tar -xvf public/course/artifact.tar -C public/course
+          rm public/course/artifact.tar
+
+      - name: Download LiaScript Nightly
+        uses: actions/download-artifact@master
+        with:
+          name: nightly
+          path: public/nightly
+
+      - name: Extract LiaScript-Nightly Artifact
+        run: |
+          mkdir -p public/nightly
+          tar -xvf public/nightly/artifact.tar -C public/nightly
+          rm public/nightly/artifact.tar
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: docs
+          publish_branch: gh-pages
