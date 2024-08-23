@@ -20,19 +20,6 @@ defaults:
     shell: bash
 
 jobs:
-  check_liascript_changes:
-    runs-on: ubuntu-latest
-    outputs:
-      should_build: ${{ steps.check.outputs.should_build }}
-    steps:
-      - name: Check LiaScript repository
-        id: check
-        run: |
-          LAST_COMMIT=$(curl -s https://api.github.com/repos/LiaScript/LiaScript/commits/development | jq -r '.sha')
-          echo "Last commit: $LAST_COMMIT"
-          echo "should_build=$([ "$LAST_COMMIT" != "$(cat .liascript_last_commit 2>/dev/null)" ] && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
-          echo $LAST_COMMIT > .liascript_last_commit
-
   hugo:
     runs-on: ubuntu-latest
     env:
@@ -75,8 +62,6 @@ jobs:
           path: ./public
 
   liascript:
-    needs: check_liascript_changes
-    if: needs.check_liascript_changes.outputs.should_build == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Set ELM_HOME
@@ -109,15 +94,7 @@ jobs:
           name: course
           path: ./LiaScript/dist
 
-      - name: Cache LiaScript artifact
-        uses: actions/cache@v2
-        with:
-          path: ./LiaScript/dist
-          key: ${{ runner.os }}-liascript-${{ github.sha }}
-
   liascript-nightly:
-    needs: check_liascript_changes
-    if: needs.check_liascript_changes.outputs.should_build == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Set ELM_HOME
@@ -151,12 +128,6 @@ jobs:
           name: nightly
           path: ./LiaScript/dist
 
-      - name: Cache LiaScript-nightly artifact
-        uses: actions/cache@v2
-        with:
-          path: ./LiaScript/dist
-          key: ${{ runner.os }}-liascript-nightly-${{ github.sha }}
-
   deploy:
     environment:
       name: github-pages
@@ -164,7 +135,6 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - hugo
-      - check_liascript_changes
       - liascript
       - liascript-nightly
     steps:
@@ -211,22 +181,6 @@ jobs:
           mkdir -p public/nightly
           tar -xvf public/nightly/artifact.tar -C public/nightly
           rm public/nightly/artifact.tar
-
-      - name: Download or use cached LiaScript artifact
-        uses: actions/cache@v2
-        with:
-          path: ./public/course
-          key: ${{ runner.os }}-liascript-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-liascript-
-
-      - name: Download or use cached LiaScript-nightly artifact
-        uses: actions/cache@v2
-        with:
-          path: ./public/nightly
-          key: ${{ runner.os }}-liascript-nightly-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-liascript-nightly-
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
