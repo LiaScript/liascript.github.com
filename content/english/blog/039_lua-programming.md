@@ -25,5 +25,5 @@ See this project on GitHub: https://github.com/LiaBooks/Lua-Programming
 
 ... or try it out in the [LiveEditor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaBooks/Lua-Programming/master/README.md):
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaBooks/Lua-Programming/master/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaBooks/Lua-Programming/master/README.md"></iframe>
 ```

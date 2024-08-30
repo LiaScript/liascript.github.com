@@ -65,5 +65,5 @@ __Inhalt:__
 
 ## LiveEditor
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Delfi-Workshop-2023/main/Kochbuch.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Delfi-Workshop-2023/main/Kochbuch.md"></iframe>
 ```

@@ -40,4 +40,4 @@ Since the talk was in German, we made a re-recording in English:
 
 ## LiveEditor
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/README.md"></iframe>

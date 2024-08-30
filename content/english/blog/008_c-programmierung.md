@@ -27,4 +27,4 @@ https://github.com/LiaBooks/C-Programmierung
 
 ... oder schauen sie sich das Beispiel im [LiveEditor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/C-Programmierung/master/README.md) an:
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/C-Programmierung/master/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/C-Programmierung/master/README.md"></iframe>

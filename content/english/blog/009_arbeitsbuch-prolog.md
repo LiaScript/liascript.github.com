@@ -33,4 +33,4 @@ https://github.com/LiaBooks/Arbeitsbuch-Prolog
 
 ... oder schauen sie sich das Beispiel im [LiveEditor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/Arbeitsbuch-Prolog/master/README.md) an:
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/Arbeitsbuch-Prolog/master/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/Arbeitsbuch-Prolog/master/README.md"></iframe>

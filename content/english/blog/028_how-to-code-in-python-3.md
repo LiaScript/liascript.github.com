@@ -29,4 +29,4 @@ https://github.com/LiaBooks/How-To-Code-in-Python-3
 
 ... or try it out in the [LiveEditor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaBooks/How-To-Code-in-Python-3/main/README.md):
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaBooks/How-To-Code-in-Python-3/main/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaBooks/How-To-Code-in-Python-3/main/README.md"></iframe>

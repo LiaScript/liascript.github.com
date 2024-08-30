@@ -63,4 +63,4 @@ The network consists of thousands of volunteer servers around the world, acting 
 
 #### Demo
 
-<iframe style="width: 100%; aspect-ratio: 112 / 63" src="https://www.youtube.com/embed/-y7I3bIeB_I?si=fc7SvDqlq7dSZgYk&amp;start=621" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" style="width: 100%; aspect-ratio: 112 / 63" src="https://www.youtube.com/embed/-y7I3bIeB_I?si=fc7SvDqlq7dSZgYk&amp;start=621" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

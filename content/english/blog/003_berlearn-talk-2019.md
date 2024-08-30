@@ -32,4 +32,4 @@ Try out this presentation in the LiveEditor:
 
 ---
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/BerLearn-Talk-2019/master/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/BerLearn-Talk-2019/master/README.md"></iframe>

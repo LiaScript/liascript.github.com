@@ -29,4 +29,4 @@ https://github.com/LiaBooks/C-Programming
 
 ... or try it out in the [LiveEditor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/C-Programming/master/README.md):
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/C-Programming/master/README.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/liaBooks/C-Programming/master/README.md"></iframe>

@@ -45,7 +45,7 @@ Your own laptop is required, previous knowledge of how to edit a text-file is us
 
 ---
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Dakar/main/02_Tutorial.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Dakar/main/02_Tutorial.md"></iframe>
 
 
 ## 2. What is LiaScript
@@ -54,7 +54,7 @@ Your own laptop is required, previous knowledge of how to edit a text-file is us
 
 ---
 
-<iframe class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Dakar/main/03_GitHub.md"></iframe>
+<iframe loading="lazy" class="liveeditor" src="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Dakar/main/03_GitHub.md"></iframe>
 
 ## 3. Publishing and More
 
