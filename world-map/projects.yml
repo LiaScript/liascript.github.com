@@ -15,6 +15,21 @@
   categories:
     - Computer Science
     - Germany
+- title: "Department of Languages and Computer Systems"
+  link: "https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/liascript-symposium-2023/master/README.md"
+  gps:
+    latitude: -29.71322487637219
+    longitude: -53.716788559062024
+  image: "https://www.ufsm.br/app/uploads/sites/343/2023/10/CT-01.jpg"
+  icon: "https://www.ufsm.br/app/uploads/2019/12/D%C3%ADstico.png"
+  description: |
+    Teaching materials for programming languages for bachelor's degree courses in Computer Science and Information Systems at the <a href="https://www.ufsm.br">Universidade Federal de Santa Maria</a>, Brazil.
+  tags:
+    - Programming Languages
+    - Computer Science
+  categories:
+    - Computer Science
+    - Brazil
 # Events
 - title: "eLearning Africa 2024: Creating Sustainable and Extendable Open Educational Resources (OER) as Interactive Online Classrooms"
   link: "https://www.elearning-africa.com/conference2024/programme_workshops_detail.php?ws=FD2"
