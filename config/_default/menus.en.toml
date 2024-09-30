@@ -22,20 +22,19 @@ pageRef = "blog"
 weight = 4
 
 [[main]]
-weight = 5
-name = "More"
-
-[[main]]
 name = "About"
 pageRef = "about"
-weight = 6
+weight = 5
 
 
 [[main]]
 name = "World-Map"
 pageRef = "world-map"
-weight = 7
+weight = 6
 
+[[main]]
+weight = 7
+name = "More"
 
 [[main]]
 parent = "More"
@@ -77,7 +76,13 @@ weight = 6
 parent = "More"
 name = "Authors"
 pageRef = "authors"
+weight = 7
 
+[[main]]
+parent = "More"
+name = "Imprint"
+pageRef = "imprint"
+weight = 8
 
 # footer menu
 [[footer]]
@@ -100,3 +105,9 @@ weight = 3
 name = "World-Map"
 pageRef = "world-map"
 weight = 4
+
+
+[[footer]]
+name = "Imprint"
+pageRef = "imprint"
+weight = 5
