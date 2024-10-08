@@ -36,55 +36,81 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const greenIcon = L.icon({
-    iconUrl: '/marker/green.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
+  iconUrl: '/marker/green.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34]
 });
 
 const grayIcon = L.icon({
-    iconUrl: '/marker/gray.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
+  iconUrl: '/marker/gray.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34]
+});
+
+const blueIcon = L.icon({
+  iconUrl: '/marker/blue.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34]
 });
 
 const currentDate = new Date();
 const projects = $projects
 
+// Create a function to generate a custom icon with an overlay
+function createCustomIcon(baseIcon, overlayUrl) {
+  if (!overlayUrl) return baseIcon;
+
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `<div style="position: relative;">
+      <img src="$${baseIcon.options.iconUrl}" style="width: 25px; height: 41px;">
+      <img src="$${overlayUrl}" style="position: absolute; top: 5px; left: 5px; width: 15px; height: 15px; border-radius: 50%; background: white;">
+      </div>`,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34]
+  });
+}
+
 for(let i=0; i<projects.length; i++) {
-    let [gps,card,date] = projects[i];
-    let marker = null
-    if (date) {
-        let targetDate = new Date(date);
-        marker = L.marker(gps, {icon: (targetDate > currentDate) ? greenIcon : grayIcon});
-    } else {
-        marker = L.marker(gps)
-    }
-    marker.addTo(map);
-    marker.bindPopup(card);
-    projects[i].push(marker);
+  let [gps, card, date, iconUrl] = projects[i];
+  let baseIcon = blueIcon;
+
+  if (date) {
+    let targetDate = new Date(date);
+    baseIcon = (targetDate > currentDate) ? greenIcon : grayIcon;
+  }
+
+  let customIcon = iconUrl ? createCustomIcon(baseIcon, iconUrl) : baseIcon;
+
+  let marker = L.marker(gps, {icon: customIcon});
+  marker.addTo(map);
+  marker.bindPopup(card);
+  projects[i].push(marker);
 }
 
 function exponentialDecay(x) {
-    const a = 25.7475;
-    const b = -0.7161;
-    return a * Math.exp(b * x);
+  const a = 25.7475;
+  const b = -0.7161;
+  return a * Math.exp(b * x);
 }
 
 function updateZoomLevel() {
-    const zoomLevel = map.getZoom();
-    const fix = exponentialDecay(zoomLevel);
+  const zoomLevel = map.getZoom();
+  const fix = exponentialDecay(zoomLevel);
 
-    for(let i=0; i<projects.length; i++) {
-        let [gps, card, date, marker] = projects[i];
-        let pos = {lat: gps[0] - fix, lng: gps[1]};
-        marker.setLatLng(pos);
-    }
+  for(let i=0; i<projects.length; i++) {
+    let [gps, card, date, marker] = projects[i];
+    let pos = {lat: gps[0] - fix, lng: gps[1]};
+    marker.setLatLng(pos);
+  }
 }
 
 map.on('zoomend', function() {
-    updateZoomLevel();
+  updateZoomLevel();
 });
 
 updateZoomLevel();
@@ -105,6 +131,11 @@ def toCard(data):
     image = data.get("image")
     if image is not None:
         image = '<img src="'+ image + '" style="width: 100%; max-height: 180px; margin: 0px;"/>'
+
+    icon = data.get("icon")
+    if icon is not None:
+        if not icon.startswith("http"):
+            icon = '/marker/' + icon 
     
     title = data.get("title")
     if title is not None:
@@ -129,7 +160,7 @@ with open('projects.yml', 'r') as file:
 
 
 for project in config:
-    projects.append([[project["gps"]["latitude"], project["gps"]["longitude"]], toCard(project), project.get("date")])
+    projects.append([[project["gps"]["latitude"], project["gps"]["longitude"]], toCard(project), project.get("date"), project.get("icon")])
 
 site = site + script.substitute(projects = json.dumps(projects))
 

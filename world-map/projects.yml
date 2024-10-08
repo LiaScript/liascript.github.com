@@ -4,7 +4,7 @@
     latitude: 50.92566782800542
     longitude: 13.33071481622859
   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Universitaetsbibliothek_Freiberg_Fassade.jpg/1024px-Universitaetsbibliothek_Freiberg_Fassade.jpg"
-  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Freiberg_Marktplatz.jpg/800px-Freiberg_Marktplatz.jpg
+  icon: "https://tu-freiberg.de/sites/default/files/styles/max_1200x1200/public/2024-06/Logo1.png"
   description: |
     Alle Lehrmaterialien der Arbeitsgruppe wurden mit LiaScript erstellt und sind im interaktiven
     Modus über die untenstehenden Links erreichbar.
@@ -38,6 +38,7 @@
     longitude: 30.0932888
   date: "2024-05-28"
   image: "http://ela-newsportal.com/wp-content/uploads/elabannerpic.gif"
+  icon: "https://www.elearning-africa.com/ressources/logo/social/social_share_square.jpg"
   description: |
     In this interactive session, we'll explore the forefront of web technologies and their transformative potential in crafting, disseminating, and collaboratively enhancing open educational resources (OER).
     Surprisingly, the browser has emerged as the new operating system, capable of tackling tasks previously reliant on servers entirely within its interface.
@@ -56,6 +57,7 @@
     longitude: -17.1985496035107271
   date: "2023-05-24"
   image: "https://cdn.lmu-klinikum.de/fc8202bd3710a2c1/41542924833b/v/757988c13854/eLearning-Africa-2023.png"
+  icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH0-O3uYAU_1UIOeWM9J0oBpxxhNYYOIVbtRs63e4-v_sbFU1oAsCRIGLFLT5Qp_fP8Jg&usqp=CAU"
   description: |
     Full day workshop on LiaScript course creation...
   tags:
@@ -91,6 +93,7 @@
     longitude: 13.345364573209334
   date: "2023-11-24"
   image: "https://oeb.global/oeb.png"
+  icon: "https://www.tradefairdates.com/logos/oeb_logo_1262.png"
   description: |
     The presentation at the Open Educa Berlin (OEB) Conference on November 24th 2023 focused on “Serverless Online Education” and emphasized the potential of decentralized, browser-based technologies in educational settings.
   tags:
@@ -106,6 +109,7 @@
     longitude: 13.430556106118729
   date: "2023-04-26"
   image: "https://festival.hfd.digital/de/wp-content/uploads/sites/3/2022/11/UFF_Sharepics-Allgemein_Twitter-1.png"
+  icon: https://stiftung-hochschullehre.de/wp-content/uploads/2023/09/HFD_UF_Festival_2024_KeyVisual_Pink_CMYK.png
   description: |
     A three-day event all about the future of higher education: University:Future Festival (U:FF) – Heads up! took place from 26 to 28 April 2023 in the physical as well as in the digital space.
     The festival addressed a broad range of topics around AI, architectures, technology, strategy development, competences, didactics and much more in the context of the opportunities and challenges of the digital transformation.
@@ -122,6 +126,7 @@
     longitude: 13.270795900217253
   date: "2022-06-15"
   image: "https://i.ytimg.com/vi/ibHvdCfQHEs/maxresdefault.jpg"
+  icon: "https://cdn.wibu.com/fileadmin/images/Logo_Events/2023/Logo_WeAreDevelopers.jpg"
   description: |
     In this talk, we present LiaScript, a Markdown-based DSL that is intended to be used for developing online courses, that look like screen-cast with various interactive elements.
   tags:
@@ -136,6 +141,7 @@
     longitude: 2.3635724329421
   date: "2019-06-27"
   image: "https://i.ytimg.com/vi/w_CRABsJNKA/maxresdefault.jpg"
+  icon: https://yt3.googleusercontent.com/ytc/AIdro_kC1cuo-0blqh9cp7n10XeiEBvJprhfYTT2ghgIMwEbGw=s900-c-k-c0x00ffffff-no-rj
   description: |
     An Elm-talk about the development of an online course DSL that is based on Markdown, given at the elm-europe conference in 2019.
   tags:
@@ -165,6 +171,7 @@
     longitude: 12.37935762657965
   date: "2024-06-05"
   image: "https://cache.sessionize.com/image/a981-1140o400o3-TgerJadX4kZ1mzBmo7Rk7b.png"
+  icon: "https://stiftung-hochschullehre.de/wp-content/uploads/2023/09/HFD_UF_Festival_2024_KeyVisual_Pink_CMYK.png"
   description: |
     We'll demonstrate how easy it is for teachers and institutions to share local hardware and experiments.
     So far, we've successfully shared setups for Arduino, terminals, and even chemical experiments.
