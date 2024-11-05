@@ -30,6 +30,23 @@
   categories:
     - Computer Science
     - Brazil
+- title: "Data and Analytics for Research Training (DART) Program"
+  link: "https://arcus.github.io/education_modules/"
+  gps:
+    latitude: 39.946018
+    longitude: -75.198227
+  image: "https://raw.githubusercontent.com/arcus/education_modules/gh-pages/assets/media/DART.png"
+  icon: "https://raw.githubusercontent.com/arcus/education_modules/gh-pages/assets/media/DART.png"
+  description: |
+    DART is a collection of tightly scoped, open-source modules focused on teaching practical data science skills for working biomedical researchers.<br>
+    <a href="https://github.com/arcus/education_modules">Contribute to our GitHub repository</a> <br>
+    <a href="https://learn.arcus.chop.edu">Explore available content and build a custom curriculum with our exploration tool.</a>
+  categories:
+    - Data Science
+    - Statistics
+    - Biomedical Research
+  tags:
+    - Looking for Contributors
 # Events
 - title: "eLearning Africa 2024: Creating Sustainable and Extendable Open Educational Resources (OER) as Interactive Online Classrooms"
   link: "https://www.elearning-africa.com/conference2024/programme_workshops_detail.php?ws=FD2"
