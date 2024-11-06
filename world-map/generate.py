@@ -35,26 +35,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-const greenIcon = L.icon({
-  iconUrl: '/marker/green.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34]
-});
+const iconSize = [35, 57]
+const iconAnchor = [16.6, 57.4]
+const popupAnchor = [1, -30]
 
-const grayIcon = L.icon({
-  iconUrl: '/marker/gray.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34]
-});
-
-const blueIcon = L.icon({
-  iconUrl: '/marker/blue.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34]
-});
+const greenIcon = L.icon({ iconUrl: '/marker/green.png', iconSize, iconAnchor, popupAnchor });
+const grayIcon = L.icon({ iconUrl: '/marker/gray.png', iconSize, iconAnchor, popupAnchor });
+const blueIcon = L.icon({ iconUrl: '/marker/blue.png', iconSize, iconAnchor, popupAnchor });
 
 const currentDate = new Date();
 const projects = $projects
@@ -66,12 +53,12 @@ function createCustomIcon(baseIcon, overlayUrl) {
   return L.divIcon({
     className: 'custom-marker',
     html: `<div style="position: relative;">
-      <img src="$${baseIcon.options.iconUrl}" style="width: 25px; height: 41px;">
-      <img src="$${overlayUrl}" style="position: absolute; top: 5px; left: 5px; width: 15px; height: 15px; border-radius: 50%; background: white;">
+      <img src="${baseIcon.options.iconUrl}" style="width: 35px; height: 57px;">
+      <img src="${overlayUrl}" style="position: absolute; top: 4px; left: 4px; width: 27px; height: 27px; border-radius: 50%; background: white;">
       </div>`,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
+    iconSize,
+    iconAnchor,
+    popupAnchor
   });
 }
 
