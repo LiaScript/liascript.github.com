@@ -53,8 +53,8 @@ function createCustomIcon(baseIcon, overlayUrl) {
   return L.divIcon({
     className: 'custom-marker',
     html: `<div style="position: relative;">
-      <img src="${baseIcon.options.iconUrl}" style="width: 35px; height: 57px;">
-      <img src="${overlayUrl}" style="position: absolute; top: 4px; left: 4px; width: 27px; height: 27px; border-radius: 50%; background: white;">
+      <img src="$${baseIcon.options.iconUrl}" style="width: 35px; height: 57px;">
+      <img src="$${overlayUrl}" style="position: absolute; top: 4px; left: 4px; width: 27px; height: 27px; border-radius: 50%; background: white;">
       </div>`,
     iconSize,
     iconAnchor,

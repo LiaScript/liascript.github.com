@@ -15,6 +15,8 @@
   categories:
     - Computer Science
     - Germany
+
+
 - title: "Department of Languages and Computer Systems"
   link: "https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/liascript-symposium-2023/master/README.md"
   gps:
@@ -30,6 +32,8 @@
   categories:
     - Computer Science
     - Brazil
+
+
 - title: "Data and Analytics for Research Training (DART) Program"
   link: "https://arcus.github.io/education_modules/"
   gps:
@@ -47,7 +51,10 @@
     - Biomedical Research
   tags:
     - Looking for Contributors
-# Events
+
+
+################## Events
+
 - title: "eLearning Africa 2024: Creating Sustainable and Extendable Open Educational Resources (OER) as Interactive Online Classrooms"
   link: "https://www.elearning-africa.com/conference2024/programme_workshops_detail.php?ws=FD2"
   gps:
@@ -67,6 +74,7 @@
     - Education
     - Africa
 
+
 - title: "eLearning Africa 2023: Instant Creation & Publishing of Free and Open Online Courses with LiaScript"
   link: "https://liascript.github.io/blog/elearning-africa-2023/"
   gps:
@@ -83,6 +91,7 @@
     - Conference
     - Education
     - Africa
+
 
 - title: "DELFI 2023: Konzepte und Erfahrungen bei der Realisierung dezentraler, offener Lehrmaterialien mit LiaScript"
   link: "https://liascript.github.io/blog/liascript-workshop-auf-der-delfi-tagung-in-aachen/"
@@ -136,6 +145,7 @@
   categories:
     - Conference
 
+
 - title: "We Are Developers 22: Interactive Markdown for Education & Documentation"
   link: "https://liascript.github.io/blog/we-are-developers-22/"
   gps:
@@ -150,6 +160,7 @@
     - Tutorial
   categories:
     - Conference
+
 
 - title: "Elm Europe 2019: Open-Course Development with LiaScript (... Or Markdown on Steroids)"
   link: "https://liascript.github.io/blog/open-course-development-with-liascript/"
@@ -166,6 +177,7 @@
   categories:
     - Conference
 
+
 - title: "MCCSIS 2019: LiaScript - a Domain-Specific-Language for Interactive Online Courses"
   link: "https://liascript.github.io/blog/liascript-a-domain-specific-language-for-interactive-online-courses/"
   gps:
@@ -180,6 +192,7 @@
     - Tutorial
   categories:
     - Conference
+
 
 - title: "University Future Festival 2024: RemoteLabs as OER - The next evolutionary step"
   link: "https://festival.hfd.digital/de/programm-2024/"
