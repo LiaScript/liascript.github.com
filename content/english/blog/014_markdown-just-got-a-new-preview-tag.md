@@ -125,8 +125,7 @@ The style of the presented preview will change in the near future, and probably 
 
 ### Examples
 
-<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; margin: 0 auto;">
- <preview-lia style="max-width: 460px; margin: 10px" src="https://raw.githubusercontent.com/LiaBooks/C-Programming/master/README.md"></preview-lia>
- <preview-lia style="max-width: 460px; margin: 10px" src="https://raw.githubusercontent.com/liaBooks/Lua-Programming/master/README.md"></preview-lia>
- <preview-lia style="max-width: 460px; margin: 10px" src="https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/README.md"></preview-lia>
-</div>
+<preview-lia src="https://raw.githubusercontent.com/LiaBooks/C-Programming/master/README.md"></preview-lia>
+<preview-lia src="https://raw.githubusercontent.com/liaBooks/Lua-Programming/master/README.md"></preview-lia>
+<preview-lia src="https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/README.md"></preview-lia>
+
