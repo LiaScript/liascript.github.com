@@ -15,6 +15,10 @@ main {
   @apply mx-auto px-4 2xl:max-w-[1320px];
 }
 
+.image_attribution {
+  @apply text-center text-xs text-gray-500 dark:text-gray-400;
+}
+
 // form style
 .form-input {
   @apply bg-theme-light text-dark placeholder:text-light focus:border-primary dark:border-darkmode-border dark:bg-darkmode-theme-light dark:text-darkmode-light w-full rounded border-transparent px-6 py-4 focus:ring-transparent;

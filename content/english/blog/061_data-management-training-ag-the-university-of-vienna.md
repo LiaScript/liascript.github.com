@@ -4,7 +4,8 @@ slug: data-management-training-ag-the-university-of-vienna
 date: 2024-03-20
 draft: false
 author: André Dietrich
-image: "https://www.ugent.be/img/doza/beleid/rdm/fair-data.png"
+image: "/images/post/fair-data.png"
+
 categories:
     - Examples
 tags:

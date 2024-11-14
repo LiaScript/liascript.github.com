@@ -7,6 +7,11 @@
           {{ if $image }}
             <div class="mb-10">
               {{ partial "image" (dict "Src" $image "Alt" .Title "Class" "w-full rounded" "Style" "height: 300px; object-fit: cover;") }}
+              {{ if .Params.image_attribution }}
+                <p class="image_attribution">
+                  {{ .Params.image_attribution | markdownify }}
+                </p>
+              {{ end }}
             </div>
           {{ end }}
           <h1 class="h2 mb-4">
