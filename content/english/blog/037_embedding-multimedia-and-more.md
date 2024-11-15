@@ -4,7 +4,7 @@ slug: embedding-multimedia-and-more
 date: 2023-05-03
 draft: false
 author: André Dietrich
-image: "/images/post/multimedia.webp"
+image: "/images/post/multimedia.jpg"
 categories: 
     - Examples
     - Shorts

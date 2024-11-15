@@ -5,7 +5,7 @@ description: This is our report on making quizzes in LiaScript in 100 seconds.
 date: 2023-05-09
 draft: false
 author: André Dietrich
-image: "/images/post/quiz.webp"
+image: "/images/post/quiz.jpg"
 categories: 
     - Examples
     - Shorts

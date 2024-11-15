@@ -2,7 +2,7 @@
 title: "Where is Content Stored?"
 slug: where-is-content-stored
 date: 2023-06-21
-image: "/images/post/hosting.webp"
+image: "/images/post/hosting.jpg"
 author: "André Dietrich"
 categories:
     - Examples

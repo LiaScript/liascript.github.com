@@ -4,7 +4,7 @@ slug: images-are-handled-differently
 date: 2023-04-29
 draft: false
 author: André Dietrich
-image: "/images/post/artemisia.webp"
+image: "/images/post/artemisia.jpg"
 categories:
     - Examples
     - Shorts

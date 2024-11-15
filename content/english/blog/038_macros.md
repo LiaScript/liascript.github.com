@@ -5,7 +5,7 @@ meta_title: "LiaScript - Macros"
 date: 2023-05-04
 draft: false
 author: André Dietrich
-image: "/images/post/macro.webp"
+image: "/images/post/macro.jpg"
 description: How can you define custom macros or even define reusable LiaScript libraries?
 categories:
     - Examples

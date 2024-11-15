@@ -4,7 +4,7 @@ slug: fonts-dead-or-alive
 date: 2023-04-30
 draft: false
 author: André Dietrich
-image: "/images/post/fonts.webp"
+image: "/images/post/fonts.jpg"
 categories:
     - Examples
     - Shorts

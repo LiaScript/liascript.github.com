@@ -4,7 +4,7 @@ slug: teach-your-ai-to-generate-liascript-previews
 date: 2024-08-20
 draft: false
 author: André Dietrich
-image: "/images/post/ai-course-preview.webp"
+image: "/images/post/ai-course-preview.jpg"
 categories:
   - Article
 tags:

@@ -4,7 +4,7 @@ slug: offene-bildungsmaterialien-an-hochschulen-verankern
 date: 2024-04-04
 draft: false
 author: André Dietrich
-image: "https://open-access.network/fileadmin/_processed_/3/6/xcsm_Startschuss-zur-OER-Policy_by_sOER-Frank_8e8d5dfe2a.jpg.pagespeed.ic.5pfNUF6hdb.webp"
+image: "https://open-access.network/fileadmin/_processed_/3/6/xcsm_Startschuss-zur-OER-Policy_by_sOER-Frank_8e8d5dfe2a.jpg.pagespeed.ic.5pfNUF6hdb.jpg"
 categories:
     - Examples
 tags:
@@ -33,7 +33,7 @@ Weitere Informationen hierzu finden Sie unter dem folgenden Link:
 {{< external 
 title="open-access.network: Offene Bildungsmaterialien an Hochschulen verankern "
 link="https://open-educational-resources.de/oer104/"
-image="https://open-access.network/fileadmin/_processed_/3/6/xcsm_Startschuss-zur-OER-Policy_by_sOER-Frank_8e8d5dfe2a.jpg.pagespeed.ic.5pfNUF6hdb.webp"
+image="https://open-access.network/fileadmin/_processed_/3/6/xcsm_Startschuss-zur-OER-Policy_by_sOER-Frank_8e8d5dfe2a.jpg.pagespeed.ic.5pfNUF6hdb.jpg"
 summary="Handlungsleitfaden für den Entwicklungsprozess einer OER Policy mit konkreten Tipps und Materialien veröffentlicht"
 >}}
 

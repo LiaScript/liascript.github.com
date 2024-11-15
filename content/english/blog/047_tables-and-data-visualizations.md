@@ -8,7 +8,7 @@ author: André Dietrich
 
 description: "This screencast from the Open Educa Berlin (OEB) Conference emphasized and demos the potential of decentralized, browser-based technologies in educational settings."
 
-image: "/images/post/tables.webp"
+image: "/images/post/tables.jpg"
 
 categories:
     - Examples

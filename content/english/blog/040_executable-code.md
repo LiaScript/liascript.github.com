@@ -4,7 +4,7 @@ slug: executable-code
 date: 2023-05-08
 draft: false
 author: André Dietrich
-image: "/images/post/coding.webp"
+image: "/images/post/coding.jpg"
 categories:
     - Examples
     - Shorts

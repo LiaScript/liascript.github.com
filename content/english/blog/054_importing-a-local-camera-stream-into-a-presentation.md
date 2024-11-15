@@ -4,7 +4,7 @@ slug: importing-a-local-camera-stream-into-a-presentation
 date: 2024-02-02
 draft: false
 author: André Dietrich
-image: "/images/post/webcam.webp"
+image: "/images/post/webcam.jpg"
 categories: 
     - Examples
 tags:

@@ -4,7 +4,7 @@ slug: a-custom-extension-for-algebra
 date: 2023-05-09
 draft: false
 author: "André Dietrich"
-image: "/images/post/algebrite.webp"
+image: "/images/post/algebrite.jpg"
 categories: 
     - Examples
     - Shorts

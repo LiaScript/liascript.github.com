@@ -49,7 +49,7 @@ features:
 
 
   - title: "JavaScript Ready"
-    image: "/images/monch.webp"
+    image: "/images/monch.jpg"
     content: |
       In contrast to other Markdown-parsers you are free to use any JavaScript library you want. This way you can integrate any kind of visualization, simulation, computer-algebra-system, or whatever you might think is useful for your course.
       <br />

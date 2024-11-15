@@ -4,7 +4,7 @@ slug: ascii-art
 date: 2023-05-01
 draft: false
 author: André Dietrich
-image: "/images/post/ascii.webp"
+image: "/images/post/ascii.jpg"
 categories: 
     - Examples
     - Shorts

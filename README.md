@@ -24,7 +24,7 @@ title: "Title of the Post"
 date: 2023-05-03
 draft: false
 author: "Author Name"
-image: "/images/post/image.webp"
+image: "/images/post/image.jpg"
 categories:
     - Examples
 tags:

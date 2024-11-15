@@ -4,7 +4,7 @@ slug: one-document-mutliple-representations
 date: 2023-04-29
 draft: false
 author: André Dietrich
-image: "/images/post/trinity.webp"
+image: "/images/post/trinity.jpg"
 categories:
     - Examples
     - Shorts
