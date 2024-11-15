@@ -184,7 +184,7 @@
     latitude: 41.17809556706227
     longitude: -8.60854852261642
   date: "2019-07-19"
-  image: "https://liascript.github.io/images/post/mccsis_hu76e9b183dc69f1706ca6266a92843fe0_720379_1110x0_resize_q80_h2_lanczos_3.webp"
+  #image: "https://liascript.github.io/images/post/mccsis_hu76e9b183dc69f1706ca6266a92843fe0_720379_1110x0_resize_q80_h2_lanczos_3.webp"
   description: |
     This is the first paper published about LiaScript, which was presented at the International Association for Development of the Information Society (IADIS) International Conference on e-Learning 2019 in Porto.
     It gives an overview of the language and its features, as well as the motivation behind its development.
