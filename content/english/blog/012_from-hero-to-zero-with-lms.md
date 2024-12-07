@@ -106,7 +106,7 @@ _Tab. 1: Short-codes for references on the left and the rendered result in LiaSc
 | `[link](url.html)`  | [link](https://LiaScript.github.io) |
 | `![image](url.jpg)` | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/OER_Logo_Open_Educational_Resources.png/296px-OER_Logo_Open_Educational_Resources.png" /> |
 | `[link](url.html)` | <audio controls="controls" style="display: inline-block" src="https://www.tutorialrepublic.com/examples/audio/birds.mp3">Your browser does not support the HTML5 audio element.</audio> |
-| `!?[video](url.mp4)` | <iframe width="560" height="315" style="display: inline-block" src="https://www.youtube.com/embed/Mg35D4dLyXc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> |
+| `!?[video](url.mp4)` | <iframe loading="lazy" width="560" height="315" style="display: inline-block"  src="https://www.youtube-nocookie.com/embed/Mg35D4dLyXc?si=HRgCW3mMkEtPKgU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> |
 
 However, as the screen-casts reveal, integrating multimedia content to one of the LMSs seems to be a more challenging task and requires to deal with a couple of user interfaces. The overall average time-on-task was 3:06 minutes and required 11 clicks and 5 page changes.
 
