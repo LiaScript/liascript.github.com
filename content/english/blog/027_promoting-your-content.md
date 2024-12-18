@@ -45,7 +45,7 @@ All of this information is used to generate a preview-card for your course in th
 
 https://liascript.github.io/course
 
-But, this can also be used to generate custom overview sites with the `<preview-lia>` web component. For more information, visit the blog post: [Markdown just got a new preview tag](https://aizac.herokuapp.com/markdown-just-got-a-new-preview-tag)
+But, this can also be used to generate custom overview sites with the `<preview-lia>` web component. For more information, visit the blog post: [Markdown just got a new preview tag](/blog/markdown-just-got-a-new-preview-tag)
 
 
 ![](/images/post/promoting-your-content/Publish0.png)

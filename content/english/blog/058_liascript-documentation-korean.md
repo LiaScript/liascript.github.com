@@ -29,7 +29,7 @@ __Update:__
 
 * You can now also use VS-Code as your editor, there are now two additional extensions within the marketplace, one for previews and one for snippets.
 
-  Check out the following [link](https://aizac.herokuapp.com/install-visual-studio-code-with-liascript/) for more information.
+  Check out the following [link](/blog/install-visual-studio-code-with-liascript/) for more information.
 
 * An overview on currently developed courses and plugins can now be found via [GitHub-topics](https://github.com/topics):
 

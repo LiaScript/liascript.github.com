@@ -34,9 +34,9 @@ Es ist natürlich möglich der Dokumentation auch selber im interaktiven LiaScri
 __Update:__
 
 - Es ist jetzt auch möglich VSCode als Editor für LiaScript-Kurse zu nutzen. Dafür haben wir die beiden folgenden Erweiterungen zum VSCode-Marktplatz hinzugefügt (eines für die [Vorschau](https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-preview), das andere für [Snippets](https://marketplace.visualstudio.com/items?itemName=LiaScript.liascript-snippets)).
-  Mehr Information finden Sie [hier](https://aizac.herokuapp.com/install-visual-studio-code-with-liascript/).
+  Mehr Information finden Sie [hier](/blog/install-visual-studio-code-with-liascript/).
 
-- Die Übersicht über entwickelte Kurse und Plugins können jetzt mithilfe von [GitHub-topics](https://aizac.herokuapp.com/install-visual-studio-code-with-liascript/) gefunden werden:
+- Die Übersicht über entwickelte Kurse und Plugins können jetzt mithilfe von [GitHub-topics](/blog/install-visual-studio-code-with-liascript/) gefunden werden:
 
   - Kurs-Übersicht: https://github.com/topics/liascript-course
   - Macro-Übersicht: https://github.com/topics/liascript-template
