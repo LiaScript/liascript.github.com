@@ -27,7 +27,7 @@ mainSections = ["blog"]
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright
-copyright = "&copy; <a href='/authors/andre-dietrich/'>André Dietrich</a> & <a href='/authors/sebastian-zug/'>Sebastian Zug</a> 2024."
+copyright = "&copy; <a href='/authors/andre-dietrich/'>André Dietrich</a> & <a href='/authors/sebastian-zug/'>Sebastian Zug</a> 2025."
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
