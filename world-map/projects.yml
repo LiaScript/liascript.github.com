@@ -53,6 +53,27 @@
     - Looking for Contributors
 
 
+- title: "Diversity and Inclusion in Education"
+  link: "https://www.euniwell.eu/diversity-inclusion-in-education-oer"
+  gps:
+    latitude: 47.69022
+    longitude: 9.18811
+  image: "/map/diversity-inclusion.png"
+  icon: "https://www.euniwell.eu/typo3conf/ext/fksitepackage/Resources/Public/Images/euniwell-logo-full.svg"
+
+  description: |
+    This OER self-study module aims to foster the development of fundamental competences in the field of diversity and inclusion in (student) teacher education.
+    <a href="mailto:teacheredu.euniwell@uni-konstanz.de>Contact Email</a>
+  data: "2025-02-17"
+  categories:
+    - Teacher Education
+    - Diversity
+    - Inclusion
+  tags:
+    - Self-study
+    - English  
+
+
 ################## Events
 
 - title: "eLearning Africa 2024: Creating Sustainable and Extendable Open Educational Resources (OER) as Interactive Online Classrooms"
