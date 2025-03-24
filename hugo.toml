@@ -89,9 +89,10 @@ style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
 lineNumbersInTable = false
 
 [markup.tableOfContents]
-startLevel = 2
-endLevel = 5
+startLevel = 0
+endLevel = 0
 ordered = true
+
 
 
 ########################### Media types ###########################
