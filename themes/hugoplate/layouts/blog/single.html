@@ -3,15 +3,10 @@
     <div class="container">
       <div class="row justify-center">
         <article class="lg:col-10">
-          {{ $image := .Params.image }}
+          {{ $image:= .Params.image }}
           {{ if $image }}
             <div class="mb-10">
-              {{ partial "image" (dict "Src" $image "Alt" .Title "Class" "w-full rounded" "Style" "height: 300px; object-fit: cover;") }}
-              {{ if .Params.image_attribution }}
-                <p class="image_attribution">
-                  {{ .Params.image_attribution | markdownify }}
-                </p>
-              {{ end }}
+              {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full rounded") }}
             </div>
           {{ end }}
           <h1 class="h2 mb-4">
@@ -19,27 +14,11 @@
           </h1>
           <ul class="mb-4">
             <li class="mr-4 inline-block">
-              {{- $authors := .Params.authors }}
-              {{- if $authors }}
-                {{- $last := index $authors (sub (len $authors) 1) }}
-                {{- range $index, $author := $authors }}
-                  <a
-                    href="{{ `authors/` | relLangURL }}{{ $author | urlize }}/">
-                    {{- if ne $author $last }}
-                      <i class="fa-regular fa-circle-user mr-2"></i
-                      >{{ $author }},
-                    {{- else }}
-                      {{ $author }}
-                    {{- end }}
-                  </a>
-                {{- end }}
-              {{- else if .Params.author }}
-                <a
-                  href="{{ `authors/` | relLangURL }}{{ .Params.author | urlize }}/">
-                  <i class="fa-regular fa-circle-user mr-2"></i
-                  >{{ .Params.author }}
-                </a>
-              {{- end }}
+              <a
+                href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">
+                <i class="fa-regular fa-circle-user mr-2"></i
+                >{{ .Params.author }}
+              </a>
             </li>
             {{ $categories:= .Params.categories }}
             {{ if $categories }}
@@ -62,18 +41,19 @@
             </li>
           </ul>
           <div class="content mb-10">
+            {{ partial "toc.html" (dict "Class" "blog" "Collapsed" false "TableOfContents" .TableOfContents ) }}
             {{ .Content }}
           </div>
           <div class="row items-start justify-between">
             {{ $tags:= .Params.tags }}
             {{ if $tags }}
-              <div class="lg:col-5 mb-10 flex items-center lg:mb-0">
-                <h5 class="mr-3">{{ i18n "tags" }} :</h5>
+              <div class="lg:col-6 mb-10 flex items-center lg:mb-0">
+                <h5 class="mr-3">{{ T "tags" }} :</h5>
                 <ul>
                   {{ range $i,$p:= $tags }}
                     <li class="inline-block">
                       <a
-                        class="bg-theme-light hover:bg-primary dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark m-1 block rounded px-3 py-1 hover:text-white"
+                        class="bg-light hover:bg-primary dark:bg-darkmode-light dark:hover:bg-darkmode-primary dark:hover:text-text-dark m-1 block rounded px-3 py-1 hover:text-white"
                         href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/">
                         {{ . | humanize }}
                       </a>
@@ -82,8 +62,8 @@
                 </ul>
               </div>
             {{ end }}
-            <div class="lg:col-4 flex items-center">
-              {{ partial "social-share" (dict "Context" . "Class" "share-icons" "Title" (i18n "share") "Whatsapp" false "Telegram" false "Linkedin" false "Pinterest" false "Tumblr" false "Vk" false) }}
+            <div class="lg:col-6 flex items-center">
+              {{ partial "social-share" (dict "Context" . "Class" "share-icons lg:ml-auto" "Title" (T "share") "Whatsapp" false "Telegram" false "Linkedin" false "Pinterest" false "Tumblr" false "Vk" false) }}
             </div>
           </div>
           <!-- comments -->
@@ -100,11 +80,11 @@
       </div>
 
       <!-- Related posts -->
-      {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+      {{ $related := .Site.RegularPages.Related . | first 10 }}
       {{ $related = $related | shuffle | first 3 }}
       {{ with $related }}
         <div class="section pb-0">
-          <h2 class="h3 mb-12">{{ i18n "related_posts" }}</h2>
+          <h2 class="h3 mb-12">{{ T "related_posts" }}</h2>
           <div class="row">
             {{ range . }}
               <div class="lg:col-4 md:col-6 mb-14">
@@ -114,7 +94,6 @@
           </div>
         </div>
       {{ end }}
-
     </div>
   </section>
 {{ end }}

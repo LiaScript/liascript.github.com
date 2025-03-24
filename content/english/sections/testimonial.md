@@ -79,6 +79,6 @@ testimonials:
     link: "https://github.com/liascript/codilia"
 
 # don't create a separate page
-_build:
+build:
   render: "never"
 ---

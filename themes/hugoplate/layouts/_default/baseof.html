@@ -40,6 +40,10 @@
     {{ end }}
 
 
+    <!-- announcement -->
+    {{ partialCached "announcement.html" . }}
+
+
     <!-- header (don't cache it) -->
     {{ partial "essentials/header.html" . }}
     {{ partial "search-modal.html" (dict "Context" . ) }}

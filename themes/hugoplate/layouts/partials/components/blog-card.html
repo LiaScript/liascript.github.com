@@ -1,5 +1,5 @@
 <div class="bg-body dark:bg-darkmode-body">
-  {{ $image := .Params.image }}
+  {{ $image:= .Params.image }}
   {{ if $image }}
     <div
       class="mb-6 image-container rounded"
@@ -48,8 +48,8 @@
       </li>
     </ul>
   {{ end }}
-  <p class="mb-6">{{ .Summary }}</p>
+  <p class="mb-6">{{ .Summary | plainify }}</p>
   <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
-    {{ i18n "read_more" }}
+    {{ T "read_more" }}
   </a>
 </div>

@@ -12,6 +12,10 @@
 {{ partialCached "favicon" . }}
 
 
+<!-- manifest -->
+{{ partialCached "manifest" . }}
+
+
 <!-- site verifications -->
 {{ partialCached "site-verifications.html" . }}
 
@@ -25,9 +29,9 @@
 
 
 <!-- google analytics -->
-{{/* if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
+{{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
   {{ template "_internal/google_analytics.html" . }}
-{{ end */}}
+{{ end }}
 
 
 <!-- google tag manager -->
@@ -52,3 +56,6 @@
 
 <!-- Crisp Chat -->
 {{/* {{ partialCached "crisp-chat.html" . }} */}}
+
+<!-- Mermaid -->
+{{ partial "mermaid/assets/js" . }}

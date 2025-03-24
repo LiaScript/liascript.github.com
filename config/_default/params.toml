@@ -1,4 +1,4 @@
-#################### default parameters ################################
+#################### default parameters ############################
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
@@ -11,7 +11,7 @@ logo_height = "32px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "LiaScript"
+logo_text = "Hugoplate"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
@@ -52,6 +52,12 @@ show_description = true
 show_tags = true
 show_categories = true
 
+# announcement
+# announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
+[announcement]
+enable = false
+expire_days = 7
+content = "You must replace the **baseURL** in **hugo.toml** file when deploying, you can manage this announcement from the **params.toml** file."
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
@@ -59,8 +65,8 @@ show_categories = true
 keywords = ["LiaScript", "Markdown", "OER", "Education", "Open-courSe"]
 description = "Open Educational Resources made easy and decentralized. Create free and interactive online courses, based on an extended Markdown notation and share them on github ..."
 author = "André Dietrich"
+twitter = "liascript"
 image = "images/main.png"
-
 
 # site verifications
 # verification module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/site-verifications
@@ -78,6 +84,10 @@ enable = false
 expire_days = 60
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 button = "I Accept"
+
+# diagrams
+[mermaid]
+js_url = 'https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs'
 
 ######################## sidebar widgets #########################
 [widgets]

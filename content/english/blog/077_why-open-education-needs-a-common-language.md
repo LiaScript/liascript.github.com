@@ -3,6 +3,7 @@ title: "Why Open Education Needs a Common Language!?"
 slug: why-open-education-needs-a-common-language
 date: 2024-09-06
 draft: false
+
 authors:
     - André Dietrich
     - Sebastian Zug
