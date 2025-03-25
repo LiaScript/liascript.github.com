@@ -2,17 +2,20 @@
 
 title: "kurzerklärt: Wie stelle ich technische Offenheit von OER sicher und warum empfiehlt sich LiaScript?"
 slug: twillo-kurzerklaert-liascript
-date: 2025-03-25
+date: 2025-03-20
 draft: false
-author: André Dietrich
+authors:
+  - Sebastian Zug
+  - André Dietrich
 image: "/images/post/twillo.png"
 
 categories:
   - Community
 
-
 tags:
   - LiaScript
+  - Twillo
+  - OER
 
 ---
 

@@ -2,7 +2,7 @@
 
 title: "AI-Enhanced Live Coding: Building Liascript Courses for TVET 2025"  
 slug: ai-enhanced-live-coding-building-liascript-courses-for-tvet-2025
-date: 2025-03-24
+date: 2025-02-20
 draft: false
 author: André Dietrich
 image: "/images/post/ai-tvet-author.jpg"

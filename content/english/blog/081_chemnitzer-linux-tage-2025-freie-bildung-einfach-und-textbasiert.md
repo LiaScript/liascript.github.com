@@ -2,7 +2,7 @@
 
 title: "Chemnitzer Linux-Tage 2025: Freie Bildung - einfach und textbasiert?"
 slug: chemnitzer-linux-tage-2025-freie-bildung-einfach-und-textbasiert
-date: 2025-03-25
+date: 2025-03-22
 draft: false
 authors:
   - André Dietrich

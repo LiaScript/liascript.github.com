@@ -2,7 +2,7 @@
 
 title: "Automating LiaScript Transformations on GitHub with Enhanced Workflows and Asset Generation"
 slug: automating-liascript-transformations-on-github
-date: 2025-03-24
+date: 2025-03-25
 draft: false
 author: André Dietrich
 image: "/images/post/automation-1.jpg"
