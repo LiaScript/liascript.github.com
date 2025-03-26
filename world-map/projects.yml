@@ -73,6 +73,28 @@
     - Self-study
     - English  
 
+- title: "NFDI4Biodiversity Self-Study Unit - Research Data Management for Biodiversity Data"
+  link: "https://github.com/NFDI4Biodiversity/nfdi4biodiversity-sle"
+  gps:
+    latitude: 50.812
+    longitude: 8.7749
+  image: "https://nfdi4biodiversity.org/documents/18/NFDI_4_Biodiversity___Logo_Positiv_Kopie.png"
+  icon: "https://nfdi4biodiversity.org/documents/18/NFDI_4_Biodiversity___Logo_Positiv_Kopie.png"
+  description: |
+    This self-paced online course provides basic and advanced research data management (RDM) skills, tools and strategies for students and researchers specializing in biodiversity and environmental sciences.
+    Please visit our website for more training resources and events:<br>
+    <a href="https://www.nfdi4biodiversty.org">https://www.nfdi4biodiversty.org</a>
+  data: "2024-06-03"
+  categories:
+    - Research Data Management
+    - German National Research Data Infrastructure (NFDI)
+    - Biodiversity
+    - Ecology
+    - Environmental Science
+  tags:
+    - Re-use welcome
+    - Looking for Contributors
+    - English 
 
 ################## Events
 
