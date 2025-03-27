@@ -64,7 +64,6 @@
   description: |
     This OER self-study module aims to foster the development of fundamental competences in the field of diversity and inclusion in (student) teacher education.
     <a href="mailto:teacheredu.euniwell@uni-konstanz.de">Contact Email</a>
-  data: "2025-02-17"
   categories:
     - Teacher Education
     - Diversity
@@ -83,8 +82,7 @@
   description: |
     This self-paced online course provides basic and advanced research data management (RDM) skills, tools and strategies for students and researchers specializing in biodiversity and environmental sciences.
     Please visit our website for more training resources and events:<br>
-    <a href="https://www.nfdi4biodiversty.org">https://www.nfdi4biodiversty.org</a>
-  data: "2024-06-03"
+    <a href="https://www.nfdi4biodiversity.org">https://www.nfdi4biodiversity.org</a>
   categories:
     - Research Data Management
     - German National Research Data Infrastructure (NFDI)
