@@ -52,3 +52,14 @@
 .gallery-slider {
   @apply !ml-0;
 }
+
+code {
+  color: #f8f8f2 !important;
+}
+
+/* For dark mode specifically */
+@media (prefers-color-scheme: dark) {
+  code {
+    color: #f8f8f2 !important;
+  }
+}
