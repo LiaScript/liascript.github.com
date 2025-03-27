@@ -1,7 +1,7 @@
 ---
 title: "About LiaScript"
 meta_title: "About LiaScript"
-description: "this is meta description"
+description: "LiaScript is a Markdown dialect that allows you to create educational content that is interactive, extendable, and open-source."
 image: "/images/author/andre-dietrich.jpeg"
 draft: false
 ---
