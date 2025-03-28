@@ -396,11 +396,12 @@ When your workflow runs, it will produce output for each tool. Here's how to int
 
 CSpell will list misspelled words along with their location and suggestions:
 
-```
+``` bash
 /path/to/file.md:10:15 - Unknown word (beispiel)
 ```
 
 For each flagged word, you can:
+
 1. Fix the spelling if it's truly an error
 2. Add it to your `.cspell.json` ignore list if it's correct but unknown to the dictionary
 
@@ -408,7 +409,7 @@ For each flagged word, you can:
 
 Write-Good highlights style issues with explanations:
 
-```
+``` bash
 /path/to/file.md:15:10 - "very" can weaken meaning
 ```
 
@@ -421,7 +422,7 @@ For each suggestion:
 
 Alex provides detailed explanations of potentially problematic language:
 
-```
+``` bash
 /path/to/file.md:20:5 - "crazy" may be insensitive, use "surprising", "unexpected", or "unusual" instead
 ```
 
@@ -434,11 +435,12 @@ For each flagged term:
 
 Proselint gives detailed style and grammar suggestions:
 
-```
+``` bash
 /path/to/file.md:25:8 - typography.symbols.curly_quotes Use curly quotes instead of straight quotes.
 ```
 
 For each suggestion:
+
 1. Review the specific style rule being applied
 2. Decide if it's appropriate for your document
 
