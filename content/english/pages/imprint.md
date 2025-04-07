@@ -1,8 +1,7 @@
 ---
 title: "Imprint"
 
-meta_title: "LiaScript - Atom Editor"
-description: "Install the Atom editor with the LiaScript-Preview plugin."
+meta_title: "LiaScript - Imprint"
 # save as draft
 draft: false
 ---
