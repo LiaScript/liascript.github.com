@@ -16,7 +16,9 @@ categories:
   - Tools
 
 tags:
-  - GitHub
+  - Nostr
+  - Edufeed
+  - OER
 
 ---
 
@@ -34,8 +36,6 @@ A core innovation is the use of **Nostr**, a decentralized, open protocol that p
 
 ![group image](/images/post/oer-hackathon-goettingen-2025/nostr-sharing.png)
 
-https://nostr.com
-
 Key benefits include:
 
 * **Seamless Sharing**
@@ -46,6 +46,8 @@ Key benefits include:
 
 * **Contextual Discovery**
   Tags, subject filters, and simple licensing metadata allow teachers to quickly find materials relevant to their curriculum, and to see which peers or institutions have recommended or adapted a resource.
+
+{{< preview "/blog/086_nostr-and-liascript-and-oer/" >}}
 
 ## LearnGraph: Mapping Knowledge Visually
 
