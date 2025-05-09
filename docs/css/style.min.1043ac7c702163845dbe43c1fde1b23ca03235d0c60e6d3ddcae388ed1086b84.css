@@ -1,4 +1,4 @@
-/*!tailwindcss v4.1.5 | MIT License | https://tailwindcss.com*//*!* Justified gallery style*/@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
+/*!tailwindcss v4.1.6 | MIT License | https://tailwindcss.com*//*!* Justified gallery style*/@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
