@@ -177,13 +177,16 @@ Each document is specified by its URL, which should point to the raw Markdown fi
 You can organize your courses into themed groups by creating named collections:
 
 ```yaml
-title: Mathematics
-comment: ""
-grid: true
 collection:
-  - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-Algebra-Explorations-Pre-K-through-Grade-7/main/README.md
-  - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-CK-12-Algebra-I-Honors/main/English/README.md
-  - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-CK-12-Algebra-Basic/main/English/README.md
+  ...
+
+  - title: Mathematics
+    comment: ""
+    grid: true
+    collection:
+      - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-Algebra-Explorations-Pre-K-through-Grade-7/main/README.md
+      - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-CK-12-Algebra-I-Honors/main/English/README.md
+      - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-CK-12-Algebra-Basic/main/English/README.md
 ```
 
 The `grid` parameter set to `true` will display the courses in this collection as smaller preview cards in a grid layout, making it easier to browse through multiple courses.
@@ -199,13 +202,16 @@ alt="Screenshot: grid structuring"
 You can include HTML content between your collections to provide additional information or visual separation:
 
 ```yaml
-- html: >
-    <hr>
-    <h1>Wikibooks</h1>
+collection:
+  ...
+
+  - html: >
+      <hr>
+      <h1>Wikibooks</h1>
     
-    <p>Wikibooks is a Wikimedia project focused on creating free and open-content textbooks and other educational resources. These resources, referred to as "open books," are collaboratively written by volunteers from around the world and cover a wide range of subjects, from academic topics to practical skills. The following courses are based on the content of the Wikibooks project and have been converted into interactive LiaScript textbooks.</p>
+      <p>Wikibooks is a Wikimedia project focused on creating free and open-content textbooks and other educational resources. These resources, referred to as "open books," are collaboratively written by volunteers from around the world and cover a wide range of subjects, from academic topics to practical skills. The following courses are based on the content of the Wikibooks project and have been converted into interactive LiaScript textbooks.</p>
     
-    <p>Help us to improve the content by translating further books from the Wikibooks at: <a href="https://www.wikibooks.org" target="_blank">www.wikibooks.org</a></p>
+      <p>Help us to improve the content by translating further books from the Wikibooks at: <a href="https://www.wikibooks.org" target="_blank">www.wikibooks.org</a></p>
 ```
 
 This allows you to create sections with explanatory text, headings, or other HTML elements to organize your content more effectively.
@@ -215,12 +221,14 @@ This allows you to create sections with explanatory text, headings, or other HTM
 You can override the metadata for individual courses by specifying additional parameters:
 
 ```yaml
-- url: https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/README.md
-  title: eLearning Africa Workshop 2022
-  comment: Shows only an introduction, please follow the links within the course.
-  # logo: https://another_image.jpg
-  # or leave, so that no card-image is added to your preview-cards
-  # logo:
+collection:
+  ...
+  - url: https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/README.md
+    title: eLearning Africa Workshop 2022
+    comment: Shows only an introduction, please follow the links within the course.
+    # logo: https://another_image.jpg
+    # or leave, so that no card-image is added to your preview-cards
+    # logo:
 ```
 
 This is useful when you want to customize how a specific course appears on your index page without modifying the original document.
@@ -230,17 +238,20 @@ This is useful when you want to customize how a specific course appears on your 
 Tags are a powerful way to categorize your courses and enable filtering:
 
 ```yaml
-tags:
-  - Tutorial
-  - LiaScript
-  - OER
+collection:
+  ...
+  - url: ...
+    tags:
+      - Tutorial
+      - LiaScript
+      - OER
 
-# You can manually tag courses, if this has not been done within the main comment of the course
-# By default, these tags will be treated as categories, which can be used to navigate through
-# your courses. To disable this, use the cmd-param --project-no-categories
-#
-# For smaller overviews, you can also use the --project-category-blur parameter.
-# this will not hide the courses, that do not match, but instead blur them.
+    # You can manually tag courses, if this has not been done within the main comment of the course
+    # By default, these tags will be treated as categories, which can be used to navigate through
+    # your courses. To disable this, use the cmd-param --project-no-categories
+    #
+    # For smaller overviews, you can also use the --project-category-blur parameter.
+    # this will not hide the courses, that do not match, but instead blur them.
 ```
 
 Tags can be defined at the top level to apply to all courses, or at the individual course level. They're used for navigation and filtering on your index page.
@@ -277,38 +288,38 @@ collection:
   - url: https://raw.githubusercontent.com/LiaScript/docs/master/README.md
   - url: https://raw.githubusercontent.com/LiaBooks/LiaScript-Tutorial/main/README.md
 
-- html: >
-    <hr>
-    <h1>Wikibooks</h1>
+  - html: >
+      <hr>
+      <h1>Wikibooks</h1>
     
-    <p>Wikibooks is a Wikimedia project focused on creating free and open-content textbooks and other educational resources.</p>
+      <p>Wikibooks is a Wikimedia project focused on creating free and open-content textbooks and other educational resources.</p>
 
-- title: Programming Languages
-  comment: ""
-  grid: true
-  collection:
-    - url: https://raw.githubusercontent.com/LiaBooks/Lua-Programming/master/README.md
-      tags:
-        - Lua
-        - Programming
-        - Scripting
-        - English
-    - url: https://raw.githubusercontent.com/liaBooks/C-Programmierung/master/README.md
-      tags:
-        - C
-        - Programming
-        - German
+  - title: Programming Languages
+    comment: ""
+    grid: true
+    collection:
+      - url: https://raw.githubusercontent.com/LiaBooks/Lua-Programming/master/README.md
+        tags:
+          - Lua
+          - Programming
+          - Scripting
+          - English
+      - url: https://raw.githubusercontent.com/liaBooks/C-Programmierung/master/README.md
+        tags:
+          - C
+          - Programming
+          - German
 
-- html: >
-    <hr>
-    <h1>Mathematics</h1>
+  - html: >
+      <hr>
+      <h1>Mathematics</h1>
 
-- title: Mathematics
-  comment: ""
-  grid: true
-  collection:
-    - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-Algebra-Explorations-Pre-K-through-Grade-7/main/README.md
-    - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-CK-12-Algebra-I-Honors/main/English/README.md
+  - title: Mathematics
+    comment: ""
+    grid: true
+    collection:
+      - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-Algebra-Explorations-Pre-K-through-Grade-7/main/README.md
+      - url: https://raw.githubusercontent.com/LiaBooks/Flexbook-CK-12-Algebra-I-Honors/main/English/README.md
 ```
 
 This example demonstrates how to create a structured index page with different sections, HTML content, and organized collections of courses.
@@ -495,16 +506,16 @@ Let's walk through a complete example of creating a project website for a collec
      - url: https://raw.githubusercontent.com/username/repo1/main/README.md
      - url: https://raw.githubusercontent.com/username/repo2/main/README.md
 
-   - html: >
-       <hr>
-       <h2>Programming Courses</h2>
+     - html: >
+        <hr>
+        <h2>Programming Courses</h2>
 
-   - title: Programming
-     comment: Learn various programming languages
-     grid: true
-     collection:
-       - url: https://raw.githubusercontent.com/username/python-course/main/README.md
-       - url: https://raw.githubusercontent.com/username/javascript-course/main/README.md
+     - title: Programming
+       comment: Learn various programming languages
+       grid: true
+       collection:
+         - url: https://raw.githubusercontent.com/username/python-course/main/README.md
+         - url: https://raw.githubusercontent.com/username/javascript-course/main/README.md
    ```
 
    Replace the URLs with actual links to your LiaScript documents.
