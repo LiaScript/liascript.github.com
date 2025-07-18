@@ -14,11 +14,27 @@
           </h1>
           <ul class="mb-4">
             <li class="mr-4 inline-block">
-              <a
-                href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">
-                <i class="fa-regular fa-circle-user mr-2"></i
-                >{{ .Params.author }}
-              </a>
+              {{- $authors := .Params.authors }}
+              {{- if $authors }}
+                {{- $last := index $authors (sub (len $authors) 1) }}
+                {{- range $index, $author := $authors }}
+                  <a
+                    href="{{ `authors/` | relLangURL }}{{ $author | urlize }}/">
+                    {{- if ne $author $last }}
+                      <i class="fa-regular fa-circle-user mr-2"></i
+                      >{{ $author }},
+                    {{- else }}
+                      {{ $author }}
+                    {{- end }}
+                  </a>
+                {{- end }}
+              {{- else if .Params.author }}
+                <a
+                  href="{{ `authors/` | relLangURL }}{{ .Params.author | urlize }}/">
+                  <i class="fa-regular fa-circle-user mr-2"></i
+                  >{{ .Params.author }}
+                </a>
+              {{- end }}
             </li>
             {{ $categories:= .Params.categories }}
             {{ if $categories }}

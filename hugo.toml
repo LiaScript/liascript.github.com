@@ -18,6 +18,8 @@ defaultContentLanguage = 'en'
 # defaultContentLanguageInSubdir need to be true if you want to use the language code as a subdirectory and language specific 404 page
 defaultContentLanguageInSubdir = false
 
+removePathAccents = true 
+
 ########################### Services #############################
 [services]
 #[services.googleAnalytics]
@@ -36,7 +38,6 @@ defaultContentLanguageInSubdir = false
 disableAliases = false
 pagerSize = 10
 path = 'page'
-
 
 ############################# Build ##############################
 [build]
