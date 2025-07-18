@@ -14,10 +14,10 @@
   typeof exports === "object" && typeof module !== "undefined"
     ? (module.exports = factory())
     : typeof define === "function" && define.amd
-    ? define(factory)
-    : ((global =
-        typeof globalThis !== "undefined" ? globalThis : global || self),
-      (global.Swiper = factory()));
+      ? define(factory)
+      : ((global =
+          typeof globalThis !== "undefined" ? globalThis : global || self),
+        (global.Swiper = factory()));
 })(this, function () {
   "use strict";
 
@@ -9083,9 +9083,8 @@
           getInterpolateFunction(c); // i am not sure why the values have to be multiplicated this way, tried to invert the snapGrid
           // but it did not work out
 
-          controlledTranslate = -swiper.controller.spline.interpolate(
-            -translate,
-          );
+          controlledTranslate =
+            -swiper.controller.spline.interpolate(-translate);
         }
 
         if (

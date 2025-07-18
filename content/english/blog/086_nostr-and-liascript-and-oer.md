@@ -4,7 +4,8 @@ title: "Nostr & LiaScript & OER"
 slug: "nostr-and-liascript-and-oer"
 date: 2025-05-01
 draft: false
-author: André Dietrich
+authors:
+  - André Dietrich
 image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Nostr_logo.png"
 
 categories:

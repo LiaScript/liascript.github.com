@@ -3,7 +3,8 @@ title: "Sharing via gitlab://"
 slug: "sharing-via-gitlab"
 date: 2025-06-11
 draft: false
-author: André Dietrich
+authors:
+  - André Dietrich
 image: "https://upload.wikimedia.org/wikipedia/commons/c/c8/GitLab_logo_%282%29.svg"
 tags:
   - GitLab
