@@ -1,7 +1,7 @@
 ---
 title: "Newsletter 18/07/2025"
 slug: "newsletter-18-07-2025"
-date: 2025-07-18
+date: 2025-07-23
 draft: false
 authors:
   - André Dietrich
@@ -102,6 +102,13 @@ Nearly **600 million people** read RTL scripts.
 Until now our interface simply translated the words while keeping a left‑to‑right layout, which felt awkward and sometimes unusable.
 Real RTL support means mirroring navigation bars, icons, animations, paddings—every direction‑sensitive CSS rule.
 It’s deceptively tricky, but once finished LiaScript will feel truly native to this vast audience.
+
+## 8. OPAL-Integration
+
+We’re edging into the mainstream! LiaScript is now integrated into __OPAL__—the “Online‑Plattform für Akademisches Lehren und Lernen,” the central learning‑management system used by most universities in the German state of Saxony.
+In short: thousands of instructors and students can embed fully interactive LiaScript courses directly in their everyday LMS workflows.
+
+{{< button link="https://blog.hrz.tu-chemnitz.de/urzcommunity/2025/07/08/neu-im-opal-mit-liascript-schnell-zum-anschaulichen-interaktiven-kurs/" label="OPAL Integration" >}}
 
 ---
 
