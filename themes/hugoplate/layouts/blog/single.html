@@ -3,12 +3,41 @@
     <div class="container">
       <div class="row justify-center">
         <article class="lg:col-10">
-          {{ $image:= .Params.image }}
+          {{ $image := .Params.image }}
           {{ if $image }}
-            <div class="mb-10">
-              {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full rounded") }}
-            </div>
+            <figure class="mb-10">
+              {{ partial "image" (dict
+                "Src"    $image
+                "Context" .Page
+                "Alt"    (or .Params.image_alt .Title)
+                "Class"  "w-full rounded")
+              }}
+
+              {{ if or .Params.image_credit .Params.image_license }}
+                <figcaption class="mt-2 text-sm text-gray-500">
+                  {{ with .Params.image_credit }}
+                    {{ if $.Params.image_credit_link -}}
+                      <a href="{{ $.Params.image_credit_link }}">{{ . }}</a>
+                    {{- else -}}
+                      {{ . }}
+                    {{- end }}
+                  {{ end }}
+
+                  {{ with .Params.image_license }}
+                    {{ if or $.Params.image_credit $.Params.image_credit_link }}
+                      {{ print ", " }}
+                    {{ end }}
+                    licensed under
+                    <a href="{{ $.Params.image_license_link }}">{{ . }}</a>
+                  {{ end }}
+                  .
+                  {{ with .Params.image_changes }}Changes: {{ . }}.{{ end }}
+                </figcaption>
+              {{ end }}
+            </figure>
           {{ end }}
+
+
           <h1 class="h2 mb-4">
             {{ .Title }}
           </h1>
