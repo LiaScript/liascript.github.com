@@ -1,4 +1,4 @@
-/*!tailwindcss v4.1.12 | MIT License | https://tailwindcss.com*//*!* Justified gallery style*/@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
+/*!tailwindcss v4.1.13 | MIT License | https://tailwindcss.com*//*!* Justified gallery style*/@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -243,7 +243,7 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     white-space: nowrap;
     border-width: 0;
   }
@@ -2298,11 +2298,8 @@
       --tw-gradient-position: to bottom in oklab;
     }
     background-image: linear-gradient(var(--tw-gradient-stops));
-    --tw-gradient-from: rgba(249,249,249,1);
     --tw-gradient-via-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     --tw-gradient-from: rgba(249,249,249,1);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     --tw-gradient-from-position: 0.53%;
     --tw-gradient-to: var(--color-white);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -3096,7 +3093,7 @@
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
@@ -4037,7 +4034,7 @@
       }
     }
   }
-}input#nav-toggle:checked+label #show-button{display:none}input#nav-toggle:checked+label #hide-button{display:block}input#nav-toggle:checked~#nav-menu{display:block}.form-input{width:100%;border-radius:.25rem;border-color:transparent;border-color:transparent;background-color:var(--color-light);padding-inline:calc(var(--spacing) * 6);padding-block:calc(var(--spacing) * 4);color:var(--color-text-dark);&::placeholder { color:var(--color-text-light); } &:focus { border-color:var(--color-primary); } &:focus { --tw-ring-color:transparent; } &:where(.dark,.dark *) { border-color:var(--color-darkmode-border); } &:where(.dark,.dark *) { background-color:var(--color-darkmode-light); } &:where(.dark,.dark *) { color:var(--color-darkmode-text-light); } &:where(.dark,.dark *) { &:focus { border-color:var(--color-darkmode-primary); } }}.form-label{margin-bottom:calc(var(--spacing) * 4);display:block;font-family:var(--font-secondary);font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height));--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal);color:var(--color-text-dark);&:where(.dark,.dark *) { color:var(--color-darkmode-text-light); }}.swiper-pagination-bullet{height:calc(var(--spacing) * 2.5)!important;width:calc(var(--spacing) * 2.5)!important;background-color:var(--color-light)!important;opacity:100%!important;&:where(.dark,.dark *) { background-color:var(--color-darkmode-light)!important; }}.swiper-pagination-bullet-active{height:calc(var(--spacing) * 4)!important;width:calc(var(--spacing) * 4)!important;background-color:var(--color-primary)!important;&:where(.dark,.dark *) { background-color:var(--color-darkmode-primary)!important; }}@layer base{html {
+}input#nav-toggle:checked+label #show-button{display:none}input#nav-toggle:checked+label #hide-button{display:block}input#nav-toggle:checked~#nav-menu{display:block}.form-input{width:100%;border-radius:.25rem;border-color:transparent;background-color:var(--color-light);padding-inline:calc(var(--spacing) * 6);padding-block:calc(var(--spacing) * 4);color:var(--color-text-dark);&::placeholder { color:var(--color-text-light); } &:focus { border-color:var(--color-primary); } &:focus { --tw-ring-color:transparent; } &:where(.dark,.dark *) { border-color:var(--color-darkmode-border); } &:where(.dark,.dark *) { background-color:var(--color-darkmode-light); } &:where(.dark,.dark *) { color:var(--color-darkmode-text-light); } &:where(.dark,.dark *) { &:focus { border-color:var(--color-darkmode-primary); } }}.form-label{margin-bottom:calc(var(--spacing) * 4);display:block;font-family:var(--font-secondary);font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height));--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal);color:var(--color-text-dark);&:where(.dark,.dark *) { color:var(--color-darkmode-text-light); }}.swiper-pagination-bullet{height:calc(var(--spacing) * 2.5)!important;width:calc(var(--spacing) * 2.5)!important;background-color:var(--color-light)!important;opacity:100%!important;&:where(.dark,.dark *) { background-color:var(--color-darkmode-light)!important; }}.swiper-pagination-bullet-active{height:calc(var(--spacing) * 4)!important;width:calc(var(--spacing) * 4)!important;background-color:var(--color-primary)!important;&:where(.dark,.dark *) { background-color:var(--color-darkmode-primary)!important; }}@layer base{html {
     font-size: var(--text-base-sm);
     @media (width >= 48rem) {
       font-size: var(--text-base);
@@ -4050,7 +4047,6 @@
   body {
     background-color: var(--color-body);
     font-family: var(--font-primary);
-    font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     font-size: var(--text-base);
     --tw-leading: var(--leading-relaxed);
@@ -4821,7 +4817,6 @@
     }
     & :is(:where(table):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
       &::before {
-        content: var(--tw-content);
         --tw-content: "";
         content: var(--tw-content);
       }
@@ -4952,7 +4947,7 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-dark);
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &:hover {
@@ -5022,7 +5017,7 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-dark);
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &:hover {
@@ -5093,13 +5088,12 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: transparent;
-    border-color: transparent;
     padding-inline: calc(var(--spacing) * 5);
     padding-block: calc(var(--spacing) * 2);
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     text-transform: capitalize;
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
@@ -5126,7 +5120,6 @@
   }
   .btn-outline-primary {
     border-color: var(--color-dark);
-    background-color: transparent;
     background-color: transparent;
     color: var(--color-text-dark);
     &:hover {
