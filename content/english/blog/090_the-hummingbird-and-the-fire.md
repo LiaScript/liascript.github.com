@@ -34,10 +34,6 @@ And as they all carried water together and let it fall over the burning forest, 
 
 ---
 
-Claro! Aqui está a tradução da versão adaptada (com o beija-flor, a águia e a chuva poderosa) para o português brasileiro:
-
----
-
 Um dia, irrompeu um incêndio terrível na floresta. Fumaça e chamas devoravam as árvores, faíscas subiam ao céu, e os animais fugiam assustados. À beira do rio, todos se amontoaram, olhando impotentes para o inferno de fogo que se espalhava.
 
 Somente o pequeno **beija-flor** não ficou parado. Vez após vez, ele voava até o rio, pegava uma gotinha de água no bico e a deixava cair sobre as chamas. Gota por gota, sem se cansar.
