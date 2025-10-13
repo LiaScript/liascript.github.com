@@ -18,6 +18,8 @@ tags:
 
 This is our report on making quizzes in LiaScript in 100 seconds.
 
+{{< youtube 9kIdg-9rmHg >}}
+
 Do you know an easier way of creating quizzes with your favorite LMS?
 
 - Multiple-Choice
