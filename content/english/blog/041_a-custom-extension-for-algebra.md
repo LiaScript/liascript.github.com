@@ -6,12 +6,11 @@ draft: false
 author: "André Dietrich"
 image: "/images/post/algebrite.jpg"
 categories: 
-    - Examples
-    - Shorts
+    - Tutorial
 tags: 
-    - LiaScript
-    - Macro
-    - YouTube
+    - Macros
+    - Code
+    - Video
 description: "Today we show how to build a custom extension for executable code-snippets for LiaScript Markdown by using the computer algebra systems Algebrite. The same can be done with any other library, framework, API ..."
 ---
 

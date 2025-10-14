@@ -11,17 +11,16 @@ description: "This screencast from the Open Educa Berlin (OEB) Conference emphas
 image: "/images/post/tables.jpg"
 
 categories:
-    - Examples
-    - Shorts
+    - Tutorial
 tags:
-    - LiaScript
-    - Feature
-    - Statistics
     - Tables
-    - YouTube
+    - Charts
+    - Video
 ---
 
 If Markdown tables are used to store data, why not directly visualizing it?
+
+{{< youtube 5Hdqn-gppyU >}}
 
 LiaScript offers 10 different types of plots, the best type is automatically chosen, based on the format of a table and its values... but you are free to use your desired one ;-)
 

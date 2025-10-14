@@ -6,13 +6,14 @@ date: 2022-07-08
 draft: false
 author: André Dietrich
 image: "/images/post/python3.png"
-description: DigitalOcean’s How To Code in Python 3 tutorial series translated to LiaScript with interactive PyScript examples.
+description: DigitalOcean's How To Code in Python 3 tutorial series translated to LiaScript with interactive PyScript examples.
 categories:
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Books
-    - Coding
+    - Python
+    - Code
+    - Programming
+    - LiveEditor
 ---
 
 This is a port of DigitalOcean’s How To Code in Python 3 tutorial series by Lisa Tagliaferri translated to LiaScript with interactive PyScript examples.

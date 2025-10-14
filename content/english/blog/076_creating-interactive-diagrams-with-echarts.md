@@ -6,14 +6,12 @@ draft: false
 author: André Dietrich
 image: "/images/post/echarts-diagrams.gif"
 categories:
-  - Article
+    - Tutorial
 tags:
-  - LiaScript
-  - Diagrams
-  - eCharts
-  - Interactive
-  - WebGL
-  - Macros
+    - Charts
+    - JavaScript
+    - Macros
+
 ---
 
 LiaScript uses the powerful eCharts library to create interactive diagrams, whether you're visualizing ASCII art or presenting data from tables. In our previous blog post, we introduced the `<lia-chart>` tag—a custom web component that uses eCharts under the hood to easily generate custom diagrams.

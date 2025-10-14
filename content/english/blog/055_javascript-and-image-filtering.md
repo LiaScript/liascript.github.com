@@ -6,10 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/filter-script.gif"
 categories:
-    - Examples
+    - Tutorial
 tags: 
-    - LiaScript
     - JavaScript
+    - Images
+    - LiveEditor
 description: "How to use script-tags to create image-filtering effects in LiaScript."
 ---
 

@@ -8,13 +8,13 @@ author: André Dietrich
 image: "/images/post/what-do-poland-and-arnold-schwarzenegger-have-in-common/i-want-you.jpg"
 
 categories:
-    - Article
+    - Community
 tags:
     - OER
     - GitHub
-    - LiaBooks
-    - LiaScript
     - Textbooks
+    - Education
+
 ---
 
 ... for translating open textbooks into interactive LiaScript books. But, based on our discussions at the [eLearning Africa Conference](/blog/elearning-africa-2024) we realized that there is a need for open textbooks for various purposes. With the [LiaBooks](https://liabooks.github.io/) project we would like to translate such open textbooks from around the world into LiaScript. This way, we hope to make digital textbooks more accessible, reusable and adaptable for everyone. If you are interested in this project, please feel free to contact us and help us to translate such books into a more interactive format.

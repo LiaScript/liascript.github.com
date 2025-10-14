@@ -6,9 +6,13 @@ draft: false
 authors:
   - Sebastian Zug
 image: "/images/post/liascript-meets-opal.jpg"
+categories:
+    - News
 tags:
-  - GitLab
-  - OER
+    - LMS
+    - OER
+    - Education
+
 ---
 
 LiaScript Dokumente im OPAL Lern-Management-System direkt hochladen?

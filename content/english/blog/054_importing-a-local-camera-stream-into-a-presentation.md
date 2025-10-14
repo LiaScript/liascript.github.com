@@ -6,11 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/webcam.jpg"
 categories: 
-    - Examples
+    - Tutorial
 tags:
-    - LiaScript
-    - Feature
     - JavaScript
+    - Video
+    - LiveEditor
 description: "How to use script-tags to create image-filtering effects in LiaScript."
 ---
 

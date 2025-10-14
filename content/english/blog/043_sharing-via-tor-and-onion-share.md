@@ -6,12 +6,11 @@ draft: false
 author: André Dietrich
 image: "https://raw.githubusercontent.com/LiaPlayground/University-Future-Festival-2023/main/img/censorship.png"
 categories: 
-    - Examples
+    - Tutorial
 tags: 
-    - LiaScript
-    - OnionShare
     - Sharing
-    - YouTube
+    - Video
+    - OER
 
 description: How to share educational content via Tor and OnionShare to bypass censorship and surveillance.
 ---

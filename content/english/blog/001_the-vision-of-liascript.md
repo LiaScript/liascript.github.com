@@ -8,10 +8,11 @@ authors:
     - André Dietrich
 image: "/images/post/vision-of-liascript.png"
 categories:
-    - Conference
-    - Publication
+    - News
+    - Documentation
 tags:
-    - LiaScript
+    - OER
+    - Education
 
 description: "This poster represents one of the earliest publications on LiaScript, showcasing our pioneering ideas on leveraging open-source methodologies to develop Massive Open Online Courses (MOOCs)."
 ---

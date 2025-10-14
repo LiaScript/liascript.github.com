@@ -6,11 +6,12 @@ draft: false
 author: André Dietrich
 image: "/images/post/chatgpt-diagrams.gif"
 categories:
-  - Article
+    - Tutorial
 tags:
-  - LiaScript
-  - ChatGPT
-  - AI
+    - AI
+    - Charts
+    - JavaScript
+
 ---
 
 

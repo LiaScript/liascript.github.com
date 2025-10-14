@@ -6,13 +6,11 @@ draft: false
 author: André Dietrich
 image: "https://www.twillo.de/oer/web/wp-content/uploads/2021/12/thumbnail-oer-portal-twillo-kennenlernen.png"
 categories: 
-    - Article
     - Community
 tags:
-    - LiaScript
     - Sharing
-    - Twillo
     - OER
+    - Education
 
 description: Twillo ist ein Portal, das sich auf offene Bildungsmaterialien (OER) spezialisiert hat, insbesondere im Bereich der Hochschullehre.
 ---

@@ -6,12 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/freiberg-markt.jpg"
 categories:
-    - Talk
+    - News
 tags:
-    - LiaScript
-    - CRDTs
-    - Freiberg
-    - Web 3.0
+    - Video
+    - P2P
+    - Collaboration
 
 description: André Dietrich gives a brief overview on the research history around LiaScript and RemoteLabs.
 ---

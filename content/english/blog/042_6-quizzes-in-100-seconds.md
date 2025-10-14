@@ -7,12 +7,10 @@ draft: false
 author: André Dietrich
 image: "/images/post/quiz.jpg"
 categories: 
-    - Examples
-    - Shorts
+    - Tutorial
 tags: 
-    - LiaScript
     - Quizzes
-    - YouTube
+    - Video
 ---
 
 

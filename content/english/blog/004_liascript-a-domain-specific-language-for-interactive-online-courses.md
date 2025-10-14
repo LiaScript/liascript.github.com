@@ -6,11 +6,13 @@ draft: false
 author: André Dietrich
 image: "/images/post/mccsis.png"
 categories:
-  - Article
-  - Conference
+  - News
+  - Documentation
 tags:
-  - LiaScript
-  - Publication
+  - OER
+  - Education
+  - Video
+  - Markdown
 
 description: "Interactive conference paper for the eLearning 2019 conference in Porto"
 ---

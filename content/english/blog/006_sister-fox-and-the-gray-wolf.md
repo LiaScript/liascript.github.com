@@ -6,13 +6,12 @@ draft: false
 author: André Dietrich
 image: "https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/pic/20.png"
 categories: 
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Books
-    - Inspiration
-    - Kids
-    - YouTube
+    - TTS
+    - Animation
+    - Video
+    - Education
 
 description: This post will help you to set up your Atom with the appropriate plugins to speed up your development process.
 ---

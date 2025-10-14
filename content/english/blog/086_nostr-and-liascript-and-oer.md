@@ -9,13 +9,11 @@ authors:
 image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Nostr_logo.png"
 
 categories:
-  - Community
-  - Technology
-  - Tools
-
+    - Tutorial
 tags:
-  - Nostr
-  - OER
+    - OER
+    - Sharing
+    - P2P
 
 ---
 

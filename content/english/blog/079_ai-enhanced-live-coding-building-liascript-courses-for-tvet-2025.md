@@ -8,12 +8,12 @@ author: André Dietrich
 image: "/images/post/ai-tvet-author.jpg"
 
 categories:
-  - Community
-  - Talks  
-
-tags:   
-  - LiaScript  
-  - AI  
+    - News
+tags:
+    - AI
+    - Video
+    - Education
+    - TVET
 
 ---
 

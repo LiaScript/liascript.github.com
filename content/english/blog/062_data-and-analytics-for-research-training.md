@@ -8,14 +8,14 @@ authors:
     - André Dietrich
     - Sebastian Zug
 image: "/images/post/arcus.png"
-description: The DART program provides free, open-source educational resources to help biomedical researchers enhance their work with data science skills, offering a customizable learning experience through a modular approach. Funded by the NIH and initiated by the Arcus team at Children’s Hospital of Philadelphia, it encourages contributions to its development and shares findings from its effectiveness study.
+description: The DART program provides free, open-source educational resources to help biomedical researchers enhance their work with data science skills, offering a customizable learning experience through a modular approach. Funded by the NIH and initiated by the Arcus team at Children's Hospital of Philadelphia, it encourages contributions to its development and shares findings from its effectiveness study.
 categories:
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Coding
+    - Code
     - MOOC
-    - Statistics
+    - Science
+    - Education
 ---
 
 The DART program offers free, open-source educational resources aimed at empowering working biomedical researchers with data science skills to enhance their work. It aligns with the National Institutes of Health's focus on boosting research reproducibility, transparency, and rigor through instructional modules that teach data science and related abilities. The program adopts a modular educational strategy, allowing learners to tailor their training by choosing from various modules to create a personalized learning pathway. Participants are encouraged to explore established educational pathways or to use a prototype module discovery application to build their own.

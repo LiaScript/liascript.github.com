@@ -7,10 +7,11 @@ author: André Dietrich
 image: "/images/post/The_Concert.jpg"
 categories:
   - Tutorial
-  - Article
+  - Documentation
 tags:
-  - LiaScript
-  - Feature
+  - Markdown
+  - Quiz
+  - Survey
 
 description: Ein Spickzettel der wichtigsten LiaScript-Funktionalität. Weitere sind in Vorbereitung ...
 ---

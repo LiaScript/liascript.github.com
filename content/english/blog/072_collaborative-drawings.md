@@ -6,13 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/collaborative-drawings.gif"
 categories:
-  - Article
+    - Tutorial
 tags:
-  - Collaboration
-  - Classroom
-  - Drawing
-  - Feature
-  - Pub-Sub
+    - Collaboration
+    - Classroom
+    - Video
 description: "How to create a collaborative canvas purely with LiaScripts pub-sub feature."
 ---
 

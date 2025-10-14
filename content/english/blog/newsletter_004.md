@@ -9,10 +9,13 @@ authors:
 image: "/images/post/newsletter.png"
 
 categories:
-  - Newsletter
-  - Community
+    - News
+    - Community
 tags:
-  - LiaScript
+    - Video
+    - Audio
+    - Education
+
 ---
 
 

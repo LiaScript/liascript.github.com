@@ -11,10 +11,9 @@ categories:
     - Community
     - Tutorial
 tags:
-    - LiaScript
-    - Tutorial
-    - Twillo
     - OER
+    - Education
+
 description: "In zwei informativen und komprimierten Videos zeigen Lennart Rosseburg und Twillo wie man mit LiaScript effizient Online-Kurse erstellt."
 ---
 

@@ -11,18 +11,13 @@ description: "This screencast from the Open Educa Berlin (OEB) Conference emphas
 image: "/images/post/oeb.png"
 
 categories:
-    - Conference
+    - News
     - Tutorial
 tags:
-    - LiaScript
-    - CRDTs
-    - IPFS
-    - OnionShare
-    - Open Educa Berlin
-    - Serverless
-    - WebRTC
-    - WebTorrent
-    - YouTube
+    - Video
+    - P2P
+    - Sharing
+    - OER
 
 ---
 

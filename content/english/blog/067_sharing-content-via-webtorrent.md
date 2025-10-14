@@ -8,12 +8,13 @@ author: André Dietrich
 image: "https://webtorrent.io/img/network.png"
 
 categories:
-    - Article
+    - Tutorial
 tags:
-    - LiaScript
     - OER
     - Sharing
-    - WebTorrent
+    - P2P
+    - Video
+
 ---
 
 This demo from the eLearning-Africa Conference 2024, shows how to use [WebTorrent](https://en.wikipedia.org/wiki/WebTorrent) to share educational content with LiaScript. Everything that you need is a modern browser, no additional software, no login or authentication is required.

@@ -6,12 +6,13 @@ draft: false
 author: André Dietrich
 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Berlin_Panorama_Mitte.jpg/1024px-Berlin_Panorama_Mitte.jpg"
 categories:
-    - Examples
-    - Talk
+    - Case Study
+    - News
 tags:
-    - LiaScript
-    - Feature
-    - YouTube
+    - TTS
+    - Animation
+    - Video
+    - LiveEditor
 description: This is an early example of a LiaScript presentation, that was given as a BearLearn Talk 2019 in Berlin. It shows how to create a simple narrative presentations with Text-to-Speech output and animations and more. 
 ---
 

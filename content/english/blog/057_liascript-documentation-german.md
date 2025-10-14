@@ -6,11 +6,10 @@ draft: false
 author: André Dietrich
 image: "/images/post/docu-de.jpg"
 categories:
-    - Article
     - Documentation
 tags:
-    - LiaScript
-    - YouTube
+    - Video
+    - TTS
 
 description: Dies ist die Aufnahme von der LiaScript-Dokumentation im Präsentationsmodus, indem die Dokumentation sich selber vorstellt ;-)
 ---

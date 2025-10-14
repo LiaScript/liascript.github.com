@@ -8,13 +8,10 @@ author: André Dietrich
 image: "/images/post/macro.jpg"
 description: How can you define custom macros or even define reusable LiaScript libraries?
 categories:
-    - Examples
-    - Shorts
+    - Tutorial
 tags: 
-    - LiaScript
-    - Feature
-    - Macro
-    - YouTube
+    - Macros
+    - Video
 ---
 
 How can you define custom macros or even define reusable LiaScript libraries?

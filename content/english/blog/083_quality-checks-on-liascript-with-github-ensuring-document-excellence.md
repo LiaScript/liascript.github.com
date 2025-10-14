@@ -8,15 +8,10 @@ author: André Dietrich
 image: "/images/post/automation-2.jpg"
 
 categories:
-  - Community
-  - Technology
-  - Tools
-
+    - Tutorial
 tags:
-  - GitHub
-  - Automation
-  - LiaScript
-  - Workflow
+    - GitHub
+    - Automation
 
 ---
 

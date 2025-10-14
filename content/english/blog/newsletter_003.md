@@ -9,10 +9,13 @@ authors:
 image: "/images/post/newsletter.png"
 
 categories:
-  - Newsletter
-  - Community
+    - News
+    - Community
 tags:
-  - LiaScript
+    - Video
+    - JavaScript
+    - Documentation
+
 ---
 
 ... as you might have seen finished 99% of our documentation, so nearly everything, every detail or previously hidden feature is now documented

@@ -8,12 +8,12 @@ authors:
     - André Dietrich
 image: "/images/post/wearedev22.png"
 categories:
-    - Conference
-    - Talk
+    - News
 tags:
-    - LiaScript
-    - Coding
-    - YouTube
+    - OER
+    - Code
+    - Video
+    - Education
 description: "In this talk, we will present LiaScript, a Markdown-based DSL that is intended to be used for developing online courses, that look like screen-cast with various interactive elements."
 ---
 

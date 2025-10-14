@@ -8,13 +8,13 @@ authors:
     - André Dietrich
 image: "/images/post/freiberg-workshop2.png"
 categories:
-    - Talk
     - Tutorial
+    - News
 tags:
-    - LiaScript
-    - Freiberg
-    - Workshop
-    - YouTube
+    - TTS
+    - Video
+    - OER
+    - Education
 
 description: Ein Workshop über die Entwicklung von online-Kursen mit LiaScript. Die wichtigsten Features werden vorgestellt und es wird ein Ausblick auf zukünftige Entwicklungen gegeben.
 ---

@@ -10,12 +10,14 @@ image: "/images/post/slub.jpg"
 image_attribution: "Photo of SLUB Dresden by [Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden (SLUB)](https://commons.wikimedia.org/wiki/File:Aussenaufnahme_der_SLUB_Dresden_%2817932774691%29_%282%29.jpg) is licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
 
 categories:
-  - Community
+    - News
+    - Community
 tags:
-  - AI
-  - Open Education
-  - OER
-  - Sustainability
+    - AI
+    - OER
+    - Education
+    - Video
+
 ---
 
 Am 11. November 2024 fand in der Sächsischen Landesbibliothek – Staats- und Universitätsbibliothek Dresden (SLUB) eine Veranstaltung zum Thema "Open Educational Resources: Gekommen, um zu bleiben?" statt. Im Mittelpunkt stand die Frage, wie offene Bildungsressourcen (OER) die Bildungslandschaft nachhaltig verändern können.

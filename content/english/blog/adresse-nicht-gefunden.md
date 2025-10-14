@@ -6,10 +6,12 @@ author: André Dietrich
 image: "/images/post/prolog.png"
 description: Interactive clone of the great Rosen-Buch about Prolog-programming (German)
 categories:
-    - Article
-tags: 
+    - Community
+tags:
     - MOOC
-    - Sustainability
+    - OER
+    - Education
+
 ---
 
 

@@ -6,12 +6,13 @@ draft: false
 author: Sebastian Zug
 image: "/images/post/android.png"
 categories:
-    - Talk
+    - News
 tags:
-    - LiaScript
-    - Freiberg
-    - LMS
     - OER
+    - LMS
+    - SCORM
+    - Education
+    - Video
 
 description: Gemeinsam mit Studenten Lehrmaterialien erstellen und diese unter einer freien OER Lizenz teilen. In diesem E-Teach@Talk spricht Prof. Dr. Sebastian Zug von der TU Bergakademie in Freiberg über seine Erfahrungen beim interaktiven Einsatz von LiaScript in der Lehre. Es wird auch ein Ausblick auf die zukünftigen und derzeitigen Entwicklungen von LiaScript gegeben und es wird diskutiert, was OER eigentlich können muss.
 ---

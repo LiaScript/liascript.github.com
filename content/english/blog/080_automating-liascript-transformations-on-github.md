@@ -8,18 +8,11 @@ author: André Dietrich
 image: "/images/post/automation-1.jpg"
 
 categories:
-  - Community
-  - Technology
-  - Tools
-
+    - Tutorial
 tags:
-  - GitHub
-  - Automation
-  - LiaScript
-  - PDF
-  - SCORM
-  - IMS
-  - Workflow
+    - GitHub
+    - Automation
+    - SCORM
 
 ---
 

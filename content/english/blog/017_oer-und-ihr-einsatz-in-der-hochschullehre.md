@@ -6,11 +6,11 @@ draft: false
 author: Sebastian Zug
 
 categories:
-    - Examples
+    - Community
 tags:
-    - LiaScript
     - OER
     - Podcast
+    - Education
 
 description: Handlungsleitfaden für den Entwicklungsprozess einer OER Policy mit konkreten Tipps und Materialien veröffentlicht.
 ---

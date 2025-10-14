@@ -11,10 +11,10 @@ description: Create a link preview from your Markdown documents and LiaScript co
 image: "/images/post/preview.jpg"
 
 categories:
-  - Examples
-tags:
-  - LiaScript
   - Feature
+tags:
+  - Markdown
+  - Preview
 
 description: "Create a link preview from your Markdown documents and LiaScript courses."
 

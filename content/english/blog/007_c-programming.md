@@ -8,11 +8,11 @@ author: André Dietrich
 image: "/images/post/c.png"
 description: This interactive LiaScript book is based on the free Wikibook on C-Programming. It provides a comprehensive look at the C programming language and its features.
 categories:
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Books
-    - Coding
+    - Code
+    - Programming
+    - Education
 ---
 
 This LiaScript book is based on the free

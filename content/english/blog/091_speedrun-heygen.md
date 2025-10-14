@@ -6,9 +6,14 @@ draft: false
 authors:
   - André Dietrich
 image: "/images/post/brandschutzordnung.jpg"
+categories:
+    - Tutorial
 tags:
-  - AI
-  - OER
+    - AI
+    - OER
+    - Video
+    - TTS
+
 ---
 
 This two-part speedrun shows how you can transform static documents into interactive, narrated LiaScript courses quickly using LLMs, image AI, browser TTS and HeyGen presenter videos.

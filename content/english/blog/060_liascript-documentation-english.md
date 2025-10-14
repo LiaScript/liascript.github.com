@@ -6,11 +6,10 @@ draft: false
 author: André Dietrich
 image: "/images/post/docu-en.jpg"
 categories:
-    - Article
     - Documentation
 tags:
-    - LiaScript
-    - YouTube
+    - Video
+    - TTS
 
 description: This is a screencast of the LiaScript documentation in presentation mode spoken by LiaScript itself ;-)
 ---

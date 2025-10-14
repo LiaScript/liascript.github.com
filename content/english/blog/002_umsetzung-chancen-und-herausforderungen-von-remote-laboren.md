@@ -7,10 +7,11 @@ authors:
     - Sebatian Zug
 
 categories:
-    - Talk
+    - News
 tags: 
-    - LiaScript
-    - YouTube
+    - Video
+    - Education
+    - TVET
 
 description: "This poster represents one of the earliest publications on LiaScript, showcasing our pioneering ideas on leveraging open-source methodologies to develop Massive Open Online Courses (MOOCs)."
 ---

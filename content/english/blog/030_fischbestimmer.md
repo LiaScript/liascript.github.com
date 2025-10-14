@@ -6,13 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/fischbestimmer.jpg"
 categories: 
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Biology
-    - Books
-    - Inspiration
-    - YouTube
+    - Science
+    - Interactive
+    - Video
 
 description: This is an experiment of porting the FISHIDENTIFIER from the Deutsches Meeresmuseeum Stralsund to LiaScript.
 ---

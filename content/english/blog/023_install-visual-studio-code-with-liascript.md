@@ -6,13 +6,12 @@ draft: false
 author: André Dietrich
 image: "/images/post/vscode.png"
 categories:
-    - Article
-    - Editor
     - Tutorial
 tags:
-    - LiaScript
-    - Tools
-    - YouTube
+    - VS Code
+    - Video
+    - GitHub
+    - GitLab
 
 description: This blog entry presents a a detailed instruction on how to install Visual Studio Code with LiaScript and how to use it to develop your LiaScript courses.
 ---

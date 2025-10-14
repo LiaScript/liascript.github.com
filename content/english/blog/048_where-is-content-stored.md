@@ -5,13 +5,12 @@ date: 2023-06-21
 image: "/images/post/hosting.jpg"
 author: "André Dietrich"
 categories:
-    - Examples
-    - Shorts
+    - Tutorial
 tags:
-    - LiaScript
     - Sharing
-    - Platforms
-    - YouTube
+    - GitHub
+    - GitLab
+    - Video
 draft: false
 
 description: "Where can you store your course content and how can you host it for free..."

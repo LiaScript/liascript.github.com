@@ -9,9 +9,12 @@ authors:
   - Sebastian Zug
 image: "/images/post/the-hummingbird-and-the-fire.jpg"
 
+categories:
+    - Community
 tags:
-  - LiaScript
-  - Documentation
+    - OER
+    - Education
+
 ---
 
 (*after a Brazilian fable, freely retold*)

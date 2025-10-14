@@ -11,14 +11,11 @@ authors:
 image: "https://edu-sharing-network.org/wp-content/uploads/sites/3/2025/02/HackathOERN-Logo-2-1.png"
 
 categories:
-  - Community
-  - Technology
-  - Tools
-
+    - News
+    - Community
 tags:
-  - Nostr
-  - Edufeed
-  - OER
+    - OER
+    - Collaboration
 
 ---
 

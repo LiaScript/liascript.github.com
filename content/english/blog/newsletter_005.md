@@ -9,10 +9,13 @@ authors:
 image: "/images/post/newsletter.png"
 
 categories:
-  - Newsletter
-  - Community
+    - News
+    - Community
 tags:
-  - LiaScript
+    - P2P
+    - Sharing
+    - OER
+
 ---
 
 Dear LiaScript community,

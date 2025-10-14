@@ -8,10 +8,11 @@ author: André Dietrich
 image: "/images/post/oer-publishing.png"
 
 categories:
-    - Article
+    - Community
 tags:
     - OER
     - GitHub
+    - Education
 
 description: This blog post explores the role of GitHub in transforming educational methodologies, emphasizing its value in fostering collaboration and innovation through open-source community projects.
 ---

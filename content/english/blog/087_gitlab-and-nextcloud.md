@@ -6,9 +6,13 @@ draft: false
 authors:
   - André Dietrich
 image: "https://upload.wikimedia.org/wikipedia/commons/c/c8/GitLab_logo_%282%29.svg"
+categories:
+    - Tutorial
 tags:
-  - GitLab
-  - OER
+    - GitLab
+    - OER
+    - Sharing
+
 ---
 
 > **TL;DR**  

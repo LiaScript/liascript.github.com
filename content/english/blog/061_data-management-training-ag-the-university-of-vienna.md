@@ -7,13 +7,12 @@ author: André Dietrich
 image: "/images/post/fair-data.png"
 
 categories:
-    - Examples
+    - Case Study
 tags:
-    - LiaScript
-    - FAIR
     - OER
     - Podcast
-    - Testimonials
+    - Education
+    - Science
 
 description: This podcast delves into the University of Vienna's innovative data management training program, developed by a diverse team of data stewards for a wide audience including PhD students and technical staff
 ---

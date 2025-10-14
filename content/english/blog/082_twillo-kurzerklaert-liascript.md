@@ -10,12 +10,11 @@ authors:
 image: "/images/post/twillo.png"
 
 categories:
-  - Community
-
+    - Community
 tags:
-  - LiaScript
-  - Twillo
-  - OER
+    - OER
+    - Video
+    - Education
 
 ---
 

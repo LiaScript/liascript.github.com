@@ -8,11 +8,11 @@ author: André Dietrich
 image: "/images/post/lua.png"
 description: A fully working Lua programming course, that can be used as a basis for your own course.
 categories:
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Books
-    - Coding
+    - Code
+    - Programming
+    - LiveEditor
 ---
 
 This example is a port of the Lua programming course from the open wikibook [Lua-Programming](https://en.wikibooks.org/wiki/Lua_Programming) to LiaScript. It is a fully working Lua programming course, that can be used as a basis for your own course.

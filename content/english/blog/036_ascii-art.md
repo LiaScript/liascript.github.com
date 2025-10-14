@@ -6,12 +6,12 @@ draft: false
 author: André Dietrich
 image: "/images/post/ascii.jpg"
 categories: 
-    - Examples
-    - Shorts
+    - Feature
+    - Tutorial
 tags: 
-    - LiaScript
-    - ASCII
-    - YouTube
+    - Animation
+    - Video
+    - Markdown
 description: A quick introduction into ASCII-aRT and how it is integrated into LiaScript, such that you can integrate for example also formulas and animations to your image...
 ---
 

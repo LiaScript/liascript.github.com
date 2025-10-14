@@ -10,13 +10,11 @@ authors:
 image: "https://chemnitzer.linux-tage.de/2025/static/img/slider/bg/banner_webseite.webp"
 
 categories:
-  - Community
-  - Talk
-
+    - News
 tags:
-  - LiaScript
-  - OER
-  - Markdown
+    - OER
+    - Markdown
+    - Education
 
 ---
 

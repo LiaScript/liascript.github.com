@@ -6,13 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/artemisia.jpg"
 categories:
-    - Examples
-    - Shorts
-tags:
-    - LiaScript
     - Feature
+    - Tutorial
+tags:
     - Images
-    - YouTube
+    - Video
 description: "... a paragraph with a starting image will produce a floating environment, a paragraph with only images will produce a gallery, the image will be optimally sized & placed, and \"titles\" will be used as captions."
 ---
 

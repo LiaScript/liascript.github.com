@@ -6,13 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/fonts.jpg"
 categories:
-    - Examples
-    - Shorts
+    - Feature
+    - Tutorial
 tags:
-    - LiaScript
-    - Fonts
-    - Languages
-    - YouTube
+    - Markdown
+    - Video
 description: "How to use different fonts in LiaScript-Markdown and why this might be useful for learning ancient and extinct languages?"
 ---
 

@@ -8,11 +8,11 @@ author: André Dietrich
 image: "/images/post/prolog.png"
 description: Interactive clone of the great Rosen-Buch about Prolog-programming (German)
 categories:
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Books
-    - Coding
+    - Code
+    - Programming
+    - Education
 ---
 
 Dieses Buch soll in die Programmiersprache PROLOG und in die mit ihr verbundene

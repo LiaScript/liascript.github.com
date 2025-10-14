@@ -6,10 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/ai-course-preview.jpg"
 categories:
-  - Article
+    - Tutorial
 tags:
-  - LiaScript
-  - ChatGPT
+    - AI
+    - Preview
+
 ---
 
 [Claude.ai](https://claude.ai/) offers a powerful feature in its __paid version__ that allows you to preview generated code directly. However, with a simple prompt, you can teach any AI to create LiaScript previews on demand—even if you’re using a free version.

@@ -8,13 +8,12 @@ authors:
     - Sebastian Zug
 image: "https://bildungsportal.sachsen.de/portal/wp-content/uploads/2018/06/cropped-BPS_Web_Logo-02-2.png"
 categories:
-    - Examples
+    - Case Study
+    - Community
 tags:
-    - LiaScript
-    - Freiberg
-    - Inspiration
-    - Languages
-    - YouTube
+    - OER
+    - Education
+    - Video
 
 description: "In ihrem Fellowship geben Dr. Marc Jacob und Prof. Sebastian Zug einen Einblick in die vielfältigen Möglichkeiten zur Nutzung von OER in Lehrveranstaltungen. Das spannende Tandem-Fellowship lernen Sie im folgenden Video kennen."
 ---

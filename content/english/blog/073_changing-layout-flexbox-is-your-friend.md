@@ -6,11 +6,10 @@ draft: false
 author: André Dietrich
 image: "/images/post/layout.png"
 categories:
-  - Article
+    - Tutorial
 tags:
-  - Style
-  - CSS
-  - LiaScript
+    - CSS
+    - Markdown
 description: "How to change the layout of certain parts of your LiaScript course easily with FlexBox"
 ---
 

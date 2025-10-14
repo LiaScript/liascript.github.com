@@ -8,11 +8,11 @@ author: André Dietrich
 image: "/images/post/c.png"
 description: Interactive clone of the Wiki-Open-Book C-Programmierung for LiaScript (German)
 categories:
-    - Examples
+    - Case Study
 tags: 
-    - LiaScript
-    - Books
-    - Coding
+    - Code
+    - Programming
+    - Education
 ---
 
 Dies ist eine interaktive Portierung des freien Wikibuches [C-Programmierung](https://de.wikibooks.org/wiki/C-Programmierung) nach LiaScript.

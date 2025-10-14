@@ -6,13 +6,12 @@ draft: false
 author: André Dietrich
 image: "/images/post/trinity.jpg"
 categories:
-    - Examples
-    - Shorts
-tags:
-    - LiaScript
     - Feature
-    - Languages
-    - YouTube
+    - Tutorial
+tags:
+    - TTS
+    - Video
+    - Markdown
 description: How to create narrative presentations from one Markdown document only and how one course can be used to teach in different languages. For the text to speech output we apply simple-speech ...
 ---
 

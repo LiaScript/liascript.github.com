@@ -6,10 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/open-textbook-repositories.jpg"
 categories:
-    - Article
+    - Community
 tags: 
     - Textbooks
-    - Sustainability
+    - OER
+    - Education
 description: "A list of open textbook repositories that provide free educational resources for students and educators."
 ---
 

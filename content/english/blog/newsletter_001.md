@@ -9,10 +9,11 @@ authors:
 image: "/images/post/newsletter.png"
 
 categories:
-  - Newsletter
-  - Community
+    - News
+    - Community
 tags:
-  - LiaScript
+    - Video
+
 ---
 
 This week, on December 6th from 12:00 - 14:00 UTC, in conjunction with the German celebration of St. Nicholas Day, we are excited to host the inaugural LiaScript User Symposium online.

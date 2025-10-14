@@ -6,11 +6,11 @@ draft: false
 author: Sebastian Zug
 image: "/images/post/chatgpt-coauthor.jpg"
 categories:
-    - Article
+    - Tutorial
 tags: 
-    - LiaScript
-    - ChatGPT
-    - German
+    - AI
+    - Video
+
 ---
 
 Wie nutzt man ChatGPT um interaktive Kurse für LiaScript zu erstellen, wird in diesem Video gezeigt... Manchmal muss man bei den Kursen noch manuell nacharbeiten aber gefühlt wird ChatGPT immer besser...

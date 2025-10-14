@@ -5,11 +5,10 @@ date: 2024-04-12
 image: "/images/post/world-map.png"
 author: "André Dietrich"
 categories:
-    - Article
     - Community
 tags:
-    - LiaScript
     - Sharing
+    - Collaboration
 draft: false
 
 description: "Where can you store your course content and how can you host it for free..."

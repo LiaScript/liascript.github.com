@@ -6,12 +6,11 @@ draft: false
 author: André Dietrich
 image: "/images/post/Gallery_at_Brussels.jpg"
 categories:
-    - Article
-    - Community
+    - Tutorial
 tags:
-    - LiaScript
-    - Feature
     - Sharing
+    - GitHub
+    - GitLab
 
 description: How to promote your LiaScript content and make it more visible to a wider audience. Learn how to add meta-information, badges, and social previews to your content.
 ---

@@ -9,13 +9,13 @@ author: André Dietrich
 image: "/images/post/elm-europe.png"
 
 categories:
-    - Conference
-    - Talk
+    - News
+    - Documentation
 tags:
-    - LiaScript
-    - Elm
     - Markdown
-    - YouTube
+    - Video
+    - OER
+    - Code
 
 description: An Elm-talk about the development of an online course DSL that is based on Markdown, given at the elm-europe conference in 2019.
 

@@ -9,16 +9,13 @@ authors:
     - Sebastian Zug
 image: "/images/post/why-open-education-needs-a-common-language/confusion.jpg"
 categories:
-  - Article
-  - Community
-  - Examples
+    - Community
 tags:
-  - LiaScript
-  - Open Education
-  - GitHub
-  - MOOC
-  - OER
-  - Sustainability
+    - OER
+    - GitHub
+    - MOOC
+    - Education
+
 ---
 
 A better question would be: __Why do commercial offerings and e-learning platforms dominate online education and "NOT" Open Educational Resources (OER)?__

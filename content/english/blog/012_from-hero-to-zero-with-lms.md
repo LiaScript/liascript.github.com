@@ -9,13 +9,12 @@ authors:
     - Sebastian Zug
   
 categories: 
-    - Article
+    - Documentation
 tags:
-    - LiaScript
     - LMS
     - MOOC
     - OER
-    - Software-Metrics
+    - Markdown
 
 description: "Learning Management Systems provide more restrictions than access to educational resources and developing courses with the offered authoring tools is more tedious and intimidating task than a creative one. These claims are proved by adopting metrics from software-development, additionally a possible solution is presented: LiaScript is a domain-specific language that is based on Markdown and open-source principles, targeting interactive online-course development."
 ---

@@ -10,10 +10,12 @@ authors:
 image: /images/post/ela24.jpg
 
 categories:
-    - Conference
+    - News
+    - Tutorial
 tags:
-    - LiaScript
-    - eLearning Africa
+    - OER
+    - Education
+    - Classroom
 
 meta : In June 2024 we had the opportunity to have a full-day hands-on workshop at the eLearning Africa Conference in Kigali, Rwanda.
 ---

@@ -6,15 +6,13 @@ draft: false
 author: André Dietrich
 image: "/images/post/multimedia-comments.jpg"
 categories:
-    - Article
-    -  Documentation
-    - Examples
+    - Feature
     - Tutorial
-tags: 
-    - LiaScript
-    - Inspiration
-    - Languages
+tags:
     - Video
+    - Audio
+    - TTS
+
 ---
 
 How can you add your voice or short video sequences to your LiaScript courses? With the new multimedia comments feature, it’s now possible. This feature allows you to replay your voice or video directly in the browser as part of a LiaScript course. It's a game changer for educators looking to create interactive and engaging courses.

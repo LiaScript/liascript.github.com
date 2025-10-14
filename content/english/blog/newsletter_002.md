@@ -9,10 +9,12 @@ authors:
 image: "/images/post/newsletter.png"
 
 categories:
-  - Newsletter
-  - Community
+    - News
+    - Community
 tags:
-  - LiaScript
+    - Video
+    - Documentation
+
 ---
 
 ... since our last newsletter, a lot has happened. For those who missed it, here is the link to our last User Symposium from December 2023:

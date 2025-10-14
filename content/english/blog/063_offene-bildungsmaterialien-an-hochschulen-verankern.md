@@ -6,13 +6,12 @@ draft: false
 author: André Dietrich
 image: "https://open-access.network/fileadmin/_processed_/3/6/xcsm_Startschuss-zur-OER-Policy_by_sOER-Frank_8e8d5dfe2a.jpg.pagespeed.ic.5pfNUF6hdb.jpg"
 categories:
-    - Examples
+    - Case Study
+    - Community
 tags:
-    - LiaScript
     - OER
-    - Twillo
     - Podcast
-    - Testimonials
+    - Education
 
 description: Handlungsleitfaden für den Entwicklungsprozess einer OER Policy mit konkreten Tipps und Materialien veröffentlicht.
 ---

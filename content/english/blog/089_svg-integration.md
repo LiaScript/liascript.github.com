@@ -14,9 +14,14 @@ image_license: "CC BY-SA 2.5"
 image_license_link: "https://creativecommons.org/licenses/by-sa/2.5/"
 image_changes: "none" 
 
+categories:
+    - Feature
+    - Tutorial
 tags:
-  - LiaScript
-  - Documentation
+    - Images
+    - JavaScript
+    - LiveEditor
+
 ---
 
 Although SVGs have been usable in LiaScript for quite a while, their integration just got a lot tighter. In short: you can now *mix SVG and LiaScript content directly*, turning static vector graphics into living, clickable, even quiz-enabled experiences.

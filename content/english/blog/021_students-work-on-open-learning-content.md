@@ -6,12 +6,13 @@ draft: false
 author: Sebastian Zug
 image: "/images/post/lecture.jpg"
 categories:
-    - Article
-tags:
-    - LiaScript
     - Community
-    - Freiberg
+    - News
+tags:
     - OER
+    - Education
+    - Collaboration
+
 description: The Institute for Computer Science in Freiberg has developed an interactive type of lecture format. Together with the lecturers, the students work on the lecture materials with open tools via a website - without any PDF documents or PowerPoint slide collections.
 ---
 

@@ -6,13 +6,11 @@ draft: false
 author: André Dietrich
 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/A-Frame_Hello_World_example.png/800px-A-Frame_Hello_World_example.png"
 categories:
-    - Examples
+    - Tutorial
 tags:
-    - LiaScript
     - 3D
-    - Feature
-    - Template
-    - YouTube
+    - Macros
+    - Video
 
 description: This blog entry presents an example of how to import A-Frame 3D models, scenes, and more into LiaScript open-courSes.
 ---

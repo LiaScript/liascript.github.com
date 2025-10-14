@@ -6,11 +6,10 @@ draft: false
 author: André Dietrich
 image: "/images/post/docu-ko.jpg"
 categories:
-    - Article
     - Documentation
 tags:
-    - LiaScript
-    - YouTube
+    - Video
+    - TTS
 
 description: 이 문서는 LiaScript를 한국어로 번역한 것입니다.
 ---

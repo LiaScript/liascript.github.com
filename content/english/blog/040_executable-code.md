@@ -6,12 +6,10 @@ draft: false
 author: André Dietrich
 image: "/images/post/coding.jpg"
 categories:
-    - Examples
-    - Shorts
+    - Tutorial
 tags:
-    - LiaScript
-    - Coding
-    - YouTube
+    - Code
+    - Video
 description: How to make your Markdown code-snippets editable and executable?
 ---
 

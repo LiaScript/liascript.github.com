@@ -6,12 +6,9 @@ draft: false
 author: André Dietrich
 image: "/images/post/atom.png"
 categories:
-    - Article
-    - Editor
     - Tutorial
 tags:
-    - LiaScript
-    - Tools
+    - Markdown
 
 description: This post will help you to set up your Atom with the appropriate plugins to speed up your development process.
 ---
