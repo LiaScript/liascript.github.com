@@ -16,8 +16,6 @@ tags:
   - Markdown
   - Preview
 
-description: "Create a link preview from your Markdown documents and LiaScript courses."
-
 ---
 
 LiaScript has a new link type/tag that allows you to add preview cards to your LiaScript course or even to your personal website. This way you do not have to update your personal website and other resources.

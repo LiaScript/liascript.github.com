@@ -60,10 +60,6 @@ features:
       label: "List of Templates"
       link: "https://github.com/topics/liascript-template"
       
-    button:
-      enable: true
-      label: "List of Templates"
-      link: "https://github.com/topics/liascript-template"
 
   - title: "LiveEditor"
     image: "/images/LiveEditor.png"

@@ -6,8 +6,6 @@ draft: false
 author: André Dietrich
 image: "/images/post/ela23.png"
 
-description: "Instant Creation & Publishing of Free and Open Online Courses with LiaScript"
-
 categories: 
     - News
     - Tutorial
