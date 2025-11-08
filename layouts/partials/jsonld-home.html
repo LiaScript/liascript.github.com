@@ -1,0 +1,8 @@
+{{/* Inject complex JSON-LD stored in data/meta.json only on homepage */}}
+{{ if .IsHome }}
+  {{ with site.Data.meta }}
+    <script type="application/ld+json">
+{{ . | jsonify (dict "indent" "  ") | safeHTML }}
+    </script>
+  {{ end }}
+{{ end }}

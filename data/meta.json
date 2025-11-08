@@ -1,0 +1,241 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://liascript.github.io/#website",
+      "url": "https://liascript.github.io/",
+      "name": "LiaScript",
+      "description": "LiaScript is an open Markdown dialect and interpreter for creating interactive, open educational resources (OER) and courses directly in the browser.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://liascript.github.io/#publisher" },
+      "sameAs": [
+        "https://github.com/LiaScript",
+        "https://twitter.com/LiaScript",
+        "https://x.com/LiaScript",
+        "https://www.youtube.com/@liascript4180",
+        "https://de.wikipedia.org/wiki/LiaScript",
+        "https://app.gitter.im/#/room/#LiaScript_community:gitter.im"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://liascript.github.io/#webpage",
+      "url": "https://liascript.github.io/",
+      "name": "LiaScript — Open Educational Resources made Easy and Decentralized",
+      "isPartOf": { "@id": "https://liascript.github.io/#website" },
+      "about": { "@id": "https://liascript.github.io/#software" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://liascript.github.io/favicon.ico"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": ["SoftwareApplication", "CreativeWork"],
+      "@id": "https://liascript.github.io/#software",
+      "name": "LiaScript",
+      "url": "https://liascript.github.io/",
+      "applicationCategory": "EducationalApplication",
+      "applicationSubCategory": ["AuthoringTool", "LearningManagementSystem"],
+      "operatingSystem": "Web",
+      "isAccessibleForFree": true,
+      "featureList": [
+        "Text-to-speech playback for any course content",
+        "Live coding blocks with executable code cells",
+        "Interactive quizzes, surveys, and self-checks",
+        "Animations and step-by-step visualizations",
+        "Narrative content creation and storytelling elements",
+        "Rich multimedia (audio, video, iframes) inline",
+        "Data visualization and simulation embedding",
+        "Offline-friendly via static hosting (GitHub Pages, etc.)",
+        "SCORM/IMS export and packaging options",
+        "PDF, single-page web projects, and APK export",
+        "Version-controlled courses (Git/GitHub integration)",
+        "Collaborative authoring via Markdown",
+        "Custom extensions and plug-ins via LiaScript syntax"
+      ],
+      "isSimilarTo": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Moodle",
+          "url": "https://moodle.org"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "ILIAS",
+          "url": "https://www.ilias.de"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Canvas LMS",
+          "url": "https://www.instructure.com/canvas"
+        }
+      ],
+      "interactivityType": "mixed",
+      "educationalUse": [
+        "course-authoring",
+        "self-paced-learning",
+        "blended-learning"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": ["teacher", "student", "instructionalDesigner"]
+      },
+      "teaches": [
+        "programming fundamentals",
+        "STEM topics",
+        "interactive literacy",
+        "reproducible research"
+      ],
+      "softwareRequirements": [
+        "Modern browser (Chromium, Firefox, Safari, Edge)",
+        "Optional: GitHub account for hosting/versioning",
+        "Optional: LMS for SCORM/IMS import"
+      ],
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "name": "LiaScript Documentation",
+        "url": "https://liascript.github.io"
+      },
+      "documentation": "https://liascript.github.io",
+      "codeRepository": "https://github.com/LiaScript",
+      "screenshot": [
+        "https://liascript.github.io/assets/lia-course-example.png"
+      ],
+      "video": {
+        "@type": "VideoObject",
+        "name": "LiaScript Overview & Demo",
+        "thumbnailUrl": "https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg",
+        "uploadDate": "2025-01-01",
+        "embedUrl": "https://www.youtube.com/embed/VIDEO_ID"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "category": "Free"
+      },
+      "keywords": [
+        "LiaScript",
+        "Markdown",
+        "OER",
+        "interactive courses",
+        "e-learning",
+        "LMS alternative",
+        "SCORM",
+        "text-to-speech",
+        "live coding",
+        "animations",
+        "multimedia",
+        "decentralized education",
+        "open source authoring",
+        "browser-based learning"
+      ],
+      "publisher": { "@id": "https://liascript.github.io/#publisher" },
+      "creator": [
+        { "@id": "https://liascript.github.io/#person-andre" },
+        { "@id": "https://liascript.github.io/#person-sebastian" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://liascript.github.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the content stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With LiaScript, you store your content wherever you like — on your own webspace, GitHub, Nostr, or any static file host. You only share a reference (a URL) to the document, and LiaScript loads it dynamically in the browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LiaScript require a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. LiaScript does not require any backend or server. It is a fully static JavaScript web application that fetches content directly and renders it live inside the user’s browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns the content created with LiaScript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You own your content entirely. LiaScript does not claim any rights — you decide the license, where to publish, and how to share your materials with your audience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is LiaScript different from Moodle or ILIAS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LiaScript is not a centralized platform but an extensible language with a browser-based viewer. It runs directly in the user’s browser and can be hosted anywhere as static files — meaning it cannot go down or depend on any central server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export LiaScript content to SCORM or IMS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LiaScript supports exporting your courses to SCORM and IMS formats, as well as to PDF, single-page web projects, and even Android APKs for offline learning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LiaScript support text-to-speech and live coding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and much more. LiaScript supports text-to-speech, live coding environments, interactive quizzes, animations, multimedia embedding, simulations, and narrative content creation with timelines, code execution, and collaborative course design."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://liascript.github.io/#publisher",
+      "name": "Technische Universität Bergakademie Freiberg",
+      "url": "https://tu-freiberg.de",
+      "logo": "https://liascript.github.io/favicon.ico",
+      "contactPoint": [],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Akademiestraße 6",
+        "postalCode": "09599",
+        "addressLocality": "Freiberg",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://liascript.github.io/#person-andre",
+      "name": "André Dietrich",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Technische Universität Bergakademie Freiberg"
+      },
+      "email": "andre.dietrich@informatik.tu-freiberg.de",
+      "sameAs": [
+        "https://github.com/andre-dietrich",
+        "https://www.linkedin.com/in/andr%C3%A9-dietrich-73949415/",
+        "https://x.com/an_dietrich"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://liascript.github.io/#person-sebastian",
+      "name": "Sebastian Zug",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Technische Universität Bergakademie Freiberg"
+      },
+      "email": "sebastian.zug@informatik.tu-freiberg.de",
+      "sameAs": [
+        "https://github.com/SebastianZug",
+        "https://www.linkedin.com/in/sebastian-zug-b2186a279/",
+        "https://x.com/SebastianZug"
+      ]
+    }
+  ]
+}
