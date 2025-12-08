@@ -11,10 +11,13 @@
             <p class="mb-8">
               {{ .content | markdownify }}
             </p>
+          </div>
+          <div class="col-12">
+            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
             {{ with .button }}
               {{ if .enable }}
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-primary block w-fit mx-auto mt-6"
                   href="{{ .link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
                     target="_blank" rel="noopener"
@@ -25,14 +28,41 @@
               {{ end }}
             {{ end }}
           </div>
-          <div class="col-12">
-            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
-          </div>
         </div>
       </div>
     </section>
   {{ end }}
   <!-- /Banner -->
+
+  <!-- Demo Video -->
+  {{ with .Params.demo_video }}
+    {{ if .enable }}
+      <section class="section py-2">
+        <div class="container">
+          <div class="mx-auto max-w-8xl text-center">
+            <h2 class="h2 mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="text-lg mb-8 text-gray-600">
+              {{ .description | markdownify }}
+            </p>
+
+            <div
+              class="relative"
+              style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+              <iframe
+                src="{{ .video }}"
+                frameborder="0"
+                allowfullscreen
+                style="position: absolute; top:0; left:0; width:100%; height:100%; border-radius: 12px;">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Demo Video -->
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
