@@ -34,29 +34,46 @@
   {{ end }}
   <!-- /Banner -->
 
-  <!-- Demo Video -->
+  <!-- Demo Video (Full Bleed) -->
   {{ with .Params.demo_video }}
     {{ if .enable }}
-      <section class="section py-2">
-        <div class="container">
-          <div class="mx-auto max-w-8xl text-center">
+      <section class="w-full py-2 px-0 mb-16">
+        <!-- Full-width wrapper -->
+        <div class="w-full mx-auto px-0">
+          <!-- Optional heading -->
+          <div class="text-center mb-10">
             <h2 class="h2 mb-4">
               {{ .title | markdownify }}
             </h2>
-            <p class="text-lg mb-8 text-gray-600">
+            <p class="text-lg text-gray-600">
               {{ .description | markdownify }}
             </p>
 
-            <div
-              class="relative"
-              style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
-              <iframe
-                src="{{ .video }}"
-                frameborder="0"
-                allowfullscreen
-                style="position: absolute; top:0; left:0; width:100%; height:100%; border-radius: 12px;">
-              </iframe>
-            </div>
+            {{ with .button }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-primary block w-fit mx-auto mt-6"
+                  href="{{ .link | absURL }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+
+          <!-- Full-bleed responsive video -->
+          <div
+            class="relative w-full"
+            style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe
+              src="{{ .video }}"
+              frameborder="0"
+              allowfullscreen
+              style="position:absolute; top:0; left:0; width:100%; height:100%;">
+            </iframe>
           </div>
         </div>
       </section>
@@ -66,7 +83,7 @@
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
-    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+    <section class="section-sm bg-gradient">
       <div class="container">
         <div class="row items-center justify-between">
           <div
@@ -111,7 +128,7 @@
   <!-- Testimonials -->
   {{ with site.GetPage "sections/testimonial" }}
     {{ if .Params.enable }}
-      <section class="section">
+      <section class="section bg-gradient">
         <div class="container">
           <div class="row">
             <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">

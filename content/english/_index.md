@@ -18,17 +18,18 @@ banner:
       <i class="fa fa-arrow-right pl-2"></i>
     </button>
   image: "/images/main.png"
-  button:
-    enable: true
-    label: "LiaScript Hello World"
-    link: "https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/Hello-LiaScript/refs/heads/main/README.md#1"
-
+ 
 # Demo Video Section
 demo_video:
   enable: true
   title: "See LiaScript in Action"
   description: "A short demo showcasing how plain Markdown becomes an interactive course."
   video: "https://www.youtube.com/embed/rbqm6MN0We4"
+  button:
+    enable: true
+    label: "LiaScript Hello World"
+    link: "https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/Hello-LiaScript/refs/heads/main/README.md#1"
+
 
 # Features
 features:
