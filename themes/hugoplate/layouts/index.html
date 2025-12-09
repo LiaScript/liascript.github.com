@@ -45,7 +45,7 @@
             <h2 class="h2 mb-4">
               {{ .title | markdownify }}
             </h2>
-            <p class="text-lg text-gray-600">
+            <p class="text-lg">
               {{ .description | markdownify }}
             </p>
 
@@ -80,6 +80,92 @@
     {{ end }}
   {{ end }}
   <!-- /Demo Video -->
+
+  <!-- Shorts Playlist -->
+  {{ with .Params.shorts }}
+    {{ if .enable }}
+      <section class="section py-12">
+        <div class="container">
+          <div class="row justify-center mb-10 text-center">
+            <div class="lg:col-8 md:col-10 col-12">
+              <h2 class="h2 mb-4">
+                {{ .title | markdownify }}
+              </h2>
+              <p class="text-lg">
+                {{ .description | markdownify }}
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            {{ range .items }}
+              <div class="lg:col-4 md:col-6 col-12 mb-8">
+                <div
+                  class="bg-theme-light dark:bg-darkmode-theme-light rounded-xl overflow-hidden h-full flex flex-col shadow-sm">
+                  <!-- 16:9 Thumbnail -->
+                  <button
+                    type="button"
+                    class="relative w-full cursor-pointer"
+                    style="padding-bottom: 56.25%; height: 0; overflow: hidden;"
+                    onclick="openShortsModal('{{ .id }}')">
+                    <img
+                      src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg"
+                      alt="{{ .title }}"
+                      class="absolute inset-0 w-full h-full object-cover" />
+                    <span
+                      class="absolute inset-0 flex items-center justify-center">
+                      <span
+                        class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-black/60 text-white">
+                        <i class="fa fa-play text-xl"></i>
+                      </span>
+                    </span>
+                  </button>
+
+                  <!-- Card Body -->
+                  <div class="p-5 flex-1 flex flex-col">
+                    <h3 class="h5 font-semibold mb-2">
+                      {{ .title }}
+                    </h3>
+                    {{ with .description }}
+                      <p class="mb-4 text-sm text-gray-600 dark:text-gray-300">
+                        {{ . }}
+                      </p>
+                    {{ end }}
+
+
+                    <div class="mt-auto">
+                      <a
+                        href="https://www.youtube.com/watch?v={{ .id }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-outline-primary btn-sm">
+                        Watch on YouTube
+                        <i class="fa fa-arrow-right pl-2"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+
+          {{ with .playlist }}
+            <div class="text-center mt-6">
+              <a
+                href="{{ . }}"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary">
+                View full playlist
+                <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Shorts Playlist -->
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
@@ -176,6 +262,55 @@
     {{ end }}
   {{ end }}
   <!-- /Testimonials -->
+
+  <!-- Shorts Modal -->
+  <div
+    id="shorts-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center"
+    style="width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.8);"
+    onclick="closeShortsModal()">
+    <button
+      type="button"
+      class="absolute top-3 right-3 z-10 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-black"
+      onclick="closeShortsModal()">
+      <span class="sr-only">Close</span>
+      &times;
+    </button>
+    <div
+      class="relative w-full max-w-3xl mx-4 md:mx-auto bg-black rounded-xl overflow-hidden"
+      style="min-width: 90%; width: 90%;">
+      <div
+        class="relative w-full"
+        style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe
+          id="shorts-modal-iframe"
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openShortsModal(videoId) {
+      var modal = document.getElementById("shorts-modal");
+      var iframe = document.getElementById("shorts-modal-iframe");
+      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeShortsModal() {
+      var modal = document.getElementById("shorts-modal");
+      var iframe = document.getElementById("shorts-modal-iframe");
+      iframe.src = "";
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  </script>
 
   <script>
     function load(url) {

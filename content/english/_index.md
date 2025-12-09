@@ -18,7 +18,7 @@ banner:
       <i class="fa fa-arrow-right pl-2"></i>
     </button>
   image: "/images/main.png"
- 
+
 # Demo Video Section
 demo_video:
   enable: true
@@ -29,6 +29,50 @@ demo_video:
     enable: true
     label: "LiaScript Hello World"
     link: "https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/Hello-LiaScript/refs/heads/main/README.md#1"
+
+
+shorts:
+  enable: true
+  title: "LiaScript Shorts"
+  description: "Quick, focused video snippets showing specific LiaScript capabilities in just a few seconds."
+  playlist: "https://www.youtube.com/watch?v=saxAFw7XpjI&list=PL7LrRfaZulhch1ZtC6nSWOPcu1Xm80rlf&index=1"
+  items:
+    - id: "saxAFw7XpjI"
+      title: "Short #1 – One Document, Many Representations (Part 1)"
+      description: "A single Markdown file can become a narrative presentation, lecture, or interactive course. This demo also shows how LiaScript handles text-to-speech with automatic fallbacks."
+
+    - id: "kiGn5xhe-A8"
+      title: "Short #2 – One Document, Many Representations (Part 2)"
+      description: "More examples of how one Markdown source can be transformed into multiple localized or adapted versions of the same course."
+
+    - id: "RAQeOPYED28"
+      title: "Short #3 – Intelligent Image Handling"
+      description: "LiaScript treats images context-aware: floating layouts, automatic galleries, captioning, and optimal sizing — depending on how you structure your Markdown paragraph."
+
+    - id: "bA3ZdSTalG4"
+      title: "Short #4 – Embedding Media Made Easy"
+      description: "LiaScript supports four lightweight ways to embed media: classic images, audio tags, inline videos, and flexible URL-based embeds for any custom content."
+
+    - id: "9kIdg-9rmHg"
+      title: "Short #5 – Quizzes in 100 Seconds"
+      description: "Create rich quizzes directly in Markdown: multiple choice, single choice, matrix questions, text input, dropdowns, or gap texts — all without an LMS."
+
+    - id: "-VrEtZvhn6I"
+      title: "Short #6 – Executable Code Blocks"
+      description: "Make code snippets editable and runnable inside your course by attaching a simple script definition. Perfect for tutorials and programming lessons."
+
+    - id: "DuxVovCc7os"
+      title: "Short #7 – Tables & Data Visualization"
+      description: "LiaScript can turn Markdown tables into charts automatically. Ten plot types are available, and you can still pick your preferred visualization."
+
+    - id: "5jjXT-JsyYY"
+      title: "Short #8 – Custom Macros"
+      description: "Define your own macros or reusable LiaScript components with just an @name. Add parameters, shortcuts, and even block macros to simplify authoring."
+
+    - id: "C5Lyn0by580"
+      title: "Short #9 – Serverless & Decentralized Hosting"
+      description: "Host LiaScript courses anywhere: classic HTTPS, GitHub, GitLab, Nextcloud, Dropbox, IPFS, data URIs, Nostr, WebTorrent, OnionShare, and more."
+
 
 
 # Features
