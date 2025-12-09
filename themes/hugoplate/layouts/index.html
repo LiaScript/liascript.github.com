@@ -133,15 +133,30 @@
                     {{ end }}
 
 
-                    <div class="mt-auto">
-                      <a
-                        href="https://www.youtube.com/watch?v={{ .id }}"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn btn-outline-primary btn-sm">
-                        Watch on YouTube
-                        <i class="fa fa-arrow-right pl-2"></i>
-                      </a>
+                    <div
+                      class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+                      <div
+                        class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                        <!-- Left: YouTube -->
+                        <a
+                          href="https://www.youtube.com/watch?v={{ .id }}"
+                          target="_blank"
+                          rel="noopener"
+                          class="btn btn-outline-primary btn-sm w-full sm:w-auto flex items-center justify-center">
+                          <i class="fa fa-play mr-2"></i>
+                          Watch on YouTube
+                        </a>
+
+                        <!-- Right: LiveEditor -->
+                        <a
+                          href="{{ .edit }}"
+                          target="_blank"
+                          rel="noopener"
+                          class="btn btn-outline-primary btn-sm w-full sm:w-auto flex items-center justify-center">
+                          <i class="fa fa-code mr-2"></i>
+                          Open in LiveEditor
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
