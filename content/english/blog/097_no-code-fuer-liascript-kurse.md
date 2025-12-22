@@ -3,6 +3,8 @@ title: "No-Code für LiaScript-Kurse?"
 date: 2025-12-22
 draft: false
 image: "/images/post/no-code-for-liascript.jpg"
+images:
+  - "/images/post/no-code-for-liascript.jpg"
 tags:
     - AI
     - Education
