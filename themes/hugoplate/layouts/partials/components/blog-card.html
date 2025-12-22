@@ -1,11 +1,18 @@
 <div class="bg-body dark:bg-darkmode-body">
   {{ $image:= .Params.image }}
   {{ if $image }}
+    {{ $imageUrl := $image }}
+    {{- if not (hasPrefix $image "http") -}}
+      {{- with resources.Get $image -}}
+        {{- $resized := .Fill "400x234 webp q85" -}}
+        {{- $imageUrl = $resized.RelPermalink -}}
+      {{- else -}}
+        {{- $imageUrl = $image | relURL -}}
+      {{- end -}}
+    {{- end -}}
     <div
       class="mb-6 image-container rounded"
-      style="background-image: url('{{ $image }}'); height: 234px; width: 100%; border: 1px solid black; background-position: center; background-size: cover; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-      <!-- Content inside the div can go here, if needed -->
-    </div>
+      style="background-image: url('{{ $imageUrl }}'); height: 234px; width: 100%; border: 1px solid black; background-position: center; background-size: cover;"></div>
   {{ end }}
   <h4 class="mb-3">
     <a href="{{ .RelPermalink }}">

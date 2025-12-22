@@ -1,3 +1,50 @@
-<!-- Hugo Internal Templates for OpenGraph and Twitter Cards -->
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+<!-- Custom OpenGraph with processed images -->
+{{- $title := .Title -}}
+{{- $description := .Description | default .Summary -}}
+{{- $url := .Permalink -}}
+
+
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta
+  property="og:type"
+  content="{{ if .IsPage }}
+    article
+  {{ else }}
+    website
+  {{ end }}" />
+<meta property="og:url" content="{{ $url }}" />
+<meta property="og:site_name" content="{{ site.Title }}" />
+
+{{- with .Params.image -}}
+  {{- $imageUrl := . -}}
+  {{- if not (hasPrefix . "http") -}}
+    {{- with resources.Get . -}}
+      {{- $resized := .Fill "1200x630 webp q85" -}}
+      {{- $imageUrl = $resized.Permalink -}}
+    {{- else -}}
+      {{- $imageUrl = . | absURL -}}
+    {{- end -}}
+  {{- end -}}
+  <meta property="og:image" content="{{ $imageUrl }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+{{- end -}}
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+{{- with .Params.image -}}
+  {{- $imageUrl := . -}}
+  {{- if not (hasPrefix . "http") -}}
+    {{- with resources.Get . -}}
+      {{- $resized := .Fill "1200x630 webp q85" -}}
+      {{- $imageUrl = $resized.Permalink -}}
+    {{- else -}}
+      {{- $imageUrl = . | absURL -}}
+    {{- end -}}
+  {{- end -}}
+  <meta name="twitter:image" content="{{ $imageUrl }}" />
+{{- end -}}
