@@ -1,13 +1,12 @@
 <div class="bg-body dark:bg-darkmode-body">
   {{ $image:= .Params.image }}
   {{ if $image }}
-    {{ $imageUrl := $image }}
+    {{- $imageUrl := $image | relURL -}}
     {{- if not (hasPrefix $image "http") -}}
-      {{- with resources.Get $image -}}
-        {{- $resized := .Fill "400x234 webp q85" -}}
+      {{- $resourcePath := strings.TrimPrefix "/" $image -}}
+      {{- with resources.Get $resourcePath -}}
+        {{- $resized := .Fill "400x234 q85" -}}
         {{- $imageUrl = $resized.RelPermalink -}}
-      {{- else -}}
-        {{- $imageUrl = $image | relURL -}}
       {{- end -}}
     {{- end -}}
     <div
