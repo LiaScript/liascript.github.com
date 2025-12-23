@@ -6,7 +6,7 @@
   "author": "zeon.studio",
   "scripts": {
     "dev": "hugo server",
-    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic --logLevel debug",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
     "dev:example": "cd exampleSite && hugo server",
     "build:example": "cd exampleSite && hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
