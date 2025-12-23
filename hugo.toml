@@ -9,6 +9,10 @@ theme = "hugoplate"
 timeZone = "Europe/Berlin"
 # post excerpt
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+
+# Timeout settings
+[timeout]
+template = "120s"
 # disable language
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/

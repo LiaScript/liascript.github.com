@@ -17,7 +17,15 @@
 <meta property="og:site_name" content="{{ site.Title }}" />
 
 {{- with .Params.image -}}
-  <meta property="og:image" content="{{ . | absURL }}" />
+  {{- $imageUrl := . | absURL -}}
+  {{- if not (hasPrefix . "http") -}}
+    {{- $resourcePath := strings.TrimPrefix "/" . -}}
+    {{- with resources.Get $resourcePath -}}
+      {{- $resized := .Fill "1200x630 q85" -}}
+      {{- $imageUrl = $resized.Permalink -}}
+    {{- end -}}
+  {{- end -}}
+  <meta property="og:image" content="{{ $imageUrl }}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 {{- end -}}
@@ -28,5 +36,13 @@
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $description }}" />
 {{- with .Params.image -}}
-  <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{- $imageUrl := . | absURL -}}
+  {{- if not (hasPrefix . "http") -}}
+    {{- $resourcePath := strings.TrimPrefix "/" . -}}
+    {{- with resources.Get $resourcePath -}}
+      {{- $resized := .Fill "1200x630 q85" -}}
+      {{- $imageUrl = $resized.Permalink -}}
+    {{- end -}}
+  {{- end -}}
+  <meta name="twitter:image" content="{{ $imageUrl }}" />
 {{- end -}}
