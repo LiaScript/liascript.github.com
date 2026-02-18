@@ -1,4 +1,4 @@
-/*!tailwindcss v4.1.18 | MIT License | https://tailwindcss.com*//*!* Justified gallery style*/@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
+/*!tailwindcss v4.2.0 | MIT License | https://tailwindcss.com*//*!* Justified gallery style*/@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -267,6 +267,12 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+  .start {
+    inset-inline-start: var(--spacing);
+  }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
   .-top-0 {
     top: calc(var(--spacing) * -0);
   }
@@ -280,7 +286,7 @@
     top: calc(var(--spacing) * 1.5);
   }
   .top-1\/2 {
-    top: calc(1/2 * 100%);
+    top: calc(1 / 2 * 100%);
   }
   .top-2 {
     top: calc(var(--spacing) * 2);
@@ -358,7 +364,7 @@
     left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
-    left: calc(1/2 * 100%);
+    left: calc(1 / 2 * 100%);
   }
   .left-2 {
     left: calc(var(--spacing) * 2);
@@ -1682,7 +1688,7 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/2 {
-    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-px {
@@ -1710,7 +1716,7 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-2 {
@@ -1734,7 +1740,7 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-1\/2 {
-    --tw-translate-y: calc(1/2 * 100%);
+    --tw-translate-y: calc(1 / 2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-2 {
@@ -2738,6 +2744,9 @@
   .font-sans {
     font-family: var(--font-sans);
   }
+  .\[font-feature-settings\:\'ss01\'\] {
+    font-feature-settings: 'ss01';
+  }
   .\!text-sm {
     font-size: var(--text-sm) !important;
     line-height: var(--tw-leading, var(--text-sm--line-height)) !important;
@@ -3185,9 +3194,6 @@
   .select-none {
     -webkit-user-select: none;
     user-select: none;
-  }
-  .\[font-feature-settings\:\'ss01\'\] {
-    font-feature-settings: 'ss01';
   }
   .backface-hidden {
     backface-visibility: hidden;
