@@ -1,5 +1,6 @@
 ---
 title: "No-Code für LiaScript-Kurse?"
+slug: "no-code-fuer-liascript-kurse"
 date: 2025-12-23
 draft: false
 image: "/images/post/no-code-for-liascript.jpg"

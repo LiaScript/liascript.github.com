@@ -1,5 +1,6 @@
 ---
 title: "JSXGraph & LiaScript ... a Perfect Match"
+slug: "jsxgraph-and-liascript-a-perfect-match"
 date: 2025-10-15
 draft: false
 image: "https://jsxgraph.uni-bayreuth.de/home/media/conferences/conf2025.png"

@@ -1,5 +1,6 @@
 ---
 title: "Spec-Driven Development: Was Lehrende von Entwicklern lernen können"
+slug: "spec-driven-development-was-lehrende-von-entwicklern-lernen-koennen"
 date: 2025-11-21
 draft: false
 image: "/images/post/teaching-agent.png"

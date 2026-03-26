@@ -32,7 +32,7 @@ removePathAccents = true
 
 ########################## Permalinks ############################
 [permalinks.page]
-"pages" = "/:slugorfilename/"
+"pages" = "/:slugorcontentbasename/"
 
 
 ########################## Pagination ############################

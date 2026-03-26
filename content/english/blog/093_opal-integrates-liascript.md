@@ -1,5 +1,6 @@
 ---
 title: 'OPAL Integrates LiaScript: A Milestone for Interactive Learning in German Higher Education'
+slug: "opal-integrates-liascript"
 date: 2025-07-15
 draft: false
 author: André Dietrich

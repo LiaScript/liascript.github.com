@@ -1,5 +1,6 @@
 ---
 title: "LiaEx: Funding for the LiaScript-Exporter"
+slug: "liaex-funding-for-the-liascript-exporter"
 date: 2025-10-15
 draft: false
 image: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTJrdW4wbDN0Z2YwcDR6bThsbXM1c2JxMDFjNG11dWpzc2oyeG44dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EdBq6OQN7JUly/giphy.gif"

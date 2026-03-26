@@ -1,10 +1,23 @@
 ---
 title: "LiaEx: From CLI Tool to Full Export Platform"
+slug: "liaex-from-cli-tool-to-full-export-platform"
 date: 2026-03-26
 draft: false
-image: "/images/post/098_banner.png"
-tags: ["OER", "Funding", "BMBFSFJ", "LMS", "Exporter", "SCORM", "xAPI", "Accessibility", "Desktop", "Web"]
-categories: ["News", "Feature"]
+image: "/images/post/liaex-from-cli-tool-to-full-export-platform/banner.png"
+tags:
+    - "OER"
+    - "Funding"
+    - "BMBFSFJ"
+    - "LMS"
+    - "Exporter"
+    - "SCORM"
+    - "xAPI"
+    - "Accessibility"
+    - "Desktop"
+    - "Web"
+categories:
+    - "News"
+    - "Feature"
 author: "Jihad Hyadi"
 description: "As the LiaEx funding sprint draws to a close, here is an overview of what was built: a new desktop app, a web UI, xAPI support, ePub/DOCX export, a GitHub Action, and much more."
 ---
@@ -32,7 +45,9 @@ A central goal of LiaEx was to make the exporter accessible beyond the command l
 
 The desktop app is the most accessible entry point. It runs on **Windows, macOS, and Linux** and requires no Node.js installation or terminal knowledge. Download and install it directly from the [GitHub Releases](https://github.com/LiaScript/LiaScript-Exporter/releases) page. Available packages include `.exe`, `.dmg`, `.AppImage`, `.deb`, `.rpm`, and portable archives for all platforms.
 
-![Desktop App Screenshot](/images/post/liaex-app.png)
+{{< button link="https://github.com/LiaScript/LiaScript-Exporter/releases" label="Download Desktop App" >}}
+
+![Desktop App Screenshot](/images/post/liaex-from-cli-tool-to-full-export-platform/liaex-app.png)
 
 **Web UI (via CLI)**
 
@@ -46,7 +61,7 @@ liaex serve
 This starts the export server on port 3000. The interface allows you to:
 
 - **Upload files** or specify a **Git repository** as your course source
-- Select an export target (Moodle, ILIAS, OPAL, Generic LMS, Web, PDF, ePub, DOCX, xAPI)
+- Select an export target (Moodle, ILIAS, OPAL, Generic LMS, Web, PDF, ePub, DOCX, xAPI, Android APK)
 - Configure advanced format-specific settings
 - Submit export jobs and track their status in an asynchronous queue
 
@@ -55,7 +70,7 @@ This starts the export server on port 3000. The interface allows you to:
 Android exports require the Android SDK, which can be complex to set up locally. A pre-built Docker image is provided for this purpose:
 
 ```bash
-docker pull liascript/exporter
+docker pull liascript/exporter:latest
 docker run --rm -v $(pwd):/work liascript/exporter \
   liaex -f android \
   -i /work/README.md \
@@ -70,6 +85,8 @@ The Docker image can also be used to run the web UI in a self-hosted or institut
 #### 2. New Export Formats
 
 Three new output formats were added alongside the existing SCORM, IMS, Web, PDF, and Android exports:
+
+![Desktop App Screenshot](/images/post/liaex-from-cli-tool-to-full-export-platform/targets.png)
 
 **xAPI (Tin Can API)**
 
@@ -116,33 +133,78 @@ Full documentation is available in [`action/README.md`](https://github.com/LiaSc
 
 #### 4. Improved LMS Compatibility
 
-We significantly expanded and validated SCORM compatibility across real-world LMS platforms. The exporter now includes tested, documented command examples for:
+We significantly expanded and validated SCORM compatibility across real-world LMS platforms. The exporter now includes tested, documented command examples for the following LMS systems:
 
-| LMS | Recommended Command |
-|-----|---------------------|
-| ILIAS | `scorm2004 --scorm-masteryScore 80 --scorm-iframe` |
-| Moodle 3.x | `scorm1.2 --scorm-masteryScore 80 --scorm-iframe` |
-| Moodle 4.x | `scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
-| OPAL | `scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
-| OpenOlat | `scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
-| open edX | `scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
-| learnworlds.com | `scorm2004 --scorm-masteryScore 80 --scorm-iframe` |
+![Preset configurations for different LMS](/images/post/liaex-from-cli-tool-to-full-export-platform/presets.png)
 
-New SCORM options were added: `--scorm-embed` (for Moodle 4 and LMS with strict content security policies), `--scorm-typicalDuration`, and expanded `--scorm-iframe` support.
+Using the following command, you can list all available presets and make them a target for export, without needing to specify all the individual flags:
 
----
+``` text
+$ liaex -f presets
 
-#### 5. Export Presets (YAML Configuration)
+Available Presets:
+
+  🎓  moodle3
+      Moodle3.x - SCORM 1.2
+      Moodle is the world's most widely used open-source learning management
+      system. This configuration uses SCORM 1.2 with embed mode for Moodle 3.x
+      compatibility.
+
+  🎓  moodle4
+      Moodle4.x - SCORM 1.2
+      Moodle is the world's most widely used open-source learning management
+      system. This configuration uses SCORM 1.2 with embed mode for Moodle 4.x
+      compatibility.
+
+  📚  ilias
+      ILIAS - SCORM 1.2
+      ILIAS is a powerful open-source LMS from Germany. This configuration uses
+      SCORM 1.2 for best compatibility with ILIAS versions. Learn more
+
+  🏛️  opal
+      OPAL - SCORM 2004
+      OPAL (Online Platform for Academic Teaching and Learning) is the central
+      LMS for Saxon universities. Optimized for SCORM 2004.
+
+  🌩️  scormCloud
+      ScormCloud - SCORM 2004
+      ScormCloud is a commercial SCORM hosting platform operated by Rustici
+      Software. This configuration provides universal SCORM 2004 settings for
+      maximum compatibility.
+
+  🔓  openolat
+      OpenOlat - SCORM 1.2
+      OpenOlat is an open-source e-learning platform from Switzerland. This
+      configuration uses SCORM 1.2 for full functionality.
+
+  🎯  openedx
+      Open edX - SCORM 2004
+      Open edX is the open-source platform behind edX.org and is used worldwide
+      for MOOCs. Uses SCORM 2004 via the SCORM XBlock.
+
+  🌍  learnworlds
+      LearnWorlds - SCORM 2004
+      LearnWorlds is a modern cloud-based learning platform for online course
+      providers. This configuration uses SCORM 2004 with iframe mode and
+      masteryScore for best compatibility.
+
+
+Usage:
+  liaex -i <input.md> -f presets --<preset-id> [-o <output>]
+  liaex -i <input.md> -f presets --<preset-id> [--scorm-organization "..."] [-o <output>]
+
+Tip: Add format-specific flags to override preset defaults.
+```
 
 To make complex export setups reproducible, we introduced **YAML-based export presets**. Instead of repeating long command flags, you can store your configuration in a file and reference it — particularly useful for project-level batch exports with per-course overrides.
 
----
+If you know a configuration that works well with another specific LMS, please share it with us so we can add it to the list of presets!
+
+{{< button link="https://github.com/LiaScript/LiaScript-Exporter/blob/master/src/presets.yaml" label="View Presets Configuration" >}}
 
 ### Demo
 
 <video src="https://github.com/user-attachments/assets/05ddc764-8522-437a-b569-00b4df7d98b6" controls></video>
-
----
 
 ### Try It Now
 
@@ -150,12 +212,10 @@ All developments described above are already available in the current release:
 
 - **npm:** `npm install -g @liascript/exporter`
 - **Desktop app:** [GitHub Releases](https://github.com/LiaScript/LiaScript-Exporter/releases)
-- **Docker:** `docker pull liascript/exporter`
+- **Docker:** `docker pull liascript/exporter:latest`
 - **Source:** [github.com/LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter)
 
 Contributions, bug reports, and feature suggestions from the community are welcome. The project is maintained openly and is intended to serve educators and OER practitioners across institutional contexts.
-
----
 
 ### Acknowledgments
 
