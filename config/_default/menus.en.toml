@@ -22,7 +22,7 @@ weight = 4
 
 [[main]]
 name = "World-Map"
-pageRef = "world-map"
+pageRef = "pages/world-map"
 weight = 5
 
 [[main]]
@@ -31,55 +31,55 @@ name = "More"
 
 [[main]]
 name = "Imprint"
-pageRef = "imprint"
+pageRef = "pages/imprint"
 weight = 7
 
 [[main]]
 parent = "More"
 name = "VSCode - Editor"
-pageRef = "vscode"
+pageRef = "pages/vscode"
 weight = 1
 
 [[main]]
 parent = "More"
 name = "VSCode-Web - Editor"
-pageRef = "vscode-web"
+pageRef = "pages/vscode-web"
 weight = 2
 
 [[main]]
 parent = "More"
 name = "Atom - Editor"
-pageRef = "atom"
+pageRef = "pages/atom"
 weight = 3
 
 [[main]]
 parent = "More"
 name = "Live - Editor"
-pageRef = "live-editor"
+pageRef = "pages/live-editor"
 weight = 4
 
 [[main]]
 parent = "More"
 name = "Development - Server"
-pageRef = "development-server"
+pageRef = "pages/development-server"
 weight = 5
 
 [[main]]
 parent = "More"
 name = "Exporter"
-pageRef = "exporter"
+pageRef = "pages/exporter"
 weight = 6
 
 [[main]]
 parent = "More"
 name = "Authors"
-pageRef = "authors"
+pageRef = "pages/authors"
 weight = 7
 
 [[main]]
 parent = "More"
 name = "Contact"
-pageRef = "contact"
+pageRef = "pages/contact"
 weight = 7
 
 # footer menu
@@ -90,22 +90,22 @@ weight = 1
 
 [[footer]]
 name = "Newsletter"
-pageRef = "newsletter"
+pageRef = "pages/newsletter"
 weight = 2
 
 [[footer]]
 name = "Contact"
-pageRef = "contact"
+pageRef = "pages/contact"
 weight = 3
 
 
 [[footer]]
 name = "World-Map"
-pageRef = "world-map"
+pageRef = "pages/world-map"
 weight = 4
 
 
 [[footer]]
 name = "Imprint"
-pageRef = "imprint"
+pageRef = "pages/imprint"
 weight = 5
