@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interactive on LiaScript</title><link>https://liascript.github.io/tags/interactive/</link><description>Recent content in Interactive on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/interactive/index.xml" rel="self" type="application/rss+xml"/><item><title>JSXGraph &amp; LiaScript ... a Perfect Match</title><link>https://liascript.github.io/blog/095_jsxgraph-and-liascript-a-perfect-match/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/095_jsxgraph-and-liascript-a-perfect-match/</guid><description>As you know, LiaScript is an extension for Markdown that was developed as a language for easy and decentralized creation of interactive online courses—in short, a language for OER.</description></item><item><title>Fischbestimmer - FISHIDENTIFIER</title><link>https://liascript.github.io/blog/fischbestimmer/</link><pubDate>Wed, 30 Nov 2022 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/fischbestimmer/</guid><description>This is an experiment of porting the FISHIDENTIFIER from the Deutsches Meeresmuseeum Stralsund to LiaScript.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interactive on LiaScript</title><link>https://liascript.github.io/tags/interactive/</link><description>Recent content in Interactive on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/interactive/index.xml" rel="self" type="application/rss+xml"/><item><title>JSXGraph &amp; LiaScript ... a Perfect Match</title><link>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</guid><description>&lt;p&gt;As you know, &lt;a href="https://liascript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; is an extension for Markdown that was developed as a language for easy and decentralized creation of interactive online courses—in short, a language for OER. It adds various features to Markdown which were previously missing, such as the integration of multimedia content, oEmbed sites, the execution of script tags, animations in combination with text-to-speech output to generate a mixture between screencast and interactive textbooks. It does not require an additional compilation step, since the content is directly interpreted within the browser. Additionally, other Markdown dialects often lack the ability to extend the language; in LiaScript this is possible with an additional macro syntax which allows for integrating and mixing external JavaScript, CSS, plus the LiaScript Markdown language.&lt;/p&gt;</description></item><item><title>Fischbestimmer - FISHIDENTIFIER</title><link>https://liascript.github.io/blog/fischbestimmer/</link><pubDate>Wed, 30 Nov 2022 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/fischbestimmer/</guid><description>&lt;p&gt;This is an experiment of porting the FISHIDENTIFIER from the &lt;a href="https://www.meeresmuseum.de"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Deutsches Meeresmuseeum Stralsund&lt;/a&gt; to LiaScript. The original version can be found at:&lt;/p&gt;</description></item></channel></rss>

@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VS Code on LiaScript</title><link>https://liascript.github.io/tags/vs-code/</link><description>Recent content in VS Code on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/vs-code/index.xml" rel="self" type="application/rss+xml"/><item><title>Spec-Driven Development: Was Lehrende von Entwicklern lernen können</title><link>https://liascript.github.io/blog/096_spec-driven-development-was-lehrende-von-entwicklern-lernen-konnen/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/096_spec-driven-development-was-lehrende-von-entwicklern-lernen-konnen/</guid><description>Von der Software-Entwicklung zur Lehre Seit der Veröffentlichung von ChatGPT hat sich die Landschaft der generativen KI rasant entwickelt.</description></item><item><title>Praxisworkshop Erstellung eines E-Learning Kurses mit LiaScript</title><link>https://liascript.github.io/blog/praxisworkshop-erstellung-eines-e-learning-kurses-mit-liascript/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/praxisworkshop-erstellung-eines-e-learning-kurses-mit-liascript/</guid><description>Häufig sind wir so in unsere Arbeitsweisen vertieft, dass wir die Vorteile anderer Perspektiven und Herangehensweisen übersehen.</description></item><item><title>Install Visual Studio Code with LiaScript</title><link>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</link><pubDate>Wed, 18 May 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</guid><description>Due to some problems with package updates for Atom editor, we decided to created two LiaScript extensions for VSCode.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VS Code on LiaScript</title><link>https://liascript.github.io/tags/vs-code/</link><description>Recent content in VS Code on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/vs-code/index.xml" rel="self" type="application/rss+xml"/><item><title>Spec-Driven Development: Was Lehrende von Entwicklern lernen können</title><link>https://liascript.github.io/blog/spec-driven-development-was-lehrende-von-entwicklern-lernen-koennen/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/spec-driven-development-was-lehrende-von-entwicklern-lernen-koennen/</guid><description>&lt;h2 id="von-der-software-entwicklung-zur-lehre"&gt;Von der Software-Entwicklung zur Lehre&lt;/h2&gt;
+&lt;p&gt;Seit der Veröffentlichung von ChatGPT hat sich die Landschaft der generativen KI rasant entwickelt. Doch während wir uns in der Hochschullehre noch fragen, wie wir diese Tools sinnvoll einsetzen können, hat die Softwareentwicklung bereits strukturierte Methoden entwickelt, um mit KI-Agenten effizient zusammenzuarbeiten.&lt;/p&gt;</description></item><item><title>Praxisworkshop Erstellung eines E-Learning Kurses mit LiaScript</title><link>https://liascript.github.io/blog/praxisworkshop-erstellung-eines-e-learning-kurses-mit-liascript/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/praxisworkshop-erstellung-eines-e-learning-kurses-mit-liascript/</guid><description>&lt;p&gt;Häufig sind wir so in unsere Arbeitsweisen vertieft, dass wir die Vorteile anderer Perspektiven und Herangehensweisen übersehen. Genau deshalb empfehlen wir euch den Praxisworkshop von Lennart Rosseburg und Twillo, sie präsentieren in zwei informativen und komprimierten Videos, wie man effizient Online-Kurse erstellt – hierfür brauchen wir sonst wesentlich mehr Zeit. Sehr viel besser wird auch das Zusammenspiel von LiaScript, VSCode und Git/GitHub erläutert. Und über unser didaktisches Konzept sprechen wir lieber nicht 😉&lt;/p&gt;</description></item><item><title>Install Visual Studio Code with LiaScript</title><link>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</link><pubDate>Wed, 18 May 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</guid><description>&lt;p&gt;Due to some problems with package updates for &lt;a href="https://atom.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Atom&lt;/a&gt; editor, we decided to created two &lt;a href="https://LiaScript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; extensions for &lt;a href="https://code.visualstudio.com"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;VSCode&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

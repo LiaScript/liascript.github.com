@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on LiaScript</title><link>https://liascript.github.io/pages/</link><description>Recent content in Pages on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/pages/index.xml" rel="self" type="application/rss+xml"/><item><title>WorldMap</title><link>https://liascript.github.io/world-map/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/world-map/</guid><description>Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.</description></item><item><title>Atom - Editor</title><link>https://liascript.github.io/atom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/atom/</guid><description>Although, the Atom editor is not actively maintained anymore, it is still a great editor for writing Markdown documents.</description></item><item><title>Contact</title><link>https://liascript.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/contact/</guid><description>Get in touch with us via &amp;hellip;
-Gitter: https://app.gitter.im/#/room/#LiaScript_community:gitter.im Twitter: https://twitter.</description></item><item><title>Development - Server</title><link>https://liascript.github.io/development-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/development-server/</guid><description>If you want to use another of your preferred editors, you can also install the development server.</description></item><item><title>Exporter</title><link>https://liascript.github.io/exporter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/exporter/</guid><description>This shall be a generic LiaScript-Exporter that can export educational content into different formats, so that LiaScript courses can also be utilized in different Learning Management Systems (LMS) or Readers for static content (PDF, ePub, &amp;hellip;).</description></item><item><title>Imprint</title><link>https://liascript.github.io/imprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/imprint/</guid><description>Publisher Technische Universität Bergakademie Freiberg
-Akademiestraße 6
-09599 Freiberg, Germany</description></item><item><title>Live - Editor</title><link>https://liascript.github.io/live-editor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/live-editor/</guid><description>The LiveEditor is an entirely browser-based collaborative Editor. It covers nearly all functionalities of other server-based solutions, but in this case, you don&amp;rsquo;t need a server nor a login.</description></item><item><title>Newsletter Subscription</title><link>https://liascript.github.io/newsletter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/newsletter/</guid><description/></item><item><title>VSCode - Editor</title><link>https://liascript.github.io/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode/</guid><description>Installation To install VSCode with LiaScript follow the steps from the following Blog-post.</description></item><item><title>VSCode-Web - Editor</title><link>https://liascript.github.io/vscode-web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode-web/</guid><description>This is a preview module for LiaScript courses developed for the VSCode-Web editor, thus no installation everything is browser-based.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on LiaScript</title><link>https://liascript.github.io/pages/</link><description>Recent content in Pages on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/pages/index.xml" rel="self" type="application/rss+xml"/><item><title>WorldMap</title><link>https://liascript.github.io/world-map/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/world-map/</guid><description>&lt;p&gt;Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
+This is why we have created a world map that shows the locations of projects that have been implemented with LiaScript so far.&lt;/p&gt;</description></item><item><title>Atom - Editor</title><link>https://liascript.github.io/atom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/atom/</guid><description>&lt;p&gt;Although, the Atom editor is not actively maintained anymore, it is still a great editor for writing Markdown documents. Especially if your are dealing with very large documents, the Atom editor outperforms other editors like VS-Code. We still use the Atom editor for our documentation:&lt;/p&gt;</description></item><item><title>Contact</title><link>https://liascript.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/contact/</guid><description>&lt;p&gt;Get in touch with us via &amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gitter:&lt;/strong&gt; &lt;a href="https://app.gitter.im/#/room/#LiaScript_community:gitter.im"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;https://app.gitter.im/#/room/#LiaScript_community:gitter.im&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; &lt;a href="https://twitter.com/LiaScript"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;https://twitter.com/LiaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href="https://github.com/LiaScript"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;https://github.com/LiaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href="mailto:LiaScript@web.de"
+
+
+
+ 
+
+
+&gt;LiaScript@web.de&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YouTube:&lt;/strong&gt; &lt;a href="https://www.youtube.com/@liascript4180"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;https://www.youtube.com/@liascript4180&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Development - Server</title><link>https://liascript.github.io/development-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/development-server/</guid><description>&lt;p&gt;If you want to use another of your preferred editors, you can also install the development server. By running it you can point it to any of your projects and it will deliver a preview the project for you in the browser.&lt;/p&gt;</description></item><item><title>Exporter</title><link>https://liascript.github.io/exporter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/exporter/</guid><description>&lt;p&gt;This shall be a generic LiaScript-Exporter that can export educational content
+into different formats, so that LiaScript courses can also be utilized in
+different Learning Management Systems (LMS) or Readers for static content (PDF,
+ePub, &amp;hellip;). At the moment there is only support for SCORM1.2, as the most
+wide-spread exchange format. See the last section
+&lt;a href="#LMS-Support-List"
+
+
+
+ 
+
+
+&gt;LMS Support List&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Imprint</title><link>https://liascript.github.io/imprint/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/imprint/</guid><description>&lt;h4 id="publisher"&gt;Publisher&lt;/h4&gt;
+&lt;p&gt;Technische Universität Bergakademie Freiberg&lt;/p&gt;
+&lt;p&gt;Akademiestraße 6&lt;br&gt;
+09599 Freiberg, Germany&lt;br&gt;
+Phone: +49 3731 39-0&lt;br&gt;
+Fax: +49 3731 39-3323&lt;br&gt;
+Email: &lt;a href="mailto:universitaet@tu-freiberg.de"
+
+
+
+ 
+
+
+&gt;universitaet@tu-freiberg.de&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Live - Editor</title><link>https://liascript.github.io/live-editor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/live-editor/</guid><description>&lt;p&gt;The LiveEditor is an entirely browser-based collaborative Editor. It covers nearly all functionalities of other server-based solutions, but in this case, you don&amp;rsquo;t need a server nor a login.
+All your notes or courses will be directly stored within your browser.&lt;/p&gt;</description></item><item><title>Newsletter Subscription</title><link>https://liascript.github.io/newsletter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/newsletter/</guid><description>&lt;iframe
+ class="lead mb-0"
+ src="https://fysitech.typeform.com/to/BzcfVu?typeform-embed=embed-widget&amp;amp;embed-opacity=0&amp;amp;typeform-embed-id=0lqgh"
+ style="
+ position: relative;
+ data-qa: iframe;
+ border: 0px none;
+ width: 100%;
+ height: 100%;
+ min-height: 50vh;
+ "
+ frameborder="0"
+&gt;&lt;/iframe&gt;</description></item><item><title>VSCode - Editor</title><link>https://liascript.github.io/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode/</guid><description>&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;p&gt;To install VSCode with LiaScript follow the steps from the following Blog-post.&lt;/p&gt;</description></item><item><title>VSCode-Web - Editor</title><link>https://liascript.github.io/vscode-web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode-web/</guid><description>&lt;p&gt;This is a preview module for &lt;a href="https://LiaScript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; courses developed for the VSCode-Web editor, thus no installation everything is browser-based. If you have a GitHub-account simply follow the steps in the video below to for installation:&lt;/p&gt;</description></item></channel></rss>

@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooltips on LiaScript</title><link>https://liascript.github.io/tags/tooltips/</link><description>Recent content in Tooltips on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 24 Jan 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/tooltips/index.xml" rel="self" type="application/rss+xml"/><item><title>How to activate Tooltips in LiaScript</title><link>https://liascript.github.io/blog/how-to-activate-tooltips-in-liascript/</link><pubDate>Mon, 24 Jan 2022 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/how-to-activate-tooltips-in-liascript/</guid><description>LiaScript has a new tooltip feature, which was inspired by the Wikipedia tooltips, which provide more information about a certain topic if you hover a link with the mouse.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooltips on LiaScript</title><link>https://liascript.github.io/tags/tooltips/</link><description>Recent content in Tooltips on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 24 Jan 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/tooltips/index.xml" rel="self" type="application/rss+xml"/><item><title>How to activate Tooltips in LiaScript</title><link>https://liascript.github.io/blog/how-to-activate-tooltips-in-liascript/</link><pubDate>Mon, 24 Jan 2022 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/how-to-activate-tooltips-in-liascript/</guid><description>&lt;p&gt;&lt;a href="https://liascript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; has a new &lt;a href="https://en.wikipedia.org/wiki/Tooltip"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;tooltip&lt;/a&gt; feature, which was inspired by the Wikipedia tooltips, which provide more information about a certain topic if you hover a link with the mouse. In &lt;a href="https://liascript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; this feature needs to be activated manually, since it requires a little additional bandwidth, but the result is pretty much the same as in &lt;a href="https://en.wikipedia.org/wiki/Wikipedia"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

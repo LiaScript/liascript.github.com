@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on LiaScript</title><link>https://liascript.github.io/tags/web/</link><description>Recent content in Web on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>LiaEx: From CLI Tool to Full Export Platform</title><link>https://liascript.github.io/blog/098_liaex-project-results/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/098_liaex-project-results/</guid><description>Back in October 2025, we announced that LiaEx had received funding through the OE_Sprints program of the German Federal Ministry for Family Affairs, Senior Citizens, Women and Youth (BMBFSFJ).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on LiaScript</title><link>https://liascript.github.io/tags/web/</link><description>Recent content in Web on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>LiaEx: From CLI Tool to Full Export Platform</title><link>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</guid><description>&lt;p&gt;Back in October 2025, we &lt;a href="../094_liaex-funding-for-the-liascript-exporter"
+
+
+
+ 
+
+
+&gt;announced that LiaEx had received funding&lt;/a&gt; through the &lt;a href="https://www.oer-strategie.de/foerdern/foerderrichtlinien/oe_sprints/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;OE_Sprints&lt;/a&gt; program of the German Federal Ministry for Family Affairs, Senior Citizens, Women and Youth (BMBFSFJ). With the project period running from October 15, 2025 to April 14, 2026, the sprint is now in its final stages — and this post provides an overview of the key developments completed so far.&lt;/p&gt;</description></item></channel></rss>

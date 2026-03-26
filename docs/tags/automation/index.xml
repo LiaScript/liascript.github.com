@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automation on LiaScript</title><link>https://liascript.github.io/tags/automation/</link><description>Recent content in Automation on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating Project Websites with LiaScript-Exporter: Automating Index Pages for Multiple Documents</title><link>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</guid><description>In the rapidly evolving landscape of educational technology, creating and managing interactive learning materials efficiently has become increasingly important.</description></item><item><title>Quality Checks on LiaScript with GitHub: Ensuring Document Excellence</title><link>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</guid><description>In today&amp;rsquo;s collaborative educational and documentation environments, ensuring quality isn&amp;rsquo;t just a nice-to-have—it&amp;rsquo;s essential.</description></item><item><title>Automating LiaScript Transformations on GitHub with Enhanced Workflows and Asset Generation</title><link>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</link><pubDate>Tue, 25 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</guid><description>In today’s fast-paced development and educational environments, automation isn’t just a convenience—it’s essential.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automation on LiaScript</title><link>https://liascript.github.io/tags/automation/</link><description>Recent content in Automation on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating Project Websites with LiaScript-Exporter: Automating Index Pages for Multiple Documents</title><link>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</guid><description>&lt;p&gt;In the rapidly evolving landscape of educational technology, creating and managing interactive learning materials efficiently has become increasingly important. In our previous articles, we explored how to &lt;a href="https://liascript.github.io/blog/automating-liascript-transformations-on-github/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;automate LiaScript transformations on GitHub&lt;/a&gt; and implement &lt;a href="https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;quality checks to ensure document excellence&lt;/a&gt;. Now, we&amp;rsquo;re taking the next logical step: creating project websites that serve as organized index pages for multiple LiaScript documents.&lt;/p&gt;</description></item><item><title>Quality Checks on LiaScript with GitHub: Ensuring Document Excellence</title><link>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</guid><description>&lt;p&gt;In today&amp;rsquo;s collaborative educational and documentation environments, ensuring quality isn&amp;rsquo;t just a nice-to-have—it&amp;rsquo;s essential. While our &lt;a href="https://liascript.github.io/blog/automating-liascript-transformations-on-github/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;previous post&lt;/a&gt; showed you how to automate LiaScript transformations, this guide focuses on implementing automated quality checks for your Markdown/LiaScript documents using GitHub. These checks help catch spelling errors, improve writing style, ensure inclusive language, and enhance overall document quality—even if you&amp;rsquo;re just getting started with Git and GitHub.&lt;/p&gt;</description></item><item><title>Automating LiaScript Transformations on GitHub with Enhanced Workflows and Asset Generation</title><link>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</link><pubDate>Tue, 25 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</guid><description>&lt;p&gt;In today’s fast-paced development and educational environments, automation isn’t just a convenience—it’s essential. Automating the transformation of your LiaScript markdown documents into formats like PDF, SCORM, and IMS packages can streamline your workflow and reduce manual effort. In this post, we’ll walk you through setting up GitHub Workflows step by step—even if you’re just getting started with GitHub.&lt;/p&gt;</description></item></channel></rss>

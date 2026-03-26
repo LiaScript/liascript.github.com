@@ -1,1 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub on LiaScript</title><link>https://liascript.github.io/tags/github/</link><description>Recent content in GitHub on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Spec-Driven Development: Was Lehrende von Entwicklern lernen können</title><link>https://liascript.github.io/blog/096_spec-driven-development-was-lehrende-von-entwicklern-lernen-konnen/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/096_spec-driven-development-was-lehrende-von-entwicklern-lernen-konnen/</guid><description>Von der Software-Entwicklung zur Lehre Seit der Veröffentlichung von ChatGPT hat sich die Landschaft der generativen KI rasant entwickelt.</description></item><item><title>Creating Project Websites with LiaScript-Exporter: Automating Index Pages for Multiple Documents</title><link>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</guid><description>In the rapidly evolving landscape of educational technology, creating and managing interactive learning materials efficiently has become increasingly important.</description></item><item><title>Quality Checks on LiaScript with GitHub: Ensuring Document Excellence</title><link>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</guid><description>In today&amp;rsquo;s collaborative educational and documentation environments, ensuring quality isn&amp;rsquo;t just a nice-to-have—it&amp;rsquo;s essential.</description></item><item><title>Automating LiaScript Transformations on GitHub with Enhanced Workflows and Asset Generation</title><link>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</link><pubDate>Tue, 25 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</guid><description>In today’s fast-paced development and educational environments, automation isn’t just a convenience—it’s essential.</description></item><item><title>Why Open Education Needs a Common Language!?</title><link>https://liascript.github.io/blog/why-open-education-needs-a-common-language/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/why-open-education-needs-a-common-language/</guid><description>A better question would be: Why do commercial offerings and e-learning platforms dominate online education and &amp;ldquo;NOT&amp;rdquo; Open Educational Resources (OER)?</description></item><item><title>What Do Poland and Arnold Schwarzenegger Have in Common?</title><link>https://liascript.github.io/blog/what-do-poland-and-arnold-schwarzenegger-have-in-common/</link><pubDate>Tue, 18 Jun 2024 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/what-do-poland-and-arnold-schwarzenegger-have-in-common/</guid><description>&amp;hellip; for translating open textbooks into interactive LiaScript books. But, based on our discussions at the eLearning Africa Conference we realized that there is a need for open textbooks for various purposes.</description></item><item><title>Open Source Community Projects on GitHub versus Traditional Publishing Models for OER</title><link>https://liascript.github.io/blog/open-source-community-projects-on-github-versus-traditional-publishing-models-for-oer/</link><pubDate>Mon, 29 Apr 2024 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/open-source-community-projects-on-github-versus-traditional-publishing-models-for-oer/</guid><description>In this post, I will aim to make a case for Git and GitHub by comparing how &amp;ldquo;traditional&amp;rdquo; publishing models (for OER) can be improved through dynamic, flexible, and transparent open-source community projects.</description></item><item><title>Where is Content Stored?</title><link>https://liascript.github.io/blog/where-is-content-stored/</link><pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/where-is-content-stored/</guid><description>Did you know that LiaScript tries to be agnostic as possible, when it comes to hosting?</description></item><item><title>eLearning Africa 2023</title><link>https://liascript.github.io/blog/elearning-africa-2023/</link><pubDate>Wed, 24 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/elearning-africa-2023/</guid><description>Instant Creation &amp;amp; Publishing of Free and Open Online Courses with LiaScript LiaScript is a language-based approach to free and open education.</description></item><item><title>Promoting your Content</title><link>https://liascript.github.io/blog/promoting-your-content/</link><pubDate>Wed, 01 Jun 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/promoting-your-content/</guid><description>If you want to &amp;ldquo;promote&amp;rdquo; the LiaScript content you have created, or share it with a wider audience, then you can use the following methods.</description></item><item><title>Install Atom with LiaScript (Deprecated)</title><link>https://liascript.github.io/blog/install-atom-with-liascript/</link><pubDate>Wed, 18 May 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/install-atom-with-liascript/</guid><description>This blog entry presents a little workaround and shows how you can still use our two plugins to develop your LiaScript courses offline with the Atom editor.</description></item><item><title>Install Visual Studio Code with LiaScript</title><link>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</link><pubDate>Wed, 18 May 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</guid><description>Due to some problems with package updates for Atom editor, we decided to created two LiaScript extensions for VSCode.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub on LiaScript</title><link>https://liascript.github.io/tags/github/</link><description>Recent content in GitHub on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Spec-Driven Development: Was Lehrende von Entwicklern lernen können</title><link>https://liascript.github.io/blog/spec-driven-development-was-lehrende-von-entwicklern-lernen-koennen/</link><pubDate>Fri, 21 Nov 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/spec-driven-development-was-lehrende-von-entwicklern-lernen-koennen/</guid><description>&lt;h2 id="von-der-software-entwicklung-zur-lehre"&gt;Von der Software-Entwicklung zur Lehre&lt;/h2&gt;
+&lt;p&gt;Seit der Veröffentlichung von ChatGPT hat sich die Landschaft der generativen KI rasant entwickelt. Doch während wir uns in der Hochschullehre noch fragen, wie wir diese Tools sinnvoll einsetzen können, hat die Softwareentwicklung bereits strukturierte Methoden entwickelt, um mit KI-Agenten effizient zusammenzuarbeiten.&lt;/p&gt;</description></item><item><title>Creating Project Websites with LiaScript-Exporter: Automating Index Pages for Multiple Documents</title><link>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/creating-project-websites-with-liascript-exporter/</guid><description>&lt;p&gt;In the rapidly evolving landscape of educational technology, creating and managing interactive learning materials efficiently has become increasingly important. In our previous articles, we explored how to &lt;a href="https://liascript.github.io/blog/automating-liascript-transformations-on-github/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;automate LiaScript transformations on GitHub&lt;/a&gt; and implement &lt;a href="https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;quality checks to ensure document excellence&lt;/a&gt;. Now, we&amp;rsquo;re taking the next logical step: creating project websites that serve as organized index pages for multiple LiaScript documents.&lt;/p&gt;</description></item><item><title>Quality Checks on LiaScript with GitHub: Ensuring Document Excellence</title><link>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/quality-checks-on-liascript-with-github-ensuring-document-excellence/</guid><description>&lt;p&gt;In today&amp;rsquo;s collaborative educational and documentation environments, ensuring quality isn&amp;rsquo;t just a nice-to-have—it&amp;rsquo;s essential. While our &lt;a href="https://liascript.github.io/blog/automating-liascript-transformations-on-github/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;previous post&lt;/a&gt; showed you how to automate LiaScript transformations, this guide focuses on implementing automated quality checks for your Markdown/LiaScript documents using GitHub. These checks help catch spelling errors, improve writing style, ensure inclusive language, and enhance overall document quality—even if you&amp;rsquo;re just getting started with Git and GitHub.&lt;/p&gt;</description></item><item><title>Automating LiaScript Transformations on GitHub with Enhanced Workflows and Asset Generation</title><link>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</link><pubDate>Tue, 25 Mar 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/automating-liascript-transformations-on-github/</guid><description>&lt;p&gt;In today’s fast-paced development and educational environments, automation isn’t just a convenience—it’s essential. Automating the transformation of your LiaScript markdown documents into formats like PDF, SCORM, and IMS packages can streamline your workflow and reduce manual effort. In this post, we’ll walk you through setting up GitHub Workflows step by step—even if you’re just getting started with GitHub.&lt;/p&gt;</description></item><item><title>Why Open Education Needs a Common Language!?</title><link>https://liascript.github.io/blog/why-open-education-needs-a-common-language/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/why-open-education-needs-a-common-language/</guid><description>&lt;p&gt;A better question would be: &lt;strong&gt;Why do commercial offerings and e-learning platforms dominate online education and &amp;ldquo;NOT&amp;rdquo; Open Educational Resources (OER)?&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What Do Poland and Arnold Schwarzenegger Have in Common?</title><link>https://liascript.github.io/blog/what-do-poland-and-arnold-schwarzenegger-have-in-common/</link><pubDate>Tue, 18 Jun 2024 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/what-do-poland-and-arnold-schwarzenegger-have-in-common/</guid><description>&lt;p&gt;&amp;hellip; for translating open textbooks into interactive LiaScript books. But, based on our discussions at the &lt;a href="https://liascript.github.io/blog/elearning-africa-2024"
+
+
+
+ 
+
+
+&gt;eLearning Africa Conference&lt;/a&gt; we realized that there is a need for open textbooks for various purposes. With the &lt;a href="https://liabooks.github.io/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaBooks&lt;/a&gt; project we would like to translate such open textbooks from around the world into LiaScript. This way, we hope to make digital textbooks more accessible, reusable and adaptable for everyone. If you are interested in this project, please feel free to contact us and help us to translate such books into a more interactive format.&lt;/p&gt;</description></item><item><title>Open Source Community Projects on GitHub versus Traditional Publishing Models for OER</title><link>https://liascript.github.io/blog/open-source-community-projects-on-github-versus-traditional-publishing-models-for-oer/</link><pubDate>Mon, 29 Apr 2024 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/open-source-community-projects-on-github-versus-traditional-publishing-models-for-oer/</guid><description>&lt;p&gt;In this post, I will aim to make a case for &lt;a href="https://en.wikipedia.org/wiki/Git"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Git&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/GitHub"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;GitHub&lt;/a&gt; by comparing how &amp;ldquo;traditional&amp;rdquo; publishing models (for OER) can be improved through dynamic, flexible, and transparent open-source community projects.
+So, what can OER learn from open source and how can it be applied?
+GitHub promotes collaborative development and the global exchange of educational materials, supported by powerful tools like Git.
+The platform enables broad quality control through open review processes and facilitates the organization and management of educational projects through specific organizations.
+These characteristics make GitHub a valuable tool for modern educational reform.&lt;/p&gt;</description></item><item><title>Where is Content Stored?</title><link>https://liascript.github.io/blog/where-is-content-stored/</link><pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/where-is-content-stored/</guid><description>&lt;p&gt;Did you know that LiaScript tries to be agnostic as possible, when it comes to hosting? The thing is, you host your content by your own and only refer to it, via a URL-Parameter that you attach to the LiaScript website.&lt;/p&gt;</description></item><item><title>eLearning Africa 2023</title><link>https://liascript.github.io/blog/elearning-africa-2023/</link><pubDate>Wed, 24 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/elearning-africa-2023/</guid><description>&lt;h2 id="instant-creation--publishing-of-free-and-open-online-courses-with-liascript"&gt;Instant Creation &amp;amp; Publishing of Free and Open Online Courses with LiaScript&lt;/h2&gt;
+&lt;p&gt;LiaScript is a language-based approach to free and open education. This workshop will demonstrate how LiaScript can be used to create sustainable and extendable open educational resources (OER) that are interactive, engaging, and even work offline. In contrast to complex user-interfaces and memorising lots of point and click events, participants will work with simple text-files only.&lt;/p&gt;</description></item><item><title>Promoting your Content</title><link>https://liascript.github.io/blog/promoting-your-content/</link><pubDate>Wed, 01 Jun 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/promoting-your-content/</guid><description>&lt;p&gt;If you want to &amp;ldquo;promote&amp;rdquo; the LiaScript content you have created, or share it with a wider audience, then you can use the following methods.&lt;/p&gt;</description></item><item><title>Install Atom with LiaScript (Deprecated)</title><link>https://liascript.github.io/blog/install-atom-with-liascript/</link><pubDate>Wed, 18 May 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/install-atom-with-liascript/</guid><description>&lt;p&gt;This blog entry presents a little workaround and shows how you can still use our two plugins to develop your &lt;a href="https://LiaScript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; courses offline with the Atom editor.
+Unfortunately, it is not possible for us at the moment to update the &lt;a href="https://LiaScript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; packages for &lt;a href="https://atom.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Atom&lt;/a&gt;, we hope this problem will be solved soon.
+On the other hand, it is now also possible to use Visual Studio Code.&lt;/p&gt;</description></item><item><title>Install Visual Studio Code with LiaScript</title><link>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</link><pubDate>Wed, 18 May 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/install-visual-studio-code-with-liascript/</guid><description>&lt;p&gt;Due to some problems with package updates for &lt;a href="https://atom.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Atom&lt;/a&gt; editor, we decided to created two &lt;a href="https://LiaScript.github.io"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; extensions for &lt;a href="https://code.visualstudio.com"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;VSCode&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

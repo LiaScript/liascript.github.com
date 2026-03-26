@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on LiaScript</title><link>https://liascript.github.io/tags/programming/</link><description>Recent content in Programming on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 04 May 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Lua Programming</title><link>https://liascript.github.io/blog/lua-programming/</link><pubDate>Thu, 04 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lua-programming/</guid><description>This example is a port of the Lua programming course from the open wikibook Lua-Programming to LiaScript.</description></item><item><title>How To Code in Python 3</title><link>https://liascript.github.io/blog/how-to-code-in-python-3/</link><pubDate>Fri, 08 Jul 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/how-to-code-in-python-3/</guid><description>This is a port of DigitalOcean’s How To Code in Python 3 tutorial series by Lisa Tagliaferri translated to LiaScript with interactive PyScript examples.</description></item><item><title>Arbeitsbuch PROLOG (German)</title><link>https://liascript.github.io/blog/arbeitsbuch-prolog/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/arbeitsbuch-prolog/</guid><description>Dieses Buch soll in die Programmiersprache PROLOG und in die mit ihr verbundene &amp;lsquo;Logik-programmierung&amp;rsquo; einführen.</description></item><item><title>C-Programmierung (German)</title><link>https://liascript.github.io/blog/c-programmierung/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/c-programmierung/</guid><description>Dies ist eine interaktive Portierung des freien Wikibuches C-Programmierung nach LiaScript.</description></item><item><title>C-Programming</title><link>https://liascript.github.io/blog/c-programming/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/c-programming/</guid><description>This LiaScript book is based on the free Wikibook on C-Programming.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on LiaScript</title><link>https://liascript.github.io/tags/programming/</link><description>Recent content in Programming on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 04 May 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Lua Programming</title><link>https://liascript.github.io/blog/lua-programming/</link><pubDate>Thu, 04 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lua-programming/</guid><description>&lt;p&gt;This example is a port of the Lua programming course from the open wikibook &lt;a href="https://en.wikibooks.org/wiki/Lua_Programming"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Lua-Programming&lt;/a&gt; to LiaScript. It is a fully working Lua programming course, that can be used as a basis for your own course.&lt;/p&gt;</description></item><item><title>How To Code in Python 3</title><link>https://liascript.github.io/blog/how-to-code-in-python-3/</link><pubDate>Fri, 08 Jul 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/how-to-code-in-python-3/</guid><description>&lt;p&gt;This is a port of DigitalOcean’s How To Code in Python 3 tutorial series by Lisa Tagliaferri translated to LiaScript with interactive PyScript examples.&lt;/p&gt;</description></item><item><title>Arbeitsbuch PROLOG (German)</title><link>https://liascript.github.io/blog/arbeitsbuch-prolog/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/arbeitsbuch-prolog/</guid><description>&lt;p&gt;Dieses Buch soll in die Programmiersprache PROLOG und in die mit ihr verbundene
+&amp;lsquo;Logik-programmierung&amp;rsquo; einführen. Die Idee, &amp;lsquo;Logik als eine Programmiersprache&amp;rsquo;
+zu verwenden, führt zu einer völlig neuen Auffassung vom Programmieren: Das
+Programm ist nicht eine Folge von Handlungsanweisungen, sondern eine Sammlung
+von Fakten und Regeln. Das zu lösende Problem wird als eine Anfrage an diese
+Sammlung formuliert. Im Idealfall führt die logisch korrekte Formulierung der
+Regeln und der Anfrage zur Lösung des Problems.&lt;/p&gt;</description></item><item><title>C-Programmierung (German)</title><link>https://liascript.github.io/blog/c-programmierung/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/c-programmierung/</guid><description>&lt;p&gt;Dies ist eine interaktive Portierung des freien Wikibuches &lt;a href="https://de.wikibooks.org/wiki/C-Programmierung"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;C-Programmierung&lt;/a&gt; nach LiaScript.&lt;/p&gt;</description></item><item><title>C-Programming</title><link>https://liascript.github.io/blog/c-programming/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/c-programming/</guid><description>&lt;p&gt;This LiaScript book is based on the free
+&lt;a href="https://en.wikibooks.org/wiki/C_Programming"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Wikibook on C-Programming&lt;/a&gt;.
+It provides a comprehensive look at the C programming language and its
+features. Examples are made interactive by using the
+&lt;a href="https://github.com/liascript/coderunner"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;CodeRunner&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
