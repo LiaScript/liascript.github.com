@@ -73,7 +73,7 @@ weight = 6
 [[main]]
 parent = "More"
 name = "Authors"
-pageRef = "pages/authors"
+pageRef = "authors"
 weight = 7
 
 [[main]]
