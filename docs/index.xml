@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiaScript</title><link>https://liascript.github.io/</link><description>Recent content on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>WorldMap</title><link>https://liascript.github.io/world-map/</link><pubDate>Sat, 28 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/world-map/</guid><description>&lt;p&gt;Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiaScript</title><link>https://liascript.github.io/</link><description>Recent content on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 30 Mar 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>André Dietrich</title><link>https://liascript.github.io/authors/andre-dietrich/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/andre-dietrich/</guid><description>&lt;p&gt;Originally a robotics and embedded software developer now working as a researcher at the &lt;a href="https://www.tu-freiberg.de/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Technical University Bergakademie&lt;/a&gt; in &lt;a href="https://en.wikipedia.org/wiki/Freiberg"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Freiberg&lt;/a&gt;. The current research interests are language design, new web technologies and online education with focus on open educational resources.&lt;/p&gt;</description></item><item><title>Sebastian Zug</title><link>https://liascript.github.io/authors/sebastian-zug/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/sebastian-zug/</guid><description>&lt;p&gt;Sebastian Zug is a Professor at the TU Bergakademie Freiberg. His research interests are focused on outdoor robotics and self-describing, intelligent components.&lt;/p&gt;</description></item><item><title>Jihad Hyadi</title><link>https://liascript.github.io/authors/jihad-hyadi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/jihad-hyadi/</guid><description>&lt;p&gt;Full stack developer at the &lt;a href="https://www.tu-freiberg.de/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;TU Bergakademie Freiberg&lt;/a&gt;, passionate about open and free education. Currently contributing to &lt;a href="https://liascript.github.io/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript&lt;/a&gt; and working on &lt;a href="https://edrys-labs.github.io/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Edrys&lt;/a&gt; — an open platform for remote laboratories in the context of embedded systems education.&lt;/p&gt;</description></item><item><title>WorldMap</title><link>https://liascript.github.io/world-map/</link><pubDate>Mon, 30 Mar 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/world-map/</guid><description>&lt;p&gt;Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
 This is why we have created a world map that shows the locations of projects that have been implemented with LiaScript so far.&lt;/p&gt;</description></item><item><title>LiaEx: From CLI Tool to Full Export Platform</title><link>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</guid><description>&lt;p&gt;Back in October 2025, we &lt;a href="../094_liaex-funding-for-the-liascript-exporter"
 
 
@@ -601,25 +646,7 @@ But the course itself is still a valid Markdown document that can be edited by a
 The interpreter build around the Elm-architecture hides all complexity, such as code evaluation, internal message routing, lazy parsing, etc.&lt;/p&gt;</description></item><item><title>LiaScript: a domain-specific-language for interactive online courses</title><link>https://liascript.github.io/blog/liascript-a-domain-specific-language-for-interactive-online-courses/</link><pubDate>Thu, 19 Sep 2019 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/liascript-a-domain-specific-language-for-interactive-online-courses/</guid><description>&lt;p&gt;This is the first paper published about LiaScript, which was presented at the &lt;em&gt;International Association for Development of the Information Society (IADIS) International Conference on e-Learning 2019&lt;/em&gt; in Porto. It gives an overview of the language and its features, as well as the motivation behind its development.&lt;/p&gt;</description></item><item><title>LiaScript - BearLearn Talk 2019</title><link>https://liascript.github.io/blog/berlearn-talk-2019/</link><pubDate>Thu, 01 Aug 2019 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/berlearn-talk-2019/</guid><description>&lt;p&gt;This is an early example of a LiaScript presentation, that was given as a BearLearn Talk 2019 in Berlin.
 It shows how to create a simple narrative presentations with Text-to-Speech output and animations and more.
 The arguments for creating a markup language for open online-courses are still the same. And if you inspect the course, you will see, that the format of the course has not changed at all, only the URL, the syntax is still the same, we only added more features to the interpreter and improved the presentation.&lt;/p&gt;</description></item><item><title>Umsetzung, Chancen und Herausforderungen von Remote-Laboren (German)</title><link>https://liascript.github.io/blog/umsetzung-chancen-und-herausforderungen-von-remote-laboren/</link><pubDate>Thu, 14 Jun 2018 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/umsetzung-chancen-und-herausforderungen-von-remote-laboren/</guid><description>&lt;p&gt;Aufzeichnung der Webinarreihe &amp;ldquo;Digitalisierung an den Hochschulen Sachsen Anhalt&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Thema:&lt;/strong&gt; &amp;ldquo;„Jederzeit und überall im Labor lernen. Umsetzung, Chancen und Herausforderungen von Remote-Laboren am Beispiel ‚Industrial eLab‘&amp;rdquo; von Jun. Prof. Dr. Sebastian Zug, OVGU Magdeburg und Dr. Anja Hawlitschek, HS Magdeburg-Stendal.&lt;/p&gt;</description></item><item><title>The Vision of LiaScript</title><link>https://liascript.github.io/blog/the-vision-of-liascript/</link><pubDate>Mon, 07 May 2018 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/the-vision-of-liascript/</guid><description>&lt;p&gt;This poster represents one of the earliest publications on LiaScript, showcasing our pioneering ideas on leveraging open-source methodologies to develop Massive Open Online Courses (MOOCs). Over the years, LiaScript has undergone significant evolution, yet the foundational principles, key concepts, and the syntax have steadfastly remained unchanged. We made a minor but crucial modification in our approach to embedding videos; we shifted from using the &lt;code&gt;!!&lt;/code&gt; link syntax to &lt;code&gt;!?&lt;/code&gt;. This change was implemented to avoid confusion with other markdown interpreters and platforms like GitHub, ensuring our examples remain accessible and functional. These examples continue to serve as valuable resources for those looking to craft their own courses.&lt;/p&gt;</description></item><item><title/><link>https://liascript.github.io/authors/jihad-hyadi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/jihad-hyadi/</guid><description>&lt;p&gt;Todo ;-)&lt;/p&gt;</description></item><item><title>André Dietrich</title><link>https://liascript.github.io/authors/andre-dietrich/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/andre-dietrich/</guid><description>&lt;p&gt;Originally a robotics and embedded software developer now working as a researcher at the &lt;a href="https://www.tu-freiberg.de/"
-
-
-
-
- target="_blank"
- 
-
-
-&gt;Technical University Bergakademie&lt;/a&gt; in &lt;a href="https://en.wikipedia.org/wiki/Freiberg"
-
-
-
-
- target="_blank"
- 
-
-
-&gt;Freiberg&lt;/a&gt;. The current research interests are language design, new web technologies and online education with focus on open educational resources.&lt;/p&gt;</description></item><item><title>Atom - Editor</title><link>https://liascript.github.io/atom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/atom/</guid><description>&lt;p&gt;Although, the Atom editor is not actively maintained anymore, it is still a great editor for writing Markdown documents. Especially if your are dealing with very large documents, the Atom editor outperforms other editors like VS-Code. We still use the Atom editor for our documentation:&lt;/p&gt;</description></item><item><title>Contact</title><link>https://liascript.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/contact/</guid><description>&lt;p&gt;Get in touch with us via &amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Thema:&lt;/strong&gt; &amp;ldquo;„Jederzeit und überall im Labor lernen. Umsetzung, Chancen und Herausforderungen von Remote-Laboren am Beispiel ‚Industrial eLab‘&amp;rdquo; von Jun. Prof. Dr. Sebastian Zug, OVGU Magdeburg und Dr. Anja Hawlitschek, HS Magdeburg-Stendal.&lt;/p&gt;</description></item><item><title>The Vision of LiaScript</title><link>https://liascript.github.io/blog/the-vision-of-liascript/</link><pubDate>Mon, 07 May 2018 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/the-vision-of-liascript/</guid><description>&lt;p&gt;This poster represents one of the earliest publications on LiaScript, showcasing our pioneering ideas on leveraging open-source methodologies to develop Massive Open Online Courses (MOOCs). Over the years, LiaScript has undergone significant evolution, yet the foundational principles, key concepts, and the syntax have steadfastly remained unchanged. We made a minor but crucial modification in our approach to embedding videos; we shifted from using the &lt;code&gt;!!&lt;/code&gt; link syntax to &lt;code&gt;!?&lt;/code&gt;. This change was implemented to avoid confusion with other markdown interpreters and platforms like GitHub, ensuring our examples remain accessible and functional. These examples continue to serve as valuable resources for those looking to craft their own courses.&lt;/p&gt;</description></item><item><title>Atom - Editor</title><link>https://liascript.github.io/atom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/atom/</guid><description>&lt;p&gt;Although, the Atom editor is not actively maintained anymore, it is still a great editor for writing Markdown documents. Especially if your are dealing with very large documents, the Atom editor outperforms other editors like VS-Code. We still use the Atom editor for our documentation:&lt;/p&gt;</description></item><item><title>Contact</title><link>https://liascript.github.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/contact/</guid><description>&lt;p&gt;Get in touch with us via &amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Gitter:&lt;/strong&gt; &lt;a href="https://app.gitter.im/#/room/#LiaScript_community:gitter.im"
 
@@ -707,7 +734,7 @@ All your notes or courses will be directly stored within your browser.&lt;/p&gt;
  min-height: 50vh;
  "
  frameborder="0"
-&gt;&lt;/iframe&gt;</description></item><item><title>Ready to build your next project with Hugo?</title><link/><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid/><description/></item><item><title>Sebastian Zug</title><link>https://liascript.github.io/authors/sebastian-zug/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/sebastian-zug/</guid><description>&lt;p&gt;Sebastian Zug is a Professor at the TU Bergakademie Freiberg. His research interests are focused on outdoor robotics and self-describing, intelligent components.&lt;/p&gt;</description></item><item><title>VSCode - Editor</title><link>https://liascript.github.io/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode/</guid><description>&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&gt;&lt;/iframe&gt;</description></item><item><title>Ready to build your next project with Hugo?</title><link/><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid/><description/></item><item><title>VSCode - Editor</title><link>https://liascript.github.io/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode/</guid><description>&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;p&gt;To install VSCode with LiaScript follow the steps from the following Blog-post.&lt;/p&gt;</description></item><item><title>VSCode-Web - Editor</title><link>https://liascript.github.io/vscode-web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode-web/</guid><description>&lt;p&gt;This is a preview module for &lt;a href="https://LiaScript.github.io"
 
 
