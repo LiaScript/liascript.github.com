@@ -1,5 +1,6 @@
 ---
 title: André Dietrich
+weight: 1
 email: LiaScript@web.de
 image: "/images/author/andre-dietrich.jpeg"
 description: Researcher at the TU Bergakademie Freiberg

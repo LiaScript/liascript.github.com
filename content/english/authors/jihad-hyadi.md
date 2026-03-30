@@ -1,5 +1,6 @@
 ---
 title: Jihad Hyadi
+weight: 3
 email: "Jihad.Hyadi@informatik.tu-freiberg.de"
 image: "/images/author/jihad-hyadi.webp"
 description: Full Stack Developer at TU Bergakademie Freiberg

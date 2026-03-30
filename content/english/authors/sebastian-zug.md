@@ -1,5 +1,6 @@
 ---
 title: Sebastian Zug
+weight: 2
 email: Sebastian.Zug@informatik.tu-freiberg.de
 image: "/images/author/sebastian-zug.jpeg"
 description: Professor at the TU Bergakademie Freiberg
