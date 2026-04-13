@@ -21,7 +21,7 @@ Website: [http://tu-freiberg.de](http://tu-freiberg.de)
 #### Legal Form and Representation
 
 Technische Universität Bergakademie Freiberg is a public corporation.
-It is legally represented by the current Rector, Prof. Prof. Dr. Jutta Emes.
+It is legally represented by the current Rector, Prof. Dr. Jutta Emes.
 
 #### Supervisory Authority
 
