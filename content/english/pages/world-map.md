@@ -14,6 +14,17 @@ js:
 Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
 This is why we have created a world map that shows the locations of projects that have been implemented with LiaScript so far.
 
+<style>
+#map .leaflet-pane,
+#map .leaflet-top,
+#map .leaflet-bottom {
+  z-index: 1 !important;
+}
+#map .leaflet-control {
+  z-index: 2 !important;
+}
+</style>
+
 <div id="map" style="height: 60vh"></div>
 
 <script>
