@@ -1,1081 +1,426 @@
 ---
 title: "Exporter"
 meta_title: "LiaScript - Exporter"
-# meta description
-description: "Export your LiaScript courses to different formats."
-# save as draft
+description: "Export your LiaScript courses to SCORM, xAPI, PDF, ePub, DOCX, Android, and more."
 draft: false
 ---
 
-This shall be a generic LiaScript-Exporter that can export educational content
-into different formats, so that LiaScript courses can also be utilized in
-different Learning Management Systems (LMS) or Readers for static content (PDF,
-ePub, ...). At the moment there is only support for SCORM1.2, as the most
-wide-spread exchange format. See the last section
-[LMS Support List](#LMS-Support-List)
-
-{{< youtube yk4uEqoKcpw >}}
-_Example of uploading a LiaScript-course to_
-
+A generic LiaScript-Exporter that converts educational content into different formats, so that LiaScript courses can be used in Learning Management Systems (LMS) or as static documents (PDF, ePub, DOCX, ...).
+Supported formats: SCORM 1.2, SCORM 2004, IMS, xAPI, Web, PDF, ePub, DOCX, Android, Project, RDF.
 
 > __But__, it is still the easiest way to share your courses via
 > __`https://LiaScript.github.io/course/?YOUR_REPO`__. The LiaScript course
 > website is a fully fledged "offline-first" Progressive Web App (PWA), which
-> allows to store all of your courses and states directly within your browser. If
-> you are comming from Android, you can also directly install the website as an
-> app on your device. Actually, there is now need for a BackEnd-system anymore,
-> but if you need to track the progress of you students, you can use this tool...
+> allows to store all of your courses and states directly within your browser.
+> There is no need for a back-end system, but if you need to track student
+> progress, you can use this tool.
 
-## Install
+{{< button link="https://github.com/LiaScript/LiaScript-Exporter/releases" label="Download Desktop App" >}}
+{{< button link="https://github.com/LiaScript/LiaScript-Exporter" label="GitHub Repository" >}}
 
-At the moment this is a simple command-line tool based on NodeJS, thus you will
-have to install NodeJS first, which contains also `npm` the Node Package
-Manager. You can directly download the installer for your system from:
+---
 
-<https://nodejs.org/en/download/>
+## Usage
 
-Afterwards you can open your terminal and type in the following command, this
-will install the LiaScript-Exporter as a global application on your system.
+The LiaScript-Exporter is available in three forms — all driven by the same underlying export engine.
 
-__Install from npm:__
+### 1. Desktop App (recommended)
 
-``` bash
-npm install -g --verbose @liascript/exporter
-```
+Download and install the desktop application for your operating system from the
+[GitHub Releases](https://github.com/LiaScript/LiaScript-Exporter/releases) page.
+No Node.js installation or terminal knowledge required.
+Available packages: `.exe`, `.dmg`, `.AppImage`, `.deb`, `.rpm`, and portable archives.
 
-Depending on your configuration, you might need to run this command with root
-privileges. In my case on Linux it is simply:
+<video src="https://github.com/user-attachments/assets/05ddc764-8522-437a-b569-00b4df7d98b6" controls></video>
 
-``` bash
-sudo npm install -g --verbose @liascript/exporter
-```
+### 2. Web UI (via CLI)
 
-Depending on your configuration, you might need to run this command with root
-privileges. In my case on Linux it is simply:
+Install [Node.js](https://nodejs.org/en/download/) first, then install the exporter globally:
 
 ``` bash
-sudo npm install -g --verbose https://github.com/liaScript/LiaScript-Exporter
+npm install -g @liascript/exporter
 ```
 
-On Windows you might need to run the terminal with administrator-privileges.
+Then start the local web server:
 
-## Basic usage
-
-If you have installed the package, you can now use `liaex` or
-`liascript-exporter`. If you type one of the following commands, you will get
-the following output.
-
-``` shell
-$ liaex
-No input defined
-LiaScript-Exporter
-
--h --help            show this help
--i --input           file to be used as input
--p --path            path to be packed, if not set, the path of the input file is used
--o --output          output file name (default is output), the ending is define by the format
--f --format          scorm1.2, scorm2004, json, fullJson, web, ims, pdf (default is json)
--v --version         output the current version
-
--k --key             responsive voice key 
-
-SCORM settings:
-
---scorm-organization       set the organization title
---scorm-masteryScore       set the scorm masteryScore (a value between 0 -- 100), default is 0
---scorm-typicalDuration    set the scorm duration, default is PT0H5M0S
---scorm-iframe             use an iframe, when a SCORM starting parameter is not working
---scorm-embed              embed the Markdown into the JS code, use in Moodle 4 to handle restrictions with dynamic loading
-
-IMS settings:
-
---ims-indexeddb            Use IndexedDB to store data persistently
-
-WEB settings:
-
---web-iframe               Use an iframed version to hide the course URL.
---web-indexeddb            This will allow to store data within the browser using indexeddb, you can optionally pass a unique key (by default one is generated randomly).
---web-zip                  By default the result is not zipped, you can change this with this parameter.
-
-Android settings:
-
---android-sdk              Specify sdk.dir which is required for building.
---android-appName          Name of the App (Main-title is used as default).
---android-appId            Required to identify your App reverse url such as io.github.liascript
---android-icon             Optional icon with 1024x1024 px
---android-splash           Optional splash image with 2732x2732 px
---android-splashDuration   Duration for splash-screen default 0 milliseconds
---android-preview          Open course in Android-Studio
-
-PDF settings:
-
---pdf-stylesheet           Inject an local CSS for changing the appearance.
---pdf-theme                LiaScript themes: default, turquoise, blue, red, yellow
---pdf-timeout              Set an additional time horizon to wait until finished.
-
-https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.pdfoptions.md
-
---pdf-preview              Open preview-browser (default false), print not possible
---pdf-scale                Scale of the webpage rendering. Defaults to 1. Scale amount must be between 0.1 and 2.
---pdf-displayHeaderFooter  Display header and footer. Defaults to false.
---pdf-headerTemplate       HTML template for the print header, inject classes date, title, url, pageNumber, totalPages
---pdf-footerTemplate       HTML template for the print footer. Should use the same format as the headerTemplate
---pdf-printBackground      Print background graphics. Defaults to false
---pdf-landscape            Paper orientation. Defaults to false.
---pdf-pageRanges           Paper ranges to print, e.g., "1-5, 8, 11-13"
---pdf-format               Paper format. If set, takes priority over width or height options. Defaults to a4.
---pdf-width                Paper width, accepts values labeled with units.
---pdf-height               Paper height, accepts values labeled with units.
---pdf-margin-top           Top margin, accepts values labeled with units.
---pdf-margin-right         Right margin, accepts values labeled with units.
---pdf-margin-bottom        Bottom margin, accepts values labeled with units.
---pdf-margin-left          Left margin, accepts values labeled with units. 
---pdf-preferCSSPageSize    Give any CSS @page size declared in the page priority over what is declared in width and height or format options.
---pdf-omitBackground       Hides default white background and allows capturing screenshots with transparency. Defaults to true.
-
-Project settings:
-
---project-no-meta            Disable the generation of meta information for OpenGraph and Twitter-cards.
---project-no-categories      Disable the filter for categories/tags.
---project-category-blur      Enable this and the categories will be blurred instead of deleted.
---project-generate-pdf       PDFs are automatically generated and added to every card.
---project-generate-scrom12   SCORM12 and pass additional scrom settings.
---project-generate-scrom2004 SCORM2004 and pass additional scrom settings.
---project-generate-ims       IMS resources with additional config settings.
---project-generate-cache     Only generate new files, if they do not exist.
-
-RDF settings:
-
---rdf-format               Output format n-quads, json-ld (defaults to json-ld).
---rdf-preview              Output the result to the console.
---rdf-url                  Refer to an external URL when parsing a local project.
---rdf-type                 Course frm schmema.org is applied as default, overwrite this with EducationalResource, etc.
---rdf-license              Add a license-URL, otherwise if url was provided as input, this will check for an existing LICENSE file.
---rdf-educationalLevel     Typically beginner, intermediate or advanced, and formal sets of level indicators.
+``` bash
+liaex serve
 ```
 
-### SCORM1.2
+This starts the export server on port 3000. The web interface allows you to upload files or specify a Git repository, select an export target, configure advanced settings, and track export jobs in an asynchronous queue.
 
-If you want to generate a SCORM1.2 conformant package of you LiaScript-course,
-use the following command:
+<video src="https://github.com/user-attachments/assets/f9d02a38-f6e0-45ef-b7a1-f9f424f8f318" controls></video>
+
+### 3. CLI
+
+For scripting, automation, or CI/CD pipelines. Once installed via npm, use `liaex` or `liascript-exporter`:
 
 ``` shell
-$ liaex -i project/README.md --format scorm1.2 --output rockOn
-
-..
-project/README.md
-project/Lizenz.md
-..
-[17:8:33] SCORM 'Init'
-[17:8:33] SCORM 'create /tmp/lia202037-30349-o6yx80.zb0eo/pro/imsmanifest.xml'
-[17:8:33] SCORM 'create /tmp/lia202037-30349-o6yx80.zb0eo/pro/metadata.xml'
-[17:8:33] SCORM 'create /tmp/lia202037-30349-o6yx80.zb0eo/pro/adlcp_rootv1p2.xsd'
-[17:8:33] SCORM 'create /tmp/lia202037-30349-o6yx80.zb0eo/pro/ims_xml.xsd'
-[17:8:33] SCORM 'create /tmp/lia202037-30349-o6yx80.zb0eo/pro/imscp_rootv1p1p2.xsd'
-[17:8:33] SCORM 'create /tmp/lia202037-30349-o6yx80.zb0eo/pro/imsmd_rootv1p2p1.xsd'
-[17:8:33] SCORM 'Archiving /tmp/lia202037-30349-o6yx80.zb0eo/pro to rockOn.zip'
-[17:8:34] SCORM 'rockOn.zip 4977779 total bytes'
-Done
-
-$ ls
-.. rockOn.zip ..
+liaex -h
 ```
 
-The format is `scorm1.2` and the input folder is `project/README.md`. All the
-content and sub-folders of this folder is then copied into your SCORM.zip. The
-name is defined by your output definition and contains the current version
-number of you course as well as the current date.
-
-> Note: SCORM 1.2 is too restrictive for storing data (250 Bytes max), that is why we currently
-> only support to store location information, and quizzes or surveys with small
-> footprints. The try it at first with your course, since complex results might
-> be lost after reload.
->
-> Better use __SCORM2004__ as output
-
-__Text 2 Speech `--key`__
-
-If you want to use text2speech, you will have to register your website (where
-the scorm package will be served) at <https://responsivevoice.org/> ... it is free
-for educational and non commercial purposes. After your registration, you will
-get a key in the format of `KluQksUs`. To inject this key into your package,
-simply add the key as a parameter:
+Core options:
 
 ``` shell
-$ liaex -i project/README.md --format scorm1.2 --key KluQksUs --output rockOn
-...
+-h --help     show help
+-i --input    input file (Markdown or YAML for projects)
+-p --path     path to pack (defaults to the input file's directory)
+-o --output   output file name (default: "output"; extension set by format)
+-f --format   scorm1.2, scorm2004, ims, web, pdf, epub, docx, xapi,
+              android, project, rdf, json, fullJson (default: json)
+-s --style    additional CSS to inject
+-v --version  print version
+-k --key      ResponsiveVoice key for text-to-speech
 ```
 
-__Mastery Score `--scorm-masteryScore`__
+<video src="https://github.com/user-attachments/assets/591a6c89-f91e-401f-8b6d-8523f7173d78" controls></video>
 
-You can define the percentage of quizzes and surveys a student had to fullfil
-in order to accomplish or pass the course by adding the `--scorm-masteryScore`
-parameter. Just set it to 0 to allow all to pass the course, otherwise choose a
-value between 0 and 100. All quizzes and surveys are treated equally, thus if
-your course contains 10 quizzes, every quiz counts as 10%. If you do not set
-this parameter, a default value of 80 percent is used.
+### Docker (Android export)
 
-``` shell
-$ liaex -i project/README.md --format scorm1.2 --scorm-masteryScore 0 --output rockOn
-...
+Android exports require the Android SDK. The easiest approach is the pre-built Docker image:
+
+``` bash
+docker pull liascript/exporter
+docker run --rm -v $(pwd):/work liascript/exporter \
+  liaex -f android \
+  -i /work/README.md \
+  --android-appId io.github.liascript.mycourse \
+  --output /work/output
 ```
 
-__Other Root `--path`__
+You can also use Docker to run the web UI:
 
-If your README is not in the root of your project, you can also use the `--path`
-parameter to the directory to be copied into your scorm project. You will still
-have to use `--input` to define the main course document, but his has to be
-relative to path parameter.
+``` bash
+docker run --rm -p 4000:4000 liascript/exporter
+```
 
-__`--scrom-organization`__
+Then open `http://localhost:4000` in your browser.
 
-This parameter simply sets the organization parameter in your SCORM
-`imsmanifest` file. All other parameters are taken from the course
+<video src="https://github.com/user-attachments/assets/10018dad-05b1-46f8-bfda-e5ffa9e81086" controls></video>
 
-__`--scorm-iframe`__
+---
 
-Some LMS like ILIAS or OpenOlat seem to have problems with the required
-`startingParameter` and will not load SCORM1.2 courses properly. To fix this,
-this parameter can be used. It tries to run the course within an additional
-`<iframe>`.
+## Format Reference
 
-### SCORM2004
-
-This output format provides the same settings as `scorm1.2`, but it allows to
-store state information within the backend LMS. Currently supported are the
-states for:
-
-* quizzes
-* surveys
-* tasks
-
-coding elements currently exceed the max storage capacity, that is why these
-are not stored at the moment.
+### SCORM 1.2
 
 ``` shell
-$ liaex -i project/README.md --format scorm2004 --output rockOn
-..
-project/README.md
-project/Lizenz.md
-..
-[12:38:31] SCORM 'Init'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsmanifest.xml'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/metadata.xml'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/XMLSchema.dtd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/adlcp_v1p3.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/adlnav_v1p3.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/adlseq_v1p3.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/datatypes.dtd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imscp_v1p1.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0auxresource.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0control.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0delivery.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0limit.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0objective.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0random.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0rollup.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0seqrule.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/imsss_v1p0util.xsd'
-[12:38:31] SCORM 'create /tmp/lia2022114-556265-d2jh0k.odg7e/pro/xml.xsd'
-[12:38:31] SCORM 'Archiving /tmp/lia2022114-556265-d2jh0k.odg7e/pro to rockOn.zip'
-[12:38:32] SCORM 'rockOn.zip 19588706 total bytes'
-Done
+liaex -i project/README.md --format scorm1.2 --output rockOn
+```
 
-$ ls
-.. rockOn.zip ..
+> Note: SCORM 1.2 is too restrictive for storing data. Only location information is stored;
+> quiz and survey states are lost after reload. Use __SCORM 2004__ if possible.
+
+__`--scorm-masteryScore`__ — percentage of quizzes/surveys a student must complete to pass (0–100, default 80).
+
+__`--scorm-organization`__ — sets the organization title in the `imsmanifest`.
+
+__`--scorm-typicalDuration`__ — expected course duration in ISO 8601 format (e.g. `PT1H30M0S`). Default: `PT0H5M0S`.
+
+__`--scorm-iframe`__ — wraps the course in an `<iframe>` to fix loading issues on ILIAS, OpenOlat, etc.
+
+__`--scorm-embed`__ — embeds the Markdown source into the JS bundle. Use for Moodle 4 and LMS with restrictions on dynamic loading.
+
+__`--lia-subfolder`__ — places course files into a `content/` subfolder; implies `--scorm-embed`.
+
+__`--path`__ — if your README is not at the project root, use this to specify the directory to pack (input path is then relative to it).
+
+__`--key`__ — [ResponsiveVoice](https://responsivevoice.org/) key for text-to-speech (free for educational use).
+
+### SCORM 2004
+
+Same options as SCORM 1.2, but supports persistent storage of quiz, survey, and task states.
+
+``` shell
+liaex -i project/README.md --format scorm2004 --output rockOn
 ```
 
 ### SCORM Examples
 
-Minimal examples for SCORM1.2 and SCORM2004 for tested LMS:
+Tested commands for specific LMS:
 
-| LMS                                                   | Command                                                                                     |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [ILIAS](https://www.ilias.de)                         | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe`             |
-| [learnworlds.com](https://learnworlds.com)            | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe`             |
-| Moodle 3.x                                            | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-iframe`              |
-|                                                       | [YouTube demonstration](https://www.youtube.com/watch?v=yk4uEqoKcpw)                        |
-| Moodle 4.x                                            | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
-| [OPAL](https://www.bps-system.de/opal-lernplattform/) | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
-| [open edX](https://openedx.org)                       | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
-| [OpenOlat](https://www.openolat.com)                  | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed`               |
-| [scrom.cloud](https://app.cloud.scorm.com)            | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe`             |
-|                                                       | Additionally check: Course Properties >> Compatibility Settings >> Wrap SCO Window with API |
+| LMS | Command |
+| --- | ------- |
+| [ILIAS](https://www.ilias.de) | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe` |
+| [learnworlds.com](https://learnworlds.com) | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe` |
+| Moodle 3.x | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-iframe` |
+| Moodle 4.x | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
+| [OPAL](https://www.bps-system.de/opal-lernplattform/) | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
+| [open edX](https://openedx.org) | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
+| [OpenOlat](https://www.openolat.com) | `liaex -i course/README.md -f scorm1.2 --scorm-masteryScore 80 --scorm-embed` |
+| [scorm.cloud](https://app.cloud.scorm.com) | `liaex -i course/README.md -f scorm2004 --scorm-masteryScore 80 --scorm-iframe` |
 
+For even simpler LMS-specific exports, the exporter has built-in presets:
 
+``` shell
+liaex -i course/README.md -f presets --moodle4
+liaex -i course/README.md -f presets --ilias
+liaex -i course/README.md -f presets --opal
+```
+
+Run `liaex -f presets` to list all available presets.
+
+{{< youtube yk4uEqoKcpw >}}
 
 ### IMS Content
 
-IMS Content is a very simplistic packaging format. Which allows you to embed
-your course different LMS. The standard for the packaging format is defined
-[here](https://www.imsglobal.org/content/packaging/index.html).
-
-We currently support the latest v1.1.4 standard.
+A simple packaging format supported by many LMS (IMS v1.1.4).
 
 ``` shell
-$ liaex -i project/README.md --format ims --output course
-..
-project/README.md
-project/Lizenz.md
-..
-6041733 total bytes
-archiver has been finalized and the output file descriptor has closed.
-
-$ ls
-.. course.zip ..
+liaex -i project/README.md --format ims --output course
 ```
 
-__`--ims-indexeddb`:__ By default no states are preserved, which means, if you
-reload the course, all quiz and coding states are destroyed. By using this
-option a course is generated, which stores the content within the browsers local
-`indexeddb`.
+__`--ims-indexeddb`__ — preserves quiz and coding states across reloads using the browser's IndexedDB.
 
-``` shell
-$ liaex -i project/README.md --format ims --output course --ims-indexeddb
-..
-project/README.md
-project/Lizenz.md
-..Project settings:
-
---project-no-meta          Disable the generation of meta information for OpenGraph and Twitter-cards.
---project-no-categories    Disable the filter for categories/tags.
---project-category-blur    Enable this and the categories will be blurred instead of deleted.
---project-generate-pdf     PDFs are automatically generated and added to every card.
-6041733 total bytes
-archiver has been finalized and the output file descriptor has closed.
-
-$ ls
-.. course.zip ..
-```
+__`--lia-subfolder`__ — places course files into a `content/` subfolder.
 
 ### WEB
 
-This format will generate an autonomous & standalone web-project that can be uploaded
-to any webserver.
+Generates a standalone web project that can be uploaded to any web server.
 
 ``` bash
-$ liaex --format web -i project/README.md -o outputFolder
-updating title ...
-updating description ...
-updating logo ...
+liaex --format web -i project/README.md -o outputFolder
 ```
 
-All required sources as well as your project are copied into the `outputFolder` and
-your course-file will be used as the default course. If you have defined the macros
-`comment` and `logo` within your course, these information will also be injected into
-the index.html. Such that, if you share your project via facebook or twitter, this
-information is used to generate preview cards properly.
+__`--web-zip`__ — bundle output into a zip file instead of a folder.
 
-If you want your site to speak the text out loud, then you will have to add your
-responsivevoice-key via `--key`.
+__`--web-iframe`__ — hides the course URL by wrapping it in an iframe (breaks external slide links).
 
-__`--web-zip`:__ Use this parameter to directly bundle all input into a zip
-file instead of a folder.
+__`--web-indexeddb`__ — stores states persistently; optionally pass a key to pin the database to a specific version:
 
-__`--web-iframe`:__ This will put the course into an secondary iframe, which will
-hide the course-URL (the Markdown-file). Unfortunately, it will not be possible
-anymore to link from outside to a specific slide.
-
-__`web-indexeddb`:__ Generate a LiaScript package that will store states persistently.
-By default, the database is generated uniquely for the packed course. That means,
-every update will use a new database, which makes sense, if and only if, typos get
-corrected or content is added to the end of the document. Mixing content and moving
-quizzes and surveys to different slides might cause some problems in restoring the
-state. But you can use this parameter with a key:
-
-```shell
+``` shell
 liaex --format web -i project/README.md -o outputFolder --web-indexeddb someKeyToUse
-updating title ...
-updating description ...
-updating logo ...
 ```
+
+> **Note:** Web exports must be served over HTTP — opening `index.html` directly via `file://` will not work.
+> Preview locally with e.g. `npx serve outputFolder` or `python3 -m http.server --directory outputFolder`.
 
 ### Android
 
-To generate an APK project of your course, you will have to download the
-[Android SDK](https://developer.android.com/studio) at first and provide the path
-via the option `--android-sdk`. Additionally you will have to define an `appId`
-via `--android-appId`, which is in most cases an unique URL (in reverse order)
-that is pointing to your website/project. This export uses
-[capacitorjs](https://capacitorjs.com) to pack the entire LiaScript runtime
-environment and your resources into one installable Android apk.
+> **Tip:** Setting up the Android SDK locally can be complex. Use the [Docker image](#Docker-Android-export) instead.
 
 ``` shell
-$ liaex -f android \
-  -i ../LiaBooks/Arbeitsbuch-Prolog/README.md \
-  --android-sdk /home/andre/Android/Sdk \
-  --android-appId io.github.liascript.arbeitsbuch-prolog
-...
-../LiaBooks/Arbeitsbuch-Prolog
-../LiaBooks/Arbeitsbuch-Prolog/img
-../LiaBooks/Arbeitsbuch-Prolog/img/turtle.png
-...
-added 401 packages, and audited 402 packages in 34s
-
-23 packages are looking for funding
-  run `npm fund` for details
-
-5 moderate severity vulnerabilities
-
-...
-✔ Adding native android project in android in 37.13ms
-✔ add in 38.39ms
-✔ Copying web assets from dist to android/app/src/main/assets/public in 97.33ms
-✔ Creating capacitor.config.json in android/app/src/main/assets in 207.60μs
-✔ copy android in 100.41ms
-✔ Updating Android plugins in 592.70μs
-[info] Found 1 Capacitor plugin for android:
-       @capacitor-community/text-to-speech@1.1.2
-✔ update android in 18.04ms
-✔ Syncing Gradle in 143.57μs
-[success] android platform added!
-Follow the Developer Workflow guide to get building:
-https://capacitorjs.com/docs/basics/workflow
-📦  Capacitor Resources v2.0.5
------------------------------
-
-Checking files and directories...
- ✓  Processing files for: android
- ✓  Icon file ok (1024x1024)
- ✓  Splash file ok (2732x2732)
- ✓  Output directory ok (resources)
-
-Generating files...
- ✓  Generated icon files for android
- ✓  Generated splash files for android
- ✓  Successfully generated all files
-Root path: /tmp/lia202227-209284-1q2g2zd.tn3x
-
-----------------------------------------------
-
-📦  Capacitor resources generated successfully!
-...
-Currently detected usages in: root project 'android', project ':app', project ':capacitor-android', ...
-> Task :app:preBuild UP-TO-DATE
-> Task :app:preDebugBuild UP-TO-DATE
-> Task :capacitor-android:preBuild UP-TO-DATE
-> Task :capacitor-android:preDebugBuild UP-TO-DATE
-> Task :capacitor-android:compileDebugAidl NO-SOURCE
-
-Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
-Use '--warning-mode all' to show the individual deprecation warnings.
-See https://docs.gradle.org/7.0/userguide/command_line_interface.html#sec:command_line_warnings
-
-BUILD SUCCESSFUL in 3s
-103 actionable tasks: 103 executed
-
-DONE
-
-$ ls 
-... output.apk ...
+liaex -f android \
+  -i course/README.md \
+  --android-sdk /home/user/Android/Sdk \
+  --android-appId io.github.liascript.mycourse
 ```
 
-> __Note:__ To achieve better performance and offline capabilities, try to add
-> all resources as local ones to your project (i.e. images, audio,scripts, css).
->
-> If you want to preview the result, simply use `--android-preview`, which will
-> open android-studio
+__`--android-appName`__ — app name (defaults to the course title).
 
-__Still a bit experimental__
+__`--android-icon`__ — optional app icon (1024×1024 px).
+
+__`--android-splash`__ — optional splash image (2732×2732 px).
+
+__`--android-splashDuration`__ — splash screen duration in milliseconds (default: 0).
+
+__`--android-preview`__ — open the result in Android Studio instead of building.
 
 ### PDF
 
-For printing out courses to PDF this package uses
-[puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagepdfoptions),
-which is an entire browser. This blows up the project a bit, but it allows to
-store also the results of iframes, and to run coding examples. What this export
-does is basically load the entire course within a single page and run all
-scripts included, code examples, etc. Videos, iframes, audio, etc. are preserved
-as screenshots, which provide a link to the original resource.
-
-This format has a `--pdf-preview` mode, which allows you to inspect your course,
-which works also with https inputs.
+Uses [Puppeteer](https://github.com/puppeteer/puppeteer) to render the full course as a single page and export it to PDF, including scripts, code examples, and iframes (preserved as screenshots).
 
 ``` shell
-liaex --format pdf --pdf-preview -i https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/00_Einfuehrung.md
-
+liaex --format pdf -i project/README.md -o output
 ```
 
-There are a couple of tweaks, that you can use, have a look at the following
-resource:
+__`--pdf-preview`__ — open an interactive browser preview instead of exporting (works with remote URLs too).
 
-[Puppeteer pdf settings](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagepdfoptions)
+__`--pdf-stylesheet`__ — inject a custom CSS file to override fonts, colors, and LiaScript CSS variables.
 
-__`--pdf-stylesheet`__
+__`--pdf-theme`__ — LiaScript theme: `default`, `turquoise`, `blue`, `red`, `yellow`.
 
-Next to these settings, you can also change the appearance of fonts, colors, etc.
-with you custom CSS. This can define anything, and you can also overwrite all CSS
-variables LiaScript is based on.
+__`--pdf-timeout`__ — additional wait time in ms for rendering to complete (default: 15000).
 
-``` bash
-$ cat custom.css \
-:root {
-    --color-highlight: 2, 255, 0;
-    --color-background: 122, 122, 122;
-    --color-border: 0, 0, 0;
-    --color-highlight-dark: 0, 0, 0;
-    --color-highlight-menu: 0, 0, 0;
-    --color-text: 0, 0, 255;
-    --global-font-size: 1rem;
-    --font-size-multiplier: 2;
-}% 
-$
-$ liaex --format pdf \
-  -o example \
-  --pdf-stylesheet custom.css \
-  -i https://github.com/TUBAF-IfI-LiaScript/VL_ProzeduraleProgrammierung/blob/master/08_Objekte.md
+__`--pdf-scale`__ — webpage scale, between 0.1 and 2 (default: 1).
 
-depending on the size of the course, this can take a while, please be patient...
+__`--pdf-format`__ — paper format, e.g. `A4`, `Letter` (default: A4).
+
+__`--pdf-landscape`__ — landscape orientation (default: false).
+
+__`--pdf-pageRanges`__ — e.g. `"1-5, 8, 11-13"`.
+
+__`--pdf-displayHeaderFooter`__, __`--pdf-headerTemplate`__, __`--pdf-footerTemplate`__ — header/footer with `date`, `title`, `url`, `pageNumber`, `totalPages` classes.
+
+__`--pdf-printBackground`__ — print background graphics (default: false).
+
+__`--pdf-margin-top/right/bottom/left`__ — page margins with units.
+
+__`--pdf-preferCSSPageSize`__ — prioritize `@page` CSS size over format/width/height.
+
+__`--pdf-omitBackground`__ — hide default white background for transparent screenshots (default: true).
+
+### ePub
+
+Renders the course with Puppeteer and packages it as an ePub compatible with most e-readers.
+
+``` shell
+liaex -i project/README.md --format epub --epub-title "My Course" --epub-author "Author Name" --output course
 ```
 
-__`--pdf-theme`__
+__`--epub-title`__ — title of the book (required).
 
-If you want to change only the appearance by defining the LiaScript theme,
-which can be either: default, turquoise, blue, red, yellow.
+__`--epub-author`__ — author name(s), semicolon-separated for multiple (required).
 
-``` bash
-$ liaex --format pdf \
-  -o example \
-  --pdf-theme red \
-  -i https://github.com/TUBAF-IfI-LiaScript/VL_ProzeduraleProgrammierung/blob/master/08_Objekte.md
+__`--epub-publisher`__, __`--epub-description`__, __`--epub-language`__ (default: `en`), __`--epub-version`__ (2 or 3, default: 3).
 
-depending on the size of the course, this can take a while, please be patient...
+__`--epub-cover`__ — path or URL to cover image.
+
+__`--epub-stylesheet`__, __`--epub-theme`__ — custom CSS or LiaScript theme.
+
+__`--epub-fonts`__ — comma-separated paths to custom font files to embed.
+
+__`--epub-toc-title`__ — table of contents title (default: `"Table Of Contents"`).
+
+__`--epub-hide-toc`__ — hide table of contents (default: false).
+
+__`--epub-timeout`__ — additional rendering wait time in ms (default: 15000).
+
+### DOCX
+
+Exports the course as a Microsoft Word document (.docx), compatible with Word 2007+, LibreOffice, and Google Docs.
+
+``` shell
+liaex -i project/README.md --format docx --output course
 ```
 
-__`--pdf-timeout`__
+__`--docx-title`__, __`--docx-author`__, __`--docx-subject`__, __`--docx-description`__, __`--docx-language`__ (default: `en-US`).
 
-You have to be aware, that the PDF generation can be quite time consuming
-especially for large courses with a lot of scripts and code-snippets to be
-executed and multimedia to be loaded. `puppeteer` thus sometimes does not know
-when the course is ready. If the generation fails, you should try to increase
-this value, the default is 30000, which means 30 seconds.
+__`--docx-orientation`__ — `portrait` or `landscape` (default: `portrait`).
 
-``` bash
-$ liaex --format pdf \
-  -o example \
-  --pdf-timeout 50000 \
-  -i https://github.com/TUBAF-IfI-LiaScript/VL_ProzeduraleProgrammierung/blob/master/08_Objekte.md
+__`--docx-font`__ — font name (default: `Arial`). __`--docx-font-size`__ — in half-points (default: 22 = 11pt).
 
-depending on the size of the course, this can take a while, please be patient...
+__`--docx-header`__, __`--docx-header-html`__, __`--docx-footer`__, __`--docx-footer-html`__, __`--docx-page-number`__.
+
+__`--docx-stylesheet`__, __`--docx-theme`__ — custom CSS or LiaScript theme.
+
+__`--docx-timeout`__ — additional rendering wait time in ms (default: 15000).
+
+### xAPI
+
+Generates a self-contained web package with a `tincan.xml` manifest for tracking learning experiences with a Learning Record Store (LRS).
+
+``` shell
+liaex -i project/README.md --format xapi --output course
 ```
+
+__`--xapi-endpoint`__ — LRS endpoint URL.
+
+__`--xapi-auth`__ — LRS authentication string (e.g. `"Basic dXNlcm5hbWU6cGFzc3dvcmQ="`).
+
+__`--xapi-actor`__ — JSON string representing the xAPI actor (default: anonymous).
+
+__`--xapi-course-id`__, __`--xapi-course-title`__ — custom course identifier and title.
+
+__`--xapi-mastery-threshold`__ — mastery score threshold (default: 0.8).
+
+__`--xapi-zip`__ — package the output as a zip file.
+
+__`--lia-subfolder`__ — places course files into a `content/` subfolder.
 
 ### Project
 
-Projects are a way to bundle a collection of courses and to make a custom overview page for it.
+Bundle a collection of courses into a custom overview page. The input is a YAML file:
 
-The input has to be a yaml file that looks like the following one:
+``` yaml
+title: My OER Collection
+comment: A collection of open educational resources
+logo: https://example.org/logo.png
 
-```yml
-title: >
-  <span style="background-color: rgba(0,106,179,0.75); padding: 5px; color: white">
-    My personal OER - collection
-  </span>
-
-comment: >
-  This is used as a subtitle or as a description of your page
-
-logo: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Universitaetsbibliothek_Freiberg_Fassade.jpg/1024px-Universitaetsbibliothek_Freiberg_Fassade.jpg
-
-icon: https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Logo_TU_Bergakademie_Freiberg.svg/242px-Logo_TU_Bergakademie_Freiberg.svg.png
-
-footer: >
-  Simply add a custom footer - that can also contain HTML
-  <a href="https://liascript.github.io" target="_blank">Made with LiaScript</a>
-
-# With this settings you can customize social metadata, og-graph for facebook or twitter
-# if not present, the title, comment, and logo will be used.
-# You can explicitly turn this of with the cmd-parameter --project-no-meta
-meta:
-  title: OER-Collection
-  description: Sammlung der OER Inhalte der Arbeitsgruppe Softwareentwicklung und Robotik (TU Freiberg)
-  #image: url
-
-# A collection is where you put all your courses into, all information, such as title, comment, logo, etc.
-# will be taken from the links that you provide ...
 collection:
-
   - url: https://raw.githubusercontent.com/LiaScript/docs/master/README.md
   - url: https://raw.githubusercontent.com/LiaBooks/LiaScript-Tutorial/main/README.md
-  - url: https://raw.githubusercontent.com/LiaPlayground/LiaScript_WeAreDevelopers2022/main/README.md
-
-  # Additionally it is possible to manually overwrite parameters
-  - url: https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kigali/main/README.md
-    title: eLearning Africa Workshop 2022
-    comment: Shows only an introduction, please follow the links within the course.
-    # logo: https://another_image.jpg
-    # or leave, so that no card-image is added to your preview-cards
-    # logo: 
-
-    # You can manually tag courses, if this has not been done within the main comment of the course.
-    # By default, these tags will be treated as categories, which can be used to navigate through
-    # your courses. To disable this, use the cmd-param --project-no-categories
-    # 
-    # For smaller overviews, you can also use the --project-category-blur parameter.
-    # this will not hide the courses, that do not match, but instead blur them.
+    title: LiaScript Tutorial
     tags:
       - Tutorial
-      - LiaScript
       - OER
-
-  - html: >
-      <hr>
-      <h1>Some content in between</h1>
-      
-      <p>You can add additional content in between to group your course collections or provide more information.</p>
-
-  # If you want to group multiple courses into one sub-collection, then instead of an "-url:"
-  # define another `collection`. All parameters can be changed as above. Additionally you can switch of images or comments,
-  # just by adding an empty attribute. And, it is also possible to add tags to every sub-course.
-  - title: Prozedurale Programmierung
-    comment: todo
-    collection:
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_ProzeduraleProgrammierung/master/00_Einfuehrung.md
-        #title: Rename the current course
-        #logo: Manually set an logo
-        #comment: Add a custom description, this will overwrite the comment within the course
-        # tags will be used for navigation and searching
-        #tags: 
-        # - C++
-        # - Programmierung
-        # - Hardware
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_ProzeduraleProgrammierung/master/01_EingabeAusgabeDatentypen.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_ProzeduraleProgrammierung/master/02_OperatorenKontrollstrukturen.md
-      #- url: ...
-
-  # HTML content can be placed between cards
-  - html: >
-      <hr>
-      <h1>Softwareentwicklung</h1>
-      
-      <p>todo</p>
-
-  - title: Softwareentwicklung
-    comment: Todo
-    grid: true # if you have larger collections and you want them to appear in a grid and not in a row, with some
-               # hidden content, then set the grid-parameter to true.
-    collection:
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/00_Einfuehrung.md
-        logo: # this is used to empty the default image icon
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/01_Software.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/02_DotNet.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/03_CsharpGrundlagenI.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/04_CsharpGrundlagenII.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/05_CsharpGrundlagenIII.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/06_ProgrammflussUndFunktionen.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/07_OOPGrundlagenI.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/08_OOPGrundlagenII.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/09_Vererbung.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/10_AbstrakteKlassenUndInterfaces.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/11_VersionsverwaltungI.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/12_VersionsverwaltungII.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/13_UML_Modellierung.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/14_UML_ModellierungII.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/15_UML_ModellierungIII.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/16_Testen.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/17_Dokumentation_BuildTools.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/18_ContinuousIntegration.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/19_Generics.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/20_Container.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/21_Delegaten.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/22_Events.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/23_Threads.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/24_Tasks.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/25_LINQ.md
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/26_DesignPattern.md
-        arguments:
-          - pdf-format: A3
-          - project-generate-scorm2004: true
-          - scorm-organization: TU-Bergakademie Freiberg
-
-      - url: https://raw.githubusercontent.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/master/27_Anwendungen.md
-        arguments:
-          - project-generate-pdf: false
 ```
-
-Basic usage:
 
 ``` shell
 liaex -i curriculum.yml --format project
-```
-
-If you want to add precompiled pdf to every course, then you simply have to add the `--project-generate-pdf` command.
-Additionally, you can pass any pdf settings to customize the pdf output.
-
-
-``` shell
 liaex -i curriculum.yml --format project --project-generate-pdf --pdf-format A4
 ```
 
-As it is depicted in the last part of the yaml file above, you can manually set or change all parameters.
-Such as, for which projects you want to generate a pdf and pass also all additional parameters.
-Simply pass all arguments as `arguments` with the long name and without the starting dashes.
-This way you can generate a very detailed project configuration and overview.
+__`--project-no-meta`__ — disable OpenGraph/Twitter card meta generation.
 
+__`--project-no-categories`__ — disable category/tag filter.
+
+__`--project-category-blur`__ — blur non-matching courses instead of hiding them.
+
+__`--project-generate-pdf`__ — auto-generate PDFs for every course card.
+
+__`--project-generate-scorm12`__, __`--project-generate-scorm2004`__ — auto-generate SCORM packages.
+
+__`--project-generate-ims`__ — auto-generate IMS packages.
+
+__`--project-generate-cache`__ — skip regenerating files that already exist.
 
 ### RDF & JSON-LD
 
-The LiaScript metainformation can be exported to RDF, either as json-ld or as n-quads. The option `--pdf-preview` generates a console output that can be used to inspect the result. Otherwise the result is stored in a file, defined by `-o`, the file-ending is either `.jsonld` or `.np`, depending on the `--rdf-format`
+Exports LiaScript course metadata as RDF (JSON-LD or n-quads) based on schema.org `Course`.
 
 ``` shell
 liaex --format rdf --rdf-preview -i https://raw.githubusercontent.com/liaScript/docs/master/README.md
-
-{
-  "@context": "http://schema.org",
-  "@id": "https://raw.githubusercontent.com/liaScript/docs/master/README.md",
-  "@type": "Course",
-  "author": {
-    "@type": "Person",
-    "email": "LiaScript@web.de",
-    "name": "André Dietrich"
-  },
-  "description": "This document shall provide an entire compendium and course on the development of Open-courSes with [LiaScript](https://LiaScript.github.io). As the language and the systems grows, also this document will be updated. Feel free to fork or copy it, translations are very welcome...",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://liascript.github.io/img/bg-showcase-1.jpg"
-  },
-  "inLanguage": "en",
-  "name": "LiaScript",
-  "url": "https://LiaScript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md",
-  "version": "22.0.2"
-}
 ```
 
-The result as n-quads looks like this:
+__`--rdf-format`__ — `json-ld` (default) or `n-quads`.
 
-``` shell
-liaex --format rdf --rdf-preview --rdf-format n-quads -i https://raw.githubusercontent.com/liaScript/docs/master/README.md
+__`--rdf-preview`__ — print result to console instead of writing a file.
 
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/author> _:b0 .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/description> "This document shall provide an entire compendium and course on the development of Open-courSes with [LiaScript](https://LiaScript.github.io). As the language and the systems grows, also this document will be updated. Feel free to fork or copy it, translations are very welcome..." .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/image> _:b1 .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/inLanguage> "en" .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/name> "LiaScript" .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/url> "https://LiaScript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md" .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://schema.org/version> "22.0.2" .
-<https://raw.githubusercontent.com/liaScript/docs/master/README.md> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Course> .
-_:b0 <http://schema.org/email> "LiaScript@web.de" .
-_:b0 <http://schema.org/name> "André Dietrich" .
-_:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-_:b1 <http://schema.org/url> "https://liascript.github.io/img/bg-showcase-1.jpg" .
-_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
-```
+__`--rdf-url`__ — inject a remote URL when processing a local file.
 
-If you are working on a local repository and you want to add the remote URL, you can specify `--rdf-url` and run it with a local file as input:
+__`--rdf-type`__ — override the schema type (default: `Course`; e.g. `EducationalResource`).
 
-``` shell
-liaex --format rdf --rdf-preview -i ../LiaBooks/docs/README.md --rdf-url https://raw.githubusercontent.com/liaScript/docs/master/README.md
+__`--rdf-educationalLevel`__ — e.g. `beginner`, `intermediate`, `advanced`.
 
-{
-  "@context": "http://schema.org",
-  "@id": "https://raw.githubusercontent.com/liaScript/docs/master/README.md",
-  "@type": "Course",
-  "author": {
-    "@type": "Person",
-    "email": "LiaScript@web.de",
-    "name": "André Dietrich"
-  },
-  "description": "This document shall provide an entire compendium and course on the development of Open-courSes with [LiaScript](https://LiaScript.github.io). As the language and the systems grows, also this document will be updated. Feel free to fork or copy it, translations are very welcome...",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://liascript.github.io/img/bg-showcase-1.jpg"
-  },
-  "inLanguage": "en",
-  "name": "LiaScript",
-  "url": "https://LiaScript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md",
-  "version": "22.0.2"
-}
-```
+__`--rdf-license`__ — license URL (auto-detected from a `LICENSE` file if not set).
 
----
+__`--rdf-template`__ — URL or local JSON file to use as a base template.
 
-Local course but without `--rdf-url`
-
-``` bash
-liaex --format rdf --rdf-preview -i ../LiaBooks/docs/README.md
-
-{
-  "@context": "http://schema.org",
-  "@type": "Course",
-  "author": {
-    "@type": "Person",
-    "email": "LiaScript@web.de",
-    "name": "André Dietrich"
-  },
-  "description": "This document shall provide an entire compendium and course on the development of Open-courSes with [LiaScript](https://LiaScript.github.io). As the language and the systems grows, also this document will be updated. Feel free to fork or copy it, translations are very welcome...",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://liascript.github.io/img/bg-showcase-1.jpg"
-  },
-  "inLanguage": "en",
-  "name": "LiaScript",
-  "version": "22.0.2"
-}
-```
-
-* `--rdf-type`: By default this type of resource is associated with `Course`, but you can use this param if you want to define `EducationalResource` or something else...
-* `--rdf-educationalLevel`: This is currently not defined, but can be injected, typically these are beginner, intermediate, advanced, ...
-* `--rdf-license`: Use this to specify the URL of the associated license to your course. This tool will automatically check if there is a LICENSE file in your project root and add this.
-
-#### What LiaScript meta-information is used
+The following LiaScript course header fields are used:
 
 ``` markdown
 <!--
 author: Your Name
 email: author@email.com
-comment: Some basic information about your course
-version: 12.0.2
-logo: https://someimageURL.jpg
-tags: keyword 1, keyword 2, keyword 3
+comment: Course description
+version: 1.0.0
+logo: https://example.org/logo.jpg
+tags: keyword 1, keyword 2
 language: en
 -->
-
-# Title of the course
-...
-
+# Course Title
 ```
 
-This will be translated to:
+---
 
-``` json
-{
-  "@context": "http://schema.org",
-  "@id": "https://raw.githubusercontent.com/.../master/README.md",
-  "@type": "Course",
-  "author": {
-    "@type": "Person",
-    "email": "author@email.com",
-    "name": "Your Name"
-  },
-  "description": "Some basic information about your course",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://someimageURL.jpg"
-  },
-  "inLanguage": "en",
-  "name": "Title of the course",
-  "url": "https://LiaScript.github.io/course/?https://raw.githubusercontent.com/.../master/README.md",
-  "version": "12.0.2",
-  "keywords": [
-    "keyword 1",
-    "keyword 2",
-    "keyword 3"
-  ]
-}
+## GitHub Action
+
+Export courses automatically in GitHub workflows on every push:
+
+``` yaml
+name: Export Course
+on: [push]
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Export to SCORM
+      uses: LiaScript/LiaScript-Exporter@master
+      with:
+        input-file: 'README.md'
+        format: 'scorm1.2'
+        output-name: 'my-course'
+        scorm-organization: 'My Organization'
+
+    - name: Upload SCORM package
+      uses: actions/upload-artifact@v4
+      with:
+        name: scorm-package
+        path: '*.zip'
 ```
 
-## TODOs & Contributions
-
-* Further exporter
-
-  * AICC
-  * xAPI
-  * ePub
-
-* Integration into the Atom IDE
-
-* GitHub actions to automate building during push ...
-
-### Custom extensions
-
-If you are interested in creating integrations for other systems by your own,
-you can do this, by defining custom connectors for your target system. They are
-located at
-[src/javascript/connectors](https://github.com/liaScript/LiaScript/tree/master/src/javascript/connectors).
-Actually it is a simple class that inherits all methods from `Base/Connector`,
-which have to be changed in accordance to you system.
-__I will have to document this__
-
-## LMS Support List
-
-Most of the data is taken from:
-
-* <https://www.ispringsolutions.com/supported-lms>
-* <https://en.wikipedia.org/wiki/List_of_learning_management_systems>
-
-| LMS                                | SCORM 1.2 | SCORM 2004 | xAPI    | AICC    | CMI-5 | IMS  | License     |
-| ---------------------------------- | --------- | ---------- | ------- | ------- | ----- | ---- | ----------- |
-| Abara LMS                          | full      | full       |         |         |       |      |             |
-| Absorb LMS                         | full      | full       | full    | full    |       |      |             |
-| Academy LMS                        | full      | full       |         |         |       |      |             |
-| Academy Of Mine                    | full      | full       | full    |         |       |      |             |
-| Accessplanit LMS                   | full      | full       |         |         |       |      |             |
-| Accord LMS                         | full      | full       |         |         |       |      |             |
-| Activate LMS                       |           | full       |         |         |       |      |             |
-| Administrate LMS                   | full      | full       |         |         |       |      |             |
-| Adobe Captivate Prime LMS          | full      |            |         |         |       |      |             |
-| Agylia LMS                         | full      |            | full    |         |       |      |             |
-| Alchemy LMS                        |           | full       |         |         |       |      |             |
-| Alumn-e LMS                        | full      |            |         |         |       |      |             |
-| aNewSpring LMS                     | full      |            |         |         |       |      |             |
-| Asentia LMS                        | full      | full       | full    |         |       |      |             |
-| aTutor                             | full      |            |         |         |       | full | open source |
-| Axis LMS                           | partial   |            |         |         |       |      |             |
-| BIStrainer LMS                     | full      | full       |         |         |       |      |             |
-| BizLibrary LMS                     | full      |            |         |         |       |      |             |
-| Blackboard LMS                     | full      | full       | partial | full    |       |      |             |
-| BlueVolt LMS                       | full      | full       |         | full    |       |      |             |
-| BrainCert LMS                      | full      | full       |         |         |       |      |             |
-| Bridge LMS                         | full      | full       |         | full    |       |      |             |
-| Brightspace LMS                    | full      | full       |         |         |       |      |             |
-| Business Training TV (by Vocam)    | full      | full       | full    |         |       |      |             |
-| Buzz LMS (by Agilix)               | full      | full       |         | partial |       |      |             |
-| Canvas LMS                         | full      | full       |         |         |       |      | open source |
-| CERTPOINT Systems Inc.             | full      | full       |         |         |       |      | proprietary |
-| Chamilo LMS                        | full      |            |         |         |       | full | open source |
-| Claroline                          | full      |            |         |         |       | full | open source |
-| Claromentis LMS                    | full      |            |         |         |       |      |             |
-| chocolateLMS                       | full      |            |         |         |       |      |             |
-| Coggno LMS                         | full      | full       |         |         |       |      |             |
-| Cognology LMS                      | full      |            |         |         |       |      |             |
-| Collaborator LMS                   | full      | full       |         |         |       |      |             |
-| ComplianceWire LMS                 | full      | full       |         |         |       |      |             |
-| Cornerstone LMS                    | partial   | full       |         |         |       |      |             |
-| CourseMill LMS                     | full      | full       |         |         |       |      |             |
-| CoursePark LMS                     | full      | full       |         |         |       |      |             |
-| Coursepath LMS                     | full      | full       | full    |         |       |      |             |
-| Courseplay LMS                     | full      | full       |         |         |       |      |             |
-| CourseSites LMS                    | full      | full       |         |         |       |      |             |
-| CrossKnowledge Learning Suite      | full      | full       |         | full    |       |      |             |
-| Curatr LMS                         | partial   | partial    | full    |         |       |      |             |
-| DigitalChalk LMS                   | full      | no         | full    |         |       |      |             |
-| Desire2Learn                       |           | full       |         |         | full  | full | proprietary |
-| Docebo LMS                         | full      | full       |         | full    |       |      |             |
-| EasyCampus LMS                     | full      |            |         |         |       |      |             |
-| eCollege                           |           |            |         |         |       |      | proprietary |
-| Edmodo                             |           |            |         |         |       |      | proprietary |
-| EduBrite LMS                       | full      | full       |         | full    |       |      |             |
-| EducationFolder LMS                |           |            | full    |         |       |      |             |
-| EduNxt                             | full      | full       |         |         |       |      | proprietary |
-| Eduson LMS                         | partial   |            |         |         |       |      |             |
-| Edvance360 LMS                     | full      |            |         |         |       |      |             |
-| Effectus LMS                       | full      | full       | full    |         |       |      |             |
-| eFront LMS                         | full      |            |         |         |       |      | open source |
-| eLeap LMS                          | full      |            |         |         |       |      |             |
-| ELMO                               | full      |            |         |         |       |      |             |
-| Elsevier Performance Manager LMS   | full      |            |         |         |       |      |             |
-| Emtrain LMS                        | full      | full       |         | full    |       |      |             |
-| Engrade                            |           |            |         |         |       |      | proprietary |
-| eSSential LMS                      | full      |            | full    |         |       |      |             |
-| eTraining TV (by Vocam)            | full      | full       | full    |         |       |      |             |
-| Evolve LMS                         | full      |            |         |         |       |      |             |
-| Exceed LMS                         | full      |            |         |         |       |      |             |
-| ExpertusONE LMS                    | full      | full       |         |         |       |      |             |
-| EZ LCMS                            | full      | full       |         |         |       |      |             |
-| Firmwater LMS                      | full      | full       |         |         |       |      |             |
-| Flora                              | full      | full       |         |         |       |      |             |
-| Forma LMS                          | full      | full       |         |         |       |      |             |
-| Geenio LMS                         | partial   | partial    |         |         |       |      |             |
-| GlobalScholar                      |           |            |         |         |       |      | proprietary |
-| Glow                               |           |            |         |         |       |      | proprietary |
-| GnosisConnect LMS                  | full      | full       |         |         |       |      |             |
-| Google Classroom                   | no        | no         | no      |         |       |      |             |
-| GoSkills LMS                       | full      | full       | full    |         |       |      |             |
-| GO1 LMS                            | full      | full       |         |         |       |      |             |
-| GrassBlade LRS                     | full      | full       | full    |         |       |      |             |
-| Grovo LMS                          | full      | full       | full    |         |       |      |             |
-| GyrusAim LMS                       | full      | full       | full    | full    |       |      |             |
-| HealthStream LMS                   | full      | full       |         |         |       |      |             |
-| HotChalk                           |           |            |         |         |       |      | proprietary |
-| ILIAS LMS                          | full      | full       |         |         |       | full |             |
-| iLMS                               | full      | full       |         | full    |       |      | open source |
-| IMC Learning Suite                 |           | full       |         |         |       |      |             |
-| Informetica LMS                    | full      | full       |         |         |       |      |             |
-| Inquisiq R4 LMS                    | full      | full       |         |         |       |      |             |
-| Intuition Rubicon LMS              | full      |            |         |         |       |      |             |
-| In2itive LMS                       | full      | full       |         |         |       |      |             |
-| ISOtrain LMS                       | full      | full       |         | full    |       |      |             |
-| iSpring Learn                      | full      | full       |         |         |       |      |             |
-| itslearning                        |           |            |         |         |       | full |             |
-| JLMS                               | full      | full       | full    | full    |       |      |             |
-| JoomlaLMS                          | full      | full       |         |         |       |      |             |
-| Kannu                              |           |            |         |         |       |      | proprietary |
-| KMI LMS                            | full      |            | full    |         |       |      |             |
-| LabVine LMS by LTS Health Learning | full      |            |         |         |       |      |             |
-| LAMS                               | partial   |            |         |         |       | full | open source |
-| LatitudeLearning LMS               | full      | full       |         |         |       |      |             |
-| LearnConnect LMS                   | full      |            |         |         |       |      |             |
-| LearnDash LMS                      | no        | no         | no      | full    |       |      |             |
-| LearningCart LMS                   | full      | full       |         |         |       |      |             |
-| learningCentral LMS                | full      | full       | full    | full    |       |      |             |
-| LearningZen LMS                    | full      | full       | full    |         |       |      |             |
-| Learning Locker LRS                |           |            | full    |         |       |      |             |
-| learnPro LCMS                      | full      |            |         |         |       |      |             |
-| LearnUpon LMS                      | full      |            | full    |         |       |      |             |
-| LearnWorlds LMS                    | full      | full       |         |         |       |      |             |
-| Learn-WiseGo LMS                   |           | full       |         |         |       |      |             |
-| LifterLMS                          |           |            | full    |         |       |      |             |
-| Litmos LMS                         | full      |            | full    |         |       |      |             |
-| LMS365                             | full      | full       |         |         |       |      |             |
-| LON-CAPA                           | partial   |            |         |         |       |      | open source |
-| MATRIX LMS                         | full      |            |         |         |       |      |             |
-| Meridian LMS                       | full      | full       |         |         |       |      |             |
-| Mobile Agility LMS                 | full      | full       |         |         |       |      |             |
-| Moodle LMS                         | full      | full       |         | partial |       | full |             |
-| MOS Chorus LMS                     |           | full       |         |         |       |      |             |
-| Myicourse LMS                      | partial   | partial    |         |         |       |      |             |
-| MySkillpad LMS                     | full      | full       |         |         |       |      |             |
-| NEO LMS                            | full      |            |         |         |       |      |             |
-| NetDimensions Learning             | full      | full       |         | full    |       |      |             |
-| Nimble LMS                         | full      |            |         |         |       |      |             |
-| Ninth Brain LMS                    | full      | full       | full    |         |       |      |             |
-| OLAT LMS                           | full      | full       |         |         |       | full |             |
-| OPAL                               | full      | no         |         |         |       | full |             |
-| Open edx                           | full      |            |         |         |       |      | open source |
-| OpenOLAT                           | full      |            |         |         |       | full | open source |
-| Opigno LMS                         | full      | full       |         |         |       |      |             |
-| Oracle Taleo Learn Cloud Service   | full      | full       |         | full    |       |      |             |
-| Paradiso LMS                       | full      | full       |         |         |       |      |             |
-| Percepium LMS                      | full      | full       |         |         |       |      |             |
-| Percolate LMS                      | full      | full       |         |         |       |      |             |
-| Prosperity LMS                     | full      | full       |         |         |       |      |             |
-| RISC's Virtual Training Assistant  | full      | full       | full    | full    | full  |      |             |
-| Saba LMS                           | full      | full       |         | full    |       |      |             |
-| Sakai LMS                          | full      | full       |         |         |       |      |             |
-| SAP SuccessFactors LMS             | full      | full       |         | full    |       |      | proprietary |
-| ScholarLMS                         | full      | full       | full    |         |       |      |             |
-| Schoology LMS                      | full      | full       |         |         |       |      | proprietary |
-| Schoox LMS                         | full      | full       |         |         |       |      |             |
-| ShareKnowledge LMS                 | full      | full       |         |         |       |      |             |
-| Shika LMS                          | full      | full       |         |         |       |      |             |
-| SilkRoad LMS                       | full      | full       |         | full    |       |      |             |
-| Simplify LMS                       | full      |            | full    |         |       |      |             |
-| Skilljar LMS                       | full      |            |         |         |       |      |             |
-| Skillsoft                          |           |            |         |         |       |      | proprietary |
-| SkillsServe LMS                    | full      | full       |         |         |       |      |             |
-| SmarterU LMS                       | full      | full       |         | full    |       |      |             |
-| Spongelab                          |           |            |         |         |       |      | proprietary |
-| SuccessFactors                     |           |            |         |         |       |      | proprietary |
-| SumTotal LMS (by SkillSoft)        | full      | full       |         | full    |       |      | proprietary |
-| SWAD                               |           |            |         |         |       |      | open source |
-| SwiftLMS                           | full      | full       |         |         |       |      |             |
-| Syberworks LMS                     |           |            |         |         |       |      |             |
-| Syfadis Suite LMS                  | full      | full       |         |         |       |      |             |
-| Thinking Cap LMS                   | full      | full       |         |         |       |      |             |
-| TalentLMS                          | full      | no         | full    |         |       |      |             |
-| Taleo                              | full      | full       |         | partial |       |      | proprietary |
-| TCManager LMS                      | full      |            |         |         |       |      |             |
-| Techniworks LMS                    | full      | full       |         |         |       |      |             |
-| Thinkific LMS                      |           |            |         |         |       |      |             |
-| TOPYX LMS                          | full      | full       |         |         |       |      |             |
-| Torch LMS                          | full      | full       | full    | full    |       |      |             |
-| Totara LMS                         | full      |            |         |         |       |      |             |
-| Udutu LMS                          | full      | full       |         |         |       |      |             |
-| UpGraduate LMS                     | full      | full       | full    | full    |       |      |             |
-| UpsideLMS                          | full      | full       | partial |         |       |      |             |
-| Uzity                              |           |            |         |         |       |      | proprietary |
-| ViewCentral LMS                    | full      |            |         |         |       |      |             |
-| viLMS                              | full      | full       |         |         |       |      |             |
-| Vowel LMS                          | full      | full       |         |         |       |      |             |
-| Watershed LRS                      |           |            | full    |         |       |      |             |
-| Wax LRS                            |           |            | full    |         |       |      |             |
-| WBTServer LMS                      |           | full       |         |         |       |      |             |
-| WebCampus LMS                      | full      |            |         |         |       |      |             |
-| WeBWorK                            |           |            |         |         |       |      | open source |
-| WestNet MLP                        | partial   | partial    | partial |         |       |      |             |
-| wizBank e-Learning Platform        | full      | full       |         |         |       |      |             |
-| WizIQ LMS                          | partial   | partial    |         |         |       |      |             |
-| Workday LMS                        | full      | full       |         |         |       |      |             |
-| WorkWize LMS                       | full      |            |         |         |       |      |             |
-| xapiapps LMS                       | full      | full       | full    |         |       |      |             |
-| 360Learning LMS                    | full      | full       |         |         |       |      |             |
+Full documentation: [`action/README.md`](https://github.com/LiaScript/LiaScript-Exporter/blob/master/action/README.md)
