@@ -21,9 +21,20 @@ pageRef = "about"
 weight = 4
 
 [[main]]
+name = "Community"
+weight = 5
+
+[[main]]
+parent = "Community"
 name = "World-Map"
 pageRef = "pages/world-map"
-weight = 5
+weight = 1
+
+[[main]]
+parent = "Community"
+name = "Community Graph"
+pageRef = "pages/community-graph"
+weight = 2
 
 [[main]]
 weight = 6
@@ -104,8 +115,13 @@ name = "World-Map"
 pageRef = "pages/world-map"
 weight = 4
 
+[[footer]]
+name = "Community Graph"
+pageRef = "pages/community-graph"
+weight = 5
+
 
 [[footer]]
 name = "Imprint"
 pageRef = "pages/imprint"
-weight = 5
+weight = 6
