@@ -4,7 +4,7 @@ slug: "mermaid-diagrams-in-liascript"
 date: 2026-05-27
 draft: false
 author: "André Dietrich"
-image: "/images/post/templates/mermaid.png"
+image: "https://opengraph.githubassets.com/1/LiaTemplates/mermaid_template"
 categories:
     - Template
     - Tutorial
