@@ -1,0 +1,20 @@
+{{/*
+  liascript-show – LiaScript LiveEditor shortcode für externe Dateien (show/file Modus)
+
+  Öffnet eine externe LiaScript-Datei (z.B. ein GitHub-Raw-URL) im LiveEditor.
+
+  Verwendung:
+    {{< liascript-show "https://raw.githubusercontent.com/LiaTemplates/ABCjs/main/README.md" >}}
+    {{< liascript-show url="https://raw.githubusercontent.com/..." >}}
+
+  Optionaler Parameter:
+    height="80vh"  (Standard)
+*/}}
+
+{{ $height := (.Get "height") | default "80vh" }}
+{{ $url := .Get "url" | default (index .Params 0) }}
+{{ $src := printf "https://liascript.github.io/LiveEditor/?/show/file/%s" $url }}
+
+<iframe
+  style="height: {{ $height }}; min-width: 100%; border: 1px black solid"
+  src="{{ $src }}"></iframe>

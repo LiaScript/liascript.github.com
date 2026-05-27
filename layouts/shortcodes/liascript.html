@@ -1,0 +1,41 @@
+{{/*
+  liascript – LiaScript LiveEditor embed shortcode (embed/code Modus)
+
+  Eingebetteter Quelltext wird als base64 kodiert und als embed/code URL geöffnet.
+
+  Verwendung:
+    {{< liascript >}}
+    <!--
+    import: https://...
+    -->
+
+    # Titel
+
+    ``` abc
+    X: 1
+    ...
+    ```
+    @ABCJS.render
+    {{< /liascript >}}
+
+  Optionale Parameter:
+    height="80vh"   (Standard)
+    mode=""         Editor + Vorschau (Standard)
+    mode="edit"     nur Editor
+    mode="preview"  nur Vorschau
+*/}}
+
+{{ $height := (.Get "height") | default "80vh" }}
+{{ $mode := .Get "mode" | default "" }}
+{{ $suffix := "" }}
+{{ if eq $mode "edit" }}
+  {{ $suffix = "/edit" }}
+{{ else if eq $mode "preview" }}
+  {{ $suffix = "/preview" }}
+{{ end }}
+{{ $code := trim .Inner "\n" }}
+{{ $src := printf "https://liascript.github.io/LiveEditor/?/embed/code%s/%s" $suffix ($code | base64Encode) }}
+
+<iframe
+  style="height: {{ $height }}; min-width: 100%; border: 1px black solid"
+  src="{{ $src }}"></iframe>
