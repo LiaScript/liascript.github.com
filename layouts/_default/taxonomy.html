@@ -1,0 +1,53 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <!-- blog posts -->
+        <div class="lg:col-8">
+          <div class="row" id="taxonomy-post-list">
+            {{ range .Data.Pages }}
+              {{ $pageTags := slice }}
+              {{ range .Params.tags }}
+                {{ $pageTags = $pageTags | append (urlize .) }}
+              {{ end }}
+              <div class="md:col-6 mb-14 post-card" data-tags="{{ delimit $pageTags "," }}">
+                {{ partial "components/blog-card" . }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+        <!-- sidebar -->
+        <div class="lg:col-4">
+          <!-- widget -->
+          {{ $widget:= site.Params.widgets.sidebar }}
+          {{ partial "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var activeTag = params.get('tag');
+
+      if (activeTag) {
+        document.querySelectorAll('#taxonomy-post-list .post-card').forEach(function (card) {
+          var tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+          card.style.display = tags.indexOf(activeTag) === -1 ? 'none' : '';
+        });
+      }
+
+      document.querySelectorAll('.tag-filter-link').forEach(function (link) {
+        var linkTag = new URL(link.href).searchParams.get('tag');
+        if (linkTag === activeTag) {
+          link.classList.remove('bg-white', 'dark:bg-darkmode-body');
+          link.classList.add('bg-primary', 'text-white', 'dark:bg-darkmode-primary', 'dark:text-text-dark');
+        }
+      });
+    })();
+  </script>
+{{ end }}

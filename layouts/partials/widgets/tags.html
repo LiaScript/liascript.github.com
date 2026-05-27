@@ -1,0 +1,49 @@
+<!-- tags -->
+{{ if isset site.Taxonomies "tags" }}
+  {{/* On category term pages, collect only tags present in this category's posts */}}
+  {{ $filterByCategory := and (eq .Kind "term") (eq .Type "categories") }}
+  {{ $categoryTagNames := slice }}
+  {{ if $filterByCategory }}
+    {{ range .Data.Pages }}
+      {{ range .Params.tags }}
+        {{ $categoryTagNames = $categoryTagNames | append (urlize .) }}
+      {{ end }}
+    {{ end }}
+    {{ $categoryTagNames = $categoryTagNames | uniq }}
+  {{ end }}
+
+  {{ $tags := site.Taxonomies.tags }}
+  {{ if not (eq (len $tags) 0) }}
+    <div class="mb-8">
+      <h5 class="mb-6">{{ T "tags" }}</h5>
+      <div class="bg-light dark:bg-darkmode-light rounded p-6">
+        <ul>
+          {{ if $filterByCategory }}
+            <li class="inline-block">
+              <a class="tag-filter-link hover:bg-primary dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark m-1 block rounded bg-white px-3 py-1 hover:text-white"
+                 href="{{ $.RelPermalink }}">All</a>
+            </li>
+          {{ end }}
+          {{ range $name, $items := $tags }}
+            {{ if or (not $filterByCategory) (in $categoryTagNames $name) }}
+              <li class="inline-block">
+                {{ if $filterByCategory }}
+                  <a class="tag-filter-link hover:bg-primary dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark m-1 block rounded bg-white px-3 py-1 hover:text-white"
+                     href="?tag={{ $name }}">
+                    {{ $items.Page.Title }}
+                  </a>
+                {{ else }}
+                  {{ $isActive := and (eq $.Kind `term`) (eq $.Type `tags`) (eq $.Title $items.Page.Title) }}
+                  <a class="hover:bg-primary hover:text-white dark:hover:bg-darkmode-primary dark:hover:text-text-dark m-1 block rounded px-3 py-1 {{ if $isActive }}bg-primary text-white dark:bg-darkmode-primary dark:text-text-dark{{ else }}bg-white dark:bg-darkmode-body{{ end }}"
+                     href="{{ $items.Page.RelPermalink }}">
+                    {{ $items.Page.Title }}
+                  </a>
+                {{ end }}
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
