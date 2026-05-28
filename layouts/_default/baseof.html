@@ -13,6 +13,10 @@
     {{ partial "jsonld-home.html" . }}
 
 
+    {{ if .Params.liascript }}
+      <link rel="preconnect" href="https://liascript.github.io">
+    {{ end }}
+
     <!-- style (always cache it) -->
     {{ partialCached "essentials/style.html" . }}
 
