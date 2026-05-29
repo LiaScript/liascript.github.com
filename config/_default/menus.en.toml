@@ -6,23 +6,28 @@ url = "https://liascript.github.io/course/"
 weight = 1
 
 [[main]]
+name = "Templates"
+pageRef = "categories/template/"
+weight = 2
+
+[[main]]
 name = "LiveEditor"
 url = "https://liascript.github.io/LiveEditor"
-weight = 2
+weight = 3
 
 [[main]]
 name = "Blog"
 pageRef = "blog"
-weight = 3
+weight = 4
 
 [[main]]
 name = "About"
 pageRef = "about"
-weight = 4
+weight = 5
 
 [[main]]
 name = "Community"
-weight = 5
+weight = 6
 
 [[main]]
 parent = "Community"
@@ -37,13 +42,14 @@ pageRef = "pages/community-graph"
 weight = 2
 
 [[main]]
-weight = 6
+weight = 7
 name = "More"
 
 [[main]]
+parent = "More"
 name = "Imprint"
 pageRef = "pages/imprint"
-weight = 7
+weight = 8
 
 [[main]]
 parent = "More"
