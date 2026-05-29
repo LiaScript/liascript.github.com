@@ -5,13 +5,13 @@
     {{- if not (hasPrefix $image "http") -}}
       {{- $resourcePath := strings.TrimPrefix "/" $image -}}
       {{- with resources.Get $resourcePath -}}
-        {{- $resized := .Fill "400x234 q85" -}}
+        {{- $resized := .Fill "400x200 q85" -}}
         {{- $imageUrl = $resized.RelPermalink -}}
       {{- end -}}
     {{- end -}}
     <div
       class="mb-6 image-container rounded"
-      style="background-image: url('{{ $imageUrl }}'); height: 234px; width: 100%; border: 1px solid black; background-position: center; background-size: cover;"></div>
+      style="background-image: url('{{ $imageUrl }}'); aspect-ratio: 2/1; width: 100%; border: 1px solid black; background-position: center; background-size: cover;"></div>
   {{ end }}
   <h4 class="mb-3">
     <a href="{{ .RelPermalink }}">
