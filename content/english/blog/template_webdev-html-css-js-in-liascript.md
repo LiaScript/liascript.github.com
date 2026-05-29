@@ -4,7 +4,7 @@ slug: "webdev-html-css-js-in-liascript"
 date: 2026-05-28
 draft: false
 author: "André Dietrich"
-image: "https://wiki.selfhtml.org/images/thumb/7/78/HTML-CSS-JS.svg/400px-HTML-CSS-JS.svg.png"
+image: "https://opengraph.githubassets.com/1/LiaTemplates/WebDev"
 categories:
     - Template
     - Tutorial

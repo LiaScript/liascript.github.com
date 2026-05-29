@@ -4,7 +4,7 @@ slug: "lua-scripting-in-liascript"
 date: 2026-05-28
 draft: false
 author: "André Dietrich"
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/480px-Lua-Logo.svg.png"
+image: "https://opengraph.githubassets.com/1/LiaTemplates/Lua"
 categories:
     - Template
     - Tutorial

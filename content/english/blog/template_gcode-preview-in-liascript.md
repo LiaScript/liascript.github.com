@@ -4,7 +4,7 @@ slug: "gcode-preview-in-liascript"
 date: 2026-05-27
 draft: false
 author: "André Dietrich"
-image: "https://raw.githubusercontent.com/LiaTemplates/gcode-preview/main/example/eiffel-tower.png"
+image: "https://opengraph.githubassets.com/1/LiaTemplates/gcode-preview"
 categories:
     - Template
     - Case Study
