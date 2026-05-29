@@ -17,6 +17,8 @@ tags:
     - No Server
     - Higher Education
 
+liascript: true
+
 description: "Use the SQLite template to create, query, import, and export SQL databases directly inside LiaScript courses — no server, no setup, just SQL in the browser."
 ---
 

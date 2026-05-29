@@ -13,6 +13,8 @@ tags:
     - Interactive
     - Quizzes
     - H5P
+liascript: true
+
 description: "Embed H5P interactive activities — quizzes, videos, presentations, games — directly in LiaScript courses using a simple iframe. A proof-of-concept for integrating H5P content from h5p.org or any LRS."
 ---
 

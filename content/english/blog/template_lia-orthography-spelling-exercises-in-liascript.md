@@ -15,6 +15,8 @@ tags:
     - Interactive
     - Teachers
     - No Server
+liascript: true
+
 description: "Create interactive spelling correction and dictation exercises in LiaScript with lia-orthography — inline correction, full-text editing with diff feedback, and narrated dictation gaps."
 ---
 

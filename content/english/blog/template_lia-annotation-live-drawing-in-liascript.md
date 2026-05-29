@@ -14,6 +14,8 @@ tags:
     - Teachers
     - No Server
     - Interactive
+liascript: true
+
 description: "Add a freehand drawing overlay to every LiaScript slide with lia-annotation — pen, eraser, undo/redo, and optional LaTeX OCR for handwritten quiz answers, all in presentation mode."
 ---
 

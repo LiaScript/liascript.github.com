@@ -14,6 +14,8 @@ tags:
     - Visualization
     - STEM
     - No Server
+liascript: true
+
 description: "Use the KekuleJS template to render 2D and 3D chemical structure formulas, interactive periodic tables, and molecular files directly in LiaScript — no plugins required."
 ---
 

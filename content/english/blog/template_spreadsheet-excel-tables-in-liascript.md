@@ -14,6 +14,8 @@ tags:
     - Data Science
     - Teachers
     - No Server
+liascript: true
+
 description: "Embed fully interactive spreadsheets with formulas, dropdowns, checkboxes, and multiple worksheets directly in LiaScript — powered by JSSpreadsheet, no backend required."
 ---
 

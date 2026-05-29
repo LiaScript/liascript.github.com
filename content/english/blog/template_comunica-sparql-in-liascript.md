@@ -17,6 +17,8 @@ tags:
     - Developers
     - No Server
 
+liascript: true
+
 description: "Use the Comunica template to write and execute SPARQL queries against live knowledge graphs and custom RDF datasets — directly in your LiaScript course, with no server needed."
 ---
 

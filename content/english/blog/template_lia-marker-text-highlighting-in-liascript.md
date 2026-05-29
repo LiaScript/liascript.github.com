@@ -15,6 +15,8 @@ tags:
     - Teachers
     - Language Learning
     - No Server
+liascript: true
+
 description: "Add interactive text highlighting to LiaScript courses with lia-marker — students color-code words in six colors, while quiz macros verify that the right terms are highlighted in the right color."
 ---
 

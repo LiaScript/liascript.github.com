@@ -14,6 +14,8 @@ tags:
     - Programming
     - Students
 
+liascript: true
+
 description: "Use the TinyTurtle template to introduce JavaScript through interactive turtle graphics in your LiaScript courses — ideal for beginners, with an optional live command terminal."
 ---
 

@@ -14,6 +14,8 @@ tags:
     - TVET
     - WebSerial
     - Developers
+liascript: true
+
 description: "Use the WebSerial template to send Python/MicroPython code directly from a LiaScript code block to a connected microcontroller (ESP32, Raspberry Pi Pico) via Chrome's Web Serial API."
 ---
 

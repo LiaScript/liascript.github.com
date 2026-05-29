@@ -15,6 +15,8 @@ tags:
     - Computer Science
     - Higher Education
 
+liascript: true
+
 description: "Use the dbdiagram template to render interactive entity-relationship diagrams from DBML text directly in your LiaScript courses — with a single macro."
 ---
 

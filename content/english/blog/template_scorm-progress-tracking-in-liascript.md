@@ -15,6 +15,8 @@ tags:
     - Interactive
     - Advanced
     - No Server
+liascript: true
+
 description: "Display a live gauge of student score and completion progress in LiaScript courses deployed via SCORM — the SCORM-Progress template reads window.SCORE and renders an ECharts gauge visualization."
 ---
 

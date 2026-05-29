@@ -14,6 +14,8 @@ tags:
     - Computer Science
     - Software Engineering
 
+liascript: true
+
 description: "Use the plantUML template to embed UML class diagrams, sequence diagrams, flowcharts, and architecture diagrams in your LiaScript courses — rendered via the PlantUML service."
 ---
 

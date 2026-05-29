@@ -15,6 +15,8 @@ tags:
     - Computer Science
     - STEM
     - No Server
+liascript: true
+
 description: "Simulate digital logic circuits — from simple gates to D-latches and priority encoders — directly in LiaScript using the DigiSim template. Define circuits in JSON or JavaScript DSL."
 ---
 

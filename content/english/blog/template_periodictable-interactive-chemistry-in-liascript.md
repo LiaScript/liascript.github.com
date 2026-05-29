@@ -14,6 +14,8 @@ tags:
     - STEM
     - Interactive
     - No Server
+liascript: true
+
 description: "Add a fully interactive periodic table of the elements to any LiaScript course slide with a single macro — no setup, no server, just import and use."
 ---
 

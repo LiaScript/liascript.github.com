@@ -13,6 +13,8 @@ tags:
     - Interactive Exercises
     - Language Learning
     - No Server
+liascript: true
+
 description: "Analyze text readability in LiaScript using the TextAnalysis template — compute Flesch-Kincaid grade, Gunning Fog, SMOG, reading/speaking time, and more, with inline interpretation tables."
 ---
 

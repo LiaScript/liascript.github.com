@@ -13,6 +13,8 @@ tags:
     - Programming
     - Computer Science
 
+liascript: true
+
 description: "Use the Curiosity-Prolog template to add a simple Prolog interpreter to your LiaScript courses — a lightweight alternative for introductory logic programming exercises."
 ---
 

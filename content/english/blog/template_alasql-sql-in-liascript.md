@@ -16,6 +16,8 @@ tags:
     - No Server
     - Data Science
 
+liascript: true
+
 description: "Use the AlaSQL template to run SQL queries directly inside LiaScript courses — with support for CSV data, JSON, and JavaScript arrays. No server, no setup."
 ---
 

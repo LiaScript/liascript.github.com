@@ -14,6 +14,8 @@ tags:
     - Interactive
     - Teachers
     - No Server
+liascript: true
+
 description: "Build drag-and-drop quizzes in LiaScript with the DragAndDrop template — sortable order exercises and pool-based multiple-choice selection, both graded automatically."
 ---
 

@@ -13,6 +13,8 @@ tags:
     - Presentation
     - Teachers
     - No Server
+liascript: true
+
 description: "Replace LiaScript's default TOC with a collapsible, hierarchical navigation tree using lia-navigation — bookmarks, expand/collapse, active highlighting, and persistent state storage."
 ---
 

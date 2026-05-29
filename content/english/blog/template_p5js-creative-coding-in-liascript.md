@@ -15,6 +15,8 @@ tags:
     - Programming
     - STEM
 
+liascript: true
+
 description: "Use the p5js template to create interactive canvas sketches and generative graphics directly in your LiaScript courses — with multi-file project support and a live terminal."
 ---
 

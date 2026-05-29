@@ -14,6 +14,8 @@ tags:
     - Electronics
     - Programming
     - STEM
+liascript: true
+
 description: "Simulate Arduino/AVR8 programs in LiaScript with live memory register readout — AVR8js-mem extends the AVR8js template with configurable memory visualization: binary, hex, uint, custom format, or time-series diagrams."
 ---
 

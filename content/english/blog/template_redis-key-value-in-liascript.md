@@ -16,6 +16,8 @@ tags:
     - Developers
     - Computer Science
 
+liascript: true
+
 description: "Use the Redis template to teach key-value stores, Redis data structures, TTL, transactions, and caching patterns — directly in your LiaScript courses, with no server needed."
 ---
 

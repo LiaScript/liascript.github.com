@@ -17,6 +17,8 @@ tags:
     - No Server
     - Teachers
 
+liascript: true
+
 description: "Use the ABCjs template to write, render, and play music in ABC notation directly inside your LiaScript courses — no server, no extra tools, just text."
 ---
 

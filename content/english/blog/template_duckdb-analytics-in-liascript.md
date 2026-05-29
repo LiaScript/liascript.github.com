@@ -16,6 +16,8 @@ tags:
     - Higher Education
     - No Server
 
+liascript: true
+
 description: "Use the DuckDB template to run analytical SQL queries, explore datasets, and teach data analytics directly inside LiaScript courses — no server, fully powered by WebAssembly."
 ---
 

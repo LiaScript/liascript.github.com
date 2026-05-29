@@ -14,6 +14,8 @@ tags:
     - Self Assessment
     - Teachers
     - No Server
+liascript: true
+
 description: "Randomly sample exercises from a larger pool in LiaScript using the Random template — show only N items per page visit, support weighted selection, and filter out already-solved quizzes."
 ---
 

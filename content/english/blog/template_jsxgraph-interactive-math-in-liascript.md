@@ -16,6 +16,8 @@ tags:
     - JavaScript
     - STEM
 
+liascript: true
+
 description: "Add interactive function graphs, dynamic geometry, and animated math constructions to LiaScript courses with JSXGraph — browser-only, no server required."
 template:
     repo: "https://github.com/LiaTemplates/JSXGraph"

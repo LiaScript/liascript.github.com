@@ -17,6 +17,8 @@ tags:
     - No Server
     - STEM
 
+liascript: true
+
 description: "Simulate a BBC micro:bit and run MicroPython code directly inside your LiaScript course — no hardware, no server, just a browser."
 template:
     repo: "https://github.com/LiaTemplates/MicroBit-Simulator"

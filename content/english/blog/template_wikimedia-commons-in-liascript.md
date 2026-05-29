@@ -16,6 +16,8 @@ tags:
     - Libraries
     - Attribution
 
+liascript: true
+
 description: "Use the Wikimedia template to embed images, audio, and video from Wikimedia Commons into your LiaScript courses — with automatic attribution, license info, and no manual copy-pasting required."
 ---
 

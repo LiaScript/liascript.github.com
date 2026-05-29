@@ -13,6 +13,8 @@ tags:
     - Presentation
     - Teachers
     - No Server
+liascript: true
+
 description: "Turn any LiaScript course into a classroom-ready presentation with lia-board-mode — full-screen slide width, adjustable font sizes from the toolbar, and mode-conditional content blocks."
 ---
 

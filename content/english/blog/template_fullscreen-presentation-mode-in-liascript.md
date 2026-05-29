@@ -14,6 +14,8 @@ tags:
     - Teachers
     - No Server
 
+liascript: true
+
 description: "Use the Fullscreen template to automatically hide the LiaScript navigation bar when entering fullscreen mode — one import, zero configuration, clean presentations."
 ---
 

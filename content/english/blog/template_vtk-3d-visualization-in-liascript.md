@@ -15,6 +15,8 @@ tags:
     - Engineering
     - STEM
 
+liascript: true
+
 description: "Use the VTK template to embed interactive 3D scientific visualizations in your LiaScript courses — powered by VTK.js and WebGL, with editable code blocks and VTI dataset loading."
 ---
 

@@ -15,6 +15,8 @@ tags:
     - Academic Writing
     - Libraries
 
+liascript: true
+
 description: "Use the citations template to embed BibTeX references directly in your LiaScript courses — inline citations, full bibliographies, DOI lookup, and four citation styles in one import."
 ---
 

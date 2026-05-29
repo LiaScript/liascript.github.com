@@ -16,6 +16,8 @@ tags:
     - Students
     - Classroom
 
+liascript: true
+
 description: "Add a shared, real-time drawing canvas to any LiaScript course — ideal for live classrooms, annotation tasks, and collaborative note-taking with no server required."
 ---
 

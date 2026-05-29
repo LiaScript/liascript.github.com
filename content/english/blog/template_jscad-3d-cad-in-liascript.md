@@ -15,6 +15,8 @@ tags:
     - TVET
     - No Server
 
+liascript: true
+
 description: "Use the JSCAD template to create and display parametric 3D CAD models in your LiaScript courses — powered by JSCAD.app, with a fullscreen interactive 3D viewer."
 ---
 

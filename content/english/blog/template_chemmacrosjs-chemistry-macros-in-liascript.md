@@ -14,6 +14,8 @@ tags:
     - STEM
     - Interactive
     - No Server
+liascript: true
+
 description: "Write professional chemical formulas, reaction equations, GHS hazard pictograms, and H/P safety statements in LiaScript with ChemmacrosJS — a port of the LaTeX Chemmacros package for the browser."
 ---
 

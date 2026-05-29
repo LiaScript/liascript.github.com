@@ -14,6 +14,8 @@ tags:
     - Interactive
     - No Server
     - Quizzes
+liascript: true
+
 description: "Let students freeze their LiaScript quiz answers into a shareable URL with lia-freeze-v2 — the teacher opens the link, sees exactly what the student answered, and the page is locked for review."
 ---
 

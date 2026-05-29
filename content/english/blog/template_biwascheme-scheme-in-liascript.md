@@ -14,6 +14,8 @@ tags:
     - Computer Science
     - No Server
 
+liascript: true
+
 description: "Use the BiwaScheme template to run Scheme programs in your LiaScript courses — a complete Scheme interpreter in the browser, with an optional interactive REPL terminal."
 ---
 

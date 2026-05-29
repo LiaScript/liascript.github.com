@@ -13,6 +13,8 @@ tags:
     - Design
     - Advanced
     - No Server
+liascript: true
+
 description: "Embed custom web fonts in LiaScript courses using CSS @font-face, Google Fonts link directives, or inline style blocks — the Fonts template from LiaPlayground demonstrates all three approaches."
 ---
 

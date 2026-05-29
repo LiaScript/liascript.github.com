@@ -14,6 +14,8 @@ tags:
     - Computer Science
     - No Server
 
+liascript: true
+
 description: "Use the Tau-Prolog template to run Prolog programs and queries interactively in your LiaScript courses — full logic programming in the browser, with quiz integration."
 ---
 

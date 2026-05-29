@@ -15,6 +15,8 @@ tags:
     - Computer Science
     - No Server
 
+liascript: true
+
 description: "Use the JSCPP template to make C++ code blocks executable in your LiaScript courses — no compiler, no setup, just write C++ and teach."
 ---
 

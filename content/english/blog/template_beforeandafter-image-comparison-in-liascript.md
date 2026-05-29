@@ -13,6 +13,8 @@ tags:
     - Media
     - Interactive
     - No Server
+liascript: true
+
 description: "Add a drag-to-compare image slider to any LiaScript slide with a single inline macro — perfect for before/after comparisons in science, medicine, history, design, and geography."
 ---
 

@@ -17,6 +17,8 @@ tags:
     - Interactive Exercises
     - No Server
 
+liascript: true
+
 description: "Use the Speech-Recognition-Quiz template to create spoken-answer quizzes in LiaScript — ideal for language courses, pronunciation training, and accessible learning without any server."
 ---
 

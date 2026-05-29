@@ -14,6 +14,8 @@ tags:
     - Charts
     - Data Science
 
+liascript: true
+
 description: "Use the Vega template to embed interactive Vega-Lite charts and data visualizations in your LiaScript courses — bar charts, scatter plots, histograms, and more, from JSON specifications."
 ---
 

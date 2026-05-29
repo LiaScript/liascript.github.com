@@ -17,6 +17,8 @@ tags:
     - Teachers
     - Students
 
+liascript: true
+
 description: "Run Python, Java, C, C++, Ruby, Rust, Go, Haskell, and 40+ more languages directly inside LiaScript courses via a server-side code runner — no browser limitations, real compilers."
 ---
 

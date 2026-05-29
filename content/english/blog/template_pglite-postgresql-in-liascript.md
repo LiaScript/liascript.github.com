@@ -17,6 +17,8 @@ tags:
     - Higher Education
     - Interactive
 
+liascript: true
+
 description: "Use the PGlite template to run full PostgreSQL 16 queries directly in your LiaScript courses — no server, no setup, just write SQL and teach."
 ---
 

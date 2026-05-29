@@ -17,6 +17,8 @@ tags:
     - Data Science
     - No Server
 
+liascript: true
+
 description: "Use the Pyodide template to run Python code directly inside LiaScript courses — no server, no setup. Just import and teach."
 ---
 

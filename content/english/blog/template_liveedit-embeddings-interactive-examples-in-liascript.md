@@ -14,6 +14,8 @@ tags:
     - Developers
     - LiveEditor
     - No Server
+liascript: true
+
 description: "Embed fully interactive LiaScript examples directly in your course using the LiveEdit-Embeddings template — students can edit and preview LiaScript code without leaving the slide."
 ---
 

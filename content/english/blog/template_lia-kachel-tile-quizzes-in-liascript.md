@@ -14,6 +14,8 @@ tags:
     - Interactive
     - Teachers
     - No Server
+liascript: true
+
 description: "Enhance LiaScript's built-in tile quizzes with lia-kachel — rounded drag-and-drop cards with full touch support, order-independent grading, and sequential reveal modes for classroom exercises."
 ---
 

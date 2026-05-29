@@ -14,6 +14,8 @@ tags:
     - Engineering
     - TVET
 
+liascript: true
+
 description: "Use the AVR8js template to simulate Arduino sketches and AVR microcontroller programs directly in your LiaScript courses — complete with LEDs, buttons, displays, and serial output."
 ---
 

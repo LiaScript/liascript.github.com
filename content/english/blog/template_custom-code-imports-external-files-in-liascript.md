@@ -13,6 +13,8 @@ tags:
     - Programming
     - Advanced
     - No Server
+liascript: true
+
 description: "Fetch external source code files from any URL and display or execute them in LiaScript — the Custom-code-imports template demonstrates how to use script blocks, the LIASCRIPT: prefix, and the fetch API to build dynamic, URL-loadable code exercises."
 ---
 

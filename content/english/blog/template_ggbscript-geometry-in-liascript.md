@@ -14,6 +14,8 @@ tags:
     - Visualization
     - STEM
 
+liascript: true
+
 description: "Use the GGBScript template to create interactive GeoGebra-style geometry constructions directly in your LiaScript courses — with a JavaScript API and support for LiaScript input sliders."
 ---
 

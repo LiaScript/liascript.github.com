@@ -15,6 +15,8 @@ tags:
     - Interactive
     - STEM
     - No Server
+liascript: true
+
 description: "Embed interactive 3D scenes and VR environments in LiaScript using the A-Frame template — write HTML A-Frame markup in a code block and render a fully interactive WebGL scene on any page."
 ---
 

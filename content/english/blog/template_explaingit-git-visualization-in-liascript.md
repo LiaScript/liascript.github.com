@@ -14,6 +14,8 @@ tags:
     - Computer Science
     - Interactive Exercises
     - No Server
+liascript: true
+
 description: "Teach git branching, merging, and history with interactive animations directly in LiaScript — pre-define command sequences or let students type git commands live, powered by ExplainGit."
 ---
 

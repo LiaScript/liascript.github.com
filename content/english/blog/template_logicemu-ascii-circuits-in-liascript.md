@@ -14,6 +14,8 @@ tags:
     - Engineering
     - Computer Science
     - No Server
+liascript: true
+
 description: "Draw logic circuits as ASCII diagrams and run them live in LiaScript — using the LogicEmu template backed by Lode Vandevenne's logicemu simulator. No JSON, no schematic editor needed."
 ---
 

@@ -15,6 +15,8 @@ tags:
     - Computer Science
     - Live Coding
 
+liascript: true
+
 description: "Use the WebDev template to make HTML, CSS, and JavaScript code blocks editable and executable directly inside your LiaScript courses — no external tools, no setup."
 ---
 

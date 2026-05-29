@@ -14,6 +14,8 @@ tags:
     - Teachers
     - No Server
     - Mathematics
+liascript: true
+
 description: "Let students hand-write math answers on a canvas with lia-canvas-ocr — the browser-based LaTeX OCR engine recognizes handwriting and fills quiz fields automatically, no server needed."
 ---
 

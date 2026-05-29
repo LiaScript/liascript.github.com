@@ -15,6 +15,8 @@ tags:
     - Mathematics
     - STEM
 
+liascript: true
+
 description: "Use the TikzJax template to render TikZ diagrams directly in your LiaScript courses — the full power of LaTeX graphics in the browser, with editable and non-editable variants."
 ---
 

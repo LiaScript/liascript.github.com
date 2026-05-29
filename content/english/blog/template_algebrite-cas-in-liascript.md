@@ -14,6 +14,8 @@ tags:
     - Computer Science
     - No Server
 
+liascript: true
+
 description: "Use the Algebrite template to add symbolic math computation to your LiaScript courses — evaluate CAS expressions, check student answers algebraically, and verify equations directly in the browser."
 ---
 

@@ -13,6 +13,8 @@ tags:
     - Presentation
     - Teachers
     - No Server
+liascript: true
+
 description: "Create drag-to-resize multi-column layouts in LiaScript with lia-DynFlex — flexbox containers with persistent widths, theme integration, and full support for quiz elements in each column."
 ---
 

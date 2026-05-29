@@ -17,6 +17,8 @@ tags:
     - STEM
     - No Server
 
+liascript: true
+
 description: "Use the gcode-preview template to embed interactive G-Code visualizations directly in LiaScript courses — ideal for 3D printing, CNC machining, and technical education."
 ---
 

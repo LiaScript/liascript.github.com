@@ -14,6 +14,8 @@ tags:
     - Interactive
     - OER
     - No Server
+liascript: true
+
 description: "Embed interactive 360° panorama images and virtual tours in LiaScript using the Pannellum template — add clickable hotspots, links, and 360° video, all from a single image URL."
 ---
 

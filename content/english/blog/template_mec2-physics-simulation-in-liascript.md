@@ -15,6 +15,8 @@ tags:
     - Engineering
     - STEM
     - No Server
+liascript: true
+
 description: "Simulate 2D mechanical linkages, constraint-based mechanisms, and chaos systems in LiaScript using mec2 — define nodes, constraints, and views in JSON and watch them run."
 ---
 

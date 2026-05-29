@@ -14,6 +14,8 @@ tags:
     - STEM
     - Interactive
     - No Server
+liascript: true
+
 description: "Build interactive coordinate system exercises in LiaScript with lia-coordinate — drag points, plot functions, draw value tables, and auto-grade student answers, powered by JSXGraph."
 ---
 

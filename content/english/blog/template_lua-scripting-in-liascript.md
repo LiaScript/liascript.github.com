@@ -14,6 +14,8 @@ tags:
     - Programming
     - No Server
 
+liascript: true
+
 description: "Use the Lua template to make Lua code blocks executable in your LiaScript courses — a full Lua VM in the browser, with access to JavaScript globals."
 ---
 

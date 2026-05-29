@@ -14,6 +14,8 @@ tags:
     - STEM
     - Interactive
     - No Server
+liascript: true
+
 description: "Create interactive fraction quizzes in LiaScript with lia-Mathe — students set divisions with a slider and click circle or rectangle segments to represent fractions, with automatic grading."
 ---
 

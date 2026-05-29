@@ -14,6 +14,8 @@ tags:
     - Interactive
     - Teachers
     - No Server
+liascript: true
+
 description: "Add countdown timers to any LiaScript quiz with lia-timer — three trigger modes (immediate, on-check, manual), flexible time formats, and optional on-screen badges for timed assessments."
 ---
 

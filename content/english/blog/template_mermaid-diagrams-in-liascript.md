@@ -17,6 +17,8 @@ tags:
     - No Server
     - Teachers
 
+liascript: true
+
 description: "Use the Mermaid template to draw flowcharts, sequence diagrams, Gantt charts, ER diagrams, and more in plain text — directly inside your LiaScript courses, no server needed."
 template:
     repo: "https://github.com/LiaTemplates/mermaid_template"

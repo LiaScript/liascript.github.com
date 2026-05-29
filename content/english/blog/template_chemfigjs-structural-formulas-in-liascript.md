@@ -14,6 +14,8 @@ tags:
     - LaTeX
     - STEM
     - No Server
+liascript: true
+
 description: "Draw chemical structural formulas using the familiar chemfig LaTeX syntax directly in LiaScript — no LaTeX installation, no image exports, SVG rendered live in the browser by ChemfigJS."
 ---
 

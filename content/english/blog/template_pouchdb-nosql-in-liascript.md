@@ -17,6 +17,8 @@ tags:
     - Interactive Exercises
     - Computer Science
 
+liascript: true
+
 description: "Use the PouchDB template to teach NoSQL document databases, Mango queries, and real-time data changes — entirely in the browser, with no server needed."
 ---
 
