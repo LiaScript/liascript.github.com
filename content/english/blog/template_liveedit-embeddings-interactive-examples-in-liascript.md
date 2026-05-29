@@ -131,6 +131,33 @@ What is the capital of France?
 ```
 ````
 
+Try it live — edit the LiaScript source and switch between edit and preview:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/heads/main/README.md
+-->
+
+# LiveEdit-Embeddings in Action
+
+Here is an embedded editable LiaScript quiz — click **Edit** to change the code, then **Preview** to see it rendered:
+
+```markdown @embed.preview
+# Try Editing This!
+
+What is the capital of France?
+
+[(X)] Paris
+[( )] London
+[( )] Berlin
+[( )] Madrid
+
+What is $2^{10}$?
+
+[[1024]]
+```
+{{< /liascript >}}
+
 ---
 
 ## How It Works

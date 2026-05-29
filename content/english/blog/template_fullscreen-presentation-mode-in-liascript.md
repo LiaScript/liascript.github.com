@@ -91,6 +91,39 @@ import: https://raw.githubusercontent.com/LiaTemplates/Fullscreen/0.0.1/README.m
 
 All three are active simultaneously.
 
+Try it live — open this mini-presentation, then press F11 to go fullscreen and see the navigation bar disappear:
+
+{{< liascript mode="preview" >}}
+<!--
+author:   LiaScript Demo
+import:   https://raw.githubusercontent.com/LiaTemplates/Fullscreen/0.0.1/README.md
+-->
+
+# Slide 1 — Welcome
+
+This course uses the **Fullscreen** template.
+
+Press **F11** to enter fullscreen mode — the navigation bar vanishes.
+
+Press **F11** again to restore it.
+
+---
+
+# Slide 2 — Your Content
+
+With the navigation bar hidden, your audience sees **only your content**.
+
+Navigate with **← →** arrow keys or the on-screen buttons.
+
+---
+
+# Slide 3 — That's All It Takes
+
+One import line in the header.
+
+Zero configuration. No macros.
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

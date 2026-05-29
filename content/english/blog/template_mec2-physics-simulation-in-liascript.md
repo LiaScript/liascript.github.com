@@ -30,7 +30,7 @@ Define nodes, constraints, gravity, and visualization views in JSON, and the sim
 
 ``` markdown
 <!--
-import: https://github.com/liaTemplates/mec2/README.md
+import: https://raw.githubusercontent.com/liaTemplates/mec2/master/README.md
 -->
 ```
 
@@ -59,6 +59,33 @@ The simulation renders and starts automatically when the slide loads.
 }
 ```
 ````
+
+Try it live — watch the pendulum swing and leave a red trace:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/mec2/master/README.md
+-->
+
+# Simple Pendulum
+
+```json @mec2
+{
+  "id": "simple-pendulum",
+  "gravity": true,
+  "nodes": [
+    { "id": "A0", "x": 200, "y": 400, "base": true },
+    { "id": "A1", "x": 200, "y": 300, "m": 2 }
+  ],
+  "constraints": [
+    { "id": "c1", "p1": "A0", "p2": "A1", "len": { "type": "const" } }
+  ],
+  "views": [
+    { "show": "pos", "of": "A1", "as": "trace", "id": "v1", "stroke": "rgba(255,0,0,0.5)" }
+  ]
+}
+```
+{{< /liascript >}}
 
 ---
 
@@ -168,6 +195,40 @@ The classic chaos demonstration — four pendulums with nearly identical startin
 }
 ```
 ````
+
+Try it live — two nearly identical double pendulums diverge chaotically (modify a starting position and re-run):
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/mec2/master/README.md
+-->
+
+# Chaos: Double Pendulums
+
+```json @mec2
+{
+  "id": "chaos-demo",
+  "gravity": true,
+  "nodes": [
+    { "id": "A0", "x": 200, "y": 400, "base": true },
+    { "id": "A1", "x": 280, "y": 480, "m": 2 },
+    { "id": "B1", "x": 279, "y": 481, "m": 2 },
+    { "id": "A2", "x": 360, "y": 560, "m": 3 },
+    { "id": "B2", "x": 359, "y": 561, "m": 3 }
+  ],
+  "constraints": [
+    { "id": "a1", "p1": "A0", "p2": "A1", "len": { "type": "const" } },
+    { "id": "a2", "p1": "A1", "p2": "A2", "len": { "type": "const" } },
+    { "id": "b1", "p1": "A0", "p2": "B1", "len": { "type": "const" } },
+    { "id": "b2", "p1": "B1", "p2": "B2", "len": { "type": "const" } }
+  ],
+  "views": [
+    { "show": "pos", "of": "A2", "as": "trace", "id": "v1", "stroke": "rgba(255,0,0,0.5)" },
+    { "show": "pos", "of": "B2", "as": "trace", "id": "v2", "stroke": "rgba(0,255,0,0.5)" }
+  ]
+}
+```
+{{< /liascript >}}
 
 ---
 

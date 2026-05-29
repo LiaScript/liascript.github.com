@@ -125,6 +125,31 @@ Which organelle is responsible for energy production?
 - [[ ]] Golgi apparatus
 ```
 
+Try it live — open in Presentation mode and click the **Pen** icon in the left toolbar to draw on the slide:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-annotation/main/README.md
+-->
+
+# Cell Structure
+
+![Animal cell](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Animal_cell_structure_en.svg/640px-Animal_cell_structure_en.svg.png "Animal cell")
+
+> Click the **Pen** icon in the left toolbar to annotate the diagram — label the organelles you can identify.
+
+---
+
+# Quiz
+
+Which organelle is responsible for energy production?
+
+- [[ ]] Nucleus
+- [[ ]] Ribosome
+- [[X]] Mitochondria
+- [[ ]] Golgi apparatus
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

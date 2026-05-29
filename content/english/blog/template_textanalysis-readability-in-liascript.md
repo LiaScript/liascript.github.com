@@ -63,6 +63,43 @@ This process occurs in three main stages: glycolysis, the citric acid cycle, and
 @Textanalysis.FULL
 ````
 
+Try it live — edit the text and see all readability metrics update instantly:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/TextAnalysis/main/README.md
+-->
+
+# Readability Analysis
+
+## Simple Text
+
+```text
+The mitochondria is the powerhouse of the cell.
+Cellular respiration converts glucose and oxygen into ATP.
+This process occurs in three stages: glycolysis, the citric acid cycle, and the electron transport chain.
+```
+@Textanalysis.FULL
+
+---
+
+## Complex Scientific Text
+
+```text
+The tricarboxylic acid cycle, colloquially referred to as the Krebs cycle, constitutes a series of chemical reactions utilized by all aerobic organisms to release stored energy through the oxidation of acetyl-CoA derived from carbohydrates, fats, and proteins into adenosine triphosphate and carbon dioxide.
+```
+@Textanalysis.FULL
+
+---
+
+## Simple Text for Comparison
+
+```text
+Plants make their own food using sunlight. They take in water and carbon dioxide. Then they make sugar and oxygen. This is called photosynthesis.
+```
+@Textanalysis.FULL
+{{< /liascript >}}
+
 ---
 
 ## Macro 2: `@Textanalysis.time` and `@Textanalysis.TIME`

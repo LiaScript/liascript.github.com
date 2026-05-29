@@ -81,7 +81,7 @@ local function fib(n)
   return fib(n-1) + fib(n-2)
 end
 
-print("\nFibonacci:")
+print("Fibonacci:")
 for i = 0, 9 do
   io.write(fib(i) .. " ")
 end

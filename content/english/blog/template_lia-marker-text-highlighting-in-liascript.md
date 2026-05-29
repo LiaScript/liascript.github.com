@@ -133,6 +133,47 @@ In the reaction between @markedblue(iron) and @markedorange(oxygen), the
 </div>
 ```
 
+Try it live — click a color in the toolbar, then click words to highlight them, and check your answer:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-marker/main/README.md
+-->
+
+# Parts of Speech
+
+## Nouns and Verbs
+
+Highlight all **nouns** in red and all **verbs** in blue.
+
+<div class="markerquiz">
+The @markred(dog) @markblue(runs) across the @markred(garden) every @markred(morning).
+@TextmarkerQuiz
+</div>
+
+---
+
+## Adjectives
+
+Highlight all **adjectives** in green.
+
+<div class="markerquiz">
+The @markgreen(tall) @markred(tree) cast a @markgreen(long), @markgreen(dark) @markred(shadow).
+@TextmarkerQuiz
+</div>
+
+---
+
+## Odd one out
+
+Mark the word that does NOT belong to the group.
+
+<div class="markerquiz">
+apple — banana — @mark(carrot) — pear — cherry
+@TextmarkerQuiz
+</div>
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

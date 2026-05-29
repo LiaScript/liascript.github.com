@@ -4,7 +4,7 @@ slug: "plantuml-uml-diagrams-in-liascript"
 date: 2026-05-28
 draft: false
 author: "André Dietrich"
-image: "https://plantuml.com/img/plantuml_logo.png"
+image: "https://opengraph.githubassets.com/1/LiaTemplates/plantUML"
 categories:
     - Template
     - Tutorial
@@ -127,7 +127,63 @@ Done --> [*]
 ```
 ````
 
-### Activity / Flowchart
+Try it live — modify the plantUML source and click run to re-render:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liascript-templates/plantUML/master/README.md
+-->
+
+# UML Diagrams
+
+## Sequence Diagram
+
+```text @plantUML
+@startuml
+participant Client
+participant Server
+participant Database
+
+Client -> Server : POST /login
+Server -> Database : SELECT user
+Database --> Server : user row
+Server --> Client : 200 OK + token
+@enduml
+```
+
+---
+
+## Class Hierarchy
+
+```text @plantUML
+@startuml
+abstract class Shape {
+  + draw()
+  + area() : float
+}
+
+class Circle {
+  - radius : float
+  + draw()
+  + area() : float
+}
+
+class Rectangle {
+  - width : float
+  - height : float
+  + draw()
+  + area() : float
+}
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+@enduml
+```
+{{< /liascript >}}
+
+---
+
+## `@plantUML.eval` — Editable Diagram
 
 ```` markdown
 ```text @plantUML

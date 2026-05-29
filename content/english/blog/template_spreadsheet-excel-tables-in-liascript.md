@@ -59,6 +59,35 @@ The JSON block defines worksheets, column types, and data.
 ```
 ````
 
+Try it live — edit cells, toggle checkboxes, and select owners from the dropdown:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/SpreadSheet/refs/heads/main/README.md
+-->
+
+# Project Tracker
+
+```json @spreadsheet
+{
+  "worksheets": [{
+    "data": [
+      ["Task", "Owner", "Done?"],
+      ["Write course outline", "You", true],
+      ["Draft first chapter", "Me", false],
+      ["Review and edit", "Both", false]
+    ],
+    "columns": [
+      { "type": "text",     "title": "Task",  "width": 220 },
+      { "type": "dropdown", "title": "Owner", "source": ["You","Me","Both"] },
+      { "type": "checkbox", "title": "Done?" }
+    ],
+    "worksheetName": "Project Tracker"
+  }]
+}
+```
+{{< /liascript >}}
+
 ---
 
 ## Column Types
@@ -102,6 +131,37 @@ Write formulas as cell content in `"data"`:
 }
 ```
 ````
+
+Try it live — edit the quarterly numbers and watch the SUM formulas update automatically:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/SpreadSheet/refs/heads/main/README.md
+-->
+
+# Sales Data with Formulas
+
+```json @spreadsheet
+{
+  "worksheets": [{
+    "data": [
+      ["Q1", "Q2", "Q3", "Q4", "Total"],
+      [1200, 1400, 900, 1600, "=SUM(A2:D2)"],
+      [800, 1100, 750, 1300, "=SUM(A3:D3)"],
+      ["=SUM(A2:A3)", "=SUM(B2:B3)", "=SUM(C2:C3)", "=SUM(D2:D3)", "=SUM(E2:E3)"]
+    ],
+    "columns": [
+      { "type": "numeric", "title": "Q1" },
+      { "type": "numeric", "title": "Q2" },
+      { "type": "numeric", "title": "Q3" },
+      { "type": "numeric", "title": "Q4" },
+      { "type": "numeric", "title": "Total" }
+    ],
+    "worksheetName": "Sales Data"
+  }]
+}
+```
+{{< /liascript >}}
 
 ---
 

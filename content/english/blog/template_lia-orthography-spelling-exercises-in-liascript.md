@@ -127,6 +127,45 @@ The @diktat(knight) rode across the @diktat(bridge) at @diktat(midnight).
 He carried a @diktat(sword) and a @diktat(shield).
 ```
 
+Try it live — correct the spelling errors and listen for the dictation words:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-orthography/main/README.md
+-->
+
+# Spelling Practice
+
+## Task 1 — Find the Errors
+
+Correct all spelling mistakes:
+
+@orthography(
+  `<!-- data-solution-button="2" -->`,
+  `She recieved a beautifull present from her freind.`,
+  `She received a beautiful present from her friend.`
+)
+
+---
+
+## Task 2 — Correct the Paragraph
+
+@orthographytext(
+  ` `,
+  `I have went to school yesterday. We lerned about the enviroment. Our techer showed us intresting exampels.`,
+  `I went to school yesterday. We learned about the environment. Our teacher showed us interesting examples.`
+)
+
+---
+
+## Task 3 — Dictation
+
+Listen and type the missing words:
+
+The @diktat(knight) rode across the @diktat(bridge) at @diktat(midnight).
+He carried a @diktat(sword) and a @diktat(shield).
+{{< /liascript >}}
+
 ---
 
 ## Example: German Spelling (Rechtschreibung)

@@ -77,6 +77,32 @@ Other useful style properties:
 @beforeAndAfter(https://example.com/untreated.jpg,https://example.com/treated.jpg)
 ```
 
+Try it live — Lyell Glacier in Yosemite, 1883 vs 2015. Drag the handle to reveal how much has melted:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/main/README.md
+-->
+
+# Glacier Retreat: 1883 vs 2015
+
+<!-- style="max-width: 80vh;" -->
+@beforeAndAfter(https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/main/img/glacier-1883.jpg,https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/main/img/glacier-2015.jpg)
+{{< /liascript >}}
+
+And here the same slider showing the Pillars of Creation as seen by Hubble (1995/2014) vs James Webb (2022):
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/main/README.md
+-->
+
+# Hubble vs Webb: Pillars of Creation
+
+<!-- style="max-width: 80vh;" -->
+@beforeAndAfter(https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/main/img/hubble.jpg,https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/main/img/webb.jpg)
+{{< /liascript >}}
+
 ---
 
 ## How the Slider Works

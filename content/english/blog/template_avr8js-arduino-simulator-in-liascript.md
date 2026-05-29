@@ -66,6 +66,33 @@ void loop() {
 @AVR8js.sketch
 ````
 
+Try it live — the sketch compiles in the browser and prints to the serial monitor:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
+-->
+
+# Arduino Serial Counter
+
+```c    sketch.ino
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  for (int i = 1; i <= 5; i++) {
+    Serial.print("Count: ");
+    Serial.println(i);
+    delay(500);
+  }
+  Serial.println("---");
+  delay(1000);
+}
+```
+@AVR8js.sketch
+{{< /liascript >}}
+
 ---
 
 ## Adding Wokwi Components
@@ -103,6 +130,43 @@ void loop() {
 ````
 
 The `id` of the containing `<div>` is passed to `@AVR8js.sketch(id)` to connect the components to the simulation.
+
+Try it live — click the green button to toggle the red LED:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/AVR8js/main/README.md
+-->
+
+# LED + Button Simulation
+
+<div id="led-demo">
+  <wokwi-led pin="13" color="red"></wokwi-led>
+  <wokwi-pushbutton pin="2" color="green"></wokwi-pushbutton>
+</div>
+
+```c    sketch.ino
+const int ledPin = 13;
+const int btnPin = 2;
+bool ledState = false;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(btnPin, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (digitalRead(btnPin) == LOW) {
+    ledState = !ledState;
+    digitalWrite(ledPin, ledState ? HIGH : LOW);
+    Serial.println(ledState ? "LED ON" : "LED OFF");
+    delay(200);
+  }
+}
+```
+@AVR8js.sketch(led-demo)
+{{< /liascript >}}
 
 ---
 

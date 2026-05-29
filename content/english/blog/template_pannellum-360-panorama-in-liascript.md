@@ -45,6 +45,18 @@ The viewer supports mouse drag to look around, scroll to zoom:
 @Pannellum.panorama(https://pannellum.org/images/from-tree.jpg)
 ```
 
+Try it live — drag to look around the panorama, scroll to zoom:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/pannellum/master/README.md
+-->
+
+# 360° Panorama
+
+@Pannellum.panorama(https://pannellum.org/images/from-tree.jpg)
+{{< /liascript >}}
+
 ---
 
 ## Macro 2: `@Pannellum.panoramaWithHotspots(url)` — Annotated Panorama
@@ -59,6 +71,22 @@ Each hotspot defines a position (pitch, yaw) and optional label or link:
 { "pitch": -3.1, "yaw": 122.9, "type": "info", "text": "Interesting spot", "URL": "https://example.com" }
 ```
 ````
+
+Try it live — look around and click the hotspot markers:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/pannellum/master/README.md
+-->
+
+# Annotated 360° Panorama
+
+@Pannellum.panoramaWithHotspots(https://pannellum.org/images/from-tree.jpg)
+```json
+{ "pitch": 14.1, "yaw": 1.5, "type": "info", "text": "Look up here!" }
+{ "pitch": -3.1, "yaw": 122.9, "type": "info", "text": "Interesting spot over there" }
+```
+{{< /liascript >}}
 
 Each line is a separate hotspot JSON object (no array brackets around them).
 

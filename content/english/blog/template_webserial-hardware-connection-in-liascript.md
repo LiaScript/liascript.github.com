@@ -92,6 +92,54 @@ print("Done blinking!")
 @WebSerial
 ````
 
+> **Note:** Clicking **Run** requires a connected MicroPython device and Chrome/Edge.
+> The live editor below lets you explore and edit the code — connect hardware to run it.
+
+{{< liascript mode="edit" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/webserial/main/README.md
+-->
+
+# Blink LED — ESP32 / Pi Pico
+
+Edit the code below and run it on a connected MicroPython board (Chrome/Edge required):
+
+```python
+from machine import Pin
+from time import sleep
+
+led = Pin(2, Pin.OUT)  # GPIO2 on ESP32
+
+for _ in range(10):
+    led.value(1)
+    sleep(0.5)
+    led.value(0)
+    sleep(0.5)
+
+print("Done blinking!")
+```
+@WebSerial
+
+---
+
+# Read Analog Sensor
+
+```python
+from machine import ADC, Pin
+import time
+
+adc = ADC(Pin(34))
+adc.atten(ADC.ATTN_11DB)
+
+for i in range(5):
+    raw = adc.read()
+    voltage = raw / 4095 * 3.3
+    print(f"Reading {i}: raw={raw}, voltage={voltage:.2f}V")
+    time.sleep(1)
+```
+@WebSerial
+{{< /liascript >}}
+
 ---
 
 ## Example: Read Temperature Sensor

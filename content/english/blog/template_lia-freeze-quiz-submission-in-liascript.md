@@ -158,6 +158,44 @@ Describe photosynthesis in one sentence.
 @Auswertung(F12;Tab;Time)
 ```
 
+Try it live — answer the quizzes, then go to the Submit slide and click **Create Link** to see the freeze mechanism in action:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-freeze-v2/main/README.md
+version: 1.0.0
+-->
+
+# English Quiz
+
+## Task 1 — Fill in the blanks
+
+The capital of Germany is [[Berlin]].
+
+@ADetails(1;Geography)
+
+The largest planet is [[Jupiter]].
+
+@ADetails(1;Astronomy)
+
+## Task 2 — Multiple choice
+
+Which are primary colors?
+
+    [[ ]] Green
+    [[X]] Red
+    [[X]] Blue
+    [[X]] Yellow
+
+@ADetails(2;Art)
+
+## Submit
+
+@Abgabe
+
+@Auswertung(F12;Tab;Time)
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

@@ -67,6 +67,29 @@ module.exports = { main }
 ```
 ````
 
+Try it live — rotate, zoom, and pan the 3D model in the viewer:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/jscad/master/README.md
+-->
+
+# JSCAD: Cube with Cylindrical Hole
+
+```javascript @JSCAD
+const { cube, cylinder } = require('@jscad/modeling').primitives
+const { subtract } = require('@jscad/modeling').booleans
+
+const main = () => {
+  const box = cube({ size: 30 })
+  const hole = cylinder({ radius: 10, height: 40 })
+  return subtract(box, hole)
+}
+
+module.exports = { main }
+```
+{{< /liascript >}}
+
 ---
 
 ## Macro 2: `@JSCAD.eval` — Editable Model
@@ -170,6 +193,46 @@ const main = () => {
 module.exports = { main }
 ```
 ````
+
+Try it live — inspect the mounting plate with boss and four holes from every angle:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/jscad/master/README.md
+-->
+
+# JSCAD: Mounting Plate
+
+```javascript @JSCAD
+const jscad = require('@jscad/modeling')
+const { cuboid, cylinder } = jscad.primitives
+const { subtract, union } = jscad.booleans
+const { translate } = jscad.transforms
+
+const main = () => {
+  const base = cuboid({ size: [60, 40, 10] })
+
+  const hole = cylinder({ radius: 3, height: 12 })
+  const holes = [
+    translate([-22,  14, 0], hole),
+    translate([ 22,  14, 0], hole),
+    translate([-22, -14, 0], hole),
+    translate([ 22, -14, 0], hole),
+  ]
+
+  const boss = cylinder({ radius: 10, height: 20 })
+  const bossHole = cylinder({ radius: 6, height: 22 })
+  const bossWithHole = subtract(boss, bossHole)
+
+  return subtract(
+    union(base, bossWithHole),
+    ...holes
+  )
+}
+
+module.exports = { main }
+```
+{{< /liascript >}}
 
 ---
 

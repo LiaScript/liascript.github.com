@@ -66,6 +66,38 @@ The circuit runs immediately and can be interacted with (click buttons, observe 
 ```
 ````
 
+Try it live — click the **S** and **R** buttons and observe the SR latch switching state:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/DigiSim/master/README.md
+-->
+
+# SR Latch
+
+```json @DigiSim.evalJson
+{
+  "devices": {
+    "dev0": { "label": "s", "position": {"x":0,"y":20}, "celltype": "$button", "propagation": 0 },
+    "dev1": { "label": "r", "position": {"x":155,"y":75}, "celltype": "$button", "propagation": 0 },
+    "dev2": { "label": "q", "position": {"x":480,"y":55}, "celltype": "$lamp", "propagation": 1 },
+    "dev3": { "label": "nq", "position": {"x":325,"y":0}, "celltype": "$lamp", "propagation": 1 },
+    "dev6": { "label": "NOR1", "position": {"x":310,"y":50}, "celltype": "$nor", "propagation": 1, "bits": 1 },
+    "dev7": { "label": "NOR2", "position": {"x":140,"y":15}, "celltype": "$nor", "propagation": 1, "bits": 1 }
+  },
+  "connectors": [
+    {"from":{"id":"dev0","port":"out"},"to":{"id":"dev7","port":"in1"},"name":"s","vertices":[]},
+    {"from":{"id":"dev1","port":"out"},"to":{"id":"dev6","port":"in1"},"name":"r","vertices":[]},
+    {"from":{"id":"dev6","port":"out"},"to":{"id":"dev2","port":"in"},"name":"q","vertices":[]},
+    {"from":{"id":"dev6","port":"out"},"to":{"id":"dev7","port":"in2"},"name":"q","vertices":[]},
+    {"from":{"id":"dev7","port":"out"},"to":{"id":"dev3","port":"in"},"name":"nq","vertices":[]},
+    {"from":{"id":"dev7","port":"out"},"to":{"id":"dev6","port":"in2"},"name":"nq","vertices":[]}
+  ],
+  "subcircuits": {}
+}
+```
+{{< /liascript >}}
+
 ---
 
 ## Macro 2: `@DigiSim.runJson` — Static View from JSON
@@ -132,6 +164,31 @@ wire("and3", "xor1"); wire("or3", "xor2");
 wire("xor3", "lmp1");
 ```
 ````
+
+Try it live — toggle the four buttons and trace the signal through the gates:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/DigiSim/master/README.md
+-->
+
+# AND → OR → XOR Gate Chain
+
+``` js @DigiSim.eval
+AND(["and1", "and2"], ["and3"], "AND1");
+OR(["or1", "or2"], ["or3"], "OR1");
+XOR(["xor1", "xor2"], ["xor3"], "XOR1");
+
+Button("btn1", ""); Button("btn2", "");
+Button("btn3", ""); Button("btn4", "");
+Lamp("lmp1", "Main Output");
+
+wire("btn1", "and1"); wire("btn2", "and2");
+wire("btn3", "or1");  wire("btn4", "or2");
+wire("and3", "xor1"); wire("or3", "xor2");
+wire("xor3", "lmp1");
+```
+{{< /liascript >}}
 
 ---
 

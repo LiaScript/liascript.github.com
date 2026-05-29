@@ -118,6 +118,46 @@ Mitochondria → ATP Production → Cellular Energy
 </div>
 ````
 
+Try it live — switch between Presentation and Textbook modes and notice how `data-lia-only` content changes, and look for the **AA** font size button in the toolbar:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-board-mode/main/README.md
+-->
+
+# Introduction to Cells
+
+<div data-lia-only="presentation">
+
+**Key Point:** The mitochondria is the powerhouse of the cell.
+
+</div>
+
+<div data-lia-only="textbook">
+
+**Full Explanation:** The mitochondria produces ATP through oxidative phosphorylation.
+The inner membrane contains the electron transport chain, which couples electron transfer
+to proton pumping and drives ATP synthase.
+
+</div>
+
+<div data-lia-only="slides">
+
+```
+Mitochondria → ATP Production → Cellular Energy
+```
+
+</div>
+
+---
+
+# Quiz
+
+What does the mitochondria produce?
+
+[[ ATP ]]
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

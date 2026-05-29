@@ -144,6 +144,50 @@ The opposite of "shallow" is:
 [[deep]]
 ```
 
+Try it live — each question has a countdown timer; race the clock to answer in time:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-timer/main/README.md
+-->
+
+# Speed Math Quiz
+
+## Round 1 — Mental arithmetic (10 s each)
+
+<!-- data-solution-timer="10s" data-solution-timer-start="immediate" -->
+$7 \times 8 =$ [[56]]
+
+---
+
+<!-- data-solution-timer="10s" data-solution-timer-start="immediate" -->
+$144 \div 12 =$ [[12]]
+
+---
+
+<!-- data-solution-timer="10s" data-solution-timer-start="immediate" -->
+$\sqrt{81} =$ [[9]]
+
+---
+
+## Round 2 — Start when ready (90 s)
+
+<!-- data-solution-timer="1:30" data-solution-timer-start="onclick" data-solution-timer-start-label="Begin 90-second task" -->
+A train travels at 120 km/h for 45 minutes.
+How many kilometres does it travel?
+
+[[90]]
+
+---
+
+## Round 3 — Timer starts on first check (30 s)
+
+<!-- data-solution-timer="30s" data-solution-timer-start="oncheck" -->
+The opposite of "shallow" is:
+
+[[deep]]
+{{< /liascript >}}
+
 ---
 
 ## Combining with lia-freeze-v2

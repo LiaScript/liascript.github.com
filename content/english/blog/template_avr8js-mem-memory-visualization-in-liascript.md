@@ -118,6 +118,44 @@ void loop() {
 <memout-element type="diagram" address="0x25" label="Over time"></memout-element>
 ```
 
+Try it live — start the simulation and watch the register values update in real time:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/fjangfaragesh/AVR8js-mem/main/README.lia.md
+-->
+
+# Blinking LED with Live PORTB Readout
+
+``` cpp    Arduino.cpp
+void setup() {
+  DDRB = 0xFF;
+}
+
+void loop() {
+  PORTB = 0xFF;
+  delay(500);
+  PORTB = 0x00;
+  delay(500);
+}
+```
+<script>
+  compileAndRun(`@input`, "wokwi-blink", 100000, 16, 50000000);
+</script>
+
+<div id="wokwi-blink">
+  <wokwi-led color="red"   pin="13" label="13"></wokwi-led>
+  <wokwi-led color="green" pin="12" label="12"></wokwi-led>
+  <wokwi-led color="blue"  pin="11" label="11"></wokwi-led>
+</div>
+
+**PORTB (0x25) live:**
+
+<memout-element type="bin"     address="0x25" label="Binary"></memout-element>
+<memout-element type="hex"     address="0x25" label="Hex"></memout-element>
+<memout-element type="diagram" address="0x25" label="Over time"></memout-element>
+{{< /liascript >}}
+
 ---
 
 ## Example: Shift register pattern
@@ -162,6 +200,47 @@ void loop() {
 <memout-element type="custom"  address="0x25" label="PORTB bits" bits="76543210"></memout-element>
 <memout-element type="diagram2" address="0x25" label="PORTB diagram"></memout-element>
 ```
+
+Try it live — 8 LEDs count in binary while the register display shows each bit:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/fjangfaragesh/AVR8js-mem/main/README.lia.md
+-->
+
+# Binary Counter on PORTB
+
+``` cpp    Arduino.cpp
+uint8_t counter = 0;
+
+void setup() {
+  DDRB = 0xFF;
+}
+
+void loop() {
+  PORTB = counter;
+  counter++;
+  delay(200);
+}
+```
+<script>
+  compileAndRun(`@input`, "wokwi-counter", 100000, 16, 50000000);
+</script>
+
+<div id="wokwi-counter">
+  <wokwi-led color="red"    pin="13" label="bit7"></wokwi-led>
+  <wokwi-led color="orange" pin="12" label="bit6"></wokwi-led>
+  <wokwi-led color="yellow" pin="11" label="bit5"></wokwi-led>
+  <wokwi-led color="green"  pin="10" label="bit4"></wokwi-led>
+  <wokwi-led color="blue"   pin="9"  label="bit3"></wokwi-led>
+  <wokwi-led color="purple" pin="8"  label="bit2"></wokwi-led>
+  <wokwi-led color="white"  pin="7"  label="bit1"></wokwi-led>
+  <wokwi-led color="gray"   pin="6"  label="bit0"></wokwi-led>
+</div>
+
+<memout-element type="custom"   address="0x25" label="PORTB bits" bits="76543210"></memout-element>
+<memout-element type="diagram2" address="0x25" label="PORTB over time"></memout-element>
+{{< /liascript >}}
 
 ---
 

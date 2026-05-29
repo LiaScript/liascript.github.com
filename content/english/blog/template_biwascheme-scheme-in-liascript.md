@@ -65,28 +65,14 @@ import: https://raw.githubusercontent.com/liaTemplates/BiwaScheme/master/README.
 # BiwaScheme Demo – Grundlagen
 
 ```scheme
-;; Higher-order functions
-(define (square x) (* x x))
-(define (cube x) (* x x x))
+(define (factorial n)
+  (if (<= n 1)
+      1
+      (* n (factorial (- n 1)))))
 
-(display "Squares: ")
-(display (map square '(1 2 3 4 5 6 7 8 9 10)))
+(print (factorial 10))
 (newline)
-
-(display "Cubes: ")
-(display (map cube '(1 2 3 4 5)))
-(newline)
-
-;; Filter even numbers
-(display "Even numbers 1–20: ")
-(display (filter even? '(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)))
-(newline)
-
-;; Fold/reduce
-(define (sum lst) (fold-left + 0 lst))
-(display "Sum 1–10: ")
-(display (sum '(1 2 3 4 5 6 7 8 9 10)))
-(newline)
+(print (map factorial '(1 2 3 4 5 6 7 8)))
 ```
 @BiwaScheme.eval
 {{< /liascript >}}

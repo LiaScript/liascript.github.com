@@ -95,6 +95,46 @@ Practice chemistry terms:
 [( )] A SCORM packaging tool
 ```
 
+Try it live — interact with a real H5P quiz and flashcard embedded directly in LiaScript:
+
+{{< liascript mode="preview" >}}
+<!--
+author: LiaScript Demo
+-->
+
+# H5P in LiaScript
+
+## Flashcard: Vocabulary
+
+<iframe
+  src="https://h5p.org/h5p/embed/1216"
+  width="100%"
+  height="400"
+  frameborder="0"
+  allowfullscreen="allowfullscreen"
+></iframe>
+
+---
+
+## Multiple Choice Quiz
+
+<iframe
+  src="https://h5p.org/h5p/embed/6725"
+  width="100%"
+  height="480"
+  frameborder="0"
+  allowfullscreen="allowfullscreen"
+></iframe>
+
+---
+
+## What is H5P?
+
+[( )] A JavaScript chart library
+[(X)] An open-source interactive HTML5 content framework
+[( )] A SCORM packaging tool
+{{< /liascript >}}
+
 ---
 
 ## Self-Hosted H5P

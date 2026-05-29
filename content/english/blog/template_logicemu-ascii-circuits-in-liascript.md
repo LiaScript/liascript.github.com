@@ -51,6 +51,22 @@ The code is not shown to the student — only the simulation.
 ```
 ````
 
+Try it live — click the **s** switches and watch the lamp turn on/off:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/logicemu/master/README.md
+-->
+
+# AND Gate
+
+```   @LogicEmu.run
+ s****>a***>l
+       *
+ s*****
+```
+{{< /liascript >}}
+
 ---
 
 ## Macro 2: `@LogicEmu.eval` — Editable Circuit (end-of-block)
@@ -130,6 +146,25 @@ s*>o*>l
    * v
    *>o*>l
 ```
+
+Try it live — click the switches to Set and Reset the latch; also edit the ASCII circuit and re-run:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/logicemu/master/README.md
+-->
+
+# SR Latch
+
+```
+s*>o*>l
+   * *
+   * v
+   *>o*>l
+s**
+```
+@LogicEmu.eval
+{{< /liascript >}}
 
 ---
 

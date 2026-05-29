@@ -98,6 +98,20 @@ Use `?` to create crosslinks — first occurrence sets anchor, subsequent occurr
 ```
 ````
 
+Try it live:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/herbigm/ChemfigJS/master/README.md
+-->
+
+# Benzene Ring
+
+```text @chemfig
+*6(-=-=-=)
+```
+{{< /liascript >}}
+
 ### Ethanol
 
 ```` markdown
@@ -113,6 +127,28 @@ CH_3-CH_2-OH
 *6(-=-(-OH)=(-(-[::60]OH)=[::-60]O)-=)
 ```
 ````
+
+Three molecules rendered side by side in one slide — plain text, browser-native SVG:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/herbigm/ChemfigJS/master/README.md
+-->
+
+# Structural Formulas
+
+**Ethanol** (C₂H₅OH)
+
+```text @chemfig
+CH_3-CH_2-OH
+```
+
+**Pyrimidine**
+
+```text @chemfig
+*6(-=-(-OH)=(-(-[::60]OH)=[::-60]O)-=)
+```
+{{< /liascript >}}
 
 ---
 

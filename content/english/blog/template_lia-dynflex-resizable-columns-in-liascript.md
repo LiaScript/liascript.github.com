@@ -178,6 +178,51 @@ Where does photosynthesis take place?
 </section>
 ```
 
+Try it live — drag the divider between the columns and watch the layout resize smoothly:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-DynFlex/main/README.md
+-->
+
+# Photosynthesis
+
+<section class="dynFlex" data-store="photo-lesson">
+
+<div class="flex-child">
+
+## Explanation
+
+Photosynthesis converts light energy into chemical energy stored in glucose.
+The overall equation is:
+
+$$6\,CO_2 + 6\,H_2O + \text{light} \rightarrow C_6H_{12}O_6 + 6\,O_2$$
+
+The process takes place in the **chloroplasts** and has two main stages:
+the light-dependent reactions and the Calvin cycle.
+
+</div>
+
+<div class="flex-child">
+
+## Quiz
+
+Which molecule stores the energy produced in photosynthesis?
+
+[( )] Carbon dioxide
+[(X)] Glucose
+[( )] Water
+[( )] Oxygen
+
+Where does photosynthesis take place?
+
+[[chloroplasts]]
+
+</div>
+
+</section>
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

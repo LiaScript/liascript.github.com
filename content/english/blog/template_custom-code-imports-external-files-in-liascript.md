@@ -58,6 +58,28 @@ Similarly, returning `HTML:` + HTML string renders the HTML directly:
 </script>
 ```
 
+See both prefixes in action — content generated at render time by a script:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/README.md
+-->
+
+# LIASCRIPT: and HTML: Prefixes
+
+**Injected HTML:**
+
+<script>
+  "HTML:<div style='padding:1em;background:#e8f5e9;border-left:4px solid green'><b>This entire block was rendered by a &lt;script&gt; tag</b> returning an <code>HTML:</code> string.</div>"
+</script>
+
+**Injected code block:**
+
+<script>
+  "LIASCRIPT:\n```python\nfor i in range(1, 6):\n    print(f'Line {i}: generated at render time')\n```"
+</script>
+{{< /liascript >}}
+
 ---
 
 ## `@load.java` — Display an external Java file
@@ -73,6 +95,18 @@ Or load from an explicit URL:
 ```markdown
 @[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
 ```
+
+Try it live — the Java file is fetched from GitHub and displayed as a formatted code block:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/README.md
+-->
+
+# Load HelloWorld.java from GitHub
+
+@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
+{{< /liascript >}}
 
 ---
 

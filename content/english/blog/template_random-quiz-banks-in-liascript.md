@@ -29,7 +29,7 @@ The [Random template](https://github.com/LiaTemplates/Random) adds controlled ra
 
 ``` markdown
 <!--
-import: https://github.com/liaTemplates/Random/README.md
+import: https://raw.githubusercontent.com/liaTemplates/Random/main/README.md
 -->
 ```
 
@@ -134,6 +134,52 @@ All questions solved! Review your notes and try again.
 
 </div>
 ````
+
+Try it live — each visit picks 2 different questions from the pool (reload to get a new pair):
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/Random/main/README.md
+-->
+
+# Practice Quiz
+
+Pick 2 questions from the pool — refresh to get a different pair:
+
+@Random.random(2, false)
+
+<div class="random" data-propability="1">
+
+**Q1:** What is the speed of light in vacuum?
+
+[(X)] 3 × 10⁸ m/s
+[( )] 3 × 10⁶ m/s
+[( )] 3 × 10¹⁰ m/s
+
+</div>
+
+<div class="random" data-propability="1">
+
+**Q2:** What unit measures electrical resistance?
+
+[[Ohm]]
+
+</div>
+
+<div class="random" data-propability="1">
+
+**Q3:** What is Avogadro’s number (approximately)?
+
+[[6.022 × 10²³]]
+
+</div>
+
+<div class="random" data-propability="0">
+
+All questions solved! Review your notes and try again.
+
+</div>
+{{< /liascript >}}
 
 ---
 

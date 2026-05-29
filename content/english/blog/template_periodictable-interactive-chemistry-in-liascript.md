@@ -30,7 +30,7 @@ The table renders via a small iframe pointing to a hosted component based on [Bo
 
 ``` markdown
 <!--
-import: https://github.com/LiaTemplates/PeriodicTable/blob/main/README.md
+import: https://raw.githubusercontent.com/LiaTemplates/PeriodicTable/main/README.md
 -->
 ```
 
@@ -68,6 +68,20 @@ Click any element to see its details.
 
 @PeriodicTable
 ````
+
+Try it live — click any element to see its details:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/PeriodicTable/main/README.md
+-->
+
+# The Periodic Table
+
+Click any element to explore its symbol, name, and atomic number.
+
+@PeriodicTable
+{{< /liascript >}}
 
 ---
 

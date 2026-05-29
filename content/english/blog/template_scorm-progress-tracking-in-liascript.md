@@ -132,6 +132,42 @@ Your progress gauge above reflects your LMS-reported score.
 @score(Final Score)
 ```
 
+Try it live — type a number between 0 and 1 (e.g. `0.75`) and press Enter to simulate a SCORM score update and see the gauge update:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaPlayground/SCORM-Progress/main/README.md
+-->
+
+# SCORM Progress Demo
+
+## Simulate a Score
+
+Type a value between `0.0` and `1.0` and press Enter:
+
+window.SCORE = 0.1
+<script>@input</script>
+
+@score(Simulated Course Completion)
+
+---
+
+## Quiz 1 — The Mitochondria
+
+Which molecule is the primary product of cellular respiration?
+
+[( )] ADP
+[(X)] ATP
+[( )] NADH
+[( )] CO2
+
+---
+
+## End of Module
+
+@score(Final Score)
+{{< /liascript >}}
+
 ---
 
 ## How it works internally

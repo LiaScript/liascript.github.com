@@ -74,6 +74,25 @@ Drag the cards into the correct order:
 @dragdroporder(@uid, 3|1|4|2, 1|2|3|4)
 ```
 
+Try it live — drag the event cards into the correct chronological order:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MichaelMarkert/LiaScript_DragAndDrop_Template/refs/heads/main/README.md
+-->
+
+# Put the events in chronological order
+
+| # | Event |
+|---|---|
+| 1 | French Revolution begins |
+| 2 | Napoleon becomes Emperor |
+| 3 | Battle of Waterloo |
+| 4 | Congress of Vienna |
+
+@dragdroporder(@uid, 3|1|4|2, 1|2|3|4)
+{{< /liascript >}}
+
 ---
 
 ## `@dragdropmultiple` — Multiple-choice from a pool
@@ -149,6 +168,43 @@ Drag only the items that apply specifically to meiosis (not mitosis):
 
 @dragdropmultiple(@uid, 1|2|3|4|5|6, 1|3|4|6)
 ```
+
+Try both macros live — sequence the mitosis phases, then select the meiosis-only facts:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MichaelMarkert/LiaScript_DragAndDrop_Template/refs/heads/main/README.md
+-->
+
+# Cell Division — Drag-and-Drop
+
+## Order the phases of mitosis
+
+| # | Phase |
+|---|---|
+| 1 | Interphase |
+| 2 | Prophase |
+| 3 | Metaphase |
+| 4 | Anaphase |
+| 5 | Telophase |
+
+@dragdroporder(@uid, 3|5|1|4|2, 1|2|3|4|5)
+
+---
+
+## Select facts that apply to MEIOSIS only
+
+| # | Statement |
+|---|---|
+| 1 | Produces haploid cells |
+| 2 | Produces 2 daughter cells |
+| 3 | Includes crossing-over |
+| 4 | Produces 4 daughter cells |
+| 5 | Used for growth and repair |
+| 6 | Homologous chromosomes pair |
+
+@dragdropmultiple(@uid, 1|2|3|4|5|6, 1|3|4|6)
+{{< /liascript >}}
 
 ---
 

@@ -54,6 +54,32 @@ Dichromate ion: @ch(`Cr2O7^{2-}`)
 Numbers that follow element symbols or closing brackets are automatically subscripted.
 Use `^` for superscripts and `^{}` for multi-character superscripts.
 
+Try it live — formulas and a combustion reaction rendered inline:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/herbigm/ChemmacrosJS/refs/heads/main/README.md
+-->
+
+# Chemical Notation with ChemmacrosJS
+
+Sulfuric acid: @ch(`H2SO4`)
+
+Potassium ferricyanide: @ch(`K3[Fe(CN)6]`)
+
+Hydronium ion: @ch(`H3O^+`)
+
+Dichromate ion: @ch(`Cr2O7^{2-}`)
+
+**Combustion of methane:**
+
+@reaction(`CH4 + 2 O2 -> CO2 + 2 H2O`)
+
+**Haber-Bosch synthesis:**
+
+@reaction(`N2 + 3 H2 <=> 2 NH3`)
+{{< /liascript >}}
+
 ---
 
 ## Reaction equations — `@reaction`
@@ -176,6 +202,50 @@ The reaction @ch(`N2 + 3H2 <=> 2NH3`) is the:
 [( )] Fischer-Tropsch process
 [( )] Ostwald process
 ```
+
+Try the full Safety Data Sheet live — typeset formulas, reaction equations, GHS pictograms, and a quiz on one slide:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/herbigm/ChemmacrosJS/refs/heads/main/README.md
+-->
+
+# Sodium Hypochlorite — @ch(`NaOCl`)
+
+## Reactions
+
+**Decomposition on heating:**
+
+@reaction(`2 NaOCl -> 2 NaCl + O2 ^`)
+
+**Chlorine release in acid:**
+
+@reaction(`NaOCl + 2 HCl -> NaCl + Cl2 ^ + H2O`)
+
+## Multi-step: Carbon dioxide absorption
+
+@reactions(`
+  CO2 + H2O <=> H2CO3
+  H2CO3 <=> H^+ + HCO3^-
+`)
+
+## Safety
+
+@ghspic(`acid oxidiz health environ`)
+
+**H-statements:** @hstatements(`290-314-335-400-410`)
+
+**P-statements:** @pstatements(`260-273-280`)
+
+## Quiz
+
+The reaction @ch(`N2 + 3H2 <=> 2NH3`) is the:
+
+[( )] Haber-Weiss process
+[(X)] Haber-Bosch process
+[( )] Fischer-Tropsch process
+[( )] Ostwald process
+{{< /liascript >}}
 
 ---
 

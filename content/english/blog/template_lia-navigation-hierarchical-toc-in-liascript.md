@@ -109,6 +109,64 @@ How many daughter cells does mitosis produce?
 
 With lia-navigation loaded, the deep heading structure (`##`, `###`, `####`) appears as a collapsible tree in the sidebar, making it easy to jump between sections of a long course.
 
+Try it live — navigate the sidebar tree, expand/collapse headings, and bookmark sections:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-navigation/main/README.md
+-->
+
+# Cell Biology
+
+## 1. Cell Structure
+
+### 1.1 The Cell Membrane
+
+The cell membrane is a selectively permeable lipid bilayer.
+
+### 1.2 The Nucleus
+
+The nucleus contains the cell's DNA and directs its activities.
+
+### 1.3 Organelles
+
+#### 1.3.1 Mitochondria
+
+Mitochondria produce ATP through cellular respiration.
+
+#### 1.3.2 Ribosomes
+
+Ribosomes synthesize proteins from mRNA templates.
+
+## 2. Cell Division
+
+### 2.1 Mitosis
+
+Mitosis produces two identical daughter cells.
+
+### 2.2 Meiosis
+
+Meiosis produces four genetically unique gametes.
+
+## 3. Quizzes
+
+### 3.1 Structure Quiz
+
+Which organelle is called the powerhouse of the cell?
+
+[( )] Nucleus
+[(X)] Mitochondria
+[( )] Ribosome
+
+### 3.2 Division Quiz
+
+How many daughter cells does mitosis produce?
+
+[( )] 1
+[(X)] 2
+[( )] 4
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

@@ -120,6 +120,38 @@ Solve for $x$: $2x + 4 = 10$, so $x =$ [[ 3 ]]
 Students can type answers in the standard input fields, or switch to the canvas for handwriting at any point.
 Both input methods work side by side.
 
+Try it live — draw your answers on the canvas and click "Submit as Solution" to see OCR in action:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-canvas-ocr/main/README.md
+-->
+
+# Math Worksheet
+
+**Task 1 — Addition**
+
+$12 + 7 =$ [[ 19 ]]
+
+@canvas
+
+---
+
+**Task 2 — Fractions**
+
+Simplify: $\frac{6}{9} =$ [[ \frac{2}{3} ]]
+
+@canvas
+
+---
+
+**Task 3 — Algebra**
+
+Solve for $x$: $2x + 4 = 10$, so $x =$ [[ 3 ]]
+
+@canvas
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

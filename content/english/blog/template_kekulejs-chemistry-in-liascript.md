@@ -64,6 +64,37 @@ The molecule is rendered as a flat, bond-angle structural formula.
 ```
 ````
 
+Try it live — see the 2D structural formula of pyridine rendered from CML:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/KekuleJS/master/README.md
+-->
+
+# 2D Structure: Pyridine
+
+```xml @Kekule.molecule2d
+<cml xmlns="http://www.xml-cml.org/schema">
+  <molecule>
+    <atomArray>
+      <atom id="a1" elementType="C" x2="0.4125" y2="0.6348"/>
+      <atom id="a2" elementType="C" x2="-0.4125" y2="0.6348"/>
+      <atom id="a3" elementType="C" x2="-0.6674" y2="-0.1498"/>
+      <atom id="a4" elementType="N" x2="0" y2="-0.6348"/>
+      <atom id="a5" elementType="C" x2="0.6674" y2="-0.1498"/>
+    </atomArray>
+    <bondArray>
+      <bond id="b1" order="S" atomRefs2="a1 a2"/>
+      <bond id="b2" order="D" atomRefs2="a2 a3"/>
+      <bond id="b3" order="S" atomRefs2="a3 a4"/>
+      <bond id="b4" order="S" atomRefs2="a4 a5"/>
+      <bond id="b5" order="D" atomRefs2="a5 a1"/>
+    </bondArray>
+  </molecule>
+</cml>
+```
+{{< /liascript >}}
+
 ---
 
 ## Macro 2: `@Kekule.molecule3d` — 3D Molecular Viewer
@@ -98,6 +129,18 @@ Inserts an interactive periodic table element — elements are selectable and di
 ```
 
 Not recommended to place more than one table per page.
+
+Try it live — click any element to see its name and atomic number:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/liaTemplates/KekuleJS/master/README.md
+-->
+
+# Interactive Periodic Table
+
+@Kekule.periodicTable
+{{< /liascript >}}
 
 ---
 

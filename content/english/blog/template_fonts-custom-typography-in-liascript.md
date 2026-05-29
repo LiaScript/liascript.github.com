@@ -155,6 +155,41 @@ def fibonacci(n):
 [[55]]
 ```
 
+Try it live — experience how Merriweather serif and Source Code Pro monospace transform the reading feel:
+
+{{< liascript mode="preview" >}}
+<!--
+author: LiaPlayground
+link:   https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro&display=swap
+-->
+
+# Typography in LiaScript
+
+<style>
+body, p { font-family: 'Merriweather', serif; line-height: 1.8; }
+code, pre { font-family: 'Source Code Pro', monospace; }
+h1, h2, h3 { font-family: 'Merriweather', serif; font-weight: 700; }
+</style>
+
+## Readability Matters
+
+Well-chosen typography improves reading fluency and reduces cognitive load.
+A serif font like Merriweather works well for long-form text, while Source Code Pro makes
+code listings clearer and easier to scan.
+
+```python
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+```
+
+What is the 10th Fibonacci number?
+
+[[55]]
+{{< /liascript >}}
+
 ---
 
 ## Fonts for Multilingual Courses
@@ -175,6 +210,31 @@ link: https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap
 <p class="arabic">مرحباً بالعالم</p>
 <p class="hindi">नमस्ते दुनिया</p>
 ```
+
+Try it live — see Arabic (right-to-left) and Devanagari rendered with proper Unicode fonts:
+
+{{< liascript mode="preview" >}}
+<!--
+author: LiaPlayground
+link: https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap
+link: https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap
+-->
+
+# Multilingual Typography
+
+<style>
+.arabic { font-family: 'Noto Sans Arabic', sans-serif; direction: rtl; font-size: 1.4rem; }
+.hindi  { font-family: 'Noto Sans Devanagari', sans-serif; font-size: 1.4rem; }
+</style>
+
+## Arabic
+
+<p class="arabic">مرحباً بالعالم — Welcome to the World</p>
+
+## Hindi
+
+<p class="hindi">नमस्ते दुनिया — Hello World</p>
+{{< /liascript >}}
 
 ---
 

@@ -30,7 +30,7 @@ Define a sequence of git commands in a code block, or present an empty repositor
 
 ``` markdown
 <!--
-import: https://github.com/liaTemplates/ExplainGit/master/README.md
+import: https://raw.githubusercontent.com/LiaTemplates/ExplainGit/master/README.md
 -->
 ```
 
@@ -103,6 +103,28 @@ git commit -m "Post-merge cleanup"
 ```
 ````
 
+Try it live — watch the feature branch grow and merge back into main:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/ExplainGit/master/README.md
+-->
+
+# Feature Branch and Merge
+
+```text @ExplainGit.eval
+git commit -m "Initial commit"
+git commit -m "Add README"
+git branch feature-login
+git checkout feature-login
+git commit -m "Add login form"
+git commit -m "Add auth logic"
+git checkout main
+git merge feature-login
+git commit -m "Post-merge cleanup"
+```
+{{< /liascript >}}
+
 ### Diverged Branches
 
 ```` markdown
@@ -116,6 +138,26 @@ git commit -m "Continue feature work"
 git merge hotfix
 ```
 ````
+
+Try it live — observe main and hotfix diverge then converge at the merge commit:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/LiaTemplates/ExplainGit/master/README.md
+-->
+
+# Diverged Branches
+
+```text @ExplainGit.eval
+git commit
+git branch hotfix
+git checkout hotfix
+git commit -m "Fix bug"
+git checkout main
+git commit -m "Continue feature work"
+git merge hotfix
+```
+{{< /liascript >}}
 
 ### Remote Tracking
 

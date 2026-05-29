@@ -117,6 +117,46 @@ Which is larger?
 [( )] They are equal
 ```
 
+Try it live — use the sliders to set sections and click to shade the correct fraction:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-Mathe/main/README.md
+-->
+
+# Fractions — Visual Exercises
+
+## Mark 1/2 on the circle
+
+Use the slider to set the number of sectors, then click to show 1/2.
+
+@circleQuiz(1/2)
+
+---
+
+## Mark 3/4 on the rectangle
+
+Set rows and columns, then click to shade exactly 3/4.
+
+@rectQuiz(3/4)
+
+---
+
+## Which is larger?
+
+First shade 2/3 on the circle.
+
+@circleQuiz(2/3)
+
+Then shade 3/4 on the rectangle. Which is larger?
+
+@rectQuiz(3/4)
+
+[( )] 2/3
+[(X)] 3/4
+[( )] They are equal
+{{< /liascript >}}
+
 ---
 
 ## Example: Combined with lia-coordinate

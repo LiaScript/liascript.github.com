@@ -155,6 +155,40 @@ Complete the value table for $f(x) = x^2 - 3$.
 @Table(`n=5;x;f;P;id=t3`)
 ```
 
+Try it live — plot functions, drag points to the x-intercept, and fill in the value table:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-coordinate/main/README.md
+-->
+
+# Linear Functions
+
+## Plot f(x) = 2x − 1
+
+@CoordinateSystem(`xmin=-5;xmax=5;ymin=-6;ymax=6;width=700;id=t1`)
+@AxisLabel(`id=t1;xlabel=$x$;ylabel=$f(x)$`)
+@PlotFunction(`t1;f;2*x-1;#e63946`)
+
+---
+
+## Drag P to the x-intercept of f(x) = 2x − 1
+
+@CoordinateSystem(`xmin=-5;xmax=5;ymin=-5;ymax=5;width=700;id=t2`)
+@AxisLabel(`id=t2;xlabel=$x$;ylabel=$y$`)
+@PlotFunction(`t2;f;2*x-1;#e63946`)
+
+@CreatePoint(`t2;P;0.5;0`, ` `)
+
+---
+
+## Value Table for f(x) = x² − 3
+
+@CoordinateSystem(`xmin=-4;xmax=4;ymin=-4;ymax=6;width=700;id=t3`)
+@AxisLabel(`id=t3;xlabel=$x$;ylabel=$f(x)$`)
+@Table(`n=5;x;f;P;id=t3`)
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo

@@ -135,6 +135,34 @@ Bring die Satzteile in die richtige Reihenfolge:
 @KachelfolgeN(`[->[(Gestern)]][->[(habe)]][->[(ich)]][->[(gelernt)]]`)
 ```
 
+Try it live — drag the tiles into the correct gaps:
+
+{{< liascript mode="preview" >}}
+<!--
+import: https://raw.githubusercontent.com/MINT-the-GAP/lia-Kachel/main/README.md
+-->
+
+# Adjektivendungen
+
+## Nominativ Singular
+
+Choose the correct adjective ending:
+
+Der **schön**[->[(e)|(en)|(em)]] Garten.
+
+Eine **schön**[->[(e)]] Blume.
+
+Das **schön**[->[(e)|(en)|(em)]] Haus.
+
+---
+
+## Satzstellung
+
+Bring the sentence parts into the correct order:
+
+@KachelfolgeN(`[->[(Gestern)]][->[(habe)]][->[(ich)]][->[(gelernt)]]`)
+{{< /liascript >}}
+
 ---
 
 ## Full Template Demo
