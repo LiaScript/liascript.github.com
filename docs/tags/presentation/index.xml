@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Presentation on LiaScript</title><link>https://liascript.github.io/tags/presentation/</link><description>Recent content in Presentation on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/presentation/index.xml" rel="self" type="application/rss+xml"/><item><title>Fullscreen for LiaScript: Clean Presentation Mode Without the Navigation Bar</title><link>https://liascript.github.io/blog/fullscreen-presentation-mode-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/fullscreen-presentation-mode-in-liascript/</guid><description>&lt;p&gt;LiaScript courses have a navigation bar at the top.
+For reading and editing, it is helpful.
+For presenting in front of an audience, it is visual noise.&lt;/p&gt;</description></item><item><title>lia-annotation for LiaScript: Live Drawing Overlay for Classroom Presentations</title><link>https://liascript.github.io/blog/lia-annotation-live-drawing-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-annotation-live-drawing-in-liascript/</guid><description>&lt;p&gt;Teaching live with LiaScript sometimes calls for writing directly on the slide — circling a term, sketching a diagram, or annotating an equation.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-annotation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-annotation&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a floating toolbar to every slide in presentation mode, letting instructors draw freehand strokes, erase them, and undo/redo, all without leaving the slide.
+When paired with &lt;a href="https://liascript.github.io/blog/lia-canvas-ocr-handwriting-recognition-in-liascript"
+
+
+
+ 
+
+
+&gt;lia-canvas-ocr&lt;/a&gt;, it can also recognize handwritten answers and insert them directly into quiz fields.&lt;/p&gt;</description></item><item><title>lia-board-mode for LiaScript: Full-Screen Classroom Presentation Mode</title><link>https://liascript.github.io/blog/lia-board-mode-fullscreen-presentation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-board-mode-fullscreen-presentation-in-liascript/</guid><description>&lt;p&gt;When teaching with LiaScript in the classroom, the standard layout may not fill the screen optimally for projector use.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-board-mode"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-board-mode&lt;/a&gt; community template by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; addresses this: import it into any course and slides stretch to ~98.5% screen width in Presentation and Slides modes, with an adjustable font size slider in the toolbar.&lt;/p&gt;</description></item><item><title>lia-DynFlex for LiaScript: Resizable Multi-Column Layouts</title><link>https://liascript.github.io/blog/lia-dynflex-resizable-columns-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-dynflex-resizable-columns-in-liascript/</guid><description>&lt;p&gt;Standard LiaScript columns have fixed widths.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-DynFlex"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-DynFlex&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds interactive, resizable flex containers to any course: drag the divider between columns to set the perfect balance, and the layout is saved in &lt;code&gt;localStorage&lt;/code&gt; for returning visits.
+Quiz elements, images, and any other Markdown content work inside each column.&lt;/p&gt;</description></item><item><title>lia-navigation for LiaScript: Collapsible Hierarchical Table of Contents</title><link>https://liascript.github.io/blog/lia-navigation-hierarchical-toc-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-navigation-hierarchical-toc-in-liascript/</guid><description>&lt;p&gt;Long LiaScript courses can have dozens of sections, making the default flat table of contents hard to navigate.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-navigation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-navigation&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; replaces the default TOC with a collapsible, hierarchical navigation tree.
+Sections expand and collapse, the current section is highlighted automatically, bookmarks persist across sessions, and the entire hierarchy reflects the heading structure of the document.&lt;/p&gt;</description></item></channel></rss>

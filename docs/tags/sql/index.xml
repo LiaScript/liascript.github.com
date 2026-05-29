@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQL on LiaScript</title><link>https://liascript.github.io/tags/sql/</link><description>Recent content in SQL on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml"/><item><title>PGlite for LiaScript: Full PostgreSQL in the Browser</title><link>https://liascript.github.io/blog/pglite-postgresql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pglite-postgresql-in-liascript/</guid><description>&lt;p&gt;Teaching SQL usually means setting up a database server, managing connections, and keeping student environments in sync.
+The &lt;a href="https://github.com/LiaTemplates/PGlite"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PGlite template&lt;/a&gt; removes all of that.&lt;/p&gt;</description></item><item><title>AlaSQL for LiaScript: Teach SQL and Query CSV Data in the Browser</title><link>https://liascript.github.io/blog/alasql-sql-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/alasql-sql-in-liascript/</guid><description>&lt;p&gt;SQL is not only for relational databases.
+With the &lt;a href="https://github.com/liaTemplates/AlaSQL"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AlaSQL template&lt;/a&gt;, you can run SQL queries inside LiaScript courses against in-memory tables, JavaScript arrays, and CSV files — entirely in the browser.&lt;/p&gt;</description></item><item><title>DuckDB for LiaScript: Teach Data Analytics Directly in the Browser</title><link>https://liascript.github.io/blog/duckdb-analytics-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/duckdb-analytics-in-liascript/</guid><description>&lt;p&gt;Modern data analysis relies on SQL.
+With the &lt;a href="https://github.com/LiaTemplates/DuckDB"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DuckDB template&lt;/a&gt;, you can teach analytical queries interactively — learners write real SQL, run it immediately, and see results as formatted tables or charts, right inside the course.&lt;/p&gt;</description></item><item><title>SQLite for LiaScript: Teach SQL Interactively in the Browser</title><link>https://liascript.github.io/blog/sqlite-sql-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/sqlite-sql-in-liascript/</guid><description>&lt;p&gt;SQL is the foundational language of data.
+With the &lt;a href="https://github.com/liaTemplates/SQLite"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SQLite template&lt;/a&gt;, you can teach it interactively — learners write real SQL, run it immediately, and see the results as formatted tables, right inside the course.&lt;/p&gt;</description></item></channel></rss>

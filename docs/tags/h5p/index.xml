@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>H5P on LiaScript</title><link>https://liascript.github.io/tags/h5p/</link><description>Recent content in H5P on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/h5p/index.xml" rel="self" type="application/rss+xml"/><item><title>LiaEx: Funding for the LiaScript-Exporter</title><link>https://liascript.github.io/blog/liaex-funding-for-the-liascript-exporter/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/liaex-funding-for-the-liascript-exporter/</guid><description>&lt;p&gt;We are thrilled to announce that our &lt;strong&gt;LiaScript-Exporter&lt;/strong&gt;, now developed under the name &lt;strong&gt;LiaEx&lt;/strong&gt;, has received funding through the &lt;a href="https://www.oer-strategie.de/foerdern/foerderrichtlinien/oe_sprints/"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>H5P on LiaScript</title><link>https://liascript.github.io/tags/h5p/</link><description>Recent content in H5P on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/h5p/index.xml" rel="self" type="application/rss+xml"/><item><title>H5P in LiaScript: Embed Interactive H5P Content in Courses</title><link>https://liascript.github.io/blog/h5p-content-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/h5p-content-in-liascript/</guid><description>&lt;p&gt;&lt;a href="https://h5p.org"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;H5P&lt;/a&gt; is a widely used open-source framework for interactive HTML5 content: drag-and-drop exercises, video quizzes, flashcards, branching scenarios, interactive maps, and dozens more activity types.
+The &lt;a href="https://github.com/andre-dietrich/H5P-Test"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;H5P-Test&lt;/a&gt; repository by &lt;a href="https://github.com/andre-dietrich"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;André Dietrich&lt;/a&gt; demonstrates how to embed H5P content from h5p.org (or any compatible LRS) directly inside a LiaScript course using a plain HTML &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>LiaEx: Funding for the LiaScript-Exporter</title><link>https://liascript.github.io/blog/liaex-funding-for-the-liascript-exporter/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/liaex-funding-for-the-liascript-exporter/</guid><description>&lt;p&gt;We are thrilled to announce that our &lt;strong&gt;LiaScript-Exporter&lt;/strong&gt;, now developed under the name &lt;strong&gt;LiaEx&lt;/strong&gt;, has received funding through the &lt;a href="https://www.oer-strategie.de/foerdern/foerderrichtlinien/oe_sprints/"
 
 
 

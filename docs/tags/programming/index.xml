@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on LiaScript</title><link>https://liascript.github.io/tags/programming/</link><description>Recent content in Programming on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 04 May 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Lua Programming</title><link>https://liascript.github.io/blog/lua-programming/</link><pubDate>Thu, 04 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lua-programming/</guid><description>&lt;p&gt;This example is a port of the Lua programming course from the open wikibook &lt;a href="https://en.wikibooks.org/wiki/Lua_Programming"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on LiaScript</title><link>https://liascript.github.io/tags/programming/</link><description>Recent content in Programming on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>AVR8js-mem for LiaScript: Memory Register Visualization for AVR Microcontrollers</title><link>https://liascript.github.io/blog/avr8js-mem-memory-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/avr8js-mem-memory-visualization-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://liascript.github.io/blog/avr8js-arduino-simulation-in-liascript"
+
+
+
+ 
+
+
+&gt;AVR8js template&lt;/a&gt; lets you run Arduino C++ code in the browser with Wokwi components.
+&lt;a href="https://github.com/fjangfaragesh/AVR8js-mem"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AVR8js-mem&lt;/a&gt; by &lt;a href="https://github.com/fjangfaragesh"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Fabian Bär&lt;/a&gt; extends it with a key teaching feature: real-time memory register visualization.
+After each simulation cycle, you can display the value of any memory register in binary, hexadecimal, unsigned integer, or custom format — and even plot the values over time as a live diagram.&lt;/p&gt;</description></item><item><title>BiwaScheme for LiaScript: Functional Programming with Scheme in the Browser</title><link>https://liascript.github.io/blog/biwascheme-scheme-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/biwascheme-scheme-in-liascript/</guid><description>&lt;p&gt;Scheme is one of the most influential programming languages ever designed.
+Its minimal syntax, powerful macro system, and emphasis on functional programming have made it a foundational language in computer science education — from SICP to modern functional programming courses.&lt;/p&gt;</description></item><item><title>Curiosity-Prolog for LiaScript: Lightweight Logic Programming in the Browser</title><link>https://liascript.github.io/blog/curiosity-prolog-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/curiosity-prolog-in-liascript/</guid><description>&lt;p&gt;Not every logic programming exercise needs a full Prolog system.
+For introductory exercises — family trees, simple rule-based reasoning, first-order logic — a lighter interpreter is often more appropriate.&lt;/p&gt;</description></item><item><title>Custom Code Imports for LiaScript: Load External Files Into Executable Blocks</title><link>https://liascript.github.io/blog/custom-code-imports-external-files-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/custom-code-imports-external-files-in-liascript/</guid><description>&lt;p&gt;LiaScript&amp;rsquo;s code blocks are normally written directly in the Markdown source.
+The &lt;a href="https://github.com/LiaPlayground/Custom-code-imports"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Custom-code-imports&lt;/a&gt; playground by &lt;a href="https://github.com/andre-dietrich"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;André Dietrich&lt;/a&gt; demonstrates a powerful pattern: fetching the content of an external source file by URL and injecting it as a live, executable LiaScript code block at runtime.
+This is particularly useful for courses that should always show the latest version of a codebase, or for exercises that load student submissions for review.&lt;/p&gt;</description></item><item><title>JSCPP for LiaScript: Run C++ Directly in the Browser Without a Compiler</title><link>https://liascript.github.io/blog/jscpp-cpp-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jscpp-cpp-in-liascript/</guid><description>&lt;p&gt;C++ programming courses have a tooling problem.
+Students need to install a compiler, configure an IDE, manage build systems, and debug their environment before writing a single line of code.&lt;/p&gt;</description></item><item><title>Lua for LiaScript: Execute Lua Scripts Interactively in the Browser</title><link>https://liascript.github.io/blog/lua-scripting-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lua-scripting-in-liascript/</guid><description>&lt;p&gt;Lua is lightweight, fast, embeddable, and widely used — in game development (Roblox, World of Warcraft, Löve2D), embedded systems, configuration scripting, and teaching.
+Its simple syntax and minimal runtime make it an excellent first language.&lt;/p&gt;</description></item><item><title>p5js for LiaScript: Creative Coding and Generative Graphics in the Browser</title><link>https://liascript.github.io/blog/p5js-creative-coding-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/p5js-creative-coding-in-liascript/</guid><description>&lt;p&gt;p5.js brings the Processing creative coding environment to the web.
+It is built for artists, designers, educators, and beginners who want to draw, animate, and interact with graphics using JavaScript.&lt;/p&gt;</description></item><item><title>Tau-Prolog for LiaScript: Interactive Logic Programming in the Browser</title><link>https://liascript.github.io/blog/tau-prolog-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tau-prolog-in-liascript/</guid><description>&lt;p&gt;Prolog is the language of logic programming.
+Unlike imperative languages, Prolog programs describe &lt;em&gt;what is true&lt;/em&gt; rather than &lt;em&gt;how to compute it&lt;/em&gt;.
+This makes it essential in AI, natural language processing, theorem proving, and formal methods courses.&lt;/p&gt;</description></item><item><title>TinyTurtle for LiaScript: Teach JavaScript with Interactive Turtle Graphics</title><link>https://liascript.github.io/blog/tiny-turtle-graphics-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tiny-turtle-graphics-in-liascript/</guid><description>&lt;p&gt;Turtle graphics is one of the most effective ways to introduce programming.
+The immediate visual feedback — a turtle drawing lines on screen — connects commands to results in a way that abstract code examples cannot.&lt;/p&gt;</description></item><item><title>CodeRunner for LiaScript: Execute Code in 50+ Languages Server-Side</title><link>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</guid><description>&lt;p&gt;Not every programming language runs in a browser.
+Browser-based interpreters like Pyodide cover Python beautifully, but if your course needs real C compilation, JVM-based Java, Rust, Haskell, Erlang, or even COBOL — you need a real server with real compilers.&lt;/p&gt;</description></item><item><title>MicroBit-Simulator for LiaScript: Teach MicroPython Without a Physical Device</title><link>https://liascript.github.io/blog/microbit-simulator-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/microbit-simulator-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://microbit.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BBC micro:bit&lt;/a&gt; is one of the most popular physical computing boards in schools worldwide.
+With the &lt;a href="https://github.com/LiaTemplates/MicroBit-Simulator"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MicroBit-Simulator template&lt;/a&gt;, you can bring it directly into your LiaScript course — no hardware, no installation, no classroom set of devices needed.&lt;/p&gt;</description></item><item><title>Pyodide for LiaScript: Run Python Directly in Your Course</title><link>https://liascript.github.io/blog/pyodide-python-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pyodide-python-in-liascript/</guid><description>&lt;p&gt;Python is the most widely taught programming language in the world.
+With the &lt;a href="https://github.com/LiaTemplates/Pyodide"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pyodide template&lt;/a&gt;, you can bring it directly into your LiaScript course — executable, editable, and fully browser-based.&lt;/p&gt;</description></item><item><title>Lua Programming</title><link>https://liascript.github.io/blog/lua-programming/</link><pubDate>Thu, 04 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lua-programming/</guid><description>&lt;p&gt;This example is a port of the Lua programming course from the open wikibook &lt;a href="https://en.wikibooks.org/wiki/Lua_Programming"
 
 
 

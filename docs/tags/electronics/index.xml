@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Electronics on LiaScript</title><link>https://liascript.github.io/tags/electronics/</link><description>Recent content in Electronics on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/electronics/index.xml" rel="self" type="application/rss+xml"/><item><title>AVR8js-mem for LiaScript: Memory Register Visualization for AVR Microcontrollers</title><link>https://liascript.github.io/blog/avr8js-mem-memory-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/avr8js-mem-memory-visualization-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://liascript.github.io/blog/avr8js-arduino-simulation-in-liascript"
+
+
+
+ 
+
+
+&gt;AVR8js template&lt;/a&gt; lets you run Arduino C++ code in the browser with Wokwi components.
+&lt;a href="https://github.com/fjangfaragesh/AVR8js-mem"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AVR8js-mem&lt;/a&gt; by &lt;a href="https://github.com/fjangfaragesh"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Fabian Bär&lt;/a&gt; extends it with a key teaching feature: real-time memory register visualization.
+After each simulation cycle, you can display the value of any memory register in binary, hexadecimal, unsigned integer, or custom format — and even plot the values over time as a live diagram.&lt;/p&gt;</description></item></channel></rss>

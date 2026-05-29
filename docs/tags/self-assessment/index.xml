@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Self Assessment on LiaScript</title><link>https://liascript.github.io/tags/self-assessment/</link><description>Recent content in Self Assessment on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/self-assessment/index.xml" rel="self" type="application/rss+xml"/><item><title>Random for LiaScript: Dynamic Quiz Banks and Randomized Practice Sets</title><link>https://liascript.github.io/blog/random-quiz-banks-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/random-quiz-banks-in-liascript/</guid><description>&lt;p&gt;A central challenge in self-paced learning is keeping practice fresh.
+If students see the same 20 questions every time, they memorize positions rather than content.
+The &lt;a href="https://github.com/LiaTemplates/Random"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Random template&lt;/a&gt; adds controlled randomization to LiaScript: wrap exercises in &lt;code&gt;&amp;lt;div class=&amp;quot;random&amp;quot;&amp;gt;&lt;/code&gt; containers, and let the template pick a subset on each page visit.&lt;/p&gt;</description></item><item><title>Speech-Recognition-Quiz for LiaScript: Turn Spoken Words into Interactive Quizzes</title><link>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</guid><description>&lt;p&gt;What if your quiz asked learners to &lt;em&gt;say&lt;/em&gt; the answer instead of typing it?&lt;/p&gt;</description></item></channel></rss>

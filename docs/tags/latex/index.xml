@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LaTeX on LiaScript</title><link>https://liascript.github.io/tags/latex/</link><description>Recent content in LaTeX on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>ChemfigJS for LiaScript: LaTeX-Style Structural Chemical Formulas in the Browser</title><link>https://liascript.github.io/blog/chemfigjs-structural-formulas-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chemfigjs-structural-formulas-in-liascript/</guid><description>&lt;p&gt;Chemistry educators who come from a LaTeX background know &lt;a href="https://ctan.org/pkg/chemfig"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;chemfig&lt;/a&gt; — the standard package for drawing structural formulas.
+The &lt;a href="https://github.com/herbigm/ChemfigJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ChemfigJS template&lt;/a&gt; by Marcus Herbig brings the chemfig syntax to the web, generating SVG from chemfig-style code directly in the browser.&lt;/p&gt;</description></item><item><title>TikzJax for LiaScript: Render TikZ Diagrams Directly in the Browser</title><link>https://liascript.github.io/blog/tikzjax-latex-diagrams-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tikzjax-latex-diagrams-in-liascript/</guid><description>&lt;p&gt;TikZ is the gold standard for technical diagrams in academic publishing.
+Circuit diagrams, flowcharts, commutative diagrams, geometric constructions, function plots — TikZ handles all of them with precision and flexibility.
+Until recently, rendering TikZ required a full LaTeX installation.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interactive Exercises on LiaScript</title><link>https://liascript.github.io/tags/interactive-exercises/</link><description>Recent content in Interactive Exercises on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/interactive-exercises/index.xml" rel="self" type="application/rss+xml"/><item><title>Chat-Simulation for LiaScript: Bring Dialogues to Life in Your Course</title><link>https://liascript.github.io/blog/chat-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chat-simulation-in-liascript/</guid><description>&lt;p&gt;Sometimes the most effective way to present information is not as a list or an explanation, but as a conversation.
+The &lt;a href="https://github.com/LiaTemplates/Chat-Simulation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chat-Simulation template&lt;/a&gt; lets you embed animated chat dialogues directly in your LiaScript course — complete with typing indicators, speech bubbles, and support for full Markdown and LiaScript elements inside every message.&lt;/p&gt;</description></item><item><title>ExplainGit for LiaScript: Visualize Git Repositories Interactively</title><link>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</guid><description>&lt;p&gt;Git is notoriously difficult to teach with text alone.
+The &lt;a href="https://github.com/LiaTemplates/ExplainGit"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ExplainGit template&lt;/a&gt; embeds &lt;a href="https://github.com/onlywei/explain-git-with-d3"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;onlywei&amp;rsquo;s explain-git-with-d3&lt;/a&gt; into LiaScript, visualizing commits, branches, merges, and checkouts as animated D3 diagrams.&lt;/p&gt;</description></item><item><title>PouchDB for LiaScript: NoSQL Documents and Mango Queries in the Browser</title><link>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</guid><description>&lt;p&gt;Relational databases are one way to store data.
+Documents are another.
+The &lt;a href="https://github.com/LiaTemplates/PouchDB"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB template&lt;/a&gt; brings &lt;a href="https://pouchdb.com"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB&lt;/a&gt; — a JavaScript database inspired by Apache CouchDB — directly into your LiaScript courses.&lt;/p&gt;</description></item><item><title>SpreadSheet for LiaScript: Excel-Style Interactive Tables in Your Course</title><link>https://liascript.github.io/blog/spreadsheet-excel-tables-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/spreadsheet-excel-tables-in-liascript/</guid><description>&lt;p&gt;Interactive data tables are a staple of business, science, and data literacy education.
+The &lt;a href="https://github.com/LiaTemplates/SpreadSheet"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SpreadSheet template&lt;/a&gt; brings &lt;a href="https://jspreadsheet.com/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSSpreadsheet (jspreadsheet.js)&lt;/a&gt; into LiaScript, enabling student-editable tables with Excel-style formulas, dropdown selectors, checkboxes, sorting, search, and persistence — all without a server.&lt;/p&gt;</description></item><item><title>TextAnalysis for LiaScript: Readability Scores and Text Complexity Metrics</title><link>https://liascript.github.io/blog/textanalysis-readability-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/textanalysis-readability-in-liascript/</guid><description>&lt;p&gt;Writing clear learning materials requires understanding how readable they actually are.
+The &lt;a href="https://github.com/LiaTemplates/TextAnalysis"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;TextAnalysis template&lt;/a&gt; attaches standard readability metrics to any text block in LiaScript.
+Students can paste or edit text and instantly see Flesch-Kincaid grades, Gunning Fog index, syllable counts, reading time, and more — directly in the course slide.&lt;/p&gt;</description></item><item><title>AlaSQL for LiaScript: Teach SQL and Query CSV Data in the Browser</title><link>https://liascript.github.io/blog/alasql-sql-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/alasql-sql-in-liascript/</guid><description>&lt;p&gt;SQL is not only for relational databases.
+With the &lt;a href="https://github.com/liaTemplates/AlaSQL"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AlaSQL template&lt;/a&gt;, you can run SQL queries inside LiaScript courses against in-memory tables, JavaScript arrays, and CSV files — entirely in the browser.&lt;/p&gt;</description></item><item><title>CollaborativeDrawing for LiaScript: Shared Whiteboards for Live Classrooms</title><link>https://liascript.github.io/blog/collaborative-drawing-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/collaborative-drawing-in-liascript/</guid><description>&lt;p&gt;When you teach a live session, sometimes the most natural thing is to hand students a marker and say: &amp;ldquo;draw what you see.&amp;rdquo;
+The &lt;a href="https://github.com/LiaTemplates/CollaborativeDrawing"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;CollaborativeDrawing template&lt;/a&gt; brings that experience into LiaScript — a shared canvas where every connected student draws in their own randomly assigned color, all changes synchronize in real time across all participants.&lt;/p&gt;</description></item><item><title>Speech-Recognition-Quiz for LiaScript: Turn Spoken Words into Interactive Quizzes</title><link>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</guid><description>&lt;p&gt;What if your quiz asked learners to &lt;em&gt;say&lt;/em&gt; the answer instead of typing it?&lt;/p&gt;</description></item><item><title>SQLite for LiaScript: Teach SQL Interactively in the Browser</title><link>https://liascript.github.io/blog/sqlite-sql-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/sqlite-sql-in-liascript/</guid><description>&lt;p&gt;SQL is the foundational language of data.
+With the &lt;a href="https://github.com/liaTemplates/SQLite"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SQLite template&lt;/a&gt;, you can teach it interactively — learners write real SQL, run it immediately, and see the results as formatted tables, right inside the course.&lt;/p&gt;</description></item></channel></rss>

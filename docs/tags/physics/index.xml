@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Physics on LiaScript</title><link>https://liascript.github.io/tags/physics/</link><description>Recent content in Physics on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/physics/index.xml" rel="self" type="application/rss+xml"/><item><title>mec2 for LiaScript: 2D Mechanism and Physics Simulation</title><link>https://liascript.github.io/blog/mec2-physics-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mec2-physics-simulation-in-liascript/</guid><description>&lt;p&gt;Mechanical engineering education benefits enormously from dynamic simulation — but setting up simulation software is a barrier.
+The &lt;a href="https://github.com/LiaTemplates/mec2"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;mec2 template&lt;/a&gt; brings &lt;a href="https://goessner.github.io/mec2/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;goessner&amp;rsquo;s mec2&lt;/a&gt; 2D physics and mechanism engine to LiaScript.
+Define nodes, constraints, gravity, and visualization views in JSON, and the simulation runs live in the browser.&lt;/p&gt;</description></item></channel></rss>

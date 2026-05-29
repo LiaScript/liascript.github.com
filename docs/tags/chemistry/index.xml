@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chemistry on LiaScript</title><link>https://liascript.github.io/tags/chemistry/</link><description>Recent content in Chemistry on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/chemistry/index.xml" rel="self" type="application/rss+xml"/><item><title>ChemfigJS for LiaScript: LaTeX-Style Structural Chemical Formulas in the Browser</title><link>https://liascript.github.io/blog/chemfigjs-structural-formulas-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chemfigjs-structural-formulas-in-liascript/</guid><description>&lt;p&gt;Chemistry educators who come from a LaTeX background know &lt;a href="https://ctan.org/pkg/chemfig"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;chemfig&lt;/a&gt; — the standard package for drawing structural formulas.
+The &lt;a href="https://github.com/herbigm/ChemfigJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ChemfigJS template&lt;/a&gt; by Marcus Herbig brings the chemfig syntax to the web, generating SVG from chemfig-style code directly in the browser.&lt;/p&gt;</description></item><item><title>ChemmacrosJS for LiaScript: Professional Chemistry Notation in Courses</title><link>https://liascript.github.io/blog/chemmacrosjs-chemistry-macros-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chemmacrosjs-chemistry-macros-in-liascript/</guid><description>&lt;p&gt;Chemistry courses require proper notation: subscripts in molecular formulas, reaction arrows, equilibrium double arrows, and standardized GHS safety statements.
+&lt;a href="https://github.com/herbigm/ChemmacrosJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ChemmacrosJS&lt;/a&gt; by &lt;a href="https://github.com/herbigm"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Marcus Herbig&lt;/a&gt; is a LiaScript template that ports core functionality of the LaTeX &lt;a href="https://ctan.org/pkg/chemmacros"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chemmacros&lt;/a&gt; package to the browser.
+With a handful of macros you get typeset chemical formulas, aligned reaction equations, GHS pictograms, and formatted H/P statements.&lt;/p&gt;</description></item><item><title>KekuleJS for LiaScript: Chemistry Structures and Molecular Visualization</title><link>https://liascript.github.io/blog/kekulejs-chemistry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/kekulejs-chemistry-in-liascript/</guid><description>&lt;p&gt;Drawing chemical structures in web-based learning materials traditionally requires image exports or external tools.
+The &lt;a href="https://github.com/LiaTemplates/KekuleJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;KekuleJS template&lt;/a&gt; integrates &lt;a href="https://github.com/partridgejiang/Kekule.js"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Kekule.js&lt;/a&gt; — a comprehensive cheminformatics library — into LiaScript, enabling 2D and 3D molecular visualization, interactive periodic tables, and CML/MOL file loading directly in the browser.&lt;/p&gt;</description></item><item><title>PeriodicTable for LiaScript: An Interactive Element Table in Your Course</title><link>https://liascript.github.io/blog/periodictable-interactive-chemistry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/periodictable-interactive-chemistry-in-liascript/</guid><description>&lt;p&gt;A periodic table is a fixture of chemistry education at every level.
+The &lt;a href="https://github.com/LiaTemplates/PeriodicTable"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PeriodicTable template&lt;/a&gt; lets you embed a fully interactive, styled periodic table directly into a LiaScript course page with a single line — no image, no plugin, no configuration.&lt;/p&gt;</description></item></channel></rss>

@@ -1,2 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TVET on LiaScript</title><link>https://liascript.github.io/tags/tvet/</link><description>Recent content in TVET on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/tvet/index.xml" rel="self" type="application/rss+xml"/><item><title>AI-Enhanced Live Coding: Building Liascript Courses for TVET 2025</title><link>https://liascript.github.io/blog/ai-enhanced-live-coding-building-liascript-courses-for-tvet-2025/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/ai-enhanced-live-coding-building-liascript-courses-for-tvet-2025/</guid><description>&lt;p&gt;Watch a live coding session where we build interactive online courses using LiaScript, supercharged with AI assistance. This video—recorded during the Expert Meeting on AI and TVET 2025—offers an inside look at how modern tools and automation are reshaping technical and vocational education. Follow along with the source code on GitHub and explore event details on the Fraunhofer IFF website.&lt;/p&gt;</description></item><item><title>Umsetzung, Chancen und Herausforderungen von Remote-Laboren (German)</title><link>https://liascript.github.io/blog/umsetzung-chancen-und-herausforderungen-von-remote-laboren/</link><pubDate>Thu, 14 Jun 2018 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/umsetzung-chancen-und-herausforderungen-von-remote-laboren/</guid><description>&lt;p&gt;Aufzeichnung der Webinarreihe &amp;ldquo;Digitalisierung an den Hochschulen Sachsen Anhalt&amp;rdquo;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TVET on LiaScript</title><link>https://liascript.github.io/tags/tvet/</link><description>Recent content in TVET on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/tvet/index.xml" rel="self" type="application/rss+xml"/><item><title>AVR8js for LiaScript: Simulate Arduino and AVR Microcontrollers in the Browser</title><link>https://liascript.github.io/blog/avr8js-arduino-simulator-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/avr8js-arduino-simulator-in-liascript/</guid><description>&lt;p&gt;Teaching embedded systems and Arduino programming typically requires physical hardware: boards, LEDs, cables, and a lab environment.
+The &lt;a href="https://github.com/LiaTemplates/AVR8js"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AVR8js template&lt;/a&gt; removes that requirement entirely.&lt;/p&gt;</description></item><item><title>JSCAD for LiaScript: Parametric 3D CAD Modeling in the Browser</title><link>https://liascript.github.io/blog/jscad-3d-cad-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jscad-3d-cad-in-liascript/</guid><description>&lt;p&gt;Parametric 3D modeling is a core skill in mechanical engineering, product design, and TVET manufacturing programs.
+Teaching it usually requires CAD software installations, license management, and significant setup time.&lt;/p&gt;</description></item><item><title>WebSerial for LiaScript: Connect Your Code Editor to Real Hardware</title><link>https://liascript.github.io/blog/webserial-hardware-connection-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/webserial-hardware-connection-in-liascript/</guid><description>&lt;p&gt;Bridging the gap between learning materials and real hardware is one of the hardest challenges in TVET and embedded systems education.
+The &lt;a href="https://github.com/LiaTemplates/WebSerial"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;WebSerial template&lt;/a&gt; connects the LiaScript code editor directly to a microcontroller via Chrome&amp;rsquo;s &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Web Serial API&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>gcode-preview for LiaScript: Visualize G-Code for 3D Printing and CNC in Open Courses</title><link>https://liascript.github.io/blog/gcode-preview-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/gcode-preview-in-liascript/</guid><description>&lt;p&gt;G-Code is the language of digital fabrication.
+Every 3D printer, CNC milling machine, laser cutter, and lathe is controlled by sequences of G-Code instructions — yet most learners never get to see what those instructions actually describe spatially.&lt;/p&gt;</description></item><item><title>MicroBit-Simulator for LiaScript: Teach MicroPython Without a Physical Device</title><link>https://liascript.github.io/blog/microbit-simulator-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/microbit-simulator-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://microbit.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BBC micro:bit&lt;/a&gt; is one of the most popular physical computing boards in schools worldwide.
+With the &lt;a href="https://github.com/LiaTemplates/MicroBit-Simulator"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MicroBit-Simulator template&lt;/a&gt;, you can bring it directly into your LiaScript course — no hardware, no installation, no classroom set of devices needed.&lt;/p&gt;</description></item><item><title>AI-Enhanced Live Coding: Building Liascript Courses for TVET 2025</title><link>https://liascript.github.io/blog/ai-enhanced-live-coding-building-liascript-courses-for-tvet-2025/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/ai-enhanced-live-coding-building-liascript-courses-for-tvet-2025/</guid><description>&lt;p&gt;Watch a live coding session where we build interactive online courses using LiaScript, supercharged with AI assistance. This video—recorded during the Expert Meeting on AI and TVET 2025—offers an inside look at how modern tools and automation are reshaping technical and vocational education. Follow along with the source code on GitHub and explore event details on the Fraunhofer IFF website.&lt;/p&gt;</description></item><item><title>Umsetzung, Chancen und Herausforderungen von Remote-Laboren (German)</title><link>https://liascript.github.io/blog/umsetzung-chancen-und-herausforderungen-von-remote-laboren/</link><pubDate>Thu, 14 Jun 2018 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/umsetzung-chancen-und-herausforderungen-von-remote-laboren/</guid><description>&lt;p&gt;Aufzeichnung der Webinarreihe &amp;ldquo;Digitalisierung an den Hochschulen Sachsen Anhalt&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Thema:&lt;/strong&gt; &amp;ldquo;„Jederzeit und überall im Labor lernen. Umsetzung, Chancen und Herausforderungen von Remote-Laboren am Beispiel ‚Industrial eLab‘&amp;rdquo; von Jun. Prof. Dr. Sebastian Zug, OVGU Magdeburg und Dr. Anja Hawlitschek, HS Magdeburg-Stendal.&lt;/p&gt;</description></item></channel></rss>

@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Visualization on LiaScript</title><link>https://liascript.github.io/tags/visualization/</link><description>Recent content in Visualization on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 13 Apr 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/visualization/index.xml" rel="self" type="application/rss+xml"/><item><title>Mapping the LiaScript Community with LiaGraph</title><link>https://liascript.github.io/blog/mapping-the-liascript-community-with-liagraph/</link><pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mapping-the-liascript-community-with-liagraph/</guid><description>&lt;p&gt;LiaScript is a distributed, open ecosystem.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Visualization on LiaScript</title><link>https://liascript.github.io/tags/visualization/</link><description>Recent content in Visualization on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/visualization/index.xml" rel="self" type="application/rss+xml"/><item><title>ExplainGit for LiaScript: Visualize Git Repositories Interactively</title><link>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</guid><description>&lt;p&gt;Git is notoriously difficult to teach with text alone.
+The &lt;a href="https://github.com/LiaTemplates/ExplainGit"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ExplainGit template&lt;/a&gt; embeds &lt;a href="https://github.com/onlywei/explain-git-with-d3"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;onlywei&amp;rsquo;s explain-git-with-d3&lt;/a&gt; into LiaScript, visualizing commits, branches, merges, and checkouts as animated D3 diagrams.&lt;/p&gt;</description></item><item><title>GGBScript for LiaScript: Interactive Geometry Constructions in the Browser</title><link>https://liascript.github.io/blog/ggbscript-geometry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/ggbscript-geometry-in-liascript/</guid><description>&lt;p&gt;Geometry education benefits enormously from interactive visualizations.
+Students who can drag a point, observe how angles change, or animate a transformation understand geometry differently than those who only read about it.&lt;/p&gt;</description></item><item><title>KekuleJS for LiaScript: Chemistry Structures and Molecular Visualization</title><link>https://liascript.github.io/blog/kekulejs-chemistry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/kekulejs-chemistry-in-liascript/</guid><description>&lt;p&gt;Drawing chemical structures in web-based learning materials traditionally requires image exports or external tools.
+The &lt;a href="https://github.com/LiaTemplates/KekuleJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;KekuleJS template&lt;/a&gt; integrates &lt;a href="https://github.com/partridgejiang/Kekule.js"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Kekule.js&lt;/a&gt; — a comprehensive cheminformatics library — into LiaScript, enabling 2D and 3D molecular visualization, interactive periodic tables, and CML/MOL file loading directly in the browser.&lt;/p&gt;</description></item><item><title>p5js for LiaScript: Creative Coding and Generative Graphics in the Browser</title><link>https://liascript.github.io/blog/p5js-creative-coding-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/p5js-creative-coding-in-liascript/</guid><description>&lt;p&gt;p5.js brings the Processing creative coding environment to the web.
+It is built for artists, designers, educators, and beginners who want to draw, animate, and interact with graphics using JavaScript.&lt;/p&gt;</description></item><item><title>Vega for LiaScript: Interactive Data Visualizations in Your Course</title><link>https://liascript.github.io/blog/vega-data-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/vega-data-visualization-in-liascript/</guid><description>&lt;p&gt;Data visualization is central to data science, statistics, and quantitative research education.
+Good charts communicate insights that tables cannot.
+Interactive charts — where students can hover, filter, and explore — communicate even more.&lt;/p&gt;</description></item><item><title>VTK for LiaScript: 3D Scientific Visualization Powered by VTK.js</title><link>https://liascript.github.io/blog/vtk-3d-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/vtk-3d-visualization-in-liascript/</guid><description>&lt;p&gt;Scientific and engineering visualization often requires three dimensions.
+Volume rendering, isosurfaces, 3D mesh views, medical imaging data — these cannot be adequately represented in 2D plots.&lt;/p&gt;</description></item><item><title>ABCjs for LiaScript: Embed and Play Music Notation in Open Courses</title><link>https://liascript.github.io/blog/abcjs-music-notation-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/abcjs-music-notation-in-liascript/</guid><description>&lt;p&gt;Music belongs in open courses.
+Whether you teach music theory, introduce students to folk music traditions, document historical scores, or simply want to liven up a language lesson with a melody — the &lt;a href="https://github.com/LiaTemplates/ABCjs"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ABCjs template&lt;/a&gt; lets you write music in plain text and render it as interactive sheet music with a built-in audio player, directly in the browser.&lt;/p&gt;</description></item><item><title>JSXGraph for LiaScript: Interactive Math and Geometry in the Browser</title><link>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</guid><description>&lt;p&gt;Mathematics comes alive when learners can move points, drag sliders, and watch functions redraw in real time.
+The &lt;a href="https://github.com/LiaTemplates/JSXGraph"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSXGraph template&lt;/a&gt; brings exactly that to LiaScript — interactive geometry, function plots, parametric curves, and 3D visualizations, all running entirely in the browser.&lt;/p&gt;</description></item><item><title>Mermaid for LiaScript: Create Flowcharts and Diagrams in Plain Text</title><link>https://liascript.github.io/blog/mermaid-diagrams-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mermaid-diagrams-in-liascript/</guid><description>&lt;p&gt;A picture is worth a thousand words — and a diagram that students can edit live in the browser is worth a thousand static slides.&lt;/p&gt;</description></item><item><title>Mapping the LiaScript Community with LiaGraph</title><link>https://liascript.github.io/blog/mapping-the-liascript-community-with-liagraph/</link><pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mapping-the-liascript-community-with-liagraph/</guid><description>&lt;p&gt;LiaScript is a distributed, open ecosystem.
 Courses live in GitHub repositories, contributors are spread across institutions and countries, and there is no central registry of who builds what or how it all connects.
 We wanted to change that — at least visually.&lt;/p&gt;</description></item><item><title>JSXGraph &amp; LiaScript ... a Perfect Match</title><link>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</guid><description>&lt;p&gt;As you know, &lt;a href="https://liascript.github.io"
 

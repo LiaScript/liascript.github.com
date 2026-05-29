@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SPARQL on LiaScript</title><link>https://liascript.github.io/tags/sparql/</link><description>Recent content in SPARQL on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/sparql/index.xml" rel="self" type="application/rss+xml"/><item><title>Comunica for LiaScript: Run SPARQL Queries and Explore Knowledge Graphs</title><link>https://liascript.github.io/blog/comunica-sparql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/comunica-sparql-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://en.wikipedia.org/wiki/Semantic_Web"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Semantic Web&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Linked_data"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Linked Open Data&lt;/a&gt; are among the richest topics in computer science and information science — but teaching SPARQL interactively has always required running a server.&lt;/p&gt;</description></item></channel></rss>

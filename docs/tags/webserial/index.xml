@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebSerial on LiaScript</title><link>https://liascript.github.io/tags/webserial/</link><description>Recent content in WebSerial on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/webserial/index.xml" rel="self" type="application/rss+xml"/><item><title>WebSerial for LiaScript: Connect Your Code Editor to Real Hardware</title><link>https://liascript.github.io/blog/webserial-hardware-connection-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/webserial-hardware-connection-in-liascript/</guid><description>&lt;p&gt;Bridging the gap between learning materials and real hardware is one of the hardest challenges in TVET and embedded systems education.
+The &lt;a href="https://github.com/LiaTemplates/WebSerial"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;WebSerial template&lt;/a&gt; connects the LiaScript code editor directly to a microcontroller via Chrome&amp;rsquo;s &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Web Serial API&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

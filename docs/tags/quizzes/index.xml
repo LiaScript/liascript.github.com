@@ -1,1 +1,157 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quizzes on LiaScript</title><link>https://liascript.github.io/tags/quizzes/</link><description>Recent content in Quizzes on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 09 May 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/quizzes/index.xml" rel="self" type="application/rss+xml"/><item><title>6 Quizzes in 100 Seconds</title><link>https://liascript.github.io/blog/6-quizzes-in-100-seconds/</link><pubDate>Tue, 09 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/6-quizzes-in-100-seconds/</guid><description>&lt;p&gt;This is our report on making quizzes in LiaScript in 100 seconds.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quizzes on LiaScript</title><link>https://liascript.github.io/tags/quizzes/</link><description>Recent content in Quizzes on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/quizzes/index.xml" rel="self" type="application/rss+xml"/><item><title>DragAndDrop Template for LiaScript: Order and Multiple-Choice Drag Quizzes</title><link>https://liascript.github.io/blog/drag-and-drop-quizzes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/drag-and-drop-quizzes-in-liascript/</guid><description>&lt;p&gt;Drag-and-drop quizzes are more engaging than click-to-select, especially for sequencing and sorting tasks.
+The &lt;a href="https://github.com/MichaelMarkert/LiaScript_DragAndDrop_Template"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript_DragAndDrop_Template&lt;/a&gt; by &lt;a href="https://github.com/MichaelMarkert"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Michael Markert&lt;/a&gt; provides two macros for drag-and-drop interaction: &lt;code&gt;@dragdroporder&lt;/code&gt; for putting items in the correct sequence, and &lt;code&gt;@dragdropmultiple&lt;/code&gt; for selecting the correct subset from a shuffled pool.&lt;/p&gt;</description></item><item><title>H5P in LiaScript: Embed Interactive H5P Content in Courses</title><link>https://liascript.github.io/blog/h5p-content-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/h5p-content-in-liascript/</guid><description>&lt;p&gt;&lt;a href="https://h5p.org"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;H5P&lt;/a&gt; is a widely used open-source framework for interactive HTML5 content: drag-and-drop exercises, video quizzes, flashcards, branching scenarios, interactive maps, and dozens more activity types.
+The &lt;a href="https://github.com/andre-dietrich/H5P-Test"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;H5P-Test&lt;/a&gt; repository by &lt;a href="https://github.com/andre-dietrich"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;André Dietrich&lt;/a&gt; demonstrates how to embed H5P content from h5p.org (or any compatible LRS) directly inside a LiaScript course using a plain HTML &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>lia-freeze-v2 for LiaScript: Quiz Submission and Teacher Review Links</title><link>https://liascript.github.io/blog/lia-freeze-quiz-submission-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-freeze-quiz-submission-in-liascript/</guid><description>&lt;p&gt;LiaScript courses store quiz state in the student&amp;rsquo;s browser — but there&amp;rsquo;s no built-in way to hand that state to a teacher for grading.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-freeze-v2"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-freeze-v2&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; closes this gap with a &amp;ldquo;freeze&amp;rdquo; mechanism: at the end of the course the student clicks a button to generate a URL that encodes all their quiz answers.
+The teacher opens the URL and sees the completed course, locked for review and automatically scored.&lt;/p&gt;</description></item><item><title>lia-kachel for LiaScript: Drag-and-Drop Tile Quizzes</title><link>https://liascript.github.io/blog/lia-kachel-tile-quizzes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-kachel-tile-quizzes-in-liascript/</guid><description>&lt;p&gt;LiaScript has a native tile (Kachel) quiz syntax for drag-and-drop answers.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-kachel"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-kachel&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; enhances it significantly: rounded cards that match the LiaScript design system, proper touch support for tablets and phones, cross-root drop emulation, and two extra macros for order-independent grading and sequential reveal of answer slots.&lt;/p&gt;</description></item><item><title>lia-marker for LiaScript: Color-Coded Text Highlighting Quizzes</title><link>https://liascript.github.io/blog/lia-marker-text-highlighting-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-marker-text-highlighting-in-liascript/</guid><description>&lt;p&gt;Reading comprehension and grammar tasks often require marking specific words or phrases in a text.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-marker"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-marker&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a highlighting toolbar to LiaScript courses and a set of quiz macros that automatically check whether the correct words were highlighted in the correct colors.&lt;/p&gt;</description></item><item><title>lia-orthography for LiaScript: Spelling and Dictation Exercises</title><link>https://liascript.github.io/blog/lia-orthography-spelling-exercises-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-orthography-spelling-exercises-in-liascript/</guid><description>&lt;p&gt;Spelling exercises require more than multiple-choice: students need to type corrections and see exactly what they got wrong.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-orthography"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-orthography&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds three exercise types:
+an &lt;strong&gt;inline correction&lt;/strong&gt; field, a &lt;strong&gt;full-text textarea&lt;/strong&gt; with diff highlighting, and a &lt;strong&gt;dictation gap&lt;/strong&gt; that reads a word aloud and asks students to type the spelling.&lt;/p&gt;</description></item><item><title>lia-timer for LiaScript: Countdown Timers for Quizzes and Exercises</title><link>https://liascript.github.io/blog/lia-timer-quiz-countdown-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-timer-quiz-countdown-in-liascript/</guid><description>&lt;p&gt;Timed quizzes and exercises motivate focused work and simulate exam conditions.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-timer"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-timer&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a countdown timer to any LiaScript quiz with a single HTML comment — no JavaScript required.
+Three trigger modes let you start the clock automatically, on the first check attempt, or only when the student explicitly clicks a start button.&lt;/p&gt;</description></item><item><title>Random for LiaScript: Dynamic Quiz Banks and Randomized Practice Sets</title><link>https://liascript.github.io/blog/random-quiz-banks-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/random-quiz-banks-in-liascript/</guid><description>&lt;p&gt;A central challenge in self-paced learning is keeping practice fresh.
+If students see the same 20 questions every time, they memorize positions rather than content.
+The &lt;a href="https://github.com/LiaTemplates/Random"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Random template&lt;/a&gt; adds controlled randomization to LiaScript: wrap exercises in &lt;code&gt;&amp;lt;div class=&amp;quot;random&amp;quot;&amp;gt;&lt;/code&gt; containers, and let the template pick a subset on each page visit.&lt;/p&gt;</description></item><item><title>Speech-Recognition-Quiz for LiaScript: Turn Spoken Words into Interactive Quizzes</title><link>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</guid><description>&lt;p&gt;What if your quiz asked learners to &lt;em&gt;say&lt;/em&gt; the answer instead of typing it?&lt;/p&gt;</description></item><item><title>6 Quizzes in 100 Seconds</title><link>https://liascript.github.io/blog/6-quizzes-in-100-seconds/</link><pubDate>Tue, 09 May 2023 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/6-quizzes-in-100-seconds/</guid><description>&lt;p&gt;This is our report on making quizzes in LiaScript in 100 seconds.&lt;/p&gt;</description></item></channel></rss>

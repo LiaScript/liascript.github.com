@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Students on LiaScript</title><link>https://liascript.github.io/tags/students/</link><description>Recent content in Students on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/students/index.xml" rel="self" type="application/rss+xml"/><item><title>Chat-Simulation for LiaScript: Bring Dialogues to Life in Your Course</title><link>https://liascript.github.io/blog/chat-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chat-simulation-in-liascript/</guid><description>&lt;p&gt;Sometimes the most effective way to present information is not as a list or an explanation, but as a conversation.
+The &lt;a href="https://github.com/LiaTemplates/Chat-Simulation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chat-Simulation template&lt;/a&gt; lets you embed animated chat dialogues directly in your LiaScript course — complete with typing indicators, speech bubbles, and support for full Markdown and LiaScript elements inside every message.&lt;/p&gt;</description></item><item><title>TinyTurtle for LiaScript: Teach JavaScript with Interactive Turtle Graphics</title><link>https://liascript.github.io/blog/tiny-turtle-graphics-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tiny-turtle-graphics-in-liascript/</guid><description>&lt;p&gt;Turtle graphics is one of the most effective ways to introduce programming.
+The immediate visual feedback — a turtle drawing lines on screen — connects commands to results in a way that abstract code examples cannot.&lt;/p&gt;</description></item><item><title>CodeRunner for LiaScript: Execute Code in 50+ Languages Server-Side</title><link>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</guid><description>&lt;p&gt;Not every programming language runs in a browser.
+Browser-based interpreters like Pyodide cover Python beautifully, but if your course needs real C compilation, JVM-based Java, Rust, Haskell, Erlang, or even COBOL — you need a real server with real compilers.&lt;/p&gt;</description></item><item><title>CollaborativeDrawing for LiaScript: Shared Whiteboards for Live Classrooms</title><link>https://liascript.github.io/blog/collaborative-drawing-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/collaborative-drawing-in-liascript/</guid><description>&lt;p&gt;When you teach a live session, sometimes the most natural thing is to hand students a marker and say: &amp;ldquo;draw what you see.&amp;rdquo;
+The &lt;a href="https://github.com/LiaTemplates/CollaborativeDrawing"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;CollaborativeDrawing template&lt;/a&gt; brings that experience into LiaScript — a shared canvas where every connected student draws in their own randomly assigned color, all changes synchronize in real time across all participants.&lt;/p&gt;</description></item></channel></rss>

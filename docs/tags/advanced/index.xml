@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Advanced on LiaScript</title><link>https://liascript.github.io/tags/advanced/</link><description>Recent content in Advanced on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/advanced/index.xml" rel="self" type="application/rss+xml"/><item><title>Custom Code Imports for LiaScript: Load External Files Into Executable Blocks</title><link>https://liascript.github.io/blog/custom-code-imports-external-files-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/custom-code-imports-external-files-in-liascript/</guid><description>&lt;p&gt;LiaScript&amp;rsquo;s code blocks are normally written directly in the Markdown source.
+The &lt;a href="https://github.com/LiaPlayground/Custom-code-imports"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Custom-code-imports&lt;/a&gt; playground by &lt;a href="https://github.com/andre-dietrich"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;André Dietrich&lt;/a&gt; demonstrates a powerful pattern: fetching the content of an external source file by URL and injecting it as a live, executable LiaScript code block at runtime.
+This is particularly useful for courses that should always show the latest version of a codebase, or for exercises that load student submissions for review.&lt;/p&gt;</description></item><item><title>Fonts for LiaScript: Custom Typography in Online Courses</title><link>https://liascript.github.io/blog/fonts-custom-typography-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/fonts-custom-typography-in-liascript/</guid><description>&lt;p&gt;LiaScript renders in the browser, which means any web font can be loaded and applied to course content.
+The &lt;a href="https://github.com/LiaPlayground/Fonts"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Fonts&lt;/a&gt; playground by &lt;a href="https://github.com/LiaPlayground"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaPlayground&lt;/a&gt; demonstrates the three main approaches for loading custom typography into a LiaScript course: &lt;strong&gt;Google Fonts&lt;/strong&gt; via a link header directive, &lt;strong&gt;CSS &lt;code&gt;@font-face&lt;/code&gt;&lt;/strong&gt; with any web font URL, and &lt;strong&gt;inline &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; blocks&lt;/strong&gt; for fine-grained control.&lt;/p&gt;</description></item><item><title>SCORM-Progress for LiaScript: Score and Completion Tracking in LMS</title><link>https://liascript.github.io/blog/scorm-progress-tracking-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/scorm-progress-tracking-in-liascript/</guid><description>&lt;p&gt;When deploying a LiaScript course as a SCORM package inside an LMS (Moodle, Canvas, ILIAS, etc.), the LMS sets a completion score on the &lt;code&gt;window.SCORE&lt;/code&gt; object.
+The &lt;a href="https://github.com/LiaPlayground/SCORM-Progress"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SCORM-Progress&lt;/a&gt; template by &lt;a href="https://github.com/LiaPlayground"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaPlayground&lt;/a&gt; reads that value and renders a beautiful &lt;strong&gt;ECharts gauge&lt;/strong&gt; showing the student&amp;rsquo;s progress from 0 to 100%.&lt;/p&gt;</description></item></channel></rss>

@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OER on LiaScript</title><link>https://liascript.github.io/tags/oer/</link><description>Recent content in OER on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 30 Apr 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/oer/index.xml" rel="self" type="application/rss+xml"/><item><title>LiaSkill: Creating LiaScript Courses with AI</title><link>https://liascript.github.io/blog/liaskill-creating-liascript-courses-with-ai/</link><pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/liaskill-creating-liascript-courses-with-ai/</guid><description>&lt;p&gt;Writing a LiaScript course from scratch means learning its Markdown dialect: how quizzes are formatted, how animations are triggered, how text-to-speech comments attach to slides.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OER on LiaScript</title><link>https://liascript.github.io/tags/oer/</link><description>Recent content in OER on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/oer/index.xml" rel="self" type="application/rss+xml"/><item><title>Citations for LiaScript: BibTeX References and Bibliography in Online Courses</title><link>https://liascript.github.io/blog/citations-bibtex-references-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/citations-bibtex-references-in-liascript/</guid><description>&lt;p&gt;Academic course materials need proper references.
+But managing citations in plain Markdown usually means hand-formatting bibliography entries or maintaining separate reference lists that drift out of sync.&lt;/p&gt;</description></item><item><title>Pannellum for LiaScript: 360° Panoramas and Virtual Tours in Your Course</title><link>https://liascript.github.io/blog/pannellum-360-panorama-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pannellum-360-panorama-in-liascript/</guid><description>&lt;p&gt;Spatial learning contexts — visiting a museum, exploring a geological site, taking a field trip — are hard to replicate in a document.
+The &lt;a href="https://github.com/LiaTemplates/Pannellum"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pannellum template&lt;/a&gt; integrates &lt;a href="https://pannellum.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pannellum&lt;/a&gt; — the lightweight, standalone panorama viewer — into LiaScript.&lt;/p&gt;</description></item><item><title>Wikimedia for LiaScript: Embed Media with Automatic Attribution</title><link>https://liascript.github.io/blog/wikimedia-commons-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/wikimedia-commons-in-liascript/</guid><description>&lt;p&gt;Open Educational Resources live and die by proper attribution.
+When you embed a photo, audio recording, or video from &lt;a href="https://commons.wikimedia.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Wikimedia Commons&lt;/a&gt; in your course, you are legally required to credit the author, name the license, and link back to the source.
+That&amp;rsquo;s three to five fields per media file — easy to get wrong, easy to forget entirely.&lt;/p&gt;</description></item><item><title>ABCjs for LiaScript: Embed and Play Music Notation in Open Courses</title><link>https://liascript.github.io/blog/abcjs-music-notation-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/abcjs-music-notation-in-liascript/</guid><description>&lt;p&gt;Music belongs in open courses.
+Whether you teach music theory, introduce students to folk music traditions, document historical scores, or simply want to liven up a language lesson with a melody — the &lt;a href="https://github.com/LiaTemplates/ABCjs"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ABCjs template&lt;/a&gt; lets you write music in plain text and render it as interactive sheet music with a built-in audio player, directly in the browser.&lt;/p&gt;</description></item><item><title>LiaSkill: Creating LiaScript Courses with AI</title><link>https://liascript.github.io/blog/liaskill-creating-liascript-courses-with-ai/</link><pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/liaskill-creating-liascript-courses-with-ai/</guid><description>&lt;p&gt;Writing a LiaScript course from scratch means learning its Markdown dialect: how quizzes are formatted, how animations are triggered, how text-to-speech comments attach to slides.
 That knowledge barrier is real, and it slows down educators who just want to produce good content.&lt;/p&gt;</description></item><item><title>Mapping the LiaScript Community with LiaGraph</title><link>https://liascript.github.io/blog/mapping-the-liascript-community-with-liagraph/</link><pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mapping-the-liascript-community-with-liagraph/</guid><description>&lt;p&gt;LiaScript is a distributed, open ecosystem.
 Courses live in GitHub repositories, contributors are spread across institutions and countries, and there is no central registry of who builds what or how it all connects.
 We wanted to change that — at least visually.&lt;/p&gt;</description></item><item><title>LiaEx: From CLI Tool to Full Export Platform</title><link>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</guid><description>&lt;p&gt;Back in October 2025, we &lt;a href="../094_liaex-funding-for-the-liascript-exporter"

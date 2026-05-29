@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Design on LiaScript</title><link>https://liascript.github.io/tags/design/</link><description>Recent content in Design on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Fonts for LiaScript: Custom Typography in Online Courses</title><link>https://liascript.github.io/blog/fonts-custom-typography-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/fonts-custom-typography-in-liascript/</guid><description>&lt;p&gt;LiaScript renders in the browser, which means any web font can be loaded and applied to course content.
+The &lt;a href="https://github.com/LiaPlayground/Fonts"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Fonts&lt;/a&gt; playground by &lt;a href="https://github.com/LiaPlayground"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaPlayground&lt;/a&gt; demonstrates the three main approaches for loading custom typography into a LiaScript course: &lt;strong&gt;Google Fonts&lt;/strong&gt; via a link header directive, &lt;strong&gt;CSS &lt;code&gt;@font-face&lt;/code&gt;&lt;/strong&gt; with any web font URL, and &lt;strong&gt;inline &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; blocks&lt;/strong&gt; for fine-grained control.&lt;/p&gt;</description></item></channel></rss>

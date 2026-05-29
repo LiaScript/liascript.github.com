@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on LiaScript</title><link>https://liascript.github.io/tags/python/</link><description>Recent content in Python on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 08 Jul 2022 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>How To Code in Python 3</title><link>https://liascript.github.io/blog/how-to-code-in-python-3/</link><pubDate>Fri, 08 Jul 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/how-to-code-in-python-3/</guid><description>&lt;p&gt;This is a port of DigitalOcean’s How To Code in Python 3 tutorial series by Lisa Tagliaferri translated to LiaScript with interactive PyScript examples.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on LiaScript</title><link>https://liascript.github.io/tags/python/</link><description>Recent content in Python on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 27 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>MicroBit-Simulator for LiaScript: Teach MicroPython Without a Physical Device</title><link>https://liascript.github.io/blog/microbit-simulator-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/microbit-simulator-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://microbit.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BBC micro:bit&lt;/a&gt; is one of the most popular physical computing boards in schools worldwide.
+With the &lt;a href="https://github.com/LiaTemplates/MicroBit-Simulator"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MicroBit-Simulator template&lt;/a&gt;, you can bring it directly into your LiaScript course — no hardware, no installation, no classroom set of devices needed.&lt;/p&gt;</description></item><item><title>Pyodide for LiaScript: Run Python Directly in Your Course</title><link>https://liascript.github.io/blog/pyodide-python-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pyodide-python-in-liascript/</guid><description>&lt;p&gt;Python is the most widely taught programming language in the world.
+With the &lt;a href="https://github.com/LiaTemplates/Pyodide"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pyodide template&lt;/a&gt;, you can bring it directly into your LiaScript course — executable, editable, and fully browser-based.&lt;/p&gt;</description></item><item><title>How To Code in Python 3</title><link>https://liascript.github.io/blog/how-to-code-in-python-3/</link><pubDate>Fri, 08 Jul 2022 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/how-to-code-in-python-3/</guid><description>&lt;p&gt;This is a port of DigitalOcean’s How To Code in Python 3 tutorial series by Lisa Tagliaferri translated to LiaScript with interactive PyScript examples.&lt;/p&gt;</description></item></channel></rss>

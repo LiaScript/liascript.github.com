@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Template on LiaScript</title><link>https://liascript.github.io/categories/template/</link><description>Recent content in Template on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/categories/template/index.xml" rel="self" type="application/rss+xml"/><item><title>A-Frame for LiaScript: 3D and VR Scenes in Your Course</title><link>https://liascript.github.io/blog/aframe-3d-vr-scenes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/aframe-3d-vr-scenes-in-liascript/</guid><description>&lt;p&gt;3D visualization transforms abstract concepts in mathematics, science, and engineering into something students can explore spatially.
+The &lt;a href="https://github.com/LiaTemplates/aframe"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;aframe template&lt;/a&gt; integrates &lt;a href="https://aframe.io/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;A-Frame&lt;/a&gt; — Mozilla&amp;rsquo;s WebXR/WebGL framework — into LiaScript.&lt;/p&gt;</description></item><item><title>Algebrite for LiaScript: A Computer Algebra System in the Browser</title><link>https://liascript.github.io/blog/algebrite-cas-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/algebrite-cas-in-liascript/</guid><description>&lt;p&gt;Symbolic computation is hard to teach without tools.
+Students write algebraic expressions, simplify them, differentiate, integrate — but verifying their work by hand is slow, and most CAS tools require software installations or paid subscriptions.&lt;/p&gt;</description></item><item><title>AVR8js for LiaScript: Simulate Arduino and AVR Microcontrollers in the Browser</title><link>https://liascript.github.io/blog/avr8js-arduino-simulator-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/avr8js-arduino-simulator-in-liascript/</guid><description>&lt;p&gt;Teaching embedded systems and Arduino programming typically requires physical hardware: boards, LEDs, cables, and a lab environment.
+The &lt;a href="https://github.com/LiaTemplates/AVR8js"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AVR8js template&lt;/a&gt; removes that requirement entirely.&lt;/p&gt;</description></item><item><title>AVR8js-mem for LiaScript: Memory Register Visualization for AVR Microcontrollers</title><link>https://liascript.github.io/blog/avr8js-mem-memory-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/avr8js-mem-memory-visualization-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://liascript.github.io/blog/avr8js-arduino-simulation-in-liascript"
+
+
+
+ 
+
+
+&gt;AVR8js template&lt;/a&gt; lets you run Arduino C++ code in the browser with Wokwi components.
+&lt;a href="https://github.com/fjangfaragesh/AVR8js-mem"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AVR8js-mem&lt;/a&gt; by &lt;a href="https://github.com/fjangfaragesh"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Fabian Bär&lt;/a&gt; extends it with a key teaching feature: real-time memory register visualization.
+After each simulation cycle, you can display the value of any memory register in binary, hexadecimal, unsigned integer, or custom format — and even plot the values over time as a live diagram.&lt;/p&gt;</description></item><item><title>BeforeAndAfter for LiaScript: Compare Two Images with a Slider</title><link>https://liascript.github.io/blog/beforeandafter-image-comparison-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/beforeandafter-image-comparison-in-liascript/</guid><description>&lt;p&gt;Comparing two images side by side is a powerful learning device — but static layouts break on different screen sizes and don&amp;rsquo;t invite interaction.
+The &lt;a href="https://github.com/LiaTemplates/BeforeAndAfter"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BeforeAndAfter template&lt;/a&gt; adds an interactive drag slider between two images.
+Drag left to reveal image 1, drag right to reveal image 2 — with a single inline macro and two URLs.&lt;/p&gt;</description></item><item><title>BiwaScheme for LiaScript: Functional Programming with Scheme in the Browser</title><link>https://liascript.github.io/blog/biwascheme-scheme-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/biwascheme-scheme-in-liascript/</guid><description>&lt;p&gt;Scheme is one of the most influential programming languages ever designed.
+Its minimal syntax, powerful macro system, and emphasis on functional programming have made it a foundational language in computer science education — from SICP to modern functional programming courses.&lt;/p&gt;</description></item><item><title>Chat-Simulation for LiaScript: Bring Dialogues to Life in Your Course</title><link>https://liascript.github.io/blog/chat-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chat-simulation-in-liascript/</guid><description>&lt;p&gt;Sometimes the most effective way to present information is not as a list or an explanation, but as a conversation.
+The &lt;a href="https://github.com/LiaTemplates/Chat-Simulation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chat-Simulation template&lt;/a&gt; lets you embed animated chat dialogues directly in your LiaScript course — complete with typing indicators, speech bubbles, and support for full Markdown and LiaScript elements inside every message.&lt;/p&gt;</description></item><item><title>ChemfigJS for LiaScript: LaTeX-Style Structural Chemical Formulas in the Browser</title><link>https://liascript.github.io/blog/chemfigjs-structural-formulas-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chemfigjs-structural-formulas-in-liascript/</guid><description>&lt;p&gt;Chemistry educators who come from a LaTeX background know &lt;a href="https://ctan.org/pkg/chemfig"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;chemfig&lt;/a&gt; — the standard package for drawing structural formulas.
+The &lt;a href="https://github.com/herbigm/ChemfigJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ChemfigJS template&lt;/a&gt; by Marcus Herbig brings the chemfig syntax to the web, generating SVG from chemfig-style code directly in the browser.&lt;/p&gt;</description></item><item><title>ChemmacrosJS for LiaScript: Professional Chemistry Notation in Courses</title><link>https://liascript.github.io/blog/chemmacrosjs-chemistry-macros-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chemmacrosjs-chemistry-macros-in-liascript/</guid><description>&lt;p&gt;Chemistry courses require proper notation: subscripts in molecular formulas, reaction arrows, equilibrium double arrows, and standardized GHS safety statements.
+&lt;a href="https://github.com/herbigm/ChemmacrosJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ChemmacrosJS&lt;/a&gt; by &lt;a href="https://github.com/herbigm"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Marcus Herbig&lt;/a&gt; is a LiaScript template that ports core functionality of the LaTeX &lt;a href="https://ctan.org/pkg/chemmacros"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chemmacros&lt;/a&gt; package to the browser.
+With a handful of macros you get typeset chemical formulas, aligned reaction equations, GHS pictograms, and formatted H/P statements.&lt;/p&gt;</description></item><item><title>Citations for LiaScript: BibTeX References and Bibliography in Online Courses</title><link>https://liascript.github.io/blog/citations-bibtex-references-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/citations-bibtex-references-in-liascript/</guid><description>&lt;p&gt;Academic course materials need proper references.
+But managing citations in plain Markdown usually means hand-formatting bibliography entries or maintaining separate reference lists that drift out of sync.&lt;/p&gt;</description></item><item><title>Comunica for LiaScript: Run SPARQL Queries and Explore Knowledge Graphs</title><link>https://liascript.github.io/blog/comunica-sparql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/comunica-sparql-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://en.wikipedia.org/wiki/Semantic_Web"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Semantic Web&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Linked_data"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Linked Open Data&lt;/a&gt; are among the richest topics in computer science and information science — but teaching SPARQL interactively has always required running a server.&lt;/p&gt;</description></item><item><title>Curiosity-Prolog for LiaScript: Lightweight Logic Programming in the Browser</title><link>https://liascript.github.io/blog/curiosity-prolog-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/curiosity-prolog-in-liascript/</guid><description>&lt;p&gt;Not every logic programming exercise needs a full Prolog system.
+For introductory exercises — family trees, simple rule-based reasoning, first-order logic — a lighter interpreter is often more appropriate.&lt;/p&gt;</description></item><item><title>Custom Code Imports for LiaScript: Load External Files Into Executable Blocks</title><link>https://liascript.github.io/blog/custom-code-imports-external-files-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/custom-code-imports-external-files-in-liascript/</guid><description>&lt;p&gt;LiaScript&amp;rsquo;s code blocks are normally written directly in the Markdown source.
+The &lt;a href="https://github.com/LiaPlayground/Custom-code-imports"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Custom-code-imports&lt;/a&gt; playground by &lt;a href="https://github.com/andre-dietrich"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;André Dietrich&lt;/a&gt; demonstrates a powerful pattern: fetching the content of an external source file by URL and injecting it as a live, executable LiaScript code block at runtime.
+This is particularly useful for courses that should always show the latest version of a codebase, or for exercises that load student submissions for review.&lt;/p&gt;</description></item><item><title>dbdiagram for LiaScript: Design and Visualize Database Schemas with DBML</title><link>https://liascript.github.io/blog/dbdiagram-schema-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/dbdiagram-schema-visualization-in-liascript/</guid><description>&lt;p&gt;Database schema diagrams are hard to maintain.
+Draw them by hand and they drift from the code.
+Use a screenshot and it&amp;rsquo;s outdated the moment the schema changes.&lt;/p&gt;</description></item><item><title>DigiSim for LiaScript: Interactive Digital Circuit Simulation</title><link>https://liascript.github.io/blog/digisim-digital-circuits-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/digisim-digital-circuits-in-liascript/</guid><description>&lt;p&gt;Teaching digital logic requires students to interact with circuits, not just read about them.
+The &lt;a href="https://github.com/LiaTemplates/DigiSim"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DigiSim template&lt;/a&gt; integrates &lt;a href="https://github.com/tilk/digitaljs"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DigitalJS&lt;/a&gt; into LiaScript, enabling interactive logic circuit simulations with clickable buttons, lamps, and animated signal flow — right inside the course material.&lt;/p&gt;</description></item><item><title>DragAndDrop Template for LiaScript: Order and Multiple-Choice Drag Quizzes</title><link>https://liascript.github.io/blog/drag-and-drop-quizzes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/drag-and-drop-quizzes-in-liascript/</guid><description>&lt;p&gt;Drag-and-drop quizzes are more engaging than click-to-select, especially for sequencing and sorting tasks.
+The &lt;a href="https://github.com/MichaelMarkert/LiaScript_DragAndDrop_Template"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript_DragAndDrop_Template&lt;/a&gt; by &lt;a href="https://github.com/MichaelMarkert"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Michael Markert&lt;/a&gt; provides two macros for drag-and-drop interaction: &lt;code&gt;@dragdroporder&lt;/code&gt; for putting items in the correct sequence, and &lt;code&gt;@dragdropmultiple&lt;/code&gt; for selecting the correct subset from a shuffled pool.&lt;/p&gt;</description></item><item><title>ExplainGit for LiaScript: Visualize Git Repositories Interactively</title><link>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</guid><description>&lt;p&gt;Git is notoriously difficult to teach with text alone.
+The &lt;a href="https://github.com/LiaTemplates/ExplainGit"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ExplainGit template&lt;/a&gt; embeds &lt;a href="https://github.com/onlywei/explain-git-with-d3"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;onlywei&amp;rsquo;s explain-git-with-d3&lt;/a&gt; into LiaScript, visualizing commits, branches, merges, and checkouts as animated D3 diagrams.&lt;/p&gt;</description></item><item><title>Fonts for LiaScript: Custom Typography in Online Courses</title><link>https://liascript.github.io/blog/fonts-custom-typography-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/fonts-custom-typography-in-liascript/</guid><description>&lt;p&gt;LiaScript renders in the browser, which means any web font can be loaded and applied to course content.
+The &lt;a href="https://github.com/LiaPlayground/Fonts"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Fonts&lt;/a&gt; playground by &lt;a href="https://github.com/LiaPlayground"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaPlayground&lt;/a&gt; demonstrates the three main approaches for loading custom typography into a LiaScript course: &lt;strong&gt;Google Fonts&lt;/strong&gt; via a link header directive, &lt;strong&gt;CSS &lt;code&gt;@font-face&lt;/code&gt;&lt;/strong&gt; with any web font URL, and &lt;strong&gt;inline &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; blocks&lt;/strong&gt; for fine-grained control.&lt;/p&gt;</description></item><item><title>Fullscreen for LiaScript: Clean Presentation Mode Without the Navigation Bar</title><link>https://liascript.github.io/blog/fullscreen-presentation-mode-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/fullscreen-presentation-mode-in-liascript/</guid><description>&lt;p&gt;LiaScript courses have a navigation bar at the top.
+For reading and editing, it is helpful.
+For presenting in front of an audience, it is visual noise.&lt;/p&gt;</description></item><item><title>GGBScript for LiaScript: Interactive Geometry Constructions in the Browser</title><link>https://liascript.github.io/blog/ggbscript-geometry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/ggbscript-geometry-in-liascript/</guid><description>&lt;p&gt;Geometry education benefits enormously from interactive visualizations.
+Students who can drag a point, observe how angles change, or animate a transformation understand geometry differently than those who only read about it.&lt;/p&gt;</description></item><item><title>H5P in LiaScript: Embed Interactive H5P Content in Courses</title><link>https://liascript.github.io/blog/h5p-content-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/h5p-content-in-liascript/</guid><description>&lt;p&gt;&lt;a href="https://h5p.org"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;H5P&lt;/a&gt; is a widely used open-source framework for interactive HTML5 content: drag-and-drop exercises, video quizzes, flashcards, branching scenarios, interactive maps, and dozens more activity types.
+The &lt;a href="https://github.com/andre-dietrich/H5P-Test"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;H5P-Test&lt;/a&gt; repository by &lt;a href="https://github.com/andre-dietrich"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;André Dietrich&lt;/a&gt; demonstrates how to embed H5P content from h5p.org (or any compatible LRS) directly inside a LiaScript course using a plain HTML &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>JSCAD for LiaScript: Parametric 3D CAD Modeling in the Browser</title><link>https://liascript.github.io/blog/jscad-3d-cad-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jscad-3d-cad-in-liascript/</guid><description>&lt;p&gt;Parametric 3D modeling is a core skill in mechanical engineering, product design, and TVET manufacturing programs.
+Teaching it usually requires CAD software installations, license management, and significant setup time.&lt;/p&gt;</description></item><item><title>JSCPP for LiaScript: Run C++ Directly in the Browser Without a Compiler</title><link>https://liascript.github.io/blog/jscpp-cpp-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jscpp-cpp-in-liascript/</guid><description>&lt;p&gt;C++ programming courses have a tooling problem.
+Students need to install a compiler, configure an IDE, manage build systems, and debug their environment before writing a single line of code.&lt;/p&gt;</description></item><item><title>KekuleJS for LiaScript: Chemistry Structures and Molecular Visualization</title><link>https://liascript.github.io/blog/kekulejs-chemistry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/kekulejs-chemistry-in-liascript/</guid><description>&lt;p&gt;Drawing chemical structures in web-based learning materials traditionally requires image exports or external tools.
+The &lt;a href="https://github.com/LiaTemplates/KekuleJS"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;KekuleJS template&lt;/a&gt; integrates &lt;a href="https://github.com/partridgejiang/Kekule.js"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Kekule.js&lt;/a&gt; — a comprehensive cheminformatics library — into LiaScript, enabling 2D and 3D molecular visualization, interactive periodic tables, and CML/MOL file loading directly in the browser.&lt;/p&gt;</description></item><item><title>lia-annotation for LiaScript: Live Drawing Overlay for Classroom Presentations</title><link>https://liascript.github.io/blog/lia-annotation-live-drawing-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-annotation-live-drawing-in-liascript/</guid><description>&lt;p&gt;Teaching live with LiaScript sometimes calls for writing directly on the slide — circling a term, sketching a diagram, or annotating an equation.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-annotation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-annotation&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a floating toolbar to every slide in presentation mode, letting instructors draw freehand strokes, erase them, and undo/redo, all without leaving the slide.
+When paired with &lt;a href="https://liascript.github.io/blog/lia-canvas-ocr-handwriting-recognition-in-liascript"
+
+
+
+ 
+
+
+&gt;lia-canvas-ocr&lt;/a&gt;, it can also recognize handwritten answers and insert them directly into quiz fields.&lt;/p&gt;</description></item><item><title>lia-board-mode for LiaScript: Full-Screen Classroom Presentation Mode</title><link>https://liascript.github.io/blog/lia-board-mode-fullscreen-presentation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-board-mode-fullscreen-presentation-in-liascript/</guid><description>&lt;p&gt;When teaching with LiaScript in the classroom, the standard layout may not fill the screen optimally for projector use.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-board-mode"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-board-mode&lt;/a&gt; community template by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; addresses this: import it into any course and slides stretch to ~98.5% screen width in Presentation and Slides modes, with an adjustable font size slider in the toolbar.&lt;/p&gt;</description></item><item><title>lia-canvas-ocr for LiaScript: Handwriting Recognition in Math Quizzes</title><link>https://liascript.github.io/blog/lia-canvas-ocr-handwriting-recognition-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-canvas-ocr-handwriting-recognition-in-liascript/</guid><description>&lt;p&gt;Typing LaTeX in a text field is a high barrier for students who just want to write &lt;code&gt;x²+3x-1&lt;/code&gt; with a stylus.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-canvas-ocr"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-canvas-ocr&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; solves this by adding a drawing canvas to any LiaScript answer field.
+Students draw their math answer on the canvas, select it with a rectangle, click &amp;ldquo;Submit as Solution&amp;rdquo; — and the handwriting is recognized by a local LaTeX OCR model and inserted into the quiz field automatically.
+No data leaves the browser.&lt;/p&gt;</description></item><item><title>lia-coordinate for LiaScript: Interactive JSXGraph Coordinate Exercises</title><link>https://liascript.github.io/blog/lia-coordinate-interactive-math-plots-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-coordinate-interactive-math-plots-in-liascript/</guid><description>&lt;p&gt;Drawing a coordinate system on a slide is straightforward; making it interactive is another matter.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-coordinate"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-coordinate&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; builds on &lt;a href="https://jsxgraph.uni-bayreuth.de/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSXGraph&lt;/a&gt; to provide a full set of declarative macros for interactive coordinate plane exercises.
+Students drag points, plot functions by typing formulas, or fill in value tables — all with automatic grading built in.&lt;/p&gt;</description></item><item><title>lia-DynFlex for LiaScript: Resizable Multi-Column Layouts</title><link>https://liascript.github.io/blog/lia-dynflex-resizable-columns-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-dynflex-resizable-columns-in-liascript/</guid><description>&lt;p&gt;Standard LiaScript columns have fixed widths.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-DynFlex"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-DynFlex&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds interactive, resizable flex containers to any course: drag the divider between columns to set the perfect balance, and the layout is saved in &lt;code&gt;localStorage&lt;/code&gt; for returning visits.
+Quiz elements, images, and any other Markdown content work inside each column.&lt;/p&gt;</description></item><item><title>lia-freeze-v2 for LiaScript: Quiz Submission and Teacher Review Links</title><link>https://liascript.github.io/blog/lia-freeze-quiz-submission-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-freeze-quiz-submission-in-liascript/</guid><description>&lt;p&gt;LiaScript courses store quiz state in the student&amp;rsquo;s browser — but there&amp;rsquo;s no built-in way to hand that state to a teacher for grading.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-freeze-v2"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-freeze-v2&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; closes this gap with a &amp;ldquo;freeze&amp;rdquo; mechanism: at the end of the course the student clicks a button to generate a URL that encodes all their quiz answers.
+The teacher opens the URL and sees the completed course, locked for review and automatically scored.&lt;/p&gt;</description></item><item><title>lia-kachel for LiaScript: Drag-and-Drop Tile Quizzes</title><link>https://liascript.github.io/blog/lia-kachel-tile-quizzes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-kachel-tile-quizzes-in-liascript/</guid><description>&lt;p&gt;LiaScript has a native tile (Kachel) quiz syntax for drag-and-drop answers.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-kachel"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-kachel&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; enhances it significantly: rounded cards that match the LiaScript design system, proper touch support for tablets and phones, cross-root drop emulation, and two extra macros for order-independent grading and sequential reveal of answer slots.&lt;/p&gt;</description></item><item><title>lia-marker for LiaScript: Color-Coded Text Highlighting Quizzes</title><link>https://liascript.github.io/blog/lia-marker-text-highlighting-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-marker-text-highlighting-in-liascript/</guid><description>&lt;p&gt;Reading comprehension and grammar tasks often require marking specific words or phrases in a text.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-marker"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-marker&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a highlighting toolbar to LiaScript courses and a set of quiz macros that automatically check whether the correct words were highlighted in the correct colors.&lt;/p&gt;</description></item><item><title>lia-Mathe for LiaScript: Interactive Fraction Quizzes with Visual Feedback</title><link>https://liascript.github.io/blog/lia-mathe-fraction-quizzes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-mathe-fraction-quizzes-in-liascript/</guid><description>&lt;p&gt;Teaching fractions with static diagrams only goes so far.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-Mathe"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-Mathe&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; provides two visual fraction exercise types: a &lt;strong&gt;circle (pie)&lt;/strong&gt; and a &lt;strong&gt;rectangle (grid)&lt;/strong&gt;.
+Students drag a slider to set the number of sections, then click the correct segments to represent the given fraction — and LiaScript grades the answer automatically.&lt;/p&gt;</description></item><item><title>lia-navigation for LiaScript: Collapsible Hierarchical Table of Contents</title><link>https://liascript.github.io/blog/lia-navigation-hierarchical-toc-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-navigation-hierarchical-toc-in-liascript/</guid><description>&lt;p&gt;Long LiaScript courses can have dozens of sections, making the default flat table of contents hard to navigate.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-navigation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-navigation&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; replaces the default TOC with a collapsible, hierarchical navigation tree.
+Sections expand and collapse, the current section is highlighted automatically, bookmarks persist across sessions, and the entire hierarchy reflects the heading structure of the document.&lt;/p&gt;</description></item><item><title>lia-orthography for LiaScript: Spelling and Dictation Exercises</title><link>https://liascript.github.io/blog/lia-orthography-spelling-exercises-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-orthography-spelling-exercises-in-liascript/</guid><description>&lt;p&gt;Spelling exercises require more than multiple-choice: students need to type corrections and see exactly what they got wrong.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-orthography"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-orthography&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds three exercise types:
+an &lt;strong&gt;inline correction&lt;/strong&gt; field, a &lt;strong&gt;full-text textarea&lt;/strong&gt; with diff highlighting, and a &lt;strong&gt;dictation gap&lt;/strong&gt; that reads a word aloud and asks students to type the spelling.&lt;/p&gt;</description></item><item><title>lia-timer for LiaScript: Countdown Timers for Quizzes and Exercises</title><link>https://liascript.github.io/blog/lia-timer-quiz-countdown-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-timer-quiz-countdown-in-liascript/</guid><description>&lt;p&gt;Timed quizzes and exercises motivate focused work and simulate exam conditions.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-timer"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-timer&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a countdown timer to any LiaScript quiz with a single HTML comment — no JavaScript required.
+Three trigger modes let you start the clock automatically, on the first check attempt, or only when the student explicitly clicks a start button.&lt;/p&gt;</description></item><item><title>LiveEdit-Embeddings for LiaScript: Inline Interactive LiaScript Examples</title><link>https://liascript.github.io/blog/liveedit-embeddings-interactive-examples-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/liveedit-embeddings-interactive-examples-in-liascript/</guid><description>&lt;p&gt;When teaching LiaScript itself — or when building meta-courses that demonstrate LiaScript features — you need a way to show live, editable LiaScript code inline.
+The &lt;a href="https://github.com/LiaTemplates/LiveEdit-Embeddings"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiveEdit-Embeddings template&lt;/a&gt; does exactly this: it encodes a LiaScript markdown snippet as a base64 URL and embeds the &lt;a href="https://liascript.github.io/LiveEditor/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaScript LiveEditor&lt;/a&gt; as an inline iframe.&lt;/p&gt;</description></item><item><title>LogicEmu for LiaScript: ASCII Logic Circuits That Actually Run</title><link>https://liascript.github.io/blog/logicemu-ascii-circuits-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/logicemu-ascii-circuits-in-liascript/</guid><description>&lt;p&gt;Most circuit simulation tools require a graphical schematic editor.
+&lt;a href="https://lodev.org/logicemu/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LogicEmu&lt;/a&gt; takes a different approach: logic circuits are written as ASCII art — and they simulate.
+The &lt;a href="https://github.com/LiaTemplates/LogicEmu"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LogicEmu template&lt;/a&gt; integrates this engine into LiaScript, letting instructors embed runnable circuits directly in course content as plain text.&lt;/p&gt;</description></item><item><title>Lua for LiaScript: Execute Lua Scripts Interactively in the Browser</title><link>https://liascript.github.io/blog/lua-scripting-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lua-scripting-in-liascript/</guid><description>&lt;p&gt;Lua is lightweight, fast, embeddable, and widely used — in game development (Roblox, World of Warcraft, Löve2D), embedded systems, configuration scripting, and teaching.
+Its simple syntax and minimal runtime make it an excellent first language.&lt;/p&gt;</description></item><item><title>mec2 for LiaScript: 2D Mechanism and Physics Simulation</title><link>https://liascript.github.io/blog/mec2-physics-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mec2-physics-simulation-in-liascript/</guid><description>&lt;p&gt;Mechanical engineering education benefits enormously from dynamic simulation — but setting up simulation software is a barrier.
+The &lt;a href="https://github.com/LiaTemplates/mec2"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;mec2 template&lt;/a&gt; brings &lt;a href="https://goessner.github.io/mec2/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;goessner&amp;rsquo;s mec2&lt;/a&gt; 2D physics and mechanism engine to LiaScript.
+Define nodes, constraints, gravity, and visualization views in JSON, and the simulation runs live in the browser.&lt;/p&gt;</description></item><item><title>p5js for LiaScript: Creative Coding and Generative Graphics in the Browser</title><link>https://liascript.github.io/blog/p5js-creative-coding-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/p5js-creative-coding-in-liascript/</guid><description>&lt;p&gt;p5.js brings the Processing creative coding environment to the web.
+It is built for artists, designers, educators, and beginners who want to draw, animate, and interact with graphics using JavaScript.&lt;/p&gt;</description></item><item><title>Pannellum for LiaScript: 360° Panoramas and Virtual Tours in Your Course</title><link>https://liascript.github.io/blog/pannellum-360-panorama-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pannellum-360-panorama-in-liascript/</guid><description>&lt;p&gt;Spatial learning contexts — visiting a museum, exploring a geological site, taking a field trip — are hard to replicate in a document.
+The &lt;a href="https://github.com/LiaTemplates/Pannellum"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pannellum template&lt;/a&gt; integrates &lt;a href="https://pannellum.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pannellum&lt;/a&gt; — the lightweight, standalone panorama viewer — into LiaScript.&lt;/p&gt;</description></item><item><title>PeriodicTable for LiaScript: An Interactive Element Table in Your Course</title><link>https://liascript.github.io/blog/periodictable-interactive-chemistry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/periodictable-interactive-chemistry-in-liascript/</guid><description>&lt;p&gt;A periodic table is a fixture of chemistry education at every level.
+The &lt;a href="https://github.com/LiaTemplates/PeriodicTable"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PeriodicTable template&lt;/a&gt; lets you embed a fully interactive, styled periodic table directly into a LiaScript course page with a single line — no image, no plugin, no configuration.&lt;/p&gt;</description></item><item><title>PGlite for LiaScript: Full PostgreSQL in the Browser</title><link>https://liascript.github.io/blog/pglite-postgresql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pglite-postgresql-in-liascript/</guid><description>&lt;p&gt;Teaching SQL usually means setting up a database server, managing connections, and keeping student environments in sync.
+The &lt;a href="https://github.com/LiaTemplates/PGlite"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PGlite template&lt;/a&gt; removes all of that.&lt;/p&gt;</description></item><item><title>plantUML for LiaScript: UML and Architecture Diagrams in Your Course</title><link>https://liascript.github.io/blog/plantuml-uml-diagrams-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/plantuml-uml-diagrams-in-liascript/</guid><description>&lt;p&gt;UML diagrams are a core tool in software engineering education.
+Class hierarchies, sequence diagrams, state machines, component architectures — all are easier to teach when students can see them rendered clearly and modify them directly.&lt;/p&gt;</description></item><item><title>PouchDB for LiaScript: NoSQL Documents and Mango Queries in the Browser</title><link>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</guid><description>&lt;p&gt;Relational databases are one way to store data.
+Documents are another.
+The &lt;a href="https://github.com/LiaTemplates/PouchDB"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB template&lt;/a&gt; brings &lt;a href="https://pouchdb.com"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB&lt;/a&gt; — a JavaScript database inspired by Apache CouchDB — directly into your LiaScript courses.&lt;/p&gt;</description></item><item><title>Random for LiaScript: Dynamic Quiz Banks and Randomized Practice Sets</title><link>https://liascript.github.io/blog/random-quiz-banks-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/random-quiz-banks-in-liascript/</guid><description>&lt;p&gt;A central challenge in self-paced learning is keeping practice fresh.
+If students see the same 20 questions every time, they memorize positions rather than content.
+The &lt;a href="https://github.com/LiaTemplates/Random"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Random template&lt;/a&gt; adds controlled randomization to LiaScript: wrap exercises in &lt;code&gt;&amp;lt;div class=&amp;quot;random&amp;quot;&amp;gt;&lt;/code&gt; containers, and let the template pick a subset on each page visit.&lt;/p&gt;</description></item><item><title>Redis for LiaScript: Explore Key-Value Stores and Data Structures in the Browser</title><link>https://liascript.github.io/blog/redis-key-value-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/redis-key-value-in-liascript/</guid><description>&lt;p&gt;Redis is one of the most widely used databases in the world — but teaching it interactively has always meant running a Redis server.
+The &lt;a href="https://github.com/LiaTemplates/Redis"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Redis template&lt;/a&gt; removes that requirement entirely.&lt;/p&gt;</description></item><item><title>SCORM-Progress for LiaScript: Score and Completion Tracking in LMS</title><link>https://liascript.github.io/blog/scorm-progress-tracking-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/scorm-progress-tracking-in-liascript/</guid><description>&lt;p&gt;When deploying a LiaScript course as a SCORM package inside an LMS (Moodle, Canvas, ILIAS, etc.), the LMS sets a completion score on the &lt;code&gt;window.SCORE&lt;/code&gt; object.
+The &lt;a href="https://github.com/LiaPlayground/SCORM-Progress"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SCORM-Progress&lt;/a&gt; template by &lt;a href="https://github.com/LiaPlayground"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaPlayground&lt;/a&gt; reads that value and renders a beautiful &lt;strong&gt;ECharts gauge&lt;/strong&gt; showing the student&amp;rsquo;s progress from 0 to 100%.&lt;/p&gt;</description></item><item><title>SpreadSheet for LiaScript: Excel-Style Interactive Tables in Your Course</title><link>https://liascript.github.io/blog/spreadsheet-excel-tables-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/spreadsheet-excel-tables-in-liascript/</guid><description>&lt;p&gt;Interactive data tables are a staple of business, science, and data literacy education.
+The &lt;a href="https://github.com/LiaTemplates/SpreadSheet"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SpreadSheet template&lt;/a&gt; brings &lt;a href="https://jspreadsheet.com/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSSpreadsheet (jspreadsheet.js)&lt;/a&gt; into LiaScript, enabling student-editable tables with Excel-style formulas, dropdown selectors, checkboxes, sorting, search, and persistence — all without a server.&lt;/p&gt;</description></item><item><title>Tau-Prolog for LiaScript: Interactive Logic Programming in the Browser</title><link>https://liascript.github.io/blog/tau-prolog-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tau-prolog-in-liascript/</guid><description>&lt;p&gt;Prolog is the language of logic programming.
+Unlike imperative languages, Prolog programs describe &lt;em&gt;what is true&lt;/em&gt; rather than &lt;em&gt;how to compute it&lt;/em&gt;.
+This makes it essential in AI, natural language processing, theorem proving, and formal methods courses.&lt;/p&gt;</description></item><item><title>TextAnalysis for LiaScript: Readability Scores and Text Complexity Metrics</title><link>https://liascript.github.io/blog/textanalysis-readability-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/textanalysis-readability-in-liascript/</guid><description>&lt;p&gt;Writing clear learning materials requires understanding how readable they actually are.
+The &lt;a href="https://github.com/LiaTemplates/TextAnalysis"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;TextAnalysis template&lt;/a&gt; attaches standard readability metrics to any text block in LiaScript.
+Students can paste or edit text and instantly see Flesch-Kincaid grades, Gunning Fog index, syllable counts, reading time, and more — directly in the course slide.&lt;/p&gt;</description></item><item><title>TikzJax for LiaScript: Render TikZ Diagrams Directly in the Browser</title><link>https://liascript.github.io/blog/tikzjax-latex-diagrams-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tikzjax-latex-diagrams-in-liascript/</guid><description>&lt;p&gt;TikZ is the gold standard for technical diagrams in academic publishing.
+Circuit diagrams, flowcharts, commutative diagrams, geometric constructions, function plots — TikZ handles all of them with precision and flexibility.
+Until recently, rendering TikZ required a full LaTeX installation.&lt;/p&gt;</description></item><item><title>TinyTurtle for LiaScript: Teach JavaScript with Interactive Turtle Graphics</title><link>https://liascript.github.io/blog/tiny-turtle-graphics-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tiny-turtle-graphics-in-liascript/</guid><description>&lt;p&gt;Turtle graphics is one of the most effective ways to introduce programming.
+The immediate visual feedback — a turtle drawing lines on screen — connects commands to results in a way that abstract code examples cannot.&lt;/p&gt;</description></item><item><title>Vega for LiaScript: Interactive Data Visualizations in Your Course</title><link>https://liascript.github.io/blog/vega-data-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/vega-data-visualization-in-liascript/</guid><description>&lt;p&gt;Data visualization is central to data science, statistics, and quantitative research education.
+Good charts communicate insights that tables cannot.
+Interactive charts — where students can hover, filter, and explore — communicate even more.&lt;/p&gt;</description></item><item><title>VTK for LiaScript: 3D Scientific Visualization Powered by VTK.js</title><link>https://liascript.github.io/blog/vtk-3d-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/vtk-3d-visualization-in-liascript/</guid><description>&lt;p&gt;Scientific and engineering visualization often requires three dimensions.
+Volume rendering, isosurfaces, 3D mesh views, medical imaging data — these cannot be adequately represented in 2D plots.&lt;/p&gt;</description></item><item><title>WebDev for LiaScript: Run HTML, CSS, and JavaScript Live in Your Course</title><link>https://liascript.github.io/blog/webdev-html-css-js-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/webdev-html-css-js-in-liascript/</guid><description>&lt;p&gt;Teaching front-end web development means students need to experiment.
+They need to change a CSS rule and see it take effect, add a button and wire it up, break something and fix it.&lt;/p&gt;</description></item><item><title>WebSerial for LiaScript: Connect Your Code Editor to Real Hardware</title><link>https://liascript.github.io/blog/webserial-hardware-connection-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/webserial-hardware-connection-in-liascript/</guid><description>&lt;p&gt;Bridging the gap between learning materials and real hardware is one of the hardest challenges in TVET and embedded systems education.
+The &lt;a href="https://github.com/LiaTemplates/WebSerial"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;WebSerial template&lt;/a&gt; connects the LiaScript code editor directly to a microcontroller via Chrome&amp;rsquo;s &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Web Serial API&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Wikimedia for LiaScript: Embed Media with Automatic Attribution</title><link>https://liascript.github.io/blog/wikimedia-commons-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/wikimedia-commons-in-liascript/</guid><description>&lt;p&gt;Open Educational Resources live and die by proper attribution.
+When you embed a photo, audio recording, or video from &lt;a href="https://commons.wikimedia.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Wikimedia Commons&lt;/a&gt; in your course, you are legally required to credit the author, name the license, and link back to the source.
+That&amp;rsquo;s three to five fields per media file — easy to get wrong, easy to forget entirely.&lt;/p&gt;</description></item><item><title>ABCjs for LiaScript: Embed and Play Music Notation in Open Courses</title><link>https://liascript.github.io/blog/abcjs-music-notation-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/abcjs-music-notation-in-liascript/</guid><description>&lt;p&gt;Music belongs in open courses.
+Whether you teach music theory, introduce students to folk music traditions, document historical scores, or simply want to liven up a language lesson with a melody — the &lt;a href="https://github.com/LiaTemplates/ABCjs"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ABCjs template&lt;/a&gt; lets you write music in plain text and render it as interactive sheet music with a built-in audio player, directly in the browser.&lt;/p&gt;</description></item><item><title>AlaSQL for LiaScript: Teach SQL and Query CSV Data in the Browser</title><link>https://liascript.github.io/blog/alasql-sql-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/alasql-sql-in-liascript/</guid><description>&lt;p&gt;SQL is not only for relational databases.
+With the &lt;a href="https://github.com/liaTemplates/AlaSQL"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AlaSQL template&lt;/a&gt;, you can run SQL queries inside LiaScript courses against in-memory tables, JavaScript arrays, and CSV files — entirely in the browser.&lt;/p&gt;</description></item><item><title>CodeRunner for LiaScript: Execute Code in 50+ Languages Server-Side</title><link>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</guid><description>&lt;p&gt;Not every programming language runs in a browser.
+Browser-based interpreters like Pyodide cover Python beautifully, but if your course needs real C compilation, JVM-based Java, Rust, Haskell, Erlang, or even COBOL — you need a real server with real compilers.&lt;/p&gt;</description></item><item><title>CollaborativeDrawing for LiaScript: Shared Whiteboards for Live Classrooms</title><link>https://liascript.github.io/blog/collaborative-drawing-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/collaborative-drawing-in-liascript/</guid><description>&lt;p&gt;When you teach a live session, sometimes the most natural thing is to hand students a marker and say: &amp;ldquo;draw what you see.&amp;rdquo;
+The &lt;a href="https://github.com/LiaTemplates/CollaborativeDrawing"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;CollaborativeDrawing template&lt;/a&gt; brings that experience into LiaScript — a shared canvas where every connected student draws in their own randomly assigned color, all changes synchronize in real time across all participants.&lt;/p&gt;</description></item><item><title>DuckDB for LiaScript: Teach Data Analytics Directly in the Browser</title><link>https://liascript.github.io/blog/duckdb-analytics-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/duckdb-analytics-in-liascript/</guid><description>&lt;p&gt;Modern data analysis relies on SQL.
+With the &lt;a href="https://github.com/LiaTemplates/DuckDB"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DuckDB template&lt;/a&gt;, you can teach analytical queries interactively — learners write real SQL, run it immediately, and see results as formatted tables or charts, right inside the course.&lt;/p&gt;</description></item><item><title>gcode-preview for LiaScript: Visualize G-Code for 3D Printing and CNC in Open Courses</title><link>https://liascript.github.io/blog/gcode-preview-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/gcode-preview-in-liascript/</guid><description>&lt;p&gt;G-Code is the language of digital fabrication.
+Every 3D printer, CNC milling machine, laser cutter, and lathe is controlled by sequences of G-Code instructions — yet most learners never get to see what those instructions actually describe spatially.&lt;/p&gt;</description></item><item><title>JSXGraph for LiaScript: Interactive Math and Geometry in the Browser</title><link>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</guid><description>&lt;p&gt;Mathematics comes alive when learners can move points, drag sliders, and watch functions redraw in real time.
+The &lt;a href="https://github.com/LiaTemplates/JSXGraph"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSXGraph template&lt;/a&gt; brings exactly that to LiaScript — interactive geometry, function plots, parametric curves, and 3D visualizations, all running entirely in the browser.&lt;/p&gt;</description></item><item><title>Mermaid for LiaScript: Create Flowcharts and Diagrams in Plain Text</title><link>https://liascript.github.io/blog/mermaid-diagrams-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mermaid-diagrams-in-liascript/</guid><description>&lt;p&gt;A picture is worth a thousand words — and a diagram that students can edit live in the browser is worth a thousand static slides.&lt;/p&gt;</description></item><item><title>MicroBit-Simulator for LiaScript: Teach MicroPython Without a Physical Device</title><link>https://liascript.github.io/blog/microbit-simulator-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/microbit-simulator-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://microbit.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BBC micro:bit&lt;/a&gt; is one of the most popular physical computing boards in schools worldwide.
+With the &lt;a href="https://github.com/LiaTemplates/MicroBit-Simulator"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MicroBit-Simulator template&lt;/a&gt;, you can bring it directly into your LiaScript course — no hardware, no installation, no classroom set of devices needed.&lt;/p&gt;</description></item><item><title>Pyodide for LiaScript: Run Python Directly in Your Course</title><link>https://liascript.github.io/blog/pyodide-python-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pyodide-python-in-liascript/</guid><description>&lt;p&gt;Python is the most widely taught programming language in the world.
+With the &lt;a href="https://github.com/LiaTemplates/Pyodide"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pyodide template&lt;/a&gt;, you can bring it directly into your LiaScript course — executable, editable, and fully browser-based.&lt;/p&gt;</description></item><item><title>Speech-Recognition-Quiz for LiaScript: Turn Spoken Words into Interactive Quizzes</title><link>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</guid><description>&lt;p&gt;What if your quiz asked learners to &lt;em&gt;say&lt;/em&gt; the answer instead of typing it?&lt;/p&gt;</description></item><item><title>SQLite for LiaScript: Teach SQL Interactively in the Browser</title><link>https://liascript.github.io/blog/sqlite-sql-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/sqlite-sql-in-liascript/</guid><description>&lt;p&gt;SQL is the foundational language of data.
+With the &lt;a href="https://github.com/liaTemplates/SQLite"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SQLite template&lt;/a&gt;, you can teach it interactively — learners write real SQL, run it immediately, and see the results as formatted tables, right inside the course.&lt;/p&gt;</description></item></channel></rss>

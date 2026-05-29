@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mathematics on LiaScript</title><link>https://liascript.github.io/tags/mathematics/</link><description>Recent content in Mathematics on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/mathematics/index.xml" rel="self" type="application/rss+xml"/><item><title>Algebrite for LiaScript: A Computer Algebra System in the Browser</title><link>https://liascript.github.io/blog/algebrite-cas-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/algebrite-cas-in-liascript/</guid><description>&lt;p&gt;Symbolic computation is hard to teach without tools.
+Students write algebraic expressions, simplify them, differentiate, integrate — but verifying their work by hand is slow, and most CAS tools require software installations or paid subscriptions.&lt;/p&gt;</description></item><item><title>GGBScript for LiaScript: Interactive Geometry Constructions in the Browser</title><link>https://liascript.github.io/blog/ggbscript-geometry-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/ggbscript-geometry-in-liascript/</guid><description>&lt;p&gt;Geometry education benefits enormously from interactive visualizations.
+Students who can drag a point, observe how angles change, or animate a transformation understand geometry differently than those who only read about it.&lt;/p&gt;</description></item><item><title>lia-canvas-ocr for LiaScript: Handwriting Recognition in Math Quizzes</title><link>https://liascript.github.io/blog/lia-canvas-ocr-handwriting-recognition-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-canvas-ocr-handwriting-recognition-in-liascript/</guid><description>&lt;p&gt;Typing LaTeX in a text field is a high barrier for students who just want to write &lt;code&gt;x²+3x-1&lt;/code&gt; with a stylus.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-canvas-ocr"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-canvas-ocr&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; solves this by adding a drawing canvas to any LiaScript answer field.
+Students draw their math answer on the canvas, select it with a rectangle, click &amp;ldquo;Submit as Solution&amp;rdquo; — and the handwriting is recognized by a local LaTeX OCR model and inserted into the quiz field automatically.
+No data leaves the browser.&lt;/p&gt;</description></item><item><title>lia-coordinate for LiaScript: Interactive JSXGraph Coordinate Exercises</title><link>https://liascript.github.io/blog/lia-coordinate-interactive-math-plots-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-coordinate-interactive-math-plots-in-liascript/</guid><description>&lt;p&gt;Drawing a coordinate system on a slide is straightforward; making it interactive is another matter.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-coordinate"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-coordinate&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; builds on &lt;a href="https://jsxgraph.uni-bayreuth.de/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSXGraph&lt;/a&gt; to provide a full set of declarative macros for interactive coordinate plane exercises.
+Students drag points, plot functions by typing formulas, or fill in value tables — all with automatic grading built in.&lt;/p&gt;</description></item><item><title>lia-Mathe for LiaScript: Interactive Fraction Quizzes with Visual Feedback</title><link>https://liascript.github.io/blog/lia-mathe-fraction-quizzes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-mathe-fraction-quizzes-in-liascript/</guid><description>&lt;p&gt;Teaching fractions with static diagrams only goes so far.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-Mathe"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-Mathe&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; provides two visual fraction exercise types: a &lt;strong&gt;circle (pie)&lt;/strong&gt; and a &lt;strong&gt;rectangle (grid)&lt;/strong&gt;.
+Students drag a slider to set the number of sections, then click the correct segments to represent the given fraction — and LiaScript grades the answer automatically.&lt;/p&gt;</description></item><item><title>TikzJax for LiaScript: Render TikZ Diagrams Directly in the Browser</title><link>https://liascript.github.io/blog/tikzjax-latex-diagrams-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tikzjax-latex-diagrams-in-liascript/</guid><description>&lt;p&gt;TikZ is the gold standard for technical diagrams in academic publishing.
+Circuit diagrams, flowcharts, commutative diagrams, geometric constructions, function plots — TikZ handles all of them with precision and flexibility.
+Until recently, rendering TikZ required a full LaTeX installation.&lt;/p&gt;</description></item><item><title>JSXGraph for LiaScript: Interactive Math and Geometry in the Browser</title><link>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</guid><description>&lt;p&gt;Mathematics comes alive when learners can move points, drag sliders, and watch functions redraw in real time.
+The &lt;a href="https://github.com/LiaTemplates/JSXGraph"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSXGraph template&lt;/a&gt; brings exactly that to LiaScript — interactive geometry, function plots, parametric curves, and 3D visualizations, all running entirely in the browser.&lt;/p&gt;</description></item></channel></rss>

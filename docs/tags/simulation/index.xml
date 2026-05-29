@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simulation on LiaScript</title><link>https://liascript.github.io/tags/simulation/</link><description>Recent content in Simulation on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml"/><item><title>AVR8js for LiaScript: Simulate Arduino and AVR Microcontrollers in the Browser</title><link>https://liascript.github.io/blog/avr8js-arduino-simulator-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/avr8js-arduino-simulator-in-liascript/</guid><description>&lt;p&gt;Teaching embedded systems and Arduino programming typically requires physical hardware: boards, LEDs, cables, and a lab environment.
+The &lt;a href="https://github.com/LiaTemplates/AVR8js"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;AVR8js template&lt;/a&gt; removes that requirement entirely.&lt;/p&gt;</description></item><item><title>Chat-Simulation for LiaScript: Bring Dialogues to Life in Your Course</title><link>https://liascript.github.io/blog/chat-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chat-simulation-in-liascript/</guid><description>&lt;p&gt;Sometimes the most effective way to present information is not as a list or an explanation, but as a conversation.
+The &lt;a href="https://github.com/LiaTemplates/Chat-Simulation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chat-Simulation template&lt;/a&gt; lets you embed animated chat dialogues directly in your LiaScript course — complete with typing indicators, speech bubbles, and support for full Markdown and LiaScript elements inside every message.&lt;/p&gt;</description></item><item><title>DigiSim for LiaScript: Interactive Digital Circuit Simulation</title><link>https://liascript.github.io/blog/digisim-digital-circuits-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/digisim-digital-circuits-in-liascript/</guid><description>&lt;p&gt;Teaching digital logic requires students to interact with circuits, not just read about them.
+The &lt;a href="https://github.com/LiaTemplates/DigiSim"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DigiSim template&lt;/a&gt; integrates &lt;a href="https://github.com/tilk/digitaljs"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DigitalJS&lt;/a&gt; into LiaScript, enabling interactive logic circuit simulations with clickable buttons, lamps, and animated signal flow — right inside the course material.&lt;/p&gt;</description></item><item><title>JSCAD for LiaScript: Parametric 3D CAD Modeling in the Browser</title><link>https://liascript.github.io/blog/jscad-3d-cad-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jscad-3d-cad-in-liascript/</guid><description>&lt;p&gt;Parametric 3D modeling is a core skill in mechanical engineering, product design, and TVET manufacturing programs.
+Teaching it usually requires CAD software installations, license management, and significant setup time.&lt;/p&gt;</description></item><item><title>LogicEmu for LiaScript: ASCII Logic Circuits That Actually Run</title><link>https://liascript.github.io/blog/logicemu-ascii-circuits-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/logicemu-ascii-circuits-in-liascript/</guid><description>&lt;p&gt;Most circuit simulation tools require a graphical schematic editor.
+&lt;a href="https://lodev.org/logicemu/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LogicEmu&lt;/a&gt; takes a different approach: logic circuits are written as ASCII art — and they simulate.
+The &lt;a href="https://github.com/LiaTemplates/LogicEmu"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LogicEmu template&lt;/a&gt; integrates this engine into LiaScript, letting instructors embed runnable circuits directly in course content as plain text.&lt;/p&gt;</description></item><item><title>mec2 for LiaScript: 2D Mechanism and Physics Simulation</title><link>https://liascript.github.io/blog/mec2-physics-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mec2-physics-simulation-in-liascript/</guid><description>&lt;p&gt;Mechanical engineering education benefits enormously from dynamic simulation — but setting up simulation software is a barrier.
+The &lt;a href="https://github.com/LiaTemplates/mec2"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;mec2 template&lt;/a&gt; brings &lt;a href="https://goessner.github.io/mec2/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;goessner&amp;rsquo;s mec2&lt;/a&gt; 2D physics and mechanism engine to LiaScript.
+Define nodes, constraints, gravity, and visualization views in JSON, and the simulation runs live in the browser.&lt;/p&gt;</description></item><item><title>gcode-preview for LiaScript: Visualize G-Code for 3D Printing and CNC in Open Courses</title><link>https://liascript.github.io/blog/gcode-preview-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/gcode-preview-in-liascript/</guid><description>&lt;p&gt;G-Code is the language of digital fabrication.
+Every 3D printer, CNC milling machine, laser cutter, and lathe is controlled by sequences of G-Code instructions — yet most learners never get to see what those instructions actually describe spatially.&lt;/p&gt;</description></item><item><title>MicroBit-Simulator for LiaScript: Teach MicroPython Without a Physical Device</title><link>https://liascript.github.io/blog/microbit-simulator-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/microbit-simulator-in-liascript/</guid><description>&lt;p&gt;The &lt;a href="https://microbit.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BBC micro:bit&lt;/a&gt; is one of the most popular physical computing boards in schools worldwide.
+With the &lt;a href="https://github.com/LiaTemplates/MicroBit-Simulator"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MicroBit-Simulator template&lt;/a&gt;, you can bring it directly into your LiaScript course — no hardware, no installation, no classroom set of devices needed.&lt;/p&gt;</description></item></channel></rss>

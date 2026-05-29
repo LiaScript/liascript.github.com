@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Science on LiaScript</title><link>https://liascript.github.io/tags/computer-science/</link><description>Recent content in Computer Science on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml"/><item><title>Algebrite for LiaScript: A Computer Algebra System in the Browser</title><link>https://liascript.github.io/blog/algebrite-cas-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/algebrite-cas-in-liascript/</guid><description>&lt;p&gt;Symbolic computation is hard to teach without tools.
+Students write algebraic expressions, simplify them, differentiate, integrate — but verifying their work by hand is slow, and most CAS tools require software installations or paid subscriptions.&lt;/p&gt;</description></item><item><title>BiwaScheme for LiaScript: Functional Programming with Scheme in the Browser</title><link>https://liascript.github.io/blog/biwascheme-scheme-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/biwascheme-scheme-in-liascript/</guid><description>&lt;p&gt;Scheme is one of the most influential programming languages ever designed.
+Its minimal syntax, powerful macro system, and emphasis on functional programming have made it a foundational language in computer science education — from SICP to modern functional programming courses.&lt;/p&gt;</description></item><item><title>Curiosity-Prolog for LiaScript: Lightweight Logic Programming in the Browser</title><link>https://liascript.github.io/blog/curiosity-prolog-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/curiosity-prolog-in-liascript/</guid><description>&lt;p&gt;Not every logic programming exercise needs a full Prolog system.
+For introductory exercises — family trees, simple rule-based reasoning, first-order logic — a lighter interpreter is often more appropriate.&lt;/p&gt;</description></item><item><title>dbdiagram for LiaScript: Design and Visualize Database Schemas with DBML</title><link>https://liascript.github.io/blog/dbdiagram-schema-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/dbdiagram-schema-visualization-in-liascript/</guid><description>&lt;p&gt;Database schema diagrams are hard to maintain.
+Draw them by hand and they drift from the code.
+Use a screenshot and it&amp;rsquo;s outdated the moment the schema changes.&lt;/p&gt;</description></item><item><title>DigiSim for LiaScript: Interactive Digital Circuit Simulation</title><link>https://liascript.github.io/blog/digisim-digital-circuits-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/digisim-digital-circuits-in-liascript/</guid><description>&lt;p&gt;Teaching digital logic requires students to interact with circuits, not just read about them.
+The &lt;a href="https://github.com/LiaTemplates/DigiSim"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DigiSim template&lt;/a&gt; integrates &lt;a href="https://github.com/tilk/digitaljs"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;DigitalJS&lt;/a&gt; into LiaScript, enabling interactive logic circuit simulations with clickable buttons, lamps, and animated signal flow — right inside the course material.&lt;/p&gt;</description></item><item><title>ExplainGit for LiaScript: Visualize Git Repositories Interactively</title><link>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/explaingit-git-visualization-in-liascript/</guid><description>&lt;p&gt;Git is notoriously difficult to teach with text alone.
+The &lt;a href="https://github.com/LiaTemplates/ExplainGit"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;ExplainGit template&lt;/a&gt; embeds &lt;a href="https://github.com/onlywei/explain-git-with-d3"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;onlywei&amp;rsquo;s explain-git-with-d3&lt;/a&gt; into LiaScript, visualizing commits, branches, merges, and checkouts as animated D3 diagrams.&lt;/p&gt;</description></item><item><title>JSCPP for LiaScript: Run C++ Directly in the Browser Without a Compiler</title><link>https://liascript.github.io/blog/jscpp-cpp-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jscpp-cpp-in-liascript/</guid><description>&lt;p&gt;C++ programming courses have a tooling problem.
+Students need to install a compiler, configure an IDE, manage build systems, and debug their environment before writing a single line of code.&lt;/p&gt;</description></item><item><title>LogicEmu for LiaScript: ASCII Logic Circuits That Actually Run</title><link>https://liascript.github.io/blog/logicemu-ascii-circuits-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/logicemu-ascii-circuits-in-liascript/</guid><description>&lt;p&gt;Most circuit simulation tools require a graphical schematic editor.
+&lt;a href="https://lodev.org/logicemu/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LogicEmu&lt;/a&gt; takes a different approach: logic circuits are written as ASCII art — and they simulate.
+The &lt;a href="https://github.com/LiaTemplates/LogicEmu"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LogicEmu template&lt;/a&gt; integrates this engine into LiaScript, letting instructors embed runnable circuits directly in course content as plain text.&lt;/p&gt;</description></item><item><title>plantUML for LiaScript: UML and Architecture Diagrams in Your Course</title><link>https://liascript.github.io/blog/plantuml-uml-diagrams-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/plantuml-uml-diagrams-in-liascript/</guid><description>&lt;p&gt;UML diagrams are a core tool in software engineering education.
+Class hierarchies, sequence diagrams, state machines, component architectures — all are easier to teach when students can see them rendered clearly and modify them directly.&lt;/p&gt;</description></item><item><title>PouchDB for LiaScript: NoSQL Documents and Mango Queries in the Browser</title><link>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</guid><description>&lt;p&gt;Relational databases are one way to store data.
+Documents are another.
+The &lt;a href="https://github.com/LiaTemplates/PouchDB"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB template&lt;/a&gt; brings &lt;a href="https://pouchdb.com"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB&lt;/a&gt; — a JavaScript database inspired by Apache CouchDB — directly into your LiaScript courses.&lt;/p&gt;</description></item><item><title>Redis for LiaScript: Explore Key-Value Stores and Data Structures in the Browser</title><link>https://liascript.github.io/blog/redis-key-value-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/redis-key-value-in-liascript/</guid><description>&lt;p&gt;Redis is one of the most widely used databases in the world — but teaching it interactively has always meant running a Redis server.
+The &lt;a href="https://github.com/LiaTemplates/Redis"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Redis template&lt;/a&gt; removes that requirement entirely.&lt;/p&gt;</description></item><item><title>Tau-Prolog for LiaScript: Interactive Logic Programming in the Browser</title><link>https://liascript.github.io/blog/tau-prolog-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/tau-prolog-in-liascript/</guid><description>&lt;p&gt;Prolog is the language of logic programming.
+Unlike imperative languages, Prolog programs describe &lt;em&gt;what is true&lt;/em&gt; rather than &lt;em&gt;how to compute it&lt;/em&gt;.
+This makes it essential in AI, natural language processing, theorem proving, and formal methods courses.&lt;/p&gt;</description></item><item><title>WebDev for LiaScript: Run HTML, CSS, and JavaScript Live in Your Course</title><link>https://liascript.github.io/blog/webdev-html-css-js-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/webdev-html-css-js-in-liascript/</guid><description>&lt;p&gt;Teaching front-end web development means students need to experiment.
+They need to change a CSS rule and see it take effect, add a button and wire it up, break something and fix it.&lt;/p&gt;</description></item><item><title>CodeRunner for LiaScript: Execute Code in 50+ Languages Server-Side</title><link>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/coderunner-multi-language-execution-in-liascript/</guid><description>&lt;p&gt;Not every programming language runs in a browser.
+Browser-based interpreters like Pyodide cover Python beautifully, but if your course needs real C compilation, JVM-based Java, Rust, Haskell, Erlang, or even COBOL — you need a real server with real compilers.&lt;/p&gt;</description></item><item><title>Mermaid for LiaScript: Create Flowcharts and Diagrams in Plain Text</title><link>https://liascript.github.io/blog/mermaid-diagrams-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/mermaid-diagrams-in-liascript/</guid><description>&lt;p&gt;A picture is worth a thousand words — and a diagram that students can edit live in the browser is worth a thousand static slides.&lt;/p&gt;</description></item></channel></rss>

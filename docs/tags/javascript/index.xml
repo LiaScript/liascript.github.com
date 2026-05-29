@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on LiaScript</title><link>https://liascript.github.io/tags/javascript/</link><description>Recent content in JavaScript on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>JSXGraph &amp; LiaScript ... a Perfect Match</title><link>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</guid><description>&lt;p&gt;As you know, &lt;a href="https://liascript.github.io"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on LiaScript</title><link>https://liascript.github.io/tags/javascript/</link><description>Recent content in JavaScript on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>PouchDB for LiaScript: NoSQL Documents and Mango Queries in the Browser</title><link>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pouchdb-nosql-in-liascript/</guid><description>&lt;p&gt;Relational databases are one way to store data.
+Documents are another.
+The &lt;a href="https://github.com/LiaTemplates/PouchDB"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB template&lt;/a&gt; brings &lt;a href="https://pouchdb.com"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;PouchDB&lt;/a&gt; — a JavaScript database inspired by Apache CouchDB — directly into your LiaScript courses.&lt;/p&gt;</description></item><item><title>Redis for LiaScript: Explore Key-Value Stores and Data Structures in the Browser</title><link>https://liascript.github.io/blog/redis-key-value-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/redis-key-value-in-liascript/</guid><description>&lt;p&gt;Redis is one of the most widely used databases in the world — but teaching it interactively has always meant running a Redis server.
+The &lt;a href="https://github.com/LiaTemplates/Redis"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Redis template&lt;/a&gt; removes that requirement entirely.&lt;/p&gt;</description></item><item><title>WebDev for LiaScript: Run HTML, CSS, and JavaScript Live in Your Course</title><link>https://liascript.github.io/blog/webdev-html-css-js-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/webdev-html-css-js-in-liascript/</guid><description>&lt;p&gt;Teaching front-end web development means students need to experiment.
+They need to change a CSS rule and see it take effect, add a button and wire it up, break something and fix it.&lt;/p&gt;</description></item><item><title>JSXGraph for LiaScript: Interactive Math and Geometry in the Browser</title><link>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-interactive-math-in-liascript/</guid><description>&lt;p&gt;Mathematics comes alive when learners can move points, drag sliders, and watch functions redraw in real time.
+The &lt;a href="https://github.com/LiaTemplates/JSXGraph"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;JSXGraph template&lt;/a&gt; brings exactly that to LiaScript — interactive geometry, function plots, parametric curves, and 3D visualizations, all running entirely in the browser.&lt;/p&gt;</description></item><item><title>JSXGraph &amp; LiaScript ... a Perfect Match</title><link>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/jsxgraph-and-liascript-a-perfect-match/</guid><description>&lt;p&gt;As you know, &lt;a href="https://liascript.github.io"
 
 
 

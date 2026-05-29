@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Media on LiaScript</title><link>https://liascript.github.io/tags/media/</link><description>Recent content in Media on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/media/index.xml" rel="self" type="application/rss+xml"/><item><title>A-Frame for LiaScript: 3D and VR Scenes in Your Course</title><link>https://liascript.github.io/blog/aframe-3d-vr-scenes-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/aframe-3d-vr-scenes-in-liascript/</guid><description>&lt;p&gt;3D visualization transforms abstract concepts in mathematics, science, and engineering into something students can explore spatially.
+The &lt;a href="https://github.com/LiaTemplates/aframe"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;aframe template&lt;/a&gt; integrates &lt;a href="https://aframe.io/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;A-Frame&lt;/a&gt; — Mozilla&amp;rsquo;s WebXR/WebGL framework — into LiaScript.&lt;/p&gt;</description></item><item><title>BeforeAndAfter for LiaScript: Compare Two Images with a Slider</title><link>https://liascript.github.io/blog/beforeandafter-image-comparison-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/beforeandafter-image-comparison-in-liascript/</guid><description>&lt;p&gt;Comparing two images side by side is a powerful learning device — but static layouts break on different screen sizes and don&amp;rsquo;t invite interaction.
+The &lt;a href="https://github.com/LiaTemplates/BeforeAndAfter"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;BeforeAndAfter template&lt;/a&gt; adds an interactive drag slider between two images.
+Drag left to reveal image 1, drag right to reveal image 2 — with a single inline macro and two URLs.&lt;/p&gt;</description></item><item><title>Pannellum for LiaScript: 360° Panoramas and Virtual Tours in Your Course</title><link>https://liascript.github.io/blog/pannellum-360-panorama-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/pannellum-360-panorama-in-liascript/</guid><description>&lt;p&gt;Spatial learning contexts — visiting a museum, exploring a geological site, taking a field trip — are hard to replicate in a document.
+The &lt;a href="https://github.com/LiaTemplates/Pannellum"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pannellum template&lt;/a&gt; integrates &lt;a href="https://pannellum.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Pannellum&lt;/a&gt; — the lightweight, standalone panorama viewer — into LiaScript.&lt;/p&gt;</description></item><item><title>Wikimedia for LiaScript: Embed Media with Automatic Attribution</title><link>https://liascript.github.io/blog/wikimedia-commons-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/wikimedia-commons-in-liascript/</guid><description>&lt;p&gt;Open Educational Resources live and die by proper attribution.
+When you embed a photo, audio recording, or video from &lt;a href="https://commons.wikimedia.org/"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Wikimedia Commons&lt;/a&gt; in your course, you are legally required to credit the author, name the license, and link back to the source.
+That&amp;rsquo;s three to five fields per media file — easy to get wrong, easy to forget entirely.&lt;/p&gt;</description></item></channel></rss>

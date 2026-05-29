@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Language Learning on LiaScript</title><link>https://liascript.github.io/tags/language-learning/</link><description>Recent content in Language Learning on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/language-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Chat-Simulation for LiaScript: Bring Dialogues to Life in Your Course</title><link>https://liascript.github.io/blog/chat-simulation-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/chat-simulation-in-liascript/</guid><description>&lt;p&gt;Sometimes the most effective way to present information is not as a list or an explanation, but as a conversation.
+The &lt;a href="https://github.com/LiaTemplates/Chat-Simulation"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;Chat-Simulation template&lt;/a&gt; lets you embed animated chat dialogues directly in your LiaScript course — complete with typing indicators, speech bubbles, and support for full Markdown and LiaScript elements inside every message.&lt;/p&gt;</description></item><item><title>lia-marker for LiaScript: Color-Coded Text Highlighting Quizzes</title><link>https://liascript.github.io/blog/lia-marker-text-highlighting-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-marker-text-highlighting-in-liascript/</guid><description>&lt;p&gt;Reading comprehension and grammar tasks often require marking specific words or phrases in a text.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-marker"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-marker&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds a highlighting toolbar to LiaScript courses and a set of quiz macros that automatically check whether the correct words were highlighted in the correct colors.&lt;/p&gt;</description></item><item><title>lia-orthography for LiaScript: Spelling and Dictation Exercises</title><link>https://liascript.github.io/blog/lia-orthography-spelling-exercises-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/lia-orthography-spelling-exercises-in-liascript/</guid><description>&lt;p&gt;Spelling exercises require more than multiple-choice: students need to type corrections and see exactly what they got wrong.
+The &lt;a href="https://github.com/MINT-the-GAP/lia-orthography"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;lia-orthography&lt;/a&gt; community plugin by &lt;a href="https://github.com/MINT-the-GAP"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;MINT-the-GAP&lt;/a&gt; adds three exercise types:
+an &lt;strong&gt;inline correction&lt;/strong&gt; field, a &lt;strong&gt;full-text textarea&lt;/strong&gt; with diff highlighting, and a &lt;strong&gt;dictation gap&lt;/strong&gt; that reads a word aloud and asks students to type the spelling.&lt;/p&gt;</description></item><item><title>TextAnalysis for LiaScript: Readability Scores and Text Complexity Metrics</title><link>https://liascript.github.io/blog/textanalysis-readability-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/textanalysis-readability-in-liascript/</guid><description>&lt;p&gt;Writing clear learning materials requires understanding how readable they actually are.
+The &lt;a href="https://github.com/LiaTemplates/TextAnalysis"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;TextAnalysis template&lt;/a&gt; attaches standard readability metrics to any text block in LiaScript.
+Students can paste or edit text and instantly see Flesch-Kincaid grades, Gunning Fog index, syllable counts, reading time, and more — directly in the course slide.&lt;/p&gt;</description></item><item><title>Speech-Recognition-Quiz for LiaScript: Turn Spoken Words into Interactive Quizzes</title><link>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</link><pubDate>Wed, 27 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/speech-recognition-quiz-in-liascript/</guid><description>&lt;p&gt;What if your quiz asked learners to &lt;em&gt;say&lt;/em&gt; the answer instead of typing it?&lt;/p&gt;</description></item></channel></rss>

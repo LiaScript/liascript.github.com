@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SCORM on LiaScript</title><link>https://liascript.github.io/tags/scorm/</link><description>Recent content in SCORM on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://liascript.github.io/tags/scorm/index.xml" rel="self" type="application/rss+xml"/><item><title>LiaEx: From CLI Tool to Full Export Platform</title><link>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</guid><description>&lt;p&gt;Back in October 2025, we &lt;a href="../094_liaex-funding-for-the-liascript-exporter"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SCORM on LiaScript</title><link>https://liascript.github.io/tags/scorm/</link><description>Recent content in SCORM on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 May 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/tags/scorm/index.xml" rel="self" type="application/rss+xml"/><item><title>SCORM-Progress for LiaScript: Score and Completion Tracking in LMS</title><link>https://liascript.github.io/blog/scorm-progress-tracking-in-liascript/</link><pubDate>Thu, 28 May 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/scorm-progress-tracking-in-liascript/</guid><description>&lt;p&gt;When deploying a LiaScript course as a SCORM package inside an LMS (Moodle, Canvas, ILIAS, etc.), the LMS sets a completion score on the &lt;code&gt;window.SCORE&lt;/code&gt; object.
+The &lt;a href="https://github.com/LiaPlayground/SCORM-Progress"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;SCORM-Progress&lt;/a&gt; template by &lt;a href="https://github.com/LiaPlayground"
+
+
+
+
+ target="_blank"
+ 
+
+
+&gt;LiaPlayground&lt;/a&gt; reads that value and renders a beautiful &lt;strong&gt;ECharts gauge&lt;/strong&gt; showing the student&amp;rsquo;s progress from 0 to 100%.&lt;/p&gt;</description></item><item><title>LiaEx: From CLI Tool to Full Export Platform</title><link>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0100</pubDate><guid>https://liascript.github.io/blog/liaex-from-cli-tool-to-full-export-platform/</guid><description>&lt;p&gt;Back in October 2025, we &lt;a href="../094_liaex-funding-for-the-liascript-exporter"
 
 
 
