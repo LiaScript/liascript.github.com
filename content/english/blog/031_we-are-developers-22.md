@@ -4,7 +4,7 @@ slug: we-are-developers-22
 date: 2022-12-07
 draft: false
 authors:
-    - Sebatian Zug
+    - Sebastian Zug
     - André Dietrich
 image: "/images/post/wearedev22.png"
 categories:

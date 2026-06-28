@@ -4,7 +4,7 @@ slug: "the-vision-of-liascript"
 date: 2018-05-07
 draft: false
 authors:
-    - Sebatian Zug
+    - Sebastian Zug
     - André Dietrich
 image: "/images/post/vision-of-liascript.png"
 categories:

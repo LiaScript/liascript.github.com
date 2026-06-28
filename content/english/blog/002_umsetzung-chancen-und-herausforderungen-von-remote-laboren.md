@@ -4,7 +4,7 @@ slug: umsetzung-chancen-und-herausforderungen-von-remote-laboren
 date: 2018-06-14
 draft: false
 authors:
-    - Sebatian Zug
+    - Sebastian Zug
 
 categories:
     - News
