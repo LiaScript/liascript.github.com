@@ -2,7 +2,7 @@
 {{ if .IsHome }}
   {{ with hugo.Data.meta }}
     <script type="application/ld+json">
-{{ . | jsonify (dict "indent" "  ") | safeHTML }}
+{{ . | jsonify (dict "indent" "  ") | safeJS }}
     </script>
   {{ end }}
 {{ end }}
