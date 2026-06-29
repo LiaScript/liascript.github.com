@@ -32,7 +32,7 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Setup Pages
@@ -139,7 +139,7 @@ jobs:
       - liascript-nightly
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
 
       - name: Checkout gh-pages branch
         run: |
@@ -147,7 +147,7 @@ jobs:
           git checkout gh-pages || git checkout --orphan gh-pages
 
       - name: Download Website
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v5
         with:
           name: public
           path: public
@@ -159,7 +159,7 @@ jobs:
           rm public/artifact.tar
 
       - name: Download LiaScript
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v5
         with:
           name: course
           path: public/course
@@ -171,7 +171,7 @@ jobs:
           rm public/course/artifact.tar
 
       - name: Download LiaScript Nightly
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v5
         with:
           name: nightly
           path: public/nightly
