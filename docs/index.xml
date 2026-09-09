@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiaScript</title><link>https://liascript.github.io/</link><description>Recent content on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 27 Jul 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>André Dietrich</title><link>https://liascript.github.io/authors/andre-dietrich/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/andre-dietrich/</guid><description>&lt;p&gt;Originally a robotics and embedded software developer now working as a researcher at the &lt;a href="https://www.tu-freiberg.de/"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiaScript</title><link>https://liascript.github.io/</link><description>Recent content on LiaScript</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://liascript.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>André Dietrich</title><link>https://liascript.github.io/authors/andre-dietrich/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/authors/andre-dietrich/</guid><description>&lt;p&gt;Originally a robotics and embedded software developer now working as a researcher at the &lt;a href="https://www.tu-freiberg.de/"
 
 
 
@@ -43,7 +43,7 @@
  
 
 
-&gt;Edrys&lt;/a&gt; — an open platform for remote laboratories in the context of embedded systems education.&lt;/p&gt;</description></item><item><title>WorldMap</title><link>https://liascript.github.io/world-map/</link><pubDate>Mon, 27 Jul 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/world-map/</guid><description>&lt;p&gt;Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
+&gt;Edrys&lt;/a&gt; — an open platform for remote laboratories in the context of embedded systems education.&lt;/p&gt;</description></item><item><title>WorldMap</title><link>https://liascript.github.io/world-map/</link><pubDate>Wed, 09 Sep 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/world-map/</guid><description>&lt;p&gt;Since LiaScript is a distributed approach to create and share educational content, it is difficult to keep track of all the projects that are created with it.
 This is why we have created a world map that shows the locations of projects that have been implemented with LiaScript so far.&lt;/p&gt;</description></item><item><title>Vom Team in der Küche auf den Teller: Ein NIS2-Kurs aus dem Teaching-Agent</title><link>https://liascript.github.io/blog/nis2-kurs-teaching-agent-live-uebersetzt/</link><pubDate>Tue, 07 Jul 2026 00:00:00 +0200</pubDate><guid>https://liascript.github.io/blog/nis2-kurs-teaching-agent-live-uebersetzt/</guid><description>&lt;h2 id="was-am-ende-auf-dem-teller-landet"&gt;Was am Ende auf dem Teller landet&lt;/h2&gt;
 &lt;p&gt;Im &lt;a href="https://liascript.github.io/blog/ein-prompt-ist-kein-team/"
 
@@ -1611,7 +1611,14 @@ All your notes or courses will be directly stored within your browser.&lt;/p&gt;
  min-height: 50vh;
  "
  frameborder="0"
-&gt;&lt;/iframe&gt;</description></item><item><title>Ready to build your next project with Hugo?</title><link/><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid/><description/></item><item><title>VSCode - Editor</title><link>https://liascript.github.io/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode/</guid><description>&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&gt;&lt;/iframe&gt;</description></item><item><title>Privacy</title><link>https://liascript.github.io/privacy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/privacy/</guid><description>&lt;p&gt;&lt;strong&gt;This page is a technical draft, not a legal document.&lt;/strong&gt; It lists what this site actually loads and processes, based on its current configuration. It has not been reviewed by a lawyer or a data protection officer and does not yet name a responsible controller, legal basis, or retention periods, see the &lt;a href="https://liascript.github.io/imprint/"
+
+
+
+ 
+
+
+&gt;Imprint&lt;/a&gt; for the publisher. Please have it reviewed, or replace it with the official Datenschutzerklärung of Technische Universität Bergakademie Freiberg, before relying on it.&lt;/p&gt;</description></item><item><title>VSCode - Editor</title><link>https://liascript.github.io/vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode/</guid><description>&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;p&gt;To install VSCode with LiaScript follow the steps from the following Blog-post.&lt;/p&gt;</description></item><item><title>VSCode-Web - Editor</title><link>https://liascript.github.io/vscode-web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://liascript.github.io/vscode-web/</guid><description>&lt;p&gt;This is a preview module for &lt;a href="https://LiaScript.github.io"
 
 
@@ -1621,4 +1628,4 @@ All your notes or courses will be directly stored within your browser.&lt;/p&gt;
  
 
 
-&gt;LiaScript&lt;/a&gt; courses developed for the VSCode-Web editor, thus no installation everything is browser-based. If you have a GitHub-account simply follow the steps in the video below to for installation:&lt;/p&gt;</description></item></channel></rss>
+&gt;LiaScript&lt;/a&gt; courses developed for the VSCode-Web editor, thus no installation everything is browser-based. If you have a GitHub-account simply follow the steps in the video below to for installation:&lt;/p&gt;</description></item><item><title>Your next course starts as a text file</title><link/><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid/><description/></item></channel></rss>
