@@ -1,0 +1,407 @@
+{{ define "main" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <section class="section pt-14">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-7 md:col-9 mb-8 text-center">
+            <h1 class="mb-4 text-h3 lg:text-h1">
+              {{ .title | markdownify }}
+            </h1>
+            <p class="mb-8">
+              {{ .content | markdownify }}
+            </p>
+          </div>
+          <div class="col-12">
+            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
+            {{ with .button }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-primary block w-fit mx-auto mt-6"
+                  href="{{ .link | absURL }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Banner -->
+
+  <!-- Demo Video (Full Bleed) -->
+  {{ with .Params.demo_video }}
+    {{ if .enable }}
+      <section class="w-full py-2 px-0 mb-16">
+        <!-- Full-width wrapper -->
+        <div class="w-full mx-auto px-0">
+          <!-- Optional heading -->
+          <div class="text-center mb-10">
+            <h2 class="h2 mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="text-lg">
+              {{ .description | markdownify }}
+            </p>
+
+            {{ with .button }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-primary block w-fit mx-auto mt-6"
+                  href="{{ .link | absURL }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+
+          <!-- Full-bleed responsive video -->
+          <div
+            class="relative w-full"
+            style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe
+              src="{{ .video }}"
+              frameborder="0"
+              allowfullscreen
+              style="position:absolute; top:0; left:0; width:100%; height:100%;">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Demo Video -->
+
+  <!-- Shorts Playlist -->
+  {{ with .Params.shorts }}
+    {{ if .enable }}
+      <section class="section py-12">
+        <div class="container">
+          <div class="row justify-center mb-10 text-center">
+            <div class="lg:col-8 md:col-10 col-12">
+              <h2 class="h2 mb-4">
+                {{ .title | markdownify }}
+              </h2>
+              <p class="text-lg">
+                {{ .description | markdownify }}
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            {{ range .items }}
+              <div class="lg:col-4 md:col-6 col-12 mb-8">
+                <div
+                  class="bg-theme-light dark:bg-darkmode-theme-light rounded-xl overflow-hidden h-full flex flex-col shadow-sm">
+                  <!-- 16:9 Thumbnail -->
+                  <button
+                    type="button"
+                    class="relative w-full cursor-pointer"
+                    style="padding-bottom: 56.25%; height: 0; overflow: hidden;"
+                    onclick="openShortsModal('{{ .id }}')">
+                    <img
+                      src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg"
+                      alt="{{ .title }}"
+                      class="absolute inset-0 w-full h-full object-cover" />
+                    <span
+                      class="absolute inset-0 flex items-center justify-center">
+                      <span
+                        class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-black/60 text-white">
+                        <i class="fa fa-play text-xl"></i>
+                      </span>
+                    </span>
+                  </button>
+
+                  <!-- Card Body -->
+                  <div class="p-5 flex-1 flex flex-col">
+                    <h3 class="h5 font-semibold mb-2">
+                      {{ .title }}
+                    </h3>
+                    {{ with .description }}
+                      <p class="mb-4 text-sm text-gray-600 dark:text-gray-300">
+                        {{ . }}
+                      </p>
+                    {{ end }}
+
+
+                    <div class="mt-auto pt-4">
+                      <div
+                        class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                        <!-- Left: YouTube -->
+                        <a
+                          href="https://www.youtube.com/watch?v={{ .id }}"
+                          target="_blank"
+                          rel="noopener"
+                          class="btn btn-outline-primary btn-sm w-full sm:w-auto flex items-center justify-center">
+                          <i class="fa fa-play mr-2"></i>
+                          Watch on YouTube
+                        </a>
+
+                        <!-- Right: LiveEditor -->
+                        <a
+                          href="{{ .edit }}"
+                          target="_blank"
+                          rel="noopener"
+                          class="btn btn-outline-primary btn-sm w-full sm:w-auto flex items-center justify-center">
+                          <i class="fa fa-code mr-2"></i>
+                          Open in LiveEditor
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+
+          {{ with .playlist }}
+            <div class="text-center mt-6">
+              <a
+                href="{{ . }}"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary">
+                View full playlist
+                <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Shorts Playlist -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section class="section-sm bg-gradient">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="mb:md-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5 mb-6">
+            {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-7 lg:col-6">
+            <h2 class="mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg">
+              {{ .content | markdownify }}
+            </p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- How it works -->
+  {{ with .Params.how_it_works }}
+    {{ if .enable }}
+      <section class="section-sm">
+        <div class="container">
+          <div class="row justify-center mb-10 text-center">
+            <div class="lg:col-8 md:col-10 col-12">
+              <h2 class="h2 mb-4">
+                {{ .title | markdownify }}
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            {{ range $i, $step := .steps }}
+              <div class="md:col-4 col-12 mb-8 text-center">
+                <div
+                  class="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white font-semibold">
+                  {{ add $i 1 }}
+                </div>
+                <h3 class="h5 font-semibold mb-2">
+                  {{ $step.title | markdownify }}
+                </h3>
+                <p>
+                  {{ $step.content | markdownify }}
+                </p>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /How it works -->
+
+  <!-- Testimonials -->
+  {{ with site.GetPage "sections/testimonial" }}
+    {{ if .Params.enable }}
+      <section class="section bg-gradient">
+        <div class="container">
+          <div class="row">
+            <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">
+              <h2 class="mb-4">
+                {{ .Title | markdownify }}
+              </h2>
+              <p>
+                {{ .Params.description | markdownify }}
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                  {{ range .Params.testimonials }}
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg px-7 py-10">
+                        <h3 class="h5 font-primary font-semibold">
+                          {{ .name }}
+                        </h3>
+                        <p class="text-dark dark:text-white">
+                          {{ .designation | markdownify }}
+                        </p>
+
+                        <blockquote class="mt-4">
+                          {{ .content | markdownify }}
+                        </blockquote>
+                        <a
+                          class="btn btn-primary mt-6"
+                          href="{{ .link | absURL }}">
+                          visit
+                          <i class="fa fa-arrow-right pl-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  {{ end }}
+                </div>
+                <div
+                  class="testimonial-slider-pagination mt-9 flex items-center justify-center text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Testimonials -->
+
+  <!-- FAQ -->
+  {{ with .Params.faq }}
+    {{ if .enable }}
+      <section class="section-sm">
+        <div class="container">
+          <div class="row justify-center mb-10 text-center">
+            <div class="lg:col-8 md:col-10 col-12">
+              <h2 class="h2 mb-4">
+                {{ .title | markdownify }}
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-center">
+            <div class="lg:col-8 md:col-10 col-12">
+              {{ range .items }}
+                <details
+                  class="group mb-4 rounded-xl bg-theme-light dark:bg-darkmode-theme-light px-6 py-4">
+                  <summary
+                    class="cursor-pointer list-none font-semibold marker:content-none">
+                    {{ .question | markdownify }}
+                  </summary>
+                  <p class="mt-3">
+                    {{ .answer | markdownify }}
+                  </p>
+                </details>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /FAQ -->
+
+  <!-- Call to action -->
+  {{ partial "call-to-action" . }}
+  <!-- /Call to action -->
+
+  <!-- Shorts Modal -->
+  <div
+    id="shorts-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center"
+    style="width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.8);"
+    onclick="closeShortsModal()">
+    <button
+      type="button"
+      class="absolute top-3 right-3 z-10 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-black"
+      onclick="closeShortsModal()">
+      <span class="sr-only">Close</span>
+      &times;
+    </button>
+    <div
+      class="relative w-full max-w-3xl mx-4 md:mx-auto bg-black rounded-xl overflow-hidden"
+      style="min-width: 90%; width: 90%;">
+      <div
+        class="relative w-full"
+        style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe
+          id="shorts-modal-iframe"
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openShortsModal(videoId) {
+      var modal = document.getElementById("shorts-modal");
+      var iframe = document.getElementById("shorts-modal-iframe");
+      iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeShortsModal() {
+      var modal = document.getElementById("shorts-modal");
+      var iframe = document.getElementById("shorts-modal-iframe");
+      iframe.src = "";
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  </script>
+
+  <script>
+    function load(url) {
+      url = url.trim();
+      return "course/?" + url;
+    }
+  </script>
+{{ end }}

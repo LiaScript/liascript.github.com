@@ -1,8 +1,20 @@
 {{/* Inject complex JSON-LD stored in data/meta.json only on homepage */}}
 {{ if .IsHome }}
   {{ with hugo.Data.meta }}
+    {{ $graph := index . "@graph" }}
+    {{ with $.Params.faq }}
+      {{ if .enable }}
+        {{ $questions := slice }}
+        {{ range .items }}
+          {{ $answer := dict "@type" "Answer" "text" (.answer | markdownify | plainify) }}
+          {{ $questions = $questions | append (dict "@type" "Question" "name" .question "acceptedAnswer" $answer) }}
+        {{ end }}
+        {{ $graph = $graph | append (dict "@type" "FAQPage" "@id" "https://liascript.github.io/#faq" "mainEntity" $questions) }}
+      {{ end }}
+    {{ end }}
+    {{ $out := dict "@context" (index . "@context") "@graph" $graph }}
     <script type="application/ld+json">
-{{ . | jsonify (dict "indent" "  ") | safeJS }}
+{{ $out | jsonify (dict "indent" "  ") | safeJS }}
     </script>
   {{ end }}
 {{ end }}

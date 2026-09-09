@@ -1,12 +1,12 @@
 ---
 enable: true
-title: "Ready to build your next project with Hugo?"
-image: "/images/call-to-action.png"
-description: "Experience the future of web development with Hugoplate and Hugo. Build lightning-fast static sites with ease and flexibility."
+title: "Your next course starts as a text file"
+image: "/images/LiveEditor.png"
+description: "No installation, no build step, no account required. Write it in Markdown, drop in a quiz or a bit of JavaScript where you need it, and open the link in a browser."
 button:
   enable: true
-  label: "Get Started Now"
-  link: "https://github.com/zeon-studio/hugoplate"
+  label: "Open the Live Editor"
+  link: "/live-editor/"
 
 # don't create a separate page
 build:

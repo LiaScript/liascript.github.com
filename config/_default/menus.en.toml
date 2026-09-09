@@ -131,3 +131,8 @@ weight = 5
 name = "Imprint"
 pageRef = "pages/imprint"
 weight = 6
+
+[[footer]]
+name = "Privacy"
+pageRef = "pages/privacy"
+weight = 7

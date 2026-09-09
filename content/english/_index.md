@@ -134,4 +134,40 @@ features:
       enable: true
       label: "Try the LiveEditor"
       link: "https://liascript.github.io/LiveEditor"
+
+# How it works
+how_it_works:
+  enable: true
+  title: "How it works"
+  steps:
+    - title: "Write in Markdown"
+      content: "Add LiaScript syntax where you want a quiz, a TTS voice, a runnable code block, or a chart. No template project, no dependencies to install."
+    - title: "Host the file anywhere"
+      content: "A GitHub repo, GitLab, Dropbox, IPFS, or a plain link. LiaScript doesn't care where the text lives, since it renders in the visitor's browser."
+    - title: "Share the link"
+      content: "Anyone opens it in a modern browser and gets the interactive course, no login and no server needed. Works offline once loaded, too."
+
+# FAQ
+faq:
+  enable: true
+  title: "Frequently asked questions"
+  items:
+    - question: "Do I need to install anything to write a course?"
+      answer: "No. A LiaScript course is a plain Markdown file. You can write it in any text editor; the browser based Live Editor adds live preview and autocompletion if you want it."
+    - question: "Do I need to install anything to read a course?"
+      answer: "No. Any modern browser renders the course directly from the Markdown file, no server or app required."
+    - question: "Is LiaScript free?"
+      answer: "Yes, and it stays that way. LiaScript is developed in the open on GitHub; there's no paid tier and no account requirement to create or run a course."
+    - question: "Where do I host my courses?"
+      answer: "Wherever you already store text: GitHub, GitLab, Dropbox, a plain web server, or IPFS. There's no LiaScript hosting service you're locked into."
+    - question: "Can I use LiaScript without internet access?"
+      answer: "Yes, once a course is loaded it keeps working offline, since everything runs client side in the browser."
+    - question: "Can I add quizzes, simulations, or my own JavaScript?"
+      answer: "Yes. LiaScript supports quizzes, surveys, executable code blocks, and a macro system for wrapping any JavaScript library into reusable, author friendly blocks."
+    - question: "Can I use LiaScript courses in Moodle, ILIAS, or another LMS?"
+      answer: "Yes, via the [LiaScript Exporter](/exporter/), which packages a course as SCORM for import into common LMS platforms."
+    - question: "Can multiple people write a course together?"
+      answer: "Yes, the [Live Editor](/live-editor/) supports real time, peer to peer collaborative editing (WebRTC + Yjs), with no account or central server involved."
+    - question: "What if I already have a LiaScript file?"
+      answer: "Paste its URL into the box on the homepage and it opens directly as a live course, no upload step needed."
 ---
