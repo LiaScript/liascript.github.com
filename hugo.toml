@@ -49,6 +49,12 @@ enable = true
 source = 'assets/notwatching/hugo_stats\.json'
 target = 'css'
 
+############################ Security ############################
+# Newer Hugo versions (0.165 fails, 0.159 still works) no longer allow the tailwindcss binary by default,
+# which breaks css.TailwindCSS in layouts/partials/essentials/style.html.
+[security.exec]
+allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
 ############################# Modules ############################
 [module]
 [[module.mounts]]
