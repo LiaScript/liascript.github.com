@@ -3,7 +3,7 @@ title: "LiaEx: From CLI Tool to Full Export Platform"
 slug: "liaex-from-cli-tool-to-full-export-platform"
 date: 2026-03-26
 draft: false
-image: "/images/post/liaex-from-cli-tool-to-full-export-platform/banner.png"
+image: "/images/post/liaex-from-cli-tool-to-full-export-platform/banner.jpeg"
 tags:
     - "OER"
     - "Funding"
