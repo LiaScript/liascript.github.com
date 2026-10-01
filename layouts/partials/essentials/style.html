@@ -48,13 +48,19 @@
 {{/* Tailwind v4 output (cascade layers, nesting, oklch, range media queries) is
   ignored by old browsers such as the PocketBook e-reader. Build a transpiled copy
   for them, see postcss.config.js and assets/css/legacy.css. The lazy styles are
-  bundled in, so their unlayered rules keep winning over Tailwind's layers. */}}
-{{ $stylesLegacy := slice $styles $stylesLazy (resources.Get "css/legacy.css") | resources.Concat "css/style-legacy.css" | css.PostCSS }}
+  bundled in, so their unlayered rules keep winning over Tailwind's layers.
+  Skipped if assets/css/legacy.css is missing. */}}
+{{ $stylesLegacy := false }}
+{{ with resources.Get "css/legacy.css" }}
+  {{ $stylesLegacy = slice $styles $stylesLazy . | resources.Concat "css/style-legacy.css" | css.PostCSS }}
+{{ end }}
 
 {{ if hugo.IsProduction }}
   {{ $styles = $styles | minify | fingerprint }}
   {{ $stylesLazy = $stylesLazy | minify | fingerprint }}
-  {{ $stylesLegacy = $stylesLegacy | minify | fingerprint }}
+  {{ with $stylesLegacy }}
+    {{ $stylesLegacy = . | minify | fingerprint }}
+  {{ end }}
 {{ end }}
 
 
@@ -78,15 +84,17 @@
 
 <!-- swap to legacy style (includes the lazy style) if cascade layers are unsupported;
   force with ?legacy-css -->
+{{ with $stylesLegacy }}
 <script>
   if (!window.CSSLayerBlockRule || /[?&]legacy-css\b/.test(location.search)) {
     var lazyStyle = document.getElementById("lazy-style");
     var legacyStyle = document.createElement("link");
     legacyStyle.rel = "stylesheet";
-    legacyStyle.href = "{{ $stylesLegacy.RelPermalink }}";
+    legacyStyle.href = "{{ .RelPermalink }}";
     lazyStyle.parentNode.insertBefore(legacyStyle, lazyStyle);
     lazyStyle.onload = null;
     lazyStyle.media = "not all";
     document.getElementById("main-style").media = "not all";
   }
 </script>
+{{ end }}
