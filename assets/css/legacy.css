@@ -1,0 +1,15 @@
+/* Fixes for old browsers, only bundled into css/style-legacy.css
+   (see layouts/partials/essentials/style.html). */
+
+/* Old WebKit does not derive an SVG's width from its viewBox, so the navbar
+   toggler icons (height-only "h-6") collapse to zero width. */
+#show-button,
+#hide-button {
+  width: 1.5rem;
+}
+
+/* Prose link styles use :where() and are not unwrapped (see postcss.config.js),
+   so keep links in posts recognizable. */
+.content a:not(.btn) {
+  text-decoration: underline;
+}
