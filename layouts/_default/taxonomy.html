@@ -35,13 +35,14 @@
       var activeTag = params.get('tag');
 
       if (activeTag) {
-        document.querySelectorAll('#taxonomy-post-list .post-card').forEach(function (card) {
+        // [].forEach.call: runs before the NodeList.forEach polyfill (old engines, e.g. KaiOS)
+        [].forEach.call(document.querySelectorAll('#taxonomy-post-list .post-card'), function (card) {
           var tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
           card.style.display = tags.indexOf(activeTag) === -1 ? 'none' : '';
         });
       }
 
-      document.querySelectorAll('.tag-filter-link').forEach(function (link) {
+      [].forEach.call(document.querySelectorAll('.tag-filter-link'), function (link) {
         var linkTag = new URL(link.href).searchParams.get('tag');
         if (linkTag === activeTag) {
           link.classList.remove('bg-white', 'dark:bg-darkmode-body');

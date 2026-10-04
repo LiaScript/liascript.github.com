@@ -40,8 +40,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Install PostCSS, Tailwind and Autoprefixer
-        run: npm install postcss postcss-cli tailwindcss autoprefixer
+      - name: Install PostCSS, Tailwind, Autoprefixer and Babel
+        run: npm install postcss postcss-cli postcss-preset-env tailwindcss autoprefixer @babel/cli @babel/core @babel/preset-env
       - name: Install Python
         run: sudo apt-get install python3
       - name: Build World-Map
