@@ -49,3 +49,7 @@ Email:
 #### Credits & Disclaimer
 
 Everything you see on this page is up for grabs! Use it, remix it, share it with your grandma—no copyright strings attached. If something *is* copyrighted, don’t worry, we’ll let you know with big, bold, serious-looking text (maybe even a dramatic soundtrack). Until then, feel free to get creative!
+
+#### Professional Services
+
+The professional LiaScript [services](/services/) (consulting, course creation, training, custom development) are offered independently by André Dietrich personally and are not provided by Technische Universität Bergakademie Freiberg.
