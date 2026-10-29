@@ -85,15 +85,15 @@ import: https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main
 ## `@load.java` — Display an external Java file
 
 ```markdown
-@load.java(HelloWorld.java)
+@load.java(App.java)
 ```
 
-Fetches `HelloWorld.java` from the same GitHub directory as the README and renders it as a read-only `java` code block.
+Fetches `App.java` from the same GitHub directory as the README and renders it as a read-only `java` code block.
 
 Or load from an explicit URL:
 
 ```markdown
-@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
+@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/App.java)
 ```
 
 Try it live — the Java file is fetched from GitHub and displayed as a formatted code block:
@@ -103,9 +103,9 @@ Try it live — the Java file is fetched from GitHub and displayed as a formatte
 import: https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/README.md
 -->
 
-# Load HelloWorld.java from GitHub
+# Load App.java from GitHub
 
-@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
+@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/App.java)
 {{< /liascript >}}
 
 ---
@@ -115,7 +115,7 @@ import: https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main
 Fetches the file and renders it as an executable code block connected to CodeRunner:
 
 ```markdown
-@[loadAndRun(java)](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
+@[loadAndRun(java)](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/App.java)
 ```
 
 The student sees the code, can edit it, and can click **Run** — all from a file fetched at render time.
@@ -155,7 +155,7 @@ import: https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main
 
 The following Java file is fetched from GitHub at render time:
 
-@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
+@[load.java](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/App.java)
 
 ---
 
@@ -163,7 +163,7 @@ The following Java file is fetched from GitHub at render time:
 
 This version is editable and executable:
 
-@[loadAndRun(java)](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/HelloWorld.java)
+@[loadAndRun(java)](https://raw.githubusercontent.com/LiaPlayground/Custom-code-imports/main/App.java)
 
 ---
 

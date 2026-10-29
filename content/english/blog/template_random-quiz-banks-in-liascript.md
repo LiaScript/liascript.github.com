@@ -29,7 +29,7 @@ The [Random template](https://github.com/LiaTemplates/Random) adds controlled ra
 
 ``` markdown
 <!--
-import: https://raw.githubusercontent.com/liaTemplates/Random/main/README.md
+import: https://raw.githubusercontent.com/LiaTemplates/Random/master/README.md
 -->
 ```
 
@@ -94,7 +94,7 @@ The `data-propability` value is relative weight:
 
 ```` markdown
 <!--
-import: https://github.com/liaTemplates/Random/README.md
+import: https://raw.githubusercontent.com/LiaTemplates/Random/master/README.md
 -->
 
 # Practice Quiz
@@ -139,7 +139,7 @@ Try it live — each visit picks 2 different questions from the pool (reload to 
 
 {{< liascript mode="preview" >}}
 <!--
-import: https://raw.githubusercontent.com/liaTemplates/Random/main/README.md
+import: https://raw.githubusercontent.com/LiaTemplates/Random/master/README.md
 -->
 
 # Practice Quiz
@@ -185,7 +185,7 @@ All questions solved! Review your notes and try again.
 
 ## Full Template Demo
 
-{{< liascript-show "https://raw.githubusercontent.com/LiaTemplates/Random/main/README.md" >}}
+{{< liascript-show "https://raw.githubusercontent.com/LiaTemplates/Random/master/README.md" >}}
 
 ---
 
@@ -219,9 +219,9 @@ With `filterFlag=true`, already-mastered items disappear from the selection.
 
 ## Try It
 
-{{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaTemplates/Random/main/README.md" label="Try in LiaScript" >}}
+{{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaTemplates/Random/master/README.md" label="Try in LiaScript" >}}
 
-{{< button link="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaTemplates/Random/main/README.md" label="Open in LiveEditor" >}}
+{{< button link="https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaTemplates/Random/master/README.md" label="Open in LiveEditor" >}}
 
 {{< button link="https://github.com/LiaTemplates/Random" label="View on GitHub" >}}
 

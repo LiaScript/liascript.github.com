@@ -29,4 +29,4 @@ Wir freuen uns auf Anregungen und Ideen - eine schöne Weihnachtszeit für alle!
 
 __PS: Der genutzte Beispielkurs von Martin Lommatzsch ->__
 
-{{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/MINT-the-GAP/Wochenaufgabe/refs/heads/main/Sandkasten.md" label="LiaScript in der Schule" >}}
+{{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/MINT-the-GAP/Wochenaufgabe/refs/heads/main/Alt/Sandkasten.md" label="LiaScript in der Schule" >}}

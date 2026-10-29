@@ -30,7 +30,7 @@ _[View on LiaScript](https://liascript.github.io/course/?https://raw.githubuserc
 ### German Version
 
 {{< youtube YZ_M51kxTdA >}}
-_[View on LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/German.md)_
+_[View on LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/GERMAN.md)_
 
 ### Editing
 
@@ -38,7 +38,7 @@ Try this out by yourself in the LiveEditor:
 
 {{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/README.md" label="LiveEditor - Russian">}}
 
-{{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/German.md" label="LiveEditor - German">}}
+{{< button link="https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaBooks/SisterFoxAndTheGrayWolf/master/GERMAN.md" label="LiveEditor - German">}}
 
 ---
 
