@@ -18,6 +18,16 @@ banner:
       <i class="fa fa-arrow-right pl-2"></i>
     </button>
   image: "/images/main.png"
+  tools_label: "or start right in your browser"
+  tools:
+    - title: "Write a new course"
+      content: "in the LiveEditor, with live preview"
+      icon: "fa fa-pen"
+      link: "https://liascript.github.io/LiveEditor/"
+    - title: "Export for your LMS"
+      content: "SCORM, xAPI, PDF, ePub with the Exporter"
+      icon: "fa fa-box"
+      link: "https://liascript.github.io/LiaScript-Exporter/"
 
 # Demo Video Section
 demo_video:

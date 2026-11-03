@@ -38,3 +38,92 @@
     U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
     U+2C60-2C7F, U+A720-A7FF;
 }
+
+/* Homepage hero: tool entry points (LiveEditor, Exporter) under the URL field.
+   Flex with margins instead of gap, so old browsers (see legacy.css) get it too. */
+.hero-tools {
+  max-width: 560px;
+  margin: 2rem auto;
+}
+.hero-tools-label {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #717171;
+}
+.hero-tools-label::before,
+.hero-tools-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eaeaea;
+}
+.hero-tools-label span {
+  padding: 0 0.75rem;
+}
+.hero-tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -6px;
+}
+.hero-tool {
+  flex: 1 1 240px;
+  display: flex;
+  align-items: flex-start;
+  margin: 6px;
+  padding: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  background: #fff;
+  color: #444;
+  text-align: left;
+  text-decoration: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.hero-tool:hover,
+.hero-tool:focus-visible {
+  border-color: #2b7a78;
+  box-shadow: 0 6px 20px rgba(4, 4, 4, 0.08);
+}
+.hero-tool-icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 10px;
+  background: #2b7a78;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-tool-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+.hero-tool-text strong {
+  color: #040404;
+  font-weight: 600;
+}
+.hero-tool-text span {
+  font-size: 0.9rem;
+}
+.dark .hero-tools-label {
+  color: #b4afb6;
+}
+.dark .hero-tools-label::before,
+.dark .hero-tools-label::after {
+  background: #3e3e3e;
+}
+.dark .hero-tool {
+  background: #222;
+  border-color: #3e3e3e;
+  color: #b4afb6;
+}
+.dark .hero-tool-text strong {
+  color: #fff;
+}

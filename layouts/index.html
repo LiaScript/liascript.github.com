@@ -11,6 +11,32 @@
             <p class="mb-8">
               {{ .content | markdownify }}
             </p>
+            {{ $label := .tools_label }}
+            {{ with .tools }}
+              <div class="hero-tools">
+                {{ with $label }}
+                  <p class="hero-tools-label"><span>{{ . }}</span></p>
+                {{ end }}
+                <div class="hero-tools-list">
+                  {{ range . }}
+                    <a
+                      class="hero-tool"
+                      href="{{ .link | absURL }}"
+                      {{ if strings.HasPrefix .link `http` }}
+                        target="_blank" rel="noopener"
+                      {{ end }}>
+                      <span class="hero-tool-icon" aria-hidden="true"
+                        ><i class="{{ .icon }}"></i
+                      ></span>
+                      <span class="hero-tool-text">
+                        <strong>{{ .title }}</strong>
+                        <span>{{ .content }}</span>
+                      </span>
+                    </a>
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
           </div>
           <div class="col-12">
             {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}

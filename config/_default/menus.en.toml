@@ -12,27 +12,33 @@ weight = 2
 
 [[main]]
 name = "LiveEditor"
-url = "https://liascript.github.io/LiveEditor"
+url = "https://liascript.github.io/LiveEditor/"
 weight = 3
+
+[[main]]
+name = "Exporter"
+identifier = "exporter-web-app"
+url = "https://liascript.github.io/LiaScript-Exporter/"
+weight = 4
 
 [[main]]
 name = "Blog"
 pageRef = "blog"
-weight = 4
+weight = 5
 
 [[main]]
 name = "About"
 pageRef = "about"
-weight = 5
+weight = 6
 
 [[main]]
 name = "Services"
 pageRef = "pages/services"
-weight = 6
+weight = 7
 
 [[main]]
 name = "Community"
-weight = 7
+weight = 8
 
 [[main]]
 parent = "Community"
@@ -47,7 +53,7 @@ pageRef = "pages/community-graph"
 weight = 2
 
 [[main]]
-weight = 8
+weight = 9
 name = "More"
 
 [[main]]
